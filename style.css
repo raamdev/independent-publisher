@@ -776,13 +776,15 @@ ul.children .comment-author {
 
 body {
 	color: #222;
-	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 300;
+	font: 1.9em Georgia, "Times New Roman", Times, serif;
 	line-height: 1.6;
 }
 
 .site-logo img {
 	margin-bottom: 10px;
+	-webkit-border-radius: 95px;
+	border-radius: 95px;
+	max-width: 70px;
 }
 
 .site-title a {
@@ -798,9 +800,47 @@ body {
 
 .site-description {
 	margin: 10px 0 20px 0;
-	color: #999;
-	font-weight: 300;
+	color: #666665;
 	font-size: 13px;
+	font-family: inherit;
+	line-height: 1.4;
+	font-style: italic;
+	letter-spacing: inherit;
+	font-weight: inherit;
+}
+.site-published {
+	margin: 10px 0 0 0;
+	color: #333332;
+	font-size: 13px;
+	font-family: inherit;
+	line-height: 1.4;
+	font-style: normal;
+	letter-spacing: inherit;
+	font-weight: bold;
+}
+.site-published-date {
+	margin: 5px 0 0 0;
+	color: #666665;
+	font-size: 13px;
+	font-family: inherit;
+	line-height: 1.4;
+	letter-spacing: inherit;
+	font-weight: inherit;
+    font-style: normal;
+}
+.site-published-date a, .site-published-location a {
+	color: #666665;
+	text-decoration: none;
+}
+.site-published-location {
+	margin: 0 0 20px 0;
+	color: #666665;
+	font-size: 13px;
+	font-family: inherit;
+	line-height: 1.4;
+	font-style: normal;
+	letter-spacing: inherit;
+	font-weight: inherit;
 }
 
 .main-navigation ul,
@@ -863,19 +903,23 @@ h4,
 h5,
 h6 {
 	margin: 20px 0;
-	font-weight: bold;
+	font-family:"Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	color: #333332;
+	letter-spacing: -1px;
+	font-weight: 700;
+	line-height: 1;
 }
 
 h1 {
-	font-size: 22px;
+	font-size: 2.5em;
 }
 
 h2 {
-	font-size: 18px;
+	font-size: 1.6em;
 }
 
 h3 {
-	font-size: 15px;
+	font-size: 1.4em;
 }
 
 h4,
@@ -902,6 +946,19 @@ h6 {
 	color: #26ADE4;
 }
 
+.entry-title-meta {
+	font-size: 13px;
+    color: #b3b3b1;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.entry-title-meta a {
+	color: #b3b3b1;
+	text-decoration: none;
+}
+
 .entry-meta,
 .entry-meta a {
 	color: #999;
@@ -914,22 +971,24 @@ h6 {
 
 .site {
 	background-color: #ffffff;
-	margin: 60px auto;
+	margin: 120px auto;
 	padding: 0 40px;
-	width: 750px;
+	max-width: 700px;
 }
 
 .site-header {
 	float: left;
-	margin-top: 34px;
+	margin-top: 0px;
 	margin-bottom: 40px;
-	width: 24%;
+	width: 160px;
+	position: relative;
+	margin-left: -220px;
+	text-align: right;
 }
 
 .site-content,
 .site-footer {
 	float: right;
-	width: 70%;
 }
 
 .widget-area {
@@ -985,6 +1044,12 @@ table th {
 	border-bottom: solid 1px #ccc;
 }
 
+/* Hide left-side author card under 1200px */
+@media only screen and (max-width : 1200px) {
+	.site-header {
+		display: none;
+	}
+}
 /* iPads (landscape) ----------- */
 @media only screen and (max-width : 900px) {
 /* Styles */
@@ -1001,10 +1066,6 @@ table th {
 	.site-footer,
 	.widget-area {
 		width: 100%;
-	}
-
-	.site-header {
-		margin-top: 0;
 	}
 
 	.site-title,

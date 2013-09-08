@@ -116,17 +116,35 @@ if ( ! function_exists( 'publish_posted_on' ) ) :
  * @since Publish 1.0
  */
 function publish_posted_on() {
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'publish' ) . '.',
+	printf( __( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'publish' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'publish' ), get_the_author() ) ),
-		esc_html( get_the_author() )
+		esc_html( get_the_date() )
 	);
 }
 endif;
+
+if(!function_exists('get_ncl_location')) :
+	/**
+	 * Returns location information supplied by Nomad Current Location plugin
+	 */
+		function get_ncl_location($prefix = "")
+			{
+
+				$location = get_post_meta(get_the_ID(), 'ncl_current_location', TRUE);
+
+				if(trim($location) != "")
+					{
+						return $location_html = $prefix.'<span class="mapThis" place="'.$location.'" zoom="2">'.$location.'</span>';
+					}
+				else
+					{
+						return $location_html = '';
+					}
+			}
+endif;
+
 
 /**
  * Returns true if a blog has more than 1 category
