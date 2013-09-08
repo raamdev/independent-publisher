@@ -527,6 +527,14 @@ img.aligncenter {
 	font-weight: 300;
 }
 
+.format-aside {
+    font-size: 1.6em;
+    font-style: italic;
+    line-height: 1.5;
+}
+.single-format-aside .entry-title {
+	display: none;
+}
 /* =Media
 ----------------------------------------------- */
 
@@ -953,6 +961,7 @@ h6 {
     letter-spacing: 1px;
     margin-bottom: 0px;
     margin-top: 0px;
+	font-style: normal;
 }
 .entry-title-meta a {
 	color: #b3b3b1;
