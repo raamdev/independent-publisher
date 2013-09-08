@@ -36,6 +36,7 @@
 		</hgroup>
 		
 		<?php if(is_single()) : ?>
+			<div class="site-published-separator"></div>
 		<hgroup>
 			<h2 class="site-published">Published</h2>
 			<h2 class="site-published-date"><?php publish_posted_on(); ?></h2>
