@@ -1,8 +1,8 @@
 /*
-Theme Name: Publish
-Theme URI: http://kovshenin.com/themes/publish
-Author: Konstantin Kovshenin
-Author URI: http://kovshenin.com
+Theme Name: Independent Publisher
+Theme URI: http://independentpublisher.net/wp-theme/
+Author: Raam Dev
+Author URI: http://raamdev.com
 Description: Publish is a clean minimal theme which puts you and your content on stage. Ideal for single-author blogs.
 Version: 1.2.4
 License: GNU GPLv3
@@ -801,13 +801,14 @@ body {
 
 .site-title {
 	margin: 0;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 1.2;
+	letter-spacing: inherit;
 }
 
 .site-description {
-	margin: 10px 0 20px 0;
-	color: #666665;
+	margin: 0 0 20px 0;
+	color: rgba(117, 117, 117, 0.78);
 	font-size: 13px;
 	font-family: inherit;
 	line-height: 1.4;
@@ -816,7 +817,7 @@ body {
 	font-weight: inherit;
 }
 .site-published-separator {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #dededc;
     padding-top: 20px;
     width: 40px;
     float: right;
@@ -827,12 +828,13 @@ body {
 	font-size: 14px;
 	line-height: 1.4;
 	font-style: normal;
-	font-weight: bold;	
+	font-weight: bold;
+	letter-spacing: inherit;
 }
 .site-published-date {
 	margin: 5px 0 0 0;
-	color: #666665;
-	font-size: 13px;
+	color: rgba(117, 117, 117, 0.78);
+	font-size: 12px;
 	font-family: inherit;
 	line-height: 1.4;
 	letter-spacing: inherit;
@@ -840,13 +842,13 @@ body {
     font-style: normal;
 }
 .site-published-date a, .site-published-location a {
-	color: #666665;
+	color: rgba(117, 117, 117, 0.78);
 	text-decoration: none;
 }
 .site-published-location {
 	margin: 0 0 20px 0;
-	color: #666665;
-	font-size: 13px;
+	color: rgba(117, 117, 117, 0.78);
+	font-size: 12px;
 	font-family: inherit;
 	line-height: 1.4;
 	font-style: normal;
