@@ -4,8 +4,8 @@
  *
  * Contains the closing of the id=main div and all content after
  *
- * @package Publish
- * @since Publish 1.0
+ * @package Independent Publisher
+ * @since Independent Publisher 1.0
  */
 ?>
 
@@ -13,7 +13,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php do_action( 'publish_credits' ); ?>
+			<?php do_action( 'independent_publisher_credits' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->

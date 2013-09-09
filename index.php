@@ -8,8 +8,8 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Publish
- * @since Publish 1.0
+ * @package Independent Publisher
+ * @since Independent Publisher 1.0
  */
 
 get_header(); ?>
@@ -32,7 +32,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php publish_content_nav( 'nav-below' ); ?>
+				<?php independent_publisher_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

@@ -2,8 +2,8 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Publish
- * @since Publish 1.0
+ * @package Independent Publisher
+ * @since Independent Publisher 1.0
  */
 ?>
 
@@ -14,8 +14,8 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'publish' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
-	<?php edit_post_link( __( 'Edit', 'publish' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-<?php the_ID(); ?> -->

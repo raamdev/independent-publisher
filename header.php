@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package Publish
- * @since Publish 1.0
+ * @package Independent Publisher
+ * @since Independent Publisher 1.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -39,19 +39,19 @@
 			<div class="site-published-separator"></div>
 		<hgroup>
 			<h2 class="site-published">Published</h2>
-			<h2 class="site-published-date"><?php publish_posted_on(); ?></h2>
+			<h2 class="site-published-date"><?php independent_publisher_posted_on(); ?></h2>
 			<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
 		</hgroup>
 		<?php endif; ?>
 
 		<nav role="navigation" class="site-navigation main-navigation">
-			<h1 class="assistive-text"><?php _e( 'Menu', 'publish' ); ?></h1>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'publish' ); ?>"><?php _e( 'Skip to content', 'publish' ); ?></a></div>
+			<h1 class="assistive-text"><?php _e( 'Menu', 'independent_publisher' ); ?></h1>
+			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'independent_publisher' ); ?>"><?php _e( 'Skip to content', 'independent_publisher' ); ?></a></div>
 
 			<?php // wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
 		</nav><!-- .site-navigation .main-navigation -->
 
-		<?php do_action( 'publish_header_after' ); ?>
+		<?php do_action( 'independent_publisher_header_after' ); ?>
 	</header><!-- #masthead .site-header -->
 
 	<div id="main" class="site-main">

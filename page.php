@@ -7,8 +7,8 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package Publish
- * @since Publish 1.0
+ * @package Independent Publisher
+ * @since Independent Publisher 1.0
  */
 
 get_header(); ?>

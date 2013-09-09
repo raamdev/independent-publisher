@@ -2,19 +2,19 @@
 /**
  * Publish functions and definitions
  *
- * @package Publish
- * @since Publish 1.0
+ * @package Independent Publisher
+ * @since Independent Publisher 1.0
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
- * @since Publish 1.0
+ * @since Independent Publisher 1.0
  */
 if ( ! isset( $content_width ) )
 	$content_width = 525; /* pixels */
 
-if ( ! function_exists( 'publish_setup' ) ):
+if ( ! function_exists( 'independent_publisher_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -22,9 +22,9 @@ if ( ! function_exists( 'publish_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since Publish 1.0
+ * @since Independent Publisher 1.0
  */
-function publish_setup() {
+function independent_publisher_setup() {
 
 	/**
 	 * Custom template tags for this theme.
@@ -35,7 +35,7 @@ function publish_setup() {
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
 	 */
-	load_theme_textdomain( 'publish', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'independent_publisher', get_template_directory() . '/languages' );
 
 	/**
 	 * Add default posts and comments RSS feed links to head
@@ -56,7 +56,7 @@ function publish_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'publish' ),
+		'primary' => __( 'Primary Menu', 'independent_publisher' ),
 	) );
 
 	/**
@@ -66,23 +66,23 @@ function publish_setup() {
 
 	/**
 	 * Add support for Infinite Scroll
-	 * @since Publish 1.2
+	 * @since Independent Publisher 1.2
 	 */
 	add_theme_support( 'infinite-scroll', array(
 		'footer' => 'page',
 	) );
 }
-endif; // publish_setup
-add_action( 'after_setup_theme', 'publish_setup' );
+endif; // independent_publisher_setup
+add_action( 'after_setup_theme', 'independent_publisher_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
  *
- * @since Publish 1.0
+ * @since Independent Publisher 1.0
  */
-function publish_widgets_init() {
+function independent_publisher_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'publish' ),
+		'name'          => __( 'Sidebar', 'independent_publisher' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -90,12 +90,12 @@ function publish_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'publish_widgets_init' );
+add_action( 'widgets_init', 'independent_publisher_widgets_init' );
 
 /**
  * Enqueue scripts and styles
  */
-function publish_scripts() {
+function independent_publisher_scripts() {
 	global $post;
 
 	wp_enqueue_style( 'publish-style', get_stylesheet_uri() );
@@ -110,33 +110,32 @@ function publish_scripts() {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'publish_scripts' );
+add_action( 'wp_enqueue_scripts', 'independent_publisher_scripts' );
 
 /**
  * Echoes the theme's footer credits
  *
- * @since Publish 1.2
+ * @since Independent Publisher 1.2
  */
-function publish_footer_credits() {
-	echo publish_get_footer_credits();
+function independent_publisher_footer_credits() {
+	echo independent_publisher_get_footer_credits();
 }
-add_action( 'publish_credits', 'publish_footer_credits' );
+add_action( 'independent_publisher_credits', 'independent_publisher_footer_credits' );
 
 /**
  * Returns the theme's footer credits
  *
  * @return string
  *
- * @since Publish 1.2
+ * @since Independent Publisher 1.2
  */
-function publish_get_footer_credits( $credits = '' ) {
+function independent_publisher_get_footer_credits( $credits = '' ) {
 	return sprintf(
-		'%1$s %2$s',
-		'<a href="http://wordpress.org/" rel="generator">Proudly powered by WordPress</a>',
-		sprintf( __( 'Theme: %1$s by %2$s.', 'publish' ), 'Publish', '<a href="http://kovshenin.com/" rel="designer">Konstantin Kovshenin</a>' )
+		'%1$s',
+		sprintf( __( '%1$s empowered by %2$s.', 'independent_publisher' ), '<a href="http://independentpublisher.net/wp-theme/">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator">open-source publishing</a>' )
 	);
 }
-add_filter( 'infinite_scroll_credit', 'publish_get_footer_credits' );
+add_filter( 'infinite_scroll_credit', 'independent_publisher_get_footer_credits' );
 
 /**
  * Prepends the post format name to post titles on single view
@@ -144,9 +143,9 @@ add_filter( 'infinite_scroll_credit', 'publish_get_footer_credits' );
  * @param string $title
  * @return string
  *
- * @since Publish 1.2-wpcom
+ * @since Independent Publisher 1.2-wpcom
  */
-function publish_post_format_title( $title, $post_id = false ) {
+function independent_publisher_post_format_title( $title, $post_id = false ) {
 	if ( ! $post_id )
 		return $title;
 
@@ -161,7 +160,7 @@ function publish_post_format_title( $title, $post_id = false ) {
 
 	return $title;
 }
-add_filter( 'the_title', 'publish_post_format_title', 10, 2 );
+add_filter( 'the_title', 'independent_publisher_post_format_title', 10, 2 );
 
 /**
  * Implement the Custom Header feature

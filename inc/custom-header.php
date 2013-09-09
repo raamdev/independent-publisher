@@ -3,8 +3,8 @@
  * Implements the Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
  *
- * @package Publish
- * @since Publish 1.2.4
+ * @package Independent Publisher
+ * @since Independent Publisher 1.2.4
  */
 
 /**
@@ -16,11 +16,11 @@
  * in WordPress 3.4.
  *
  * @todo Rework this function to remove WordPress 3.4 support when WordPress 3.6 is released.
- * @uses publish_get_default_header_image()
+ * @uses independent_publisher_get_default_header_image()
  */
-function publish_custom_header_setup() {
+function independent_publisher_custom_header_setup() {
 	$args = array(
-		'default-image'          => publish_get_default_header_image(),
+		'default-image'          => independent_publisher_get_default_header_image(),
 		'width'                  => 100,
 		'height'                 => 100,
 		'flex-width'             => true,
@@ -32,7 +32,7 @@ function publish_custom_header_setup() {
 		'admin-preview-callback' => '',
 	);
 
-	$args = apply_filters( 'publish_custom_header_args', $args );
+	$args = apply_filters( 'independent_publisher_custom_header_args', $args );
 
 	if ( function_exists( 'wp_get_theme' ) ) {
 		add_theme_support( 'custom-header', $args );
@@ -45,16 +45,16 @@ function publish_custom_header_setup() {
 		add_custom_image_header( $args['wp-head-callback'], $args['admin-head-callback'], $args['admin-preview-callback'] );
 	}
 }
-add_action( 'after_setup_theme', 'publish_custom_header_setup' );
+add_action( 'after_setup_theme', 'independent_publisher_custom_header_setup' );
 
 /**
  * A default header image
  *
  * Use the admin email's gravatar as the default header image.
  *
- * @since Publish 1.2.3
+ * @since Independent Publisher 1.2.3
  */
-function publish_get_default_header_image() {
+function independent_publisher_get_default_header_image() {
 
 	// Get default from Discussion Settings.
 	$default = get_option( 'avatar_default', 'mystery' ); // Mystery man default
@@ -71,4 +71,4 @@ function publish_get_default_header_image() {
 	), $url );
 
 	return esc_url_raw( $url );
-} // publish_get_default_header_image
+} // independent_publisher_get_default_header_image

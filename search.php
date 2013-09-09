@@ -2,8 +2,8 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package Publish
- * @since Publish 1.0
+ * @package Independent Publisher
+ * @since Independent Publisher 1.0
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'publish' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'independent_publisher' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<?php /* Start the Loop */ ?>
@@ -24,7 +24,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php publish_content_nav( 'nav-below' ); ?>
+				<?php independent_publisher_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
