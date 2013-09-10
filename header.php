@@ -44,12 +44,14 @@
 		</hgroup>
 		<?php endif; ?>
 
+		<?php if(!is_single()) : ?>
 		<nav role="navigation" class="site-navigation main-navigation">
 			<h1 class="assistive-text"><?php _e( 'Menu', 'independent_publisher' ); ?></h1>
 			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'independent_publisher' ); ?>"><?php _e( 'Skip to content', 'independent_publisher' ); ?></a></div>
 
-			<?php // wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
 		</nav><!-- .site-navigation .main-navigation -->
+		<?php endif; ?>
 
 		<?php do_action( 'independent_publisher_header_after' ); ?>
 	</header><!-- #masthead .site-header -->
