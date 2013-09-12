@@ -695,10 +695,6 @@ ul.children .avatar {
 	margin-left: 0px;
 }
 
-.comment-meta a:before {
-	content: "\2014\a0";
-}
-
 .comment .reply {
 	display: block;
 }
