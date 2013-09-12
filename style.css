@@ -325,15 +325,15 @@ textarea {
 
 /* Links */
 a {
-	color: #26ADE4;
+	color: #57ad68;
 }
 a:visited {
-	color: #26ADE4;
+	color: #57ad68;
 }
 a:hover,
 a:focus,
 a:active {
-	color: #1E8AB6;
+	color: #57ad68;
 }
 
 /* Alignment */
@@ -391,6 +391,8 @@ img.aligncenter {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	font-size: 14px;
+	font-family: "Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-seri;
 }
 .main-navigation ul ul {
 	position: absolute;
@@ -413,6 +415,7 @@ img.aligncenter {
 .main-navigation ul ul li {
 }
 .main-navigation li:hover > a {
+	text-decoration: underline;
 }
 .main-navigation ul ul :hover > a {
 }
