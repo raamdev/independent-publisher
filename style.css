@@ -543,6 +543,9 @@ img.aligncenter {
 .format-aside .entry-content {
 	margin-top: 0;
 }
+.format-aside .entry-title-meta {
+	margin-bottom: 20px;
+}
 .single-format-aside .entry-title {
 	display: none;
 }
@@ -1158,8 +1161,26 @@ table th {
 	}
 }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 500px) {
 	#masthead {
 		margin-top: 40px;
+	}
+
+	#page {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.entry-content {
+		font-size: 18px;
+	}
+
+	h1.entry-title {
+		font-size: 36px;
+	}
+
+	.format-aside .entry-content {
+		font-size: 25px;
+		line-height: 36px;
 	}
 }
