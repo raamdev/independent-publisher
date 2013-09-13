@@ -802,6 +802,7 @@ body {
 	-webkit-border-radius: 95px;
 	border-radius: 95px;
 	max-width: 70px;
+	height: auto;
 }
 
 .site-title a {
