@@ -665,6 +665,8 @@ object {
 
 ol.commentlist {
 	margin-left: 0px;
+	font-size: 90%;
+	line-height: 1.563em;
 }
 
 ol.commentlist,
@@ -758,6 +760,20 @@ ol.commentlist .avatar {
 .pingback .comment-meta,
 .pingback .reply {
 	display: none;
+}
+
+.pinglist {
+	font-size: 90%;
+	line-height: 1.563em;
+}
+
+.trackback span, .pingback span {
+	font-size: 12px;
+	color: rgba(117, 117, 117, 0.78);
+}
+
+.trackback cite, .pingback cite {
+	font-style: normal;
 }
 
 .pingback {

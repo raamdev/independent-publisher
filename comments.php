@@ -48,7 +48,7 @@ if ( post_password_required() )
 				 * define independent_publisher_comment() and that will be used instead.
 				 * See independent_publisher_comment() in inc/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'independent_publisher_comment' ) );
+				wp_list_comments( array( 'type' => 'comment', 'callback' => 'independent_publisher_comment' ) );
 			?>
 		</ol><!-- .commentlist -->
 
@@ -61,6 +61,20 @@ if ( post_password_required() )
 		<?php endif; // check for comment navigation ?>
 
 	<?php endif; // have_comments() ?>
+
+		<!-- START PING/TRACKBACKS LIST -->
+
+		<?php if ( have_comments() ) : ?>
+			<?php if ( count($wp_query->comments_by_type['pings'])) { ?>
+				<br />
+				<h3 id="pings" class="comments-title"><?php// echo count($wp_query->comments_by_type['pings']); ?>Readers who shared <em><?php the_title(); ?></em></h3>
+				<ul class="pinglist">
+					<?php wp_list_comments('type=pings&callback=independent_publisher_ping'); ?>
+				</ul>
+			<?php } ?>
+		<?php endif; ?>
+
+		<!-- END PING/TRACKBACKS LIST -->
 
 	<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?

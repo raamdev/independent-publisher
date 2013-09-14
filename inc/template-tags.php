@@ -109,6 +109,30 @@ function independent_publisher_comment( $comment, $args, $depth ) {
 }
 endif; // ends check for independent_publisher_comment()
 
+if ( ! function_exists( 'independent_publisher_ping' ) ) :
+	/**
+	 * Template for pingbacks.
+	 *
+	 * Used as a callback by wp_list_comments() for displaying the pings.
+	 *
+	 * @since Independent Publisher 1.0
+	 */
+function independent_publisher_ping($comment)
+	{
+		$GLOBALS['comment'] = $comment; ?>
+	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+
+		<div id="comment-<?php comment_ID(); ?>">
+
+			<div class="commentbody">
+				<?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?> <span> <?php printf(__('%1$s '), get_comment_date("Y-m-d"), get_comment_time("H:i:s")) ?> <?php edit_comment_link(__('(Edit)'), '  ', '') ?></span>
+			</div>
+
+		</div>
+	<?php
+	}
+endif; // ends check for independent_publisher_ping()
+
 if ( ! function_exists( 'independent_publisher_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
