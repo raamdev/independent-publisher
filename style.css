@@ -826,6 +826,7 @@ body {
 	font-style: italic;
 	letter-spacing: inherit;
 	font-weight: inherit;
+	margin-top: 5px;
 }
 .site-published-separator {
     border-top: 1px solid #dededc;
@@ -1209,11 +1210,12 @@ table th {
 	}
 
 	#page {
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 
-	.entry-content {
+	.entry-content,
+	#comments {
 		font-size: 18px;
 	}
 
@@ -1225,4 +1227,26 @@ table th {
 		font-size: 25px;
 		line-height: 36px;
 	}
+	.post-author-bottom {
+		margin-left: 10px;
+	}
+   .post-author-bottom .site-logo, .post-author-bottom .site-logo img {
+	   float: none;
+   }
+	.post-author-bottom .post-author-info {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.post-author-bottom .post-published-date {
+		padding-left: 0;
+		position: inherit;
+		margin-top: 0;
+		top: inherit;
+	}
+   .entry-header {
+	   word-wrap: none;
+	   hyphens: none;
+	   -webkit-hyphens: none;
+	   -moz-hyphens: none;
+   }
 }
