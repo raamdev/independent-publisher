@@ -653,9 +653,10 @@ object {
 	margin-bottom: 30px;
 }
 
-.commentlist article {
+.site-main .commentlist article {
 	padding-bottom: 0;
 	margin-bottom: 20px;
+	border-bottom: none;
 }
 
 #comments-template div.navigation {
@@ -702,12 +703,6 @@ ol.commentlist .avatar {
 	margin-top: 5px;
 }
 
-ul.children .avatar {
-	margin-left: 0px;
-	width: 32px;
-	height: 32px;
-}
-
 .comment-meta,
 .comment-meta a {
 	color: #999;
@@ -717,7 +712,7 @@ ul.children .avatar {
 
 .comment-meta {
 	margin-top: -12px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	margin-left: 0px;
 }
 
@@ -752,10 +747,6 @@ ul.children .avatar {
 	font-style: normal;
 }
 
-ul.children .comment-author {
-	margin-bottom: 10px;
-	line-height: 32px;
-}
 
 .comment-author .fn a {
 	text-decoration: none;
@@ -983,10 +974,6 @@ h6 {
 .site-main article {
 	padding: 10px 0 40px 0;
 	border-bottom: solid 1px #ddd;
-}
-
-.site-main article.comment {
-	border-bottom: none;
 }
 
 .entry-title a {
