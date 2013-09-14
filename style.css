@@ -1072,10 +1072,51 @@ table th {
 	border-bottom: solid 1px #ccc;
 }
 
+/* Post Author Bottom Card */
+
+.post-author-bottom {
+	margin-top: 50px;
+	padding-top: 50px;
+	position: relative;
+	border-top: 1px solid #ddd;
+	display: none;
+}
+
+.post-author-bottom .site-logo img {
+	float: left;
+	width: 70px;
+	height: auto;
+}
+.post-author-bottom .site-title,
+.post-author-bottom .site-description {
+	clear: none;
+}
+.post-author-bottom .post-author-info {
+	margin-left: 100px;
+	margin-right: 200px;
+	padding-right:  25px;
+	padding-top: 10px;
+}
+.post-author-bottom h1.site-title,
+.post-author-bottom h2.site-description {
+	margin-left: 0;
+}
+.post-author-bottom .post-published-date {
+	width: 177px;
+	padding-left: 385px;
+	position: absolute;
+	margin-top: -85px;
+	top: 135px;
+	right: 0;
+}
+
 /* Hide left-side author card under 1200px */
 @media only screen and (max-width : 1200px) {
 	.site-header {
 		display: none;
+	}
+	.post-author-bottom {
+		display: block;
 	}
 }
 /* iPads (landscape) ----------- */
