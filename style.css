@@ -1015,6 +1015,10 @@ h6 {
 	text-decoration: none;
 }
 
+.entry-title-meta-author {
+	display: none;
+}
+
 .entry-meta,
 .entry-meta a {
 	color: #999;
@@ -1146,6 +1150,9 @@ table th {
 	}
 	.post-author-bottom {
 		display: block;
+	}
+	.entry-title-meta-author {
+		display: inline-block;
 	}
 }
 /* iPads (landscape) ----------- */

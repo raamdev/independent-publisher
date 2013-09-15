@@ -39,7 +39,7 @@
 			<div class="site-published-separator"></div>
 		<hgroup>
 			<h2 class="site-published">Published</h2>
-			<h2 class="site-published-date"><?php independent_publisher_posted_on(); ?></h2>
+			<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
 			<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
 		</hgroup>
 		<?php endif; ?>

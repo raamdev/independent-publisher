@@ -133,13 +133,28 @@ function independent_publisher_ping($comment)
 	}
 endif; // ends check for independent_publisher_ping()
 
-if ( ! function_exists( 'independent_publisher_posted_on' ) ) :
+if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
+	/**
+	 * Prints HTML with meta information for the current author.
+	 *
+	 * @since Independent Publisher 1.0
+	 */
+		function independent_publisher_posted_author() {
+			printf( __( '<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>', 'independent_publisher' ),
+			        esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			        esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
+			        esc_html( get_the_author() )
+			);
+		}
+endif;
+
+if ( ! function_exists( 'independent_publisher_posted_on_date' ) ) :
 /**
- * Prints HTML with meta information for the current post-date/time and author.
+ * Prints HTML with meta information for the current post-date/time.
  *
  * @since Independent Publisher 1.0
  */
-function independent_publisher_posted_on() {
+function independent_publisher_posted_on_date() {
 	printf( __( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'independent_publisher' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),

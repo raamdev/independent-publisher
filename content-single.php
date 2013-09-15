@@ -17,7 +17,7 @@
 			}
 		}
 		?>
-		<h2 class="entry-title-meta">in <?php echo trim($output, $separator); ?></h2>
+		<h2 class="entry-title-meta"><div class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></div> in <?php echo trim($output, $separator); ?></h2>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
