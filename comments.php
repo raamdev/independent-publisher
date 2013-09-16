@@ -76,6 +76,16 @@ if ( post_password_required() )
 
 		<!-- END PING/TRACKBACKS LIST -->
 
+		<!-- START Efficient Related Posts LIST -->
+
+		<?php if( is_single() ) : ?>
+			<?php if( function_exists('wp_related_posts') ) : ?>
+				<?php do_action('erp-show-related-posts', array('title'=>'Related Thoughts, Essays, and Journals', 'num_to_display'=>12, 'no_rp_text'=>'No Related Posts Found')); ?>
+			<?php endif; ?>
+		<?php endif; ?>
+
+		<!-- END Efficient Related Posts LIST -->
+
 	<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
