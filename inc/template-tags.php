@@ -243,3 +243,24 @@ function independent_publisher_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'independent_publisher_wp_title', 10, 2 );
+
+
+
+/**
+ * Returns categories for current post with separator.
+ * Optionally returns only a single category.
+ *
+ * @since Independent Publisher 1.0
+ */
+function independent_publisher_post_categories($separator = ',', $single = FALSE) {
+	$categories = get_the_category();
+	$output = '';
+	if($categories){
+		foreach($categories as $category) {
+			$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+			if($single)
+				break;
+		}
+	}
+	return $output;
+}

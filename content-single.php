@@ -7,17 +7,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-		$categories = get_the_category();
-		$separator = ' ';
-		$output = '';
-		if($categories){
-			foreach($categories as $category) {
-				$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
-			}
-		}
-		?>
-		<h2 class="entry-title-meta"><div class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></div> in <?php echo trim($output, $separator); ?></h2>
+		<h2 class="entry-title-meta">
+			<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories('', TRUE); ?></h2>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
