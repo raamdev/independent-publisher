@@ -196,3 +196,35 @@ function independent_publisher_erp_title($output)
 		else
 			return $output = str_replace("<ul class='related_post'>", "<ul class='related_post'><li class='related_post_title'>Related Thoughts, Essays, and Journals</li>", $output );
 	}
+
+/*
+ * Change the comment reply link to use 'Reply to [Author First Name]'
+ */
+function independent_publisher_author_comment_reply_link($link, $args, $comment){
+
+	$comment = get_comment( $comment );
+
+	// If no comment author is blank, use 'Anonymous'
+	if ( empty($comment->comment_author) ) {
+		if (!empty($comment->user_id)){
+			$user=get_userdata($comment->user_id);
+			$author=$user->user_login;
+		} else {
+			$author = __('Anonymous');
+		}
+	} else {
+		$author = $comment->comment_author;
+	}
+
+	// If the user provided more than a first name, use only first name
+	if(strpos($author, ' ')){
+		$author = substr($author, 0, strpos($author, ' '));
+	}
+
+	// Replace Reply Link with "Reply to <Author First Name>"
+	$reply_link_text = $args['reply_text'];
+	$link = str_replace($reply_link_text, 'Reply to ' . $author, $link);
+
+	return $link;
+}
+add_filter('comment_reply_link', 'independent_publisher_author_comment_reply_link', 420, 4);
