@@ -767,13 +767,31 @@ ol.commentlist .avatar {
 }
 
 .pinglist {
-	font-size: 90%;
-	line-height: 1.563em;
+	font-family: "freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+ul.pinglist {
+	margin-left: 0;
+}
+
+.pinglist li {
+	display: inline;
+	margin-right: 10px;
+}
+.pinglist_title {
+	color: rgba(117, 117, 117, 0.78);
+}
+.pinglist a {
+	text-decoration: none;
+}
+.pinglist a:hover {
+	text-decoration: underline;
 }
 
 .trackback span, .pingback span {
-	font-size: 12px;
-	color: rgba(117, 117, 117, 0.78);
+	display: none;
 }
 
 .trackback cite, .pingback cite {
