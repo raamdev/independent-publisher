@@ -1031,11 +1031,11 @@ h6 {
 
 .entry-title-meta {
 	font-size: 13px;
-    color: #b3b3b1;
-    font-weight: 100;
-    letter-spacing: 1px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+   color: #b3b3b1;
+   font-weight: 100;
+   letter-spacing: 1px;
+   margin-bottom: 0px;
+   margin-top: 0px;
 	font-style: normal;
 }
 .entry-title-meta a {
@@ -1051,6 +1051,9 @@ h6 {
 .entry-meta a {
 	color: #999;
 	font-size: 12px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-style: normal;
 }
 
 .entry-meta a:hover {
