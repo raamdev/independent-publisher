@@ -549,6 +549,10 @@ img.aligncenter {
 .single-format-aside .entry-title {
 	display: none;
 }
+.format-standard .entry-title {
+	width: 75%;
+}
+
 /* =Media
 ----------------------------------------------- */
 
@@ -1162,7 +1166,7 @@ table th {
 	.site {
 		position: relative;
 		margin: 0 auto;
-		padding: 40px;
+		padding: 70px;
 		width: auto;
 	}
 
@@ -1252,10 +1256,11 @@ table th {
 	.entry-content,
 	#comments {
 		font-size: 18px;
+		line-height: 1.4;
 	}
 
 	h1.entry-title {
-		font-size: 36px;
+		font-size: 32px;
 	}
 
 	.format-aside .entry-content {
