@@ -166,3 +166,33 @@ add_filter( 'the_title', 'independent_publisher_post_format_title', 10, 2 );
  * Implement the Custom Header feature
  */
 require( get_template_directory() . '/inc/custom-header.php' );
+
+/**
+ * Fix comment count so that it doesn't include pings/trackbacks
+ */
+add_filter('get_comments_number', 'independent_publisher_comment_count', 0);
+function independent_publisher_comment_count($count)
+	{
+		if(!is_admin())
+			{
+				global $id;
+				$comments_by_type = & separate_comments(get_comments('status=approve&post_id='.$id));
+				return count($comments_by_type['comment']);
+			}
+		else
+			{
+				return $count;
+			}
+	}
+
+/**
+ * Fix comment count so that it doesn't include pings/trackbacks
+ */
+add_filter('erp-related-links-output', 'independent_publisher_erp_title', 0);
+function independent_publisher_erp_title($output)
+	{
+		if(strpos($output, 'No Related Posts Found'))
+			return '';
+		else
+			return $output = str_replace("<ul class='related_post'>", "<ul class='related_post'><li class='related_post_title'>Related Thoughts, Essays, and Journals</li>", $output );
+	}

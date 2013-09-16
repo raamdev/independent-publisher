@@ -24,7 +24,7 @@ if ( post_password_required() )
 
 	<?php // You can start editing here -- including this comment! ?>
 
-	<?php if ( have_comments() ) : ?>
+	<?php if ( have_comments() && get_comments_number() > 0) : ?>
 		<h2 class="comments-title">
 			<?php
 				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'independent_publisher' ),
@@ -79,8 +79,8 @@ if ( post_password_required() )
 		<!-- START Efficient Related Posts LIST -->
 
 		<?php if( is_single() ) : ?>
-			<?php if( function_exists('wp_related_posts') ) : ?>
-				<?php do_action('erp-show-related-posts', array('title'=>'Related Thoughts, Essays, and Journals', 'num_to_display'=>12, 'no_rp_text'=>'No Related Posts Found')); ?>
+			<?php if( function_exists('wp_related_posts') ) : //Related Thoughts, Essays, and Journals?>
+				<?php do_action('erp-show-related-posts', array('title'=>'', 'num_to_display'=>12, 'no_rp_text'=>'No Related Posts Found')); ?>
 			<?php endif; ?>
 		<?php endif; ?>
 

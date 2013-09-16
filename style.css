@@ -1290,3 +1290,27 @@ table th {
 	   -moz-hyphens: none;
    }
 }
+
+ul.related_post {
+	margin-left: 0;
+	line-height: 1;
+}
+.related_post li {
+	font-family: "freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.related_post li {
+	display: inline;
+	margin-right: 10px;
+}
+.related_post a {
+	text-decoration: none;
+}
+.related_post a:hover {
+	text-decoration: underline;
+}
+.related_post .related_post_title {
+	color: rgba(117, 117, 117, 0.78);
+}
