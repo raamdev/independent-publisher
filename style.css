@@ -1328,6 +1328,8 @@ table th {
    }
 }
 
+/* Related Posts (Efficient Related Posts plugin) */
+
 ul.related_post {
 	margin-left: 0;
 	line-height: 1;
@@ -1350,4 +1352,19 @@ ul.related_post {
 }
 .related_post .related_post_title {
 	color: rgba(117, 117, 117, 0.78);
+}
+
+/* Footnotes */
+
+.footnotes p {
+	margin-bottom: 0;
+}
+.footnotes {
+	font-size: 80%;
+}
+.blog div.footnotes,
+.archive div.footnotes,
+.search div.footnotes
+{
+	display: none;
 }
