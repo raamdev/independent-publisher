@@ -155,7 +155,7 @@ blockquote {
 }
 blockquote cite {
 	color: #999;
-	font-size: 13px;
+	font-size: 80%;
 }
 blockquote cite:before {
 	content: "\2014 \0020";
