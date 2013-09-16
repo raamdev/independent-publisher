@@ -328,14 +328,17 @@ textarea {
 /* Links */
 a {
 	color: #57ad68;
+	text-decoration: none;
 }
 a:visited {
 	color: #57ad68;
+	text-decoration: none;
 }
 a:hover,
 a:focus,
 a:active {
 	color: #57ad68;
+	text-decoration: underline;
 }
 
 /* Alignment */
@@ -1023,7 +1026,7 @@ h6 {
 }
 
 .entry-title a:hover {
-	color: #26ADE4;
+	color: #57ad68;
 }
 
 .entry-title-meta {
@@ -1051,7 +1054,7 @@ h6 {
 }
 
 .entry-meta a:hover {
-	color: #26ADE4;
+	color: #57ad68;
 }
 
 .site {
@@ -1111,7 +1114,7 @@ h6 {
 }
 
 .site-footer a:hover {
-	color: #26ADE4;
+	color: #57ad68;
 }
 
 img#wpstats {
