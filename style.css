@@ -657,6 +657,7 @@ object {
 #comments {
 	margin-top: 40px;
 	margin-bottom: 30px;
+	width: 90%;
 }
 
 .site-main .commentlist article {
@@ -1277,6 +1278,7 @@ table th {
 	#comments {
 		font-size: 18px;
 		line-height: 1.4;
+		width: 100%;
 	}
 
 	h1.entry-title {
