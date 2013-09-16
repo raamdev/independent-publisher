@@ -507,14 +507,19 @@ img.aligncenter {
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title,
+.search .format-aside .entry-title,
 .blog .format-status .entry-title,
 .archive .format-status .entry-title,
+.search .format-status .entry-title,
 .blog .format-link .entry-title,
 .archive .format-link .entry-title,
+.search .format-link .entry-title,
 .blog .format-image .entry-title,
 .archive .format-image .entry-title,
+.search .format-image .entry-title,
 .blog .format-quote .entry-title,
-.archive .format-quote .entry-title {
+.archive .format-quote .entry-title,
+.search .format-quote .entry-title {
 	display: none;
 }
 
@@ -1049,11 +1054,12 @@ h6 {
 
 .entry-meta,
 .entry-meta a {
-	color: #999;
-	font-size: 12px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 300;
+	color: #b3b3b1;
+	font-size: 13px;
+	font-family: "Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-weight: 100;
 	font-style: normal;
+	text-align: right;
 }
 
 .entry-meta a:hover {
@@ -1208,6 +1214,9 @@ table th {
 	.site-description {
 		clear: none;
 		margin-left: 70px;
+	}
+	.site-title {
+		font-style: normal;
 	}
 
 	.site-logo,
