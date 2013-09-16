@@ -396,7 +396,7 @@ img.aligncenter {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 15px;
 	font-family: "Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-seri;
 }
 .main-navigation ul ul {
@@ -687,6 +687,9 @@ ol.commentlist {
 ol.commentlist,
 ol.commentlist ul.children {
 	list-style: none;
+}
+ol.commentlist {
+	margin-bottom: 100px;
 }
 
 ul.children {
