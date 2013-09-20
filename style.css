@@ -1396,3 +1396,15 @@ ul.related_post {
 {
 	display: none;
 }
+
+/* Social Buttons */
+.social-buttons a i, .social-buttons a i:hover {
+	font-size: 1.6em;
+	text-decoration: none;
+	margin-left: 10px;
+	color: #BBC7CC;
+}
+.social-buttons a i:hover {
+	color: #4a4a4a;
+	transition: color ease 0.3s;
+}
