@@ -859,9 +859,34 @@ ul.pinglist {
 /* =Layout
 ----------------------------------------------- */
 
+@font-face
+{
+	font-family: DroidSerif;
+	src: url('fonts/droid-serif/DroidSerif.ttf');
+}
+@font-face
+{
+	font-family: DroidSerif;
+	src: url('fonts/droid-serif/DroidSerif-Italic.ttf');
+	font-style: italic;
+}
+@font-face
+{
+	font-family: DroidSerif;
+	src: url('fonts/droid-serif/DroidSerif-Bold.ttf');
+	font-weight: bold;
+}
+@font-face
+{
+	font-family: DroidSerif;
+	src: url('fonts/droid-serif/DroidSerif-BoldItalic.ttf');
+	font-style: italic;
+	font-weight: bold;
+}
+
 body {
 	color: #222;
-	font: 1.9em Georgia, "Times New Roman", Times, serif;
+	font: 1.9em DroidSerif, Georgia, "Times New Roman", Times, serif;
 	line-height: 1.6;
 }
 
