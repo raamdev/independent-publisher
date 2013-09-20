@@ -228,3 +228,12 @@ function independent_publisher_author_comment_reply_link($link, $args, $comment)
 	return $link;
 }
 add_filter('comment_reply_link', 'independent_publisher_author_comment_reply_link', 420, 4);
+
+/**
+ * Register font-awesome style sheet.
+ */
+add_action( 'wp_enqueue_scripts', 'register_font_awesome_style' );
+function register_font_awesome_style() {
+	wp_register_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css', array(), '3.2.1' );
+	wp_enqueue_style( 'font-awesome' );
+}
