@@ -1105,6 +1105,7 @@ h6 {
 	margin: 120px auto;
 	padding: 0 40px;
 	max-width: 700px;
+	margin-bottom: 0;
 }
 
 .site-header {
@@ -1151,7 +1152,7 @@ h6 {
 
 .site-footer {
 	clear: both;
-	margin-top: 40px;
+	margin-top: 100px;
 	margin-bottom: 40px;
 }
 
@@ -1159,6 +1160,7 @@ h6 {
 .site-footer a {
 	color: #999;
 	font-size: 13px;
+	text-align: center;
 }
 
 .site-footer a:hover {
