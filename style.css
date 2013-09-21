@@ -803,7 +803,7 @@ ul.pinglist {
 
 .pinglist li {
 	display: inline;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 .pinglist_title {
 	color: rgba(117, 117, 117, 0.78);
@@ -827,7 +827,7 @@ ul.taglist {
 
 .taglist li {
 	display: inline;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 .taglist_title {
 	color: rgba(117, 117, 117, 0.78);
