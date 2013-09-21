@@ -191,18 +191,6 @@ function independent_publisher_comment_count($count)
 			}
 	}
 
-/**
- * Fix comment count so that it doesn't include pings/trackbacks
- */
-add_filter('erp-related-links-output', 'independent_publisher_erp_title', 0);
-function independent_publisher_erp_title($output)
-	{
-		if(strpos($output, 'No Related Posts Found'))
-			return '';
-		else
-			return $output = str_replace("<ul class='related_post'>", "<ul class='related_post'><li class='related_post_title'>Related Thoughts, Essays, and Journals</li>", $output );
-	}
-
 /*
  * Change the comment reply link to use 'Reply to [Author First Name]'
  */

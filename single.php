@@ -21,6 +21,26 @@ get_header(); ?>
 						comments_template( '', true );
 				?>
 
+				<!-- START Efficient Related Posts LIST -->
+
+				<?php if( is_single() ) : ?>
+					<?php if( function_exists('wp_related_posts') ) : //Related Thoughts, Essays, and Journals?>
+						<?php do_action('erp-show-related-posts', array('title'=>'Further Reading', 'num_to_display'=>5, 'no_rp_text'=>'No Related Posts Found')); ?>
+					<?php endif; ?>
+				<?php endif; ?>
+
+				<!-- END Efficient Related Posts LIST -->
+
+				<!-- START TAG LIST -->
+
+				<?php
+				if(get_the_tag_list()) {
+					echo get_the_tag_list('<ul class="taglist"><li class="taglist_title">Related Content by Tag</li><li>','</li><li>','</li></ul>');
+				}
+				?>
+				<!-- END TAG LIST -->
+
+
 				<!-- START PING/TRACKBACKS LIST -->
 
 				<?php if ( have_comments() ) : ?>
@@ -33,16 +53,6 @@ get_header(); ?>
 				<?php endif; ?>
 
 				<!-- END PING/TRACKBACKS LIST -->
-
-				<!-- START Efficient Related Posts LIST -->
-
-				<?php if( is_single() ) : ?>
-					<?php if( function_exists('wp_related_posts') ) : //Related Thoughts, Essays, and Journals?>
-						<?php do_action('erp-show-related-posts', array('title'=>'', 'num_to_display'=>12, 'no_rp_text'=>'No Related Posts Found')); ?>
-					<?php endif; ?>
-				<?php endif; ?>
-
-				<!-- END Efficient Related Posts LIST -->
 
 			<?php endwhile; // end of the loop. ?>
 
