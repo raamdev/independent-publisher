@@ -1115,6 +1115,7 @@ h6 {
 .site-footer {
 	float: right;
 	max-width: 700px;
+	width: 100%;
 }
 
 .widget-area {
