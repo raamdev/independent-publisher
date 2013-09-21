@@ -16,8 +16,23 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) ); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
+		<?php if ('aside' === get_post_format()) : // Do something special for Asides ?>
+
+			<?php // This creates the same output as the_content() ?>
+			<?php $content = get_the_content(); ?>
+			<?php $content = apply_filters('the_content', $content); ?>
+			<?php $content = str_replace(']]>', ']]&gt;', $content); ?>
+
+			<?php // Asides might have footnotes, which don't display properly when linking Asides to themselves, so we strip <sup> here ?>
+			<?php $content = preg_replace('!<sup\s+id="fnref.*?">.*?</sup>!is', '', $content); ?>
+
+			<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo $content; ?></a>
+		<?php else : ?>
+
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) ); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
+
+		<?php endif; ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
