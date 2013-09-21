@@ -394,7 +394,6 @@ img.aligncenter {
 	position: relative;
 }
 .main-navigation a {
-	display: block;
 	text-decoration: none;
 	font-size: 15px;
 	font-family: "Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-seri;
@@ -840,7 +839,7 @@ ul.pinglist {
 .widget,
 .widget_twitter ul li,
 .widget_rss ul li {
-	margin: 0 0 1.5em;
+	margin: 0 0 4em;
 }
 
 /* Search widget */
@@ -978,12 +977,18 @@ body {
 
 .main-navigation a,
 .widget-area ul li a {
-	padding: 2px 0px;
+	padding: 5px 0px;
 	text-decoration: none;
+	display: block;
+	line-height: 1;
+}
+.widget-area ul li a:hover {
+	text-decoration: underline;
 }
 
 .widget-area .widget-title {
-	font-size: 15px;
+	font-size: 16px;
+	letter-spacing: inherit;
 }
 
 .site-navigation,
@@ -1120,8 +1125,12 @@ h6 {
 
 .widget-area {
 	float: left;
-	width: 24%; /* Sidebar 1 */
+	width: 160px; /* Sidebar 1 */
 	clear: left;
+	margin-left: -220px;
+	text-align: right;
+	font-family: "Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-size: 15px;
 }
 
 .site-header,
@@ -1219,6 +1228,13 @@ table th {
 	}
 	.entry-title-meta-author {
 		display: inline-block;
+	}
+	.widget-area {
+		float: right;
+		width: 100%;
+		margin-left: 0;
+		text-align: inherit;
+		padding-top: 40px;
 	}
 }
 /* iPads (landscape) ----------- */
