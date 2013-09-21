@@ -21,6 +21,29 @@ get_header(); ?>
 						comments_template( '', true );
 				?>
 
+				<!-- START PING/TRACKBACKS LIST -->
+
+				<?php if ( have_comments() ) : ?>
+					<?php if ( count($wp_query->comments_by_type['pings'])) { ?>
+						<ul class="pinglist">
+							<li class="pinglist_title">Readers who shared this</li>
+							<?php wp_list_comments('type=pings&callback=independent_publisher_ping'); ?>
+						</ul>
+					<?php } ?>
+				<?php endif; ?>
+
+				<!-- END PING/TRACKBACKS LIST -->
+
+				<!-- START Efficient Related Posts LIST -->
+
+				<?php if( is_single() ) : ?>
+					<?php if( function_exists('wp_related_posts') ) : //Related Thoughts, Essays, and Journals?>
+						<?php do_action('erp-show-related-posts', array('title'=>'', 'num_to_display'=>12, 'no_rp_text'=>'No Related Posts Found')); ?>
+					<?php endif; ?>
+				<?php endif; ?>
+
+				<!-- END Efficient Related Posts LIST -->
+
 			<?php endwhile; // end of the loop. ?>
 
 			</div><!-- #content .site-content -->
