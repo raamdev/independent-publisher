@@ -488,6 +488,7 @@ img.aligncenter {
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+	color: #333326;
 }
 .entry-content > .sharedaddy {
 	margin: 1.5em 0;
