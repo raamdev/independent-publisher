@@ -21,32 +21,41 @@ get_header(); ?>
 						comments_template( '', true );
 				?>
 
-				<div id="further_reading">
-					<?php if( is_single() ) : ?>
-						<?php if( function_exists('wp_related_posts') ) : //Related Thoughts, Essays, and Journals?>
-							<?php do_action('erp-show-related-posts', array('title'=>'Further Reading', 'num_to_display'=>5, 'no_rp_text'=>'No Related Posts Found')); ?>
-						<?php endif; ?>
-					<?php endif; ?>
-				</div>
+				<?php if( is_single() && function_exists('wp_related_posts') ) : ?>
 
-				<div id="tag_list">
-					<?php if(get_the_tag_list()) : ?>
-						<?php echo get_the_tag_list('<ul class="taglist"><li class="taglist_title">Related Content by Tag</li><li>','</li><li>','</li></ul>'); ?>
-					<?php endif; ?>
-				</div>
+					<div id="further-reading">
 
-				<!-- START PING/TRACKBACKS LIST -->
+						<?php do_action('erp-show-related-posts', array('title'=>'Further Reading', 'num_to_display'=>5, 'no_rp_text'=>'No Related Posts Found')); ?>
 
-				<?php if ( have_comments() ) : ?>
-					<?php if ( count($wp_query->comments_by_type['pings'])) { ?>
-						<ul class="pinglist">
-							<li class="pinglist_title">Thank you for sharing</li>
-							<?php wp_list_comments('type=pings&callback=independent_publisher_ping'); ?>
-						</ul>
-					<?php } ?>
+					</div>
+
 				<?php endif; ?>
 
-				<!-- END PING/TRACKBACKS LIST -->
+				<?php if( get_the_tag_list() ) : ?>
+
+					<div id="taglist">
+
+						<?php echo get_the_tag_list('<ul class="taglist"><li class="taglist-title">Related Content by Tag</li><li>','</li><li>','</li></ul>'); ?>
+
+					</div>
+
+				<?php endif; ?>
+
+				<?php if ( have_comments() ) : ?>
+
+					<?php if ( count($wp_query->comments_by_type['pings'])) { ?>
+
+						<ul class="pinglist">
+							<li class="pinglist-title">Readers who shared this</li>
+
+							<?php wp_list_comments('type=pings&callback=independent_publisher_ping'); ?>
+
+							<li class="pinglist-title">Thank you!</li>
+						</ul>
+
+					<?php } // end if ( count($wp_query->comments_by_type['pings']))?>
+
+				<?php endif; // end have_comments()?>
 
 			<?php endwhile; // end of the loop. ?>
 
