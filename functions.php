@@ -207,3 +207,11 @@ function register_font_awesome_style() {
 	wp_register_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css', array(), '3.2.1' );
 	wp_enqueue_style( 'font-awesome' );
 }
+
+/*
+ * Show Subscribe to Comments Reloaded options after comment form fields
+ */
+if( function_exists('subscribe_reloaded_show') ) :
+	add_action( 'comment_form_logged_in_after', 'subscribe_reloaded_show' );
+	add_action( 'comment_form_after_fields', 'subscribe_reloaded_show' );
+endif;
