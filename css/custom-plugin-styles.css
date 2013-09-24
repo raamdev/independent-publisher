@@ -1,0 +1,10 @@
+/**
+ * Contains CSS for modifying plugin styles
+ */
+
+
+/* Subscribe to Comments (Subscribe to Comments Reloaded Plugin) */
+
+.comment-form-subscriptions p {
+	padding-bottom: 2px;
+}

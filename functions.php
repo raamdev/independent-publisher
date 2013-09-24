@@ -105,7 +105,6 @@ function independent_publisher_scripts() {
 
 	wp_enqueue_style( 'publish-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 	wp_enqueue_script( 'sharing-buttons', get_template_directory_uri() . '/js/sharing-buttons.js', array(), '20130920', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -215,3 +214,113 @@ if( function_exists('subscribe_reloaded_show') ) :
 	add_action( 'comment_form_logged_in_after', 'subscribe_reloaded_show' );
 	add_action( 'comment_form_after_fields', 'subscribe_reloaded_show' );
 endif;
+
+/**
+ * Arguments for comment_form()
+ *
+ * @return array
+ */
+function independent_publisher_comment_form_args() {
+
+	if(!is_user_logged_in()) {
+		$comment_notes_before = '';
+		$comment_notes_after = '';
+	} else {
+		$comment_notes_before = '';
+		$comment_notes_after = '';
+	}
+
+	$user = wp_get_current_user();
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? " aria-required='true'" : '' );
+
+	$args = array(
+		'id_form'           => 'commentform',
+		'id_submit'         => 'submit',
+		'title_reply'       => __( '' ),
+		'title_reply_to'    => __( 'Leave a Reply to %s' ),
+		'cancel_reply_link' => __( 'Cancel Reply' ),
+		'label_submit'      => __( 'Submit Comment' ),
+
+		'must_log_in' => '<p class="must-log-in">' .
+		                 sprintf(
+			                 __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+			                 wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
+		                 ) . '</p>',
+
+		'logged_in_as' => '<p class="logged-in-as">' .
+		                  sprintf(
+			                  __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+			                  admin_url( 'profile.php' ),
+			                  $user->display_name,
+			                  wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
+		                  ) . '</p>',
+
+		'comment_notes_before' => $comment_notes_before,
+
+		'comment_notes_after' => $comment_notes_after,
+
+		'fields' => apply_filters( 'comment_form_default_fields', array(
+	      'author' =>
+	      '<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent_publisher' ) . ':</label>' .
+	      ( $req ? '' : '' ) .
+	      '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+	      '"' . $aria_req . ' /></p>',
+
+	      'email' =>
+	      '<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent_publisher' ) . ':</label>' .
+	      ( $req ? '' : '' ) .
+	      '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+	      '"' . $aria_req . ' /></p>',
+
+	      'url' =>
+	      '<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent_publisher' ) . ':</label>' .
+	      '<input id="url" name="url" type="text" value="' . esc_attr(  $commenter['comment_author_url'] ) .
+	      '" /></p>',
+		                                                          )
+		),
+	);
+
+	return $args;
+}
+
+/**
+ * Move the comment form textarea above the comment fields
+ */
+function independent_publisher_remove_textarea($defaults) {
+	$defaults['comment_field'] = '';
+	return $defaults;
+}
+function independent_publisher_add_textarea() {
+	echo '<div id="main-reply-title"><h3>Share a Comment</h3></div>';
+	echo '<p class="comment-form-comment" id="comment-form-field"><textarea id="comment" name="comment" cols="60" rows="6" aria-required="true"></textarea></p>';
+}
+add_filter( 'comment_form_defaults', 'independent_publisher_remove_textarea' );
+add_action( 'comment_form_top', 'independent_publisher_add_textarea' );
+
+/**
+ * Register enhanced comment form stylesheet
+ */
+function independent_publisher_enhanced_comment_form_style() {
+	wp_register_style( 'enhanced-comment-form-css', get_template_directory_uri() . '/css/enhanced-comment-form.css', array(), '1.0' );
+	wp_enqueue_style( 'enhanced-comment-form-css' );
+}
+add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form_style' );
+
+/**
+ * Enqueue enhanced comment form JavaScript
+ */
+function independent_publisher_enhanced_comment_form() {
+	wp_enqueue_script( 'enhanced-comment-form-js', get_template_directory_uri() . '/js/enhanced-comment-form.js', array(), '20130920', true );
+}
+add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form' );
+
+/**
+ * Register custom plugins stylesheet
+ */
+function independent_publisher_custom_plugin_styles() {
+	wp_register_style( 'custom-plugin-styles-css', get_template_directory_uri() . '/css/custom-plugin-styles.css', array(), '1.0' );
+	wp_enqueue_style( 'custom-plugin-styles-css' );
+}
+add_action( 'wp_enqueue_scripts', 'independent_publisher_custom_plugin_styles' );

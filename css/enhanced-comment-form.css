@@ -1,0 +1,65 @@
+/**
+ * Styles for enhanced comment form
+ */
+
+.comment-form-author label,
+.comment-form-email label,
+.comment-form-url label,
+.comment-form-comment label,
+.comment-form-subscriptions label {
+	margin-right: 5px;
+	font-weight: 700;
+	font-family: "Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	color: #333332;
+	display: block;
+	font-size: 16px;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-form-subscriptions {
+	float: left;
+	width: 100%;
+	max-width: 256px;
+}
+
+.comment-form-comment {
+	max-width: 500px;
+	padding-right: 20px;
+}
+#commentform input[type="submit"] {
+	width: 80%;
+}
+#commentform #main-reply-title h3 {
+	letter-spacing: 0px;
+}
+#cancel-comment-reply-link {
+	font-family: DroidSerif, Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 80%;
+	letter-spacing: 0px;
+	float: right;
+	margin-bottom: -20px;
+	margin-right: 70px;
+}
+
+#commentform textarea {
+	padding: 10px;
+	margin: 0px;
+	max-width: 500px;
+	font-size: 90%;
+}
+
+.form-submit {
+	clear: both;
+}
+
+.icon-comment {
+	color: white;
+	margin-right: 10px;
+}
+
+#share-comment-button {
+	display: none;
+}

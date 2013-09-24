@@ -69,6 +69,8 @@ if ( post_password_required() )
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'independent_publisher' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php comment_form( independent_publisher_comment_form_args() ); ?>
+
+	<button id="share-comment-button"><i class="icon-comment"></i>Share a comment</button>
 
 </div><!-- #comments .comments-area -->
