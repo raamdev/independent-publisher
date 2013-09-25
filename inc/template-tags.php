@@ -283,6 +283,7 @@ if(!function_exists('independent_publisher_sharing_buttons')) :
 					<a target="_new" href="https://twitter.com/share?text=<?php echo $clean_title; ?><?php echo $independent_publisher_social_options['twitter'] ? '%20via%20' . $independent_publisher_social_options['twitter'] : ''; ?>&url=<?php the_permalink(); ?>" title="Share '<?php echo $clean_title; ?>' on Twitter" onclick="share_button_popup(this.href); return false;"><i class="icon-twitter"></i></a>
 					<a target="_new" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" title="Share '<?php echo $clean_title; ?>' on Facebook" onclick="share_button_popup(this.href); return false;"><i class="icon-facebook-sign"></i></a>
 					<a target="_new" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php the_permalink(); ?>" title="Share '<?php echo $clean_title; ?>' on Google+" onclick="share_button_popup(this.href); return false;"><i class="icon-google-plus-sign"></i></a>
+				</div>
 				<!-- END SHARING BUTTONS -->
 
 			<?php
