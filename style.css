@@ -507,6 +507,10 @@ img.aligncenter {
 	max-width: 100% !important;
 }
 
+.single .entry-content {
+	padding-bottom: 20px;
+}
+
 /* =Post Formats
 ----------------------------------------------- */
 
@@ -558,6 +562,7 @@ img.aligncenter {
 .format-aside .entry-content {
 	margin-top: 0;
 }
+
 .format-aside .entry-title-meta {
 	margin-bottom: 20px;
 }
@@ -679,15 +684,27 @@ object {
 ----------------------------------------------- */
 
 #comments {
-	margin-top: 40px;
-	margin-bottom: 30px;
-	width: 90%;
+	margin-top: 80px;
+	margin-bottom: 100px;
 }
 
+.comments-title {
+	text-align: center;
+	color: rgb(213, 213, 213);
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
 .site-main .commentlist article {
-	padding-bottom: 0;
-	margin-bottom: 20px;
+	padding-bottom: 1em;
+	padding-top: 1em;
 	border-bottom: none;
+}
+
+.commentlist #respond {
+	border-left: 2px solid #FCFCFC;
+	padding-left: 20px;
 }
 
 #comments-template div.navigation {
@@ -697,7 +714,6 @@ object {
 ol.commentlist {
 	margin-left: 0px;
 	font-size: 90%;
-	line-height: 1.563em;
 }
 
 ol.commentlist,
@@ -712,21 +728,30 @@ ul.children {
 	margin-left: 15px;
 }
 
-.commentlist .thread-even {
-	border-left: 10px solid rgba(87, 173, 104, 0.18);
+.commentlist .thread-even, .commentlist .thread-odd {
 	padding-left: 30px;
 	margin-bottom: 30px;
+	margin-top: 3.5em;
 }
 
-.commentlist .thread-odd {
-	border-left: 10px solid rgba(110, 132, 187, 0.15);
-	padding-left: 30px;
-	margin-bottom: 30px;
+.commentlist .thread-even, .commentlist .thread-odd {
+	border-left: 5px solid #FCFCFC;
+	border-bottom: 5px solid #FCFCFC;
 }
 
 .commentlist .children .odd,
 .commentlist .children .even {
 	border-left: none;
+}
+
+.commentlist ul.children {
+	margin-left: 0;
+	padding-left: 20px;
+}
+
+.commentlist .thread-even ul.children,
+.commentlist .thread-odd ul.children {
+	border-left: 2px solid #FCFCFC;
 }
 
 ol.commentlist .avatar {
@@ -757,7 +782,6 @@ ol.commentlist .avatar {
 }
 
 .comment .reply a {
-	display: block;
 	margin-top: -10px;
 	font-size: 80%;
 }
@@ -796,13 +820,14 @@ ol.commentlist .avatar {
 	display: none;
 }
 
-.pinglist {
+#pinglist {
 	font-family: "freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 12px;
 	border-top:  1px solid #eee;
 	padding-top: 20px;
+	margin-top: 80px;
 
 }
 ul.pinglist {
@@ -1099,7 +1124,9 @@ h6 {
 
 .page h1.entry-title {margin-top: 0px; }
 
-.site-main article {
+.blog article,
+.archive article,
+.search article {
 	padding: 40px 0 40px 0;
 	border-bottom: solid 1px #ddd;
 }
@@ -1143,6 +1170,11 @@ h6 {
 
 .entry-meta a:hover {
 	color: #57ad68;
+}
+.single .entry-meta {
+	border-top: 1px solid #eee;
+	padding-bottom: 40px;
+	padding-top: 40px;
 }
 
 .site {
@@ -1231,10 +1263,12 @@ table th {
 /* Post Author Bottom Card */
 
 .post-author-bottom {
-	margin-top: 50px;
 	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-bottom: 40px;
 	position: relative;
 	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 	display: none;
 }
 
@@ -1274,6 +1308,9 @@ table th {
 	.post-author-bottom {
 		display: block;
 	}
+	.entry-meta {
+		border-bottom: none;
+	}
 	.entry-title-meta-author {
 		display: inline-block;
 	}
@@ -1284,6 +1321,9 @@ table th {
 		text-align: inherit;
 		padding-top: 40px;
 	}
+   .single .entry-meta {
+	   border-top: none;
+   }
 }
 /* iPads (landscape) ----------- */
 @media only screen and (max-width : 900px) {
@@ -1419,6 +1459,15 @@ table th {
 	   -webkit-hyphens: none;
 	   -moz-hyphens: none;
    }
+   .commentlist ul.children {
+	   margin-left: 0;
+	   padding-left: 10px;
+   }
+	.commentlist .thread-even,
+	.commentlist .thread-odd {
+		padding-left: 10px;
+	}
+
 }
 
 /* Related Posts (Efficient Related Posts plugin) */
@@ -1451,10 +1500,10 @@ ul.related_post {
 	color: #b3b3b1;
 	text-transform: uppercase;
 	font-weight: 100;
-	font-size: 17px;
+	font-size: 18px;
 	letter-spacing: 1px;
 	border-top: 1px solid #eee;
-	width: 151px;
+	max-width: 165px;
 	padding-top: 20px;
 }
 
@@ -1483,4 +1532,8 @@ ul.related_post {
 .social-buttons a i:hover {
 	color: #4a4a4a;
 	transition: color ease 0.3s;
+}
+.social-buttons {
+	float: right;
+	margin-top: 10px;
 }

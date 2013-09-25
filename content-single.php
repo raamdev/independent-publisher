@@ -17,12 +17,6 @@
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-meta">
-		<?php independent_publisher_sharing_buttons(); ?>
-		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
-
-
 	<div class="post-author-bottom">
 		<div class="post-author-card">
 			<?php if ( get_header_image() ) : ?>
@@ -40,6 +34,17 @@
 				<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
 			</div>
 		</div>
-	</div>
+	</div> <!-- .post-author-bottom -->
+
+	<footer class="entry-meta">
+
+		<?php independent_publisher_sharing_buttons(); ?>
+
+		<?php if( comments_open() ) : ?>
+			<div id="share-comment-button"><button><i class="icon-comment"></i>Share a comment</button></div>
+		<?php endif; ?>
+
+		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="edit-link">', '</span>' ); ?>
+	</footer><!-- .entry-meta -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

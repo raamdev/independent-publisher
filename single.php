@@ -33,16 +33,6 @@ get_header(); ?>
 					</div>
 				<?php endif; ?>
 
-				<?php if ( have_comments() ) : ?>
-					<?php if ( count($wp_query->comments_by_type['pings'])) { ?>
-						<ul class="pinglist">
-							<li class="pinglist-title">Readers who shared this</li>
-							<?php wp_list_comments('type=pings&callback=independent_publisher_ping'); ?>
-							<li class="pinglist-title">Thank you!</li>
-						</ul>
-					<?php } // end if ( count($wp_query->comments_by_type['pings']))?>
-				<?php endif; // end have_comments()?>
-
 			<?php endwhile; // end of the loop. ?>
 
 			</div><!-- #content .site-content -->

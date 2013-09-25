@@ -239,7 +239,7 @@ function independent_publisher_comment_form_args() {
 		'id_form'           => 'commentform',
 		'id_submit'         => 'submit',
 		'title_reply'       => __( '' ),
-		'title_reply_to'    => __( 'Leave a Reply to %s' ),
+		'title_reply_to'    => __( 'Leave a Reply for %s' ),
 		'cancel_reply_link' => __( 'Cancel Reply' ),
 		'label_submit'      => __( 'Submit Comment' ),
 
@@ -263,19 +263,19 @@ function independent_publisher_comment_form_args() {
 
 		'fields' => apply_filters( 'comment_form_default_fields', array(
 	      'author' =>
-	      '<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent_publisher' ) . ':</label>' .
+	      '<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent_publisher' ) . '</label>' .
 	      ( $req ? '' : '' ) .
 	      '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 	      '"' . $aria_req . ' /></p>',
 
 	      'email' =>
-	      '<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent_publisher' ) . ':</label>' .
+	      '<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent_publisher' ) . '</label>' .
 	      ( $req ? '' : '' ) .
 	      '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
 	      '"' . $aria_req . ' /></p>',
 
 	      'url' =>
-	      '<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent_publisher' ) . ':</label>' .
+	      '<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent_publisher' ) . '</label>' .
 	      '<input id="url" name="url" type="text" value="' . esc_attr(  $commenter['comment_author_url'] ) .
 	      '" /></p>',
 		                                                          )
@@ -294,6 +294,7 @@ function independent_publisher_remove_textarea($defaults) {
 }
 function independent_publisher_add_textarea() {
 	echo '<div id="main-reply-title"><h3>Share a Comment</h3></div>';
+	echo '<div class="comment-form-reply-title"><p>Comment</p></div>';
 	echo '<p class="comment-form-comment" id="comment-form-field"><textarea id="comment" name="comment" cols="60" rows="6" aria-required="true"></textarea></p>';
 }
 add_filter( 'comment_form_defaults', 'independent_publisher_remove_textarea' );

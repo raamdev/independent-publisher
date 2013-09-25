@@ -20,17 +20,26 @@ if ( post_password_required() )
 	return;
 ?>
 
+	<?php if( comments_open() ) : ?>
+		<div id="commentform-top"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
+			<?php comment_form( independent_publisher_comment_form_args() ); ?>
+	<?php endif; ?>
+
 	<div id="comments" class="comments-area">
 
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() && get_comments_number() > 0) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'independent_publisher' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
-		</h2>
+
+		<?php if ( get_comments_number() > 10 ) : ?>
+			<h2 class="comments-title">
+				<i class="icon-comments"></i>
+				<?php
+					printf( _n( '1 Comment', '%1$s Comments', get_comments_number(), 'independent_publisher' ),
+						number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+				?>
+			</h2>
+		<?php endif; ?>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation">
@@ -69,9 +78,22 @@ if ( post_password_required() )
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'independent_publisher' ); ?></p>
 	<?php endif; ?>
 
-	<?php if( comments_open() ) : ?>
-		<?php comment_form( independent_publisher_comment_form_args() ); ?>
-		<button id="share-comment-button"><i class="icon-comment"></i>Share a comment</button>
+	<?php if(  comments_open() && get_comments_number() > 10 ) : ?>
+		<?php independent_publisher_sharing_buttons(); ?>
+		<div id="share-comment-button-bottom"><button><i class="icon-comment"></i>Share a comment</button></div>
+		<div id="commentform-bottom"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
 	<?php endif; ?>
+
+	<?php if ( have_comments() ) : ?>
+		<?php if ( count($wp_query->comments_by_type['pings'])) { ?>
+			<div id="pinglist">
+				<ul class="pinglist">
+					<li class="pinglist-title">Readers who shared this</li>
+					<?php wp_list_comments('type=pings&callback=independent_publisher_ping'); ?>
+					<li class="pinglist-title">Thank you!</li>
+				</ul>
+			</div>
+		<?php } // end if ( count($wp_query->comments_by_type['pings']))?>
+	<?php endif; // end have_comments() ?>
 
 </div><!-- #comments .comments-area -->
