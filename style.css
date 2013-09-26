@@ -1498,8 +1498,8 @@ ul.related_post {
 	font-size: 18px;
 	letter-spacing: 1px;
 	border-top: 1px solid #eee;
-	max-width: 165px;
 	padding-top: 20px;
+	display: inline-block;
 }
 
 /* Footnotes */
