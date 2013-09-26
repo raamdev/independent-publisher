@@ -580,6 +580,9 @@ img.aligncenter {
 .single-format-aside .entry-title {
 	display: none;
 }
+.single-format-aside .entry-content {
+	margin-bottom: 100px;
+}
 .format-standard .entry-title {
 	width: 75%;
 }
