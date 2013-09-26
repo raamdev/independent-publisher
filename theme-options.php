@@ -7,11 +7,11 @@
 function independent_publisher_theme_menu() {
 
 	add_theme_page(
-		'Independent Publisher Theme', 					// The title to be displayed in the browser window for this page.
-		'Theme Options',					// The text to be displayed for this menu item
-		'administrator',					// Which type of users can see this menu item
-		'independent_publisher_theme_options',			// The unique ID - that is, the slug - for this menu item
-		'independent_publisher_theme_display'				// The name of the function to call when rendering this menu's page
+		'Independent Publisher Theme', // The title to be displayed in the browser window for this page.
+		'Theme Options', // The text to be displayed for this menu item
+		'administrator', // Which type of users can see this menu item
+		'independent_publisher_theme_options', // The unique ID - that is, the slug - for this menu item
+		'independent_publisher_theme_display' // The name of the function to call when rendering this menu's page
 	);
 
 	add_submenu_page(
@@ -39,13 +39,16 @@ function independent_publisher_theme_display( $active_tab = '' ) {
 		<h2><?php _e( 'Independent Publisher Theme Options', 'independent_publisher' ); ?></h2>
 		<?php settings_errors(); ?>
 
-		<?php if( isset( $_GET[ 'tab' ] ) ) {
-			$active_tab = $_GET[ 'tab' ];
-		} else if( $active_tab == 'social_options' ) {
+		<?php if ( isset( $_GET['tab'] ) ) {
+			$active_tab = $_GET['tab'];
+		}
+		else if ( $active_tab == 'social_options' ) {
 			$active_tab = 'social_options';
-		} else {
+		}
+		else {
 			$active_tab = 'social_options';
-		} // end if/else ?>
+		} // end if/else
+		?>
 
 		<h2 class="nav-tab-wrapper">
 			<a href="?page=independent_publisher_theme_options&tab=social_options" class="nav-tab <?php echo $active_tab == 'social_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Social Options', 'independent_publisher' ); ?></a>
@@ -54,7 +57,7 @@ function independent_publisher_theme_display( $active_tab = '' ) {
 		<form method="post" action="options.php">
 			<?php
 
-			if( $active_tab == 'social_options' ) {
+			if ( $active_tab == 'social_options' ) {
 
 				settings_fields( 'independent_publisher_theme_social_options' );
 				do_settings_sections( 'independent_publisher_theme_social_options' );
@@ -81,7 +84,7 @@ function independent_publisher_theme_display( $active_tab = '' ) {
 function independent_publisher_theme_default_social_options() {
 
 	$defaults = array(
-		'twitter'		=>	''
+		'twitter' => ''
 	);
 
 	return apply_filters( 'independent_publisher_theme_default_social_options', $defaults );
@@ -96,15 +99,15 @@ function independent_publisher_theme_default_social_options() {
  */
 function independent_publisher_theme_intialize_social_options() {
 
-	if( false == get_option( 'independent_publisher_theme_social_options' ) ) {
+	if ( false == get_option( 'independent_publisher_theme_social_options' ) ) {
 		add_option( 'independent_publisher_theme_social_options', apply_filters( 'independent_publisher_theme_default_social_options', independent_publisher_theme_default_social_options() ) );
 	} // end if
 
 	add_settings_section(
-		'social_settings_section',			// ID used to identify this section and with which to register options
-		__( 'Social Options', 'independent_publisher' ),		// Title to be displayed on the administration page
-		'independent_publisher_social_options_callback',	// Callback used to render the description of the section
-		'independent_publisher_theme_social_options'		// Page on which to add this section of options
+		'social_settings_section', // ID used to identify this section and with which to register options
+		__( 'Social Options', 'independent_publisher' ), // Title to be displayed on the administration page
+		'independent_publisher_social_options_callback', // Callback used to render the description of the section
+		'independent_publisher_theme_social_options' // Page on which to add this section of options
 	);
 
 	add_settings_field(
@@ -148,7 +151,7 @@ function independent_publisher_twitter_callback() {
 
 	// Next, we need to make sure the element is defined in the options. If not, we'll set an empty string.
 	$handle = '';
-	if( isset( $options['twitter'] ) ) {
+	if ( isset( $options['twitter'] ) ) {
 		$handle = $options['twitter'];
 	} // end if
 

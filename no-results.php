@@ -5,14 +5,15 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package Independent Publisher
- * @since Independent Publisher 1.0
+ * @since   Independent Publisher 1.0
  */
 ?>
 
 <article id="post-0" class="post no-results not-found">
 	<header class="entry-header">
 		<h1 class="entry-title"><?php _e( 'Nothing Found', 'independent_publisher' ); ?></h1>
-	</header><!-- .entry-header -->
+	</header>
+	<!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php if ( is_home() && current_user_can( 'independent_publisher_posts' ) ) : ?>
@@ -24,11 +25,13 @@
 			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'independent_publisher' ); ?></p>
 			<?php get_search_form(); ?>
 
-		<?php else : ?>
+		<?php
+		else : ?>
 
 			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'independent_publisher' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>
-	</div><!-- .entry-content -->
+	</div>
+	<!-- .entry-content -->
 </article><!-- #post-0 .post .no-results .not-found -->

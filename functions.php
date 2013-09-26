@@ -3,7 +3,7 @@
  * Publish functions and definitions
  *
  * @package Independent Publisher
- * @since Independent Publisher 1.0
+ * @since   Independent Publisher 1.0
  */
 
 /**
@@ -15,68 +15,68 @@ if ( ! isset( $content_width ) )
 	$content_width = 525; /* pixels */
 
 if ( ! function_exists( 'independent_publisher_setup' ) ):
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which runs
- * before the init hook. The init hook is too late for some features, such as indicating
- * support post thumbnails.
- *
- * @since Independent Publisher 1.0
- */
-function independent_publisher_setup() {
-
 	/**
-	 * Custom template tags for this theme.
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which runs
+	 * before the init hook. The init hook is too late for some features, such as indicating
+	 * support post thumbnails.
+	 *
+	 * @since Independent Publisher 1.0
 	 */
-	require( get_template_directory() . '/inc/template-tags.php' );
+	function independent_publisher_setup() {
 
-	/**
-	 * Theme Options
-	 */
-	require( get_template_directory() . '/theme-options.php' );
+		/**
+		 * Custom template tags for this theme.
+		 */
+		require( get_template_directory() . '/inc/template-tags.php' );
 
-	/**
-	 * Make theme available for translation
-	 * Translations can be filed in the /languages/ directory
-	 */
-	load_theme_textdomain( 'independent_publisher', get_template_directory() . '/languages' );
+		/**
+		 * Theme Options
+		 */
+		require( get_template_directory() . '/theme-options.php' );
 
-	/**
-	 * Add default posts and comments RSS feed links to head
-	 */
-	add_theme_support( 'automatic-feed-links' );
+		/**
+		 * Make theme available for translation
+		 * Translations can be filed in the /languages/ directory
+		 */
+		load_theme_textdomain( 'independent_publisher', get_template_directory() . '/languages' );
 
-	/**
-	 * Enable Custom Backgrounds
-	 */
-	add_theme_support( 'custom-background' );
+		/**
+		 * Add default posts and comments RSS feed links to head
+		 */
+		add_theme_support( 'automatic-feed-links' );
 
-	/**
-	 * Enable editor style
-	 */
-	add_editor_style();
+		/**
+		 * Enable Custom Backgrounds
+		 */
+		add_theme_support( 'custom-background' );
 
-	/**
-	 * This theme uses wp_nav_menu() in one location.
-	 */
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'independent_publisher' ),
-	) );
+		/**
+		 * Enable editor style
+		 */
+		add_editor_style();
 
-	/**
-	 * Add support for the Aside Post Formats
-	 */
-	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'chat', 'image', 'video' ) );
+		/**
+		 * This theme uses wp_nav_menu() in one location.
+		 */
+		register_nav_menus( array(
+			'primary' => __( 'Primary Menu', 'independent_publisher' ),
+		) );
 
-	/**
-	 * Add support for Infinite Scroll
-	 * @since Independent Publisher 1.2
-	 */
-	add_theme_support( 'infinite-scroll', array(
-		'footer' => 'page',
-	) );
-}
+		/**
+		 * Add support for the Aside Post Formats
+		 */
+		add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'chat', 'image', 'video' ) );
+
+		/**
+		 * Add support for Infinite Scroll
+		 * @since Independent Publisher 1.2
+		 */
+		add_theme_support( 'infinite-scroll', array(
+			'footer' => 'page',
+		) );
+	}
 endif; // independent_publisher_setup
 add_action( 'after_setup_theme', 'independent_publisher_setup' );
 
@@ -95,6 +95,7 @@ function independent_publisher_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
+
 add_action( 'widgets_init', 'independent_publisher_widgets_init' );
 
 /**
@@ -115,6 +116,7 @@ function independent_publisher_scripts() {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'independent_publisher_scripts' );
 
 /**
@@ -125,12 +127,14 @@ add_action( 'wp_enqueue_scripts', 'independent_publisher_scripts' );
 function independent_publisher_footer_credits() {
 	echo independent_publisher_get_footer_credits();
 }
+
 add_action( 'independent_publisher_credits', 'independent_publisher_footer_credits' );
 
 /**
  * Returns the theme's footer credits
  *
  * @param string $credits
+ *
  * @return string
  *
  * @since Independent Publisher 1.2
@@ -141,6 +145,7 @@ function independent_publisher_get_footer_credits( $credits = '' ) {
 		sprintf( __( '%1$s empowered by %2$s.', 'independent_publisher' ), '<a href="http://independentpublisher.me/">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator">open-source publishing</a>' )
 	);
 }
+
 add_filter( 'infinite_scroll_credit', 'independent_publisher_get_footer_credits' );
 
 /**
@@ -151,52 +156,52 @@ require( get_template_directory() . '/inc/custom-header.php' );
 /**
  * Fix comment count so that it doesn't include pings/trackbacks
  */
-add_filter('get_comments_number', 'independent_publisher_comment_count', 0);
-function independent_publisher_comment_count($count)
-	{
-		if(!is_admin())
-			{
-				global $id;
-				$comments_by_type = & separate_comments(get_comments('status=approve&post_id='.$id));
-				return count($comments_by_type['comment']);
-			}
-		else
-			{
-				return $count;
-			}
+add_filter( 'get_comments_number', 'independent_publisher_comment_count', 0 );
+function independent_publisher_comment_count( $count ) {
+	if ( ! is_admin() ) {
+		global $id;
+		$comments_by_type = & separate_comments( get_comments( 'status=approve&post_id=' . $id ) );
+		return count( $comments_by_type['comment'] );
 	}
+	else {
+		return $count;
+	}
+}
 
 /*
  * Change the comment reply link to use 'Reply to [Author First Name]'
  */
-function independent_publisher_author_comment_reply_link($link, $args, $comment){
+function independent_publisher_author_comment_reply_link( $link, $args, $comment ) {
 
 	$comment = get_comment( $comment );
 
 	// If no comment author is blank, use 'Anonymous'
-	if ( empty($comment->comment_author) ) {
-		if (!empty($comment->user_id)){
-			$user=get_userdata($comment->user_id);
-			$author=$user->user_login;
-		} else {
-			$author = __('Anonymous');
+	if ( empty( $comment->comment_author ) ) {
+		if ( ! empty( $comment->user_id ) ) {
+			$user   = get_userdata( $comment->user_id );
+			$author = $user->user_login;
 		}
-	} else {
+		else {
+			$author = __( 'Anonymous' );
+		}
+	}
+	else {
 		$author = $comment->comment_author;
 	}
 
 	// If the user provided more than a first name, use only first name
-	if(strpos($author, ' ')){
-		$author = substr($author, 0, strpos($author, ' '));
+	if ( strpos( $author, ' ' ) ) {
+		$author = substr( $author, 0, strpos( $author, ' ' ) );
 	}
 
 	// Replace Reply Link with "Reply to <Author First Name>"
 	$reply_link_text = $args['reply_text'];
-	$link = str_replace($reply_link_text, 'Reply to ' . $author, $link);
+	$link            = str_replace( $reply_link_text, 'Reply to ' . $author, $link );
 
 	return $link;
 }
-add_filter('comment_reply_link', 'independent_publisher_author_comment_reply_link', 420, 4);
+
+add_filter( 'comment_reply_link', 'independent_publisher_author_comment_reply_link', 420, 4 );
 
 /**
  * Register font-awesome style sheet.
@@ -210,7 +215,7 @@ function register_font_awesome_style() {
 /*
  * Show Subscribe to Comments Reloaded options after comment form fields
  */
-if( function_exists('subscribe_reloaded_show') ) :
+if ( function_exists( 'subscribe_reloaded_show' ) ) :
 	add_action( 'comment_form_logged_in_after', 'subscribe_reloaded_show' );
 	add_action( 'comment_form_after_fields', 'subscribe_reloaded_show' );
 endif;
@@ -222,63 +227,64 @@ endif;
  */
 function independent_publisher_comment_form_args() {
 
-	if(!is_user_logged_in()) {
+	if ( ! is_user_logged_in() ) {
 		$comment_notes_before = '';
-		$comment_notes_after = '';
-	} else {
+		$comment_notes_after  = '';
+	}
+	else {
 		$comment_notes_before = '';
-		$comment_notes_after = '';
+		$comment_notes_after  = '';
 	}
 
-	$user = wp_get_current_user();
+	$user      = wp_get_current_user();
 	$commenter = wp_get_current_commenter();
-	$req = get_option( 'require_name_email' );
-	$aria_req = ( $req ? " aria-required='true'" : '' );
+	$req       = get_option( 'require_name_email' );
+	$aria_req  = ( $req ? " aria-required='true'" : '' );
 
 	$args = array(
-		'id_form'           => 'commentform',
-		'id_submit'         => 'submit',
-		'title_reply'       => __( '' ),
-		'title_reply_to'    => __( 'Leave a Reply for %s' ),
-		'cancel_reply_link' => __( 'Cancel Reply' ),
-		'label_submit'      => __( 'Submit Comment' ),
+		'id_form'              => 'commentform',
+		'id_submit'            => 'submit',
+		'title_reply'          => __( '' ),
+		'title_reply_to'       => __( 'Leave a Reply for %s' ),
+		'cancel_reply_link'    => __( 'Cancel Reply' ),
+		'label_submit'         => __( 'Submit Comment' ),
 
-		'must_log_in' => '<p class="must-log-in">' .
-		                 sprintf(
-			                 __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
-			                 wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
-		                 ) . '</p>',
+		'must_log_in'          => '<p class="must-log-in">' .
+		sprintf(
+			__( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+			wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
+		) . '</p>',
 
-		'logged_in_as' => '<p class="logged-in-as">' .
-		                  sprintf(
-			                  __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
-			                  admin_url( 'profile.php' ),
-			                  $user->display_name,
-			                  wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
-		                  ) . '</p>',
+		'logged_in_as'         => '<p class="logged-in-as">' .
+		sprintf(
+			__( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+			admin_url( 'profile.php' ),
+			$user->display_name,
+			wp_logout_url( apply_filters( 'the_permalink', get_permalink() ) )
+		) . '</p>',
 
 		'comment_notes_before' => $comment_notes_before,
 
-		'comment_notes_after' => $comment_notes_after,
+		'comment_notes_after'  => $comment_notes_after,
 
-		'fields' => apply_filters( 'comment_form_default_fields', array(
-	      'author' =>
-	      '<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent_publisher' ) . '</label>' .
-	      ( $req ? '' : '' ) .
-	      '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-	      '"' . $aria_req . ' /></p>',
+		'fields'               => apply_filters( 'comment_form_default_fields', array(
+				'author' =>
+				'<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent_publisher' ) . '</label>' .
+				( $req ? '' : '' ) .
+				'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+				'"' . $aria_req . ' /></p>',
 
-	      'email' =>
-	      '<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent_publisher' ) . '</label>' .
-	      ( $req ? '' : '' ) .
-	      '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-	      '"' . $aria_req . ' /></p>',
+				'email'  =>
+				'<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent_publisher' ) . '</label>' .
+				( $req ? '' : '' ) .
+				'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
+				'"' . $aria_req . ' /></p>',
 
-	      'url' =>
-	      '<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent_publisher' ) . '</label>' .
-	      '<input id="url" name="url" type="text" value="' . esc_attr(  $commenter['comment_author_url'] ) .
-	      '" /></p>',
-		                                                          )
+				'url'    =>
+				'<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent_publisher' ) . '</label>' .
+				'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+				'" /></p>',
+			)
 		),
 	);
 
@@ -288,15 +294,17 @@ function independent_publisher_comment_form_args() {
 /**
  * Move the comment form textarea above the comment fields
  */
-function independent_publisher_remove_textarea($defaults) {
+function independent_publisher_remove_textarea( $defaults ) {
 	$defaults['comment_field'] = '';
 	return $defaults;
 }
+
 function independent_publisher_add_textarea() {
 	echo '<div id="main-reply-title"><h3>Share a Comment</h3></div>';
 	echo '<div class="comment-form-reply-title"><p>Comment</p></div>';
 	echo '<p class="comment-form-comment" id="comment-form-field"><textarea id="comment" name="comment" cols="60" rows="6" aria-required="true"></textarea></p>';
 }
+
 add_filter( 'comment_form_defaults', 'independent_publisher_remove_textarea' );
 add_action( 'comment_form_top', 'independent_publisher_add_textarea' );
 
@@ -307,6 +315,7 @@ function independent_publisher_enhanced_comment_form_style() {
 	wp_register_style( 'enhanced-comment-form-css', get_template_directory_uri() . '/css/enhanced-comment-form.css', array(), '1.0' );
 	wp_enqueue_style( 'enhanced-comment-form-css' );
 }
+
 add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form_style' );
 
 /**
@@ -315,6 +324,7 @@ add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form_s
 function independent_publisher_enhanced_comment_form() {
 	wp_enqueue_script( 'enhanced-comment-form-js', get_template_directory_uri() . '/js/enhanced-comment-form.js', array(), '20130920', true );
 }
+
 add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form' );
 
 /**
@@ -324,4 +334,5 @@ function independent_publisher_custom_plugin_styles() {
 	wp_register_style( 'custom-plugin-styles-css', get_template_directory_uri() . '/css/custom-plugin-styles.css', array(), '1.0' );
 	wp_enqueue_style( 'custom-plugin-styles-css' );
 }
+
 add_action( 'wp_enqueue_scripts', 'independent_publisher_custom_plugin_styles' );

@@ -3,13 +3,13 @@
  * The template for displaying Search Results pages.
  *
  * @package Independent Publisher
- * @since Independent Publisher 1.0
+ * @since   Independent Publisher 1.0
  */
 
 get_header(); ?>
 
-		<section id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+	<section id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -32,8 +32,9 @@ get_header(); ?>
 
 			<?php endif; ?>
 
-			</div><!-- #content .site-content -->
-		</section><!-- #primary .content-area -->
+		</div>
+		<!-- #content .site-content -->
+	</section><!-- #primary .content-area -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

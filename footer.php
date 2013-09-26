@@ -5,17 +5,18 @@
  * Contains the closing of the id=main div and all content after
  *
  * @package Independent Publisher
- * @since Independent Publisher 1.0
+ * @since   Independent Publisher 1.0
  */
 ?>
 
-	</div><!-- #main .site-main -->
+</div><!-- #main .site-main -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'independent_publisher_credits' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon .site-footer -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="site-info">
+		<?php do_action( 'independent_publisher_credits' ); ?>
+	</div>
+	<!-- .site-info -->
+</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
 
 <?php wp_footer(); ?>

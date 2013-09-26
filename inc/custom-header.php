@@ -4,7 +4,7 @@
  * http://codex.wordpress.org/Custom_Headers
  *
  * @package Independent Publisher
- * @since Independent Publisher 1.2.4
+ * @since   Independent Publisher 1.2.4
  */
 
 /**
@@ -36,15 +36,17 @@ function independent_publisher_custom_header_setup() {
 
 	if ( function_exists( 'wp_get_theme' ) ) {
 		add_theme_support( 'custom-header', $args );
-	} else {
+	}
+	else {
 		// Compat: Versions of WordPress prior to 3.4.
-		define( 'HEADER_TEXTCOLOR',    $args['default-text-color'] );
-		define( 'HEADER_IMAGE',        $args['default-image'] );
-		define( 'HEADER_IMAGE_WIDTH',  $args['width'] );
+		define( 'HEADER_TEXTCOLOR', $args['default-text-color'] );
+		define( 'HEADER_IMAGE', $args['default-image'] );
+		define( 'HEADER_IMAGE_WIDTH', $args['width'] );
 		define( 'HEADER_IMAGE_HEIGHT', $args['height'] );
 		add_custom_image_header( $args['wp-head-callback'], $args['admin-head-callback'], $args['admin-preview-callback'] );
 	}
 }
+
 add_action( 'after_setup_theme', 'independent_publisher_custom_header_setup' );
 
 /**
