@@ -734,11 +734,6 @@ ul.children {
 	margin-top: 3.5em;
 }
 
-.commentlist .thread-even, .commentlist .thread-odd {
-	border-left: 1px solid #F0F0F0;
-	border-bottom: 2px solid #F0F0F0;
-}
-
 .commentlist .children .odd,
 .commentlist .children .even {
 	border-left: none;
