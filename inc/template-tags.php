@@ -89,8 +89,8 @@ function independent_publisher_comment( $comment, $args, $depth ) {
 				<div class="comment-meta commentmetadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
-						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', 'independent_publisher' ), get_comment_date(), get_comment_time() ); ?>
+						/* translators: 1: date */
+						printf( __( '%1$s', 'independent_publisher' ), get_comment_date() ); ?>
 					</time></a>
 					<?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), ' ' );
 					?>
