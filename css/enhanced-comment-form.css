@@ -65,6 +65,8 @@
 
 .form-submit {
 	clear: both;
+	margin-bottom: 0;
+	padding-bottom: 1.5em;
 }
 
 .icon-comment {

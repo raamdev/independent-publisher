@@ -703,7 +703,7 @@ object {
 }
 
 .commentlist #respond {
-	border-left: 2px solid #FCFCFC;
+	border-left: 1px solid #F0F0F0;
 	padding-left: 20px;
 }
 
@@ -729,14 +729,14 @@ ul.children {
 }
 
 .commentlist .thread-even, .commentlist .thread-odd {
-	padding-left: 30px;
+	padding-left: 20px;
 	margin-bottom: 30px;
 	margin-top: 3.5em;
 }
 
 .commentlist .thread-even, .commentlist .thread-odd {
-	border-left: 5px solid #FCFCFC;
-	border-bottom: 5px solid #FCFCFC;
+	border-left: 1px solid #F0F0F0;
+	border-bottom: 2px solid #F0F0F0;
 }
 
 .commentlist .children .odd,
@@ -751,7 +751,7 @@ ul.children {
 
 .commentlist .thread-even ul.children,
 .commentlist .thread-odd ul.children {
-	border-left: 2px solid #FCFCFC;
+	border-left: 1px solid #F0F0F0;
 }
 
 ol.commentlist .avatar {
