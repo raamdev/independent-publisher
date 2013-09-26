@@ -84,7 +84,7 @@ if ( post_password_required() )
 		<div id="commentform-bottom"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
 	<?php endif; ?>
 
-	<?php if ( have_comments() ) : ?>
+	<?php if ( have_comments() && get_comments_number() > 0 ) : // Only show pings/trackbacks if there's at least 1 comment ?>
 		<?php if ( count($wp_query->comments_by_type['pings'])) { ?>
 			<div id="pinglist">
 				<ul class="pinglist">
