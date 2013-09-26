@@ -1226,11 +1226,11 @@ h6 {
 	clear: both;
 	margin-top: 100px;
 	margin-bottom: 40px;
+	color: #999;
 }
 
 .site-footer,
 .site-footer a {
-	color: #999;
 	font-size: 13px;
 	text-align: center;
 }
