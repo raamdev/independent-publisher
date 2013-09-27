@@ -54,7 +54,7 @@ add_action( 'after_setup_theme', 'independent_publisher_custom_header_setup' );
  *
  * Use the admin email's gravatar as the default header image.
  *
- * @since Independent Publisher 1.2.3
+ * @since Independent Publisher 1.0
  */
 function independent_publisher_get_default_header_image() {
 
