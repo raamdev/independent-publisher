@@ -1061,6 +1061,10 @@ body {
 	margin-bottom: 10px;
 }
 
+.widget-area select {
+	max-width: 100%;
+}
+
 .site-navigation,
 .post-navigation {
 	margin-top: 20px;
