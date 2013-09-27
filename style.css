@@ -238,9 +238,11 @@ input[type="submit"] {
 	font-weight: 400;
 	font-style: normal;
 	text-decoration: none;
-	padding: 15px;
+	padding-top: 18px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 	line-height: 0;
-	height: 45px;
 	border: 0;
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
@@ -819,6 +821,11 @@ ol.commentlist .avatar {
 .pingback .comment-meta,
 .pingback .reply {
 	display: none;
+}
+
+#share-comment-button button,
+#share-comment-button-bottom button {
+	padding-top: 15px;
 }
 
 #pinglist {
