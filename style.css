@@ -736,6 +736,7 @@ ul.children {
 	margin-bottom: 30px;
 	margin-top: 3.5em;
 	border-left: 1px solid #F0F0F0;
+	border-top: 1px solid #F0F0F0;
 }
 
 .commentlist .children .odd,
@@ -751,6 +752,7 @@ ul.children {
 .commentlist .thread-even ul.children,
 .commentlist .thread-odd ul.children {
 	border-left: 1px solid #F0F0F0;
+	border-top: 1px solid #F0F0F0;
 }
 
 ol.commentlist .avatar {
