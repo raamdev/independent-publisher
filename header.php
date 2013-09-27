@@ -45,7 +45,10 @@
 
 				<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
 
-				<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
+				<?php if ( function_exists('get_ncl_location') ) : ?>
+					<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
+				<?php endif; ?>
+
 			</hgroup>
 		<?php endif; ?>
 
