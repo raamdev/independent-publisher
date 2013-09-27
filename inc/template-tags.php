@@ -126,7 +126,7 @@ if ( ! function_exists( 'independent_publisher_ping' ) ) :
 		$GLOBALS['comment'] = $comment; ?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 		<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link() ) ?>
-		<span> <?php printf( __( '%1$s ' ), get_comment_date( "Y-m-d" ), get_comment_time( "H:i:s" ) ) ?> <?php edit_comment_link( __( '(Edit)' ), '  ', '' ) ?></span>
+		<span> <?php printf( __( '%1$s ', 'independent_publisher' ), get_comment_date( "Y-m-d" ), get_comment_time( "H:i:s" ) ) ?> <?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), '  ', '' ) ?></span>
 	<?php
 	}
 endif; // ends check for independent_publisher_ping()
@@ -261,7 +261,7 @@ function independent_publisher_post_categories( $separator = ',', $single = FALS
 	$output     = '';
 	if ( $categories ) {
 		foreach ( $categories as $category ) {
-			$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+			$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'independent_publisher' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
 			if ( $single )
 				break;
 		}

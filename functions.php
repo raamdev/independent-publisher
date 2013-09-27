@@ -182,7 +182,7 @@ function independent_publisher_author_comment_reply_link( $link, $args, $comment
 			$author = $user->user_login;
 		}
 		else {
-			$author = __( 'Anonymous' );
+			$author = __( 'Anonymous', 'independent_publisher' );
 		}
 	}
 	else {
@@ -244,10 +244,10 @@ function independent_publisher_comment_form_args() {
 	$args = array(
 		'id_form'              => 'commentform',
 		'id_submit'            => 'submit',
-		'title_reply'          => __( '' ),
-		'title_reply_to'       => __( 'Leave a Reply for %s' ),
-		'cancel_reply_link'    => __( 'Cancel Reply' ),
-		'label_submit'         => __( 'Submit Comment' ),
+		'title_reply'          => __( '', 'independent_publisher' ),
+		'title_reply_to'       => __( 'Leave a Reply for %s', 'independent_publisher' ),
+		'cancel_reply_link'    => __( 'Cancel Reply', 'independent_publisher' ),
+		'label_submit'         => __( 'Submit Comment', 'independent_publisher' ),
 
 		'must_log_in'          => '<p class="must-log-in">' .
 		sprintf(
