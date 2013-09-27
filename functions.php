@@ -71,7 +71,7 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 
 		/**
 		 * Add support for Infinite Scroll
-		 * @since Independent Publisher 1.2
+		 * @since Independent Publisher 1.0
 		 */
 		add_theme_support( 'infinite-scroll', array(
 			'footer' => 'page',
@@ -122,7 +122,7 @@ add_action( 'wp_enqueue_scripts', 'independent_publisher_scripts' );
 /**
  * Echoes the theme's footer credits
  *
- * @since Independent Publisher 1.2
+ * @since Independent Publisher 1.0
  */
 function independent_publisher_footer_credits() {
 	echo independent_publisher_get_footer_credits();
@@ -137,7 +137,7 @@ add_action( 'independent_publisher_credits', 'independent_publisher_footer_credi
  *
  * @return string
  *
- * @since Independent Publisher 1.2
+ * @since Independent Publisher 1.0
  */
 function independent_publisher_get_footer_credits( $credits = '' ) {
 	return sprintf(

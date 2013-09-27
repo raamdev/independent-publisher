@@ -224,7 +224,7 @@ add_action( 'save_post', 'independent_publisher_category_transient_flusher' );
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  *
- * @since Independent Publisher 1.2.1
+ * @since Independent Publisher 1.0
  */
 function independent_publisher_wp_title( $title, $sep ) {
 	global $page, $paged;
