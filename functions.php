@@ -326,13 +326,3 @@ function independent_publisher_enhanced_comment_form() {
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form' );
-
-/**
- * Register custom plugins stylesheet
- */
-function independent_publisher_custom_plugin_styles() {
-	wp_register_style( 'custom-plugin-styles-css', get_template_directory_uri() . '/css/custom-plugin-styles.css', array(), '1.0' );
-	wp_enqueue_style( 'custom-plugin-styles-css' );
-}
-
-add_action( 'wp_enqueue_scripts', 'independent_publisher_custom_plugin_styles' );
