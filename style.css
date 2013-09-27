@@ -735,6 +735,7 @@ ul.children {
 	padding-left: 20px;
 	margin-bottom: 30px;
 	margin-top: 3.5em;
+	border-left: 1px solid #F0F0F0;
 }
 
 .commentlist .children .odd,
