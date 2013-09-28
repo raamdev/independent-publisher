@@ -48,7 +48,9 @@
 
 	<footer class="entry-meta">
 
-		<?php independent_publisher_sharing_buttons(); ?>
+		<?php if( function_exists('indiepub_sharing_buttons') ) : ?>
+			<?php indiepub_sharing_buttons(); ?>
+		<?php endif; ?>
 
 		<?php if ( comments_open() ) : ?>
 			<div id="share-comment-button">
