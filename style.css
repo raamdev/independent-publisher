@@ -238,11 +238,10 @@ input[type="submit"] {
 	font-weight: 400;
 	font-style: normal;
 	text-decoration: none;
-	padding-top: 18px;
-	padding-bottom: 15px;
+	line-height: 48px;
+	height: 48px;
 	padding-left: 15px;
 	padding-right: 15px;
-	line-height: 0;
 	border: 0;
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
@@ -825,7 +824,10 @@ ol.commentlist .avatar {
 
 #share-comment-button button,
 #share-comment-button-bottom button {
-	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 50px;
+	line-height: 50px;
 }
 
 #pinglist {
