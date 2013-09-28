@@ -81,7 +81,11 @@ if ( post_password_required() )
 	<?php endif; ?>
 
 	<?php if ( comments_open() && get_comments_number() > 10 ) : ?>
-		<?php independent_publisher_sharing_buttons(); ?>
+
+		<?php if( function_exists('indiepub_sharing_buttons') ) : ?>
+			<?php indiepub_sharing_buttons(); ?>
+		<?php endif; ?>
+
 		<div id="share-comment-button-bottom">
 			<button><i class="icon-comment"></i>Share a comment</button>
 		</div>
