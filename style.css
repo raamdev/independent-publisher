@@ -512,7 +512,7 @@ img.aligncenter {
 	padding-bottom: 20px;
 }
 
-.single article {
+.single article.post, .single article.page {
 	margin-bottom: 40px;
 }
 
