@@ -512,6 +512,10 @@ img.aligncenter {
 	padding-bottom: 20px;
 }
 
+.single article {
+	margin-bottom: 40px;
+}
+
 /* =Post Formats
 ----------------------------------------------- */
 
@@ -688,7 +692,6 @@ object {
 ----------------------------------------------- */
 
 #comments {
-	margin-top: 80px;
 	margin-bottom: 100px;
 }
 
