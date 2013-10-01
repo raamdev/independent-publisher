@@ -707,6 +707,7 @@ object {
 	padding-bottom: 1em;
 	padding-top: 1em;
 	border-bottom: none;
+	margin-bottom: 1em;
 }
 
 .commentlist #respond {
