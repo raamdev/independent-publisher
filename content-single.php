@@ -9,6 +9,11 @@
 	<header class="entry-header">
 		<h2 class="entry-title-meta">
 			<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
+			<?php if( function_exists('indiepub_spoken_essay_link') ) : ?>
+					<?php if ( indiepub_spoken_essay_url() ) : ?>
+					| <?php echo indiepub_spoken_essay_link(); ?>
+				<?php endif; ?>
+			<?php endif; ?>
 		</h2>
 
 		<h1 class="entry-title"><?php the_title(); ?></h1>
