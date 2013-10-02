@@ -253,8 +253,8 @@ input[type="submit"] {
 	background: -ms-linear-gradient(top,  #57ad68 60%,#57ad68 100%) !important; /* IE10+ */
 	background: linear-gradient(top,  #57ad68 60%,#57ad68 100%) !important; /* W3C */
 	color: white;
-	font-size: 14px;
-	font-size: 1.4rem;
+	font-size: 15px;
+	font-size: 1.5rem;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57ad68', endColorstr='#57ad68',GradientType=0 ) !important; /* IE6-9 */
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
