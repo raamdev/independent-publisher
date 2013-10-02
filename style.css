@@ -438,15 +438,6 @@ img.aligncenter {
 .main-navigation li.current-menu-item a {
 }
 
-/* Small menu */
-.menu-toggle {
-	cursor: pointer;
-}
-.main-small-navigation .menu {
-	display: none;
-}
-
-
 /* =Content
 ----------------------------------------------- */
 
@@ -1089,8 +1080,7 @@ body {
 	display: none;
 }
 
-.infinite-scroll .main-navigation,
-.infinite-scroll .main-small-navigation {
+.infinite-scroll .main-navigation {
 	display: block;
 }
 
@@ -1412,45 +1402,6 @@ table th {
 	.site-footer,
 	.widget-area {
 		width: 100%;
-	}
-
-	/* Small Navigation */
-	.main-small-navigation {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		border-bottom: solid 1px #DDD;
-		background: #F2F7F9;
-		margin-top: 0;
-	}
-
-	.main-small-navigation ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	.main-small-navigation a {
-		display: block;
-		padding: 10px 40px;
-		border-top: solid 1px #ddd;
-	}
-
-	.main-small-navigation .menu-toggle {
-		margin: 0;
-		padding: 10px 40px;
-		font-size: 14px;
-	}
-
-	.main-small-navigation .menu-toggle:before {
-		margin-right: 10px;
-		margin-left: -20px;
-		content: '\2261';
-	}
-
-	.main-small-navigation .menu-toggle.toggled-on {
-		background: white;
 	}
 }
 
