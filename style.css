@@ -1320,9 +1320,18 @@ table th {
 
 /* Hide left-side author card under 1200px */
 @media only screen and (max-width : 1200px) {
-	.site-header {
+	.single .site-header {
 		display: none;
 	}
+
+	.site-header {
+		text-align: left;
+		margin-left: 0;
+		float: none;
+		display: block;
+		width: 100%;
+	}
+
 	.post-author-bottom {
 		display: block;
 	}
@@ -1339,9 +1348,53 @@ table th {
 		text-align: inherit;
 		padding-top: 40px;
 	}
+	.widget-area ul li a {
+		display: inline-block;
+	}
+	#nav-below {
+		margin-top: 40px;
+	}
    .single .entry-meta {
 	   border-top: none;
    }
+
+	.page article {
+		padding: 40px 0 40px 0;
+	}
+	.main-navigation {
+		clear: none;
+	}
+	.site-navigation {
+		border-bottom: 1px solid #eee;
+		padding-bottom: 40px;
+	}
+	#nav-below .site-navigation {
+		margin-top: 40px;
+	}
+	.main-navigation li {
+		display: inline-block;
+		padding: 5px 10px;
+		width: auto;
+	}
+
+	.site-title,
+	.site-description {
+		clear: none;
+		margin-left: 70px;
+	}
+	.site-title {
+		font-style: normal;
+		padding-top: 15px;
+		padding-left: 20px;
+	}
+	.site-description {
+		padding-left: 20px;
+	}
+
+	.site-logo,
+	.site-logo img {
+		float: left;
+	}
 }
 /* iPads (landscape) ----------- */
 @media only screen and (max-width : 900px) {
@@ -1359,35 +1412,6 @@ table th {
 	.site-footer,
 	.widget-area {
 		width: 100%;
-	}
-
-	.site-title,
-	.site-description {
-		clear: none;
-		margin-left: 70px;
-	}
-	.site-title {
-		font-style: normal;
-	}
-
-	.site-logo,
-	.site-logo img {
-		float: left;
-		width: 50px;
-		height: auto;
-	}
-
-	.main-navigation {
-		clear: none;
-		margin-left: -10px;
-		padding-top: 20px;
-		width: auto;
-	}
-
-	.main-navigation li {
-		display: inline-block;
-		padding: 5px 10px;
-		width: auto;
 	}
 
 	/* Small Navigation */
@@ -1432,7 +1456,7 @@ table th {
 
 @media only screen and (max-width : 500px) {
 	#masthead {
-		margin-top: 40px;
+		margin-top: 0;
 	}
 
 	#page {
