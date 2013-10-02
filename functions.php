@@ -140,7 +140,7 @@ add_action( 'independent_publisher_credits', 'independent_publisher_footer_credi
 function independent_publisher_get_footer_credits( $credits = '' ) {
 	return sprintf(
 		'%1$s',
-		sprintf( __( '%1$s empowered by %2$s.', 'independent_publisher' ), '<a href="http://independentpublisher.me/">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator">open-source publishing</a>' )
+		sprintf( __( '%1$s empowered by %2$s.', 'independent_publisher' ), '<a href="'.esc_url( 'http://independentpublisher.me' ).'" rel="designer">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator">open-source publishing</a>' )
 	);
 }
 
@@ -180,7 +180,7 @@ function independent_publisher_author_comment_reply_link( $link, $args, $comment
 			$author = $user->user_login;
 		}
 		else {
-			$author = __( 'Anonymous' );
+			$author = __( 'Anonymous', 'independent_publisher' );
 		}
 	}
 	else {
@@ -242,10 +242,10 @@ function independent_publisher_comment_form_args() {
 	$args = array(
 		'id_form'              => 'commentform',
 		'id_submit'            => 'submit',
-		'title_reply'          => __( '' ),
-		'title_reply_to'       => __( 'Leave a Reply for %s' ),
-		'cancel_reply_link'    => __( 'Cancel Reply' ),
-		'label_submit'         => __( 'Submit Comment' ),
+		'title_reply'          => __( '', 'independent_publisher' ),
+		'title_reply_to'       => __( 'Leave a Reply for %s', 'independent_publisher' ),
+		'cancel_reply_link'    => __( 'Cancel Reply', 'independent_publisher' ),
+		'label_submit'         => __( 'Submit Comment', 'independent_publisher' ),
 
 		'must_log_in'          => '<p class="must-log-in">' .
 		sprintf(
