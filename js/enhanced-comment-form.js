@@ -18,6 +18,7 @@
 		jQuery('#share-comment-button-bottom').show();
 		jQuery('.comment-form-reply-title').hide();
 		jQuery('#main-reply-title').show();
+		jQuery('#comment').focus();
 	});
 
 	 /* Share Comment Button (Bottom)*/
@@ -30,6 +31,7 @@
 		 jQuery('#share-comment-button').show();
 		 jQuery('.comment-form-reply-title').hide();
 		 jQuery('#main-reply-title').show();
+		 jQuery('#comment').focus();
 	 });
 
 	jQuery('.comment-reply-link').live('click', function(event) {
@@ -38,6 +40,7 @@
 		jQuery('#share-comment-button-bottom').show();
 		jQuery('.comment-form-reply-title').show();
 		jQuery('#main-reply-title').hide();
+		jQuery('#comment').focus();
 	});
 
 	jQuery('#cancel-comment-reply-link').live('click', function(event) {
