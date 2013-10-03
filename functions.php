@@ -32,11 +32,6 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		require( get_template_directory() . '/inc/template-tags.php' );
 
 		/**
-		 * Theme Options
-		 */
-		require( get_template_directory() . '/theme-options.php' );
-
-		/**
 		 * Make theme available for translation
 		 * Translations can be filed in the /languages/ directory
 		 */
