@@ -1015,7 +1015,7 @@ body {
 	color: rgba(117, 117, 117, 0.78);
 	font-size: 12px;
 	font-family: inherit;
-	line-height: 1.4;
+	line-height: 2;
 	letter-spacing: inherit;
 	font-weight: inherit;
     font-style: normal;
@@ -1192,7 +1192,7 @@ h6 {
 
 .site {
 	background-color: #ffffff;
-	margin: 120px auto;
+	margin: 80px auto;
 	padding: 0 40px;
 	max-width: 700px;
 	margin-bottom: 0;
@@ -1320,7 +1320,7 @@ table th {
 	}
 
 	.site-header {
-		text-align: left;
+		text-align: center;
 		margin-left: 0;
 		float: none;
 		display: block;
@@ -1372,41 +1372,26 @@ table th {
 		width: auto;
 	}
 
-	.site-title,
-	.site-description {
+	#masthead .site-title,
+	#masthead .site-description {
 		clear: none;
-		margin-left: 70px;
+		margin-left: 0;
+		margin-top: 0;
 	}
-	.site-title {
+	#masthead .site-title {
 		font-style: normal;
 		padding-top: 15px;
-		padding-left: 20px;
+		padding-left: 0;
 	}
-	.site-description {
-		padding-left: 20px;
-	}
-
-	.site-logo,
-	.site-logo img {
-		float: left;
-	}
-}
-/* iPads (landscape) ----------- */
-@media only screen and (max-width : 900px) {
-/* Styles */
-
-	.site {
-		position: relative;
-		margin: 0 auto;
-		padding: 70px;
-		width: auto;
+	#masthead .site-description {
+		padding-left: 0;
+		padding-top: 20px;
 	}
 
-	.site-header,
-	.site-content,
-	.site-footer,
-	.widget-area {
-		width: 100%;
+	#masthead .site-logo,
+	#masthead .site-logo img {
+		float: none;
+		max-width: 200px;
 	}
 }
 
@@ -1416,8 +1401,8 @@ table th {
 	}
 
 	#page {
-		padding-left: 16px;
-		padding-right: 16px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 
 	.entry-content,
@@ -1431,12 +1416,42 @@ table th {
 		font-size: 32px;
 	}
 
+	#masthead {
+		text-align: center;
+	}
+
+	#masthead .site-title {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 0;
+		clear: both;
+		margin-left: 5px;
+	}
+	#masthead .site-description {
+		padding-left: 0;
+		margin-left: 5px;
+	}
+
+	#masthead .site-logo,
+	#masthead .site-logo img{
+		float: none;
+		max-width: 200px;
+	}
+
+	.post-author-card .site-title {
+		padding-top: 0;
+		padding-left: 0;
+	}
+	.post-author-card .site-description {
+		padding-left: 0;
+	}
+
 	.format-aside .entry-content {
 		font-size: 25px;
 		line-height: 36px;
 	}
 	.post-author-bottom {
-		margin-left: 10px;
+		text-align: center;
 	}
    .post-author-bottom .site-logo, .post-author-bottom .site-logo img {
 	   float: none;
@@ -1444,12 +1459,14 @@ table th {
 	.post-author-bottom .post-author-info {
 		margin-left: 0;
 		margin-right: 0;
+		padding-right: 0;
 	}
 	.post-author-bottom .post-published-date {
 		padding-left: 0;
 		position: inherit;
 		margin-top: 0;
 		top: inherit;
+		width: 100%;
 	}
    .entry-header {
 	   word-wrap: none;
