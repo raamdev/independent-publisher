@@ -1196,6 +1196,7 @@ h6 {
 	padding: 0 40px;
 	max-width: 700px;
 	margin-bottom: 0;
+	margin-top: 150px;
 }
 
 .site-header {
@@ -1323,6 +1324,10 @@ table th {
 
 /* Hide left-side author card under 1200px */
 @media only screen and (max-width : 1200px) {
+	.site {
+		margin-top: 80px;
+	}
+
 	.single .site-header {
 		display: none;
 	}
