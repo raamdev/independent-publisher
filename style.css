@@ -1304,6 +1304,9 @@ table th {
 .post-author-bottom h2.site-description {
 	margin-left: 0;
 }
+.post-author-bottom h1.site-title {
+	font-style: normal;
+}
 .post-author-bottom .post-published-date {
 	width: 177px;
 	padding-left: 385px;
