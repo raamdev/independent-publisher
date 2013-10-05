@@ -48,6 +48,11 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		add_theme_support( 'custom-background' );
 
 		/**
+		* Enable Post Thumbnails
+		*/
+		add_theme_support( 'post-thumbnails' );
+
+		/**
 		 * Enable editor style
 		 */
 		add_editor_style();
