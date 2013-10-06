@@ -1312,7 +1312,7 @@ table th {
 }
 .post-author-bottom .post-published-date {
 	width: 177px;
-	padding-left: 385px;
+	margin-left: 385px;
 	position: absolute;
 	margin-top: -85px;
 	top: 135px;
@@ -1511,7 +1511,7 @@ table th {
 		padding-right: 0;
 	}
 	.post-author-bottom .post-published-date {
-		padding-left: 0;
+		margin-left: 0;
 		position: inherit;
 		margin-top: 0;
 		top: inherit;
