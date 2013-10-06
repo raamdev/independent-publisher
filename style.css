@@ -458,9 +458,7 @@ img.aligncenter {
 	clear: both;
 }
 .site-main article.sticky {
-	margin-right: -40px;
 	margin-bottom: 1px;
-	margin-left: -40px;
 	padding-right: 40px;
 	padding-left: 40px;
 	background: #F2F7F9;
