@@ -1424,7 +1424,26 @@ table th {
 	}
 
 	h1.entry-title {
-		font-size: 32px;
+		font-size: 1.8em;
+	}
+
+	.entry-content h1 {
+		font-size: 1.7em;
+	}
+	.entry-content h2 {
+		font-size: 1.6em;
+	}
+	.entry-content h3 {
+		font-size: 1.5em;
+	}
+	.entry-content h4 {
+		font-size: 1.4em;
+	}
+	.entry-content h5 {
+		font-size: 1.3em;
+	}
+	.entry-content h6 {
+		font-size: 1.2em;
 	}
 
 	#masthead {
