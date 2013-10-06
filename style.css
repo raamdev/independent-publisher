@@ -1291,7 +1291,6 @@ table th {
 
 .post-author-bottom .site-logo img {
 	float: left;
-	width: 70px;
 	height: auto;
 }
 .post-author-bottom .site-title,
@@ -1402,11 +1401,15 @@ table th {
 	#masthead .site-logo,
 	#masthead .site-logo img {
 		float: none;
-		max-width: 200px;
+		max-width: 100px;
 	}
 }
 
 @media only screen and (max-width : 500px) {
+	.site {
+		margin-top: 40px;
+	}
+
 	#masthead {
 		margin-top: 0;
 	}
@@ -1466,9 +1469,9 @@ table th {
 	}
 
 	#masthead .site-logo,
-	#masthead .site-logo img{
+	#masthead .site-logo img {
 		float: none;
-		max-width: 200px;
+		max-width: 100px;
 	}
 
 	.post-author-card .site-title {
@@ -1482,6 +1485,7 @@ table th {
 	.format-aside .entry-content {
 		font-size: 25px;
 		line-height: 36px;
+		margin-bottom: 0;
 	}
 
 	.single .entry-meta {
@@ -1493,8 +1497,13 @@ table th {
 	.post-author-bottom {
 		text-align: center;
 	}
+	.post-author-bottom .site-title {
+		font-size: 24px;
+		line-height: 2.2;
+	}
    .post-author-bottom .site-logo, .post-author-bottom .site-logo img {
 	   float: none;
+		 max-width: 100px;
    }
 	.post-author-bottom .post-author-info {
 		margin-left: 0;
