@@ -93,4 +93,9 @@
 	.comment-form-subscriptions {
 		width: 100%;
 	}
+	.entry-meta #share-comment-button {
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 }

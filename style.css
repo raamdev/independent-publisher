@@ -1483,6 +1483,13 @@ table th {
 		font-size: 25px;
 		line-height: 36px;
 	}
+
+	.single .entry-meta {
+		text-align: center;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
 	.post-author-bottom {
 		text-align: center;
 	}
