@@ -39,30 +39,6 @@
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</hgroup>
 		<?php endif; ?>
-		<?php if ( is_single() ) : ?>
-			<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-				<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
-			</a>
-			<hgroup>
-				<h1 class="site-title">
-					<?php independent_publisher_posted_author(); ?>
-				</h1>
-
-				<h2 class="site-description"><?php the_author_meta('description') ?></h2>
-			</hgroup>
-
-			<div class="site-published-separator"></div>
-			<hgroup>
-				<h2 class="site-published">Published</h2>
-
-				<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
-
-				<?php if ( function_exists('get_ncl_location') ) : ?>
-					<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
-				<?php endif; ?>
-
-			</hgroup>
-		<?php endif; ?>
 
 		<?php if ( ! is_single() ) : ?>
 			<nav role="navigation" class="site-navigation main-navigation">

@@ -13,6 +13,8 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
+				<?php independent_publisher_posted_author_card(); ?>
+
 				<?php get_template_part( 'content', 'single' ); ?>
 
 				<?php

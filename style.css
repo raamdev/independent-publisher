@@ -1198,11 +1198,10 @@ h6 {
 }
 
 .site-header {
-	float: left;
 	margin-top: 0px;
 	margin-bottom: 40px;
 	width: 160px;
-	position: relative;
+	position: absolute;
 	margin-left: -220px;
 	text-align: right;
 }
@@ -1335,6 +1334,7 @@ table th {
 		float: none;
 		display: block;
 		width: 100%;
+		position: relative;
 	}
 
 	.post-author-bottom {

@@ -269,3 +269,73 @@ function independent_publisher_post_categories( $separator = ',', $single = FALS
 	}
 	return $output;
 }
+
+/**
+ * Outputs post author info for display on single posts
+ *
+ * @since Independent Publisher 1.0
+ */
+function independent_publisher_posted_author_card() {
+	?>
+	<header id="masthead" class="site-header" role="banner">
+		<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+			<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
+		</a>
+		<hgroup>
+			<h1 class="site-title">
+				<?php independent_publisher_posted_author(); ?>
+			</h1>
+
+			<h2 class="site-description"><?php the_author_meta('description') ?></h2>
+		</hgroup>
+
+		<div class="site-published-separator"></div>
+		<hgroup>
+			<h2 class="site-published">Published</h2>
+
+			<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
+
+			<?php if ( function_exists('get_ncl_location') ) : ?>
+				<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
+			<?php endif; ?>
+
+		</hgroup>
+	</header>
+	<?php
+}
+
+/**
+ * Outputs post author info for display on bottom of single posts
+ *
+ * @since Independent Publisher 1.0
+ */
+function independent_publisher_posted_author_bottom_card() {
+	?>
+	<div class="post-author-bottom">
+		<div class="post-author-card">
+			<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
+			</a>
+			<div class="post-author-info">
+				<h1 class="site-title">
+					<?php independent_publisher_posted_author(); ?>
+				</h1>
+
+				<h2 class="site-description"><?php the_author_meta('description') ?></h2>
+			</div>
+			<div class="post-published-date">
+				<h2 class="site-published">Published</h2>
+
+				<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
+
+				<?php if( function_exists('get_ncl_location') ) : ?>
+					<h2 class="site-published-location">
+						<?php echo get_ncl_location(); ?>
+					</h2>
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
+	<!-- .post-author-bottom -->
+	<?php
+}
