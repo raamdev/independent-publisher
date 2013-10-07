@@ -23,22 +23,35 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php if ( is_single() ) : ?>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		<?php if ( get_header_image() ) : ?>
-			<a class="site-logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
-			</a>
+	<?php if ( ! is_single() ) : ?>
+			<?php if ( get_header_image() ) : ?>
+				<a class="site-logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				</a>
+			<?php endif; ?>
+			<hgroup>
+				<h1 class="site-title">
+					<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</h1>
+
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</hgroup>
 		<?php endif; ?>
-		<hgroup>
-			<h1 class="site-title">
-				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</h1>
-
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
-
 		<?php if ( is_single() ) : ?>
+			<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
+			</a>
+			<hgroup>
+				<h1 class="site-title">
+					<?php independent_publisher_posted_author(); ?>
+				</h1>
+
+				<h2 class="site-description"><?php the_author_meta('description') ?></h2>
+			</hgroup>
+
 			<div class="site-published-separator"></div>
 			<hgroup>
 				<h2 class="site-published">Published</h2>

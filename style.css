@@ -1548,3 +1548,28 @@ table th {
 {
 	display: none;
 }
+
+.author-archive-author-avatar img {
+	margin-bottom: 10px;
+	-webkit-border-radius: 95px;
+	border-radius: 95px;
+	max-width: 70px;
+	height: auto;
+}
+
+.author .author-info {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 40px;
+}
+
+.author .author-avatar img {
+	float: right;
+	border-radius: 95px;
+	margin-top: -32px;
+}
+.author .archive-title a {
+	color: #404040;
+}
+.author .archive-title a:hover {
+	text-decoration: none;
+}
