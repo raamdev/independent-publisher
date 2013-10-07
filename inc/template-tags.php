@@ -124,7 +124,7 @@ if ( ! function_exists( 'independent_publisher_ping' ) ) :
 	 */
 	function independent_publisher_ping( $comment ) {
 		$GLOBALS['comment'] = $comment; ?>
-		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 		<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link() ) ?>
 		<span> <?php printf( __( '%1$s ', 'independent_publisher' ), get_comment_date( "Y-m-d" ), get_comment_time( "H:i:s" ) ) ?> <?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), '  ', '' ) ?></span>
 	<?php
@@ -138,14 +138,11 @@ if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_posted_author() {
-		$author_name = get_the_author();
-		if ( trim($author_name) == '' ) // Use username if no display name is set
-			$author_name = the_author_meta( 'user_login' );
 
-	printf( __( '<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>', 'independent_publisher' ),
+		printf( __( '<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>', 'independent_publisher' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), $author_name ) ),
-			esc_html( $author_name )
+			esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
+			esc_html( get_the_author() )
 		);
 	}
 endif;
