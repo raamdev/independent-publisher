@@ -23,7 +23,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php if ( is_single() ) : ?>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 	<?php if ( ! is_single() ) : ?>
