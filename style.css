@@ -1198,12 +1198,18 @@ h6 {
 }
 
 .site-header {
+	float: left;
 	margin-top: 0px;
 	margin-bottom: 40px;
 	width: 160px;
-	position: absolute;
+	position: relative;
 	margin-left: -220px;
 	text-align: right;
+}
+
+.single .site-header {
+	float: none;
+	position: absolute;
 }
 
 .site-content,
