@@ -315,7 +315,7 @@ add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form_s
  * Enqueue enhanced comment form JavaScript
  */
 function independent_publisher_enhanced_comment_form() {
-	wp_enqueue_script( 'enhanced-comment-form-js', get_template_directory_uri() . '/js/enhanced-comment-form.js', array(), '20130920', true );
+	wp_enqueue_script( 'enhanced-comment-form-js', get_template_directory_uri() . '/js/enhanced-comment-form.js', array('jquery'), '1.0' );
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form' );
