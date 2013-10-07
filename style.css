@@ -1127,21 +1127,12 @@ h5 {
 }
 h6 {
 	font-size: 1.2em;
-<<<<<<< HEAD
 }
 
 .entry-content h1 {
 	font-size: 2.2em;
 }
 
-=======
-}
-
-.entry-content h1 {
-	font-size: 2.2em;
-}
-
->>>>>>> upstream/master
 .page h1.entry-title {margin-top: 20px; }
 
 .blog article,
@@ -1331,13 +1322,11 @@ table th {
 
 /* Hide left-side author card under 1200px */
 @media only screen and (max-width : 1200px) {
-<<<<<<< HEAD
-=======
+	
 	.site {
 		margin-top: 80px;
 	}
 
->>>>>>> upstream/master
 	.single .site-header {
 		display: none;
 	}
