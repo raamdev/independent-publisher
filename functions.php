@@ -319,14 +319,3 @@ function independent_publisher_enhanced_comment_form() {
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form' );
-
-if ( ! function_exists( 'independent_publisher_single_author_link' ) ) :
-	/**
-	 * Independent Publisher is designed for single-author sites.
-	 * This forces author links to point to the home page. This can be overridden in a child theme.
-	 */
-	add_filter( 'author_link', 'independent_publisher_single_author_link', 10, 3 );
-	function independent_publisher_single_author_link() {
-		return get_home_url();
-	}
-endif;
