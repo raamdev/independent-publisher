@@ -124,7 +124,7 @@ if ( ! function_exists( 'independent_publisher_ping' ) ) :
 	 */
 	function independent_publisher_ping( $comment ) {
 		$GLOBALS['comment'] = $comment; ?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 		<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link() ) ?>
 		<span> <?php printf( __( '%1$s ', 'independent_publisher' ), get_comment_date( "Y-m-d" ), get_comment_time( "H:i:s" ) ) ?> <?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), '  ', '' ) ?></span>
 	<?php
@@ -144,6 +144,38 @@ if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 			esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
 			esc_html( get_the_author() )
 		);
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
+	/**
+	 * Prints HTML with meta information for the current author and post categories.
+	 *
+	 * @since Independent Publisher 1.0
+	 */
+	function independent_publisher_posted_author_cats() {
+
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( __( ', ', 'independent_publisher' ) );
+
+		if ( $categories_list && independent_publisher_categorized_blog() ) :
+			echo '<span class="cat-links">';
+			printf( __( '<a href="%1$s" title="%2$s">%3$s</a> in %4$s', 'independent_publisher' ),
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+				esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
+				esc_html( get_the_author() ),
+				$categories_list
+			);
+			echo '</span>';
+		else :
+			echo '<span class="cat-links">';
+			printf( __( 'by <a href="%1$s" title="%2$s">%3$s</a>', 'independent_publisher' ),
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+				esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
+				esc_html( get_the_author() )
+			);
+			echo '</span>';
+		endif; // End if categories
 	}
 endif;
 
@@ -286,7 +318,7 @@ function independent_publisher_posted_author_card() {
 				<?php independent_publisher_posted_author(); ?>
 			</h1>
 
-			<h2 class="site-description"><?php the_author_meta('description') ?></h2>
+			<h2 class="site-description"><?php the_author_meta( 'description' ) ?></h2>
 		</hgroup>
 
 		<div class="site-published-separator"></div>
@@ -295,13 +327,13 @@ function independent_publisher_posted_author_card() {
 
 			<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
 
-			<?php if ( function_exists('get_ncl_location') ) : ?>
+			<?php if ( function_exists( 'get_ncl_location' ) ) : ?>
 				<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
 			<?php endif; ?>
 
 		</hgroup>
 	</header>
-	<?php
+<?php
 }
 
 /**
@@ -316,19 +348,20 @@ function independent_publisher_posted_author_bottom_card() {
 			<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
 			</a>
+
 			<div class="post-author-info">
 				<h1 class="site-title">
 					<?php independent_publisher_posted_author(); ?>
 				</h1>
 
-				<h2 class="site-description"><?php the_author_meta('description') ?></h2>
+				<h2 class="site-description"><?php the_author_meta( 'description' ) ?></h2>
 			</div>
 			<div class="post-published-date">
 				<h2 class="site-published">Published</h2>
 
 				<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
 
-				<?php if( function_exists('get_ncl_location') ) : ?>
+				<?php if ( function_exists( 'get_ncl_location' ) ) : ?>
 					<h2 class="site-published-location">
 						<?php echo get_ncl_location(); ?>
 					</h2>
@@ -337,5 +370,5 @@ function independent_publisher_posted_author_bottom_card() {
 		</div>
 	</div>
 	<!-- .post-author-bottom -->
-	<?php
+<?php
 }
