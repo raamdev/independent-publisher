@@ -9,8 +9,8 @@
 	<header class="entry-header">
 		<h2 class="entry-title-meta">
 			<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
-			<?php if( function_exists('indiepub_spoken_essay_link') ) : ?>
-					<?php if ( indiepub_spoken_essay_url() ) : ?>
+			<?php if ( function_exists( 'indiepub_spoken_essay_link' ) ) : ?>
+				<?php if ( indiepub_spoken_essay_url() ) : ?>
 					| <?php echo indiepub_spoken_essay_link(); ?>
 				<?php endif; ?>
 			<?php endif; ?>
@@ -30,7 +30,7 @@
 
 	<footer class="entry-meta">
 
-		<?php if( function_exists('indiepub_sharing_buttons') ) : ?>
+		<?php if ( function_exists( 'indiepub_sharing_buttons' ) ) : ?>
 			<?php indiepub_sharing_buttons(); ?>
 		<?php endif; ?>
 
