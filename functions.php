@@ -32,6 +32,11 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		require( get_template_directory() . '/inc/template-tags.php' );
 
 		/**
+		 * Theme Options
+		 */
+		require( get_template_directory() . '/inc/theme-options.php' );
+
+		/**
 		 * Make theme available for translation
 		 * Translations can be filed in the /languages/ directory
 		 */
@@ -315,7 +320,38 @@ add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form_s
  * Enqueue enhanced comment form JavaScript
  */
 function independent_publisher_enhanced_comment_form() {
-	wp_enqueue_script( 'enhanced-comment-form-js', get_template_directory_uri() . '/js/enhanced-comment-form.js', array('jquery'), '1.0' );
+	wp_enqueue_script( 'enhanced-comment-form-js', get_template_directory_uri() . '/js/enhanced-comment-form.js', array( 'jquery' ), '1.0' );
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form' );
+
+/**
+ * Enqueue Site Logo Icon JavaScript if Multi-Author Site enabled
+ */
+function independent_publisher_site_logo_icon_js() {
+	if ( independent_publisher_is_multi_author_mode() )
+		wp_enqueue_script( 'site-logo-icon-js', get_template_directory_uri() . '/js/site-logo-icon.js', array( 'jquery' ), '1.0' );
+}
+
+add_action( 'wp_enqueue_scripts', 'independent_publisher_site_logo_icon_js' );
+
+/**
+ * Point author links to home page when not using multi-author mode
+ */
+function independent_publisher_single_author_link() {
+	return get_home_url();
+}
+
+if ( ! independent_publisher_is_multi_author_mode() )
+	add_filter( 'author_link', 'independent_publisher_single_author_link', 10, 3 );
+
+/**
+ * Returns true if Multi-Author mode is enabled
+ */
+function independent_publisher_is_multi_author_mode() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_theme_general_options' );
+	if ( $independent_publisher_general_options['multi_author_mode'] )
+		return true;
+	else
+		return false;
+}

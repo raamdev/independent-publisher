@@ -962,6 +962,27 @@ body {
 	line-height: 1.6;
 }
 
+.site-master-logo {
+	position: fixed;
+	top: 5px;
+	left: 10px;
+	transition: opacity .3s linear .3s;
+	-webkit-transition: opacity .3s linear .3s;
+	-moz-transition: opacity .3s linear .3s;
+	-ms-transition: opacity .3s linear .3s;
+	-o-transition: opacity .3s linear .3s;
+}
+
+.site-master-logo img {
+	width: 48px;
+	height: auto;
+	opacity: .5;
+}
+
+.site-master-logo img:hover {
+	opacity: 1;
+}
+
 .site-logo img {
 	margin-bottom: 10px;
 	-webkit-border-radius: 95px;
