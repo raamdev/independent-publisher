@@ -6,7 +6,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( has_post_thumbnail() ) : ?>
+	<?php if ( has_post_thumbnail() && ! independent_publisher_has_full_width_featured_image() ) : ?>
 		<?php the_post_thumbnail( array( 700, 700 ) ); ?>
 	<?php endif; ?>
 	<header class="entry-header">

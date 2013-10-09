@@ -23,6 +23,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php independent_publisher_full_width_featured_image(); ?>
 <?php if ( independent_publisher_is_multi_author_mode() && is_single() ) : ?>
 	<div class="site-master-logo">
 		<?php if ( get_header_image() ) : ?>

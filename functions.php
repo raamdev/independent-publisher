@@ -360,3 +360,48 @@ function independent_publisher_is_multi_author_mode() {
 	else
 		return false;
 }
+
+/**
+ * Returns true if the the current post has Full Width Featured Image enabled
+ */
+function independent_publisher_has_full_width_featured_image() {
+	$full_width_featured_image = get_post_meta( get_the_ID(), 'full_width_featured_image' );
+
+	if ( $full_width_featured_image )
+		return true;
+	else
+		return false;
+}
+
+/**
+ * Show Full Width Featured Image
+ */
+function independent_publisher_full_width_featured_image() {
+	if ( is_single() && independent_publisher_has_full_width_featured_image() ) {
+		while ( have_posts() ) : the_post();
+
+			$full_width_featured_image = get_post_meta( get_the_ID(), 'full_width_featured_image' );
+
+			if ( $full_width_featured_image ) :
+
+				if ( has_post_thumbnail() ) :
+					the_post_thumbnail( array( 700, 700 ), array( 'class' => 'full-width-featured-image' ) );
+				endif;
+
+			endif;
+
+		endwhile; // end of the loop.
+	}
+}
+
+/**
+ * Add full-width-featured-image to body class when displaying a post with Full Width Featured Image enabled
+ */
+function independent_publisher_full_width_featured_image_body_class( $classes ) {
+	if ( is_single() && get_post_meta( get_the_ID(), 'full_width_featured_image', true ) ) {
+		$classes[] = 'full-width-featured-image';
+	}
+	return $classes;
+}
+
+add_filter( 'body_class', 'independent_publisher_full_width_featured_image_body_class' );

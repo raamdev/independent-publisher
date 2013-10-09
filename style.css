@@ -1773,3 +1773,23 @@ table th {
 .author .archive-title a:hover {
 	text-decoration: none;
 }
+
+/**
+ * Styles to apply when post full-width featured image is enabled
+ */
+
+.full-width-featured-image #page {
+	margin-top: 20px;
+}
+
+@media only screen and (max-width : 500px) {
+	.full-width-featured-image #page {
+		margin-top: 0;
+	}
+}
+
+.single .full-width-featured-image {
+	top: 0;
+	left: 0;
+	width: 100%;
+}
