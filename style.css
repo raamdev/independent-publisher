@@ -583,7 +583,8 @@ img.aligncenter {
 	margin-bottom: 40px;
 }
 
-.single .wp-post-image {
+.single .wp-post-image,
+.blog .wp-post-image {
 	width: 100%;
 	height: auto;
 	margin-bottom: 20px;
