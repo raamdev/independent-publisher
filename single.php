@@ -15,6 +15,10 @@ get_header(); ?>
 
 				<?php independent_publisher_posted_author_card(); ?>
 
+				<?php if ( has_post_thumbnail() ) : ?>
+					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
+				<?php endif; ?>
+
 				<?php get_template_part( 'content', 'single' ); ?>
 
 				<?php
