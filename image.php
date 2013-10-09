@@ -100,10 +100,12 @@ get_header();
 						<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
 							<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'independent_publisher' ), get_trackback_url() ); ?>
 						<?php
-						elseif ( comments_open() && ! pings_open() ) : // Only comments open ?>
+						elseif ( comments_open() && ! pings_open() ) : // Only comments open
+							?>
 							<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'independent_publisher' ); ?>
 						<?php
-						elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
+						elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed
+							?>
 							<?php _e( 'Both comments and trackbacks are currently closed.', 'independent_publisher' ); ?>
 						<?php endif; ?>
 						<?php edit_post_link( __( 'Edit', 'independent_publisher' ), ' <span class="edit-link">', '</span>' ); ?>

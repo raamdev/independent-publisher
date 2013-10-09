@@ -14,5 +14,6 @@
 		<p class="author-bio">
 			<?php the_author_meta( 'description' ); ?>
 		</p>
-	</div><!-- .author-description -->
+	</div>
+	<!-- .author-description -->
 </div><!-- .author-info -->

@@ -18,7 +18,6 @@ along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normali
 and Blueprint http://www.blueprintcss.org/
 */
 
-
 /* =Reset
 -------------------------------------------------------------- */
 
@@ -40,15 +39,18 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
 	font-family: inherit;
 }
+
 html {
 	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
 	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
+
 body {
 	background: #fff;
 }
+
 article,
 aside,
 details,
@@ -61,35 +63,43 @@ nav,
 section {
 	display: block;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 table {
 	border-spacing: 0; /* tables still need 'cellspacing="0"' in the markup */
 	border-collapse: separate;
 }
+
 caption, th, td {
 	text-align: left;
 	font-weight: normal;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: "";
 }
+
 blockquote, q {
 	quotes: "" "";
 }
+
 a:focus {
 	outline: thin dotted;
 }
+
 a:hover,
-a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+a:active {
+	/* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
 	outline: 0;
 }
+
 a img {
 	border: 0;
 }
-
 
 /* =Global
 ----------------------------------------------- */
@@ -107,9 +117,10 @@ textarea {
 }
 
 /* Headings */
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
 hr {
 	margin-bottom: 1.5em;
 	height: 1px;
@@ -121,31 +132,40 @@ hr {
 p {
 	margin-bottom: 1.5em;
 }
+
 ul, ol {
 	margin: 0 0 1.5em 3em;
 }
+
 ul {
 	list-style: disc;
 }
+
 ol {
 	list-style: decimal;
 }
+
 li > ol, li > ul {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
+
 dt {
 	font-weight: bold;
 }
+
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
 b, strong {
 	font-weight: bold;
 }
+
 dfn, cite, em, i {
 	font-style: italic;
 }
+
 blockquote {
 	margin: 0;
 	font-style: italic;
@@ -153,20 +173,25 @@ blockquote {
 	border-left: 6px solid #57ad68;
 	padding-left: 20px;
 }
+
 blockquote cite {
 	color: #999;
 	font-size: 80%;
 }
+
 blockquote cite:before {
 	content: "\2014 \0020";
 }
+
 blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	font-weight: normal;
 	font-family: Georgia, serif;
 }
+
 address {
 	margin: 0 0 1.5em;
 }
+
 pre {
 	overflow: auto;
 	margin-bottom: 1.6em;
@@ -176,17 +201,21 @@ pre {
 	font: 12px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	line-height: 1.6;
 }
+
 code, kbd, tt, var {
 	font: 14px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
+
 abbr, acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
+
 mark, ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
+
 sup,
 sub {
 	position: relative;
@@ -195,28 +224,36 @@ sub {
 	font-size: 75%;
 	line-height: 0;
 }
+
 sup {
 	bottom: 1ex;
 }
+
 sub {
 	top: .5ex;
 }
+
 small {
 	font-size: 75%;
 }
+
 big {
 	font-size: 125%;
 }
+
 figure {
 	margin: 0;
 }
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+
 th {
 	font-weight: bold;
 }
+
 button,
 input,
 select,
@@ -225,16 +262,18 @@ textarea {
 	vertical-align: middle; /* Improves appearance and consistency in all browsers */
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 }
+
 button,
 input {
 	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
-	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
+	*overflow: visible; /* Corrects inner spacing displayed oddly in IE6/7 */
 }
+
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	font-family: "freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	text-decoration: none;
@@ -246,34 +285,36 @@ input[type="submit"] {
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
 	background: #57ad68; /* Old browsers */
-	background: -moz-linear-gradient(top,  #57ad68 60%, #57ad68 100%) !important; /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#57ad68), color-stop(100%,#57ad68)) !important; /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #57ad68 60%,#57ad68 100%) !important; /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #57ad68 60%,#57ad68 100%) !important; /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #57ad68 60%,#57ad68 100%) !important; /* IE10+ */
-	background: linear-gradient(top,  #57ad68 60%,#57ad68 100%) !important; /* W3C */
+	background: -moz-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #57ad68), color-stop(100%, #57ad68)) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* IE10+ */
+	background: linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* W3C */
 	color: white;
 	font-size: 15px;
 	font-size: 1.5rem;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57ad68', endColorstr='#57ad68',GradientType=0 ) !important; /* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57ad68', endColorstr='#57ad68', GradientType=0) !important; /* IE6-9 */
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	-webkit-font-smoothing: antialiased;
 }
+
 button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
 	border-color: #bbb #bbb #aaa #bbb;
 	background: #65B675; /* Old browsers */
-	background: -moz-linear-gradient(top,  #65B675 60%, #65B675 100%) !important; /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#65B675), color-stop(100%,#65B675)) !important; /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #65B675 60%,#65B675 100%) !important; /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #65B675 60%,#65B675 100%) !important; /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #65B675 60%,#65B675 100%) !important; /* IE10+ */
-	background: linear-gradient(top,  #65B675 60%,#65B675 100%) !important; /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65B675', endColorstr='#65B675',GradientType=0 ); /* IE6-9 */
+	background: -moz-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #65B675), color-stop(100%, #65B675)) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* IE10+ */
+	background: linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#65B675', endColorstr='#65B675', GradientType=0); /* IE6-9 */
 }
+
 button:focus,
 html input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -283,28 +324,34 @@ html input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	border-color: #aaa #bbb #bbb #bbb;
-	box-shadow: inset 0 2px 3px rgba(0,0,0,.15);
-	box-shadow: inset 0 2px 2px rgba(0,0,0,.15);
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, .15);
+	box-shadow: inset 0 2px 2px rgba(0, 0, 0, .15);
 }
+
 input[type="checkbox"],
 input[type="radio"] {
 	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
 	padding: 0; /* Addresses excess padding in IE8/9 */
 }
+
 input[type="search"] {
 	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
 }
-input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+
+input[type="search"]::-webkit-search-decoration {
+	/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
 }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
 	padding: 0; /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
 	border: 0;
 }
+
 input[type=text],
 input[type=password],
 input[type=email],
@@ -313,17 +360,20 @@ textarea {
 	border-radius: 3px;
 	color: #666;
 }
+
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus,
 textarea:focus {
 	color: #111;
 }
+
 input[type=text],
 input[type=password],
 input[type=email] {
 	padding: 3px;
 }
+
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
@@ -336,10 +386,12 @@ a {
 	color: #57ad68;
 	text-decoration: none;
 }
+
 a:visited {
 	color: #57ad68;
 	text-decoration: none;
 }
+
 a:hover,
 a:focus,
 a:active {
@@ -353,11 +405,13 @@ a:active {
 	float: left;
 	margin-right: 1.5em;
 }
+
 .alignright {
 	display: inline;
 	float: right;
 	margin-left: 1.5em;
 }
+
 .aligncenter {
 	display: block;
 	clear: both;
@@ -367,9 +421,11 @@ a:active {
 img.alignleft {
 	margin: 5px 20px 10px 0;
 }
+
 img.alignright {
 	margin: 5px 0 10px 20px;
 }
+
 img.aligncenter {
 	margin: 5px auto 10px;
 }
@@ -381,7 +437,6 @@ img.aligncenter {
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-
 /* =Menu
 ----------------------------------------------- */
 
@@ -391,19 +446,23 @@ img.aligncenter {
 	clear: both;
 	width: 100%;
 }
+
 .main-navigation ul {
 	margin: 0;
 	padding-left: 0;
 	list-style: none;
 }
+
 .main-navigation li {
 	position: relative;
 }
+
 .main-navigation a {
 	text-decoration: none;
 	font-size: 15px;
-	font-family: "Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-seri;
+	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-seri;
 }
+
 .main-navigation ul ul {
 	position: absolute;
 	top: 1.5em;
@@ -411,29 +470,37 @@ img.aligncenter {
 	z-index: 99999;
 	display: none;
 	float: left;
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
+
 .main-navigation ul ul ul {
 	top: 0;
 	left: 100%;
 }
+
 .main-navigation ul ul a {
 	width: 200px;
 }
+
 .main-navigation ul ul li {
 }
+
 .main-navigation li:hover > a {
 	text-decoration: underline;
 }
+
 .main-navigation ul ul :hover > a {
 }
+
 .main-navigation ul ul a:hover {
 }
+
 .main-navigation ul li:hover > ul {
 	display: block;
 }
+
 .main-navigation li.current_page_item a,
 .main-navigation li.current-menu-item a {
 }
@@ -445,6 +512,7 @@ img.aligncenter {
 .entry-content {
 	*zoom: 1;
 }
+
 .site:before,
 .site:after,
 .entry-content:before,
@@ -453,10 +521,12 @@ img.aligncenter {
 	content: "";
 	line-height: 0;
 }
+
 .site:after,
 .entry-content:after {
 	clear: both;
 }
+
 .site-main article.sticky {
 	margin-bottom: 1px;
 	padding-right: 40px;
@@ -464,30 +534,38 @@ img.aligncenter {
 	background: #F2F7F9;
 	border: none;
 }
+
 .site-main article:first-child.sticky {
 	margin-top: 34px;
 }
+
 .hentry {
 	/* margin: 0 0 1.5em; */
 }
+
 .entry-meta {
 	clear: both;
 }
+
 .byline {
 	display: none;
 }
+
 .single .byline,
 .group-blog .byline {
 	display: inline;
 }
+
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 	color: #333326;
 }
+
 .entry-content > .sharedaddy {
 	margin: 1.5em 0;
 }
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -503,6 +581,12 @@ img.aligncenter {
 
 .single article.post, .single article.page {
 	margin-bottom: 40px;
+}
+
+.single .wp-post-image {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
 }
 
 /* =Post Formats
@@ -549,10 +633,11 @@ img.aligncenter {
 }
 
 .format-aside {
-    font-size: 1.6em;
-    font-style: italic;
-    line-height: 1.5;
+	font-size: 1.6em;
+	font-style: italic;
+	line-height: 1.5;
 }
+
 .format-aside .entry-content {
 	margin-top: 0;
 }
@@ -560,23 +645,29 @@ img.aligncenter {
 .format-aside .entry-title-meta {
 	margin-bottom: 20px;
 }
+
 .format-aside a, .format-aside a:hover {
 	color: inherit;
 	text-decoration: none;
 }
+
 .format-aside sup, .format-aside .footnotes {
 	font-size: 15px;
 	font-style: normal;
 }
+
 .format-aside .footnotes hr {
 	display: none;
 }
+
 .single-format-aside .entry-title {
 	display: none;
 }
+
 .single-format-aside .entry-content {
 	margin-bottom: 100px;
 }
+
 .format-standard .entry-title {
 	width: 90%;
 }
@@ -590,6 +681,7 @@ img.aligncenter {
 .widget img {
 	max-width: 100%; /* Fluid images for posts, comments, and widgets */
 }
+
 .site-header img,
 .entry-content img,
 .widget img,
@@ -597,11 +689,13 @@ img[class*="align"],
 img[class*="wp-image-"] {
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
+
 .site-header img,
 .entry-content img,
 img.size-full {
 	max-width: 100%;
 }
+
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
 	margin-top: 0;
@@ -609,44 +703,55 @@ img.size-full {
 	padding: 0;
 	border: none;
 }
+
 .wp-caption {
 	max-width: 100%;
 	border: 1px solid #ccc;
 }
+
 .wp-caption.aligncenter,
 .wp-caption.alignleft,
 .wp-caption.alignright {
 	margin-bottom: 1.5em;
 }
+
 .wp-caption img {
 	display: block;
 	margin: 5px auto 0;
 	max-width: 98%;
 }
+
 .wp-caption-text {
 	text-align: center;
 }
+
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
 }
+
 .site-content .gallery {
 	margin-bottom: 1.5em;
 }
+
 .gallery-caption {
 	padding: 0 10px 10px 10px;
 	color: #999;
 	font-size: 13px;
 }
+
 .site-content .gallery a img {
 	max-width: 90%;
 	height: auto;
 	border: none;
 }
+
 .site-content .gallery dd {
 	margin: 0;
 }
+
 .site-content .gallery-columns-4 .gallery-item {
 }
+
 .site-content .gallery-columns-4 .gallery-item img {
 }
 
@@ -657,7 +762,6 @@ object {
 	max-width: 100%;
 }
 
-
 /* =Navigation
 ----------------------------------------------- */
 
@@ -665,11 +769,13 @@ object {
 	overflow: hidden;
 	/* margin: 0 0 1.5em; */
 }
+
 .site-content .nav-previous,
 .site-navigation .previous-image {
 	float: left;
 	width: 40%;
 }
+
 .site-content .nav-next,
 .site-navigation .next-image {
 	float: right;
@@ -692,6 +798,7 @@ object {
 	font-weight: normal;
 	letter-spacing: 1px;
 }
+
 .site-main .commentlist article {
 	padding-bottom: 1em;
 	padding-top: 1em;
@@ -717,6 +824,7 @@ ol.commentlist,
 ol.commentlist ul.children {
 	list-style: none;
 }
+
 ol.commentlist {
 	margin-bottom: 100px;
 }
@@ -802,7 +910,6 @@ ol.commentlist .avatar {
 	font-style: normal;
 }
 
-
 .comment-author .fn a {
 	text-decoration: none;
 	color: inherit;
@@ -824,15 +931,16 @@ ol.commentlist .avatar {
 }
 
 #pinglist {
-	font-family: "freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 12px;
-	border-top:  1px solid #eee;
+	border-top: 1px solid #eee;
 	padding-top: 20px;
 	margin-top: 80px;
 
 }
+
 ul.pinglist {
 	margin-left: 0;
 }
@@ -841,22 +949,26 @@ ul.pinglist {
 	display: inline;
 	margin-right: 20px;
 }
+
 .pinglist-title {
 	color: rgba(117, 117, 117, 0.78);
 }
+
 .pinglist a {
 	text-decoration: none;
 }
+
 .pinglist a:hover {
 	text-decoration: underline;
 }
 
 .taglist {
-	font-family: "freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 12px;
 }
+
 ul.taglist {
 	margin-left: 0;
 	margin-top: 30px;
@@ -866,12 +978,15 @@ ul.taglist {
 	display: inline-block;
 	margin-right: 20px;
 }
+
 .taglist-title {
 	color: rgba(117, 117, 117, 0.78);
 }
+
 .taglist a {
 	text-decoration: none;
 }
+
 .taglist a:hover {
 	text-decoration: underline;
 }
@@ -904,7 +1019,8 @@ ul.taglist {
 	display: none;
 }
 
-.bypostauthor {}
+.bypostauthor {
+}
 
 /* =Widgets
 ----------------------------------------------- */
@@ -931,25 +1047,24 @@ ul.taglist {
 /* =Layout
 ----------------------------------------------- */
 
-@font-face
-{
+@font-face {
 	font-family: DroidSerif;
 	src: url('fonts/droid-serif/DroidSerif.ttf');
 }
-@font-face
-{
+
+@font-face {
 	font-family: DroidSerif;
 	src: url('fonts/droid-serif/DroidSerif-Italic.ttf');
 	font-style: italic;
 }
-@font-face
-{
+
+@font-face {
 	font-family: DroidSerif;
 	src: url('fonts/droid-serif/DroidSerif-Bold.ttf');
 	font-weight: bold;
 }
-@font-face
-{
+
+@font-face {
 	font-family: DroidSerif;
 	src: url('fonts/droid-serif/DroidSerif-BoldItalic.ttf');
 	font-style: italic;
@@ -1014,12 +1129,14 @@ body {
 	font-weight: inherit;
 	margin-top: 5px;
 }
+
 .site-published-separator {
-    border-top: 1px solid #dededc;
-    padding-top: 20px;
-    width: 40px;
-    float: right;
+	border-top: 1px solid #dededc;
+	padding-top: 20px;
+	width: 40px;
+	float: right;
 }
+
 .site-published {
 	margin: 10px 0 0 0;
 	color: #333332;
@@ -1029,6 +1146,7 @@ body {
 	font-weight: bold;
 	letter-spacing: inherit;
 }
+
 .site-published-date {
 	margin: 5px 0 0 0;
 	color: rgba(117, 117, 117, 0.78);
@@ -1037,12 +1155,14 @@ body {
 	line-height: 2;
 	letter-spacing: inherit;
 	font-weight: inherit;
-    font-style: normal;
+	font-style: normal;
 }
+
 .site-published-date a, .site-published-location a {
 	color: rgba(117, 117, 117, 0.78);
 	text-decoration: none;
 }
+
 .site-published-location {
 	margin: 0 0 20px 0;
 	color: rgba(117, 117, 117, 0.78);
@@ -1076,6 +1196,7 @@ body {
 	display: block;
 	line-height: 1;
 }
+
 .widget-area ul li a:hover {
 	text-decoration: underline;
 }
@@ -1124,7 +1245,7 @@ h4,
 h5,
 h6 {
 	margin: 20px 0;
-	font-family:"Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	color: #333332;
 	letter-spacing: -1px;
 	font-weight: 700;
@@ -1134,18 +1255,23 @@ h6 {
 h1 {
 	font-size: 2.5em;
 }
+
 h2 {
 	font-size: 1.9em;
 }
+
 h3 {
 	font-size: 1.6em;
 }
+
 h4 {
 	font-size: 1.4em;
 }
+
 h5 {
 	font-size: 1.3em;
 }
+
 h6 {
 	font-size: 1.2em;
 }
@@ -1154,7 +1280,9 @@ h6 {
 	font-size: 2.2em;
 }
 
-.page h1.entry-title {margin-top: 20px; }
+.page h1.entry-title {
+	margin-top: 20px;
+}
 
 .blog article,
 .archive article,
@@ -1174,13 +1302,14 @@ h6 {
 
 .entry-title-meta {
 	font-size: 13px;
-   color: #b3b3b1;
-   font-weight: 100;
-   letter-spacing: 1px;
-   margin-bottom: 0px;
-   margin-top: 0px;
+	color: #b3b3b1;
+	font-weight: 100;
+	letter-spacing: 1px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 	font-style: normal;
 }
+
 .entry-title-meta a {
 	color: #b3b3b1;
 	text-decoration: none;
@@ -1194,7 +1323,7 @@ h6 {
 .entry-meta a {
 	color: #b3b3b1;
 	font-size: 13px;
-	font-family: "Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	font-weight: 100;
 	font-style: normal;
 	text-align: right;
@@ -1203,6 +1332,7 @@ h6 {
 .entry-meta a:hover {
 	color: #57ad68;
 }
+
 .single .entry-meta {
 	border-top: 1px solid #eee;
 	padding-bottom: 40px;
@@ -1246,7 +1376,7 @@ h6 {
 	clear: left;
 	margin-left: -220px;
 	text-align: right;
-	font-family: "Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	font-size: 15px;
 }
 
@@ -1261,7 +1391,8 @@ h6 {
 	word-wrap: break-word;
 }
 
-.widget_search input[type="text"] { /* fixes overflow issue */
+.widget_search input[type="text"] {
+	/* fixes overflow issue */
 	width: 90%;
 }
 
@@ -1319,23 +1450,28 @@ table th {
 	float: left;
 	height: auto;
 }
+
 .post-author-bottom .site-title,
 .post-author-bottom .site-description {
 	clear: none;
 }
+
 .post-author-bottom .post-author-info {
 	margin-left: 100px;
 	margin-right: 200px;
-	padding-right:  25px;
+	padding-right: 25px;
 	padding-top: 10px;
 }
+
 .post-author-bottom h1.site-title,
 .post-author-bottom h2.site-description {
 	margin-left: 0;
 }
+
 .post-author-bottom h1.site-title {
 	font-style: normal;
 }
+
 .post-author-bottom .post-published-date {
 	width: 177px;
 	margin-left: 385px;
@@ -1367,12 +1503,15 @@ table th {
 	.post-author-bottom {
 		display: block;
 	}
+
 	.entry-meta {
 		border-bottom: none;
 	}
+
 	.entry-title-meta-author {
 		display: inline-block;
 	}
+
 	.widget-area {
 		float: right;
 		width: 100%;
@@ -1380,29 +1519,36 @@ table th {
 		text-align: inherit;
 		padding-top: 40px;
 	}
+
 	.widget-area ul li a {
 		display: inline-block;
 	}
+
 	#nav-below {
 		margin-top: 40px;
 	}
-   .single .entry-meta {
-	   border-top: none;
-   }
+
+	.single .entry-meta {
+		border-top: none;
+	}
 
 	.page article {
 		padding: 40px 0 40px 0;
 	}
+
 	.main-navigation {
 		clear: none;
 	}
+
 	.site-navigation {
 		border-bottom: 1px solid #eee;
 		padding-bottom: 40px;
 	}
+
 	#nav-below .site-navigation {
 		margin-top: 40px;
 	}
+
 	.main-navigation li {
 		display: inline-block;
 		padding: 5px 10px;
@@ -1415,11 +1561,13 @@ table th {
 		margin-left: 0;
 		margin-top: 0;
 	}
+
 	#masthead .site-title {
 		font-style: normal;
 		padding-top: 15px;
 		padding-left: 0;
 	}
+
 	#masthead .site-description {
 		padding-left: 0;
 		padding-top: 20px;
@@ -1460,18 +1608,23 @@ table th {
 	.entry-content h1 {
 		font-size: 1.7em;
 	}
+
 	.entry-content h2 {
 		font-size: 1.6em;
 	}
+
 	.entry-content h3 {
 		font-size: 1.5em;
 	}
+
 	.entry-content h4 {
 		font-size: 1.4em;
 	}
+
 	.entry-content h5 {
 		font-size: 1.3em;
 	}
+
 	.entry-content h6 {
 		font-size: 1.2em;
 	}
@@ -1479,6 +1632,7 @@ table th {
 	.entry-content ol, ul {
 		margin-left: 2em;
 	}
+
 	#masthead {
 		text-align: center;
 	}
@@ -1490,6 +1644,7 @@ table th {
 		clear: both;
 		margin-left: 5px;
 	}
+
 	#masthead .site-description {
 		padding-left: 0;
 		margin-left: 5px;
@@ -1505,6 +1660,7 @@ table th {
 		padding-top: 0;
 		padding-left: 0;
 	}
+
 	.post-author-card .site-description {
 		padding-left: 0;
 	}
@@ -1524,19 +1680,23 @@ table th {
 	.post-author-bottom {
 		text-align: center;
 	}
+
 	.post-author-bottom .site-title {
 		font-size: 24px;
 		line-height: 2.2;
 	}
-   .post-author-bottom .site-logo, .post-author-bottom .site-logo img {
-	   float: none;
-		 max-width: 100px;
-   }
+
+	.post-author-bottom .site-logo, .post-author-bottom .site-logo img {
+		float: none;
+		max-width: 100px;
+	}
+
 	.post-author-bottom .post-author-info {
 		margin-left: 0;
 		margin-right: 0;
 		padding-right: 0;
 	}
+
 	.post-author-bottom .post-published-date {
 		margin-left: 0;
 		position: inherit;
@@ -1544,16 +1704,19 @@ table th {
 		top: inherit;
 		width: 100%;
 	}
-   .entry-header {
-	   word-wrap: none;
-	   hyphens: none;
-	   -webkit-hyphens: none;
-	   -moz-hyphens: none;
-   }
-   .commentlist ul.children {
-	   margin-left: 0;
-	   padding-left: 10px;
-   }
+
+	.entry-header {
+		word-wrap: none;
+		hyphens: none;
+		-webkit-hyphens: none;
+		-moz-hyphens: none;
+	}
+
+	.commentlist ul.children {
+		margin-left: 0;
+		padding-left: 10px;
+	}
+
 	.commentlist .thread-even,
 	.commentlist .thread-odd {
 		padding-left: 10px;
@@ -1566,13 +1729,14 @@ table th {
 .footnotes p {
 	margin-bottom: 0;
 }
+
 .footnotes {
 	font-size: 80%;
 }
+
 .blog div.footnotes,
 .archive div.footnotes,
-.search div.footnotes
-{
+.search div.footnotes {
 	display: none;
 }
 
@@ -1594,15 +1758,11 @@ table th {
 	border-radius: 95px;
 	margin-top: -32px;
 }
+
 .author .archive-title a {
 	color: #404040;
 }
+
 .author .archive-title a:hover {
 	text-decoration: none;
-}
-
-.single .wp-post-image {
-	width: 100%;
-	height: auto;
-	margin-bottom: 20px;
 }

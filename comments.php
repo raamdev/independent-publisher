@@ -82,7 +82,7 @@ if ( post_password_required() )
 
 	<?php if ( comments_open() && get_comments_number() > 10 ) : ?>
 
-		<?php if( function_exists('indiepub_sharing_buttons') ) : ?>
+		<?php if ( function_exists( 'indiepub_sharing_buttons' ) ) : ?>
 			<?php indiepub_sharing_buttons(); ?>
 		<?php endif; ?>
 

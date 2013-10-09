@@ -7,7 +7,7 @@
  */
 ?>
 <div id="secondary" class="widget-area" role="complementary">
-	<?php if( ! is_single() ) : ?>
+	<?php if ( ! is_single() ) : ?>
 		<?php do_action( 'independent_publisher_before_sidebar' ); ?>
 		<?php dynamic_sidebar( 'sidebar-1' ) ?>
 	<?php endif; ?>

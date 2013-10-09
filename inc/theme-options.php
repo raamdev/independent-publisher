@@ -150,10 +150,15 @@ function independent_publisher_multi_author_mode_callback() {
 	$options = get_option( 'independent_publisher_theme_general_options' );
 
 	// Next, we need to make sure the element is defined in the options. If not, we'll set an empty string.
-	if ( true == $options['multi_author_mode'] ) { $checked = 'checked="checked"'; } else { $checked = ''; }
+	if ( true == $options['multi_author_mode'] ) {
+		$checked = 'checked="checked"';
+	}
+	else {
+		$checked = '';
+	}
 
 	// Render the output
-	echo '<input type="checkbox" id="twitter" name="independent_publisher_theme_general_options[multi_author_mode]" value="true" '. $checked .' /> <em>Enabling this will modify the theme behavior to support multiple authors. For example, the Header image will become the site logo and appear in the top-left of Single post pages.</em>';
+	echo '<input type="checkbox" id="twitter" name="independent_publisher_theme_general_options[multi_author_mode]" value="true" ' . $checked . ' /> <em>Enabling this will modify the theme behavior to support multiple authors. For example, the Header image will become the site logo and appear in the top-left of Single post pages.</em>';
 
 } // end independent_publisher_twitter_callback
 
