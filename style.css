@@ -584,9 +584,14 @@ img.aligncenter {
 }
 
 .single .wp-post-image,
-.blog .wp-post-image {
+.page .wp-post-image,
+.blog .wp-post-image,
+.archive .wp-post-image {
 	width: 100%;
 	height: auto;
+}
+
+.single .wp-post-image {
 	margin-bottom: 20px;
 }
 
@@ -1543,7 +1548,8 @@ table th {
 
 	.site-navigation {
 		border-bottom: 1px solid #eee;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
 	}
 
 	#nav-below .site-navigation {

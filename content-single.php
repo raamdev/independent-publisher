@@ -6,6 +6,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( has_post_thumbnail() ) : ?>
+		<?php the_post_thumbnail( array( 700, 700 ) ); ?>
+	<?php endif; ?>
 	<header class="entry-header">
 		<h2 class="entry-title-meta">
 			<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
