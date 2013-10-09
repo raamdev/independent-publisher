@@ -1600,3 +1600,9 @@ table th {
 .author .archive-title a:hover {
 	text-decoration: none;
 }
+
+.single .wp-post-image {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
