@@ -531,12 +531,9 @@ img.aligncenter {
 	margin-bottom: 1px;
 	padding-right: 40px;
 	padding-left: 40px;
+	padding-top: 20px;
 	background: #F2F7F9;
 	border: none;
-}
-
-.site-main article:first-child.sticky {
-	margin-top: 34px;
 }
 
 .hentry {
@@ -1092,6 +1089,10 @@ body {
 	-moz-transition: opacity .3s linear .3s;
 	-ms-transition: opacity .3s linear .3s;
 	-o-transition: opacity .3s linear .3s;
+}
+
+.admin-bar .site-master-logo {
+	top: 35px;
 }
 
 .site-master-logo img {
