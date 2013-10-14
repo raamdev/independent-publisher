@@ -97,7 +97,7 @@ function independent_publisher_theme_default_general_options() {
  *
  * This function is registered with the 'admin_init' hook.
  */
-function independent_publisher_theme_intialize_general_options() {
+function independent_publisher_theme_initialize_general_options() {
 
 	if ( false == get_option( 'independent_publisher_theme_general_options' ) ) {
 		add_option( 'independent_publisher_theme_general_options', apply_filters( 'independent_publisher_theme_default_general_options', independent_publisher_theme_default_general_options() ) );
@@ -123,8 +123,8 @@ function independent_publisher_theme_intialize_general_options() {
 		'independent_publisher_theme_general_options'
 	);
 
-} // end independent_publisher_theme_intialize_general_options
-add_action( 'admin_init', 'independent_publisher_theme_intialize_general_options' );
+} // end independent_publisher_theme_initialize_general_options
+add_action( 'admin_init', 'independent_publisher_theme_initialize_general_options' );
 
 /* ------------------------------------------------------------------------ *
  * Section Callbacks
@@ -133,7 +133,7 @@ add_action( 'admin_init', 'independent_publisher_theme_intialize_general_options
 /**
  * This function provides a simple description for the General Options page.
  *
- * It's called from the 'independent_publisher_theme_intialize_general_options' function by being passed as a parameter
+ * It's called from the 'independent_publisher_theme_initialize_general_options' function by being passed as a parameter
  * in the add_settings_section function.
  */
 function independent_publisher_general_options_callback() {
@@ -149,12 +149,13 @@ function independent_publisher_multi_author_mode_callback() {
 	// First, we read the general options collection
 	$options = get_option( 'independent_publisher_theme_general_options' );
 
+	// Default value
+	$checked = '';
+
 	// Next, we need to make sure the element is defined in the options. If not, we'll set an empty string.
-	if ( true == $options['multi_author_mode'] ) {
-		$checked = 'checked="checked"';
-	}
-	else {
-		$checked = '';
+	if ( isset( $options['multi_author_mode'] ) ) {
+		if ( true == $options['multi_author_mode'] )
+			$checked = 'checked="checked"';
 	}
 
 	// Render the output
