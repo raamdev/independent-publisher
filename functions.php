@@ -163,7 +163,8 @@ add_filter( 'get_comments_number', 'independent_publisher_comment_count', 0 );
 function independent_publisher_comment_count( $count ) {
 	if ( ! is_admin() ) {
 		global $id;
-		$comments_by_type = & separate_comments( get_comments( 'status=approve&post_id=' . $id ) );
+		$comments = get_comments( 'status=approve&post_id=' . $id );
+		$comments_by_type = separate_comments( $comments );
 		return count( $comments_by_type['comment'] );
 	}
 	else {
@@ -355,7 +356,7 @@ if ( ! independent_publisher_is_multi_author_mode() )
  */
 function independent_publisher_is_multi_author_mode() {
 	$independent_publisher_general_options = get_option( 'independent_publisher_theme_general_options' );
-	if ( $independent_publisher_general_options['multi_author_mode'] )
+	if ( isset( $independent_publisher_general_options['multi_author_mode'] ) && $independent_publisher_general_options['multi_author_mode'] )
 		return true;
 	else
 		return false;
