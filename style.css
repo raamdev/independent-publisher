@@ -647,6 +647,10 @@ img.aligncenter {
 	line-height: 1.5;
 }
 
+.format-quote {
+	font-size: 1.2em;
+}
+
 .format-aside .entry-content {
 	margin-top: 0;
 }
