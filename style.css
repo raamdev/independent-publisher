@@ -598,6 +598,18 @@ img.aligncenter {
 	margin-bottom: 20px;
 }
 
+.blog h1.entry-title,
+.archive h1.entry-title,
+.search h1.entry-title{
+	font-size: 1.8em;
+	margin-bottom: 0;
+}
+.blog .entry-content,
+.archive .entry-content,
+.search .entry-content {
+	margin-top: 10px;
+}
+
 /* =Post Formats
 ----------------------------------------------- */
 
@@ -720,6 +732,7 @@ img.size-full {
 .wp-caption {
 	max-width: 100%;
 	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
 }
 
 .wp-caption.aligncenter,
