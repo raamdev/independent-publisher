@@ -588,6 +588,12 @@ img.aligncenter {
 	height: auto;
 }
 
+.single .full-width-featured-image {
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
 .single .wp-post-image {
 	margin-bottom: 20px;
 }
@@ -636,7 +642,7 @@ img.aligncenter {
 }
 
 .format-aside {
-	font-size: 1.6em;
+	font-size: 1.3em;
 	font-style: italic;
 	line-height: 1.5;
 }
@@ -726,6 +732,7 @@ img.size-full {
 
 .wp-caption-text {
 	text-align: center;
+	font-size: 80%;
 }
 
 .wp-caption .wp-caption-text {
@@ -1330,7 +1337,7 @@ h6 {
 .entry-meta a {
 	color: #b3b3b1;
 	font-size: 13px;
-	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: sans-serif;
 	font-weight: 100;
 	font-style: normal;
 	text-align: right;
@@ -1674,7 +1681,7 @@ table th {
 	}
 
 	.format-aside .entry-content {
-		font-size: 25px;
+		font-size: 1em;
 		line-height: 36px;
 		margin-bottom: 0;
 	}
@@ -1787,10 +1794,4 @@ table th {
 	.full-width-featured-image #page {
 		margin-top: 0;
 	}
-}
-
-.single .full-width-featured-image {
-	top: 0;
-	left: 0;
-	width: 100%;
 }
