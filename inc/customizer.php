@@ -43,6 +43,19 @@ function independent_publisher_customize_register( $wp_customize ) {
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );
+
+	// Show Post Word Count
+	$wp_customize->add_setting( 'independent_publisher_general_options[show_post_word_count]', array(
+		'default'    => true,
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+	) );
+	$wp_customize->add_control( 'show_post_word_count', array(
+		'settings' => 'independent_publisher_general_options[show_post_word_count]',
+		'label'    => __( 'Show Post Word Count' ),
+		'section'  => 'independent_publisher_general_options',
+		'type'     => 'checkbox',
+	) );
 }
 
 add_action( 'customize_register', 'independent_publisher_customize_register' );
