@@ -36,7 +36,9 @@
 				<a style="text-decoration: none; color: inherit;" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_excerpt(); ?></a>
 
 			<?php else : ?>
-
+				<?php if ( has_post_thumbnail() && independent_publisher_show_post_thumbnail() ) : ?>
+					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
+				<?php endif; ?>
 				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
 
