@@ -386,6 +386,17 @@ function independent_publisher_show_post_word_count() {
 }
 
 /**
+ * Returns true if Show Post Thumbnail option is enabled
+ */
+function independent_publisher_show_post_thumbnail() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['show_post_thumbnail'] ) && $independent_publisher_general_options['show_post_thumbnail'] )
+		return true;
+	else
+		return false;
+}
+
+/**
  * Returns true if the the current post has Full Width Featured Image enabled
  */
 function independent_publisher_has_full_width_featured_image() {
