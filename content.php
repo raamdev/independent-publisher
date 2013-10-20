@@ -49,7 +49,7 @@
 			<?php independent_publisher_posted_author_cats() ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
-		<?php if ( ! get_post_format() ) : // Only show word count on standard post format ?>
+		<?php if ( ! get_post_format() && independent_publisher_show_post_word_count() ) : // Only show word count on standard post format ?>
 			<?php echo independent_publisher_get_post_word_count() ?>
 		<?php endif; ?>
 
