@@ -32,9 +32,9 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		require( get_template_directory() . '/inc/template-tags.php' );
 
 		/**
-		 * Theme Options
+		 * Customizer additions.
 		 */
-		require( get_template_directory() . '/inc/theme-options.php' );
+		require get_template_directory() . '/inc/customizer.php';
 
 		/**
 		 * Make theme available for translation
@@ -121,6 +121,7 @@ function independent_publisher_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_scripts' );
+
 
 /**
  * Echoes the theme's footer credits
@@ -355,8 +356,19 @@ if ( ! independent_publisher_is_multi_author_mode() )
  * Returns true if Multi-Author mode is enabled
  */
 function independent_publisher_is_multi_author_mode() {
-	$independent_publisher_general_options = get_option( 'independent_publisher_theme_general_options' );
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
 	if ( isset( $independent_publisher_general_options['multi_author_mode'] ) && $independent_publisher_general_options['multi_author_mode'] )
+		return true;
+	else
+		return false;
+}
+
+/**
+ * Returns true if Use Post Excerpts option is enabled
+ */
+function independent_publisher_use_post_excerpts() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['use_post_excerpts'] ) && $independent_publisher_general_options['use_post_excerpts'] )
 		return true;
 	else
 		return false;
