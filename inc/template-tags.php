@@ -385,3 +385,13 @@ function independent_publisher_posted_author_bottom_card() {
 	<!-- .post-author-bottom -->
 <?php
 }
+
+if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
+	/**
+	 * Returns number of words in a post formatted for display in theme
+	 * @return string
+	 */
+	function independent_publisher_get_post_word_count() {
+		return sprintf( __( '<span class="sep"> | </span> <span>%1$s Words</span>', 'independent_publisher' ), independent_publisher_post_word_count() );
+	}
+endif;

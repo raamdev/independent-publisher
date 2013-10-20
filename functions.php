@@ -407,8 +407,9 @@ function independent_publisher_full_width_featured_image_body_class( $classes ) 
 
 add_filter( 'body_class', 'independent_publisher_full_width_featured_image_body_class' );
 
+
 /**
- * Count number of words in a post
+ * Returns number of words in a post
  * @return string
  */
 function independent_publisher_post_word_count() {

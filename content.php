@@ -50,8 +50,7 @@
 		<?php endif; // End if 'post' == get_post_type() ?>
 
 		<?php if ( ! get_post_format() ) : // Only show word count on standard post format ?>
-			<span class="sep"> | </span>
-			<span><?php echo independent_publisher_post_word_count() . ' Words '; ?></span>
+			<?php echo independent_publisher_get_post_word_count() ?>
 		<?php endif; ?>
 
 		<?php if ( ! post_password_required() && comments_open() ) : ?>
