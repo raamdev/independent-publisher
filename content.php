@@ -31,7 +31,7 @@
 
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo $content; ?></a>
 
-			<?php elseif ( ! get_post_format() && independent_publisher_use_post_excerpts() ) : // Standard post format ?>
+			<?php elseif ( ! get_post_format() && independent_publisher_use_post_excerpts() && ! is_sticky() ) : // Standard post format ?>
 
 				<a style="text-decoration: none; color: inherit;" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_excerpt(); ?></a>
 
