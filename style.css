@@ -663,11 +663,6 @@ img.aligncenter {
 	font-size: 1.3em;
 }
 
-.format-quote blockquote {
-	border-left: none;
-	padding-left: 0;
-}
-
 .format-aside .entry-content {
 	margin-top: 0;
 }
