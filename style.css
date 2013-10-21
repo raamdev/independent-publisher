@@ -1814,3 +1814,20 @@ table th {
 		margin-top: 0;
 	}
 }
+
+.enhanced-excerpts .format-standard .entry-content p {
+	margin-bottom: 1em;
+}
+
+.enhanced-excerpts .format-standard .entry-meta {
+	text-align: left;
+}
+
+.enhanced-excerpts .enhanced-excerpt-read-more a {
+	display: block;
+	text-align: right;
+	font-family: DroidSerif, Georgia, "Times New Roman", Times, serif;
+	font-size: 1.4em;
+	color: #57ad68;
+	margin-top: 1em;
+}
