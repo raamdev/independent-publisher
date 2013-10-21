@@ -61,7 +61,7 @@
 		<?php endif; ?>
 		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
 		<?php if ( ! get_post_format() && independent_publisher_use_enhanced_excerpts() ) : ?>
-			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php get_permalink( get_the_ID() ); ?>"><?php echo __('Continue Reading &rarr;'); ?></a></span>
+			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php the_permalink(); ?>"><?php echo __('Continue Reading &rarr;'); ?></a></span>
 		<?php endif; ?>
 	</footer>
 	<!-- .entry-meta -->
