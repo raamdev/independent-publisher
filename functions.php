@@ -478,6 +478,18 @@ function independent_publisher_enhanced_excerpts_body_class( $classes ) {
 add_filter( 'body_class', 'independent_publisher_enhanced_excerpts_body_class' );
 
 /**
+ * Add post-excerpts to body class when Use Post Excerpts option enabled
+ */
+function independent_publisher_post_excerpts_body_class( $classes ) {
+	if ( independent_publisher_use_post_excerpts() && ! is_singular() ) {
+		$classes[] = 'post-excerpts';
+	}
+	return $classes;
+}
+
+add_filter( 'body_class', 'independent_publisher_post_excerpts_body_class' );
+
+/**
  * Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
  */
 function independent_publisher_first_sentence_excerpt($output)
