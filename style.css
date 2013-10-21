@@ -1363,7 +1363,6 @@ h6 {
 	font-family: sans-serif;
 	font-weight: 100;
 	font-style: normal;
-	text-align: right;
 }
 
 .entry-meta a:hover {
@@ -1374,6 +1373,11 @@ h6 {
 	border-top: 1px solid #eee;
 	padding-bottom: 40px;
 	padding-top: 40px;
+}
+
+.single .edit-link,
+.page .edit-link {
+	float: right;
 }
 
 .site {
