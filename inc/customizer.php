@@ -44,6 +44,19 @@ function independent_publisher_customize_register( $wp_customize ) {
 		'type'     => 'checkbox',
 	) );
 
+	// Use Enhanced Excerpts
+	$wp_customize->add_setting( 'independent_publisher_general_options[use_enhanced_excerpts]', array(
+		'default'    => true,
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+	) );
+	$wp_customize->add_control( 'use_enhanced_excerpts', array(
+		'settings' => 'independent_publisher_general_options[use_enhanced_excerpts]',
+		'label'    => __( 'Use Enhanced Excerpts' ),
+		'section'  => 'independent_publisher_general_options',
+		'type'     => 'checkbox',
+	) );
+
 	// Show Post Word Count
 	$wp_customize->add_setting( 'independent_publisher_general_options[show_post_word_count]', array(
 		'default'    => true,

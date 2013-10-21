@@ -397,6 +397,17 @@ function independent_publisher_show_post_thumbnail() {
 }
 
 /**
+ * Returns true if Use Enhanced Excerpts option is enabled
+ */
+function independent_publisher_use_enhanced_excerpts() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['use_enhanced_excerpts'] ) && $independent_publisher_general_options['use_enhanced_excerpts'] )
+		return true;
+	else
+		return false;
+}
+
+/**
  * Returns true if the the current post has Full Width Featured Image enabled
  */
 function independent_publisher_has_full_width_featured_image() {
@@ -452,3 +463,35 @@ function independent_publisher_post_word_count() {
 	$count = str_word_count( strip_tags( $content ) );
 	return number_format($count);
 }
+
+
+/**
+ * Add enhanced-excerpts to body class when Use Enhanced Excerpts option enabled
+ */
+function independent_publisher_enhanced_excerpts_body_class( $classes ) {
+	if ( independent_publisher_use_enhanced_excerpts() && ! is_singular() ) {
+		$classes[] = 'enhanced-excerpts';
+	}
+	return $classes;
+}
+
+add_filter( 'body_class', 'independent_publisher_enhanced_excerpts_body_class' );
+
+/**
+ * Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
+ */
+function independent_publisher_first_sentence_excerpt($output)
+{
+	global $post;
+	$content_post = get_post($post->ID);
+
+	if(!$content_post->post_excerpt && independent_publisher_use_enhanced_excerpts() )
+	{
+		$strings = preg_split('/(\.|!|\?)\s/', strip_tags($content_post->post_content), 2, PREG_SPLIT_DELIM_CAPTURE);
+		$output  = apply_filters('the_content', $strings[0].$strings[1]);
+	}
+
+	return $output;
+}
+
+add_filter('the_excerpt', 'independent_publisher_first_sentence_excerpt');

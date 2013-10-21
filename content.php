@@ -31,7 +31,7 @@
 
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo $content; ?></a>
 
-			<?php elseif ( ! get_post_format() && independent_publisher_use_post_excerpts() && ! is_sticky() ) : // Standard post format ?>
+			<?php elseif ( ! get_post_format() && ! is_sticky() && ( independent_publisher_use_post_excerpts() || independent_publisher_use_enhanced_excerpts() ) ) : // Standard post format ?>
 
 				<a style="text-decoration: none; color: inherit;" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_excerpt(); ?></a>
 
@@ -59,7 +59,10 @@
 			<span class="sep"> | </span>
 			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent_publisher' ), __( '1 Comment', 'independent_publisher' ), __( '% Comments', 'independent_publisher' ) ); ?></span>
 		<?php endif; ?>
-		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
+		<?php//edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
+		<?php if ( ! get_post_format() && independent_publisher_use_enhanced_excerpts() ) : ?>
+			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php get_permalink( get_the_ID() ); ?>"><?php echo __('Continue Reading &rarr;'); ?></a></span>
+		<?php endif; ?>
 	</footer>
 	<!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
