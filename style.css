@@ -598,15 +598,13 @@ img.aligncenter {
 	margin-bottom: 20px;
 }
 
-.blog h1.entry-title,
-.archive h1.entry-title,
-.search h1.entry-title{
+.post-excerpts h1.entry-title,
+.enhanced-excerpts h1.entry-title{
 	font-size: 1.8em;
 	margin-bottom: 0;
 }
-.blog .entry-content,
-.archive .entry-content,
-.search .entry-content {
+.post-excerpts .entry-content,
+.enhanced-excerpts .entry-content {
 	margin-top: 10px;
 }
 
