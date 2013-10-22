@@ -1837,3 +1837,16 @@ table th {
 	color: #57ad68;
 	margin-top: 1em;
 }
+
+.show-full-content-first-post {
+	padding-top: 0 !important;
+}
+
+.show-full-content-first-post h1.entry-title {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+.show-full-content-first-post .entry-content p {
+	margin-bottom: 1.5em !important;
+}

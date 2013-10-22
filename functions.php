@@ -377,6 +377,17 @@ function independent_publisher_use_post_excerpts() {
 /**
  * Returns true if Show Post Word Count option is enabled
  */
+function independent_publisher_show_full_content_first_post() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['show_full_content_first_post'] ) && $independent_publisher_general_options['show_full_content_first_post'] )
+		return true;
+	else
+		return false;
+}
+
+/**
+ * Returns true if Show Post Word Count option is enabled
+ */
 function independent_publisher_show_post_word_count() {
 	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
 	if ( isset( $independent_publisher_general_options['show_post_word_count'] ) && $independent_publisher_general_options['show_post_word_count'] )

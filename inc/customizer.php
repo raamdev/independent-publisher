@@ -55,6 +55,19 @@ function independent_publisher_customize_register( $wp_customize ) {
 		'type'     => 'checkbox',
 	) );
 
+	// Show Full Content for First Post
+	$wp_customize->add_setting( 'independent_publisher_general_options[show_full_content_first_post]', array(
+		'default'    => true,
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+	) );
+	$wp_customize->add_control( 'show_full_content_first_post', array(
+		'settings' => 'independent_publisher_general_options[show_full_content_first_post]',
+		'label'    => __( 'Show Full Content for First Post' ),
+		'section'  => 'independent_publisher_general_options',
+		'type'     => 'checkbox',
+	) );
+
 	// Show Post Word Count
 	$wp_customize->add_setting( 'independent_publisher_general_options[show_post_word_count]', array(
 		'default'    => true,
