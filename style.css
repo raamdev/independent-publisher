@@ -599,10 +599,11 @@ img.aligncenter {
 }
 
 .post-excerpts h1.entry-title,
-.enhanced-excerpts h1.entry-title{
+.enhanced-excerpts h1.entry-title {
 	font-size: 1.8em;
 	margin-bottom: 0;
 }
+
 .post-excerpts .entry-content,
 .enhanced-excerpts .entry-content {
 	margin-top: 10px;
