@@ -518,3 +518,66 @@ function independent_publisher_first_sentence_excerpt($output)
 }
 
 add_filter('the_excerpt', 'independent_publisher_first_sentence_excerpt');
+
+/**
+ * Add a checkbox to the featured image metabox
+ */
+function independent_publisher_featured_image_meta( $content ) {
+	global $post;
+
+	// Text for checkbox
+	$text = __( "Use as post cover (full-width)", 'independent_publisher' );
+
+	// Meta value ID
+	$id    = 'full_width_featured_image';
+	$value = esc_attr( get_post_meta( $post->ID, $id, true ) );
+	// Output the checkbox HTML
+	$label = '<label for="' . $id . '" class="selectit"><input name="' . $id . '" type="checkbox" id="' . $id . '" value="1" ' . checked( $value, 1, false ) . '> ' . $text . '</label>';
+
+	$label = wp_nonce_field( basename( __FILE__ ), 'independent_publisher_full_width_featured_image_meta_nonce' ) . $label;
+
+	return $content .= $label;
+}
+
+add_filter( 'admin_post_thumbnail_html', 'independent_publisher_featured_image_meta' );
+
+/**
+ * Save the meta box's post metadata.
+ */
+function independent_publisher_save_featured_image_meta( $post_id, $post ) {
+
+	/* Verify the nonce before proceeding. */
+	if ( ! isset( $_POST['independent_publisher_full_width_featured_image_meta_nonce'] ) || ! wp_verify_nonce( $_POST['independent_publisher_full_width_featured_image_meta_nonce'], basename( __FILE__ ) ) )
+		return $post_id;
+
+	/* Get the post type object. */
+	$post_type = get_post_type_object( $post->post_type );
+
+	/* Check if the current user has permission to edit the post. */
+	if ( ! current_user_can( $post_type->cap->edit_post, $post_id ) )
+		return $post_id;
+
+	/* Get the posted data and sanitize it for use as an HTML class. */
+	$new_meta_value = ( isset( $_POST['full_width_featured_image'] ) ? esc_attr( $_POST['full_width_featured_image'] ) : '' );
+
+	/* Get the meta key. */
+	$meta_key = 'full_width_featured_image';
+
+	/* Get the meta value of the custom field key. */
+	$meta_value = get_post_meta( $post_id, $meta_key, true );
+
+	/* If a new meta value was added and there was no previous value, add it. */
+	if ( $new_meta_value && '' == $meta_value )
+		add_post_meta( $post_id, $meta_key, $new_meta_value, true );
+
+	/* If the new meta value does not match the old value, update it. */
+	elseif ( $new_meta_value && $new_meta_value != $meta_value )
+		update_post_meta( $post_id, $meta_key, $new_meta_value );
+
+	/* If there is no new meta value but an old value exists, delete it. */
+	elseif ( '' == $new_meta_value && $meta_value )
+		delete_post_meta( $post_id, $meta_key, $meta_value );
+}
+
+/* Save post meta on the 'save_post' hook. */
+add_action( 'save_post', 'independent_publisher_save_featured_image_meta', 10, 2 );
