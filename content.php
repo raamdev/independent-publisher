@@ -4,8 +4,7 @@
  * @since   Independent Publisher 1.0
  */
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php ( independent_publisher_show_full_content_first_post() && ( $wp_query->current_post == 0 && ! is_paged() && is_home() ) ? post_class( 'show-full-content-first-post' ) : post_class() ) ?>>
 	<header class="entry-header">
 		<h1 class="entry-title">
 			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
@@ -31,11 +30,24 @@
 
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo $content; ?></a>
 
-			<?php elseif ( ! get_post_format() && ! is_sticky() && ( independent_publisher_use_post_excerpts() || independent_publisher_use_enhanced_excerpts() ) ) : // Standard post format ?>
+			<?php elseif ( independent_publisher_show_full_content_first_post() && ( $wp_query->current_post == 0 && ! is_paged() ) ) : ?>
+
+				<?php if ( has_post_thumbnail() && independent_publisher_show_post_thumbnail() ) : ?>
+					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
+				<?php endif; ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
+
+			<?php
+			elseif ( ! get_post_format() && ! is_sticky() &&
+					( independent_publisher_use_post_excerpts() || independent_publisher_use_enhanced_excerpts() )
+			) : // Standard post format
+				?>
 
 				<a style="text-decoration: none; color: inherit;" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_excerpt(); ?></a>
 
-			<?php else : ?>
+			<?php
+			else : ?>
 				<?php if ( has_post_thumbnail() && independent_publisher_show_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
 				<?php endif; ?>
@@ -60,8 +72,14 @@
 			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent_publisher' ), __( '1 Comment', 'independent_publisher' ), __( '% Comments', 'independent_publisher' ) ); ?></span>
 		<?php endif; ?>
 		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
-		<?php if ( ! get_post_format() && independent_publisher_use_enhanced_excerpts() ) : ?>
-			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php the_permalink(); ?>"><?php echo __('Continue Reading &rarr;'); ?></a></span>
+		<?php if ( ! get_post_format() && independent_publisher_use_enhanced_excerpts() &&
+				( ! independent_publisher_show_full_content_first_post() ||
+						( independent_publisher_show_full_content_first_post() &&
+								( $wp_query->current_post != 0 || is_paged() )
+						)
+				)
+		) : ?>
+			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php the_permalink(); ?>"><?php echo __( 'Continue Reading &rarr;' ); ?></a></span>
 		<?php endif; ?>
 	</footer>
 	<!-- .entry-meta -->
