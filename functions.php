@@ -164,7 +164,7 @@ add_filter( 'get_comments_number', 'independent_publisher_comment_count', 0 );
 function independent_publisher_comment_count( $count ) {
 	if ( ! is_admin() ) {
 		global $id;
-		$comments = get_comments( 'status=approve&post_id=' . $id );
+		$comments         = get_comments( 'status=approve&post_id=' . $id );
 		$comments_by_type = separate_comments( $comments );
 		return count( $comments_by_type['comment'] );
 	}
@@ -471,8 +471,8 @@ add_filter( 'body_class', 'independent_publisher_full_width_featured_image_body_
 function independent_publisher_post_word_count() {
 	global $post;
 	$content = get_post_field( 'post_content', $post->ID );
-	$count = str_word_count( strip_tags( $content ) );
-	return number_format($count);
+	$count   = str_word_count( strip_tags( $content ) );
+	return number_format( $count );
 }
 
 
@@ -503,21 +503,19 @@ add_filter( 'body_class', 'independent_publisher_post_excerpts_body_class' );
 /**
  * Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
  */
-function independent_publisher_first_sentence_excerpt($output)
-{
+function independent_publisher_first_sentence_excerpt( $output ) {
 	global $post;
-	$content_post = get_post($post->ID);
+	$content_post = get_post( $post->ID );
 
-	if(!$content_post->post_excerpt && independent_publisher_use_enhanced_excerpts() )
-	{
-		$strings = preg_split('/(\.|!|\?)\s/', strip_tags($content_post->post_content), 2, PREG_SPLIT_DELIM_CAPTURE);
-		$output  = apply_filters('the_content', $strings[0].$strings[1]);
+	if ( ! $content_post->post_excerpt && independent_publisher_use_enhanced_excerpts() ) {
+		$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $content_post->post_content ), 2, PREG_SPLIT_DELIM_CAPTURE );
+		$output  = apply_filters( 'the_content', $strings[0] . $strings[1] );
 	}
 
 	return $output;
 }
 
-add_filter('the_excerpt', 'independent_publisher_first_sentence_excerpt');
+add_filter( 'the_excerpt', 'independent_publisher_first_sentence_excerpt' );
 
 /**
  * Add a checkbox to the featured image metabox
