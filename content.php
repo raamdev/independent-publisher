@@ -6,6 +6,16 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php ( independent_publisher_show_full_content_first_post() && ( $wp_query->current_post == 0 && ! is_paged() && is_home() ) ? post_class( 'show-full-content-first-post' ) : post_class() ) ?>>
 	<header class="entry-header">
+		<?php if ( independent_publisher_show_full_content_first_post() && ( $wp_query->current_post == 0 && ! is_paged() && is_home() ) ) : ?>
+			<h2 class="entry-title-meta">
+				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
+				<?php if ( function_exists( 'indiepub_spoken_essay_link' ) ) : ?>
+					<?php if ( indiepub_spoken_essay_url() ) : ?>
+						| <?php echo indiepub_spoken_essay_link(); ?>
+					<?php endif; ?>
+				<?php endif; ?>
+			</h2>
+		<?php endif; ?>
 		<h1 class="entry-title">
 			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
@@ -59,7 +69,7 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
-		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+		<?php if ( 'post' == get_post_type() && ( independent_publisher_show_full_content_first_post() && $wp_query->current_post == 0 && !is_paged() ) ) : // Hide category and tag text for pages on Search ?>
 			<?php independent_publisher_posted_author_cats() ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
