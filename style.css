@@ -1767,11 +1767,13 @@ table th {
 
 /* Footnotes */
 
-.footnotes p {
-	margin-bottom: 0;
+.footnotes p,
+.blog .show-full-content-first-post .footnotes p {
+	margin-bottom: 0 !important;
 }
 
-.footnotes {
+.footnotes,
+.blog .show-full-content-first-post .footnotes {
 	font-size: 80%;
 }
 
@@ -1779,6 +1781,10 @@ table th {
 .archive div.footnotes,
 .search div.footnotes {
 	display: none;
+}
+
+.blog .show-full-content-first-post div.footnotes {
+	display: block;
 }
 
 .author-archive-author-avatar img {
