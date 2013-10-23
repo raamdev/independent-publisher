@@ -521,6 +521,10 @@ add_filter( 'the_excerpt', 'independent_publisher_first_sentence_excerpt' );
  * Add a checkbox to the featured image metabox
  */
 function independent_publisher_featured_image_meta( $content ) {
+
+	if ( ! has_post_thumbnail() )
+		return $content;
+
 	global $post;
 
 	// Text for checkbox
