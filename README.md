@@ -19,7 +19,9 @@ Post Covers are full-width featured images that stretch across the entire top of
 
 When setting a Featured Image as a Post Cover, it's important that you use an image that works for displaying full-width; 1200x600 is a good starting point. WordPress contains an Image Editor that you can use to crop images to the necessary dimensions.
 
-To set a Featured Image as a Post Cover, first select the image from the Featured Image meta box and then press the **Update** button. When the page reloads you will see a checkbox that says "Use as post cover (full-width)". Check the box and then save the changes using the **Update** button again.
+### How to set a Featured Image as a Post Cover
+
+To set a Featured Image as a Post Cover, first select the image from the Featured Image meta box and then press the **Update** button. When the page reloads you will see a checkbox that says "Use as post cover (full-width)". Check the box and then save the changes by pressing the **Update** button again.
 
 ![screen shot 2013-10-22 at 7 02 05 pm](https://f.cloud.github.com/assets/53005/1386236/fe8bff74-3b6d-11e3-8320-22efd60f423e.png)
 
