@@ -79,7 +79,7 @@
 						)
 				)
 		) : ?>
-			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php the_permalink(); ?>"><?php echo __( 'Continue Reading &rarr;', 'independent_publisher' ); ?></a></span>
+			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php the_permalink(); ?>"><?php echo __( 'Continue Reading &rarr;' ); ?></a></span>
 		<?php endif; ?>
 	</footer>
 	<!-- .entry-meta -->
