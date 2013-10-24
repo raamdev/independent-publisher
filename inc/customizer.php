@@ -24,7 +24,7 @@ function independent_publisher_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'multi_author_mode', array(
 		'settings' => 'independent_publisher_general_options[multi_author_mode]',
-		'label'    => __( 'Multi Author Mode', 'independent_publisher' ),
+		'label'    => __( 'Multi Author Mode' ),
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );
@@ -37,7 +37,7 @@ function independent_publisher_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'use_post_excerpts', array(
 		'settings' => 'independent_publisher_general_options[use_post_excerpts]',
-		'label'    => __( 'Use Post Excerpts', 'independent_publisher' ),
+		'label'    => __( 'Use Post Excerpts' ),
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );
@@ -50,7 +50,7 @@ function independent_publisher_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'use_enhanced_excerpts', array(
 		'settings' => 'independent_publisher_general_options[use_enhanced_excerpts]',
-		'label'    => __( 'Use Enhanced Excerpts', 'independent_publisher' ),
+		'label'    => __( 'Use Enhanced Excerpts' ),
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );
@@ -63,7 +63,7 @@ function independent_publisher_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'show_full_content_first_post', array(
 		'settings' => 'independent_publisher_general_options[show_full_content_first_post]',
-		'label'    => __( 'Show Full Content for First Post', 'independent_publisher' ),
+		'label'    => __( 'Show Full Content for First Post' ),
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );
@@ -76,7 +76,7 @@ function independent_publisher_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'show_post_word_count', array(
 		'settings' => 'independent_publisher_general_options[show_post_word_count]',
-		'label'    => __( 'Show Post Word Count', 'independent_publisher' ),
+		'label'    => __( 'Show Post Word Count' ),
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );
@@ -89,7 +89,7 @@ function independent_publisher_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'show_post_thumbnail', array(
 		'settings' => 'independent_publisher_general_options[show_post_thumbnail]',
-		'label'    => __( 'Show Post Thumbnail', 'independent_publisher' ),
+		'label'    => __( 'Show Post Thumbnail' ),
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );
