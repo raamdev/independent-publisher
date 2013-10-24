@@ -574,6 +574,7 @@ img.aligncenter {
 
 .single .entry-content {
 	padding-bottom: 20px;
+	margin-top: 0;
 }
 
 .single article.post, .single article.page {
@@ -1602,6 +1603,7 @@ table th {
 	}
 
 	#masthead .site-title {
+		font-size: 24px;
 		font-style: normal;
 		padding-top: 15px;
 		padding-left: 0;
@@ -1854,4 +1856,15 @@ table th {
 
 .show-full-content-first-post .entry-content p {
 	margin-bottom: 1.5em !important;
+}
+
+.entry-content .subtitle {
+	font-style: italic;
+	font-weight: normal;
+	font-family: DroidSerif, Georgia, "Times New Roman", Times, serif;
+	font-size: 1.4em;
+	line-height: 1.2em;
+	margin-top: -15px;
+	margin-bottom: 1em;
+	letter-spacing: 1px;
 }
