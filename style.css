@@ -610,6 +610,47 @@ img.aligncenter {
 	margin-top: 10px;
 }
 
+.enhanced-excerpts .format-standard .entry-content p {
+	margin-bottom: 1em;
+}
+
+.enhanced-excerpts .format-standard .entry-meta {
+	text-align: left;
+}
+
+.enhanced-excerpts .enhanced-excerpt-read-more a {
+	display: block;
+	text-align: right;
+	font-family: DroidSerif, Georgia, "Times New Roman", Times, serif;
+	font-size: 1.4em;
+	color: #57ad68;
+	margin-top: 1em;
+}
+
+.show-full-content-first-post {
+	padding-top: 0 !important;
+}
+
+.show-full-content-first-post h1.entry-title {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+.show-full-content-first-post .entry-content p {
+	margin-bottom: 1.5em !important;
+}
+
+.entry-content .subtitle {
+	font-style: italic;
+	font-weight: normal;
+	font-family: DroidSerif, Georgia, "Times New Roman", Times, serif;
+	font-size: 1.4em;
+	line-height: 1.2em;
+	margin-top: -15px;
+	margin-bottom: 1em;
+	letter-spacing: 1px;
+}
+
 /* =Post Formats
 ----------------------------------------------- */
 
@@ -1826,45 +1867,4 @@ table th {
 	.full-width-featured-image #page {
 		margin-top: 0;
 	}
-}
-
-.enhanced-excerpts .format-standard .entry-content p {
-	margin-bottom: 1em;
-}
-
-.enhanced-excerpts .format-standard .entry-meta {
-	text-align: left;
-}
-
-.enhanced-excerpts .enhanced-excerpt-read-more a {
-	display: block;
-	text-align: right;
-	font-family: DroidSerif, Georgia, "Times New Roman", Times, serif;
-	font-size: 1.4em;
-	color: #57ad68;
-	margin-top: 1em;
-}
-
-.show-full-content-first-post {
-	padding-top: 0 !important;
-}
-
-.show-full-content-first-post h1.entry-title {
-	font-size: 2.5em;
-	margin-bottom: 20px;
-}
-
-.show-full-content-first-post .entry-content p {
-	margin-bottom: 1.5em !important;
-}
-
-.entry-content .subtitle {
-	font-style: italic;
-	font-weight: normal;
-	font-family: DroidSerif, Georgia, "Times New Roman", Times, serif;
-	font-size: 1.4em;
-	line-height: 1.2em;
-	margin-top: -15px;
-	margin-bottom: 1em;
-	letter-spacing: 1px;
 }
