@@ -583,3 +583,47 @@ function independent_publisher_save_featured_image_meta( $post_id, $post ) {
 
 /* Save post meta on the 'save_post' hook. */
 add_action( 'save_post', 'independent_publisher_save_featured_image_meta', 10, 2 );
+
+
+/**
+ * Return true when we're on the first page of a Blog, Archive, or Search
+ * page and the current post is the first post.
+ */
+function independent_publisher_is_very_first_standard_post() {
+	global $wp_query;
+	if ( in_the_loop() && $wp_query->current_post == 0 && ! is_paged() && false === get_post_format() )
+		return true;
+	else
+		return false;
+}
+
+/**
+ * Return true when Show Full Content First Post option is disabled,
+ * or when Show Full Content First Post is enabled but excerpts are disabled,
+ * or when Show Full Content First Post is enabled and we're not on
+ * the very first post
+ */
+function independent_publisher_is_not_first_post_full_content() {
+
+	// This only works in the loop, so return false if we're not there
+	if ( ! in_the_loop() )
+		return false;
+
+	// If Show Full Content First Post option is not enabled,
+	// or if it's enabled by excerpts are disabled, return true
+	if ( ! independent_publisher_show_full_content_first_post() || ( ! independent_publisher_use_enhanced_excerpts() && ! independent_publisher_use_post_excerpts() ) )
+		return true;
+
+	// If Show Full Content First Post option is enabled but this is not
+	// the very first post, return true
+	if ( independent_publisher_show_full_content_first_post() && ! independent_publisher_is_very_first_standard_post() )
+		return true;
+
+	// If Show Full Content First Post option is enabled and this is the
+	// very first post, return false
+	if ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() )
+		return false;
+
+	// Default return false
+	return false;
+}
