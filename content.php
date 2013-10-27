@@ -9,11 +9,6 @@
 		<?php if ( independent_publisher_show_full_content_first_post() && ( $wp_query->current_post == 0 && ! is_paged() && is_home() ) ) : ?>
 			<h2 class="entry-title-meta">
 				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
-				<?php if ( function_exists( 'indiepub_spoken_essay_link' ) ) : ?>
-					<?php if ( indiepub_spoken_essay_url() ) : ?>
-						| <?php echo indiepub_spoken_essay_link(); ?>
-					<?php endif; ?>
-				<?php endif; ?>
 			</h2>
 		<?php endif; ?>
 		<h1 class="entry-title">
