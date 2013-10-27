@@ -627,3 +627,15 @@ function independent_publisher_is_not_first_post_full_content() {
 	// Default return false
 	return false;
 }
+
+/**
+ * Strip footnotes (<sup></sup>) from post content
+ */
+function independent_publisher_strip_footnotes( $content ) {
+
+	// This creates the same output as the_content()
+	$content = apply_filters( 'the_content', $content );
+	$content = str_replace( ']]>', ']]&gt;', $content );
+
+	return preg_replace( '!<sup\s+id="fnref.*?">.*?</sup>!is', '', $content );
+}

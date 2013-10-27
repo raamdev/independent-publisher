@@ -4,9 +4,9 @@
  * @since   Independent Publisher 1.0
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php ( independent_publisher_show_full_content_first_post() && ( $wp_query->current_post == 0 && ! is_paged() && is_home() ) ? post_class( 'show-full-content-first-post' ) : post_class() ) ?>>
+<article id="post-<?php the_ID(); ?>" <?php ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() ) ? post_class( 'show-full-content-first-post' ) : post_class() ) ?>>
 	<header class="entry-header">
-		<?php if ( independent_publisher_show_full_content_first_post() && ( $wp_query->current_post == 0 && ! is_paged() && is_home() ) ) : ?>
+		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() ) ) : ?>
 			<h2 class="entry-title-meta">
 				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
 			</h2>
@@ -25,17 +25,12 @@
 		<div class="entry-content">
 			<?php if ( 'aside' === get_post_format() ) : // Do something special for Asides ?>
 
-				<?php // This creates the same output as the_content() ?>
-				<?php $content = get_the_content(); ?>
-				<?php $content = apply_filters( 'the_content', $content ); ?>
-				<?php $content = str_replace( ']]>', ']]&gt;', $content ); ?>
-
 				<?php // Asides might have footnotes, which don't display properly when linking Asides to themselves, so we strip <sup> here ?>
-				<?php $content = preg_replace( '!<sup\s+id="fnref.*?">.*?</sup>!is', '', $content ); ?>
+				<?php $content = independent_publisher_strip_footnotes( get_the_content() ); ?>
 
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo $content; ?></a>
 
-			<?php elseif ( independent_publisher_show_full_content_first_post() && ( $wp_query->current_post == 0 && ! is_paged() ) ) : ?>
+			<?php elseif ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() ) : ?>
 
 				<?php if ( has_post_thumbnail() && independent_publisher_show_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
