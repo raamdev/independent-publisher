@@ -317,8 +317,8 @@ add_action( 'comment_form_top', 'independent_publisher_add_textarea' );
  * Register enhanced comment form stylesheet
  */
 function independent_publisher_enhanced_comment_form_style() {
-	wp_register_style( 'enhanced-comment-form-css', get_template_directory_uri() . '/css/enhanced-comment-form.css', array(), '1.0' );
-	wp_enqueue_style( 'enhanced-comment-form-css' );
+	wp_register_style( 'enhanced-comment-form', get_template_directory_uri() . '/css/enhanced-comment-form.css', array(), '1.0' );
+	wp_enqueue_style( 'enhanced-comment-form' );
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form_style' );
