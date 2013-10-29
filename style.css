@@ -109,7 +109,7 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #000000;
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-family: serif;
@@ -130,7 +130,7 @@ hr {
 
 /* Text elements */
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.2em;
 }
 
 ul, ol {
@@ -204,6 +204,8 @@ pre {
 
 code, kbd, tt, var {
 	font: 14px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	background: #eee;
+	padding: 2px 5px 2px 5px;
 }
 
 abbr, acronym {
@@ -556,7 +558,6 @@ img.aligncenter {
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
-	color: #333326;
 }
 
 .entry-content > .sharedaddy {
@@ -621,7 +622,7 @@ img.aligncenter {
 .enhanced-excerpts .enhanced-excerpt-read-more a {
 	display: block;
 	text-align: right;
-	font-family: DroidSerif, Georgia, "Times New Roman", Times, serif;
+	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 1.4em;
 	color: #57ad68;
 	margin-top: 1em;
@@ -643,12 +644,12 @@ img.aligncenter {
 .entry-content .subtitle {
 	font-style: italic;
 	font-weight: normal;
-	font-family: DroidSerif, Georgia, "Times New Roman", Times, serif;
-	font-size: 1.4em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.3em;
 	line-height: 1.2em;
 	margin-top: -15px;
 	margin-bottom: 1em;
-	letter-spacing: 1px;
+	letter-spacing: 0px;
 }
 
 /* =Post Formats
@@ -695,13 +696,13 @@ img.aligncenter {
 }
 
 .format-aside {
-	font-size: 1.3em;
 	font-style: italic;
-	line-height: 1.5;
 }
 
+.format-aside,
 .format-quote {
 	font-size: 1.3em;
+	line-height: 1.4;
 }
 
 .format-aside .entry-content {
@@ -1121,34 +1122,10 @@ ul.taglist {
 /* =Layout
 ----------------------------------------------- */
 
-@font-face {
-	font-family: DroidSerif;
-	src: url('fonts/droid-serif/DroidSerif.ttf');
-}
-
-@font-face {
-	font-family: DroidSerif;
-	src: url('fonts/droid-serif/DroidSerif-Italic.ttf');
-	font-style: italic;
-}
-
-@font-face {
-	font-family: DroidSerif;
-	src: url('fonts/droid-serif/DroidSerif-Bold.ttf');
-	font-weight: bold;
-}
-
-@font-face {
-	font-family: DroidSerif;
-	src: url('fonts/droid-serif/DroidSerif-BoldItalic.ttf');
-	font-style: italic;
-	font-weight: bold;
-}
-
 body {
-	color: #222;
-	font: 1.9em DroidSerif, Georgia, "Times New Roman", Times, serif;
-	line-height: 1.6;
+	color: #000000;
+	font: 1.9em Georgia, "Times New Roman", Times, serif;
+	line-height: 1.5;
 }
 
 .site-master-logo {
@@ -1335,7 +1312,7 @@ h1 {
 }
 
 h2 {
-	font-size: 1.9em;
+	font-size: 1.8em;
 }
 
 h3 {
@@ -1354,8 +1331,18 @@ h6 {
 	font-size: 1.2em;
 }
 
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+	margin-top: 40px;
+	margin-bottom: 15px;
+}
+
 .entry-content h1 {
-	font-size: 2.2em;
+	font-size: 2.1em;
 }
 
 .page h1.entry-title {
@@ -1802,6 +1789,10 @@ table th {
 	.commentlist .thread-even,
 	.commentlist .thread-odd {
 		padding-left: 10px;
+	}
+
+	.entry-content .subtitle {
+		font-size: 1.2em;
 	}
 
 }
