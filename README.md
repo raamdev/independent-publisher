@@ -25,6 +25,18 @@ To set a Featured Image as a Post Cover, first select the image from the Feature
 
 ![screen shot 2013-10-22 at 7 02 05 pm](https://f.cloud.github.com/assets/53005/1386236/fe8bff74-3b6d-11e3-8320-22efd60f423e.png)
 
+## Post Subtitles
+
+You can add a post subtitle at the top of your post content like this:
+
+```
+<h2 class="subtitle">Do what you love and do it often.</h2>
+```
+
+The `subtitle` class will style it like so:
+
+![screen shot 2013-10-24 at 4 17 57 pm](https://f.cloud.github.com/assets/53005/1416672/d3f96c40-3f61-11e3-88eb-47428b696af4.png)
+
 ## Using a Child Theme to Customize Independent Publisher
 
 If there are things you want to tweak in the Independent Publisher theme, a [Child Theme](http://codex.wordpress.org/Child_Themes) is the recommended method for doing so. By using a Child Theme, you can make changes without worrying about those changes being overwritten by a future update to the parent theme.
