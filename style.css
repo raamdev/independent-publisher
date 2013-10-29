@@ -265,6 +265,13 @@ textarea {
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
 button,
 input {
 	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
