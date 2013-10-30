@@ -1,13 +1,13 @@
 /*
 Theme Name: Independent Publisher
-Theme URI: http://independentpublisher.me/
+Theme URI: http://independentpublisher.me
 Author: Raam Dev
 Author URI: http://raamdev.com
 Description: A beautiful reader-focused WordPress theme, for you.
 Version: 1.0
 License: GNU GPLv3
 License URI: http://www.gnu.org/copyleft/gpl.html
-Tags: light, white, blue, two-columns, left-sidebar, flexible-width, custom-background, custom-colors, custom-menu, editor-style, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: blog, journal, notes, clean, formal, light, minimal, modern, simple, white, blue, two-columns, left-sidebar, flexible-width, responsive-width, custom-background, custom-colors, custom-menu, editor-style, infinite-scroll, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 Based on _s http://underscores.me
 and Publish by Konstantin Kovshenin http://kovshenin.com/themes/publish
@@ -74,7 +74,7 @@ table {
 }
 
 caption, th, td {
-	text-align: left;
+	text-align: right;
 	font-weight: normal;
 }
 
@@ -134,7 +134,7 @@ p {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 3em 1.5em 0;
 }
 
 ul {
@@ -145,9 +145,9 @@ ol {
 	list-style: decimal;
 }
 
-li > ol, li > ul {
+ul ul, ol ol, ul ol, ol ul {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-right: 1.5em;
 }
 
 dt {
@@ -170,8 +170,8 @@ blockquote {
 	margin: 0;
 	font-style: italic;
 	font-family: Georgia, "Bitstream Charter", serif;
-	border-left: 6px solid #57ad68;
-	padding-left: 20px;
+	border-right: 6px solid #57ad68;
+	padding-right: 20px;
 }
 
 blockquote cite {
@@ -385,7 +385,7 @@ input[type=email] {
 
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
-	padding-left: 3px;
+	padding-right: 3px;
 	width: 95%;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 }
@@ -411,14 +411,14 @@ a:active {
 /* Alignment */
 .alignleft {
 	display: inline;
-	float: left;
-	margin-right: 1.5em;
+	float: right;
+	margin-left: 1.5em;
 }
 
 .alignright {
 	display: inline;
-	float: right;
-	margin-left: 1.5em;
+	float: left;
+	margin-right: 1.5em;
 }
 
 .aligncenter {
@@ -451,14 +451,14 @@ img.aligncenter {
 
 .main-navigation {
 	display: block;
-	float: left;
+	float: right;
 	clear: both;
 	width: 100%;
 }
 
 .main-navigation ul {
 	margin: 0;
-	padding-left: 0;
+	padding-right: 0;
 	list-style: none;
 }
 
@@ -475,10 +475,10 @@ img.aligncenter {
 .main-navigation ul ul {
 	position: absolute;
 	top: 1.5em;
-	left: 0;
+	right: 0;
 	z-index: 99999;
 	display: none;
-	float: left;
+	float: right;
 	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -486,7 +486,7 @@ img.aligncenter {
 
 .main-navigation ul ul ul {
 	top: 0;
-	left: 100%;
+	right: 100%;
 }
 
 .main-navigation ul ul a {
@@ -623,12 +623,12 @@ img.aligncenter {
 }
 
 .enhanced-excerpts .format-standard .entry-meta {
-	text-align: left;
+	text-align: right;
 }
 
 .enhanced-excerpts .enhanced-excerpt-read-more a {
 	display: block;
-	text-align: right;
+	text-align: left;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 1.4em;
 	color: #57ad68;
@@ -851,13 +851,13 @@ object {
 
 .site-content .nav-previous,
 .site-navigation .previous-image {
-	float: left;
+	float: right;
 }
 
 .site-content .nav-next,
 .site-navigation .next-image {
-	float: right;
-	text-align: right;
+	float: left;
+	text-align: left;
 }
 
 #nav-below {
@@ -888,8 +888,8 @@ object {
 }
 
 .commentlist #respond {
-	border-left: 1px solid #F0F0F0;
-	padding-left: 20px;
+	border-right: 1px solid #F0F0F0;
+	padding-right: 20px;
 }
 
 #comments-template div.navigation {
@@ -911,37 +911,37 @@ ol.commentlist {
 }
 
 ul.children {
-	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .commentlist .thread-even, .commentlist .thread-odd {
-	padding-left: 20px;
+	padding-right: 20px;
 	margin-bottom: 30px;
 	margin-top: 3.5em;
-	border-left: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
 	border-top: 1px solid #F0F0F0;
 }
 
 .commentlist .children .odd,
 .commentlist .children .even {
-	border-left: none;
+	border-right: none;
 }
 
 .commentlist ul.children {
-	margin-left: 0;
-	padding-left: 20px;
+	margin-right: 0;
+	padding-right: 20px;
 }
 
 .commentlist .thread-even ul.children,
 .commentlist .thread-odd ul.children {
-	border-left: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
 	border-top: 1px solid #F0F0F0;
 }
 
 ol.commentlist .avatar {
-	float: left;
-	margin-right: 15px;
-	margin-left: 0px;
+	float: right;
+	margin-left: 15px;
+	margin-right: 0px;
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
@@ -958,7 +958,7 @@ ol.commentlist .avatar {
 .comment-meta {
 	margin-top: -12px;
 	margin-bottom: 15px;
-	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .comment .reply {
@@ -978,7 +978,7 @@ ol.commentlist .avatar {
 
 .comment-body {
 	margin-bottom: 40px;
-	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .comment-author {
@@ -1023,12 +1023,12 @@ ol.commentlist .avatar {
 }
 
 ul.pinglist {
-	margin-left: 0;
+	margin-right: 0;
 }
 
 .pinglist li {
 	display: inline;
-	margin-right: 20px;
+	margin-left: 20px;
 }
 
 .pinglist-title {
@@ -1051,13 +1051,13 @@ ul.pinglist {
 }
 
 ul.taglist {
-	margin-left: 0;
+	margin-right: 0;
 	margin-top: 30px;
 }
 
 .taglist li {
 	display: inline-block;
-	margin-right: 20px;
+	margin-left: 20px;
 }
 
 .taglist-title {
@@ -1086,7 +1086,7 @@ ul.taglist {
 
 .pingback > p:before {
 	position: absolute;
-	left: -31px;
+	right: -31px;
 	color: #999;
 	content: "Ping!";
 	font-size: 10px;
@@ -1108,7 +1108,7 @@ ul.taglist {
 .comment-form-comment label,
 .comment-form-subscriptions label,
 .comment-form-reply-title {
-	margin-right: 5px;
+	margin-left: 5px;
 	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	color: #b3b3b1;
 	display: block;
@@ -1127,7 +1127,7 @@ ul.taglist {
 .comment-form-email,
 .comment-form-url,
 .comment-form-subscriptions {
-	float: left;
+	float: right;
 	width: 50%;
 	min-width: 200px;
 }
@@ -1140,7 +1140,8 @@ ul.taglist {
 }
 
 .comment-form-comment {
-	padding-right: 20px;
+	padding-left: 20px;
+	padding-right: 0;
 }
 
 #commentform input[type="submit"] {
@@ -1156,8 +1157,8 @@ ul.taglist {
 	font-weight: normal;
 	font-size: 80%;
 	letter-spacing: 0px;
-	float: right;
-	margin-right: 10px;
+	float: left;
+	margin-left: 10px;
 }
 
 #commentform textarea {
@@ -1175,7 +1176,7 @@ ul.taglist {
 
 .icon-comment {
 	color: white;
-	margin-right: 10px;
+	margin-left: 10px;
 }
 
 .entry-meta #share-comment-button {
@@ -1183,12 +1184,13 @@ ul.taglist {
 }
 
 #respond {
-	text-align: left;
+	text-align: right;
 }
 
 #share-comment-button,
 #share-comment-button-bottom {
 	display: none;
+	text-align: left;
 }
 
 /* =Widgets
@@ -1225,7 +1227,7 @@ body {
 .site-master-logo {
 	position: fixed;
 	top: 5px;
-	left: 10px;
+	right: 10px;
 	transition: opacity .3s linear .3s;
 	-webkit-transition: opacity .3s linear .3s;
 	-moz-transition: opacity .3s linear .3s;
@@ -1283,7 +1285,7 @@ body {
 	border-top: 1px solid #dededc;
 	padding-top: 20px;
 	width: 40px;
-	float: right;
+	float: left;
 }
 
 .site-published {
@@ -1379,11 +1381,11 @@ body {
 
 .infinite-loader {
 	display: block;
-	padding-left: 50%;
+	padding-right: 50%;
 }
 
 .infinite-loader .spinner {
-	margin-left: -17px;
+	margin-right: -17px;
 }
 
 #infinite-handle {
@@ -1503,7 +1505,7 @@ h6 {
 
 .single .edit-link,
 .page .edit-link {
-	float: right;
+	float: left;
 }
 
 .site {
@@ -1516,13 +1518,13 @@ h6 {
 }
 
 .site-header {
-	float: left;
+	float: right;
 	margin-top: 0px;
 	margin-bottom: 40px;
 	width: 160px;
 	position: relative;
-	margin-left: -220px;
-	text-align: right;
+	margin-right: -220px;
+	text-align: left;
 }
 
 .single .site-header {
@@ -1532,17 +1534,17 @@ h6 {
 
 .site-content,
 .site-footer {
-	float: right;
+	float: left;
 	max-width: 700px;
 	width: 100%;
 }
 
 .widget-area {
-	float: left;
+	float: right;
 	width: 160px; /* Sidebar 1 */
-	clear: left;
-	margin-left: -220px;
-	text-align: right;
+	clear: right;
+	margin-right: -220px;
+	text-align: left;
 	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	font-size: 15px;
 }
@@ -1616,7 +1618,7 @@ table th {
 }
 
 .post-author-bottom .site-logo img {
-	float: left;
+	float: right;
 	height: auto;
 }
 
@@ -1626,15 +1628,15 @@ table th {
 }
 
 .post-author-bottom .post-author-info {
-	margin-left: 100px;
-	margin-right: 200px;
+	margin-right: 100px;
+	margin-left: 200px;
 	padding-right: 25px;
 	padding-top: 10px;
 }
 
 .post-author-bottom h1.site-title,
 .post-author-bottom h2.site-description {
-	margin-left: 0;
+	margin-right: 0;
 }
 
 .post-author-bottom h1.site-title {
@@ -1643,11 +1645,11 @@ table th {
 
 .post-author-bottom .post-published-date {
 	width: 177px;
-	margin-left: 385px;
+	margin-right: 385px;
 	position: absolute;
 	margin-top: -85px;
 	top: 135px;
-	right: 0;
+	left: 0;
 }
 
 /* Hide left-side author card under 1200px */
@@ -1662,7 +1664,7 @@ table th {
 
 	.site-header {
 		text-align: center;
-		margin-left: 0;
+		margin-right: 0;
 		float: none;
 		display: block;
 		width: 100%;
@@ -1682,9 +1684,9 @@ table th {
 	}
 
 	.widget-area {
-		float: right;
+		float: left;
 		width: 100%;
-		margin-left: 0;
+		margin-right: 0;
 		text-align: inherit;
 		padding-top: 40px;
 	}
@@ -1728,7 +1730,7 @@ table th {
 	#masthead .site-title,
 	#masthead .site-description {
 		clear: none;
-		margin-left: 0;
+		margin-right: 0;
 		margin-top: 0;
 	}
 
@@ -1736,11 +1738,11 @@ table th {
 		font-size: 24px;
 		font-style: normal;
 		padding-top: 15px;
-		padding-left: 0;
+		padding-right: 0;
 	}
 
 	#masthead .site-description {
-		padding-left: 0;
+		padding-right: 0;
 		padding-top: 20px;
 	}
 
@@ -1801,7 +1803,7 @@ table th {
 	}
 
 	.entry-content ol, ul {
-		margin-left: 2em;
+		margin-right: 2em;
 	}
 
 	#masthead {
@@ -1811,14 +1813,14 @@ table th {
 	#masthead .site-title {
 		padding-top: 10px;
 		padding-bottom: 10px;
-		padding-left: 0;
+		padding-right: 0;
 		clear: both;
-		margin-left: 5px;
+		margin-right: 5px;
 	}
 
 	#masthead .site-description {
-		padding-left: 0;
-		margin-left: 5px;
+		padding-right: 0;
+		margin-right: 5px;
 	}
 
 	#masthead .site-logo,
@@ -1829,11 +1831,11 @@ table th {
 
 	.post-author-card .site-title {
 		padding-top: 0;
-		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.post-author-card .site-description {
-		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.format-aside .entry-content {
@@ -1869,7 +1871,7 @@ table th {
 	}
 
 	.post-author-bottom .post-published-date {
-		margin-left: 0;
+		margin-right: 0;
 		position: inherit;
 		margin-top: 0;
 		top: inherit;
@@ -1884,13 +1886,13 @@ table th {
 	}
 
 	.commentlist ul.children {
-		margin-left: 0;
-		padding-left: 10px;
+		margin-right: 0;
+		padding-right: 10px;
 	}
 
 	.commentlist .thread-even,
 	.commentlist .thread-odd {
-		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	.entry-content .subtitle {
@@ -1954,7 +1956,7 @@ table th {
 }
 
 .author .author-avatar img {
-	float: right;
+	float: left;
 	border-radius: 95px;
 	margin-top: -32px;
 }
