@@ -9,6 +9,11 @@
 		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() ) ) : ?>
 			<h2 class="entry-title-meta">
 				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
+				<?php if ( function_exists( 'indiepub_spoken_essay_link' ) ) : // IndiePub Spoken Essay plugin support ?>
+					<?php if ( indiepub_spoken_essay_url() ) : ?>
+						| <?php echo indiepub_spoken_essay_link(); ?>
+					<?php endif; ?>
+				<?php endif; ?>
 			</h2>
 		<?php endif; ?>
 		<h1 class="entry-title">
@@ -63,7 +68,7 @@
 			<?php independent_publisher_posted_author_cats() ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
-		<?php if ( false === get_post_format() && independent_publisher_show_post_word_count() ) : // Only show word count on standard post format ?>
+		<?php if ( false === get_post_format() && independent_publisher_show_post_word_count() && independent_publisher_is_not_first_post_full_content() ) : // Only show word count on standard post format ?>
 			<?php echo independent_publisher_get_post_word_count() ?>
 		<?php endif; ?>
 
