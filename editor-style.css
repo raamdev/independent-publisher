@@ -8,7 +8,7 @@ html .mceContentBody {
 }
 
 body {
-	font: 16px Georgia, "Times New Roman", Times, serif;
+	font: 18px Georgia, "Times New Roman", Times, serif;
 	line-height: 1.5;
 	color: #000000;
 }
@@ -71,7 +71,7 @@ p, ul, ol, dl {
 }
 
 p {
-	margin-bottom: 1.625em;
+	margin-bottom: 1.2em;
 }
 
 ul, ol {
@@ -326,8 +326,8 @@ p img,
 }
 
 img {
-	border: 1px solid #ddd;
 	padding: 6px;
+	max-width: 98%;
 }
 
 img.alignleft,
@@ -395,4 +395,24 @@ input#wp-fullscreen-title {
 
 #titleWrap input#title {
 	font-family: Georgia !important;
+}
+
+h2.subtitle {
+	font-style: italic;
+	font-weight: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.3em;
+	line-height: 1.2em;
+	margin-bottom: 1em;
+	letter-spacing: 0px;
+}
+
+/* Footnotes */
+
+.footnotes p {
+	margin-bottom: 0 !important;
+}
+
+.footnotes {
+	font-size: 80%;
 }
