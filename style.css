@@ -155,7 +155,7 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0.5em 1.5em 1.5em;
 }
 
 b, strong {
@@ -167,7 +167,7 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0;
+	margin-left: 1em;
 	font-style: italic;
 	font-family: Georgia, "Bitstream Charter", serif;
 	border-left: 6px solid #57ad68;
@@ -185,7 +185,7 @@ blockquote cite:before {
 
 blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	font-weight: normal;
-	font-family: Georgia, serif;
+	font-family: Georgia, "Bitstream Charter", serif;
 }
 
 address {
@@ -250,6 +250,7 @@ figure {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+	font-size: 90%;
 }
 
 th {
@@ -1591,7 +1592,6 @@ img#wpstats {
 table td {
 	padding: 4px 0;
 	border-bottom: solid 1px #eee;
-	font-weight: 300;
 }
 
 table th {
