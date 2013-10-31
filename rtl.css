@@ -155,7 +155,7 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0.5em 1.5em 1.5em;
 }
 
 b, strong {
@@ -167,7 +167,7 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0;
+	margin-right: 1em;
 	font-style: italic;
 	font-family: Georgia, "Bitstream Charter", serif;
 	border-right: 6px solid #57ad68;
@@ -250,6 +250,7 @@ figure {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+	font-size: 90%;
 }
 
 th {

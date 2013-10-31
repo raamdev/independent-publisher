@@ -63,6 +63,11 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		add_editor_style();
 
 		/**
+		 * Set max width of full screen visual editor to match content width
+		 */
+		set_user_setting( 'dfw_width', 700 );
+
+		/**
 		 * This theme uses wp_nav_menu() in one location.
 		 */
 		register_nav_menus( array(
