@@ -4,7 +4,7 @@
  * @since   Independent Publisher 1.0
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() ) ? post_class( 'show-full-content-first-post' ) : post_class() ) ?>>
+<article id="post-<?php the_ID(); ?>" <?php independent_publisher_post_classes(); ?>>
 	<header class="entry-header">
 		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() ) ) : ?>
 			<h2 class="entry-title-meta">

@@ -634,3 +634,22 @@ function independent_publisher_strip_footnotes( $content ) {
 
 	return preg_replace( '!<sup\s+id="fnref.*?">.*?</sup>!is', '', $content );
 }
+
+/**
+ * Add classes to article based on current theme settings
+ */
+function independent_publisher_post_classes() {
+	global $wp_query;
+
+	if ( independent_publisher_show_full_content_first_post() &&
+			( independent_publisher_is_very_first_standard_post() &&
+					is_home() ) ) {
+		post_class( 'show-full-content-first-post' );
+	}
+	elseif ( $wp_query->current_post == 0 ) {
+		post_class( 'first-post' );
+	}
+	else {
+		post_class();
+	}
+}

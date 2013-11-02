@@ -649,6 +649,12 @@ img.aligncenter {
 	margin-bottom: 1.5em !important;
 }
 
+article.first-post,
+.first-post .entry-content {
+	margin-top: 0;
+	padding-top: 0;
+}
+
 .entry-content .subtitle {
 	font-style: italic;
 	font-weight: normal;
