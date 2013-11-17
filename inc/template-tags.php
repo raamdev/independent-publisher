@@ -46,11 +46,11 @@ if ( ! function_exists( 'independent_publisher_content_nav' ) ) :
 			<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 				<?php if ( get_next_posts_link() ) : ?>
-					<div class="nav-previous"><?php next_posts_link( __( '<button><span class="meta-nav">&larr;</span> Older posts</button', 'independent_publisher' ) ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( __( '<button><span class="meta-nav">&larr;</span> Older posts</button>', 'independent_publisher' ) ); ?></div>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-					<div class="nav-next"><?php previous_posts_link( __( '<button>Newer posts <span class="meta-nav">&rarr;</span></button', 'independent_publisher' ) ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( __( '<button>Newer posts <span class="meta-nav">&rarr;</span></button>', 'independent_publisher' ) ); ?></div>
 				<?php endif; ?>
 
 			<?php endif; ?>
