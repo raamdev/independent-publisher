@@ -663,7 +663,7 @@ article.first-post,
 	line-height: 1.2em;
 	margin-top: -5px;
 	margin-bottom: 1em;
-	letter-spacing: 0px;
+	letter-spacing: 0;
 }
 
 /* =Post Formats
@@ -873,6 +873,11 @@ object {
 
 /* =Comments
 ----------------------------------------------- */
+
+.bypostauthor > .comment-body .fn:before {
+	content: "\f408";
+	vertical-align: text-top;
+}
 
 #comments {
 	margin-bottom: 100px;
@@ -1657,7 +1662,7 @@ table th {
 }
 
 /* Hide left-side author card under 1200px */
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width: 1200px) {
 	.site {
 		margin-top: 80px;
 	}
@@ -1757,7 +1762,7 @@ table th {
 	}
 }
 
-@media only screen and (max-width : 500px) {
+@media only screen and (max-width: 500px) {
 	.site {
 		margin-top: 40px;
 	}
