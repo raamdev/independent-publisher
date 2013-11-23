@@ -33,7 +33,7 @@
 
 			<?php elseif ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() ) : ?>
 
-				<?php if ( has_post_thumbnail() && independent_publisher_show_post_thumbnail() ) : ?>
+				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
 				<?php endif; ?>
 				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) ); ?>
@@ -49,7 +49,7 @@
 
 			<?php
 			else : ?>
-				<?php if ( has_post_thumbnail() && independent_publisher_show_post_thumbnail() ) : ?>
+				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
 				<?php endif; ?>
 				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) ); ?>

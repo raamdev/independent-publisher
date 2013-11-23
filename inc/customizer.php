@@ -60,19 +60,6 @@ function independent_publisher_customize_register( $wp_customize ) {
 		'type'     => 'checkbox',
 	) );
 
-	// Show Post Thumbnail
-	$wp_customize->add_setting( 'independent_publisher_general_options[show_post_thumbnail]', array(
-		'default'    => false,
-		'type'       => 'option',
-		'capability' => 'edit_theme_options',
-	) );
-	$wp_customize->add_control( 'show_post_thumbnail', array(
-		'settings' => 'independent_publisher_general_options[show_post_thumbnail]',
-		'label'    => __( 'Show Post Thumbnail', 'independent_publisher' ),
-		'section'  => 'independent_publisher_general_options',
-		'type'     => 'checkbox',
-	) );
-
 	// Hide Widgets on Single pages
 	$wp_customize->add_setting( 'independent_publisher_general_options[hide_widgets_on_single]', array(
 		'default'    => true,
