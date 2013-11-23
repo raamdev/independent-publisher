@@ -1975,3 +1975,10 @@ table th {
 .author .archive-title a:hover {
 	text-decoration: none;
 }
+
+/* WP Audio Shortcode */
+.blog .wp-audio-shortcode,
+.archive .wp-audio-shortcode,
+.search .wp-audio-shortcode {
+	margin-bottom: 20px;
+}
