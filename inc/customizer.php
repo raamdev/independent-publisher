@@ -16,43 +16,22 @@ function independent_publisher_customize_register( $wp_customize ) {
 		'priority' => 130,
 	) );
 
-	// Multi-Author Mode
-	$wp_customize->add_setting( 'independent_publisher_general_options[multi_author_mode]', array(
-		'default'    => false,
+	// Excerpt Options
+	$wp_customize->add_setting( 'independent_publisher_general_options[excerpts]', array(
+		'default'    => '2',
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	) );
-	$wp_customize->add_control( 'multi_author_mode', array(
-		'settings' => 'independent_publisher_general_options[multi_author_mode]',
-		'label'    => __( 'Multi Author Mode', 'independent_publisher' ),
-		'section'  => 'independent_publisher_general_options',
-		'type'     => 'checkbox',
-	) );
-
-	// Use Post Excerpts
-	$wp_customize->add_setting( 'independent_publisher_general_options[use_post_excerpts]', array(
-		'default'    => true,
-		'type'       => 'option',
-		'capability' => 'edit_theme_options',
-	) );
-	$wp_customize->add_control( 'use_post_excerpts', array(
-		'settings' => 'independent_publisher_general_options[use_post_excerpts]',
-		'label'    => __( 'Use Post Excerpts', 'independent_publisher' ),
-		'section'  => 'independent_publisher_general_options',
-		'type'     => 'checkbox',
-	) );
-
-	// Use Enhanced Excerpts
-	$wp_customize->add_setting( 'independent_publisher_general_options[use_enhanced_excerpts]', array(
-		'default'    => true,
-		'type'       => 'option',
-		'capability' => 'edit_theme_options',
-	) );
-	$wp_customize->add_control( 'use_enhanced_excerpts', array(
-		'settings' => 'independent_publisher_general_options[use_enhanced_excerpts]',
-		'label'    => __( 'Use Enhanced Excerpts', 'independent_publisher' ),
-		'section'  => 'independent_publisher_general_options',
-		'type'     => 'checkbox',
+	$wp_customize->add_control( 'excerpts', array(
+		'settings' => 'independent_publisher_general_options[excerpts]',
+		'label'   => 'Post Excerpts:',
+		'section' => 'independent_publisher_general_options',
+		'type'    => 'select',
+		'choices'    => array(
+			'0' => 'Disabled',
+			'1' => 'Default Excerpts',
+			'2' => 'One-Sentence Excerpts',
+		),
 	) );
 
 	// Show Full Content for First Post
@@ -76,7 +55,7 @@ function independent_publisher_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_control( 'show_post_word_count', array(
 		'settings' => 'independent_publisher_general_options[show_post_word_count]',
-		'label'    => __( 'Show Post Word Count', 'independent_publisher' ),
+		'label'    => __( 'Show Post Word Count in Entry Meta', 'independent_publisher' ),
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );
@@ -90,6 +69,19 @@ function independent_publisher_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'show_post_thumbnail', array(
 		'settings' => 'independent_publisher_general_options[show_post_thumbnail]',
 		'label'    => __( 'Show Post Thumbnail', 'independent_publisher' ),
+		'section'  => 'independent_publisher_general_options',
+		'type'     => 'checkbox',
+	) );
+
+	// Hide Widgets on Single pages
+	$wp_customize->add_setting( 'independent_publisher_general_options[hide_widgets_on_single]', array(
+		'default'    => true,
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+	) );
+	$wp_customize->add_control( 'hide_widgets_on_single', array(
+		'settings' => 'independent_publisher_general_options[hide_widgets_on_single]',
+		'label'    => __( 'Hide Widgets on Single Pages', 'independent_publisher' ),
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );

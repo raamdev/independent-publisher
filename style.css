@@ -1540,11 +1540,6 @@ h6 {
 	text-align: right;
 }
 
-.single .site-header {
-	float: none;
-	position: absolute;
-}
-
 .site-content,
 .site-footer {
 	float: right;

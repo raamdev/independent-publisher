@@ -260,18 +260,18 @@ function independent_publisher_comment_form_args() {
 		'label_submit'         => __( 'Submit Comment', 'independent_publisher' ),
 
 		'must_log_in'          => '<p class="must-log-in">' .
-		sprintf(
-			__( 'You must be <a href="%s">logged in</a> to post a comment.' ),
-			wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
-		) . '</p>',
+				sprintf(
+					__( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+					wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
+				) . '</p>',
 
 		'logged_in_as'         => '<p class="logged-in-as">' .
-		sprintf(
-			__( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
-			admin_url( 'profile.php' ),
-			$user->display_name,
-			wp_logout_url( apply_filters( 'the_permalink', get_permalink() ) )
-		) . '</p>',
+				sprintf(
+					__( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+					admin_url( 'profile.php' ),
+					$user->display_name,
+					wp_logout_url( apply_filters( 'the_permalink', get_permalink() ) )
+				) . '</p>',
 
 		'comment_notes_before' => $comment_notes_before,
 
@@ -279,21 +279,21 @@ function independent_publisher_comment_form_args() {
 
 		'fields'               => apply_filters( 'comment_form_default_fields', array(
 				'author' =>
-				'<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent_publisher' ) . '</label>' .
-				( $req ? '' : '' ) .
-				'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-				'"' . $aria_req . ' /></p>',
+						'<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent_publisher' ) . '</label>' .
+						( $req ? '' : '' ) .
+						'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+						'"' . $aria_req . ' /></p>',
 
 				'email'  =>
-				'<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent_publisher' ) . '</label>' .
-				( $req ? '' : '' ) .
-				'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
-				'"' . $aria_req . ' /></p>',
+						'<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent_publisher' ) . '</label>' .
+						( $req ? '' : '' ) .
+						'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
+						'"' . $aria_req . ' /></p>',
 
 				'url'    =>
-				'<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent_publisher' ) . '</label>' .
-				'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-				'" /></p>',
+						'<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent_publisher' ) . '</label>' .
+						'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+						'" /></p>',
 			)
 		),
 	);
@@ -338,6 +338,15 @@ function independent_publisher_site_logo_icon_js() {
 add_action( 'wp_enqueue_scripts', 'independent_publisher_site_logo_icon_js' );
 
 /**
+ * Checks if Multi Author Mode is enabled. Disabled by default, but can be overridden in a child theme
+ */
+if ( ! function_exists( 'independent_publisher_is_multi_author_mode' ) ):
+	function independent_publisher_is_multi_author_mode() {
+		return false;
+	}
+endif;
+
+/**
  * Point author links to home page when not using multi-author mode
  */
 function independent_publisher_single_author_link() {
@@ -348,29 +357,29 @@ if ( ! independent_publisher_is_multi_author_mode() )
 	add_filter( 'author_link', 'independent_publisher_single_author_link', 10, 3 );
 
 /**
- * Returns true if Multi-Author mode is enabled
- */
-function independent_publisher_is_multi_author_mode() {
-	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-	if ( isset( $independent_publisher_general_options['multi_author_mode'] ) && $independent_publisher_general_options['multi_author_mode'] )
-		return true;
-	else
-		return false;
-}
-
-/**
- * Returns true if Use Post Excerpts option is enabled
+ * Returns true if Post Excerpts option is enabled
  */
 function independent_publisher_use_post_excerpts() {
 	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-	if ( isset( $independent_publisher_general_options['use_post_excerpts'] ) && $independent_publisher_general_options['use_post_excerpts'] )
+	if ( isset( $independent_publisher_general_options['excerpts'] ) && $independent_publisher_general_options['excerpts'] == '1' )
 		return true;
 	else
 		return false;
 }
 
 /**
- * Returns true if Show Post Word Count option is enabled
+ * Returns true if One-Sentence Excerpts option is enabled
+ */
+function independent_publisher_use_enhanced_excerpts() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['excerpts'] ) && $independent_publisher_general_options['excerpts'] == '2' )
+		return true;
+	else
+		return false;
+}
+
+/**
+ * Returns true if Show Full Content for First Post option is enabled
  */
 function independent_publisher_show_full_content_first_post() {
 	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
@@ -392,22 +401,22 @@ function independent_publisher_show_post_word_count() {
 }
 
 /**
- * Returns true if Show Post Thumbnail option is enabled
+ * Returns true if Hide Widgets on Single Pages option is enabled
  */
-function independent_publisher_show_post_thumbnail() {
+function independent_publisher_hide_widgets_on_single_pages() {
 	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-	if ( isset( $independent_publisher_general_options['show_post_thumbnail'] ) && $independent_publisher_general_options['show_post_thumbnail'] )
+	if ( isset( $independent_publisher_general_options['hide_widgets_on_single'] ) && $independent_publisher_general_options['hide_widgets_on_single'] )
 		return true;
 	else
 		return false;
 }
 
 /**
- * Returns true if Use Enhanced Excerpts option is enabled
+ * Returns true if Show Post Thumbnail option is enabled
  */
-function independent_publisher_use_enhanced_excerpts() {
+function independent_publisher_show_post_thumbnail() {
 	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-	if ( isset( $independent_publisher_general_options['use_enhanced_excerpts'] ) && $independent_publisher_general_options['use_enhanced_excerpts'] )
+	if ( isset( $independent_publisher_general_options['show_post_thumbnail'] ) && $independent_publisher_general_options['show_post_thumbnail'] )
 		return true;
 	else
 		return false;
@@ -643,7 +652,8 @@ function independent_publisher_post_classes() {
 
 	if ( independent_publisher_show_full_content_first_post() &&
 			( independent_publisher_is_very_first_standard_post() &&
-					is_home() ) ) {
+					is_home() )
+	) {
 		post_class( 'show-full-content-first-post' );
 	}
 	elseif ( $wp_query->current_post == 0 ) {

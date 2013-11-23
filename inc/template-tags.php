@@ -316,13 +316,34 @@ function independent_publisher_post_categories( $separator = ',', $single = FALS
 }
 
 /**
+ * Outputs site info for display on non-single pages
+ *
+ * @since Independent Publisher 1.0
+ */
+function independent_publisher_site_info() {
+	?>
+	<?php if ( get_header_image() ) : ?>
+		<a class="site-logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+		</a>
+	<?php endif; ?>
+	<hgroup>
+		<h1 class="site-title">
+			<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		</h1>
+
+		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+	</hgroup>
+<?php
+}
+
+/**
  * Outputs post author info for display on single posts
  *
  * @since Independent Publisher 1.0
  */
 function independent_publisher_posted_author_card() {
 	?>
-	<header id="masthead" class="site-header" role="banner">
 		<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 			<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
 		</a>
@@ -345,7 +366,6 @@ function independent_publisher_posted_author_card() {
 			<?php endif; ?>
 
 		</hgroup>
-	</header>
 <?php
 }
 
