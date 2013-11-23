@@ -604,7 +604,10 @@ img.aligncenter {
 	width: 100%;
 }
 
-.single .wp-post-image {
+.single .wp-post-image,
+.page .wp-post-image,
+.blog .wp-post-image,
+.archive .wp-post-image {
 	margin-bottom: 20px;
 }
 
