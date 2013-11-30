@@ -357,7 +357,7 @@ function independent_publisher_posted_author_card() {
 	global $wp_query;
 	$post_author_id = $wp_query->post->post_author;
 	?>
-		<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+		<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ); ?>">
 			<?php echo get_avatar( get_the_author_meta( 'ID', $post_author_id ), 100 ); ?>
 		</a>
 		<hgroup>
