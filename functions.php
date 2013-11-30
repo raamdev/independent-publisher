@@ -502,7 +502,9 @@ function independent_publisher_first_sentence_excerpt( $output ) {
 
 	if ( ! $content_post->post_excerpt && independent_publisher_use_enhanced_excerpts() ) {
 		$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $content_post->post_content ), 2, PREG_SPLIT_DELIM_CAPTURE );
-		$output  = apply_filters( 'the_content', $strings[0] . $strings[1] );
+		if ( ! empty( $strings[0] ) && ! empty( $strings[1] ) ) {
+			$output = apply_filters( 'the_content', $strings[0] . $strings[1] );
+		}
 	}
 
 	return $output;
