@@ -350,7 +350,12 @@ function independent_publisher_site_info() {
  * @since Independent Publisher 1.0
  */
 function independent_publisher_posted_author_card() {
-	$post_author_id = independent_publisher_get_author();
+	/**
+	 * This function gets called outside the loop (in header.php),
+	 * so we need to figure out the post author ID and Nice Name manually.
+	 */
+	global $wp_query;
+	$post_author_id = $wp_query->post->post_author;
 	?>
 		<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 			<?php echo get_avatar( get_the_author_meta( 'ID', $post_author_id ), 100 ); ?>
