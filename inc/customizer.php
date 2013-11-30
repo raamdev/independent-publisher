@@ -18,7 +18,7 @@ function independent_publisher_customize_register( $wp_customize ) {
 
 	// Excerpt Options
 	$wp_customize->add_setting( 'independent_publisher_general_options[excerpts]', array(
-		'default'    => '2',
+		'default'    => '0',
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	) );
@@ -36,7 +36,7 @@ function independent_publisher_customize_register( $wp_customize ) {
 
 	// Show Full Content for First Post
 	$wp_customize->add_setting( 'independent_publisher_general_options[show_full_content_first_post]', array(
-		'default'    => true,
+		'default'    => false,
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	) );
