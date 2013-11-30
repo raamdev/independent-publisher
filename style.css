@@ -643,12 +643,14 @@ img.aligncenter {
 	padding-top: 0 !important;
 }
 
-.show-full-content-first-post h1.entry-title {
+.show-full-content-first-post h1.entry-title,
+.show-full-content-first-post-sticky h1.entry-title {
 	font-size: 2.5em;
 	margin-bottom: 20px;
 }
 
-.show-full-content-first-post .entry-content p {
+.show-full-content-first-post .entry-content p,
+.show-full-content-first-post-sticky .entry-content p {
 	margin-bottom: 1.5em !important;
 }
 
@@ -1928,12 +1930,14 @@ table th {
 /* Footnotes */
 
 .footnotes p,
-.blog .show-full-content-first-post .footnotes p {
+.blog .show-full-content-first-post .footnotes p,
+.blog .show-full-content-first-post-sticky .footnotes p {
 	margin-bottom: 0 !important;
 }
 
 .footnotes,
-.blog .show-full-content-first-post .footnotes {
+.blog .show-full-content-first-post .footnotes,
+.blog .show-full-content-first-post-sticky .footnotes {
 	font-size: 80%;
 }
 
@@ -1943,7 +1947,8 @@ table th {
 	display: none;
 }
 
-.blog .show-full-content-first-post div.footnotes {
+.blog .show-full-content-first-post div.footnotes,
+.blog .show-full-content-first-post-sticky div.footnotes {
 	display: block;
 }
 

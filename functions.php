@@ -643,9 +643,19 @@ function independent_publisher_post_classes() {
 
 	if ( independent_publisher_show_full_content_first_post() &&
 			( independent_publisher_is_very_first_standard_post() &&
-					is_home() )
+					is_home() &&
+						! is_sticky()
+			)
 	) {
 		post_class( 'show-full-content-first-post' );
+	}
+	elseif ( independent_publisher_show_full_content_first_post() &&
+			( independent_publisher_is_very_first_standard_post() &&
+					is_home() &&
+						is_sticky()
+			)
+	) {
+		post_class( 'show-full-content-first-post-sticky' );
 	}
 	elseif ( $wp_query->current_post == 0 ) {
 		post_class( 'first-post' );

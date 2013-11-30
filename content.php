@@ -6,7 +6,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php independent_publisher_post_classes(); ?>>
 	<header class="entry-header">
-		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() ) ) : ?>
+		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() && ! is_sticky() ) ) : ?>
 			<h2 class="entry-title-meta">
 				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
 				<?php do_action('independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
