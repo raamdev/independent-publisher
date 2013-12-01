@@ -144,7 +144,7 @@ if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 		 */
 		global $wp_query;
 		$post_author_id = $wp_query->post->post_author;
-		$post_author_nice_name = get_the_author_meta('user_nicename', $post_author_id );
+		$post_author_nice_name = get_the_author_meta('display_name', $post_author_id );
 
 		printf( __( '<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>', 'independent_publisher' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ) ),
