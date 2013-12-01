@@ -617,13 +617,15 @@ img.aligncenter {
 	margin-bottom: 0;
 }
 
+.post-excerpts .sticky h1.entry-title,
+.enhanced-excerpts .sticky h1.entry-title {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
 .post-excerpts .entry-content,
 .enhanced-excerpts .entry-content {
 	margin-top: 10px;
-}
-
-.enhanced-excerpts .format-standard .entry-content p {
-	margin-bottom: 1em;
 }
 
 .enhanced-excerpts .format-standard .entry-meta {
@@ -643,15 +645,8 @@ img.aligncenter {
 	padding-top: 0 !important;
 }
 
-.show-full-content-first-post h1.entry-title,
 .show-full-content-first-post-sticky h1.entry-title {
 	font-size: 2.5em;
-	margin-bottom: 20px;
-}
-
-.show-full-content-first-post .entry-content p,
-.show-full-content-first-post-sticky .entry-content p {
-	margin-bottom: 1.5em !important;
 }
 
 article.first-post,
