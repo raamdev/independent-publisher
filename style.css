@@ -1596,12 +1596,12 @@ img#wpstats {
 }
 
 table td {
-	padding: 4px 0;
+	padding: 4px;
 	border-bottom: solid 1px #eee;
 }
 
 table th {
-	padding: 4px 0;
+	padding: 4px;
 	border-bottom: solid 1px #ccc;
 }
 
