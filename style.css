@@ -104,17 +104,7 @@ a img {
 /* =Global
 ----------------------------------------------- */
 
-body,
-button,
-input,
-select,
-textarea {
-	color: #000000;
-	font-size: 16px;
-	font-size: 1.6rem;
-	font-family: serif;
-	line-height: 1.5;
-}
+/* Font style definitions can be found in css/xxx-scheme.css */
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -151,7 +141,7 @@ li > ol, li > ul {
 }
 
 dt {
-	font-weight: bold;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 dd {
@@ -159,33 +149,26 @@ dd {
 }
 
 b, strong {
-	font-weight: bold;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 dfn, cite, em, i {
-	font-style: italic;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 blockquote {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-left: 1em;
-	font-style: italic;
-	font-family: Georgia, "Bitstream Charter", serif;
 	border-left: 6px solid #57ad68;
 	padding-left: 20px;
 }
 
 blockquote cite {
-	color: #999;
-	font-size: 80%;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 blockquote cite:before {
 	content: "\2014 \0020";
-}
-
-blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
-	font-weight: normal;
-	font-family: Georgia, "Bitstream Charter", serif;
 }
 
 address {
@@ -193,18 +176,15 @@ address {
 }
 
 pre {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	overflow: auto;
 	margin-bottom: 1.6em;
 	padding: 1.6em;
 	max-width: 100%;
-	background: #F2F7F9;
-	font: 12px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	line-height: 1.6;
 }
 
 code, kbd, tt, var {
-	font: 14px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	background: #eee;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	padding: 2px 5px 2px 5px;
 }
 
@@ -220,11 +200,10 @@ mark, ins {
 
 sup,
 sub {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	position: relative;
 	height: 0;
 	vertical-align: baseline;
-	font-size: 75%;
-	line-height: 0;
 }
 
 sup {
@@ -236,11 +215,11 @@ sub {
 }
 
 small {
-	font-size: 75%;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 big {
-	font-size: 125%;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 figure {
@@ -248,22 +227,22 @@ figure {
 }
 
 table {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 0 0 1.5em;
 	width: 100%;
-	font-size: 90%;
 }
 
 th {
-	font-weight: bold;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 button,
 input,
 select,
 textarea {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: middle; /* Improves appearance and consistency in all browsers */
-	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 }
 
 input:focus,
@@ -283,11 +262,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	text-decoration: none;
-	line-height: 32px;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	height: 32px;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -301,9 +276,6 @@ input[type="submit"] {
 	background: -o-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* Opera 11.10+ */
 	background: -ms-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* IE10+ */
 	background: linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* W3C */
-	color: white;
-	font-size: 15px;
-	font-size: 1.5rem;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57ad68', endColorstr='#57ad68', GradientType=0) !important; /* IE6-9 */
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
@@ -468,9 +440,7 @@ img.aligncenter {
 }
 
 .main-navigation a {
-	text-decoration: none;
-	font-size: 15px;
-	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-seri;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .main-navigation ul ul {
@@ -613,13 +583,13 @@ img.aligncenter {
 
 .post-excerpts h1.entry-title,
 .enhanced-excerpts h1.entry-title {
-	font-size: 1.8em;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-bottom: 0;
 }
 
 .post-excerpts .sticky h1.entry-title,
 .enhanced-excerpts .sticky h1.entry-title {
-	font-size: 2.5em;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-bottom: 20px;
 }
 
@@ -629,15 +599,12 @@ img.aligncenter {
 }
 
 .enhanced-excerpts .format-standard .entry-meta {
-	text-align: left;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .enhanced-excerpts .enhanced-excerpt-read-more a {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	display: block;
-	text-align: right;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 1.4em;
-	color: #57ad68;
 	margin-top: 1em;
 }
 
@@ -647,7 +614,7 @@ img.aligncenter {
 
 .show-full-content-first-post h1.entry-title,
 .show-full-content-first-post-sticky h1.entry-title {
-	font-size: 2.5em;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-bottom: 20px;
 }
 
@@ -658,14 +625,9 @@ article.first-post,
 }
 
 .entry-content .subtitle {
-	font-style: italic;
-	font-weight: normal;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 1.3em;
-	line-height: 1.2em;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-top: -5px;
 	margin-bottom: 1em;
-	letter-spacing: 0;
 }
 
 /* =Post Formats
@@ -696,8 +658,7 @@ article.first-post,
 .single .format-image h1.entry-title,
 .single .format-link h1.entry-title,
 .single .format-gallery h1.entry-title {
-	font-size: 13px;
-	line-height: 21px;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .format-aside .entry-format,
@@ -707,18 +668,16 @@ article.first-post,
 .format-image .entry-format,
 .format-link .entry-format,
 .format-gallery .entry-format {
-	color: #999;
-	font-weight: 300;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .format-aside {
-	font-style: italic;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .format-aside,
 .format-quote {
-	font-size: 1.3em;
-	line-height: 1.4;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .format-aside .entry-content {
@@ -731,13 +690,11 @@ article.first-post,
 
 .format-aside a,
 .format-aside a:hover {
-	color: inherit;
-	text-decoration: none;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .format-aside sup, .format-aside .footnotes {
-	font-size: 15px;
-	font-style: normal;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .format-aside .footnotes hr {
@@ -809,8 +766,7 @@ img.size-full {
 }
 
 .wp-caption-text {
-	text-align: center;
-	font-size: 80%;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .wp-caption .wp-caption-text {
@@ -822,9 +778,8 @@ img.size-full {
 }
 
 .gallery-caption {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	padding: 0 10px 10px 10px;
-	color: #999;
-	font-size: 13px;
 }
 
 .site-content .gallery a img {
@@ -886,12 +841,7 @@ object {
 }
 
 .comments-title {
-	text-align: center;
-	color: rgb(213, 213, 213);
-	text-transform: uppercase;
-	font-size: 18px;
-	font-weight: normal;
-	letter-spacing: 1px;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .site-main .commentlist article {
@@ -911,8 +861,8 @@ object {
 }
 
 ol.commentlist {
-	margin-left: 0px;
-	font-size: 90%;
+	/* Font style definitions can be found in css/xxx-scheme.css */
+	margin-left: 0;
 }
 
 ol.commentlist,
@@ -964,9 +914,7 @@ ol.commentlist .avatar {
 
 .comment-meta,
 .comment-meta a {
-	color: #999;
-	text-decoration: none;
-	font-size: 12px;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .comment-meta {
@@ -980,8 +928,8 @@ ol.commentlist .avatar {
 }
 
 .comment .reply a {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-top: -10px;
-	font-size: 80%;
 }
 
 .comment-body:hover .reply {
@@ -996,18 +944,15 @@ ol.commentlist .avatar {
 }
 
 .comment-author {
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 48px;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .comment-author cite {
-	font-style: normal;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .comment-author .fn a {
-	text-decoration: none;
-	color: inherit;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .comment-author .says,
@@ -1026,10 +971,7 @@ ol.commentlist .avatar {
 }
 
 #pinglist {
-	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: 12px;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	border-top: 1px solid #eee;
 	padding-top: 20px;
 	margin-top: 80px;
@@ -1058,10 +1000,7 @@ ul.pinglist {
 }
 
 .taglist {
-	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: 12px;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 ul.taglist {
@@ -1091,7 +1030,7 @@ ul.taglist {
 }
 
 .trackback cite, .pingback cite {
-	font-style: normal;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .pingback {
@@ -1099,11 +1038,9 @@ ul.taglist {
 }
 
 .pingback > p:before {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	position: absolute;
 	left: -31px;
-	color: #999;
-	content: "Ping!";
-	font-size: 10px;
 	-webkit-transform: rotate(-45deg);
 	-moz-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
@@ -1122,11 +1059,9 @@ ul.taglist {
 .comment-form-comment label,
 .comment-form-subscriptions label,
 .comment-form-reply-title {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-right: 5px;
-	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-	color: #b3b3b1;
 	display: block;
-	font-size: 16px;
 }
 
 .comment-form-reply-title {
@@ -1166,18 +1101,15 @@ ul.taglist {
 }
 
 #cancel-comment-reply-link {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-weight: normal;
-	font-size: 80%;
-	letter-spacing: 0px;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	float: right;
 	margin-right: 10px;
 }
 
 #commentform textarea {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	padding: 10px;
 	margin: 0px;
-	font-size: 90%;
 	width: 98%;
 }
 
@@ -1188,7 +1120,7 @@ ul.taglist {
 }
 
 .icon-comment {
-	color: white;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-right: 10px;
 }
 
@@ -1222,18 +1154,15 @@ ul.taglist {
 .widget_rss .rss-date,
 .widget_rss li > cite,
 .widget_twitter .timesince {
-	color: #999;
-	display: block;
-	font-size: 12px;
+	/* Font style definitions can be found in css/xxx-scheme.css */
+	display: block;;
 }
 
 /* =Layout
 ----------------------------------------------- */
 
 body {
-	color: #000000;
-	font: 1.9em Georgia, "Times New Roman", Times, serif;
-	line-height: 1.5;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .site-master-logo {
@@ -1275,21 +1204,13 @@ body {
 }
 
 .site-title {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 0;
-	font-size: 16px;
-	line-height: 1.2;
-	letter-spacing: inherit;
 }
 
 .site-description {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 0 0 20px 0;
-	color: rgba(117, 117, 117, 0.78);
-	font-size: 13px;
-	font-family: inherit;
-	line-height: 1.4;
-	font-style: italic;
-	letter-spacing: inherit;
-	font-weight: inherit;
 	margin-top: 5px;
 }
 
@@ -1301,40 +1222,22 @@ body {
 }
 
 .site-published {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 10px 0 0 0;
-	color: #333332;
-	font-size: 14px;
-	line-height: 1.4;
-	font-style: normal;
-	font-weight: bold;
-	letter-spacing: inherit;
 }
 
 .site-published-date {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 5px 0 0 0;
-	color: rgba(117, 117, 117, 0.78);
-	font-size: 12px;
-	font-family: inherit;
-	line-height: 2;
-	letter-spacing: inherit;
-	font-weight: inherit;
-	font-style: normal;
 }
 
 .site-published-date a, .site-published-location a {
-	color: rgba(117, 117, 117, 0.78);
-	text-decoration: none;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .site-published-location {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 0 0 20px 0;
-	color: rgba(117, 117, 117, 0.78);
-	font-size: 12px;
-	font-family: inherit;
-	line-height: 1.4;
-	font-style: normal;
-	letter-spacing: inherit;
-	font-weight: inherit;
 }
 
 .main-navigation ul,
@@ -1369,8 +1272,7 @@ body {
 }
 
 .widget-area .widget-title {
-	font-size: 16px;
-	letter-spacing: inherit;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-bottom: 10px;
 }
 
@@ -1411,36 +1313,8 @@ h3,
 h4,
 h5,
 h6 {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 20px 0;
-	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-	color: #333332;
-	letter-spacing: -1px;
-	font-weight: 700;
-	line-height: 1;
-}
-
-h1 {
-	font-size: 2.5em;
-}
-
-h2 {
-	font-size: 1.8em;
-}
-
-h3 {
-	font-size: 1.6em;
-}
-
-h4 {
-	font-size: 1.4em;
-}
-
-h5 {
-	font-size: 1.3em;
-}
-
-h6 {
-	font-size: 1.2em;
 }
 
 .entry-content h1,
@@ -1454,7 +1328,7 @@ h6 {
 }
 
 .entry-content h1 {
-	font-size: 2.1em;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .page h1.entry-title {
@@ -1469,27 +1343,21 @@ h6 {
 }
 
 .entry-title a {
-	color: #404040;
-	text-decoration: none;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .entry-title a:hover {
-	color: #57ad68;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .entry-title-meta {
-	font-size: 13px;
-	color: #b3b3b1;
-	font-weight: 100;
-	letter-spacing: 1px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	font-style: normal;
+	/* Font style definitions can be found in css/xxx-scheme.css */
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .entry-title-meta a {
-	color: #b3b3b1;
-	text-decoration: none;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .entry-title-meta-author {
@@ -1498,15 +1366,11 @@ h6 {
 
 .entry-meta,
 .entry-meta a {
-	color: #b3b3b1;
-	font-size: 13px;
-	font-family: sans-serif;
-	font-weight: 100;
-	font-style: normal;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .entry-meta a:hover {
-	color: #57ad68;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .single .entry-meta {
@@ -1521,10 +1385,10 @@ h6 {
 }
 
 .site {
+	/* Max-width settings can be found in css/xxx-scheme.css */
 	background-color: #ffffff;
 	margin: 80px auto;
 	padding: 0 40px;
-	max-width: 700px;
 	margin-bottom: 0;
 	margin-top: 150px;
 }
@@ -1541,19 +1405,17 @@ h6 {
 
 .site-content,
 .site-footer {
+	/* Max-width settings can be found in css/xxx-scheme.css */
 	float: right;
-	max-width: 700px;
 	width: 100%;
 }
 
 .widget-area {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	float: left;
 	width: 160px; /* Sidebar 1 */
 	clear: left;
 	margin-left: -220px;
-	text-align: right;
-	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-	font-size: 15px;
 }
 
 .entry-content,
@@ -1571,25 +1433,23 @@ h6 {
 }
 
 .site-footer {
+	/* Font style definitions can be found in css/xxx-scheme.css */
 	clear: both;
 	margin-top: 100px;
 	margin-bottom: 40px;
-	color: #999;
 }
 
 .site-footer,
 .site-footer a {
-	font-size: 13px;
-	text-align: center;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .site-footer a:hover {
-	color: #57ad68;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .site-info {
-	font-family: sans-serif;
-	font-weight: 100;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 img#wpstats {
@@ -1646,7 +1506,7 @@ table th {
 }
 
 .post-author-bottom h1.site-title {
-	font-style: normal;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .post-author-bottom .post-published-date {
@@ -1741,8 +1601,7 @@ table th {
 	}
 
 	#masthead .site-title {
-		font-size: 24px;
-		font-style: normal;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 		padding-top: 15px;
 		padding-left: 0;
 	}
@@ -1775,37 +1634,36 @@ table th {
 
 	.entry-content,
 	#comments {
-		font-size: 18px;
-		line-height: 1.4;
+		/* Font style definitions can be found in css/xxx-scheme.css */;
 		width: 100%;
 	}
 
 	h1.entry-title {
-		font-size: 1.8em;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	.entry-content h1 {
-		font-size: 1.7em;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	.entry-content h2 {
-		font-size: 1.6em;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	.entry-content h3 {
-		font-size: 1.5em;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	.entry-content h4 {
-		font-size: 1.4em;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	.entry-content h5 {
-		font-size: 1.3em;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	.entry-content h6 {
-		font-size: 1.2em;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	.entry-content ol, ul {
@@ -1813,7 +1671,7 @@ table th {
 	}
 
 	#masthead {
-		text-align: center;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	#masthead .site-title {
@@ -1845,24 +1703,22 @@ table th {
 	}
 
 	.format-aside .entry-content {
-		font-size: 1em;
-		line-height: 36px;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 		margin-bottom: 0;
 	}
 
 	.single .entry-meta {
-		text-align: center;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 		padding-bottom: 0;
 		padding-top: 0;
 	}
 
 	.post-author-bottom {
-		text-align: center;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	.post-author-bottom .site-title {
-		font-size: 24px;
-		line-height: 2.2;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	.post-author-bottom .site-logo, .post-author-bottom .site-logo img {
@@ -1902,7 +1758,7 @@ table th {
 	}
 
 	.entry-content .subtitle {
-		font-size: 1.2em;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 	}
 
 	.comment-form-author,
@@ -1913,7 +1769,7 @@ table th {
 	}
 
 	.entry-meta #share-comment-button {
-		text-align: center;
+		/* Font style definitions can be found in css/xxx-scheme.css */
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
@@ -1935,7 +1791,7 @@ table th {
 .footnotes,
 .blog .show-full-content-first-post .footnotes,
 .blog .show-full-content-first-post-sticky .footnotes {
-	font-size: 80%;
+	/* Font style definitions can be found in css/xxx-scheme.css */
 }
 
 .blog div.footnotes,

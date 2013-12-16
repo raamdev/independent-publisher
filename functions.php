@@ -356,6 +356,26 @@ function independent_publisher_single_author_link() {
 if ( ! independent_publisher_is_multi_author_mode() )
 	add_filter( 'author_link', 'independent_publisher_single_author_link', 10, 3 );
 
+
+/**
+ * Register and load font scheme style sheet.
+ */
+add_action( 'wp_enqueue_scripts', 'register_typography_layout_scheme' );
+function register_typography_layout_scheme() {
+	$typography_layout_scheme = independent_publisher_typography_layout_scheme();
+	wp_register_style( 'typography-layout-scheme', get_template_directory_uri() . '/css/' . $typography_layout_scheme, array(), '1.0' );
+	wp_enqueue_style( 'typography-layout-scheme' );
+}
+
+/**
+ * Returns the CSS file for the selected font scheme
+ */
+function independent_publisher_typography_layout_scheme() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	return $independent_publisher_general_options['typography_layout_scheme'];
+}
+
+
 /**
  * Returns true if Post Excerpts option is enabled
  */
