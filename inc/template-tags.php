@@ -138,11 +138,18 @@ if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_posted_author() {
+		/**
+		 * This function gets called outside the loop (in header.php),
+		 * so we need to figure out the post author ID and Nice Name manually.
+		 */
+		global $wp_query;
+		$post_author_id = $wp_query->post->post_author;
+		$post_author_nice_name = get_the_author_meta('display_name', $post_author_id );
 
 		printf( __( '<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>', 'independent_publisher' ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
-			esc_html( get_the_author() )
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), $post_author_nice_name ) ),
+			esc_html( $post_author_nice_name )
 		);
 	}
 endif;
@@ -343,16 +350,22 @@ function independent_publisher_site_info() {
  * @since Independent Publisher 1.0
  */
 function independent_publisher_posted_author_card() {
+	/**
+	 * This function gets called outside the loop (in header.php),
+	 * so we need to figure out the post author ID and Nice Name manually.
+	 */
+	global $wp_query;
+	$post_author_id = $wp_query->post->post_author;
 	?>
-		<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-			<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
+		<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ); ?>">
+			<?php echo get_avatar( get_the_author_meta( 'ID', $post_author_id ), 100 ); ?>
 		</a>
 		<hgroup>
 			<h1 class="site-title">
 				<?php independent_publisher_posted_author(); ?>
 			</h1>
 
-			<h2 class="site-description"><?php the_author_meta( 'description' ) ?></h2>
+			<h2 class="site-description"><?php the_author_meta( 'description', $post_author_id ) ?></h2>
 		</hgroup>
 
 		<div class="site-published-separator"></div>

@@ -6,7 +6,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php independent_publisher_post_classes(); ?>>
 	<header class="entry-header">
-		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() ) ) : ?>
+		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() && ! is_sticky() ) ) : ?>
 			<h2 class="entry-title-meta">
 				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
 				<?php do_action('independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
@@ -76,7 +76,7 @@
 		<?php $edit_link_separator = ( independent_publisher_is_not_first_post_full_content() ? '<span class="sep"> | </span>' : '' ); ?>
 		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), $edit_link_separator . '<span class="edit-link">', '</span>' ); ?>
 
-		<?php if ( false === get_post_format() && independent_publisher_use_enhanced_excerpts() && independent_publisher_is_not_first_post_full_content() ) : ?>
+		<?php if ( false === get_post_format() && independent_publisher_use_enhanced_excerpts() && independent_publisher_is_not_first_post_full_content() && ! is_sticky() ) : ?>
 			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php the_permalink(); ?>"><?php echo __( 'Continue Reading &rarr;', 'independent_publisher' ); ?></a></span>
 		<?php endif; ?>
 	</footer>

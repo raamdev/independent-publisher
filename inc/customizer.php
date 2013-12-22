@@ -16,15 +16,39 @@ function independent_publisher_customize_register( $wp_customize ) {
 		'priority' => 130,
 	) );
 
+
+	// Font Scheme Selector
+	$wp_customize->add_setting( 'independent_publisher_general_options[typography_layout_scheme]', array(
+		'default'    => 'serif-700px.css',
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+	) );
+
+	$scheme_choices = array();
+	$directory = get_template_directory() . '/css/';
+	foreach(glob($directory . '*.css') as $filename){
+		$filename = basename($filename);
+		$scheme_choices[$filename] = $filename;
+	}
+
+	$wp_customize->add_control( 'typography_layout_scheme', array(
+		'settings' => 'independent_publisher_general_options[typography_layout_scheme]',
+		'label'   => 'Typography and Layout: ',
+		'section' => 'independent_publisher_general_options',
+		'type'    => 'select',
+		'choices' => $scheme_choices,
+	) );
+
+
 	// Excerpt Options
 	$wp_customize->add_setting( 'independent_publisher_general_options[excerpts]', array(
-		'default'    => '2',
+		'default'    => '0',
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	) );
 	$wp_customize->add_control( 'excerpts', array(
 		'settings' => 'independent_publisher_general_options[excerpts]',
-		'label'   => 'Post Excerpts:',
+		'label'   => 'Post Excerpt Options:',
 		'section' => 'independent_publisher_general_options',
 		'type'    => 'select',
 		'choices'    => array(
@@ -34,15 +58,15 @@ function independent_publisher_customize_register( $wp_customize ) {
 		),
 	) );
 
-	// Show Full Content for First Post
+// Show Full Content for First Post
 	$wp_customize->add_setting( 'independent_publisher_general_options[show_full_content_first_post]', array(
-		'default'    => true,
+		'default'    => false,
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	) );
 	$wp_customize->add_control( 'show_full_content_first_post', array(
 		'settings' => 'independent_publisher_general_options[show_full_content_first_post]',
-		'label'    => __( 'Show Full Content for First Post', 'independent_publisher' ),
+		'label'    => __( 'Always Show Full Content for First Post', 'independent_publisher' ),
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );
