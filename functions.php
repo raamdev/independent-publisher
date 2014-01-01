@@ -370,9 +370,9 @@ function independent_publisher_show_post_word_count() {
 /**
  * Returns true if Hide Widgets on Single Pages option is enabled
  */
-function independent_publisher_hide_widgets_on_single_pages() {
+function independent_publisher_show_widgets_on_single_pages() {
 	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-	if ( isset( $independent_publisher_general_options['hide_widgets_on_single'] ) && $independent_publisher_general_options['hide_widgets_on_single'] )
+	if ( isset( $independent_publisher_general_options['show_widgets_on_single'] ) && $independent_publisher_general_options['show_widgets_on_single'] )
 		return true;
 	else
 		return false;

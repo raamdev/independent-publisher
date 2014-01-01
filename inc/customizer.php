@@ -29,15 +29,15 @@ function independent_publisher_customize_register( $wp_customize ) {
 		'type'     => 'checkbox',
 	) );
 
-	// Hide Widgets on Single pages
-	$wp_customize->add_setting( 'independent_publisher_general_options[hide_widgets_on_single]', array(
-		'default'    => true,
+	// Show Widgets on Single pages
+	$wp_customize->add_setting( 'independent_publisher_general_options[show_widgets_on_single]', array(
+		'default'    => false,
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	) );
-	$wp_customize->add_control( 'hide_widgets_on_single', array(
-		'settings' => 'independent_publisher_general_options[hide_widgets_on_single]',
-		'label'    => __( 'Hide Widgets on Single Pages', 'independent_publisher' ),
+	$wp_customize->add_control( 'show_widgets_on_single', array(
+		'settings' => 'independent_publisher_general_options[show_widgets_on_single]',
+		'label'    => __( 'Show Widgets on Single Pages', 'independent_publisher' ),
 		'section'  => 'independent_publisher_general_options',
 		'type'     => 'checkbox',
 	) );
