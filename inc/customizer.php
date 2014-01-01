@@ -16,38 +16,6 @@ function independent_publisher_customize_register( $wp_customize ) {
 		'priority' => 130,
 	) );
 
-
-	// Excerpt Options
-	$wp_customize->add_setting( 'independent_publisher_general_options[excerpts]', array(
-		'default'    => '0',
-		'type'       => 'option',
-		'capability' => 'edit_theme_options',
-	) );
-	$wp_customize->add_control( 'excerpts', array(
-		'settings' => 'independent_publisher_general_options[excerpts]',
-		'label'   => 'Post Excerpt Options:',
-		'section' => 'independent_publisher_general_options',
-		'type'    => 'select',
-		'choices'    => array(
-			'0' => 'Disabled',
-			'1' => 'Default Excerpts',
-			'2' => 'One-Sentence Excerpts',
-		),
-	) );
-
-// Show Full Content for First Post
-	$wp_customize->add_setting( 'independent_publisher_general_options[show_full_content_first_post]', array(
-		'default'    => false,
-		'type'       => 'option',
-		'capability' => 'edit_theme_options',
-	) );
-	$wp_customize->add_control( 'show_full_content_first_post', array(
-		'settings' => 'independent_publisher_general_options[show_full_content_first_post]',
-		'label'    => __( 'Always Show Full Content for First Post', 'independent_publisher' ),
-		'section'  => 'independent_publisher_general_options',
-		'type'     => 'checkbox',
-	) );
-
 	// Show Post Word Count
 	$wp_customize->add_setting( 'independent_publisher_general_options[show_post_word_count]', array(
 		'default'    => true,

@@ -357,39 +357,6 @@ if ( ! independent_publisher_is_multi_author_mode() )
 	add_filter( 'author_link', 'independent_publisher_single_author_link', 10, 3 );
 
 /**
- * Returns true if Post Excerpts option is enabled
- */
-function independent_publisher_use_post_excerpts() {
-	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-	if ( isset( $independent_publisher_general_options['excerpts'] ) && $independent_publisher_general_options['excerpts'] == '1' )
-		return true;
-	else
-		return false;
-}
-
-/**
- * Returns true if One-Sentence Excerpts option is enabled
- */
-function independent_publisher_use_enhanced_excerpts() {
-	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-	if ( isset( $independent_publisher_general_options['excerpts'] ) && $independent_publisher_general_options['excerpts'] == '2' )
-		return true;
-	else
-		return false;
-}
-
-/**
- * Returns true if Show Full Content for First Post option is enabled
- */
-function independent_publisher_show_full_content_first_post() {
-	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-	if ( isset( $independent_publisher_general_options['show_full_content_first_post'] ) && $independent_publisher_general_options['show_full_content_first_post'] )
-		return true;
-	else
-		return false;
-}
-
-/**
  * Returns true if Show Post Word Count option is enabled
  */
 function independent_publisher_show_post_word_count() {
@@ -470,49 +437,6 @@ function independent_publisher_post_word_count() {
 
 
 /**
- * Add enhanced-excerpts to body class when Use Enhanced Excerpts option enabled
- */
-function independent_publisher_enhanced_excerpts_body_class( $classes ) {
-	if ( independent_publisher_use_enhanced_excerpts() && ! is_singular() ) {
-		$classes[] = 'enhanced-excerpts';
-	}
-	return $classes;
-}
-
-add_filter( 'body_class', 'independent_publisher_enhanced_excerpts_body_class' );
-
-/**
- * Add post-excerpts to body class when Use Post Excerpts option enabled
- */
-function independent_publisher_post_excerpts_body_class( $classes ) {
-	if ( independent_publisher_use_post_excerpts() && ! is_singular() ) {
-		$classes[] = 'post-excerpts';
-	}
-	return $classes;
-}
-
-add_filter( 'body_class', 'independent_publisher_post_excerpts_body_class' );
-
-/**
- * Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
- */
-function independent_publisher_first_sentence_excerpt( $output ) {
-	global $post;
-	$content_post = get_post( $post->ID );
-
-	if ( ! $content_post->post_excerpt && independent_publisher_use_enhanced_excerpts() ) {
-		$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $content_post->post_content ), 2, PREG_SPLIT_DELIM_CAPTURE );
-		if ( ! empty( $strings[0] ) && ! empty( $strings[1] ) ) {
-			$output = apply_filters( 'the_content', $strings[0] . $strings[1] );
-		}
-	}
-
-	return $output;
-}
-
-add_filter( 'the_excerpt', 'independent_publisher_first_sentence_excerpt' );
-
-/**
  * Add a checkbox to the featured image metabox
  */
 function independent_publisher_featured_image_meta( $content ) {
@@ -579,50 +503,6 @@ function independent_publisher_save_featured_image_meta( $post_id, $post ) {
 /* Save post meta on the 'save_post' hook. */
 add_action( 'save_post', 'independent_publisher_save_featured_image_meta', 10, 2 );
 
-
-/**
- * Return true when we're on the first page of a Blog, Archive, or Search
- * page and the current post is the first post.
- */
-function independent_publisher_is_very_first_standard_post() {
-	global $wp_query;
-	if ( in_the_loop() && $wp_query->current_post == 0 && ! is_paged() && false === get_post_format() )
-		return true;
-	else
-		return false;
-}
-
-/**
- * Return true when Show Full Content First Post option is disabled,
- * or when Show Full Content First Post is enabled but excerpts are disabled,
- * or when Show Full Content First Post is enabled and we're not on
- * the very first post
- */
-function independent_publisher_is_not_first_post_full_content() {
-
-	// This only works in the loop, so return false if we're not there
-	if ( ! in_the_loop() )
-		return false;
-
-	// If Show Full Content First Post option is not enabled,
-	// or if it's enabled by excerpts are disabled, return true
-	if ( ! independent_publisher_show_full_content_first_post() || ( ! independent_publisher_use_enhanced_excerpts() && ! independent_publisher_use_post_excerpts() ) )
-		return true;
-
-	// If Show Full Content First Post option is enabled but this is not
-	// the very first post, return true
-	if ( independent_publisher_show_full_content_first_post() && ! independent_publisher_is_very_first_standard_post() )
-		return true;
-
-	// If Show Full Content First Post option is enabled and this is the
-	// very first post, return false
-	if ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() )
-		return false;
-
-	// Default return false
-	return false;
-}
-
 /**
  * Strip footnotes (<sup></sup>) from post content
  */
@@ -641,23 +521,7 @@ function independent_publisher_strip_footnotes( $content ) {
 function independent_publisher_post_classes() {
 	global $wp_query;
 
-	if ( independent_publisher_show_full_content_first_post() &&
-			( independent_publisher_is_very_first_standard_post() &&
-					is_home() &&
-						! is_sticky()
-			)
-	) {
-		post_class( 'show-full-content-first-post' );
-	}
-	elseif ( independent_publisher_show_full_content_first_post() &&
-			( independent_publisher_is_very_first_standard_post() &&
-					is_home() &&
-						is_sticky()
-			)
-	) {
-		post_class( 'show-full-content-first-post-sticky' );
-	}
-	elseif ( $wp_query->current_post == 0 ) {
+	if ( $wp_query->current_post == 0 ) {
 		post_class( 'first-post' );
 	}
 	else {
