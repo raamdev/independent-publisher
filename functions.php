@@ -672,7 +672,11 @@ function independent_publisher_post_classes() {
 		post_class( 'show-full-content-first-post-sticky' );
 	}
 	elseif ( $wp_query->current_post == 0 ) {
-		post_class( 'first-post' );
+		if ( is_paged() && class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) ) {
+			post_class();
+		} else {
+			post_class( 'first-post' );
+		}
 	}
 	else {
 		post_class();
