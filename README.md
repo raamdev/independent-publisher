@@ -3,7 +3,18 @@ Independent Publisher WordPress Theme
 
 ## Theme Options
 
-Theme Options can be found in `Dashboard → Apperance → Customize → Theme Options`.
+Theme Options can be found in `Dashboard → Apperance → Customize`.
+
+### Colors
+
+The following colors can be changed via the Colors section:
+
+- Text Color
+- Background Color
+- Link Color
+- Title and Header Text Color
+- Primary Meta Text Color
+- Secondary Meta Text Color
 
 ### Excerpts
 
