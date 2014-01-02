@@ -468,6 +468,20 @@ function independent_publisher_post_word_count() {
 	return number_format( $count );
 }
 
+/**
+ * Add no-post-excerpts to body class when Post Excerpts option is disabled
+ */
+function independent_publisher_no_post_excerpts_body_class( $classes ) {
+	if ( ! independent_publisher_use_post_excerpts()
+			&& ! independent_publisher_use_enhanced_excerpts()
+			&& ! is_singular()
+	) {
+		$classes[] = 'no-post-excerpts';
+	}
+	return $classes;
+}
+
+add_filter( 'body_class', 'independent_publisher_no_post_excerpts_body_class' );
 
 /**
  * Add enhanced-excerpts to body class when Use Enhanced Excerpts option enabled

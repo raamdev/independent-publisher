@@ -56,6 +56,26 @@
 		});
 	});
 
+	// Update link color in real time
+	wp.customize('link_color', function (value) {
+		value.bind(function (newval) {
+			$('.main-navigation a').css('color', newval);
+			$('.widget-area ul li a').css('color', newval);
+			$('.no-post-excerpts .format-standard .entry-content a').css('color', newval);
+			$('.no-post-excerpts .format-standard .entry-content a:hover').css('color', newval);
+			$('.no-post-excerpts .format-standard .entry-content a:focus').css('color', newval);
+			$('.no-post-excerpts .format-standard .entry-content a:active').css('color', newval);
+			$('.no-post-excerpts .format-standard .entry-content a:visited').css('color', newval);
+			$('.enhanced-excerpts .enhanced-excerpt-read-more a').css('color', newval);
+			$('.comment .reply a').css('color', newval);
+			$('.pinglist a').css('color', newval);
+			$('.taglist a').css('color', newval);
+			$('.entry-meta a:hover').css('color', newval);
+			$('.site-footer a').css('color', newval);
+			$('.widget-area a').css('color', newval);
+		});
+	});
+
 	// Update header text color in real time
 	wp.customize('header_text_color', function (value) {
 		value.bind(function (newval) {
@@ -96,26 +116,6 @@
 			$('.widget_rss .rss-date').css('color', newval);
 			$('.widget_twitter .timesince').css('color', newval);
 			$('.site-footer').css('color', newval);
-		});
-	});
-
-	// Update link color in real time
-	wp.customize('link_color', function (value) {
-		value.bind(function (newval) {
-			$('.main-navigation a').css('color', newval);
-			$('.widget-area ul li a').css('color', newval);
-			$('.format-standard .entry-content a').css('color', newval);
-			$('.format-standard .entry-content a:hover').css('color', newval);
-			$('.format-standard .entry-content a:focus').css('color', newval);
-			$('.format-standard .entry-content a:active').css('color', newval);
-			$('.format-standard .entry-content a:visited').css('color', newval);
-			$('.enhanced-excerpts .enhanced-excerpt-read-more a').css('color', newval);
-			$('.comment .reply a').css('color', newval);
-			$('.pinglist a').css('color', newval);
-			$('.taglist a').css('color', newval);
-			$('.entry-meta a:hover').css('color', newval);
-			$('.site-footer a').css('color', newval);
-			$('.widget-area a').css('color', newval);
 		});
 	});
 })(jQuery);

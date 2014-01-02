@@ -165,6 +165,7 @@ class IndependentPublisher_Customize {
 
 			<?php self::generate_css('body,input,select,textarea', 'color', 'text_color'); ?>
 			<?php self::generate_css('.format-aside .entry-content a, .format-aside .entry-content a:hover, .format-aside .entry-content a:visited, .format-aside .entry-content a:active, .format-aside .entry-content a:focus', 'color', 'text_color'); ?>
+			<?php self::generate_css('.post-excerpts .format-standard .entry-content a, .post-excerpts .format-standard .entry-content a:focus, .post-excerpts .format-standard .entry-content a:hover, .post-excerpts .format-standard .entry-content a:active, .post-excerpts .format-standard .entry-content a:visited', 'color', 'text_color'); ?>
 
 			/* Link Color */
 
