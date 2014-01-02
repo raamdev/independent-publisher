@@ -5,11 +5,20 @@ Independent Publisher WordPress Theme
 
 Theme Options can be found in `Dashboard → Apperance → Customize → Theme Options`.
 
-- **Multi Author Mode**. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (**WP Dashboard → Appearance → Customize → Header Image**) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page.
-- **Use Post Excerpts**. Turning this on will show post excerpts on the Blog, Archive, and Search pages instead of full post content. If no excerpt exists, a default excerpt is generated using the first 55 words (see [`the_excerpt()`](http://codex.wordpress.org/Function_Reference/the_excerpt)).
-- **Use Enhanced Excerpts**. Enhanced Excerpts are the same as Post Excerpts except when no post excerpt is defined, one is generated using the first sentence in the post. A "Continue Reading →" link is also placed below the excerpt.
-- **Show Post Word Count**. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
-- **Show Post Thumbnail**. When enabled, featured images are shown on the Blog, Archive, and Search pages. (Only applicable when Post Exceprts and Enhanced Excerpts are disabled.)
+### Excerpts
+
+- **Default Excerpts**. Generate an excerpt using the first 55 words (see [`the_excerpt()`](http://codex.wordpress.org/Function_Reference/the_excerpt)) on the Blog, Archive, and Search pages and show that instead of the full post content. 
+- **One-Sentence Excerpts**. When no post excerpt is defined, one is generated using the first sentence of the post. A "Continue Reading →" link is also placed below the excerpt.
+- **Always Show Full Content for First Post**. When Post Excerpts are enabled, this option ensures that the very first post on the Latest Posts page shows the full post content instead of the excerpt.
+
+### General Options
+
+- **Show Widgets on Single Pags**. By default, widgets are hidden from single pages to improve readability. If you prefer to show widgets on single pages, you can enable that here.
+- **Show Post Word Count in Entry Meta**. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
+
+### Hidden Options
+
+- **Multi Author Mode**. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (**WP Dashboard → Appearance → Customize → Header Image**) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page. Multi Author Mode can be enabled using a Child Theme. See `functions.php` in the [Independent Publisher Child Theme](https://github.com/raamdev/independent-publisher-child-theme) for instructions.
 
 ## Post Covers (Full Width Featured Images)
 
@@ -44,3 +53,7 @@ If there are things you want to tweak in the Independent Publisher theme, a [Chi
 After you've installed the Independent Publisher theme, download the [Independent Publisher Child Theme](https://github.com/raamdev/independent-publisher-child-theme/) and install and activate it. You can then start making changes to the Child Theme's files to override the parent theme. The Independent Publisher Child Theme comes with a few examples to help you get started.
 
 For more information on using Child Themes, see the [WordPress Codex](http://codex.wordpress.org/Child_Themes).
+
+## Known Issues
+
+* If you're using the [W3 Total Cache](http://wordpress.org/plugins/w3-total-cache/) plugin, you must disable the JS/CSS Minify option, as that [doesn't play well with jQuery](http://wordpress.org/support/topic/plugin-w3-total-cache-jquery-conflicts-when-added-to-minify?replies=6), which Independent Publisher makes use of. See also [Issue 46](https://github.com/raamdev/independent-publisher/issues/46#issuecomment-31478382).
