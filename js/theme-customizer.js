@@ -81,12 +81,13 @@
 		value.bind(function (newval) {
 			$('.site-published').css('color', newval);
 			$('.site-title a').css('color', newval);
-			$('h1').css('color', newval);
-			$('h2').css('color', newval);
-			$('h3').css('color', newval);
-			$('h4').css('color', newval);
-			$('h5').css('color', newval);
-			$('h6').css('color', newval);
+			$('h1.entry-title').css('color', newval);
+			$('.entry-content h1').css('color', newval);
+			$('.entry-content h2').css('color', newval);
+			$('.entry-content h3').css('color', newval);
+			$('.entry-content h4').css('color', newval);
+			$('.entry-content h5').css('color', newval);
+			$('.entry-content h6').css('color', newval);
 			$('.entry-title a').css('color', newval);
 			$('.author .archive-title a').css('color', newval);
 		});
