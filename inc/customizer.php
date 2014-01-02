@@ -4,7 +4,7 @@
  *
  * Contains methods for customizing the theme customization screen.
  *
- * @link http://codex.wordpress.org/Theme_Customization_API
+ * @link    http://codex.wordpress.org/Theme_Customization_API
  *
  * @package Independent Publisher
  * @since   Independent Publisher 1.0
@@ -12,7 +12,7 @@
 
 class IndependentPublisher_Customize {
 
-	public static function register ( $wp_customize ) {
+	public static function register( $wp_customize ) {
 
 		$wp_customize->add_section( 'independent_publisher_excerpt_options', array(
 			'title'    => __( 'Excerpts', 'independent_publisher' ),
@@ -31,11 +31,11 @@ class IndependentPublisher_Customize {
 			'capability' => 'edit_theme_options',
 		) );
 		$wp_customize->add_control( 'excerpts', array(
-			'label'      => __('Post Excerpts', 'independent_publisher'),
+			'label'    => __( 'Post Excerpts', 'independent_publisher' ),
 			'settings' => 'independent_publisher_excerpt_options[excerpts]',
-			'section' => 'independent_publisher_excerpt_options',
-			'type'    => 'radio',
-			'choices'    => array(
+			'section'  => 'independent_publisher_excerpt_options',
+			'type'     => 'radio',
+			'choices'  => array(
 				'0' => 'Disabled',
 				'1' => 'Default Excerpts',
 				'2' => 'One-Sentence Excerpts',
@@ -80,8 +80,190 @@ class IndependentPublisher_Customize {
 			'section'  => 'independent_publisher_general_options',
 			'type'     => 'checkbox',
 		) );
+
+		// Color options
+
+		$colors = array();
+
+		$colors[] = array(
+			'slug'    => 'text_color',
+			'default' => '#000000',
+			'label'   => __( 'Text Color', 'independent_publisher' )
+		);
+		$colors[] = array(
+			'slug'    => 'link_color',
+			'default' => '#88C34B',
+			'label'   => __( 'Link Color', 'independent_publisher' )
+		);
+		$colors[] = array(
+			'slug'    => 'header_text_color',
+			'default' => '#333332',
+			'label'   => __( 'Title and Header Text Color', 'independent_publisher' )
+		);
+		$colors[] = array(
+			'slug'    => 'primary_meta_text_color',
+			'default' => '#929292',
+			'label'   => __( 'Primary Meta Text Color', 'independent_publisher' )
+		);
+		$colors[] = array(
+			'slug'    => 'secondary_meta_text_color',
+			'default' => '#b3b3b1',
+			'label'   => __( 'Secondary Meta Text Color', 'independent_publisher' )
+		);
+		foreach ( $colors as $color ) {
+			// SETTINGS
+			$wp_customize->add_setting(
+				$color['slug'], array(
+					'default'    => $color['default'],
+					'type'       => 'theme_mod',
+					'capability' =>
+							'edit_theme_options'
+				)
+			);
+			// CONTROLS
+			$wp_customize->add_control(
+				new WP_Customize_Color_Control(
+					$wp_customize,
+					$color['slug'],
+					array( 'label'    => $color['label'],
+								 'section'  => 'colors',
+								 'settings' => $color['slug'] )
+				)
+			);
+		}
+
+		// Let's make some stuff use live preview JS
+		$wp_customize->get_setting( 'blogname' )->transport                  = 'postMessage';
+		$wp_customize->get_setting( 'blogdescription' )->transport           = 'postMessage';
+		$wp_customize->get_setting( 'header_textcolor' )->transport          = 'postMessage';
+		$wp_customize->get_setting( 'background_color' )->transport          = 'postMessage';
+		$wp_customize->get_setting( 'text_color' )->transport                = 'postMessage';
+		$wp_customize->get_setting( 'header_text_color' )->transport         = 'postMessage';
+		$wp_customize->get_setting( 'link_color' )->transport                = 'postMessage';
+		$wp_customize->get_setting( 'primary_meta_text_color' )->transport   = 'postMessage';
+		$wp_customize->get_setting( 'secondary_meta_text_color' )->transport = 'postMessage';
+	}
+
+	/**
+	 * This will output the custom WordPress settings to the live theme's WP head.
+	 *
+	 * Used by hook: 'wp_head'
+	 *
+	 * @see   add_action('wp_head',$func)
+	 * @since Independent Publisher 1.0
+	 */
+	public static function header_output() {
+		?>
+		<!--Customizer CSS-->
+		<style type="text/css">
+
+			/* Background Color */
+
+			<?php self::generate_css('.site', 'background-color', 'background_color', '#'); ?>
+
+			/* Text Color */
+
+			<?php self::generate_css('body,input,select,textarea', 'color', 'text_color'); ?>
+			<?php self::generate_css('.format-aside .entry-content a, .format-aside .entry-content a:hover, .format-aside .entry-content a:visited, .format-aside .entry-content a:active, .format-aside .entry-content a:focus', 'color', 'text_color'); ?>
+
+			/* Link Color */
+
+			<?php self::generate_css('a, a:visited, a:hover, a:focus, a:active', 'color', 'link_color'); ?>
+			<?php self::generate_css('.enhanced-excerpts .enhanced-excerpt-read-more a', 'color', 'link_color'); ?>
+			<?php self::generate_css('.entry-title a:hover', 'color', 'link_color'); ?>
+			<?php self::generate_css('.entry-meta a:hover', 'color', 'link_color'); ?>
+			<?php self::generate_css('.site-footer a:hover', 'color', 'link_color'); ?>
+
+			/* Header Text Color */
+
+			<?php self::generate_css('.site-published', 'color', 'header_text_color'); ?>
+			<?php self::generate_css('.site-title a', 'color', 'header_text_color'); ?>
+			<?php self::generate_css('h1,h2,h3,h4,h5,h6', 'color', 'header_text_color'); ?>
+			<?php self::generate_css('.entry-title a', 'color', 'header_text_color'); ?>
+			<?php self::generate_css('.author .archive-title a', 'color', 'header_text_color'); ?>
+			<?php self::generate_css('.author .archive-title a', 'color', 'header_text_color'); ?>
+
+			/* Primary Meta Text Color */
+
+			<?php self::generate_css('.site-description', 'color', 'primary_meta_text_color'); ?>
+			<?php self::generate_css('.site-published-date a, .site-published-location a', 'color', 'primary_meta_text_color'); ?>
+
+			/* Secondary Meta Text Color */
+
+			<?php self::generate_css('.comment-form-author label, .comment-form-email label, .comment-form-url label, .comment-form-comment label, .comment-form-subscriptions label, .comment-form-reply-title', 'color', 'secondary_meta_text_color'); ?>
+			<?php self::generate_css('.entry-title-meta, .entry-title-meta a', 'color', 'secondary_meta_text_color'); ?>
+			<?php self::generate_css('.entry-meta, .entry-meta a, .entry-meta a:hover', 'color', 'secondary_meta_text_color'); ?>
+			<?php self::generate_css('blockquote cite', 'color', 'secondary_meta_text_color'); ?>
+			<?php self::generate_css('.format-aside .entry-format, .format-quote .entry-format, .format-chat .entry-format, .format-status .entry-format, .format-image .entry-format, .format-link .entry-format, .format-gallery .entry-forma', 'color', 'secondary_meta_text_color'); ?>
+			<?php self::generate_css('.gallery-caption', 'color', 'secondary_meta_text_color'); ?>
+			<?php self::generate_css('.comment-meta, .comment-meta a', 'color', 'secondary_meta_text_color'); ?>
+			<?php self::generate_css('.widget_rss .rss-date, .widget_rss li > cite, .widget_twitter .timesince', 'color', 'secondary_meta_text_color'); ?>
+			<?php self::generate_css('.site-footer', 'color', 'secondary_meta_text_color'); ?>
+
+		</style>
+		<!--/Customizer CSS-->
+	<?php
+	}
+
+	/**
+	 * This outputs the javascript needed to automate the live settings preview.
+	 * Also keep in mind that this function isn't necessary unless your settings
+	 * are using 'transport'=>'postMessage' instead of the default 'transport'
+	 * => 'refresh'
+	 *
+	 * Used by hook: 'customize_preview_init'
+	 *
+	 * @see   add_action('customize_preview_init',$func)
+	 * @since Independent Publisher 1.0
+	 */
+	public static function live_preview() {
+		wp_enqueue_script(
+			'independent-publisher-themecustomizer', // Give the script a unique ID
+				get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
+			array( 'jquery', 'customize-preview' ), // Define dependencies
+			'', // Define a version (optional)
+			true // Specify whether to put in footer (leave this true)
+		);
+	}
+
+	/**
+	 * This will generate a line of CSS for use in header output. If the setting
+	 * ($mod_name) has no defined value, the CSS will not be output.
+	 *
+	 * @uses  get_theme_mod()
+	 *
+	 * @param string $selector CSS selector
+	 * @param string $style    The name of the CSS *property* to modify
+	 * @param string $mod_name The name of the 'theme_mod' option to fetch
+	 * @param string $prefix   Optional. Anything that needs to be output before the CSS property
+	 * @param string $postfix  Optional. Anything that needs to be output after the CSS property
+	 * @param bool   $echo     Optional. Whether to print directly to the page (default: true).
+	 *
+	 * @return string Returns a single line of CSS with selectors and a property.
+	 * @since Independent Publisher 1.0
+	 */
+	public static function generate_css( $selector, $style, $mod_name, $prefix = '', $postfix = '', $echo = true ) {
+		$return = '';
+		$mod    = get_theme_mod( $mod_name );
+		if ( ! empty( $mod ) ) {
+			$return = sprintf( '%s { %s:%s; }' . "\n",
+				$selector,
+				$style,
+					$prefix . $mod . $postfix
+			);
+			if ( $echo ) {
+				echo $return;
+			}
+		}
+		return $return;
 	}
 }
 
-// Setup the Theme Customizer settings and controls
-add_action( 'customize_register' , array( 'IndependentPublisher_Customize' , 'register' ) );
+// Setup the Theme Customizer settings and controls...
+add_action( 'customize_register', array( 'IndependentPublisher_Customize', 'register' ) );
+
+// Output custom CSS to live site
+add_action( 'wp_head', array( 'IndependentPublisher_Customize', 'header_output' ) );
+
+// Enqueue live preview javascript in Theme Customizer admin screen
+add_action( 'customize_preview_init', array( 'IndependentPublisher_Customize', 'live_preview' ) );

@@ -175,7 +175,7 @@ blockquote {
 }
 
 blockquote cite {
-	color: #999;
+	color: #b3b3b1;
 	font-size: 80%;
 }
 
@@ -301,7 +301,7 @@ input[type="submit"] {
 	background: -o-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* Opera 11.10+ */
 	background: -ms-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* IE10+ */
 	background: linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* W3C */
-	color: white;
+	color: #ffffff !important;
 	font-size: 15px;
 	font-size: 1.5rem;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57ad68', endColorstr='#57ad68', GradientType=0) !important; /* IE6-9 */
@@ -314,6 +314,7 @@ button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
+	color: #ffffff !important;
 	border-color: #bbb #bbb #aaa #bbb;
 	background: #65B675; /* Old browsers */
 	background: -moz-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* FF3.6+ */
@@ -701,7 +702,7 @@ img.aligncenter {
 .format-image .entry-format,
 .format-link .entry-format,
 .format-gallery .entry-format {
-	color: #999;
+	color: #b3b3b1;
 	font-weight: 300;
 }
 
@@ -723,8 +724,8 @@ img.aligncenter {
 	margin-bottom: 20px;
 }
 
-.format-aside a,
-.format-aside a:hover {
+.format-aside .entry-content a,
+.format-aside .entry-content a:hover {
 	color: inherit;
 	text-decoration: none;
 }
@@ -817,7 +818,7 @@ img.size-full {
 
 .gallery-caption {
 	padding: 0 10px 10px 10px;
-	color: #999;
+	color: #b3b3b1;
 	font-size: 13px;
 }
 
@@ -958,7 +959,7 @@ ol.commentlist .avatar {
 
 .comment-meta,
 .comment-meta a {
-	color: #999;
+	color: #b3b3b1;
 	text-decoration: none;
 	font-size: 12px;
 }
@@ -1040,7 +1041,7 @@ ul.pinglist {
 }
 
 .pinglist-title {
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 }
 
 .pinglist a {
@@ -1069,7 +1070,7 @@ ul.taglist {
 }
 
 .taglist-title {
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 }
 
 .taglist a {
@@ -1090,18 +1091,6 @@ ul.taglist {
 
 .pingback {
 	position: relative;
-}
-
-.pingback > p:before {
-	position: absolute;
-	left: -31px;
-	color: #999;
-	content: "Ping!";
-	font-size: 10px;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
 }
 
 .form-allowed-tags {
@@ -1216,7 +1205,7 @@ ul.taglist {
 .widget_rss .rss-date,
 .widget_rss li > cite,
 .widget_twitter .timesince {
-	color: #999;
+	color: #b3b3b1;
 	display: block;
 	font-size: 12px;
 }
@@ -1277,7 +1266,7 @@ body {
 
 .site-description {
 	margin: 0 0 20px 0;
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 	font-size: 13px;
 	font-family: inherit;
 	line-height: 1.4;
@@ -1306,7 +1295,7 @@ body {
 
 .site-published-date {
 	margin: 5px 0 0 0;
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 	font-size: 12px;
 	font-family: inherit;
 	line-height: 2;
@@ -1316,13 +1305,13 @@ body {
 }
 
 .site-published-date a, .site-published-location a {
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 	text-decoration: none;
 }
 
 .site-published-location {
 	margin: 0 0 20px 0;
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 	font-size: 12px;
 	font-family: inherit;
 	line-height: 1.4;
@@ -1468,7 +1457,7 @@ article.first-post {
 }
 
 .entry-title a {
-	color: #404040;
+	color: #333332;
 	text-decoration: none;
 }
 
@@ -1573,7 +1562,7 @@ article.first-post {
 	clear: both;
 	margin-top: 100px;
 	margin-bottom: 40px;
-	color: #999;
+	color: #b3b3b1;
 }
 
 .site-footer,
@@ -1970,7 +1959,7 @@ table th {
 }
 
 .author .archive-title a {
-	color: #404040;
+	color: #333332;
 }
 
 .author .archive-title a:hover {
