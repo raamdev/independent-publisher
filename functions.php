@@ -517,7 +517,15 @@ function independent_publisher_first_sentence_excerpt( $output ) {
 	if ( ! $content_post->post_excerpt && independent_publisher_use_enhanced_excerpts() ) {
 		$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $content_post->post_content ), 2, PREG_SPLIT_DELIM_CAPTURE );
 		if ( ! empty( $strings[0] ) && ! empty( $strings[1] ) ) {
-			$output = apply_filters( 'the_content', $strings[0] . $strings[1] );
+			$excerpt = $strings[0] . $strings[1];
+			/**
+			 * If the post starts with an image containing a caption, remove the caption before generating the excerpt
+			 */
+			if(strpos($strings[0], '[caption') !== FALSE) {
+				$excerpt = substr($strings[0], strpos($strings[0], '[/caption]') + 10, strlen($strings[0]) - ( strpos($strings[0], '[/caption]') + 10 ) );
+				$excerpt .= $strings[1];
+			}
+			$output = apply_filters( 'the_content', $excerpt );
 		}
 	}
 
