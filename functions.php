@@ -608,7 +608,7 @@ add_action( 'save_post', 'independent_publisher_save_featured_image_meta', 10, 2
  */
 function independent_publisher_is_very_first_standard_post() {
 	global $wp_query;
-	if ( in_the_loop() && $wp_query->current_post == 0 && ! is_paged() && false === get_post_format() )
+	if ( in_the_loop() && $wp_query->current_post == 0 && ! is_paged() && false === get_post_format() && get_query_var('paged') === 0 )
 		return true;
 	else
 		return false;
@@ -680,7 +680,7 @@ function independent_publisher_post_classes() {
 		post_class( 'show-full-content-first-post-sticky' );
 	}
 	elseif ( $wp_query->current_post == 0 ) {
-		if ( is_paged() && class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) ) {
+		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) && get_query_var('paged') !== 0 ) {
 			post_class();
 		} else {
 			post_class( 'first-post' );
