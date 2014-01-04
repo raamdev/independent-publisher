@@ -388,6 +388,8 @@ function independent_publisher_posted_author_card() {
  * @since Independent Publisher 1.0
  */
 function independent_publisher_posted_author_bottom_card() {
+
+	do_action('independent_publisher_before_post_author_bottom_card');
 	?>
 	<div class="post-author-bottom">
 		<div class="post-author-card">
@@ -417,6 +419,7 @@ function independent_publisher_posted_author_bottom_card() {
 	</div>
 	<!-- .post-author-bottom -->
 <?php
+	do_action('independent_publisher_after_post_author_bottom_card');
 }
 
 if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
