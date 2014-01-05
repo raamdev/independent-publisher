@@ -223,12 +223,14 @@ function register_font_awesome_style() {
 }
 
 /*
- * Show Subscribe to Comments Reloaded options after comment form fields
+ * Adds support for showing Subscribe to Comments Reloaded options after comment form fields
  */
-if ( function_exists( 'subscribe_reloaded_show' ) ) :
-	add_action( 'comment_form_logged_in_after', 'subscribe_reloaded_show' );
-	add_action( 'comment_form_after_fields', 'subscribe_reloaded_show' );
-endif;
+if ( function_exists( 'subscribe_reloaded_show' ) ) {
+	if ( get_option('subscribe_reloaded_show_subscription_box', 'yes') !== 'yes' ) {
+		add_action( 'comment_form_logged_in_after', 'subscribe_reloaded_show' );
+		add_action( 'comment_form_after_fields', 'subscribe_reloaded_show' );
+	}
+}
 
 /**
  * Arguments for comment_form()
