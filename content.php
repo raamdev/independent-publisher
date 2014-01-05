@@ -9,7 +9,7 @@
 		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() && ! is_sticky() ) ) : ?>
 			<h2 class="entry-title-meta">
 				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
-				<?php do_action('independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
+				<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 			</h2>
 		<?php endif; ?>
 		<h1 class="entry-title">
@@ -41,13 +41,13 @@
 
 			<?php
 			elseif ( ! get_post_format() && ! is_sticky() &&
-			         ( independent_publisher_use_post_excerpts() || independent_publisher_use_enhanced_excerpts() )
+					( independent_publisher_use_post_excerpts() || independent_publisher_use_enhanced_excerpts() )
 			) : // Standard post format
-					?>
+				?>
 
-					<a style="text-decoration: none; color: inherit;" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_excerpt(); ?></a>
+				<a style="text-decoration: none; color: inherit;" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_excerpt(); ?></a>
 
-				<?php
+			<?php
 			else : ?>
 				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
@@ -64,6 +64,7 @@
 		<?php if ( false === get_post_format() && independent_publisher_use_enhanced_excerpts() && independent_publisher_is_not_first_post_full_content() && ! is_sticky() ) : ?>
 			<?php independent_publisher_continue_reading_link(); ?>
 		<?php endif; ?>
+
 		<?php if ( 'post' == get_post_type() && independent_publisher_is_not_first_post_full_content() ) : // Hide category and tag text for pages on Search ?>
 			<?php independent_publisher_posted_author_cats() ?>
 		<?php endif; // End if 'post' == get_post_type() ?>

@@ -521,8 +521,8 @@ function independent_publisher_first_sentence_excerpt( $output ) {
 			/**
 			 * If the post starts with an image containing a caption, remove the caption before generating the excerpt
 			 */
-			if(strpos($strings[0], '[caption') !== FALSE) {
-				$excerpt = substr($strings[0], strpos($strings[0], '[/caption]') + 10, strlen($strings[0]) - ( strpos($strings[0], '[/caption]') + 10 ) );
+			if ( strpos( $strings[0], '[caption' ) !== FALSE ) {
+				$excerpt = substr( $strings[0], strpos( $strings[0], '[/caption]' ) + 10, strlen( $strings[0] ) - ( strpos( $strings[0], '[/caption]' ) + 10 ) );
 				$excerpt .= $strings[1];
 			}
 			$output = apply_filters( 'the_content', $excerpt );
@@ -608,7 +608,7 @@ add_action( 'save_post', 'independent_publisher_save_featured_image_meta', 10, 2
  */
 function independent_publisher_is_very_first_standard_post() {
 	global $wp_query;
-	if ( in_the_loop() && $wp_query->current_post == 0 && ! is_paged() && false === get_post_format() && get_query_var('paged') === 0 )
+	if ( in_the_loop() && $wp_query->current_post == 0 && ! is_paged() && false === get_post_format() && get_query_var( 'paged' ) === 0 )
 		return true;
 	else
 		return false;
@@ -680,9 +680,10 @@ function independent_publisher_post_classes() {
 		post_class( 'show-full-content-first-post-sticky' );
 	}
 	elseif ( $wp_query->current_post == 0 ) {
-		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) && get_query_var('paged') !== 0 ) {
+		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) && get_query_var( 'paged' ) !== 0 ) {
 			post_class();
-		} else {
+		}
+		else {
 			post_class( 'first-post' );
 		}
 	}

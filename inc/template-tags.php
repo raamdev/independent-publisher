@@ -143,8 +143,8 @@ if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 		 * so we need to figure out the post author ID and Nice Name manually.
 		 */
 		global $wp_query;
-		$post_author_id = $wp_query->post->post_author;
-		$post_author_nice_name = get_the_author_meta('display_name', $post_author_id );
+		$post_author_id        = $wp_query->post->post_author;
+		$post_author_nice_name = get_the_author_meta( 'display_name', $post_author_id );
 
 		printf( __( '<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>', 'independent_publisher' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ) ),
@@ -384,28 +384,28 @@ function independent_publisher_posted_author_card() {
 	global $wp_query;
 	$post_author_id = $wp_query->post->post_author;
 	?>
-		<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ); ?>">
-			<?php echo get_avatar( get_the_author_meta( 'ID', $post_author_id ), 100 ); ?>
-		</a>
-		<hgroup>
-			<h1 class="site-title">
-				<?php independent_publisher_posted_author(); ?>
-			</h1>
+	<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ); ?>">
+		<?php echo get_avatar( get_the_author_meta( 'ID', $post_author_id ), 100 ); ?>
+	</a>
+	<hgroup>
+		<h1 class="site-title">
+			<?php independent_publisher_posted_author(); ?>
+		</h1>
 
-			<h2 class="site-description"><?php the_author_meta( 'description', $post_author_id ) ?></h2>
-		</hgroup>
+		<h2 class="site-description"><?php the_author_meta( 'description', $post_author_id ) ?></h2>
+	</hgroup>
 
-		<div class="site-published-separator"></div>
-		<hgroup>
-			<h2 class="site-published">Published</h2>
+	<div class="site-published-separator"></div>
+	<hgroup>
+		<h2 class="site-published">Published</h2>
 
-			<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
+		<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
 
-			<?php if ( function_exists( 'get_ncl_location' ) ) : ?>
-				<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
-			<?php endif; ?>
+		<?php if ( function_exists( 'get_ncl_location' ) ) : ?>
+			<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
+		<?php endif; ?>
 
-		</hgroup>
+	</hgroup>
 <?php
 }
 
@@ -416,7 +416,7 @@ function independent_publisher_posted_author_card() {
  */
 function independent_publisher_posted_author_bottom_card() {
 
-	do_action('independent_publisher_before_post_author_bottom_card');
+	do_action( 'independent_publisher_before_post_author_bottom_card' );
 	?>
 	<div class="post-author-bottom">
 		<div class="post-author-card">
@@ -445,8 +445,8 @@ function independent_publisher_posted_author_bottom_card() {
 		</div>
 	</div>
 	<!-- .post-author-bottom -->
-<?php
-	do_action('independent_publisher_after_post_author_bottom_card');
+	<?php
+	do_action( 'independent_publisher_after_post_author_bottom_card' );
 }
 
 if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
