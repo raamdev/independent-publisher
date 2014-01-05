@@ -60,6 +60,10 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
+
+		<?php if ( false === get_post_format() && independent_publisher_use_enhanced_excerpts() && independent_publisher_is_not_first_post_full_content() && ! is_sticky() ) : ?>
+			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php the_permalink(); ?>"><?php echo __( 'Continue Reading &rarr;', 'independent_publisher' ); ?></a></span>
+		<?php endif; ?>
 		<?php if ( 'post' == get_post_type() && independent_publisher_is_not_first_post_full_content() ) : // Hide category and tag text for pages on Search ?>
 			<?php independent_publisher_posted_author_cats() ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
@@ -76,9 +80,6 @@
 		<?php $edit_link_separator = ( independent_publisher_is_not_first_post_full_content() ? '<span class="sep"> | </span>' : '' ); ?>
 		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), $edit_link_separator . '<span class="edit-link">', '</span>' ); ?>
 
-		<?php if ( false === get_post_format() && independent_publisher_use_enhanced_excerpts() && independent_publisher_is_not_first_post_full_content() && ! is_sticky() ) : ?>
-			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php the_permalink(); ?>"><?php echo __( 'Continue Reading &rarr;', 'independent_publisher' ); ?></a></span>
-		<?php endif; ?>
 	</footer>
 	<!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

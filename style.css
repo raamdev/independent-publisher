@@ -629,17 +629,13 @@ img.aligncenter {
 	margin-top: 10px;
 }
 
-.enhanced-excerpts .format-standard .entry-meta {
-	text-align: left;
-}
-
 .enhanced-excerpts .enhanced-excerpt-read-more a {
 	display: block;
 	text-align: right;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 1.4em;
 	color: #57ad68;
-	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 .show-full-content-first-post {
@@ -1487,6 +1483,7 @@ article.first-post {
 	font-family: sans-serif;
 	font-weight: 100;
 	font-style: normal;
+	text-align: right;
 }
 
 .entry-meta a:hover {
