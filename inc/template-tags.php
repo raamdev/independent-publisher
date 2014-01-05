@@ -242,24 +242,6 @@ if ( ! function_exists( 'independent_publisher_continue_reading_text' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'get_ncl_location' ) ) :
-	/**
-	 * Returns location information supplied by Nomad Current Location plugin
-	 */
-	function get_ncl_location( $prefix = "" ) {
-
-		$location = get_post_meta( get_the_ID(), 'ncl_current_location', TRUE );
-
-		if ( trim( $location ) != "" ) {
-			return $location_html = $prefix . '<span class="mapThis" place="' . $location . '" zoom="2">' . $location . '</span>';
-		}
-		else {
-			return $location_html = '';
-		}
-	}
-endif;
-
-
 /**
  * Returns true if a blog has more than 1 category
  *
@@ -401,9 +383,7 @@ function independent_publisher_posted_author_card() {
 
 		<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
 
-		<?php if ( function_exists( 'get_ncl_location' ) ) : ?>
-			<h2 class="site-published-location"><?php echo get_ncl_location(); ?></h2>
-		<?php endif; ?>
+		<?php do_action( 'independent_publisher_after_post_published_date' ); ?>
 
 	</hgroup>
 <?php
@@ -436,11 +416,8 @@ function independent_publisher_posted_author_bottom_card() {
 
 				<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
 
-				<?php if ( function_exists( 'get_ncl_location' ) ) : ?>
-					<h2 class="site-published-location">
-						<?php echo get_ncl_location(); ?>
-					</h2>
-				<?php endif; ?>
+				<?php do_action( 'independent_publisher_after_post_published_date' ); ?>
+
 			</div>
 		</div>
 	</div>
