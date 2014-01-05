@@ -215,6 +215,33 @@ if ( ! function_exists( 'independent_publisher_posted_on_date' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'independent_publisher_continue_reading_link' ) ) :
+	/**
+	 * Prints HTML with Continue Reading link
+	 *
+	 * @since Independent Publisher 1.0
+	 */
+	function independent_publisher_continue_reading_link() {
+		$text = apply_filters( 'independent_publisher_continue_reading_link_text', ' ' . 'Continue Reading &rarr;' );
+
+		printf( __( '<span class="enhanced-excerpt-read-more"><a class="read-more" href="%1$s">%2$s</a></span>', 'independent_publisher' ),
+			esc_url( get_permalink() ),
+			esc_html( $text )
+		);
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_continue_reading_text' ) ) :
+	/**
+	 * Returns Continue Reading text for usage in the_content()
+	 *
+	 * @since Independent Publisher 1.0
+	 */
+	function independent_publisher_continue_reading_text() {
+		return apply_filters( 'independent_publisher_continue_reading_text', __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) );
+	}
+endif;
+
 if ( ! function_exists( 'get_ncl_location' ) ) :
 	/**
 	 * Returns location information supplied by Nomad Current Location plugin
