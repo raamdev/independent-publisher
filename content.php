@@ -73,13 +73,14 @@
 			<?php echo independent_publisher_get_post_word_count() ?>
 		<?php endif; ?>
 
-		<?php if ( ! post_password_required() && comments_open() && independent_publisher_is_not_first_post_full_content() ) : ?>
-			<span class="sep"> | </span>
+		<?php if ( ! post_password_required() && comments_open() ) : ?>
+			<?php if ( independent_publisher_is_not_first_post_full_content() ) : ?>
+				<span class="sep"> | </span>
+			<?php endif; ?>
 			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent_publisher' ), __( '1 Comment', 'independent_publisher' ), __( '% Comments', 'independent_publisher' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php $edit_link_separator = ( independent_publisher_is_not_first_post_full_content() ? '<span class="sep"> | </span>' : '' ); ?>
-		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), $edit_link_separator . '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
 
 	</footer>
 	<!-- .entry-meta -->
