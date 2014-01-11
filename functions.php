@@ -703,3 +703,27 @@ function independent_publisher_post_classes() {
 		post_class();
 	}
 }
+
+/**
+ * Handles Reply to Comment links properly when JavaScript is enabled
+ */
+function independent_publisher_replytocom() {
+	if ( isset( $_GET['replytocom'] ) ) {
+		$replytocom_comment_id = $_GET['replytocom'];
+		$replytocom_post_id    = get_the_ID();
+		?>
+		<script type="text/javascript">
+			addComment.moveForm("comment-<?php echo $replytocom_comment_id; ?>", "<?php echo $replytocom_comment_id; ?>", "respond", "<?php echo $replytocom_post_id; ?>");
+			jQuery(function () {
+				jQuery('#respond').show();
+			});
+			jQuery(function () {
+				jQuery('.comment-form-reply-title').show();
+			});
+			jQuery(function () {
+				jQuery('#main-reply-title').hide();
+			});
+		</script>
+	<?php
+	}
+}

@@ -19,6 +19,8 @@
 </footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
 
+<?php independent_publisher_replytocom(); // Handles Reply to Comment links properly when JavaScript is enabled ?>
+
 <?php wp_footer(); ?>
 
 </body>
