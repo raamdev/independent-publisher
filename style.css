@@ -295,16 +295,16 @@ input[type="submit"] {
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
 	background: #57ad68; /* Old browsers */
-	background: -moz-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #57ad68), color-stop(100%, #57ad68)) !important; /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* IE10+ */
-	background: linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* W3C */
-	color: #ffffff !important;
+	background: -moz-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #57ad68), color-stop(100%, #57ad68)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* IE10+ */
+	background: linear-gradient(top, #57ad68 60%, #57ad68 100%); /* W3C */
+	color: #ffffff;
 	font-size: 15px;
 	font-size: 1.5rem;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57ad68', endColorstr='#57ad68', GradientType=0) !important; /* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57ad68', endColorstr='#57ad68', GradientType=0); /* IE6-9 */
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	-webkit-font-smoothing: antialiased;
@@ -314,15 +314,15 @@ button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	color: #ffffff !important;
+	color: #ffffff;
 	border-color: #bbb #bbb #aaa #bbb;
 	background: #65B675; /* Old browsers */
-	background: -moz-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #65B675), color-stop(100%, #65B675)) !important; /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* IE10+ */
-	background: linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* W3C */
+	background: -moz-linear-gradient(top, #65B675 60%, #65B675 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #65B675), color-stop(100%, #65B675)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #65B675 60%, #65B675 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #65B675 60%, #65B675 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #65B675 60%, #65B675 100%); /* IE10+ */
+	background: linear-gradient(top, #65B675 60%, #65B675 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#65B675', endColorstr='#65B675', GradientType=0); /* IE6-9 */
 }
 
@@ -638,8 +638,8 @@ img.aligncenter {
 	margin-bottom: 1em;
 }
 
-.show-full-content-first-post {
-	padding-top: 0 !important;
+#page .show-full-content-first-post {
+	padding-top: 0;
 }
 
 .show-full-content-first-post h1.entry-title,
@@ -1909,7 +1909,7 @@ table th {
 .footnotes p,
 .blog .show-full-content-first-post .footnotes p,
 .blog .show-full-content-first-post-sticky .footnotes p {
-	margin-bottom: 0 !important;
+	margin-bottom: 0;
 }
 
 .footnotes,
