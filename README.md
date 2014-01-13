@@ -68,3 +68,10 @@ For more information on using Child Themes, see the [WordPress Codex](http://cod
 ## Known Issues
 
 * If you're using the [W3 Total Cache](http://wordpress.org/plugins/w3-total-cache/) plugin, you must disable the JS/CSS Minify option, as that [doesn't play well with jQuery](http://wordpress.org/support/topic/plugin-w3-total-cache-jquery-conflicts-when-added-to-minify?replies=6), which Independent Publisher makes use of. See also [Issue 46](https://github.com/raamdev/independent-publisher/issues/46#issuecomment-31478382).
+
+## Frequently Asked Questions
+
+### How do I make JetPack Sharing Buttons look nicer?
+
+If you clear the JetPack Sharing Buttons "Sharing label" field so that it's empty, Independent Publisher will force the sharing buttons to float right and will remove the right padding so that the buttons look nicer.
+

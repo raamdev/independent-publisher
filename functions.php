@@ -727,3 +727,16 @@ function independent_publisher_replytocom() {
 	<?php
 	}
 }
+
+/**
+ * When the JetPack Sharing Buttons "Sharing label" is blank, this floats the sharing
+ * buttons right instead of left and removes right padding to improve display.
+ */
+function independent_publisher_jetpack_sharing_buttons_css() {
+	$sharedaddy_options = get_option( 'sharing-options' );
+	if (isset($sharedaddy_options['global']['sharing_label'])) {
+		$sharedaddy_disable_resources = get_option( 'sharedaddy_disable_resources' );
+		if(trim($sharedaddy_options['global']['sharing_label']) === '' && (!isset($sharedaddy_disable_resources) || $sharedaddy_disable_resources !== "1" ))
+			echo '<style type="text/css">div.sharedaddy .sd-content { float: right !important; width: auto !important; }</style>';
+	}
+}
