@@ -12,7 +12,7 @@
 	<header class="entry-header">
 		<h2 class="entry-title-meta">
 			<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
-			<?php do_action('independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
+			<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 		</h2>
 
 		<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -28,7 +28,7 @@
 	<?php independent_publisher_posted_author_bottom_card() ?>
 
 	<footer class="entry-meta">
-		<?php do_action('independent_publisher_entry_meta'); ?>
+		<?php do_action( 'independent_publisher_entry_meta' ); ?>
 
 		<?php if ( comments_open() ) : ?>
 			<div id="share-comment-button">

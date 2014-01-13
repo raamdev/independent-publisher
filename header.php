@@ -37,8 +37,9 @@
 	<header id="masthead" class="site-header" role="banner">
 		<?php if ( ! is_single() ) { ?>
 			<?php independent_publisher_site_info(); ?>
-		<?php } else { ?>
-				<?php independent_publisher_posted_author_card(); ?>
+		<?php }
+		else { ?>
+			<?php independent_publisher_posted_author_card(); ?>
 		<?php } ?>
 
 		<?php if ( ! is_single() ) : ?>

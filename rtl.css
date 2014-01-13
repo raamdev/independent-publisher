@@ -1654,7 +1654,7 @@ table th {
 }
 
 /* Hide left-side author card under 1200px */
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width: 1200px) {
 	.site {
 		margin-top: 80px;
 	}
@@ -1754,7 +1754,7 @@ table th {
 	}
 }
 
-@media only screen and (max-width : 500px) {
+@media only screen and (max-width: 500px) {
 	.site {
 		margin-top: 40px;
 	}

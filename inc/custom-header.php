@@ -35,7 +35,7 @@ function independent_publisher_custom_header_setup() {
 	$args = apply_filters( 'independent_publisher_custom_header_args', $args );
 
 	add_theme_support( 'custom-header', $args );
-	
+
 }
 
 add_action( 'after_setup_theme', 'independent_publisher_custom_header_setup' );

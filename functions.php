@@ -226,7 +226,7 @@ function register_font_awesome_style() {
  * Adds support for showing Subscribe to Comments Reloaded options after comment form fields
  */
 if ( function_exists( 'subscribe_reloaded_show' ) ) {
-	if ( get_option('subscribe_reloaded_show_subscription_box', 'yes') !== 'yes' ) {
+	if ( get_option( 'subscribe_reloaded_show_subscription_box', 'yes' ) !== 'yes' ) {
 		add_action( 'comment_form_logged_in_after', 'subscribe_reloaded_show' );
 		add_action( 'comment_form_after_fields', 'subscribe_reloaded_show' );
 	}
@@ -236,7 +236,7 @@ if ( function_exists( 'subscribe_reloaded_show' ) ) {
  * Adds support for showing WP Comment Subscriptions plugin options after comment form fields
  */
 if ( function_exists( 'wp_comment_subscriptions_show' ) ) {
-	if ( get_option('wp_comment_subscriptions_show_subscription_box', 'yes') !== 'yes' ) {
+	if ( get_option( 'wp_comment_subscriptions_show_subscription_box', 'yes' ) !== 'yes' ) {
 		add_action( 'comment_form_logged_in_after', 'wp_comment_subscriptions_show' );
 		add_action( 'comment_form_after_fields', 'wp_comment_subscriptions_show' );
 	}
@@ -734,9 +734,9 @@ function independent_publisher_replytocom() {
  */
 function independent_publisher_jetpack_sharing_buttons_css() {
 	$sharedaddy_options = get_option( 'sharing-options' );
-	if (isset($sharedaddy_options['global']['sharing_label'])) {
+	if ( isset( $sharedaddy_options['global']['sharing_label'] ) ) {
 		$sharedaddy_disable_resources = get_option( 'sharedaddy_disable_resources' );
-		if(trim($sharedaddy_options['global']['sharing_label']) === '' && (!isset($sharedaddy_disable_resources) || $sharedaddy_disable_resources !== "1" ))
+		if ( trim( $sharedaddy_options['global']['sharing_label'] ) === '' && ( ! isset( $sharedaddy_disable_resources ) || $sharedaddy_disable_resources !== "1" ) )
 			echo '<style type="text/css">div.sharedaddy .sd-content { float: right !important; width: auto !important; }</style>';
 	}
 }
