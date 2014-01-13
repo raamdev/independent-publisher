@@ -1,0 +1,8 @@
+/**
+ * When the JetPack Sharing Buttons "Sharing label" is blank, this floats the sharing
+ * buttons right instead of left and removes right padding to improve display.
+ */
+div.sharedaddy .sd-content {
+	float: right !important;
+	width: auto !important;
+}
