@@ -1,7 +1,9 @@
 <?php
 /**
- * This file includes code that improves support for various plugins
+ * Code that improves theme support for various plugins
  *
+ * @package Independent Publisher
+ * @since   Independent Publisher 1.0
  */
 
 /*

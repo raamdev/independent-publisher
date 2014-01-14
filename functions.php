@@ -1,6 +1,6 @@
 <?php
 /**
- * Publish functions and definitions
+ * Independent Publisher functions and definitions
  *
  * @package Independent Publisher
  * @since   Independent Publisher 1.0
@@ -239,7 +239,7 @@ if ( ! function_exists( 'independent_publisher_comment_form_args' ) ) :
 		$args = array(
 			'id_form'              => 'commentform',
 			'id_submit'            => 'submit',
-			'title_reply'          => __( '', 'independent_publisher' ),
+			'title_reply'          => '',
 			'title_reply_to'       => __( 'Leave a Reply for %s', 'independent_publisher' ),
 			'cancel_reply_link'    => __( 'Cancel Reply', 'independent_publisher' ),
 			'label_submit'         => __( 'Submit Comment', 'independent_publisher' ),
