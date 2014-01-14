@@ -114,7 +114,7 @@ add_action( 'widgets_init', 'independent_publisher_widgets_init' );
 function independent_publisher_scripts() {
 	global $post;
 
-	wp_enqueue_style( 'publish-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'independent-publisher-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
