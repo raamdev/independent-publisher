@@ -435,3 +435,21 @@ if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 		return sprintf( __( '<span class="sep"> | </span> <span>%1$s Words</span>', 'independent_publisher' ), independent_publisher_post_word_count() );
 	}
 endif;
+
+if ( ! function_exists( 'independent_publisher_full_width_featured_image' ) ):
+	/**
+	 * Show Full Width Featured Image on single pages if post has full width featured image selected
+	 */
+	function independent_publisher_full_width_featured_image() {
+		if ( is_single() && independent_publisher_has_full_width_featured_image() ) {
+			while ( have_posts() ) : the_post();
+				$full_width_featured_image = get_post_meta( get_the_ID(), 'full_width_featured_image' );
+				if ( $full_width_featured_image ) :
+					if ( has_post_thumbnail() ) :
+						the_post_thumbnail( array( 700, 700 ), array( 'class' => 'full-width-featured-image' ) );
+					endif;
+				endif;
+			endwhile; // end of the loop.
+		}
+	}
+endif;

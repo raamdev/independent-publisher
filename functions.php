@@ -7,12 +7,9 @@
  */
 
 /**
- * Set the content width based on the theme's design and stylesheet.
- *
- * @since Independent Publisher 1.0
+ * Include additional plugin support routines
  */
-if ( ! isset( $content_width ) )
-	$content_width = 525; /* pixels */
+require_once( 'inc/plugin-support.php' );
 
 if ( ! function_exists( 'independent_publisher_setup' ) ):
 	/**
@@ -115,6 +112,7 @@ function independent_publisher_scripts() {
 	global $post;
 
 	wp_enqueue_style( 'independent-publisher-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css', array(), '3.2.1' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -126,37 +124,9 @@ function independent_publisher_scripts() {
 
 	independent_publisher_jetpack_sharing_css();
 	independent_publisher_jetpack_sharing_label_css();
-
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_scripts' );
-
-if ( ! function_exists( 'independent_publisher_jetpack_sharing_css' ) ) :
-	/**
-	 * Improves the style of JetPack Sharing Buttons when used with this theme
-	 */
-	function independent_publisher_jetpack_sharing_css() {
-		$sharedaddy_disable_resources = get_option( 'sharedaddy_disable_resources' );
-		if ( isset( $sharedaddy_disable_resources ) && $sharedaddy_disable_resources !== "1" ) {
-			wp_enqueue_style( 'independent-publisher-jetpack-sharing', get_template_directory_uri() . '/css/jetpack-sharing.css', array(), '1.0' );
-		}
-	}
-endif;
-
-if ( ! function_exists( 'independent_publisher_jetpack_sharing_label_css' ) ) :
-	/**
-	 * When the JetPack Sharing Buttons "Sharing label" is blank, this floats the sharing
-	 * buttons right instead of left and removes right padding to improve display.
-	 */
-	function independent_publisher_jetpack_sharing_label_css() {
-		$sharedaddy_options = get_option( 'sharing-options' );
-		if ( isset( $sharedaddy_options['global']['sharing_label'] ) ) {
-			$sharedaddy_disable_resources = get_option( 'sharedaddy_disable_resources' );
-			if ( trim( $sharedaddy_options['global']['sharing_label'] ) === '' && ( ! isset( $sharedaddy_disable_resources ) || $sharedaddy_disable_resources !== "1" ) )
-				wp_enqueue_style( 'independent-publisher-jetpack-sharing-label', get_template_directory_uri() . '/css/jetpack-sharing-label.css', array(), '1.0' );
-		}
-	}
-endif;
 
 /**
  * Echoes the theme's footer credits
@@ -172,16 +142,14 @@ add_action( 'independent_publisher_credits', 'independent_publisher_footer_credi
 /**
  * Returns the theme's footer credits
  *
- * @param string $credits
- *
  * @return string
  *
  * @since Independent Publisher 1.0
  */
-function independent_publisher_get_footer_credits( $credits = '' ) {
+function independent_publisher_get_footer_credits() {
 	return sprintf(
 		'%1$s',
-		sprintf( __( '%1$s empowered by %2$s.', 'independent_publisher' ), '<a href="' . esc_url( 'http://independentpublisher.me' ) . '" rel="designer">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator">open-source publishing</a>' )
+		sprintf( __( 'An %1$s empowered by %2$s.', 'independent_publisher' ), '<a href="' . esc_url( 'http://independentpublisher.me' ) . '" rel="designer">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator">open-source publishing</a>' )
 	);
 }
 
@@ -208,195 +176,185 @@ function independent_publisher_comment_count( $count ) {
 	}
 }
 
-/*
- * Change the comment reply link to use 'Reply to [Author First Name]'
- */
-function independent_publisher_author_comment_reply_link( $link, $args, $comment ) {
+if ( ! function_exists( 'independent_publisher_author_comment_reply_link' ) ) :
+	/*
+	 * Change the comment reply link to use 'Reply to [Author First Name]'
+	 */
+	function independent_publisher_author_comment_reply_link( $link, $args, $comment ) {
 
-	$comment = get_comment( $comment );
+		$comment = get_comment( $comment );
 
-	// If no comment author is blank, use 'Anonymous'
-	if ( empty( $comment->comment_author ) ) {
-		if ( ! empty( $comment->user_id ) ) {
-			$user   = get_userdata( $comment->user_id );
-			$author = $user->user_login;
+		// If no comment author is blank, use 'Anonymous'
+		if ( empty( $comment->comment_author ) ) {
+			if ( ! empty( $comment->user_id ) ) {
+				$user   = get_userdata( $comment->user_id );
+				$author = $user->user_login;
+			}
+			else {
+				$author = __( 'Anonymous', 'independent_publisher' );
+			}
 		}
 		else {
-			$author = __( 'Anonymous', 'independent_publisher' );
+			$author = $comment->comment_author;
 		}
-	}
-	else {
-		$author = $comment->comment_author;
-	}
 
-	// If the user provided more than a first name, use only first name
-	if ( strpos( $author, ' ' ) ) {
-		$author = substr( $author, 0, strpos( $author, ' ' ) );
+		// If the user provided more than a first name, use only first name
+		if ( strpos( $author, ' ' ) ) {
+			$author = substr( $author, 0, strpos( $author, ' ' ) );
+		}
+
+		// Replace Reply Link with "Reply to <Author First Name>"
+		$reply_link_text = $args['reply_text'];
+		$link            = str_replace( $reply_link_text, 'Reply to ' . $author, $link );
+
+		return $link;
 	}
-
-	// Replace Reply Link with "Reply to <Author First Name>"
-	$reply_link_text = $args['reply_text'];
-	$link            = str_replace( $reply_link_text, 'Reply to ' . $author, $link );
-
-	return $link;
-}
+endif;
 
 add_filter( 'comment_reply_link', 'independent_publisher_author_comment_reply_link', 420, 4 );
 
-/**
- * Register font-awesome style sheet.
- */
-add_action( 'wp_enqueue_scripts', 'register_font_awesome_style' );
-function register_font_awesome_style() {
-	wp_register_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css', array(), '3.2.1' );
-	wp_enqueue_style( 'font-awesome' );
-}
 
-/*
- * Adds support for showing Subscribe to Comments Reloaded options after comment form fields
- */
-if ( function_exists( 'subscribe_reloaded_show' ) ) {
-	if ( get_option( 'subscribe_reloaded_show_subscription_box', 'yes' ) !== 'yes' ) {
-		add_action( 'comment_form_logged_in_after', 'subscribe_reloaded_show' );
-		add_action( 'comment_form_after_fields', 'subscribe_reloaded_show' );
+if ( ! function_exists( 'independent_publisher_comment_form_args' ) ) :
+	/**
+	 * Arguments for comment_form()
+	 *
+	 * @return array
+	 */
+	function independent_publisher_comment_form_args() {
+
+		if ( ! is_user_logged_in() ) {
+			$comment_notes_before = '';
+			$comment_notes_after  = '';
+		}
+		else {
+			$comment_notes_before = '';
+			$comment_notes_after  = '';
+		}
+
+		$user      = wp_get_current_user();
+		$commenter = wp_get_current_commenter();
+		$req       = get_option( 'require_name_email' );
+		$aria_req  = ( $req ? " aria-required='true'" : '' );
+
+		$args = array(
+			'id_form'              => 'commentform',
+			'id_submit'            => 'submit',
+			'title_reply'          => __( '', 'independent_publisher' ),
+			'title_reply_to'       => __( 'Leave a Reply for %s', 'independent_publisher' ),
+			'cancel_reply_link'    => __( 'Cancel Reply', 'independent_publisher' ),
+			'label_submit'         => __( 'Submit Comment', 'independent_publisher' ),
+
+			'must_log_in'          => '<p class="must-log-in">' .
+					sprintf(
+						__( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+						wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
+					) . '</p>',
+
+			'logged_in_as'         => '<p class="logged-in-as">' .
+					sprintf(
+						__( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+						admin_url( 'profile.php' ),
+						$user->display_name,
+						wp_logout_url( apply_filters( 'the_permalink', get_permalink() ) )
+					) . '</p>',
+
+			'comment_notes_before' => $comment_notes_before,
+
+			'comment_notes_after'  => $comment_notes_after,
+
+			'fields'               => apply_filters( 'comment_form_default_fields', array(
+					'author' =>
+							'<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent_publisher' ) . '</label>' .
+							( $req ? '' : '' ) .
+							'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+							'"' . $aria_req . ' /></p>',
+
+					'email'  =>
+							'<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent_publisher' ) . '</label>' .
+							( $req ? '' : '' ) .
+							'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
+							'"' . $aria_req . ' /></p>',
+
+					'url'    =>
+							'<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent_publisher' ) . '</label>' .
+							'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+							'" /></p>',
+				)
+			),
+		);
+
+		return $args;
 	}
-}
+endif;
 
-/*
- * Adds support for showing WP Comment Subscriptions plugin options after comment form fields
- */
-if ( function_exists( 'wp_comment_subscriptions_show' ) ) {
-	if ( get_option( 'wp_comment_subscriptions_show_subscription_box', 'yes' ) !== 'yes' ) {
-		add_action( 'comment_form_logged_in_after', 'wp_comment_subscriptions_show' );
-		add_action( 'comment_form_after_fields', 'wp_comment_subscriptions_show' );
+if ( ! function_exists( 'independent_publisher_remove_textarea' ) ) :
+	/**
+	 * Move the comment form textarea above the comment fields
+	 */
+	function independent_publisher_remove_textarea( $defaults ) {
+		$defaults['comment_field'] = '';
+		return $defaults;
 	}
-}
-
-/**
- * Arguments for comment_form()
- *
- * @return array
- */
-function independent_publisher_comment_form_args() {
-
-	if ( ! is_user_logged_in() ) {
-		$comment_notes_before = '';
-		$comment_notes_after  = '';
-	}
-	else {
-		$comment_notes_before = '';
-		$comment_notes_after  = '';
-	}
-
-	$user      = wp_get_current_user();
-	$commenter = wp_get_current_commenter();
-	$req       = get_option( 'require_name_email' );
-	$aria_req  = ( $req ? " aria-required='true'" : '' );
-
-	$args = array(
-		'id_form'              => 'commentform',
-		'id_submit'            => 'submit',
-		'title_reply'          => __( '', 'independent_publisher' ),
-		'title_reply_to'       => __( 'Leave a Reply for %s', 'independent_publisher' ),
-		'cancel_reply_link'    => __( 'Cancel Reply', 'independent_publisher' ),
-		'label_submit'         => __( 'Submit Comment', 'independent_publisher' ),
-
-		'must_log_in'          => '<p class="must-log-in">' .
-				sprintf(
-					__( 'You must be <a href="%s">logged in</a> to post a comment.' ),
-					wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
-				) . '</p>',
-
-		'logged_in_as'         => '<p class="logged-in-as">' .
-				sprintf(
-					__( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
-					admin_url( 'profile.php' ),
-					$user->display_name,
-					wp_logout_url( apply_filters( 'the_permalink', get_permalink() ) )
-				) . '</p>',
-
-		'comment_notes_before' => $comment_notes_before,
-
-		'comment_notes_after'  => $comment_notes_after,
-
-		'fields'               => apply_filters( 'comment_form_default_fields', array(
-				'author' =>
-						'<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent_publisher' ) . '</label>' .
-						( $req ? '' : '' ) .
-						'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-						'"' . $aria_req . ' /></p>',
-
-				'email'  =>
-						'<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent_publisher' ) . '</label>' .
-						( $req ? '' : '' ) .
-						'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
-						'"' . $aria_req . ' /></p>',
-
-				'url'    =>
-						'<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent_publisher' ) . '</label>' .
-						'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-						'" /></p>',
-			)
-		),
-	);
-
-	return $args;
-}
-
-/**
- * Move the comment form textarea above the comment fields
- */
-function independent_publisher_remove_textarea( $defaults ) {
-	$defaults['comment_field'] = '';
-	return $defaults;
-}
-
-function independent_publisher_add_textarea() {
-	echo '<div id="main-reply-title"><h3>Share a Comment</h3></div>';
-	echo '<div class="comment-form-reply-title"><p>Comment</p></div>';
-	echo '<p class="comment-form-comment" id="comment-form-field"><textarea id="comment" name="comment" cols="60" rows="6" aria-required="true"></textarea></p>';
-}
-
+endif;
 add_filter( 'comment_form_defaults', 'independent_publisher_remove_textarea' );
+
+if ( ! function_exists( 'independent_publisher_add_textarea' ) ) :
+	/**
+	 * Recreates the comment form textarea HTML for reinclusion in comment form
+	 */
+	function independent_publisher_add_textarea() {
+		echo '<div id="main-reply-title"><h3>Share a Comment</h3></div>';
+		echo '<div class="comment-form-reply-title"><p>Comment</p></div>';
+		echo '<p class="comment-form-comment" id="comment-form-field"><textarea id="comment" name="comment" cols="60" rows="6" aria-required="true"></textarea></p>';
+	}
+endif;
 add_action( 'comment_form_top', 'independent_publisher_add_textarea' );
 
-/**
- * Enqueue enhanced comment form JavaScript
- */
-function independent_publisher_enhanced_comment_form() {
-	wp_enqueue_script( 'enhanced-comment-form-js', get_template_directory_uri() . '/js/enhanced-comment-form.js', array( 'jquery' ), '1.0' );
-}
-
+if ( ! function_exists( 'independent_publisher_enhanced_comment_form' ) ) :
+	/**
+	 * Enqueue enhanced comment form JavaScript
+	 */
+	function independent_publisher_enhanced_comment_form() {
+		wp_enqueue_script( 'enhanced-comment-form-js', get_template_directory_uri() . '/js/enhanced-comment-form.js', array( 'jquery' ), '1.0' );
+	}
+endif;
 add_action( 'wp_enqueue_scripts', 'independent_publisher_enhanced_comment_form' );
 
-/**
- * Enqueue Site Logo Icon JavaScript if Multi-Author Site enabled
- */
-function independent_publisher_site_logo_icon_js() {
-	if ( independent_publisher_is_multi_author_mode() )
-		wp_enqueue_script( 'site-logo-icon-js', get_template_directory_uri() . '/js/site-logo-icon.js', array( 'jquery' ), '1.0' );
-}
-
+if ( ! function_exists( 'independent_publisher_site_logo_icon_js' ) ):
+	/**
+	 * Enqueue Site Logo Icon JavaScript if Multi-Author Site enabled
+	 */
+	function independent_publisher_site_logo_icon_js() {
+		if ( independent_publisher_is_multi_author_mode() )
+			wp_enqueue_script( 'site-logo-icon-js', get_template_directory_uri() . '/js/site-logo-icon.js', array( 'jquery' ), '1.0' );
+	}
+endif;
 add_action( 'wp_enqueue_scripts', 'independent_publisher_site_logo_icon_js' );
 
-/**
- * Checks if Multi Author Mode is enabled. Disabled by default, but can be overridden in a child theme
- */
 if ( ! function_exists( 'independent_publisher_is_multi_author_mode' ) ):
+	/**
+	 * Checks if Multi Author Mode is enabled. Disabled by default, but can be overridden in a child theme
+	 */
 	function independent_publisher_is_multi_author_mode() {
 		return false;
 	}
 endif;
 
-/**
- * Point author links to home page when not using multi-author mode
- */
-function independent_publisher_single_author_link() {
-	return get_home_url();
-}
+if ( ! function_exists( 'independent_publisher_single_author_link' ) ):
+	/**
+	 * Point author links to home page when not using multi-author mode
+	 */
+	function independent_publisher_single_author_link() {
+		return get_home_url();
+	}
+endif;
 
-if ( ! independent_publisher_is_multi_author_mode() )
+/**
+ * Changes the link around the authors name to the home page when Multi Author Mode is disabled
+ */
+if ( ! independent_publisher_is_multi_author_mode() ) {
 	add_filter( 'author_link', 'independent_publisher_single_author_link', 10, 3 );
+}
 
 /**
  * Returns true if Post Excerpts option is enabled
@@ -466,27 +424,6 @@ function independent_publisher_has_full_width_featured_image() {
 }
 
 /**
- * Show Full Width Featured Image
- */
-function independent_publisher_full_width_featured_image() {
-	if ( is_single() && independent_publisher_has_full_width_featured_image() ) {
-		while ( have_posts() ) : the_post();
-
-			$full_width_featured_image = get_post_meta( get_the_ID(), 'full_width_featured_image' );
-
-			if ( $full_width_featured_image ) :
-
-				if ( has_post_thumbnail() ) :
-					the_post_thumbnail( array( 700, 700 ), array( 'class' => 'full-width-featured-image' ) );
-				endif;
-
-			endif;
-
-		endwhile; // end of the loop.
-	}
-}
-
-/**
  * Add full-width-featured-image to body class when displaying a post with Full Width Featured Image enabled
  */
 function independent_publisher_full_width_featured_image_body_class( $classes ) {
@@ -497,18 +434,6 @@ function independent_publisher_full_width_featured_image_body_class( $classes ) 
 }
 
 add_filter( 'body_class', 'independent_publisher_full_width_featured_image_body_class' );
-
-
-/**
- * Returns number of words in a post
- * @return string
- */
-function independent_publisher_post_word_count() {
-	global $post;
-	$content = get_post_field( 'post_content', $post->ID );
-	$count   = str_word_count( strip_tags( $content ) );
-	return number_format( $count );
-}
 
 /**
  * Add no-post-excerpts to body class when Post Excerpts option is disabled
@@ -549,30 +474,44 @@ function independent_publisher_post_excerpts_body_class( $classes ) {
 
 add_filter( 'body_class', 'independent_publisher_post_excerpts_body_class' );
 
-/**
- * Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
- */
-function independent_publisher_first_sentence_excerpt( $output ) {
-	global $post;
-	$content_post = get_post( $post->ID );
-
-	if ( ! $content_post->post_excerpt && independent_publisher_use_enhanced_excerpts() ) {
-		$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $content_post->post_content ), 2, PREG_SPLIT_DELIM_CAPTURE );
-		if ( ! empty( $strings[0] ) && ! empty( $strings[1] ) ) {
-			$excerpt = $strings[0] . $strings[1];
-			/**
-			 * If the post starts with an image containing a caption, remove the caption before generating the excerpt
-			 */
-			if ( strpos( $strings[0], '[caption' ) !== FALSE ) {
-				$excerpt = substr( $strings[0], strpos( $strings[0], '[/caption]' ) + 10, strlen( $strings[0] ) - ( strpos( $strings[0], '[/caption]' ) + 10 ) );
-				$excerpt .= $strings[1];
-			}
-			$output = apply_filters( 'the_content', $excerpt );
-		}
+if ( ! function_exists( 'independent_publisher_post_word_count' ) ):
+	/**
+	 * Returns number of words in a post
+	 * @return string
+	 */
+	function independent_publisher_post_word_count() {
+		global $post;
+		$content = get_post_field( 'post_content', $post->ID );
+		$count   = str_word_count( strip_tags( $content ) );
+		return number_format( $count );
 	}
+endif;
 
-	return $output;
-}
+if ( ! function_exists( 'independent_publisher_first_sentence_excerpt' ) ):
+	/**
+	 * Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
+	 */
+	function independent_publisher_first_sentence_excerpt( $output ) {
+		global $post;
+		$content_post = get_post( $post->ID );
+
+		if ( ! $content_post->post_excerpt && independent_publisher_use_enhanced_excerpts() ) {
+			$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $content_post->post_content ), 2, PREG_SPLIT_DELIM_CAPTURE );
+			if ( ! empty( $strings[0] ) && ! empty( $strings[1] ) ) {
+				$excerpt = $strings[0] . $strings[1];
+				/**
+				 * If the post starts with an image containing a caption, remove the caption before generating the excerpt
+				 */
+				if ( strpos( $strings[0], '[caption' ) !== FALSE ) {
+					$excerpt = substr( $strings[0], strpos( $strings[0], '[/caption]' ) + 10, strlen( $strings[0] ) - ( strpos( $strings[0], '[/caption]' ) + 10 ) );
+					$excerpt .= $strings[1];
+				}
+				$output = apply_filters( 'the_content', $excerpt );
+			}
+		}
+		return $output;
+	}
+endif;
 
 add_filter( 'the_excerpt', 'independent_publisher_first_sentence_excerpt' );
 
@@ -687,17 +626,19 @@ function independent_publisher_is_not_first_post_full_content() {
 	return false;
 }
 
-/**
- * Strip footnotes (<sup></sup>) from post content
- */
-function independent_publisher_strip_footnotes( $content ) {
+if(!function_exists('independent_publisher_strip_footnotes')):
+	/**
+	 * Strip footnotes (<sup></sup>) from post content
+	 */
+	function independent_publisher_strip_footnotes( $content ) {
 
-	// This creates the same output as the_content()
-	$content = apply_filters( 'the_content', $content );
-	$content = str_replace( ']]>', ']]&gt;', $content );
+		// This creates the same output as the_content()
+		$content = apply_filters( 'the_content', $content );
+		$content = str_replace( ']]>', ']]&gt;', $content );
 
-	return preg_replace( '!<sup\s+id="fnref.*?">.*?</sup>!is', '', $content );
-}
+		return preg_replace( '!<sup\s+id="fnref.*?">.*?</sup>!is', '', $content );
+	}
+endif;
 
 /**
  * Add classes to article based on current theme settings

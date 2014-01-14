@@ -4,7 +4,7 @@
  * http://codex.wordpress.org/Custom_Headers
  *
  * @package Independent Publisher
- * @since   Independent Publisher 1.2.4
+ * @since   Independent Publisher 1.0
  */
 
 /**
