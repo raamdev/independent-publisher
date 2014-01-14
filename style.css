@@ -949,6 +949,12 @@ ol.commentlist .avatar {
 	margin-top: 5px;
 }
 
+.avatar {
+	border-radius: 95px;
+	-moz-border-radius: 95px;
+	-webkit-border-radius: 95px;
+}
+
 .comment-meta,
 .comment-meta a {
 	color: #b3b3b1;

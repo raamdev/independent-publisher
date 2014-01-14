@@ -78,7 +78,7 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 			<article id="comment-<?php comment_ID(); ?>" class="comment">
 				<footer>
 					<div class="comment-author vcard">
-						<?php echo get_avatar( $comment, 40 ); ?>
+						<?php echo get_avatar( $comment, 48 ); ?>
 						<?php printf( __( '%s <span class="says">says:</span>', 'independent_publisher' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 					</div>
 					<!-- .comment-author .vcard -->
