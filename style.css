@@ -897,6 +897,10 @@ object {
 	height: 50px;
 }
 
+#comment-nav-below {
+	margin-bottom: 50px;
+}
+
 ol.commentlist {
 	margin-left: 0px;
 	font-size: 90%;
