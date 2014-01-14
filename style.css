@@ -950,9 +950,9 @@ ol.commentlist .avatar {
 }
 
 .avatar {
-	border-radius: 95px;
-	-moz-border-radius: 95px;
-	-webkit-border-radius: 95px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
 }
 
 .comment-meta,
@@ -1243,8 +1243,10 @@ body {
 
 .site-logo img {
 	margin-bottom: 10px;
-	-webkit-border-radius: 95px;
-	border-radius: 95px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
 	max-width: 70px;
 	height: auto;
 }
@@ -1939,8 +1941,9 @@ table th {
 
 .author-archive-author-avatar img {
 	margin-bottom: 10px;
-	-webkit-border-radius: 95px;
-	border-radius: 95px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
 	max-width: 70px;
 	height: auto;
 }
