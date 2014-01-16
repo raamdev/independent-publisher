@@ -23,7 +23,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php // Displays full-width featured image on Single Posts if applicable ?>
 <?php independent_publisher_full_width_featured_image(); ?>
+
+<?php // Makes the Header Image a small icon floating in the top left corner when Multi Author Mode is enabled ?>
 <?php if ( independent_publisher_is_multi_author_mode() && is_single() ) : ?>
 	<div class="site-master-logo">
 		<?php if ( get_header_image() ) : ?>
@@ -33,16 +37,20 @@
 		<?php endif; ?>
 	</div>
 <?php endif; ?>
+
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		<?php if ( ! is_single() ) { ?>
+
+		<?php if ( ! is_single() ) { // Show Header Image, Site Title, and Site Tagline on everything except Single Pages?>
 			<?php independent_publisher_site_info(); ?>
-		<?php }
-		else { ?>
+		<?php
+		}
+		else { // Show post author info on Single Pages
+			?>
 			<?php independent_publisher_posted_author_card(); ?>
 		<?php } ?>
 
-		<?php if ( ! is_single() ) : ?>
+		<?php if ( ! is_single() ) : // Don't show main nav menu on single pages ?>
 			<nav role="navigation" class="site-navigation main-navigation">
 				<h1 class="assistive-text"><?php _e( 'Menu', 'independent_publisher' ); ?></h1>
 

@@ -104,7 +104,7 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 			</div>
 			<!-- .reply -->
 		</article><!-- #comment-## -->
-		<?php
+	<?php
 	}
 endif; // ends check for independent_publisher_comment()
 
@@ -112,23 +112,24 @@ if ( ! function_exists( 'independent_publisher_pings' ) ) :
 	/**
 	 * Creates a custom query for pingbacks/trackbacks (i.e., 'pings')
 	 * and displays them. Using this custom query instead of
-	 * wp_list_comments() allows us to show always show all pings,
+	 * wp_list_comments() allows us to always show all pings,
 	 * even when we're showing paginated comments.
 	 *
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_pings() {
-		$args = array(
+		$args        = array(
 			'post_id' => get_the_ID(),
-			'type' => 'pings'
+			'type'    => 'pings'
 		);
 		$pings_query = new WP_Comment_Query;
-		$pings = $pings_query->query( $args );
+		$pings       = $pings_query->query( $args );
 
 		if ( $pings ) {
-			foreach ( $pings as $ping ) { ?>
-				<li <?php comment_class('',$ping->comment_ID); ?> id="li-comment-<?php echo $ping->comment_ID ?>">
-				<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link($ping->comment_ID) ) ?>
+			foreach ( $pings as $ping ) {
+				?>
+				<li <?php comment_class( '', $ping->comment_ID ); ?> id="li-comment-<?php echo $ping->comment_ID ?>">
+				<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link( $ping->comment_ID ) ) ?>
 				<span> <?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), '  ', '' ) ?></span>
 			<?php
 			}

@@ -2,6 +2,8 @@
 /**
  * The Sidebar containing the main widget areas.
  *
+ * If you're looking for the main nav menu or the header image, see header.php.
+ *
  * @package Independent Publisher
  * @since   Independent Publisher 1.0
  */
