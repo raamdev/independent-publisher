@@ -438,7 +438,9 @@ if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 	 * @return string
 	 */
 	function independent_publisher_get_post_word_count() {
-		return sprintf( __( '<span class="sep"> | </span> <span>%1$s Words</span>', 'independent_publisher' ), independent_publisher_post_word_count() );
+		// Only include prefixed separator when we also have categories to show
+		$separator = ( independent_publisher_categorized_blog() ? '<span class="sep"> | </span> ' : '' );
+		return sprintf( __( $separator . '<span>%1$s Words</span>', 'independent_publisher' ), independent_publisher_post_word_count() );
 	}
 endif;
 
