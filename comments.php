@@ -26,9 +26,7 @@ if ( post_password_required() )
 <?php endif; ?>
 
 <div id="comments" class="comments-area">
-
 	<?php // You can start editing here -- including this comment! ?>
-
 	<?php if ( have_comments() && get_comments_number() > 0 ) : ?>
 
 		<?php if ( get_comments_number() > 10 ) : ?>
@@ -87,7 +85,7 @@ if ( post_password_required() )
 		<?php endif; ?>
 
 		<div id="share-comment-button-bottom">
-			<button><i class="icon-comment"></i>Share a comment</button>
+			<button><i class="icon-comment"></i><?php _e( 'Share a comment', 'independent_publisher' ); ?></button>
 		</div>
 		<div id="commentform-bottom"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
 	<?php endif; ?>
@@ -96,9 +94,9 @@ if ( post_password_required() )
 		<?php if ( count( $wp_query->comments_by_type['pings'] ) ) { ?>
 			<div id="pinglist">
 				<ul class="pinglist">
-					<li class="pinglist-title">Readers who shared this</li>
-					<?php wp_list_comments( 'type=pings&callback=independent_publisher_ping' ); ?>
-					<li class="pinglist-title">Thank you!</li>
+					<li class="pinglist-title"><?php _e( 'Readers who shared this', 'independent_publisher' ); ?></li>
+					<?php independent_publisher_pings(); ?>
+					<li class="pinglist-title"><?php _e( 'Thank you!', 'independent_publisher' ); ?></li>
 				</ul>
 			</div>
 		<?php } // end if ( count($wp_query->comments_by_type['pings']))?>

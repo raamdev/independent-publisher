@@ -69,67 +69,72 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment;
-		if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
-			<li class="post pingback">
-			<p><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), ' ' ); ?></p>
-		<?php else : ?>
-			<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-			<article id="comment-<?php comment_ID(); ?>" class="comment">
-				<footer>
-					<div class="comment-author vcard">
-						<?php echo get_avatar( $comment, 48 ); ?>
-						<?php printf( __( '%s <span class="says">says:</span>', 'independent_publisher' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
-					</div>
-					<!-- .comment-author .vcard -->
-					<?php if ( $comment->comment_approved == '0' ) : ?>
-						<em><?php _e( 'Your comment is awaiting moderation.', 'independent_publisher' ); ?></em>
-						<br />
-					<?php endif; ?>
-
-					<div class="comment-meta commentmetadata">
-						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-							<time pubdate datetime="<?php comment_time( 'c' ); ?>">
-								<?php
-								/* translators: 1: date */
-								printf( __( '%1$s', 'independent_publisher' ), get_comment_date() ); ?>
-							</time>
-						</a>
-						<?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), ' ' );
-						?>
-					</div>
-					<!-- .comment-meta .commentmetadata -->
-				</footer>
-
-				<div class="comment-content"><?php comment_text(); ?></div>
-
-				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+		$GLOBALS['comment'] = $comment; ?>
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+		<article id="comment-<?php comment_ID(); ?>" class="comment">
+			<footer>
+				<div class="comment-author vcard">
+					<?php echo get_avatar( $comment, 48 ); ?>
+					<?php printf( __( '%s <span class="says">says:</span>', 'independent_publisher' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div>
-				<!-- .reply -->
-			</article><!-- #comment-## -->
+				<!-- .comment-author .vcard -->
+				<?php if ( $comment->comment_approved == '0' ) : ?>
+					<em><?php _e( 'Your comment is awaiting moderation.', 'independent_publisher' ); ?></em>
+					<br />
+				<?php endif; ?>
 
+				<div class="comment-meta commentmetadata">
+					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+						<time pubdate datetime="<?php comment_time( 'c' ); ?>">
+							<?php
+							/* translators: 1: date */
+							printf( __( '%1$s', 'independent_publisher' ), get_comment_date() ); ?>
+						</time>
+					</a>
+					<?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), ' ' );
+					?>
+				</div>
+				<!-- .comment-meta .commentmetadata -->
+			</footer>
+
+			<div class="comment-content"><?php comment_text(); ?></div>
+
+			<div class="reply">
+				<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			</div>
+			<!-- .reply -->
+		</article><!-- #comment-## -->
 		<?php
-		endif;
 	}
 endif; // ends check for independent_publisher_comment()
 
-if ( ! function_exists( 'independent_publisher_ping' ) ) :
+if ( ! function_exists( 'independent_publisher_pings' ) ) :
 	/**
-	 * Template for pingbacks.
-	 *
-	 * Used as a callback by wp_list_comments() for displaying the pings.
+	 * Creates a custom query for pingbacks/trackbacks (i.e., 'pings')
+	 * and displays them. Using this custom query instead of
+	 * wp_list_comments() allows us to show always show all pings,
+	 * even when we're showing paginated comments.
 	 *
 	 * @since Independent Publisher 1.0
 	 */
-	function independent_publisher_ping( $comment ) {
-		$GLOBALS['comment'] = $comment; ?>
-		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
-		<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link() ) ?>
-		<span> <?php printf( __( '%1$s ', 'independent_publisher' ), get_comment_date( "Y-m-d" ), get_comment_time( "H:i:s" ) ) ?> <?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), '  ', '' ) ?></span>
-	<?php
+	function independent_publisher_pings() {
+		$args = array(
+			'post_id' => get_the_ID(),
+			'type' => 'pings'
+		);
+		$pings_query = new WP_Comment_Query;
+		$pings = $pings_query->query( $args );
+
+		if ( $pings ) {
+			foreach ( $pings as $ping ) { ?>
+				<li <?php comment_class('',$ping->comment_ID); ?> id="li-comment-<?php echo $ping->comment_ID ?>">
+				<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link($ping->comment_ID) ) ?>
+				<span> <?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), '  ', '' ) ?></span>
+			<?php
+			}
+		}
 	}
-endif; // ends check for independent_publisher_ping()
+endif; // ends check for independent_publisher_pings()
 
 if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 	/**
