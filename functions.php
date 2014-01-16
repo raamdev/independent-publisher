@@ -65,6 +65,11 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		set_user_setting( 'dfw_width', 700 );
 
 		/**
+		 * Set default value for Show Post Word Count theme option
+		 */
+		add_option( 'independent_publisher_general_options', array( 'show_post_word_count' => true ) );
+
+		/**
 		 * This theme uses wp_nav_menu() in one location.
 		 */
 		register_nav_menus( array(
