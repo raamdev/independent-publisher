@@ -74,7 +74,7 @@
 		<?php endif; ?>
 
 		<?php if ( ! post_password_required() && comments_open() ) : ?>
-			<?php if ( independent_publisher_is_not_first_post_full_content() ) : ?>
+			<?php if ( independent_publisher_is_not_first_post_full_content() && independent_publisher_categorized_blog() ) : ?>
 				<span class="sep"> | </span>
 			<?php endif; ?>
 			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent_publisher' ), __( '1 Comment', 'independent_publisher' ), __( '% Comments', 'independent_publisher' ) ); ?></span>
