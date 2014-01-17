@@ -175,8 +175,7 @@ blockquote {
 }
 
 blockquote cite {
-	color: #999;
-	font-size: 80%;
+	font-size: 70%;
 }
 
 blockquote cite:before {
@@ -713,8 +712,9 @@ img.aligncenter {
 	line-height: 1.4;
 }
 
-.format-aside .entry-content {
-	margin-top: 0;
+.format-aside .entry-content,
+.format-quote .entry-content{
+	margin-top: 1em;
 }
 
 .format-aside .entry-title-meta {
@@ -1839,10 +1839,15 @@ table th {
 		padding-right: 0;
 	}
 
-	.format-aside .entry-content {
-		font-size: 1em;
-		line-height: 36px;
+	.format-aside .entry-content,
+	.format-quote .entry-content {
+		font-size: 0.9em;
 		margin-bottom: 0;
+	}
+
+	.format-aside blockquote,
+	.format-quote blockquote {
+		margin-right: 0;
 	}
 
 	.single .entry-meta {

@@ -24,7 +24,7 @@
 		</div><!-- .entry-summary -->
 	<?php else : ?>
 		<div class="entry-content">
-			<?php if ( 'aside' === get_post_format() ) : // Do something special for Asides ?>
+			<?php if ( 'aside' === get_post_format() || 'quote' === get_post_format() ) : // Do something special for Asides and Quotes ?>
 
 				<?php // Asides might have footnotes, which don't display properly when linking Asides to themselves, so we strip <sup> here ?>
 				<?php $content = independent_publisher_strip_footnotes( get_the_content() ); ?>

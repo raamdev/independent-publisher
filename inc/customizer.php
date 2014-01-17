@@ -165,6 +165,7 @@ class IndependentPublisher_Customize {
 
 			<?php self::generate_css('body,input,select,textarea', 'color', 'text_color'); ?>
 			<?php self::generate_css('.format-aside .entry-content a, .format-aside .entry-content a:hover, .format-aside .entry-content a:visited, .format-aside .entry-content a:active, .format-aside .entry-content a:focus', 'color', 'text_color'); ?>
+			<?php self::generate_css('.format-quote .entry-content a, .format-quote .entry-content a:hover, .format-quote .entry-content a:visited, .format-quote .entry-content a:active, .format-quote .entry-content a:focus', 'color', 'text_color'); ?>
 			<?php self::generate_css('.post-excerpts .format-standard .entry-content a, .post-excerpts .format-standard .entry-content a:focus, .post-excerpts .format-standard .entry-content a:hover, .post-excerpts .format-standard .entry-content a:active, .post-excerpts .format-standard .entry-content a:visited', 'color', 'text_color'); ?>
 
 			/* Link Color */
@@ -193,13 +194,13 @@ class IndependentPublisher_Customize {
 			<?php self::generate_css('.site-description', 'color', 'primary_meta_text_color'); ?>
 			<?php self::generate_css('.site-published-date a, .site-published-date a:hover, .site-published-date a:visited, .site-published-date a:focus, .site-published-date a:active', 'color', 'primary_meta_text_color'); ?>
 			<?php self::generate_css('.site-published-location a, .site-published-location a:hover, .site-published-location a:visited, .site-published-location a:focus, .site-published-location a:active', 'color', 'primary_meta_text_color'); ?>
+			<?php self::generate_css('blockquote cite', 'color', 'primary_meta_text_color'); ?>
 
 			/* Secondary Meta Text Color */
 
 			<?php self::generate_css('.comment-form-author label, .comment-form-email label, .comment-form-url label, .comment-form-comment label, .comment-form-subscriptions label, .comment-form-reply-title', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.entry-title-meta, .entry-title-meta a, .entry-title-meta a:hover, .entry-title-meta a:visited, .entry-title-meta a:focus, .entry-title-meta a:active', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.entry-meta, .entry-meta a, .entry-meta a:hover', 'color', 'secondary_meta_text_color'); ?>
-			<?php self::generate_css('blockquote cite', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.format-aside .entry-format, .format-quote .entry-format, .format-chat .entry-format, .format-status .entry-format, .format-image .entry-format, .format-link .entry-format, .format-gallery .entry-forma', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.gallery-caption', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.comment-meta, .comment-meta a', 'color', 'secondary_meta_text_color'); ?>
