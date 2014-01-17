@@ -500,18 +500,22 @@ if ( ! function_exists( 'independent_publisher_first_sentence_excerpt' ) ):
 		global $post;
 		$content_post = get_post( $post->ID );
 
+		// Only generate a one-sentence excerpt if there is no excerpt set and One Sentence Excerpts is enabled
 		if ( ! $content_post->post_excerpt && independent_publisher_use_enhanced_excerpts() ) {
-			$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $content_post->post_content ), 2, PREG_SPLIT_DELIM_CAPTURE );
+			$post_content = $content_post->post_content;
+
+			// If the post starts with an image containing a caption, remove the caption before generating the excerpt
+			if ( strpos( $post_content, '[caption' ) !== FALSE ) {
+				$post_content = substr( $post_content, strpos( $post_content, '[/caption]' ) + 10, strlen( $post_content ) - ( strpos( $post_content, '[/caption]' ) + 10 ) );
+			}
+
+			// Get the first sentence in $post_content
+			$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $post_content ), 2, PREG_SPLIT_DELIM_CAPTURE );
+
+			// $strings[0] is the first sentence and $strings[1] is the punctuation character at the end
 			if ( ! empty( $strings[0] ) && ! empty( $strings[1] ) ) {
 				$excerpt = $strings[0] . $strings[1];
-				/**
-				 * If the post starts with an image containing a caption, remove the caption before generating the excerpt
-				 */
-				if ( strpos( $strings[0], '[caption' ) !== FALSE ) {
-					$excerpt = substr( $strings[0], strpos( $strings[0], '[/caption]' ) + 10, strlen( $strings[0] ) - ( strpos( $strings[0], '[/caption]' ) + 10 ) );
-					$excerpt .= $strings[1];
-				}
-				$output = apply_filters( 'the_content', $excerpt );
+				$output  = apply_filters( 'the_content', $excerpt );
 			}
 		}
 		return $output;
@@ -631,7 +635,7 @@ function independent_publisher_is_not_first_post_full_content() {
 	return false;
 }
 
-if(!function_exists('independent_publisher_strip_footnotes')):
+if ( ! function_exists( 'independent_publisher_strip_footnotes' ) ):
 	/**
 	 * Strip footnotes (<sup></sup>) from post content
 	 */
