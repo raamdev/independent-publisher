@@ -1984,3 +1984,115 @@ table th {
 .search .wp-audio-shortcode {
 	margin-bottom: 20px;
 }
+
+/**
+ * Styles to apply when Use Single Column Layout option is enabled.
+ * (These should closely resemble the styles applied by the
+ * @media (max-width: 1200px) rules above.)
+ */
+
+.single-column-layout .site-header {
+	text-align: center;
+	margin-left: 0;
+	float: none;
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.single-column-layout.single .site-header {
+	display: none;
+}
+
+.single-column-layout.single .entry-meta {
+	border-top: none;
+}
+
+.single-column-layout .site {
+	margin-top: 80px;
+}
+
+.single-column-layout .post-author-bottom {
+	display: block;
+}
+
+.single-column-layout .entry-meta {
+	border-bottom: none;
+}
+
+.single-column-layout .entry-title-meta-author {
+	display: inline-block;
+}
+
+.single-column-layout .widget-area {
+	float: right;
+	width: 100%;
+	margin-left: 0;
+	text-align: inherit;
+	padding-top: 40px;
+}
+
+.single-column-layout .widget-area ul li a {
+	display: inline-block;
+}
+
+.single-column-layout #nav-below {
+	margin-top: 40px;
+}
+
+.single-column-layout .single .entry-meta {
+	border-top: none;
+}
+
+.single-column-layout .page article {
+	padding: 40px 0 40px 0;
+}
+
+.single-column-layout .main-navigation {
+	clear: none;
+}
+
+.single-column-layout .site-navigation {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.single-column-layout #nav-below .site-navigation {
+	margin-top: 40px;
+}
+
+.single-column-layout .main-navigation li {
+	display: inline-block;
+	padding: 5px 10px;
+	width: auto;
+}
+
+.single-column-layout #masthead .site-title,
+.single-column-layout #masthead .site-description {
+	clear: none;
+	margin-left: 0;
+	margin-top: 0;
+}
+
+.single-column-layout #masthead .site-title {
+	font-size: 24px;
+	font-style: normal;
+	padding-top: 15px;
+	padding-left: 0;
+}
+
+.single-column-layout #masthead .site-description {
+	padding-left: 0;
+	padding-top: 20px;
+}
+
+.single-column-layout #masthead .site-logo,
+.single-column-layout #masthead .site-logo img {
+	float: none;
+	max-width: 100px;
+}
+
+.single-column-layout .entry-title-meta-author {
+	display: inline-block;
+}

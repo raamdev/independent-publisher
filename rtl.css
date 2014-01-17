@@ -1,6 +1,6 @@
 /*
 Theme Name: Independent Publisher
-Theme URI: http://independentpublisher.me
+Theme URI: http://independentpublisher.me/
 Author: Raam Dev
 Author URI: http://raamdev.com
 Description: A beautiful reader-focused WordPress theme, for you.
@@ -184,7 +184,7 @@ blockquote cite:before {
 
 blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	font-weight: normal;
-	font-family: Georgia, serif;
+	font-family: Georgia, "Bitstream Charter", serif;
 }
 
 address {
@@ -294,13 +294,13 @@ input[type="submit"] {
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
 	background: #57ad68; /* Old browsers */
-	background: -moz-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* FF3.6+ */
+	background: -moz-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #57ad68), color-stop(100%, #57ad68)) !important; /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* IE10+ */
-	background: linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* W3C */
-	color: white;
+	background: -webkit-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* IE10+ */
+	background: linear-gradient(top, #57ad68 60%, #57ad68 100%); /* W3C */
+	color: #ffffff;
 	font-size: 15px;
 	font-size: 1.5rem;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57ad68', endColorstr='#57ad68', GradientType=0) !important; /* IE6-9 */
@@ -313,14 +313,15 @@ button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
+	color: #ffffff;
 	border-color: #bbb #bbb #aaa #bbb;
 	background: #65B675; /* Old browsers */
-	background: -moz-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* FF3.6+ */
+	background: -moz-linear-gradient(top, #65B675 60%, #65B675 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #65B675), color-stop(100%, #65B675)) !important; /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* IE10+ */
-	background: linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* W3C */
+	background: -webkit-linear-gradient(top, #65B675 60%, #65B675 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #65B675 60%, #65B675 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #65B675 60%, #65B675 100%); /* IE10+ */
+	background: linear-gradient(top, #65B675 60%, #65B675 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#65B675', endColorstr='#65B675', GradientType=0); /* IE6-9 */
 }
 
@@ -564,7 +565,7 @@ img.aligncenter {
 
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0 0 0;
 }
 
 .entry-content > .sharedaddy {
@@ -603,7 +604,10 @@ img.aligncenter {
 	width: 100%;
 }
 
-.single .wp-post-image {
+.single .wp-post-image,
+.page .wp-post-image,
+.blog .wp-post-image,
+.archive .wp-post-image {
 	margin-bottom: 20px;
 }
 
@@ -613,17 +617,15 @@ img.aligncenter {
 	margin-bottom: 0;
 }
 
+.post-excerpts .sticky h1.entry-title,
+.enhanced-excerpts .sticky h1.entry-title {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
 .post-excerpts .entry-content,
 .enhanced-excerpts .entry-content {
 	margin-top: 10px;
-}
-
-.enhanced-excerpts .format-standard .entry-content p {
-	margin-bottom: 1em;
-}
-
-.enhanced-excerpts .format-standard .entry-meta {
-	text-align: right;
 }
 
 .enhanced-excerpts .enhanced-excerpt-read-more a {
@@ -635,17 +637,14 @@ img.aligncenter {
 	margin-top: 1em;
 }
 
-.show-full-content-first-post {
+#page .show-full-content-first-post {
 	padding-top: 0 !important;
 }
 
-.show-full-content-first-post h1.entry-title {
+.show-full-content-first-post h1.entry-title,
+.show-full-content-first-post-sticky h1.entry-title {
 	font-size: 2.5em;
 	margin-bottom: 20px;
-}
-
-.show-full-content-first-post .entry-content p {
-	margin-bottom: 1.5em !important;
 }
 
 .entry-content .subtitle {
@@ -656,7 +655,7 @@ img.aligncenter {
 	line-height: 1.2em;
 	margin-top: -5px;
 	margin-bottom: 1em;
-	letter-spacing: 0px;
+	letter-spacing: 0;
 }
 
 /* =Post Formats
@@ -698,7 +697,7 @@ img.aligncenter {
 .format-image .entry-format,
 .format-link .entry-format,
 .format-gallery .entry-format {
-	color: #999;
+	color: #b3b3b1;
 	font-weight: 300;
 }
 
@@ -721,8 +720,10 @@ img.aligncenter {
 	margin-bottom: 20px;
 }
 
-.format-aside a,
-.format-aside a:hover {
+.format-aside .entry-content a,
+.format-aside .entry-content a:hover,
+.format-quote .entry-content a,
+.format-quote .entry-content a:hover{
 	color: inherit;
 	text-decoration: none;
 }
@@ -739,10 +740,6 @@ img.aligncenter {
 .single-format-aside .entry-title,
 .single-format-quote .entry-title {
 	display: none;
-}
-
-.single-format-aside .entry-content {
-	margin-bottom: 100px;
 }
 
 .format-standard .entry-title {
@@ -815,7 +812,7 @@ img.size-full {
 
 .gallery-caption {
 	padding: 0 10px 10px 10px;
-	color: #999;
+	color: #b3b3b1;
 	font-size: 13px;
 }
 
@@ -868,6 +865,11 @@ object {
 /* =Comments
 ----------------------------------------------- */
 
+.bypostauthor > .comment-body .fn:before {
+	content: "\f408";
+	vertical-align: text-top;
+}
+
 #comments {
 	margin-bottom: 100px;
 }
@@ -895,6 +897,10 @@ object {
 
 #comments-template div.navigation {
 	height: 50px;
+}
+
+#comment-nav-below {
+	margin-bottom: 50px;
 }
 
 ol.commentlist {
@@ -949,9 +955,15 @@ ol.commentlist .avatar {
 	margin-top: 5px;
 }
 
+.avatar {
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
 .comment-meta,
 .comment-meta a {
-	color: #999;
+	color: #b3b3b1;
 	text-decoration: none;
 	font-size: 12px;
 }
@@ -1033,7 +1045,7 @@ ul.pinglist {
 }
 
 .pinglist-title {
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 }
 
 .pinglist a {
@@ -1062,7 +1074,7 @@ ul.taglist {
 }
 
 .taglist-title {
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 }
 
 .taglist a {
@@ -1083,18 +1095,6 @@ ul.taglist {
 
 .pingback {
 	position: relative;
-}
-
-.pingback > p:before {
-	position: absolute;
-	right: -31px;
-	color: #999;
-	content: "Ping!";
-	font-size: 10px;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
 }
 
 .form-allowed-tags {
@@ -1142,7 +1142,6 @@ ul.taglist {
 
 .comment-form-comment {
 	padding-left: 20px;
-	padding-right: 0;
 }
 
 #commentform input[type="submit"] {
@@ -1165,7 +1164,6 @@ ul.taglist {
 #commentform textarea {
 	padding: 10px;
 	margin: 0px;
-	font-size: 90%;
 	width: 98%;
 }
 
@@ -1191,7 +1189,6 @@ ul.taglist {
 #share-comment-button,
 #share-comment-button-bottom {
 	display: none;
-	text-align: left;
 }
 
 /* =Widgets
@@ -1211,7 +1208,7 @@ ul.taglist {
 .widget_rss .rss-date,
 .widget_rss li > cite,
 .widget_twitter .timesince {
-	color: #999;
+	color: #b3b3b1;
 	display: block;
 	font-size: 12px;
 }
@@ -1252,8 +1249,10 @@ body {
 
 .site-logo img {
 	margin-bottom: 10px;
-	-webkit-border-radius: 95px;
-	border-radius: 95px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
 	max-width: 70px;
 	height: auto;
 }
@@ -1272,7 +1271,7 @@ body {
 
 .site-description {
 	margin: 0 0 20px 0;
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 	font-size: 13px;
 	font-family: inherit;
 	line-height: 1.4;
@@ -1301,7 +1300,7 @@ body {
 
 .site-published-date {
 	margin: 5px 0 0 0;
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 	font-size: 12px;
 	font-family: inherit;
 	line-height: 2;
@@ -1311,13 +1310,13 @@ body {
 }
 
 .site-published-date a, .site-published-location a {
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 	text-decoration: none;
 }
 
 .site-published-location {
 	margin: 0 0 20px 0;
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 	font-size: 12px;
 	font-family: inherit;
 	line-height: 1.4;
@@ -1457,8 +1456,13 @@ h6 {
 	border-bottom: solid 1px #ddd;
 }
 
+article.first-post {
+	margin-top: 0;
+	padding-top: 0;
+}
+
 .entry-title a {
-	color: #404040;
+	color: #333332;
 	text-decoration: none;
 }
 
@@ -1492,6 +1496,7 @@ h6 {
 	font-family: sans-serif;
 	font-weight: 100;
 	font-style: normal;
+	text-align: left;
 }
 
 .entry-meta a:hover {
@@ -1526,11 +1531,6 @@ h6 {
 	position: relative;
 	margin-right: -220px;
 	text-align: left;
-}
-
-.single .site-header {
-	float: none;
-	position: absolute;
 }
 
 .site-content,
@@ -1568,7 +1568,7 @@ h6 {
 	clear: both;
 	margin-top: 100px;
 	margin-bottom: 40px;
-	color: #999;
+	color: #b3b3b1;
 }
 
 .site-footer,
@@ -1594,7 +1594,6 @@ img#wpstats {
 table td {
 	padding: 4px 0;
 	border-bottom: solid 1px #eee;
-	font-weight: 300;
 }
 
 table th {
@@ -1927,12 +1926,14 @@ table th {
 /* Footnotes */
 
 .footnotes p,
-.blog .show-full-content-first-post .footnotes p {
-	margin-bottom: 0 !important;
+.blog .show-full-content-first-post .footnotes p,
+.blog .show-full-content-first-post-sticky .footnotes p {
+	margin-bottom: 0;
 }
 
 .footnotes,
-.blog .show-full-content-first-post .footnotes {
+.blog .show-full-content-first-post .footnotes,
+.blog .show-full-content-first-post-sticky .footnotes {
 	font-size: 80%;
 }
 
@@ -1942,7 +1943,8 @@ table th {
 	display: none;
 }
 
-.blog .show-full-content-first-post div.footnotes {
+.blog .show-full-content-first-post div.footnotes,
+.blog .show-full-content-first-post-sticky div.footnotes {
 	display: block;
 }
 
@@ -1950,8 +1952,9 @@ table th {
 
 .author-archive-author-avatar img {
 	margin-bottom: 10px;
-	-webkit-border-radius: 95px;
-	border-radius: 95px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
 	max-width: 70px;
 	height: auto;
 }
@@ -1968,9 +1971,128 @@ table th {
 }
 
 .author .archive-title a {
-	color: #404040;
+	color: #333332;
 }
 
 .author .archive-title a:hover {
 	text-decoration: none;
+}
+
+/* WP Audio Shortcode */
+.blog .wp-audio-shortcode,
+.archive .wp-audio-shortcode,
+.search .wp-audio-shortcode {
+	margin-bottom: 20px;
+}
+
+/**
+ * Styles to apply when Use Single Column Layout option is enabled.
+ * (These should closely resemble the styles applied by the
+ * @media (max-width: 1200px) rules above.)
+ */
+
+.single-column-layout .site-header {
+	text-align: center;
+	margin-right: 0;
+	float: none;
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.single-column-layout.single .site-header {
+	display: none;
+}
+
+.single-column-layout.single .entry-meta {
+	border-top: none;
+}
+
+.single-column-layout .site {
+	margin-top: 80px;
+}
+
+.single-column-layout .post-author-bottom {
+	display: block;
+}
+
+.single-column-layout .entry-meta {
+	border-bottom: none;
+}
+
+.single-column-layout .entry-title-meta-author {
+	display: inline-block;
+}
+
+.single-column-layout .widget-area {
+	float: right;
+	width: 100%;
+	margin-right: 0;
+	text-align: inherit;
+	padding-top: 40px;
+}
+
+.single-column-layout .widget-area ul li a {
+	display: inline-block;
+}
+
+.single-column-layout #nav-below {
+	margin-top: 40px;
+}
+
+.single-column-layout .single .entry-meta {
+	border-top: none;
+}
+
+.single-column-layout .page article {
+	padding: 40px 0 40px 0;
+}
+
+.single-column-layout .main-navigation {
+	clear: none;
+}
+
+.single-column-layout .site-navigation {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.single-column-layout #nav-below .site-navigation {
+	margin-top: 40px;
+}
+
+.single-column-layout .main-navigation li {
+	display: inline-block;
+	padding: 5px 10px;
+	width: auto;
+}
+
+.single-column-layout #masthead .site-title,
+.single-column-layout #masthead .site-description {
+	clear: none;
+	margin-right: 0;
+	margin-top: 0;
+}
+
+.single-column-layout #masthead .site-title {
+	font-size: 24px;
+	font-style: normal;
+	padding-top: 15px;
+	padding-left: 0;
+}
+
+.single-column-layout #masthead .site-description {
+	padding-left: 0;
+	padding-top: 20px;
+}
+
+.single-column-layout #masthead .site-logo,
+.single-column-layout #masthead .site-logo img {
+	float: none;
+	max-width: 100px;
+}
+
+.single-column-layout .entry-title-meta-author {
+	display: inline-block;
 }

@@ -417,6 +417,17 @@ function independent_publisher_show_widgets_on_single_pages() {
 }
 
 /**
+ * Returns true if Use Single Column Layout option is enabled
+ */
+function independent_publisher_use_single_column_layout() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['single_column_layout'] ) && $independent_publisher_general_options['single_column_layout'] )
+		return true;
+	else
+		return false;
+}
+
+/**
  * Returns true if the the current post has Full Width Featured Image enabled
  */
 function independent_publisher_has_full_width_featured_image() {
@@ -439,6 +450,18 @@ function independent_publisher_full_width_featured_image_body_class( $classes ) 
 }
 
 add_filter( 'body_class', 'independent_publisher_full_width_featured_image_body_class' );
+
+/**
+ * Add single-column-layout to body class when Use Single Column Layout option enabled
+ */
+function independent_publisher_single_column_layout_body_class( $classes ) {
+	if ( independent_publisher_use_single_column_layout() ) {
+		$classes[] = 'single-column-layout';
+	}
+	return $classes;
+}
+
+add_filter( 'body_class', 'independent_publisher_single_column_layout_body_class' );
 
 /**
  * Add no-post-excerpts to body class when Post Excerpts option is disabled

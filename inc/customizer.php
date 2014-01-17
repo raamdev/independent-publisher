@@ -81,6 +81,19 @@ class IndependentPublisher_Customize {
 			'type'     => 'checkbox',
 		) );
 
+		// Use Single-Column Layout
+		$wp_customize->add_setting( 'independent_publisher_general_options[single_column_layout]', array(
+			'default'    => false,
+			'type'       => 'option',
+			'capability' => 'edit_theme_options',
+		) );
+		$wp_customize->add_control( 'single_column_layout', array(
+			'settings' => 'independent_publisher_general_options[single_column_layout]',
+			'label'    => __( 'Use Single-Column Layout', 'independent_publisher' ),
+			'section'  => 'independent_publisher_general_options',
+			'type'     => 'checkbox',
+		) );
+
 		// Color options
 
 		$colors = array();
