@@ -23,7 +23,8 @@
 
 <?php wp_footer(); ?>
 
-<?php independent_publisher_jetpack_sharing_buttons_css(); // Improves JetPack Sharing Buttons style when Sharing label is blank ?>
+<?php independent_publisher_jetpack_sharing_css(); // Improves JetPack Sharing Buttons style ?>
+<?php independent_publisher_jetpack_sharing_label_css(); // Improves JetPack Sharing Buttons style when Sharing label is blank ?>
 
 </body>
 </html>
