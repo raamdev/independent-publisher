@@ -461,3 +461,82 @@ if ( ! function_exists( 'independent_publisher_full_width_featured_image' ) ):
 		}
 	}
 endif;
+
+if ( ! function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
+	/**
+	 * Returns taxonomy archive stats and current page info for use in taxonomy archive descriptions
+	 */
+	function independent_publisher_taxonomy_archive_stats( $taxonomy = 'category' ) {
+		global $wp_query;
+		$total            = $wp_query->found_posts;
+		$total_pages      = $wp_query->max_num_pages; // The total number of pages
+		$current_page_num = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		$pagination_info  = '';
+		$stats_text       = '';
+
+		/**
+		 * Only show pagination info when there is more than 1 page
+		 */
+		if ( $total_pages > 1 ) {
+			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent_publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
+		}
+
+		if ( $taxonomy === 'category' ) {
+			$stats_text = sprintf( _n( 'There is one post filed in <em>%2$s</em>.', 'There are %1$s posts filed in <em>%2$s</em>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
+		}
+		elseif ( $taxonomy === 'post_tag' ) {
+			$stats_text = sprintf( _n( 'There is one post tagged <em>%2$s</em>.', 'There are %1$s posts tagged <em>%2$s</em>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
+		}
+		return $stats_text;
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
+	/**
+	 * Returns the Date Archive description
+	 */
+	function independent_publisher_date_archive_description() {
+		global $wp_query;
+		$total            = $wp_query->found_posts; // The total number of posts found for this query
+		$total_pages      = $wp_query->max_num_pages; // The total number of pages
+		$current_page_num = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		$pagination_info  = '';
+
+		/**
+		 * Allow overriding the date archive description with a custom description
+		 */
+		$date_archive_meta = apply_filters( 'custom_date_archive_meta', '' ); // @TODO Document custom_date_archive_meta filter
+
+		/**
+		 * Only show pagination info when there is more than 1 page
+		 */
+		if ( $total_pages > 1 ) {
+			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent_publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
+		}
+
+		/**
+		 * Only proceed if we're on the first page and the description has not been overridden via custom_date_archive_meta
+		 */
+		if ( trim( $date_archive_meta ) === '' ) {
+			if ( is_year() ) {
+				$date_archive_meta = sprintf( _n( 'There was one post published in %2$s.', 'There were %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ) );
+			}
+			else if ( is_day() ) {
+				$date_archive_meta = sprintf( _n( 'There was one post published on %2$s.', 'There were %1$s posts published on %2$s' . $pagination_info . '.', $total, 'independent_publisher' ),
+					number_format_i18n( $total ), get_the_date() );
+			}
+			else if ( is_month() ) {
+				$year = get_query_var( 'year' );
+				if ( empty( $year ) ) {
+					$date_archive_meta = sprintf( _n( 'There was one post published in the month of %2$s.', 'There were %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent_publisher' ),
+						number_format_i18n( $total ), get_the_date( 'F' ) );
+				}
+				else {
+					$date_archive_meta = sprintf( _n( 'There was one post published in %2$s %3$s.', 'There were %1$s posts published in %2$s %3$s' . $pagination_info . '.', $total, 'independent_publisher' ),
+						number_format_i18n( $total ), get_the_date( 'F' ), get_the_date( 'Y' ) );
+				}
+			}
+		}
+		return apply_filters( 'date_archive_meta', '<div class="intro-meta">' . $date_archive_meta . '</div>' );
+	}
+endif;

@@ -712,7 +712,7 @@ img.aligncenter {
 }
 
 .format-aside .entry-content,
-.format-quote .entry-content{
+.format-quote .entry-content {
 	margin-top: 1em;
 }
 
@@ -723,7 +723,7 @@ img.aligncenter {
 .format-aside .entry-content a,
 .format-aside .entry-content a:hover,
 .format-quote .entry-content a,
-.format-quote .entry-content a:hover{
+.format-quote .entry-content a:hover {
 	color: inherit;
 	text-decoration: none;
 }
@@ -1456,6 +1456,19 @@ h6 {
 	border-bottom: solid 1px #ddd;
 }
 
+.archive .page-header {
+	border-bottom: 1px solid;
+	border-color: #b3b3b1;
+	padding-bottom: 40px;
+	margin-bottom: 80px;
+}
+
+.archive .page-title,
+.archive .archive-title {
+	font-size: 3.5em;
+	margin-top: 0;
+}
+
 article.first-post {
 	margin-top: 0;
 	padding-top: 0;
@@ -1751,6 +1764,15 @@ table th {
 		float: none;
 		max-width: 100px;
 	}
+
+	.archive .page-header {
+		text-align: center;
+	}
+
+	.archive .page-title,
+	.archive .archive-title {
+		margin-top: 20px;
+	}
 }
 
 @media only screen and (max-width: 500px) {
@@ -1921,6 +1943,10 @@ table th {
 		margin-top: 0;
 	}
 
+	.archive .page-title,
+	.archive .archive-title {
+		font-size: 2.5em;
+	}
 }
 
 /* Footnotes */
@@ -1959,9 +1985,15 @@ table th {
 	height: auto;
 }
 
-.author .author-info {
-	border-bottom: 1px solid #ddd;
+.author .author-description {
+	margin-right: 120px;
+}
+
+.author div.author-bio {
+	border-bottom: 1px solid;
+	border-color: #b3b3b1;
 	padding-bottom: 40px;
+	margin-bottom: 80px;
 }
 
 .author .author-avatar img {
@@ -2095,4 +2127,13 @@ table th {
 
 .single-column-layout .entry-title-meta-author {
 	display: inline-block;
+}
+
+.single-column-layout.archive .page-header {
+	text-align: center;
+}
+
+.single-column-layout.archive .page-title,
+.single-column-layout.archive .archive-title {
+	margin-top: 20px;
 }

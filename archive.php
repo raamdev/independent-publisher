@@ -60,21 +60,39 @@ get_header(); ?>
 					</h1>
 					<?php
 					if ( is_category() ) {
-						// show an optional category description
+						// Show an optional category description
 						$category_description = category_description();
-						if ( ! empty( $category_description ) )
-							echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . '</div>' );
+
+						// Get some stats about this taxonomy to include in the description
+						$taxonomy_stats = apply_filters( 'independent_publisher_taxonomy_stats', independent_publisher_taxonomy_archive_stats( 'category' ) ); // @TODO Document independent_publisher_taxonomy_stats filter
+
+						if ( ! empty( $category_description ) ) { // show the description + the taxonomy stats
+							echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . $taxonomy_stats . '</div>' );
+						}
+						else { // there was description set, so let's just show some stats
+							echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $taxonomy_stats . '</div>' );
+						}
 
 					}
 					elseif ( is_tag() ) {
-						// show an optional tag description
+						// Show an optional tag description
 						$tag_description = tag_description();
-						if ( ! empty( $tag_description ) )
-							echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
+
+						// Get some stats about this taxonomy to include in the description
+						$taxonomy_stats = apply_filters( 'independent_publisher_taxonomy_stats', independent_publisher_taxonomy_archive_stats( 'post_tag' ) ); // @TODO Document independent_publisher_taxonomy_stats filter
+
+						if ( ! empty( $tag_description ) ) { // show the description + the taxonomy stats
+							echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . $taxonomy_stats . '</div>' );
+						}
+						else { // there was description set, so let's just show some stats
+							echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $taxonomy_stats . '</div>' );
+						}
+					}
+					elseif ( is_day() || is_month() || is_year() ) {
+						echo independent_publisher_date_archive_description();
 					}
 					?>
 				</header><!-- .page-header -->
-
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
