@@ -21,11 +21,7 @@ get_header(); ?>
 					comments_template( '', true );
 				?>
 
-				<?php if ( is_single() && function_exists( 'wp_related_posts' ) ) : ?>
-					<div id="further-reading">
-						<?php do_action( 'erp-show-related-posts', array( 'title' => 'Further Reading', 'num_to_display' => 5, 'no_rp_text' => 'No Related Posts Found' ) ); ?>
-					</div>
-				<?php endif; ?>
+				<?php do_action( 'independent_publisher_before_post_bottom_tag_list' ); // @TODO document independent_publisher_before_post_bottom_tag_list action ?>
 
 				<?php if ( get_the_tag_list() ) : ?>
 					<div id="taglist">

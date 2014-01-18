@@ -28,7 +28,7 @@
 	<?php independent_publisher_posted_author_bottom_card() ?>
 
 	<footer class="entry-meta">
-		<?php do_action( 'independent_publisher_entry_meta' ); ?>
+		<?php do_action( 'independent_publisher_entry_meta_top' ); // @TODO Document independent_publisher_entry_meta_top action ?>
 
 		<?php if ( comments_open() ) : ?>
 			<div id="share-comment-button">
