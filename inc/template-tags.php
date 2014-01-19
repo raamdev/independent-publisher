@@ -69,7 +69,7 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment;
+		$GLOBALS['comment']    = $comment;
 		$comment_content_class = ''; // Used to style the comment-content differently when comment is awaiting moderation
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
@@ -79,7 +79,7 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 					<?php echo get_avatar( $comment, 48 ); ?>
 					<?php printf( sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 					<?php if ( $comment->comment_approved == '0' ) : ?>
-							<?php $comment_content_class = "unapproved"; ?>
+						<?php $comment_content_class = "unapproved"; ?>
 						<em><?php _e( ' - Your comment is awaiting moderation.', 'independent_publisher' ); ?></em>
 					<?php endif; ?>
 				</div>
@@ -539,5 +539,14 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 			}
 		}
 		return apply_filters( 'date_archive_meta', '<div class="intro-meta">' . $date_archive_meta . '</div>' );
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_min_comments_bottom_share_button' ) ):
+	/**
+	 * Returns the minimum number of comments that must exist for the bottom 'Share a comment' button to appear
+	 */
+	function independent_publisher_min_comments_bottom_share_button() {
+		return 4;
 	}
 endif;
