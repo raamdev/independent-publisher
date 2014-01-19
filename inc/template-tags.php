@@ -550,3 +550,12 @@ if ( ! function_exists( 'independent_publisher_min_comments_bottom_share_button'
 		return 4;
 	}
 endif;
+
+if ( ! function_exists( 'independent_publisher_min_comments_comment_title' ) ):
+	/**
+	 * Returns the minimum number of comments that must exist for the comments title to appear
+	 */
+	function independent_publisher_min_comments_comment_title() {
+		return 10;
+	}
+endif;

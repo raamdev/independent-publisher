@@ -29,7 +29,7 @@ if ( post_password_required() )
 	<?php // You can start editing here -- including this comment! ?>
 	<?php if ( have_comments() && get_comments_number() > 0 ) : ?>
 
-		<?php if ( get_comments_number() > 10 ) : ?>
+		<?php if ( get_comments_number() > independent_publisher_min_comments_comment_title() ) : ?>
 			<h2 class="comments-title">
 				<i class="icon-comments"></i>
 				<?php
