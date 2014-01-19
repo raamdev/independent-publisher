@@ -78,7 +78,7 @@ if ( post_password_required() )
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'independent_publisher' ); ?></p>
 	<?php endif; ?>
 
-	<?php if ( comments_open() && get_comments_number() > 10 ) : ?>
+	<?php if ( comments_open() && get_comments_number() > 4 ) : ?>
 
 		<?php do_action( 'independent_publisher_before_bottom_share_comment_button' ); // @TODO document independent_publisher_before_bottom_share_comment_button action ?>
 
