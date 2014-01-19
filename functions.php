@@ -373,11 +373,11 @@ function independent_publisher_use_post_excerpts() {
 }
 
 /**
- * Returns true if One-Sentence Excerpts option is enabled
+ * Returns true if Generate One-Sentence Excerpts option is enabled
  */
-function independent_publisher_use_enhanced_excerpts() {
+function independent_publisher_generate_one_sentence_excerpts() {
 	$independent_publisher_excerpt_options = get_option( 'independent_publisher_excerpt_options' );
-	if ( isset( $independent_publisher_excerpt_options['excerpts'] ) && $independent_publisher_excerpt_options['excerpts'] == '2' )
+	if ( isset( $independent_publisher_excerpt_options['generate_one_sentence_excerpts'] ) && $independent_publisher_excerpt_options['generate_one_sentence_excerpts'] )
 		return true;
 	else
 		return false;
@@ -468,7 +468,7 @@ add_filter( 'body_class', 'independent_publisher_single_column_layout_body_class
  */
 function independent_publisher_no_post_excerpts_body_class( $classes ) {
 	if ( ! independent_publisher_use_post_excerpts()
-			&& ! independent_publisher_use_enhanced_excerpts()
+			&& ! independent_publisher_generate_one_sentence_excerpts()
 			&& ! is_singular()
 	) {
 		$classes[] = 'no-post-excerpts';
@@ -482,7 +482,7 @@ add_filter( 'body_class', 'independent_publisher_no_post_excerpts_body_class' );
  * Add enhanced-excerpts to body class when Use Enhanced Excerpts option enabled
  */
 function independent_publisher_enhanced_excerpts_body_class( $classes ) {
-	if ( independent_publisher_use_enhanced_excerpts() && ! is_singular() ) {
+	if ( independent_publisher_generate_one_sentence_excerpts() && ! is_singular() ) {
 		$classes[] = 'enhanced-excerpts';
 	}
 	return $classes;
@@ -524,7 +524,7 @@ if ( ! function_exists( 'independent_publisher_first_sentence_excerpt' ) ):
 		$content_post = get_post( $post->ID );
 
 		// Only generate a one-sentence excerpt if there is no excerpt set and One Sentence Excerpts is enabled
-		if ( ! $content_post->post_excerpt && independent_publisher_use_enhanced_excerpts() ) {
+		if ( ! $content_post->post_excerpt && independent_publisher_generate_one_sentence_excerpts() ) {
 			$post_content = $content_post->post_content;
 
 			// If the post starts with an image containing a caption, remove the caption before generating the excerpt
@@ -641,7 +641,7 @@ function independent_publisher_is_not_first_post_full_content() {
 
 	// If Show Full Content First Post option is not enabled,
 	// or if it's enabled by excerpts are disabled, return true
-	if ( ! independent_publisher_show_full_content_first_post() || ( ! independent_publisher_use_enhanced_excerpts() && ! independent_publisher_use_post_excerpts() ) )
+	if ( ! independent_publisher_show_full_content_first_post() || ( ! independent_publisher_generate_one_sentence_excerpts() && ! independent_publisher_use_post_excerpts() ) )
 		return true;
 
 	// If Show Full Content First Post option is enabled but this is not

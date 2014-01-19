@@ -41,7 +41,7 @@
 
 			<?php
 			elseif ( ! get_post_format() && ! is_sticky() &&
-					( independent_publisher_use_post_excerpts() || independent_publisher_use_enhanced_excerpts() )
+					( independent_publisher_use_post_excerpts() || independent_publisher_generate_one_sentence_excerpts() )
 			) : // Standard post format
 				?>
 
@@ -61,7 +61,7 @@
 
 	<footer class="entry-meta">
 
-		<?php if ( false === get_post_format() && independent_publisher_use_enhanced_excerpts() && independent_publisher_is_not_first_post_full_content() && ! is_sticky() ) : ?>
+		<?php if ( false === get_post_format() && independent_publisher_generate_one_sentence_excerpts() && independent_publisher_is_not_first_post_full_content() && ! is_sticky() ) : ?>
 			<?php independent_publisher_continue_reading_link(); ?>
 		<?php endif; ?>
 

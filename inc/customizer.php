@@ -34,12 +34,24 @@ class IndependentPublisher_Customize {
 			'label'    => __( 'Post Excerpts', 'independent_publisher' ),
 			'settings' => 'independent_publisher_excerpt_options[excerpts]',
 			'section'  => 'independent_publisher_excerpt_options',
-			'type'     => 'radio',
+			'type'     => 'select',
 			'choices'  => array(
 				'0' => 'Disabled',
-				'1' => 'Default Excerpts',
-				'2' => 'One-Sentence Excerpts',
+				'1' => 'Enabled'
 			),
+		) );
+
+		// Generate One-Sentence Excerpts
+		$wp_customize->add_setting( 'independent_publisher_excerpt_options[generate_one_sentence_excerpts]', array(
+			'default'    => false,
+			'type'       => 'option',
+			'capability' => 'edit_theme_options',
+		) );
+		$wp_customize->add_control( 'generate_one_sentence_excerpts', array(
+			'settings' => 'independent_publisher_excerpt_options[generate_one_sentence_excerpts]',
+			'label'    => __( 'Generate One-Sentence Excerpts', 'independent_publisher' ),
+			'section'  => 'independent_publisher_excerpt_options',
+			'type'     => 'checkbox',
 		) );
 
 		// Show Full Content for First Post
