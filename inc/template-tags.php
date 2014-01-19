@@ -69,20 +69,21 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment; ?>
+		$GLOBALS['comment'] = $comment;
+		$comment_content_class = ''; // Used to style the comment-content differently when comment is awaiting moderation
+		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
 			<footer>
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 48 ); ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'independent_publisher' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php if ( $comment->comment_approved == '0' ) : ?>
+							<?php $comment_content_class = "unapproved"; ?>
+						<em><?php _e( ' - Your comment is awaiting moderation.', 'independent_publisher' ); ?></em>
+					<?php endif; ?>
 				</div>
 				<!-- .comment-author .vcard -->
-				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', 'independent_publisher' ); ?></em>
-					<br />
-				<?php endif; ?>
-
 				<div class="comment-meta commentmetadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time pubdate datetime="<?php comment_time( 'c' ); ?>">
@@ -97,7 +98,7 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 				<!-- .comment-meta .commentmetadata -->
 			</footer>
 
-			<div class="comment-content"><?php comment_text(); ?></div>
+			<div class="comment-content <?php echo $comment_content_class; ?>"><?php comment_text(); ?></div>
 
 			<div class="reply">
 				<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>

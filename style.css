@@ -883,6 +883,10 @@ object {
 	letter-spacing: 1px;
 }
 
+.comment-content.unapproved {
+	color: #b3b3b1;
+}
+
 .site-main .commentlist article {
 	padding-bottom: 1em;
 	padding-top: 1em;

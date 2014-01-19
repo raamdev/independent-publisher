@@ -179,7 +179,9 @@ class IndependentPublisher_Customize {
 	 */
 	public static function header_output() {
 		?>
-		<!--Customizer CSS-->
+
+
+		<!--WordPress Theme Customizer CSS-->
 		<style type="text/css">
 
 			/* Background Color */
@@ -232,9 +234,11 @@ class IndependentPublisher_Customize {
 			<?php self::generate_css('.widget_rss .rss-date, .widget_rss li > cite, .widget_twitter .timesince', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.site-footer', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.archive .page-header, .author div.author-bio', 'border-color', 'secondary_meta_text_color'); ?>
+			<?php self::generate_css('.comment-content.unapproved', 'color', 'secondary_meta_text_color'); ?>
 
 		</style>
-		<!--/Customizer CSS-->
+		<!--/WordPress Theme Customizer CSS-->
+
 	<?php
 	}
 
