@@ -249,33 +249,35 @@ if ( ! function_exists( 'independent_publisher_continue_reading_text' ) ) :
 	}
 endif;
 
-/**
- * Returns true if a blog has more than 1 category
- *
- * @since Independent Publisher 1.0
- */
-function independent_publisher_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
-		// Create an array of all the categories that are attached to posts
-		$all_the_cool_cats = get_categories( array(
-			'hide_empty' => 1,
-		) );
+if ( ! function_exists( 'independent_publisher_categorized_blog' ) ) :
+	/**
+	 * Returns true if a blog has more than 1 category
+	 *
+	 * @since Independent Publisher 1.0
+	 */
+	function independent_publisher_categorized_blog() {
+		if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
+			// Create an array of all the categories that are attached to posts
+			$all_the_cool_cats = get_categories( array(
+				'hide_empty' => 1,
+			) );
 
-		// Count the number of categories that are attached to the posts
-		$all_the_cool_cats = count( $all_the_cool_cats );
+			// Count the number of categories that are attached to the posts
+			$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'all_the_cool_cats', $all_the_cool_cats );
-	}
+			set_transient( 'all_the_cool_cats', $all_the_cool_cats );
+		}
 
-	if ( '1' != $all_the_cool_cats ) {
-		// This blog has more than 1 category so independent_publisher_categorized_blog should return true
-		return true;
+		if ( '1' != $all_the_cool_cats ) {
+			// This blog has more than 1 category so independent_publisher_categorized_blog should return true
+			return true;
+		}
+		else {
+			// This blog has only 1 category so independent_publisher_categorized_blog should return false
+			return false;
+		}
 	}
-	else {
-		// This blog has only 1 category so independent_publisher_categorized_blog should return false
-		return false;
-	}
-}
+endif;
 
 /**
  * Flush out the transients used in independent_publisher_categorized_blog
@@ -290,148 +292,157 @@ function independent_publisher_category_transient_flusher() {
 add_action( 'edit_category', 'independent_publisher_category_transient_flusher' );
 add_action( 'save_post', 'independent_publisher_category_transient_flusher' );
 
-/**
- * Filters wp_title to print a neat <title> tag based on what is being viewed.
- *
- * @since Independent Publisher 1.0
- */
-function independent_publisher_wp_title( $title, $sep ) {
-	global $page, $paged;
+if ( ! function_exists( 'independent_publisher_wp_title' ) ) :
+	/**
+	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
+	 *
+	 * @since Independent Publisher 1.0
+	 */
+	function independent_publisher_wp_title( $title, $sep ) {
+		global $page, $paged;
 
-	if ( is_feed() )
+		if ( is_feed() )
+			return $title;
+
+		// Add the blog name
+		$title .= get_bloginfo( 'name' );
+
+		// Add the blog description for the home/front page.
+		$site_description = get_bloginfo( 'description', 'display' );
+		if ( $site_description && ( is_home() || is_front_page() ) )
+			$title .= " $sep $site_description";
+
+		// Add a page number if necessary:
+		if ( $paged >= 2 || $page >= 2 )
+			$title .= " $sep " . sprintf( __( 'Page %s', 'independent_publisher' ), max( $paged, $page ) );
+
 		return $title;
-
-	// Add the blog name
-	$title .= get_bloginfo( 'name' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title .= " $sep $site_description";
-
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'independent_publisher' ), max( $paged, $page ) );
-
-	return $title;
-}
+	}
+endif;
 
 add_filter( 'wp_title', 'independent_publisher_wp_title', 10, 2 );
 
-
-/**
- * Returns categories for current post with separator.
- * Optionally returns only a single category.
- *
- * @since Independent Publisher 1.0
- */
-function independent_publisher_post_categories( $separator = ',', $single = FALSE ) {
-	$categories = get_the_category();
-	$output     = '';
-	if ( $categories ) {
-		foreach ( $categories as $category ) {
-			$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'independent_publisher' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
-			if ( $single )
-				break;
-		}
-	}
-	return $output;
-}
-
-/**
- * Outputs site info for display on non-single pages
- *
- * @since Independent Publisher 1.0
- */
-function independent_publisher_site_info() {
-	?>
-	<?php if ( get_header_image() ) : ?>
-		<a class="site-logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
-		</a>
-	<?php endif; ?>
-	<hgroup>
-		<h1 class="site-title">
-			<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-		</h1>
-
-		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-	</hgroup>
-<?php
-}
-
-/**
- * Outputs post author info for display on single posts
- *
- * @since Independent Publisher 1.0
- */
-function independent_publisher_posted_author_card() {
+if ( ! function_exists( 'independent_publisher_post_categories' ) ) :
 	/**
-	 * This function gets called outside the loop (in header.php),
-	 * so we need to figure out the post author ID and Nice Name manually.
+	 * Returns categories for current post with separator.
+	 * Optionally returns only a single category.
+	 *
+	 * @since Independent Publisher 1.0
 	 */
-	global $wp_query;
-	$post_author_id = $wp_query->post->post_author;
-	?>
-	<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ); ?>">
-		<?php echo get_avatar( get_the_author_meta( 'ID', $post_author_id ), 100 ); ?>
-	</a>
-	<hgroup>
-		<h1 class="site-title">
-			<?php independent_publisher_posted_author(); ?>
-		</h1>
+	function independent_publisher_post_categories( $separator = ',', $single = FALSE ) {
+		$categories = get_the_category();
+		$output     = '';
+		if ( $categories ) {
+			foreach ( $categories as $category ) {
+				$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'independent_publisher' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+				if ( $single )
+					break;
+			}
+		}
+		return $output;
+	}
+endif;
 
-		<h2 class="site-description"><?php the_author_meta( 'description', $post_author_id ) ?></h2>
-	</hgroup>
-
-	<div class="site-published-separator"></div>
-	<hgroup>
-		<h2 class="site-published">Published</h2>
-
-		<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
-
-		<?php do_action( 'independent_publisher_after_post_published_date' ); ?>
-
-	</hgroup>
-<?php
-}
-
-/**
- * Outputs post author info for display on bottom of single posts
- *
- * @since Independent Publisher 1.0
- */
-function independent_publisher_posted_author_bottom_card() {
-
-	do_action( 'independent_publisher_before_post_author_bottom_card' );
-	?>
-	<div class="post-author-bottom">
-		<div class="post-author-card">
-			<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-				<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
+if ( ! function_exists( 'independent_publisher_site_info' ) ) :
+	/**
+	 * Outputs site info for display on non-single pages
+	 *
+	 * @since Independent Publisher 1.0
+	 */
+	function independent_publisher_site_info() {
+		?>
+		<?php if ( get_header_image() ) : ?>
+			<a class="site-logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 			</a>
+		<?php endif; ?>
+		<hgroup>
+			<h1 class="site-title">
+				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</h1>
 
-			<div class="post-author-info">
-				<h1 class="site-title">
-					<?php independent_publisher_posted_author(); ?>
-				</h1>
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		</hgroup>
+	<?php
+	}
+endif;
 
-				<h2 class="site-description"><?php the_author_meta( 'description' ) ?></h2>
-			</div>
-			<div class="post-published-date">
-				<h2 class="site-published">Published</h2>
+if ( ! function_exists( 'independent_publisher_posted_author_card' ) ) :
+	/**
+	 * Outputs post author info for display on single posts
+	 *
+	 * @since Independent Publisher 1.0
+	 */
+	function independent_publisher_posted_author_card() {
+		/**
+		 * This function gets called outside the loop (in header.php),
+		 * so we need to figure out the post author ID and Nice Name manually.
+		 */
+		global $wp_query;
+		$post_author_id = $wp_query->post->post_author;
+		?>
+		<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ); ?>">
+			<?php echo get_avatar( get_the_author_meta( 'ID', $post_author_id ), 100 ); ?>
+		</a>
+		<hgroup>
+			<h1 class="site-title">
+				<?php independent_publisher_posted_author(); ?>
+			</h1>
 
-				<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
+			<h2 class="site-description"><?php the_author_meta( 'description', $post_author_id ) ?></h2>
+		</hgroup>
 
-				<?php do_action( 'independent_publisher_after_post_published_date' ); ?>
+		<div class="site-published-separator"></div>
+		<hgroup>
+			<h2 class="site-published">Published</h2>
 
+			<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
+
+			<?php do_action( 'independent_publisher_after_post_published_date' ); ?>
+
+		</hgroup>
+	<?php
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_posted_author_bottom_card' ) ) :
+	/**
+	 * Outputs post author info for display on bottom of single posts
+	 *
+	 * @since Independent Publisher 1.0
+	 */
+	function independent_publisher_posted_author_bottom_card() {
+
+		do_action( 'independent_publisher_before_post_author_bottom_card' );
+		?>
+		<div class="post-author-bottom">
+			<div class="post-author-card">
+				<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+					<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
+				</a>
+
+				<div class="post-author-info">
+					<h1 class="site-title">
+						<?php independent_publisher_posted_author(); ?>
+					</h1>
+
+					<h2 class="site-description"><?php the_author_meta( 'description' ) ?></h2>
+				</div>
+				<div class="post-published-date">
+					<h2 class="site-published">Published</h2>
+
+					<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
+
+					<?php do_action( 'independent_publisher_after_post_published_date' ); ?>
+
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- .post-author-bottom -->
-	<?php
-	do_action( 'independent_publisher_after_post_author_bottom_card' );
-}
+		<!-- .post-author-bottom -->
+		<?php
+		do_action( 'independent_publisher_after_post_author_bottom_card' );
+	}
+endif;
 
 if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 	/**
