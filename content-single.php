@@ -11,7 +11,7 @@
 	<?php endif; ?>
 	<header class="entry-header">
 		<h2 class="entry-title-meta">
-			<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
+			<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> <?php echo apply_filters('independent_publisher_entry_title_meta_category_prefix','in'); ?> <?php echo independent_publisher_post_categories( '', TRUE ); ?>
 			<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 		</h2>
 
