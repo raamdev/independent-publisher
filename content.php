@@ -8,7 +8,7 @@
 	<header class="entry-header">
 		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() && ! is_sticky() ) ) : ?>
 			<h2 class="entry-title-meta">
-				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> <?php echo apply_filters('independent_publisher_entry_title_meta_category_prefix','in'); ?> <?php echo independent_publisher_post_categories( '', TRUE ); ?>
+				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> <?php echo apply_filters('independent_publisher_entry_title_meta_category_prefix','in'); // @TODO document independent_publisher_entry_title_meta_category_prefix filter ?> <?php echo independent_publisher_post_categories( '', TRUE ); ?>
 				<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 			</h2>
 		<?php endif; ?>
