@@ -79,6 +79,8 @@ If there is only one author on your site, you probably want to set the Header Im
 
 ### How do I get the small logo to show up in the top-left corner?
 
+![screen shot 2014-01-22 at 5 56 22 pm](https://f.cloud.github.com/assets/53005/1979978/a4360d06-83b8-11e3-95e6-2fba9c982761.png)
+
 There is a hidden feature called "Multi-Author Mode" that when enabled places the theme Header Image (**Dashboard → Appearance → Header**) in the top-left corner on all Single pages. 
 
 You can enable Multi-Author Mode by adding the following to a Child Theme's `functions.php`:
