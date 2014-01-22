@@ -679,17 +679,6 @@ img.aligncenter {
 	display: none;
 }
 
-.single .format-aside h1.entry-title,
-.single .format-quote h1.entry-title,
-.single .format-chat h1.entry-title,
-.single .format-status h1.entry-title,
-.single .format-image h1.entry-title,
-.single .format-link h1.entry-title,
-.single .format-gallery h1.entry-title {
-	font-size: 13px;
-	line-height: 21px;
-}
-
 .format-aside .entry-format,
 .format-quote .entry-format,
 .format-chat .entry-format,

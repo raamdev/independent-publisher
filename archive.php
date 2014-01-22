@@ -92,7 +92,9 @@ get_header(); ?>
 						echo independent_publisher_date_archive_description();
 					}
 					?>
+					<?php independent_publisher_content_nav( 'nav-above' ); ?>
 				</header><!-- .page-header -->
+
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
