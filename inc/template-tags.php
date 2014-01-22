@@ -171,20 +171,23 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'independent_publisher' ) );
+		$separator       = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter
 
 		if ( independent_publisher_is_multi_author_mode() ) :
 			if ( $categories_list && independent_publisher_categorized_blog() ) :
 				echo '<span class="cat-links">';
-				printf( __( '<a href="%1$s" title="%2$s">%3$s</a> in %4$s', 'independent_publisher' ),
+				printf( __( '<a href="%1$s" title="%2$s">%3$s</a> %4$s %5$s', 'independent_publisher' ),
 					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 					esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
 					esc_html( get_the_author() ),
+					independent_publisher_entry_meta_category_prefix(),
 					$categories_list
 				);
-				echo '</span>';
+				echo '</span> <span class="sep"> ' . $separator . '</span>';
 			else :
 				echo '<span class="cat-links">';
-				printf( __( 'by <a href="%1$s" title="%2$s">%3$s</a>', 'independent_publisher' ),
+				printf( __( '%1$s <a href="%2$s" title="%3$s">%4$s</a>', 'independent_publisher' ),
+					independent_publisher_entry_meta_author_prefix(),
 					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 					esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
 					esc_html( get_the_author() )
@@ -194,10 +197,11 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 		else : // not Multi-Author Mode
 			if ( $categories_list && independent_publisher_categorized_blog() ) :
 				echo '<span class="cat-links">';
-				printf( __( 'in %1$s', 'independent_publisher' ),
+				printf( __( '%1$s %2$s', 'independent_publisher' ),
+					independent_publisher_entry_meta_category_prefix(),
 					$categories_list
 				);
-				echo '</span>';
+				echo '</span> <span class="sep"> ' . $separator . '</span>';
 			else :
 				echo '<span class="cat-links">';
 				echo '</span>';
@@ -453,9 +457,8 @@ if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 	 * @return string
 	 */
 	function independent_publisher_get_post_word_count() {
-		// Only include prefixed separator when we also have categories to show
-		$separator = ( independent_publisher_categorized_blog() ? '<span class="sep"> | </span> ' : '' );
-		return sprintf( __( $separator . '<span>%1$s Words</span>', 'independent_publisher' ), independent_publisher_post_word_count() );
+		$separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter
+		return sprintf( __( '<span>%1$s Words</span> <span class="sep"> ' . $separator . ' </span>', 'independent_publisher' ), independent_publisher_post_word_count() );
 	}
 endif;
 

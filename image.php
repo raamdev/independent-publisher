@@ -31,7 +31,8 @@ get_header();
 								get_the_title( $post->post_parent )
 							);
 							?>
-							<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+							<?php $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter ?>
+							<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> ' . $separator . ' </span> <span class="edit-link">', '</span>' ); ?>
 						</div>
 						<!-- .entry-meta -->
 

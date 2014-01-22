@@ -11,7 +11,14 @@
 	<?php endif; ?>
 	<header class="entry-header">
 		<h2 class="entry-title-meta">
-			<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> <?php echo apply_filters('independent_publisher_entry_title_meta_category_prefix','in'); // @TODO document independent_publisher_entry_title_meta_category_prefix filter ?> <?php echo independent_publisher_post_categories( '', TRUE ); ?>
+			<span class="entry-title-meta-author">
+				<?php if ( ! independent_publisher_categorized_blog() ) {
+					echo independent_publisher_entry_meta_author_prefix() . ' ';
+				}
+				independent_publisher_posted_author() ?></span>
+			<?php if ( independent_publisher_categorized_blog() ) {
+				echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', TRUE );
+			} ?>
 			<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 		</h2>
 

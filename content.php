@@ -8,7 +8,7 @@
 	<header class="entry-header">
 		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() && ! is_sticky() ) ) : ?>
 			<h2 class="entry-title-meta">
-				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> <?php echo apply_filters('independent_publisher_entry_title_meta_category_prefix','in'); // @TODO document independent_publisher_entry_title_meta_category_prefix filter ?> <?php echo independent_publisher_post_categories( '', TRUE ); ?>
+				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> <?php echo independent_publisher_entry_meta_category_prefix() ?> <?php echo independent_publisher_post_categories( '', TRUE ); ?>
 				<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 			</h2>
 		<?php endif; ?>
@@ -74,13 +74,11 @@
 		<?php endif; ?>
 
 		<?php if ( ! post_password_required() && comments_open() ) : ?>
-			<?php if ( independent_publisher_is_not_first_post_full_content() && independent_publisher_categorized_blog() ) : ?>
-				<span class="sep"> | </span>
-			<?php endif; ?>
 			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent_publisher' ), __( '1 Comment', 'independent_publisher' ), __( '% Comments', 'independent_publisher' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+		<?php $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter ?>
+		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> ' . $separator . ' </span> <span class="edit-link">', '</span>' ); ?>
 
 	</footer>
 	<!-- .entry-meta -->

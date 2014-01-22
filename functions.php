@@ -731,3 +731,19 @@ function independent_publisher_replytocom() {
 	<?php
 	}
 }
+
+/**
+ * Returns the entry title meta category prefix (e.g., "<author name> in <category name>"; 'in' is the portion this function returns)
+ */
+function independent_publisher_entry_meta_category_prefix() {
+	$prefix = __( 'in', 'independent_publisher' );
+	return apply_filters( 'independent_publisher_entry_meta_category_prefix', $prefix ); // @TODO document independent_publisher_entry_meta_category_prefix filter
+}
+
+/**
+ * Returns the entry meta author prefix (e.g., "by <author name>"; 'by' is the portion this function returns)
+ */
+function independent_publisher_entry_meta_author_prefix() {
+	$prefix = __( 'by', 'independent_publisher' );
+	return apply_filters( 'independent_publisher_entry_meta_author_prefix', $prefix ); // @TODO document independent_publisher_entry_meta_author_prefix filter
+}
