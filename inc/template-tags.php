@@ -171,7 +171,13 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'independent_publisher' ) );
-		$separator       = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter
+
+		if ( ( ! post_password_required() && comments_open() && false === get_post_format() ) || ( ! post_password_required() && independent_publisher_show_post_word_count() && false === get_post_format() ) ) {
+			$separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter
+		}
+		else {
+			$separator = '';
+		}
 
 		if ( independent_publisher_is_multi_author_mode() ) :
 			if ( $categories_list && independent_publisher_categorized_blog() ) :
@@ -457,8 +463,13 @@ if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 	 * @return string
 	 */
 	function independent_publisher_get_post_word_count() {
-		$separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter
-		return sprintf( __( '<span>%1$s Words</span> <span class="sep"> ' . $separator . ' </span>', 'independent_publisher' ), independent_publisher_post_word_count() );
+		if ( ! post_password_required() && comments_open() ) {
+			$separator = ' <span class="sep"> ' . apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter . ' </span>';
+		}
+		else {
+			$separator = '';
+		}
+		return sprintf( __( '<span>%1$s Words</span>' . $separator, 'independent_publisher' ), independent_publisher_post_word_count() );
 	}
 endif;
 

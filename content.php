@@ -49,7 +49,7 @@
 
 			<?php
 			else : ?>
-				<?php if ( has_post_thumbnail() ) : ?>
+				<?php if ( has_post_thumbnail()  && 'image' !== get_post_format() ) : ?>
 					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
 				<?php endif; ?>
 				<?php the_content( independent_publisher_continue_reading_text() ); ?>
@@ -69,7 +69,7 @@
 			<?php independent_publisher_posted_author_cats() ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
-		<?php if ( false === get_post_format() && independent_publisher_show_post_word_count() && independent_publisher_is_not_first_post_full_content() ) : // Only show word count on standard post format ?>
+		<?php if ( ! post_password_required() && false === get_post_format() && independent_publisher_show_post_word_count() && independent_publisher_is_not_first_post_full_content() ) : // Only show word count on standard post format ?>
 			<?php echo independent_publisher_get_post_word_count() ?>
 		<?php endif; ?>
 
