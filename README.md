@@ -71,7 +71,25 @@ For more information on using Child Themes, see the [WordPress Codex](http://cod
 
 ## Frequently Asked Questions
 
-### How do I make JetPack Sharing Buttons look nicer?
+### Why is my Header Image not showing on Single posts?
+
+On Single pages, the Gravatar image for the author of the post is shown. The Header Image (**Dashboard → Appearance → Header**) is only shown on non-Single pages.
+
+If there is only one author on your site, you probably want to set the Header Image to be the same as the author Gravatar. (You also probably want the site Tagline, **Dashboard → Settings → General → Tagline**, to be the same as your bio in **Dashboard → Users → Your Profile → Biographical Info**.)
+
+### How do I get the small logo to show up in the top-left corner?
+
+There is a hidden feature called "Multi-Author Mode" that when enabled places the theme Header Image (**Dashboard → Appearance → Header**) in the top-left corner on all Single pages. 
+
+You can enable Multi-Author Mode by adding the following to a Child Theme's `functions.php`:
+
+```
+function independent_publisher_is_multi_author_mode() { return true; }
+```
+
+The [Independent Publisher Child Theme](https://github.com/raamdev/independent-publisher-child-theme) includes an example in the `functions.php` file.
+
+### How do I make the JetPack Sharing Buttons look better?
 
 If you clear the JetPack Sharing Buttons "Sharing label" field so that it's empty, Independent Publisher will force the sharing buttons to float right and will remove the right padding so that the buttons look nicer.
 
