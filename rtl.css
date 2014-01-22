@@ -1657,281 +1657,6 @@ table th {
 	left: 0;
 }
 
-/* Hide left-side author card under 1200px */
-@media only screen and (max-width: 1200px) {
-	.site {
-		margin-top: 80px;
-	}
-
-	.single .site-header {
-		display: none;
-	}
-
-	.site-header {
-		text-align: center;
-		margin-right: 0;
-		float: none;
-		display: block;
-		width: 100%;
-		position: relative;
-	}
-
-	.post-author-bottom {
-		display: block;
-	}
-
-	.entry-meta {
-		border-bottom: none;
-	}
-
-	.entry-title-meta-author {
-		display: inline-block;
-	}
-
-	.widget-area {
-		float: left;
-		width: 100%;
-		margin-right: 0;
-		text-align: inherit;
-		padding-top: 40px;
-	}
-
-	.widget-area ul li a {
-		display: inline-block;
-	}
-
-	#nav-below {
-		margin-top: 40px;
-	}
-
-	.single .entry-meta {
-		border-top: none;
-	}
-
-	.page article {
-		padding: 40px 0 40px 0;
-	}
-
-	.main-navigation {
-		clear: none;
-	}
-
-	.site-navigation {
-		border-bottom: 1px solid #eee;
-		padding-bottom: 20px;
-		margin-bottom: 20px;
-	}
-
-	#nav-below .site-navigation {
-		margin-top: 40px;
-	}
-
-	.main-navigation li {
-		display: inline-block;
-		padding: 5px 10px;
-		width: auto;
-	}
-
-	#masthead .site-title,
-	#masthead .site-description {
-		clear: none;
-		margin-right: 0;
-		margin-top: 0;
-	}
-
-	#masthead .site-title {
-		font-size: 24px;
-		font-style: normal;
-		padding-top: 15px;
-		padding-right: 0;
-	}
-
-	#masthead .site-description {
-		padding-right: 0;
-		padding-top: 20px;
-	}
-
-	#masthead .site-logo,
-	#masthead .site-logo img {
-		float: none;
-		max-width: 100px;
-	}
-}
-
-@media only screen and (max-width: 500px) {
-	.site {
-		margin-top: 40px;
-	}
-
-	#masthead {
-		margin-top: 0;
-	}
-
-	#page {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-
-	.entry-content,
-	#comments {
-		font-size: 18px;
-		line-height: 1.4;
-		width: 100%;
-	}
-
-	h1.entry-title {
-		font-size: 1.9em;
-	}
-
-	.entry-content h1 {
-		font-size: 1.7em;
-	}
-
-	.entry-content h2 {
-		font-size: 1.6em;
-	}
-
-	.entry-content h3 {
-		font-size: 1.5em;
-	}
-
-	.entry-content h4 {
-		font-size: 1.4em;
-	}
-
-	.entry-content h5 {
-		font-size: 1.3em;
-	}
-
-	.entry-content h6 {
-		font-size: 1.2em;
-	}
-
-	.entry-content ol, ul {
-		margin-right: 2em;
-	}
-
-	#masthead {
-		text-align: center;
-	}
-
-	#masthead .site-title {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		padding-right: 0;
-		clear: both;
-		margin-right: 5px;
-	}
-
-	#masthead .site-description {
-		padding-right: 0;
-		margin-right: 5px;
-	}
-
-	#masthead .site-logo,
-	#masthead .site-logo img {
-		float: none;
-		max-width: 100px;
-	}
-
-	.post-author-card .site-title {
-		padding-top: 0;
-		padding-right: 0;
-	}
-
-	.post-author-card .site-description {
-		padding-right: 0;
-	}
-
-	.format-aside .entry-content,
-	.format-quote .entry-content {
-		font-size: 0.9em;
-		margin-bottom: 0;
-	}
-
-	.format-aside blockquote,
-	.format-quote blockquote {
-		margin-right: 0;
-	}
-
-	.single .entry-meta {
-		text-align: center;
-		padding-bottom: 0;
-		padding-top: 0;
-	}
-
-	.post-author-bottom {
-		text-align: center;
-	}
-
-	.post-author-bottom .site-title {
-		font-size: 24px;
-		line-height: 2.2;
-	}
-
-	.post-author-bottom .site-logo, .post-author-bottom .site-logo img {
-		float: none;
-		max-width: 100px;
-	}
-
-	.post-author-bottom .post-author-info {
-		margin-left: 0;
-		margin-right: 0;
-		padding-right: 0;
-	}
-
-	.post-author-bottom .post-published-date {
-		margin-right: 0;
-		position: inherit;
-		margin-top: 0;
-		top: inherit;
-		width: 100%;
-	}
-
-	.entry-header {
-		word-wrap: none;
-		hyphens: none;
-		-webkit-hyphens: none;
-		-moz-hyphens: none;
-	}
-
-	.commentlist ul.children {
-		margin-right: 0;
-		padding-right: 10px;
-	}
-
-	.commentlist .thread-even,
-	.commentlist .thread-odd {
-		padding-right: 10px;
-	}
-
-	.entry-content .subtitle {
-		font-size: 1.2em;
-	}
-
-	.comment-form-author,
-	.comment-form-email,
-	.comment-form-url,
-	.comment-form-subscriptions {
-		width: 100%;
-	}
-
-	.entry-meta #share-comment-button {
-		text-align: center;
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-
-	.full-width-featured-image #page {
-		margin-top: 0;
-	}
-
-	.archive .page-title,
-	.archive .archive-title {
-		font-size: 2.2em;
-	}
-}
-
 /* Footnotes */
 
 .footnotes p,
@@ -2118,4 +1843,284 @@ table th {
 
 #menu-social ul {
 	text-align: left;
+}
+
+/* Hide left-side author card under 1200px */
+@media only screen and (max-width: 1200px) {
+	.site {
+		margin-top: 80px;
+	}
+
+	.single .site-header {
+		display: none;
+	}
+
+	.site-header {
+		text-align: center;
+		margin-right: 0;
+		float: none;
+		display: block;
+		width: 100%;
+		position: relative;
+	}
+
+	.post-author-bottom {
+		display: block;
+	}
+
+	.entry-meta {
+		border-bottom: none;
+	}
+
+	.entry-title-meta-author {
+		display: inline-block;
+	}
+
+	.widget-area {
+		float: left;
+		width: 100%;
+		margin-right: 0;
+		text-align: inherit;
+		padding-top: 40px;
+	}
+
+	.widget-area ul li a {
+		display: inline-block;
+	}
+
+	#nav-below {
+		margin-top: 40px;
+	}
+
+	.single .entry-meta {
+		border-top: none;
+	}
+
+	.page article {
+		padding: 40px 0 40px 0;
+	}
+
+	.main-navigation {
+		clear: none;
+	}
+
+	.site-navigation {
+		border-bottom: 1px solid #eee;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+
+	#nav-below .site-navigation {
+		margin-top: 40px;
+	}
+
+	.main-navigation li {
+		display: inline-block;
+		padding: 5px 10px;
+		width: auto;
+	}
+
+	#masthead .site-title,
+	#masthead .site-description {
+		clear: none;
+		margin-right: 0;
+		margin-top: 0;
+	}
+
+	#masthead .site-title {
+		font-size: 24px;
+		font-style: normal;
+		padding-top: 15px;
+		padding-right: 0;
+	}
+
+	#masthead .site-description {
+		padding-right: 0;
+		padding-top: 20px;
+	}
+
+	#masthead .site-logo,
+	#masthead .site-logo img {
+		float: none;
+		max-width: 100px;
+	}
+
+	#menu-social ul {
+		text-align: center;
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.site {
+		margin-top: 40px;
+	}
+
+	#masthead {
+		margin-top: 0;
+	}
+
+	#page {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.entry-content,
+	#comments {
+		font-size: 18px;
+		line-height: 1.4;
+		width: 100%;
+	}
+
+	h1.entry-title {
+		font-size: 1.9em;
+	}
+
+	.entry-content h1 {
+		font-size: 1.7em;
+	}
+
+	.entry-content h2 {
+		font-size: 1.6em;
+	}
+
+	.entry-content h3 {
+		font-size: 1.5em;
+	}
+
+	.entry-content h4 {
+		font-size: 1.4em;
+	}
+
+	.entry-content h5 {
+		font-size: 1.3em;
+	}
+
+	.entry-content h6 {
+		font-size: 1.2em;
+	}
+
+	.entry-content ol, ul {
+		margin-right: 2em;
+	}
+
+	#masthead {
+		text-align: center;
+	}
+
+	#masthead .site-title {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-right: 0;
+		clear: both;
+		margin-right: 5px;
+	}
+
+	#masthead .site-description {
+		padding-right: 0;
+		margin-right: 5px;
+	}
+
+	#masthead .site-logo,
+	#masthead .site-logo img {
+		float: none;
+		max-width: 100px;
+	}
+
+	.post-author-card .site-title {
+		padding-top: 0;
+		padding-right: 0;
+	}
+
+	.post-author-card .site-description {
+		padding-right: 0;
+	}
+
+	.format-aside .entry-content,
+	.format-quote .entry-content {
+		font-size: 0.9em;
+		margin-bottom: 0;
+	}
+
+	.format-aside blockquote,
+	.format-quote blockquote {
+		margin-right: 0;
+	}
+
+	.single .entry-meta {
+		text-align: center;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	.post-author-bottom {
+		text-align: center;
+	}
+
+	.post-author-bottom .site-title {
+		font-size: 24px;
+		line-height: 2.2;
+	}
+
+	.post-author-bottom .site-logo, .post-author-bottom .site-logo img {
+		float: none;
+		max-width: 100px;
+	}
+
+	.post-author-bottom .post-author-info {
+		margin-left: 0;
+		margin-right: 0;
+		padding-right: 0;
+	}
+
+	.post-author-bottom .post-published-date {
+		margin-right: 0;
+		position: inherit;
+		margin-top: 0;
+		top: inherit;
+		width: 100%;
+	}
+
+	.entry-header {
+		word-wrap: none;
+		hyphens: none;
+		-webkit-hyphens: none;
+		-moz-hyphens: none;
+	}
+
+	.commentlist ul.children {
+		margin-right: 0;
+		padding-right: 10px;
+	}
+
+	.commentlist .thread-even,
+	.commentlist .thread-odd {
+		padding-right: 10px;
+	}
+
+	.entry-content .subtitle {
+		font-size: 1.2em;
+	}
+
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url,
+	.comment-form-subscriptions {
+		width: 100%;
+	}
+
+	.entry-meta #share-comment-button {
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.full-width-featured-image #page {
+		margin-top: 0;
+	}
+
+	.archive .page-title,
+	.archive .archive-title {
+		font-size: 2.2em;
+	}
 }
