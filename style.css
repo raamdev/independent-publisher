@@ -1382,6 +1382,10 @@ body {
 	line-height: 1;
 }
 
+.widget-area ul li a {
+	line-height: 1.2;
+}
+
 .blogroll li a {
 	display: inline-block;
 }
