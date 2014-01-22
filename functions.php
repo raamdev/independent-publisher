@@ -378,7 +378,7 @@ function independent_publisher_use_post_excerpts() {
  */
 function independent_publisher_generate_one_sentence_excerpts() {
 	$independent_publisher_excerpt_options = get_option( 'independent_publisher_excerpt_options' );
-	if ( isset( $independent_publisher_excerpt_options['generate_one_sentence_excerpts'] ) && $independent_publisher_excerpt_options['generate_one_sentence_excerpts'] )
+	if ( isset( $independent_publisher_excerpt_options['generate_one_sentence_excerpts'] ) && $independent_publisher_excerpt_options['generate_one_sentence_excerpts'] && independent_publisher_use_post_excerpts() )
 		return true;
 	else
 		return false;
