@@ -1276,7 +1276,7 @@ body {
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
-	max-width: 70px;
+	max-width: 100px;
 	height: auto;
 }
 
@@ -1664,7 +1664,7 @@ table th {
 }
 
 .post-author-bottom .post-author-info {
-	margin-left: 100px;
+	margin-left: 140px;
 	margin-right: 200px;
 	padding-right: 25px;
 	padding-top: 10px;
@@ -1677,6 +1677,8 @@ table th {
 
 .post-author-bottom h1.site-title {
 	font-style: normal;
+	font-size: 20px;
+	line-height: 1.6;
 }
 
 .post-author-bottom .post-published-date {
@@ -1684,7 +1686,7 @@ table th {
 	margin-left: 385px;
 	position: absolute;
 	margin-top: -85px;
-	top: 135px;
+	top: 145px;
 	right: 0;
 }
 
