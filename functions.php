@@ -74,7 +74,7 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		 */
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'independent_publisher' ),
-			'social', __( 'Social', 'independent_publisher' ),
+			'social' => __( 'Social', 'independent_publisher' )
 		) );
 
 		/**
