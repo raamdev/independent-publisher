@@ -32,7 +32,7 @@
 
 		<?php if ( comments_open() ) : ?>
 			<div id="share-comment-button">
-				<button><i class="icon-comment"></i>Share a comment</button>
+				<button><i class="share-comment-icon"></i>Share a comment</button>
 			</div>
 		<?php endif; ?>
 

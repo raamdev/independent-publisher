@@ -31,7 +31,7 @@ if ( post_password_required() )
 
 		<?php if ( get_comments_number() > independent_publisher_min_comments_comment_title() ) : ?>
 			<h2 class="comments-title">
-				<i class="icon-comments"></i>
+				<i class="comments-title-icon"></i>
 				<?php
 				printf( _n( '1 Comment', '%1$s Comments', get_comments_number(), 'independent_publisher' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
@@ -83,7 +83,7 @@ if ( post_password_required() )
 		<?php do_action( 'independent_publisher_before_bottom_share_comment_button' ); // @TODO document independent_publisher_before_bottom_share_comment_button action ?>
 
 		<div id="share-comment-button-bottom">
-			<button><i class="icon-comment"></i><?php _e( 'Share a comment', 'independent_publisher' ); ?></button>
+			<button><i class="share-comment-icon"></i><?php _e( 'Share a comment', 'independent_publisher' ); ?></button>
 		</div>
 		<div id="commentform-bottom"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
 	<?php endif; ?>

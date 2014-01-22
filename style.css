@@ -1177,9 +1177,28 @@ ul.taglist {
 	padding-bottom: 1.5em;
 }
 
-.icon-comment {
+.share-comment-icon::before {
+	display: inline-block;
+	padding-right: 8px;
+	margin-top: -2px;
+	font-style: normal;
+	font-family: 'Genericons';
+	font-size: 20px;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+	content: '\f300';
 	color: white;
-	margin-right: 10px;
+}
+
+.comments-title-icon::before {
+	display: inline-block;
+	margin-top: -2px;
+	font-style: normal;
+	font-family: 'Genericons';
+	font-size: 20px;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+	content: '\f108';
 }
 
 .entry-meta #share-comment-button {
@@ -1542,8 +1561,8 @@ article.first-post {
 
 .site-header {
 	float: left;
-	margin-top: 0px;
-	margin-bottom: 40px;
+	margin-top: 0;
+	margin-bottom: 30px;
 	width: 160px;
 	position: relative;
 	margin-left: -220px;
@@ -2140,4 +2159,177 @@ table th {
 .single-column-layout.archive .page-title,
 .single-column-layout.archive .archive-title {
 	margin-top: 20px;
+}
+
+/**
+ * Social menu styles; uses Genericons in font/genericons/
+ */
+
+.screen-reader-text {
+	position: absolute;
+	top: -9999em;
+	left: -9999em;
+}
+
+#menu-social ul {
+	list-style: none;
+	margin: 0 0 25px;
+	text-align: right;
+}
+
+#menu-social ul li {
+	display: inline-block;
+	position: relative;
+}
+
+#menu-social li a::before {
+	content: '\f408';
+	display: inline-block;
+	padding: 0 5px;
+	font-family: 'Genericons';
+	font-size: 26px;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+}
+
+#menu-social li a[href*="wordpress.org"]::before,
+#menu-social li a[href*="wordpress.com"]::before {
+	content: '\f205';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="wordpress.org"]:hover::before,
+#menu-social li a[href*="wordpress.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="facebook.com"]::before {
+	content: '\f203';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="facebook.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="twitter.com"]::before {
+	content: '\f202';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="twitter.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="dribbble.com"]::before {
+	content: '\f201';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="dribbble.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="plus.google.com"]::before {
+	content: '\f206';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="plus.google.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="pinterest.com"]::before {
+	content: '\f210';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="pinterest.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="github.com"]::before {
+	content: '\f200';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="github.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="tumblr.com"]::before {
+	content: '\f214';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="tumblr.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="youtube.com"]::before {
+	content: '\f213';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="youtube.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="flickr.com"]::before {
+	content: '\f211';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="flickr.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="vimeo.com"]::before {
+	content: '\f212';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="vimeo.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="instagram.com"]::before {
+	content: '\f215';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="instagram.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="codepen.io"]::before {
+	content: '\f216';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="codepen.io"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="linkedin.com"]::before {
+	content: '\f208';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="linkedin.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
 }

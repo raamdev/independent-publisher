@@ -70,10 +70,11 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		add_option( 'independent_publisher_general_options', array( 'show_post_word_count' => true ) );
 
 		/**
-		 * This theme uses wp_nav_menu() in one location.
+		 * This theme uses wp_nav_menu() in two locations.
 		 */
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'independent_publisher' ),
+			'social', __( 'Social', 'independent_publisher' ),
 		) );
 
 		/**
@@ -117,7 +118,7 @@ function independent_publisher_scripts() {
 	global $post;
 
 	wp_enqueue_style( 'independent-publisher-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css', array(), '3.2.1' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons/genericons.css', array(), '3.0.3' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

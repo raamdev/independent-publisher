@@ -1177,9 +1177,8 @@ ul.taglist {
 	padding-bottom: 1.5em;
 }
 
-.icon-comment {
-	color: white;
-	margin-left: 10px;
+.share-comment-icon::before {
+	padding-left: 8px;
 }
 
 .entry-meta #share-comment-button {
@@ -1529,8 +1528,8 @@ article.first-post {
 
 .site-header {
 	float: right;
-	margin-top: 0px;
-	margin-bottom: 40px;
+	margin-top: 0;
+	margin-bottom: 30px;
 	width: 160px;
 	position: relative;
 	margin-right: -220px;
@@ -2109,4 +2108,12 @@ table th {
 
 .single-column-layout .entry-title-meta-author {
 	display: inline-block;
+}
+
+/**
+ * Social menu styles; uses Genericons in font/genericons/
+ */
+
+#menu-social ul {
+	text-align: left;
 }

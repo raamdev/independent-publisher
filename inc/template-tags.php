@@ -363,6 +363,7 @@ if ( ! function_exists( 'independent_publisher_site_info' ) ) :
 
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
+		<?php get_template_part( 'menu', 'social' ); ?>
 	<?php
 	}
 endif;
@@ -391,6 +392,8 @@ if ( ! function_exists( 'independent_publisher_posted_author_card' ) ) :
 
 			<h2 class="site-description"><?php the_author_meta( 'description', $post_author_id ) ?></h2>
 		</hgroup>
+
+		<?php get_template_part( 'menu', 'social' ); ?>
 
 		<div class="site-published-separator"></div>
 		<hgroup>
