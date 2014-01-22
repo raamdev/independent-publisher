@@ -43,8 +43,8 @@ if ( post_password_required() )
 			<nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation">
 				<h1 class="assistive-text"><?php _e( 'Comment navigation', 'independent_publisher' ); ?></h1>
 
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'independent_publisher' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'independent_publisher' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '<button>&larr; Older Comments</button>', 'independent_publisher' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( '<button>Newer Comments &rarr;</button>', 'independent_publisher' ) ); ?></div>
 			</nav><!-- #comment-nav-before .site-navigation .comment-navigation -->
 		<?php endif; // check for comment navigation ?>
 
@@ -64,8 +64,8 @@ if ( post_password_required() )
 			<nav role="navigation" id="comment-nav-below" class="site-navigation comment-navigation">
 				<h1 class="assistive-text"><?php _e( 'Comment navigation', 'independent_publisher' ); ?></h1>
 
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'independent_publisher' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'independent_publisher' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '<button>&larr; Older Comments</button>', 'independent_publisher' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( '<button>Newer Comments &rarr;</button>', 'independent_publisher' ) ); ?></div>
 			</nav><!-- #comment-nav-below .site-navigation .comment-navigation -->
 		<?php endif; // check for comment navigation ?>
 
