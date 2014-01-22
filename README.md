@@ -95,3 +95,4 @@ The [Independent Publisher Child Theme](https://github.com/raamdev/independent-p
 
 If you clear the JetPack Sharing Buttons "Sharing label" field so that it's empty, Independent Publisher will force the sharing buttons to float right and will remove the right padding so that the buttons look nicer.
 
+![screen shot 2014-01-22 at 6 00 30 pm](https://f.cloud.github.com/assets/53005/1980007/4dc42092-83b9-11e3-96a3-8b9580f82f80.png)
