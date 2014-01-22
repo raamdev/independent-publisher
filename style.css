@@ -1185,6 +1185,7 @@ ul.taglist {
 	clear: both;
 	margin-bottom: 0;
 	padding-bottom: 1.5em;
+	padding-top: 0.5em;
 }
 
 .share-comment-icon::before {
