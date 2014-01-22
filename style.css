@@ -574,7 +574,21 @@ img.aligncenter {
 
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+	margin: 0 0 1em;
+	text-align: center;
+	padding-top: 2em;
+}
+
+.page-links-next-prev {
+	margin-top: 4em;
+}
+
+.page-links-next-prev .next-page-nav {
+	float: right;
+}
+
+.page-links-next-prev .previous-page-nav {
+	float: left;
 }
 
 .entry-content .twitter-tweet-rendered {
@@ -852,8 +866,8 @@ object {
 }
 
 #nav-above {
-	padding-bottom: 2em;
-	padding-top: 2em;
+	padding-bottom: 1.5em;
+	padding-top: .5em;
 	margin-top: 0;
 	border-bottom: none;
 }
@@ -1477,6 +1491,7 @@ h6 {
 
 .archive .page-header {
 	margin-bottom: 4em;
+	padding-bottom: 1em;
 	border-bottom: solid 1px;
 	border-color: #b3b3b1;
 }
