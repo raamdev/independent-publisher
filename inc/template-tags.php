@@ -516,7 +516,7 @@ if ( ! function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 		elseif ( $taxonomy === 'post_tag' ) {
 			$stats_text = sprintf( _n( 'There is one post tagged <em>%2$s</em>.', 'There are %1$s posts tagged <em>%2$s</em>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
 		}
-		return $stats_text;
+		return wpautop( $stats_text );
 	}
 endif;
 
