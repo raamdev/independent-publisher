@@ -2339,4 +2339,8 @@ table th {
 	.archive .archive-title {
 		font-size: 2.2em;
 	}
+
+	.entry-title-meta {
+		letter-spacing: 0;
+	}
 }
