@@ -45,7 +45,7 @@
 			) : // Standard post format
 				?>
 
-				<a style="text-decoration: none; color: inherit;" href="<?php the_permalink() ?>" rel="bookmark" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_excerpt(); ?></a>
+				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_excerpt(); ?></a>
 
 			<?php
 			else : ?>
