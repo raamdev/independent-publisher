@@ -651,10 +651,6 @@ img.aligncenter {
 	margin-top: 1em;
 }
 
-#page .show-full-content-first-post {
-	padding-top: 0 !important;
-}
-
 .show-full-content-first-post h1.entry-title,
 .show-full-content-first-post-sticky h1.entry-title {
 	font-size: 2.5em;
