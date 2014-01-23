@@ -4,9 +4,22 @@
 
 jQuery(document).ready(function () {
 
-	jQuery('#respond').hide();
-	jQuery('#share-comment-button').show();
-	jQuery('#share-comment-button-bottom').show();
+	var identifier = window.location.hash;
+
+	if (identifier === "#respond") {
+		jQuery('#cancel-comment-reply-link').click();
+		jQuery('#commentform-top').append(jQuery('#respond'));
+		jQuery('#respond').show();
+		jQuery('#share-comment-button').toggle('hide');
+		jQuery('#share-comment-button-bottom').show();
+		jQuery('.comment-form-reply-title').hide();
+		jQuery('#main-reply-title').show();
+		jQuery('#comment').focus();
+	} else {
+		jQuery('#respond').hide();
+		jQuery('#share-comment-button').show();
+		jQuery('#share-comment-button-bottom').show();
+	}
 
 	/* Share Comment Button (Top) */
 
