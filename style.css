@@ -2102,6 +2102,15 @@ table th {
 		margin-top: 80px;
 	}
 
+	.site-description {
+		font-size: 15px;
+	}
+
+	.site-published-date,
+	.site-published {
+		font-size: 14px;
+	}
+
 	.single .site-header {
 		display: none;
 	}
