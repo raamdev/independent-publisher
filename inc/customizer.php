@@ -221,7 +221,6 @@ class IndependentPublisher_Customize {
 			<?php self::generate_css('.site-description', 'color', 'primary_meta_text_color'); ?>
 			<?php self::generate_css('.site-published-date a, .site-published-date a:hover, .site-published-date a:visited, .site-published-date a:focus, .site-published-date a:active', 'color', 'primary_meta_text_color'); ?>
 			<?php self::generate_css('.site-published-location a, .site-published-location a:hover, .site-published-location a:visited, .site-published-location a:focus, .site-published-location a:active', 'color', 'primary_meta_text_color'); ?>
-			<?php self::generate_css('blockquote cite', 'color', 'primary_meta_text_color'); ?>
 			<?php self::generate_css('.pinglist-title,.taglist-title,.pinglist li::after', 'color', 'primary_meta_text_color'); ?>
 
 			/* Secondary Meta Text Color */
