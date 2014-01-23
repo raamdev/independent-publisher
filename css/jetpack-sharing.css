@@ -10,3 +10,12 @@ div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3, #primary
 	font-size: 16px !important;
 	margin-top: 0 !important;
 }
+
+div.sharedaddy div.sd-block {
+	border-top: none !important;
+}
+
+.single .entry-meta,
+.page .entry-meta {
+	margin-top: 0;
+}
