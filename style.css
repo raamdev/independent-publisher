@@ -1557,6 +1557,10 @@ article.first-post {
 	font-style: normal;
 }
 
+.entry-title-meta-post-date {
+	display: none;
+}
+
 .entry-title-meta a {
 	color: #b3b3b1;
 	text-decoration: none;
@@ -2134,6 +2138,15 @@ table th {
 
 	.entry-title-meta-author {
 		display: inline-block;
+	}
+
+	.entry-title-meta-post-date {
+		display: inline;
+	}
+
+	.single-format-quote .entry-title-meta-post-date,
+	.single-format-aside .entry-title-meta-post-date {
+		display: none;
 	}
 
 	.widget-area {

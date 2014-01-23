@@ -19,6 +19,10 @@
 			<?php if ( independent_publisher_categorized_blog() ) {
 				echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', TRUE );
 			} ?>
+			<span class="entry-title-meta-post-date">
+				<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter ?> </span>
+				<?php independent_publisher_posted_on_date() ?>
+			</span>
 			<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 		</h2>
 
