@@ -529,7 +529,7 @@ if ( ! function_exists( 'independent_publisher_first_sentence_excerpt' ) ):
 			$post_content = $content_post->post_content;
 
 			// If the post starts with an image containing a caption, remove the caption before generating the excerpt
-			if ( strpos( $post_content, '[caption' ) !== FALSE ) {
+			if ( strpos( trim( $post_content ), '[caption' ) === 0 ) {
 				$post_content = substr( $post_content, strpos( $post_content, '[/caption]' ) + 10, strlen( $post_content ) - ( strpos( $post_content, '[/caption]' ) + 10 ) );
 			}
 
@@ -538,11 +538,10 @@ if ( ! function_exists( 'independent_publisher_first_sentence_excerpt' ) ):
 
 			// $strings[0] is the first sentence and $strings[1] is the punctuation character at the end
 			if ( ! empty( $strings[0] ) && ! empty( $strings[1] ) ) {
-				$excerpt = $strings[0] . $strings[1];
-				$output  = apply_filters( 'the_content', $excerpt );
+				$output = $strings[0] . $strings[1];
 			}
 		}
-		return $output;
+		return wpautop( $output );
 	}
 endif;
 
