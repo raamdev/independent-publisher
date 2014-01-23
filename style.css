@@ -1666,6 +1666,7 @@ table th {
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	display: none;
+	min-height: 100px;
 }
 
 .post-author-bottom .site-logo img {
