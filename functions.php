@@ -668,7 +668,7 @@ if ( ! function_exists( 'independent_publisher_clean_content' ) ):
 		$content = preg_replace( '!<div\s+class="footnotes.*?">.*?</div>!is', '', $content );
 
 		// Strip all other tags except these allowed tags
-		$content = strip_tags( $content, '<cite><blockquote><b><i><em><strong><ins><del><mark><code><abbr><sup>' );
+		$content = strip_tags( $content, '<cite><blockquote><b><i><em><strong><ins><del><mark><code><abbr><sup><p>' );
 
 		return $content;
 	}
