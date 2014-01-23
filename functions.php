@@ -761,7 +761,7 @@ if ( ! function_exists( 'independent_publisher_maybe_linkify_the_content' ) ) :
 
 			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
 		}
-		return $content;
+		return wpautop( $content );
 	}
 endif;
 
