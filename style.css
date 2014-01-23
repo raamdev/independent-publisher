@@ -625,6 +625,14 @@ img.aligncenter {
 	margin-bottom: 20px;
 }
 
+.single-attachment .entry-title-meta {
+	margin-bottom: 20px;
+}
+
+.single-attachment .entry-caption {
+	margin-top: 1.2em;
+}
+
 .post-excerpts h1.entry-title,
 .enhanced-excerpts h1.entry-title {
 	font-size: 1.8em;
@@ -873,6 +881,10 @@ object {
 	padding-top: .5em;
 	margin-top: 0;
 	border-bottom: none;
+}
+
+#image-navigation {
+	margin-bottom: 20px;
 }
 
 /* =Comments
