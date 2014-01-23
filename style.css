@@ -1055,11 +1055,20 @@ ul.pinglist {
 
 .pinglist li {
 	display: inline;
-	margin-right: 20px;
+	margin-right: 5px;
+}
+
+.pinglist li::after {
+	content: '\b7';
+	margin-left: 5px;
 }
 
 .pinglist-title {
 	color: #929292;
+}
+
+.pinglist li.pinglist-title::after {
+	content: '';
 }
 
 .pinglist a {
@@ -1100,7 +1109,7 @@ ul.taglist {
 }
 
 .trackback span, .pingback span {
-	display: none;
+	font-weight: normal;
 }
 
 .trackback cite, .pingback cite {

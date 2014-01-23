@@ -1048,7 +1048,12 @@ ul.pinglist {
 
 .pinglist li {
 	display: inline;
-	margin-left: 20px;
+	margin-left: 5px;
+}
+
+.pinglist li::after {
+	content: '\b7';
+	margin-right: 5px;
 }
 
 .pinglist-title {
