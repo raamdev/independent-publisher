@@ -1494,7 +1494,8 @@ h6 {
 	border-bottom: solid 1px #ddd;
 }
 
-.archive .page-header {
+.archive .page-header,
+.search .page-header {
 	margin-bottom: 4em;
 	padding-bottom: 1em;
 	border-bottom: solid 1px;
@@ -1502,6 +1503,7 @@ h6 {
 }
 
 .archive .page-title,
+.search .page-title,
 .archive .archive-title {
 	font-size: 3.5em;
 	margin-top: 0;

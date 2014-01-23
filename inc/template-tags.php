@@ -491,6 +491,30 @@ if ( ! function_exists( 'independent_publisher_full_width_featured_image' ) ):
 	}
 endif;
 
+if ( ! function_exists( 'independent_publisher_search_stats' ) ):
+	/**
+	 * Returns stats for search results
+	 */
+	function independent_publisher_search_stats() {
+		global $wp_query;
+		$total            = $wp_query->found_posts;
+		$total_pages      = $wp_query->max_num_pages; // The total number of pages
+		$current_page_num = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		$pagination_info  = '';
+
+		/**
+		 * Only show pagination info when there is more than 1 page
+		 */
+		if ( $total_pages > 1 ) {
+			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent_publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
+		}
+
+		$stats_text = sprintf( _n( 'Found one search result for <strong>%2$s</strong>.', 'Found %1$s search results for <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), get_search_query() );
+
+		return wpautop( $stats_text );
+	}
+endif;
+
 if ( ! function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 	/**
 	 * Returns taxonomy archive stats and current page info for use in taxonomy archive descriptions

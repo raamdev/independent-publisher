@@ -13,8 +13,12 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 
+				<?php $search_stats = apply_filters( 'independent_publisher_search_stats', independent_publisher_search_stats() ); // @TODO Document independent_publisher_archive_stats filter ?>
+
 				<header class="page-header">
 					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'independent_publisher' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<?php echo apply_filters( 'search_meta', '<div class="search-stats-description">' . $search_stats . '</div>' ); ?>
+					<?php independent_publisher_content_nav( 'nav-above' ); ?>
 				</header><!-- .page-header -->
 
 				<?php /* Start the Loop */ ?>
