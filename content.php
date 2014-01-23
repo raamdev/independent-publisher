@@ -26,10 +26,12 @@
 		<div class="entry-content">
 			<?php if ( 'aside' === get_post_format() || 'quote' === get_post_format() ) : // Do something special for Asides and Quotes ?>
 
-				<?php // Asides might have footnotes, which don't display properly when linking Asides to themselves, so we strip <sup> here ?>
-				<?php $content = independent_publisher_strip_footnotes( get_the_content() ); ?>
+				<?php // Asides and Quotes might have footnotes, which don't display properly when linking the content to itself, so let's clean things up ?>
+				<?php $content = independent_publisher_clean_content( get_the_content() ); ?>
 
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php echo $content; ?></a>
+				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>">
+					<?php echo $content; ?>
+				</a>
 
 			<?php elseif ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() ) : ?>
 
@@ -49,7 +51,7 @@
 
 			<?php
 			else : ?>
-				<?php if ( has_post_thumbnail()  && 'image' !== get_post_format() ) : ?>
+				<?php if ( has_post_thumbnail() && 'image' !== get_post_format() ) : ?>
 					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
 				<?php endif; ?>
 				<?php the_content( independent_publisher_continue_reading_text() ); ?>

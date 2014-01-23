@@ -74,7 +74,7 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		 */
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'independent_publisher' ),
-			'social' => __( 'Social', 'independent_publisher' )
+			'social'  => __( 'Social', 'independent_publisher' )
 		) );
 
 		/**
@@ -659,17 +659,23 @@ function independent_publisher_is_not_first_post_full_content() {
 	return false;
 }
 
-if ( ! function_exists( 'independent_publisher_strip_footnotes' ) ):
+if ( ! function_exists( 'independent_publisher_clean_content' ) ):
 	/**
-	 * Strip footnotes (<sup></sup>) from post content
+	 * Cleans the content for display as a Quote or Aside by stripping anything that might screw up formatting
 	 */
-	function independent_publisher_strip_footnotes( $content ) {
+	function independent_publisher_clean_content( $content ) {
+
+		// Remove footnotes, if any
+		$content = preg_replace( '!<div\s+class="footnotes.*?">.*?</div>!is', '', $content );
+
+		// Strip all other tags except these allowed tags
+		$content = strip_tags( $content, '<cite><blockquote><b><i><em><strong><ins><del><mark><code><abbr><sup>' );
 
 		// This creates the same output as the_content()
 		$content = apply_filters( 'the_content', $content );
 		$content = str_replace( ']]>', ']]&gt;', $content );
 
-		return preg_replace( '!<sup\s+id="fnref.*?">.*?</sup>!is', '', $content );
+		return $content;
 	}
 endif;
 
