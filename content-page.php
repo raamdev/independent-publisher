@@ -23,5 +23,17 @@
 	</div>
 	<!-- .entry-content -->
 
-	<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	<footer class="entry-meta">
+		<?php do_action( 'independent_publisher_entry_meta_top' ); // @TODO Document independent_publisher_entry_meta_top action ?>
+
+		<?php if ( comments_open() ) : ?>
+			<div id="share-comment-button">
+				<button><i class="share-comment-icon"></i>Share a comment</button>
+			</div>
+		<?php endif; ?>
+
+		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="edit-link">', '</span>' ); ?>
+	</footer>
+	<!-- .entry-meta -->
+
 </article><!-- #post-<?php the_ID(); ?> -->

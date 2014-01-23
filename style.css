@@ -1565,10 +1565,11 @@ article.first-post {
 	color: #57ad68;
 }
 
-.single .entry-meta {
+.single .entry-meta,
+.page .entry-meta {
 	border-top: 1px solid #eee;
-	padding-bottom: 40px;
-	padding-top: 40px;
+	margin-bottom: 40px;
+	margin-top: 40px;
 }
 
 .single .edit-link,

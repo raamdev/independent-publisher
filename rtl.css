@@ -1520,8 +1520,8 @@ article.first-post {
 
 .single .entry-meta {
 	border-top: 1px solid #eee;
-	padding-bottom: 40px;
-	padding-top: 40px;
+	margin-bottom: 40px;
+	margin-top: 40px;
 }
 
 .single .edit-link,
