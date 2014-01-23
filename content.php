@@ -29,7 +29,7 @@
 				<?php // Asides might have footnotes, which don't display properly when linking Asides to themselves, so we strip <sup> here ?>
 				<?php $content = independent_publisher_strip_footnotes( get_the_content() ); ?>
 
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo $content; ?></a>
+				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php echo $content; ?></a>
 
 			<?php elseif ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() ) : ?>
 
@@ -45,7 +45,7 @@
 			) : // Standard post format
 				?>
 
-				<a style="text-decoration: none; color: inherit;" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_excerpt(); ?></a>
+				<a style="text-decoration: none; color: inherit;" href="<?php the_permalink() ?>" rel="bookmark" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_excerpt(); ?></a>
 
 			<?php
 			else : ?>
