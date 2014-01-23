@@ -165,6 +165,8 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author and post categories.
 	 *
+	 * Only prints author name when Multi-Author Mode is enabled.
+	 *
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_posted_author_cats() {

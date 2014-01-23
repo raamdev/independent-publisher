@@ -670,10 +670,6 @@ if ( ! function_exists( 'independent_publisher_clean_content' ) ):
 		// Strip all other tags except these allowed tags
 		$content = strip_tags( $content, '<cite><blockquote><b><i><em><strong><ins><del><mark><code><abbr><sup>' );
 
-		// This creates the same output as the_content()
-		$content = apply_filters( 'the_content', $content );
-		$content = str_replace( ']]>', ']]&gt;', $content );
-
 		return $content;
 	}
 endif;
@@ -752,3 +748,35 @@ function independent_publisher_entry_meta_author_prefix() {
 	$prefix = __( 'by', 'independent_publisher' );
 	return apply_filters( 'independent_publisher_entry_meta_author_prefix', $prefix ); // @TODO document independent_publisher_entry_meta_author_prefix filter
 }
+
+if ( ! function_exists( 'independent_publisher_maybe_linkify_the_content' ) ) :
+	/**
+	 * Links the post content for Asides and Quotes to itself, for display on non-Single pages
+	 */
+	function independent_publisher_maybe_linkify_the_content( $content ) {
+		if ( ! is_single() && ( 'aside' === get_post_format() || 'quote' === get_post_format() ) ) {
+
+			// Asides and Quotes might have footnotes, which don't display properly when linking the content to itself, so let's clean things up
+			$content = independent_publisher_clean_content( $content );
+
+			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
+		}
+		return $content;
+	}
+endif;
+
+add_filter( 'the_content', 'independent_publisher_maybe_linkify_the_content' );
+
+if ( ! function_exists( 'independent_publisher_maybe_linkify_the_excerpt' ) ) :
+	/**
+	 * Links the excerpt to itself, for display on non-Single pages
+	 */
+	function independent_publisher_maybe_linkify_the_excerpt( $content ) {
+		if ( ! is_single() ) {
+			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
+		}
+		return $content;
+	}
+endif;
+
+add_filter( 'the_excerpt', 'independent_publisher_maybe_linkify_the_excerpt' );
