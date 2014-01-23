@@ -535,10 +535,10 @@ if ( ! function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 		}
 
 		if ( $taxonomy === 'category' ) {
-			$stats_text = sprintf( _n( 'There is one post filed in <em>%2$s</em>.', 'There are %1$s posts filed in <em>%2$s</em>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
+			$stats_text = sprintf( _n( 'There is one post filed in <strong>%2$s</strong>.', 'There are %1$s posts filed in <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
 		}
 		elseif ( $taxonomy === 'post_tag' ) {
-			$stats_text = sprintf( _n( 'There is one post tagged <em>%2$s</em>.', 'There are %1$s posts tagged <em>%2$s</em>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
+			$stats_text = sprintf( _n( 'There is one post tagged <strong>%2$s</strong>.', 'There are %1$s posts tagged <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
 		}
 		return wpautop( $stats_text );
 	}
