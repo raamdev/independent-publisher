@@ -1573,6 +1573,7 @@ article.first-post {
 	border-top: 1px solid #eee;
 	margin-bottom: 40px;
 	margin-top: 40px;
+	padding-top: 40px;
 }
 
 .single .edit-link,
