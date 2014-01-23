@@ -10,7 +10,7 @@ jQuery(document).ready(function () {
 		jQuery('#cancel-comment-reply-link').click();
 		jQuery('#commentform-top').append(jQuery('#respond'));
 		jQuery('#respond').show();
-		jQuery('#share-comment-button').toggle('hide');
+		jQuery('#share-comment-button').hide();
 		jQuery('#share-comment-button-bottom').show();
 		jQuery('.comment-form-reply-title').hide();
 		jQuery('#main-reply-title').show();
