@@ -590,6 +590,8 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 				}
 			}
 		}
+		$date_archive_meta = wpautop( $date_archive_meta );
+
 		return apply_filters( 'date_archive_meta', '<div class="intro-meta">' . $date_archive_meta . '</div>' );
 	}
 endif;
