@@ -756,6 +756,15 @@ img.aligncenter {
 	width: 90%;
 }
 
+.format-chat .entry-content {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	background: #eee;
+	padding: 20px 20px 10px 20px;
+	margin-bottom: 2em;
+	font-size: 12px;
+	line-height: 1.6;
+}
+
 /* =Media
 ----------------------------------------------- */
 
