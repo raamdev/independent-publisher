@@ -23,35 +23,36 @@ get_header(); ?>
 					<div class="entry-content">
 						<?php the_content(); ?>
 
-						<h2><?php echo __('Search', 'independent_publisher'); ?></h2>
-						<p>
-							<?php get_search_form(); ?>
-						</p>
+						<?php get_search_form(); ?>
 
-						<div class="commonly-used-tags">
-							<h2><?php echo __('Explore by Tag', 'independent_publisher'); ?></h2>
-							<?php wp_tag_cloud('smallest=10&largest=22'); ?>
+						<?php the_widget( 'WP_Widget_Recent_Posts', array ('number'=>15) ); ?>
+
+						<div class="widget">
+							<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'independent_publisher' ); ?></h2>
+							<ul>
+								<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 1, 'title_li' => '', 'number' => 10 ) ); ?>
+							</ul>
 						</div>
+						<!-- .widget -->
 
-						<h2><?php echo __('Category Archives', 'independent_publisher'); ?></h2>
-						<ul>
-							<?php wp_list_categories('title_li='); ?>
-						</ul>
-
-						<h2><?php echo __('Yearly Archives', 'independent_publisher'); ?></h2>
+						<div class="widget">
+						<h2 class="widgettitle"><?php echo __('Yearly Archives', 'independent_publisher'); ?></h2>
 						<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
 							<option value=""><?php echo esc_attr( __( 'Select Year' ) ); ?></option>
 							<?php wp_get_archives( array( 'type' => 'yearly', 'format' => 'option' ) ); ?>
 						</select>
+						</div>
 
-						<h2><?php echo __('Monthly Archives', 'independent_publisher'); ?></h2>
+						<div class="widget">
+						<h2 class="widgettitle"><?php echo __('Monthly Archives', 'independent_publisher'); ?></h2>
 						<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
 							<option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>
 							<?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option' ) ); ?>
 						</select>
+						</div>
 
-						<?php wp_link_pages( array( 'before' => '<div class="page-links-next-prev">', 'after' => '</div>', 'nextpagelink' => __( '<button class="next-page-nav">Next page &rarr;</button>', 'independent_publisher' ), 'previouspagelink' => __( '<button class="previous-page-nav">&larr; Previous page</button>', 'independent_publisher' ), 'next_or_number' => 'next' ) ); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
+						<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+
 					</div><!-- .entry-content -->
 
 					<?php edit_post_link( __( 'Edit', 'publish' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
