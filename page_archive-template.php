@@ -38,7 +38,7 @@ get_header(); ?>
 							<div class="widget">
 								<h2 class="widget-title"><?php echo __( 'Yearly Archives', 'independent_publisher' ); ?></h2>
 								<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-									<option value=""><?php echo esc_attr( __( 'Select Year' ) ); ?></option>
+									<option value=""><?php echo esc_attr( __( 'Select Year', 'independent_publisher' ) ); ?></option>
 									<?php wp_get_archives( array( 'type' => 'yearly', 'format' => 'option' ) ); ?>
 								</select>
 							</div>
@@ -46,7 +46,7 @@ get_header(); ?>
 							<div class="widget">
 								<h2 class="widget-title"><?php echo __( 'Monthly Archives', 'independent_publisher' ); ?></h2>
 								<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-									<option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>
+									<option value=""><?php echo esc_attr( __( 'Select Month', 'independent_publisher' ) ); ?></option>
 									<?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option' ) ); ?>
 								</select>
 							</div>

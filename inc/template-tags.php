@@ -471,7 +471,7 @@ if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 		else {
 			$separator = '';
 		}
-		return sprintf( __( '<span>%1$s Words</span>' . $separator, 'independent_publisher' ), independent_publisher_post_word_count() );
+		return sprintf( __( '<span>%1$s Words</span>%2$s', 'independent_publisher' ), independent_publisher_post_word_count(), $separator );
 	}
 endif;
 

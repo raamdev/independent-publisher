@@ -7,6 +7,14 @@
  */
 
 /**
+ * Set the content width based on the theme's design and stylesheet.
+ *
+ * @since Independent Publisher 1.0
+ */
+if ( ! isset( $content_width ) )
+	$content_width = 700; /* pixels */
+
+/**
  * Include additional plugin support routines
  */
 require_once( 'inc/plugin-support.php' );
