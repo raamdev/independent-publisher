@@ -174,7 +174,7 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'independent_publisher' ) );
 
-		if ( ( ! post_password_required() && comments_open() ) || ( ! post_password_required() && independent_publisher_show_post_word_count() ) ) {
+		if ( ( ! post_password_required() && comments_open() ) || ( ! post_password_required() && independent_publisher_show_post_word_count() && ! get_post_format() ) ) {
 			$separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter
 		}
 		else {
