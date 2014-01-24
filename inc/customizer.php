@@ -199,6 +199,7 @@ class IndependentPublisher_Customize {
 
 			<?php self::generate_css('a, a:visited, a:hover, a:focus, a:active', 'color', 'link_color'); ?>
 			<?php self::generate_css('.enhanced-excerpts .enhanced-excerpt-read-more a, .enhanced-excerpts .enhanced-excerpt-read-more a:hover', 'color', 'link_color'); ?>
+			<?php self::generate_css('.post-excerpts .sticky.format-standard .entry-content a, .post-excerpts .sticky.format-standard .entry-content a:focus, .post-excerpts .sticky.format-standard .entry-content a:hover, .post-excerpts .sticky.format-standard .entry-content a:active, .post-excerpts .sticky.format-standard .entry-content a:visited', 'color', 'link_color'); ?>
 			<?php self::generate_css('.post-excerpts .format-standard.show-full-content-first-post .entry-content a', 'color', 'link_color'); ?>
 			<?php self::generate_css('.post-excerpts .format-standard .entry-content a.moretag', 'color', 'link_color'); ?>
 			<?php self::generate_css('.post-excerpts .format-standard .entry-content a.more-link', 'color', 'link_color'); ?>
