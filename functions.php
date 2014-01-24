@@ -128,8 +128,6 @@ function independent_publisher_scripts() {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 
-	wp_enqueue_script( 'hide-address-bar', get_template_directory_uri() . '/js/hide-address-bar.js', array( 'jquery' ), '1.0' );
-
 	independent_publisher_jetpack_sharing_css();
 	independent_publisher_jetpack_sharing_label_css();
 }
