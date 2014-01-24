@@ -1808,8 +1808,10 @@ table th {
 /* WP Audio Shortcode */
 .blog .wp-audio-shortcode,
 .archive .wp-audio-shortcode,
-.search .wp-audio-shortcode {
-	margin-bottom: 20px;
+.search .wp-audio-shortcode,
+.single .wp-audio-shortcode {
+	margin-bottom: 1.2em;
+	margin-top: 10px;
 }
 
 /**
@@ -2276,7 +2278,6 @@ table th {
 	.single-column-layout .site {
 		margin-top: 20px;
 	}
-
 
 	.single .wp-post-image,
 	.page .wp-post-image,
