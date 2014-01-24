@@ -348,10 +348,14 @@ add_action( 'wp_enqueue_scripts', 'independent_publisher_site_logo_icon_js' );
 
 if ( ! function_exists( 'independent_publisher_is_multi_author_mode' ) ):
 	/**
-	 * Checks if Multi Author Mode is enabled. Disabled by default, but can be overridden in a child theme
+	 * Returns true if Multi-Author Mode is enabled
 	 */
 	function independent_publisher_is_multi_author_mode() {
-		return false;
+		$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+		if ( isset( $independent_publisher_general_options['multi_author_mode'] ) && $independent_publisher_general_options['multi_author_mode'] )
+			return true;
+		else
+			return false;
 	}
 endif;
 
@@ -483,6 +487,18 @@ function independent_publisher_single_column_layout_body_class( $classes ) {
 }
 
 add_filter( 'body_class', 'independent_publisher_single_column_layout_body_class' );
+
+/**
+ * Add multi-author-mode to body class when Multi-Author Mode enabled
+ */
+function independent_publisher_multi_author_mode_body_class( $classes ) {
+	if ( independent_publisher_is_multi_author_mode() ) {
+		$classes[] = 'multi-author-mode';
+	}
+	return $classes;
+}
+
+add_filter( 'body_class', 'independent_publisher_multi_author_mode_body_class' );
 
 /**
  * Add no-post-excerpts to body class when Post Excerpts option is disabled

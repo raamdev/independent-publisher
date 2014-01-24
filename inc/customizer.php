@@ -106,6 +106,19 @@ class IndependentPublisher_Customize {
 			'type'     => 'checkbox',
 		) );
 
+		// Multi-Author Mode
+		$wp_customize->add_setting( 'independent_publisher_general_options[multi_author_mode]', array(
+			'default'    => false,
+			'type'       => 'option',
+			'capability' => 'edit_theme_options',
+		) );
+		$wp_customize->add_control( 'multi_author_mode', array(
+			'settings' => 'independent_publisher_general_options[multi_author_mode]',
+			'label'    => __( 'Multi-Author Mode', 'independent_publisher' ),
+			'section'  => 'independent_publisher_general_options',
+			'type'     => 'checkbox',
+		) );
+
 		// Comments Call to Action text
 		$wp_customize->add_setting( 'comments_call_to_action', array(
 			'default'    => 'Share a Comment',

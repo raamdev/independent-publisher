@@ -2138,6 +2138,11 @@ table th {
 		margin-top: 40px;
 	}
 
+	.multi-author-mode .site,
+	.multi-author-mode.single-column-layout .site {
+		margin-top: 80px;
+	}
+
 	.full-width-featured-image.single .wp-post-image,
 	.full-width-featured-image.page .wp-post-image,
 	.full-width-featured-image.blog .wp-post-image,
