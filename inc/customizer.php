@@ -117,7 +117,7 @@ class IndependentPublisher_Customize {
 		);
 		$colors[] = array(
 			'slug'    => 'link_color',
-			'default' => '#88C34B',
+			'default' => '#57ad68',
 			'label'   => __( 'Link Color', 'independent_publisher' )
 		);
 		$colors[] = array(
