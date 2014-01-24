@@ -1503,6 +1503,16 @@ h6 {
 	font-size: 2.1em;
 }
 
+.entry-content table {
+	border-left: solid 1px #eee;
+	border-top: solid 1px #eee;
+}
+
+.entry-content table td {
+	border-right: solid 1px #eee;
+	border-bottom: solid 1px #eee;
+}
+
 .page h1.entry-title {
 	margin-top: 20px;
 }
@@ -1673,7 +1683,6 @@ img#wpstats {
 
 table td {
 	padding: 4px;
-	border-bottom: solid 1px #eee;
 }
 
 table th {
