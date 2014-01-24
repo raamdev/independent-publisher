@@ -24,7 +24,7 @@
 	<!-- .entry-content -->
 
 	<footer class="entry-meta">
-		<?php do_action( 'independent_publisher_entry_meta_top' ); // @TODO Document independent_publisher_entry_meta_top action ?>
+		<?php do_action( 'independent_publisher_entry_meta_top' ); ?>
 
 		<?php if ( comments_open() ) : ?>
 			<div id="share-comment-button">

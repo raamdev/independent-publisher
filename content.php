@@ -11,7 +11,7 @@
 			<h2 class="entry-title-meta">
 				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> <?php echo independent_publisher_entry_meta_category_prefix() ?> <?php echo independent_publisher_post_categories( '', TRUE ); ?>
 				<span class="entry-title-meta-post-date">
-					<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter ?> </span>
+					<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
 					<?php independent_publisher_posted_on_date() ?>
 				</span>
 				<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
@@ -78,7 +78,7 @@
 			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent_publisher' ), __( '1 Comment', 'independent_publisher' ), __( '% Comments', 'independent_publisher' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter ?>
+		<?php $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?>
 		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> ' . $separator . ' </span> <span class="edit-link">', '</span>' ); ?>
 
 	</footer>

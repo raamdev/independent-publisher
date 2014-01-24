@@ -175,7 +175,7 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 		$categories_list = get_the_category_list( __( ', ', 'independent_publisher' ) );
 
 		if ( ( ! post_password_required() && comments_open() ) || ( ! post_password_required() && independent_publisher_show_post_word_count() && ! get_post_format() ) ) {
-			$separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter
+			$separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' );
 		}
 		else {
 			$separator = '';
@@ -466,7 +466,7 @@ if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 	 */
 	function independent_publisher_get_post_word_count() {
 		if ( ! post_password_required() && comments_open() ) {
-			$separator = ' <span class="sep"> ' . apply_filters( 'independent_publisher_entry_meta_separator', '|' ); // @TODO Document independent_publisher_entry_meta_separator filter . ' </span>';
+			$separator = ' <span class="sep"> ' . apply_filters( 'independent_publisher_entry_meta_separator', '|' ) . ' </span>';
 		}
 		else {
 			$separator = '';
@@ -552,15 +552,11 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 	 */
 	function independent_publisher_date_archive_description() {
 		global $wp_query;
-		$total            = $wp_query->found_posts; // The total number of posts found for this query
-		$total_pages      = $wp_query->max_num_pages; // The total number of pages
-		$current_page_num = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-		$pagination_info  = '';
-
-		/**
-		 * Allow overriding the date archive description with a custom description
-		 */
-		$date_archive_meta = apply_filters( 'custom_date_archive_meta', '' ); // @TODO Document custom_date_archive_meta filter
+		$total             = $wp_query->found_posts; // The total number of posts found for this query
+		$total_pages       = $wp_query->max_num_pages; // The total number of pages
+		$current_page_num  = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		$pagination_info   = '';
+		$date_archive_meta = '';
 
 		/**
 		 * Only show pagination info when there is more than 1 page
@@ -570,7 +566,7 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 		}
 
 		/**
-		 * Only proceed if we're on the first page and the description has not been overridden via custom_date_archive_meta
+		 * Only proceed if we're on the first page and the description has not been overridden via independent_publisher_custom_date_archive_meta
 		 */
 		if ( trim( $date_archive_meta ) === '' ) {
 			if ( is_year() ) {

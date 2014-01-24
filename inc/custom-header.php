@@ -15,7 +15,6 @@
  * Use feature detection of wp_get_theme() which was introduced
  * in WordPress 3.4.
  *
- * @todo Rework this function to remove WordPress 3.4 support when WordPress 3.6 is released.
  * @uses independent_publisher_get_default_header_image()
  */
 function independent_publisher_custom_header_setup() {

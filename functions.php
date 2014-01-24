@@ -782,7 +782,7 @@ function independent_publisher_replytocom() {
  */
 function independent_publisher_entry_meta_category_prefix() {
 	$prefix = __( 'in', 'independent_publisher' );
-	return apply_filters( 'independent_publisher_entry_meta_category_prefix', $prefix ); // @TODO document independent_publisher_entry_meta_category_prefix filter
+	return apply_filters( 'independent_publisher_entry_meta_category_prefix', $prefix );
 }
 
 /**
@@ -790,7 +790,7 @@ function independent_publisher_entry_meta_category_prefix() {
  */
 function independent_publisher_entry_meta_author_prefix() {
 	$prefix = __( 'by', 'independent_publisher' );
-	return apply_filters( 'independent_publisher_entry_meta_author_prefix', $prefix ); // @TODO document independent_publisher_entry_meta_author_prefix filter
+	return apply_filters( 'independent_publisher_entry_meta_author_prefix', $prefix );
 }
 
 if ( ! function_exists( 'independent_publisher_maybe_linkify_the_content' ) ) :

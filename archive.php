@@ -64,7 +64,7 @@ get_header(); ?>
 						$category_description = category_description();
 
 						// Get some stats about this taxonomy to include in the description
-						$taxonomy_stats = apply_filters( 'independent_publisher_taxonomy_stats', independent_publisher_taxonomy_archive_stats( 'category' ) ); // @TODO Document independent_publisher_taxonomy_stats filter
+						$taxonomy_stats = apply_filters( 'independent_publisher_taxonomy_category_stats', independent_publisher_taxonomy_archive_stats( 'category' ) );
 
 						if ( ! empty( $category_description ) ) { // show the description + the taxonomy stats
 							echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . $taxonomy_stats . '</div>' );
@@ -79,7 +79,7 @@ get_header(); ?>
 						$tag_description = tag_description();
 
 						// Get some stats about this taxonomy to include in the description
-						$taxonomy_stats = apply_filters( 'independent_publisher_taxonomy_stats', independent_publisher_taxonomy_archive_stats( 'post_tag' ) ); // @TODO Document independent_publisher_taxonomy_stats filter
+						$taxonomy_stats = apply_filters( 'independent_publisher_taxonomy_tag_stats', independent_publisher_taxonomy_archive_stats( 'post_tag' ) );
 
 						if ( ! empty( $tag_description ) ) { // show the description + the taxonomy stats
 							echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . $taxonomy_stats . '</div>' );

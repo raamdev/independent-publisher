@@ -80,10 +80,11 @@ if ( post_password_required() )
 
 	<?php if ( comments_open() && get_comments_number() >= independent_publisher_min_comments_bottom_share_button() ) : ?>
 
-		<?php do_action( 'independent_publisher_before_bottom_share_comment_button' ); // @TODO document independent_publisher_before_bottom_share_comment_button action ?>
+		<?php do_action( 'independent_publisher_before_bottom_share_comment_button' ); ?>
 
 		<div id="share-comment-button-bottom">
-			<button><i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?></button>
+			<button><i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?>
+			</button>
 		</div>
 		<div id="commentform-bottom"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
 	<?php endif; ?>
@@ -92,9 +93,9 @@ if ( post_password_required() )
 		<?php if ( count( $wp_query->comments_by_type['pings'] ) ) { ?>
 			<div id="pinglist">
 				<ul class="pinglist">
-					<li class="pinglist-title"><?php _e( 'Readers who shared this', 'independent_publisher' ); ?></li>
+					<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_title', __( 'Readers who shared this', 'independent_publisher' ) ); ?></li>
 					<?php independent_publisher_pings(); ?>
-					<li class="pinglist-title"><?php _e( 'Thank you!', 'independent_publisher' ); ?></li>
+					<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_end_note', __( 'Thank you!', 'independent_publisher' ) ); ?></li>
 				</ul>
 			</div>
 		<?php } // end if ( count($wp_query->comments_by_type['pings']))?>
