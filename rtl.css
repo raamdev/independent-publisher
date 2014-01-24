@@ -130,7 +130,7 @@ hr {
 
 /* Text elements */
 p {
-	margin-bottom: 1.2em;
+	margin-bottom: 1em;
 }
 
 ul, ol {
@@ -1532,7 +1532,7 @@ article.first-post {
 	padding: 0 40px;
 	max-width: 700px;
 	margin-bottom: 0;
-	margin-top: 150px;
+	margin-top: 100px;
 }
 
 .site-header {
