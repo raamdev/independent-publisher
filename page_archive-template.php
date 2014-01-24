@@ -18,42 +18,50 @@ get_header(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
-					</header><!-- .entry-header -->
+					</header>
+					<!-- .entry-header -->
 
 					<div class="entry-content">
 						<?php the_content(); ?>
 
-						<?php get_search_form(); ?>
+						<?php if ( ! dynamic_sidebar( 'archive-page' ) ) : ?>
 
-						<?php the_widget( 'WP_Widget_Recent_Posts', array ('number'=>15) ); ?>
+							<?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 15 ) ); ?>
 
-						<div class="widget">
-							<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'independent_publisher' ); ?></h2>
-							<ul>
-								<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 1, 'title_li' => '', 'number' => 10 ) ); ?>
-							</ul>
-						</div>
-						<!-- .widget -->
+							<div class="widget">
+								<h2 class="widget-title"><?php _e( 'Most Used Categories', 'independent_publisher' ); ?></h2>
+								<ul>
+									<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 1, 'title_li' => '', 'number' => 10 ) ); ?>
+								</ul>
+							</div>
 
-						<div class="widget">
-						<h2 class="widgettitle"><?php echo __('Yearly Archives', 'independent_publisher'); ?></h2>
-						<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-							<option value=""><?php echo esc_attr( __( 'Select Year' ) ); ?></option>
-							<?php wp_get_archives( array( 'type' => 'yearly', 'format' => 'option' ) ); ?>
-						</select>
-						</div>
+							<div class="widget">
+								<h2 class="widget-title"><?php echo __( 'Yearly Archives', 'independent_publisher' ); ?></h2>
+								<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+									<option value=""><?php echo esc_attr( __( 'Select Year' ) ); ?></option>
+									<?php wp_get_archives( array( 'type' => 'yearly', 'format' => 'option' ) ); ?>
+								</select>
+							</div>
 
-						<div class="widget">
-						<h2 class="widgettitle"><?php echo __('Monthly Archives', 'independent_publisher'); ?></h2>
-						<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-							<option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>
-							<?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option' ) ); ?>
-						</select>
-						</div>
+							<div class="widget">
+								<h2 class="widget-title"><?php echo __( 'Monthly Archives', 'independent_publisher' ); ?></h2>
+								<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+									<option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>
+									<?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option' ) ); ?>
+								</select>
+							</div>
 
-						<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+							<div class="widget">
+								<h2 class="widget-title"><?php _e( 'Search', 'independent_publisher' ); ?></h2>
+								<?php get_search_form(); ?>
+							</div>
 
-					</div><!-- .entry-content -->
+							<?php the_widget( 'WP_Widget_Tag_Cloud', array( 'title' => __( 'Explore by Tag', 'independent_publisher' ) ) ); ?>
+
+						<?php endif; ?>
+
+					</div>
+					<!-- .entry-content -->
 
 					<?php edit_post_link( __( 'Edit', 'publish' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 				</article><!-- #post-<?php the_ID(); ?> -->

@@ -94,7 +94,7 @@ endif; // independent_publisher_setup
 add_action( 'after_setup_theme', 'independent_publisher_setup' );
 
 /**
- * Register widgetized area and update sidebar with default widgets
+ * Register widgetized areas and update sidebar with default widgets
  *
  * @since Independent Publisher 1.0
  */
@@ -106,6 +106,15 @@ function independent_publisher_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Archive Page', 'independent_publisher' ),
+		'id'            => 'archive-page',
+		'before_widget' => '<div class="widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 
