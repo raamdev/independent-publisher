@@ -1857,8 +1857,9 @@ table th {
 
 /* Hide left-side author card under 1200px */
 @media only screen and (max-width: 1200px) {
-	.site {
-		margin-top: 80px;
+	.site,
+	.single-column-layout .site {
+		margin-top: 40px;
 	}
 
 	.single .site-header {
@@ -1962,8 +1963,9 @@ table th {
 }
 
 @media only screen and (max-width: 500px) {
-	.site {
-		margin-top: 40px;
+	.site,
+	.single-column-layout .site {
+		margin-top: 20px;
 	}
 
 	#masthead {

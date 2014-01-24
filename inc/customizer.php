@@ -233,7 +233,6 @@ class IndependentPublisher_Customize {
 			<?php self::generate_css('.comment-meta, .comment-meta a', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.widget_rss .rss-date, .widget_rss li > cite, .widget_twitter .timesince', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.site-footer', 'color', 'secondary_meta_text_color'); ?>
-			<?php self::generate_css('.archive .page-header, .author div.author-bio', 'border-color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.comment-content.unapproved', 'color', 'secondary_meta_text_color'); ?>
 
 		</style>
