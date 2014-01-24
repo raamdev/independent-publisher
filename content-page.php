@@ -28,7 +28,7 @@
 
 		<?php if ( comments_open() ) : ?>
 			<div id="share-comment-button">
-				<button><i class="share-comment-icon"></i>Share a comment</button>
+				<button><i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?></button>
 			</div>
 		<?php endif; ?>
 

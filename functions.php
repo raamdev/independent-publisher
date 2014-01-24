@@ -315,11 +315,11 @@ add_filter( 'comment_form_defaults', 'independent_publisher_remove_textarea' );
 
 if ( ! function_exists( 'independent_publisher_add_textarea' ) ) :
 	/**
-	 * Recreates the comment form textarea HTML for reinclusion in comment form
+	 * Recreates the comment form textarea HTML for reinclusion in comment form <?php independent_publisher_comments_call_to_action_text() ?>
 	 */
 	function independent_publisher_add_textarea() {
-		echo '<div id="main-reply-title"><h3>Share a Comment</h3></div>';
-		echo '<div class="comment-form-reply-title"><p>Comment</p></div>';
+		echo '<div id="main-reply-title"><h3>' . independent_publisher_comments_call_to_action_text() . '</h3></div>';
+		echo '<div class="comment-form-reply-title"><p>' . __( 'Comment', 'independent_publisher' ) . '</p></div>';
 		echo '<p class="comment-form-comment" id="comment-form-field"><textarea id="comment" name="comment" cols="60" rows="6" aria-required="true"></textarea></p>';
 	}
 endif;
@@ -435,6 +435,17 @@ function independent_publisher_use_single_column_layout() {
 		return true;
 	else
 		return false;
+}
+
+/**
+ * Returns Comments Call to Action text
+ */
+function independent_publisher_comments_call_to_action_text() {
+	$comments_call_to_action = get_theme_mod( 'comments_call_to_action' );
+	if ( isset( $comments_call_to_action ) && trim( $comments_call_to_action ) !== '' )
+		return esc_attr( $comments_call_to_action );
+	else
+		return __( 'Share a Comment', 'independent_publisher' );
 }
 
 /**

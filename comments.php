@@ -83,7 +83,7 @@ if ( post_password_required() )
 		<?php do_action( 'independent_publisher_before_bottom_share_comment_button' ); // @TODO document independent_publisher_before_bottom_share_comment_button action ?>
 
 		<div id="share-comment-button-bottom">
-			<button><i class="share-comment-icon"></i><?php _e( 'Share a comment', 'independent_publisher' ); ?></button>
+			<button><i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?></button>
 		</div>
 		<div id="commentform-bottom"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
 	<?php endif; ?>

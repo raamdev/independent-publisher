@@ -106,6 +106,19 @@ class IndependentPublisher_Customize {
 			'type'     => 'checkbox',
 		) );
 
+		// Comments Call to Action text
+		$wp_customize->add_setting( 'comments_call_to_action', array(
+			'default'    => 'Share a Comment',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+		) );
+		$wp_customize->add_control( 'comments_call_to_action', array(
+			'settings' => 'comments_call_to_action',
+			'label'    => __( 'Comments Call to Action', 'independent_publisher' ),
+			'section'  => 'independent_publisher_general_options',
+			'type'     => 'text',
+		) );
+
 		// Color options
 
 		$colors = array();
