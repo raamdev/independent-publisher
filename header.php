@@ -50,6 +50,7 @@
 			<?php independent_publisher_site_info(); ?>
 			<nav role="navigation" class="site-navigation main-navigation">
 				<h1 class="assistive-text"><?php _e( 'Menu', 'independent_publisher' ); ?></h1>
+
 				<div class="assistive-text skip-link">
 					<a href="#content" title="<?php esc_attr_e( 'Skip to content', 'independent_publisher' ); ?>"><?php _e( 'Skip to content', 'independent_publisher' ); ?></a>
 				</div>
