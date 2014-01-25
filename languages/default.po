@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-01-24 20:14-0500\n"
-"PO-Revision-Date: 2014-01-24 20:14-0500\n"
+"POT-Creation-Date: 2014-01-25 18:45-0500\n"
+"PO-Revision-Date: 2014-01-25 18:45-0500\n"
 "Last-Translator: Raam Dev <raam@raamdev.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -189,7 +189,7 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: ../header.php:54
+#: ../header.php:55
 msgid "Skip to content"
 msgstr ""
 
@@ -382,13 +382,13 @@ msgstr ""
 msgid "View all posts in %s"
 msgstr ""
 
-#: ../inc/template-tags.php:474
+#: ../inc/template-tags.php:463
 #, php-format
 msgid "%1$s Words"
 msgstr ""
 
-#: ../inc/template-tags.php:511 ../inc/template-tags.php:536
-#: ../inc/template-tags.php:565
+#: ../inc/template-tags.php:500 ../inc/template-tags.php:525
+#: ../inc/template-tags.php:554
 #, php-format
 msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
 msgstr ""
