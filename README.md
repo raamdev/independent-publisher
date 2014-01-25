@@ -84,7 +84,7 @@ If there is only one author on your site, you probably want to set the Header Im
 
 ### How do I get the small logo to show up in the top-left corner?
 
-![screen shot 2014-01-22 at 5 56 22 pm](https://f.cloud.github.com/assets/53005/1979978/a4360d06-83b8-11e3-95e6-2fba9c982761.png)
+![a4360d06-83b8-11e3-95e6-2fba9c982761](https://f.cloud.github.com/assets/53005/2000384/67f60ef8-8558-11e3-97be-09c9f3b7ec16.png)
 
 First you need to enable **Multi-Author Mode** in *Dashboard → Appearance → Customizer → General Options* . With Multi-Author Mode enabled, the theme Header Image (*Dashboard → Appearance → Header Image*) will be placed in the top-left corner on all Single pages.
 
@@ -92,13 +92,13 @@ First you need to enable **Multi-Author Mode** in *Dashboard → Appearance → 
 
 If you clear the JetPack Sharing Buttons "Sharing label" field so that it's empty, Independent Publisher will force the sharing buttons to float right and will remove the right padding so that the buttons look nicer.
 
-![screen shot 2014-01-22 at 6 00 30 pm](https://f.cloud.github.com/assets/53005/1980007/4dc42092-83b9-11e3-96a3-8b9580f82f80.png)
+![4dc42092-83b9-11e3-96a3-8b9580f82f80](https://f.cloud.github.com/assets/53005/2000387/8c1796bc-8558-11e3-8ee4-0c4f9f4fbf2e.png)
 
-### Theme Filters and Actions
+## Theme Filters and Actions
 
 WordPress Filters and Actions allow you to modify the theme without actually modifying any theme code. To use any of these filters or actions, start by creating a [Child Theme](#using-a-child-theme-to-customize-independent-publisher) and then adding the relevant function to the `functions.php` file. See also [add_filter()](http://codex.wordpress.org/Function_Reference/add_filter) and [add_action()](http://codex.wordpress.org/Function_Reference/add_action) on the WordPress Codex.
 
-#### Filters
+### Filters
 
 - `independent_publisher_taxonomy_category_stats` - Allows you to override the Category Archive stats that are appended to the category archive description.
 - `independent_publisher_taxonomy_tag_stats` - Allows you to override the Tag Archive stats that are appended to the Tag Archive description.
@@ -110,15 +110,15 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_pingslist_title` - Allows you to override the default Pings List title of 'Readers who Shared This' at the bottom of Single posts.
 - `independent_publisher_pingslist_end_note` - Allows you to override the default Pings List end note of 'Thank you!' at the bottom of Single posts.
 
-#### Action Hooks
+### Action Hooks
 
 - `independent_publisher_entry_meta_top` - Located at the top of post Entry Meta, just before the 'Share a Comment' button.
 - `independent_publisher_before_bottom_share_comment_button` - Located just before the second 'Share a Comment' button that shows up underneath post comments when there are more than 4 comments visible.
 - `independent_publisher_before_post_bottom_tag_list` - Located before the bottom 'Related Content by Tag' tag list on Single posts.
 
-### Functions that can be overridden in a Child Theme
+## Functions you can Override in a Child Theme
 
-Functions in `inc/template-tags.php`:
+### Functions in `inc/template-tags.php`:
 
 - `independent_publisher_content_nav()` - Display navigation to next/previous pages when applicable
 - `independent_publisher_comment()` - Template for comments and pingbacks.
@@ -142,7 +142,7 @@ Functions in `inc/template-tags.php`:
 - `independent_publisher_min_comments_bottom_share_button()` - Returns the minimum number of comments that must exist for the bottom 'Share a comment' button to appear
 - `independent_publisher_min_comments_comment_title()` - Returns the minimum number of comments that must exist for the comments title to appear
 
-Functions in `functions.php`:
+### Functions in `functions.php`:
 
 - `independent_publisher_author_comment_reply_link()` - Change the comment reply link to use 'Reply to [Author First Name]'
 - `independent_publisher_comment_form_args()` - Arguments for `comment_form()`
