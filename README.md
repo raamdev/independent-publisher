@@ -78,23 +78,15 @@ For more information on using Child Themes, see the [WordPress Codex](http://cod
 
 ### Why is my Header Image not showing on Single posts?
 
-On Single pages, the Gravatar image for the author of the post is shown. The Header Image (**Dashboard → Appearance → Header**) is only shown on non-Single pages.
+On Single pages, the Gravatar image for the author of the post is shown. The Header Image (*Dashboard → Appearance → Header*) is only shown on non-Single pages.
 
-If there is only one author on your site, you probably want to set the Header Image to be the same as the author Gravatar. (You also probably want the site Tagline, **Dashboard → Settings → General → Tagline**, to be the same as your bio in **Dashboard → Users → Your Profile → Biographical Info**.)
+If there is only one author on your site, you probably want to set the Header Image to be the same as the author Gravatar. (You also probably want the site Tagline, *Dashboard → Settings → General → Tagline*, to be the same as your bio in *Dashboard → Users → Your Profile → Biographical Info*.)
 
 ### How do I get the small logo to show up in the top-left corner?
 
 ![screen shot 2014-01-22 at 5 56 22 pm](https://f.cloud.github.com/assets/53005/1979978/a4360d06-83b8-11e3-95e6-2fba9c982761.png)
 
-There is a hidden feature called "Multi-Author Mode" that when enabled places the theme Header Image (**Dashboard → Appearance → Header**) in the top-left corner on all Single pages. 
-
-You can enable Multi-Author Mode by adding the following to a Child Theme's `functions.php`:
-
-```
-function independent_publisher_is_multi_author_mode() { return true; }
-```
-
-The [Independent Publisher Child Theme](https://github.com/raamdev/independent-publisher-child-theme) includes an example in the `functions.php` file.
+First you need to enable **Multi-Author Mode** in *Dashboard → Appearance → Customizer → General Options* . With Multi-Author Mode enabled, the theme Header Image (*Dashboard → Appearance → Header Image*) will be placed in the top-left corner on all Single pages.
 
 ### How do I make the JetPack Sharing Buttons look better?
 
