@@ -323,7 +323,7 @@ add_filter( 'comment_form_defaults', 'independent_publisher_remove_textarea' );
 
 if ( ! function_exists( 'independent_publisher_add_textarea' ) ) :
 	/**
-	 * Recreates the comment form textarea HTML for reinclusion in comment form <?php independent_publisher_comments_call_to_action_text() ?>
+	 * Recreates the comment form textarea HTML for reinclusion in comment form
 	 */
 	function independent_publisher_add_textarea() {
 		echo '<div id="main-reply-title"><h3>' . independent_publisher_comments_call_to_action_text() . '</h3></div>';
@@ -356,7 +356,7 @@ add_action( 'wp_enqueue_scripts', 'independent_publisher_site_logo_icon_js' );
 
 if ( ! function_exists( 'independent_publisher_is_multi_author_mode' ) ):
 	/**
-	 * Returns true if Multi-Author Mode is enabled
+		 * Returns true if Multi-Author Mode is enabled
 	 */
 	function independent_publisher_is_multi_author_mode() {
 		$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
@@ -369,7 +369,7 @@ endif;
 
 if ( ! function_exists( 'independent_publisher_single_author_link' ) ):
 	/**
-	 * Point author links to home page when not using multi-author mode
+	 * Returns the author link; defaults to home page when not using multi-author mode
 	 */
 	function independent_publisher_single_author_link() {
 		return get_home_url();
@@ -704,7 +704,7 @@ function independent_publisher_is_not_first_post_full_content() {
 
 if ( ! function_exists( 'independent_publisher_clean_content' ) ):
 	/**
-	 * Cleans the content for display as a Quote or Aside by stripping anything that might screw up formatting
+	 * Cleans and returns the content for display as a Quote or Aside by stripping anything that might screw up formatting
 	 */
 	function independent_publisher_clean_content( $content ) {
 
@@ -795,7 +795,7 @@ function independent_publisher_entry_meta_author_prefix() {
 
 if ( ! function_exists( 'independent_publisher_maybe_linkify_the_content' ) ) :
 	/**
-	 * Links the post content for Asides and Quotes to itself, for display on non-Single pages
+	 * Returns the post content for Asides and Quotes with the content linked to the permalink, for display on non-Single pages
 	 */
 	function independent_publisher_maybe_linkify_the_content( $content ) {
 		if ( ! is_single() && ( 'aside' === get_post_format() || 'quote' === get_post_format() ) ) {
@@ -813,7 +813,7 @@ add_filter( 'the_content', 'independent_publisher_maybe_linkify_the_content' );
 
 if ( ! function_exists( 'independent_publisher_maybe_linkify_the_excerpt' ) ) :
 	/**
-	 * Links the excerpt to itself, for display on non-Single pages
+	 * Returns the excerpt with the excerpt linked to the permalink, for display on non-Single pages
 	 */
 	function independent_publisher_maybe_linkify_the_excerpt( $content ) {
 		if ( ! is_single() ) {
