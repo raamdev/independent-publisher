@@ -1380,7 +1380,7 @@ body {
 .site-published-location {
 	margin: 0 0 20px 0;
 	color: #929292;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: inherit;
 	line-height: 1.4;
 	font-style: normal;
@@ -1532,6 +1532,10 @@ h6 {
 .search article {
 	padding: 40px 0 40px 0;
 	border-bottom: solid 1px #ddd;
+}
+
+.blog article.show-full-content-first-post {
+	padding-top: 0;
 }
 
 .archive .page-header,
@@ -1729,7 +1733,7 @@ table th {
 
 .post-author-bottom .post-author-info {
 	margin-left: 140px;
-	margin-right: 200px;
+	margin-right: 120px;
 	padding-right: 25px;
 	padding-top: 10px;
 }
@@ -1746,7 +1750,7 @@ table th {
 }
 
 .post-author-bottom .post-published-date {
-	width: 177px;
+	width: 120px;
 	margin-left: 385px;
 	position: absolute;
 	margin-top: -85px;
@@ -1831,7 +1835,7 @@ table th {
  */
 
 .single-column-layout .site-header {
-	text-align: center;
+	text-align: left;
 	margin-left: 0;
 	float: none;
 	display: block;
@@ -1848,7 +1852,7 @@ table th {
 }
 
 .single-column-layout .site {
-	margin-top: 80px;
+	margin-top: 40px;
 }
 
 .single-column-layout .post-author-bottom {
@@ -1885,7 +1889,7 @@ table th {
 }
 
 .single-column-layout .page article {
-	padding: 40px 0 40px 0;
+	padding: 0 0 40px 0;
 }
 
 .single-column-layout .main-navigation {
@@ -1894,7 +1898,8 @@ table th {
 
 .single-column-layout .site-navigation {
 	border-bottom: 1px solid #eee;
-	padding-bottom: 20px;
+	margin-top: 0;
+	padding-bottom: 40px;
 	margin-bottom: 20px;
 }
 
@@ -1917,20 +1922,22 @@ table th {
 }
 
 .single-column-layout #masthead .site-title {
-	font-size: 24px;
+	font-size: 32px;
 	font-style: normal;
-	padding-top: 15px;
+	padding-top: 0;
 	padding-left: 0;
 }
 
 .single-column-layout #masthead .site-description {
 	padding-left: 0;
-	padding-top: 20px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	font-size: 15px;
 }
 
 .single-column-layout #masthead .site-logo,
 .single-column-layout #masthead .site-logo img {
-	float: none;
+	float: right;
 	max-width: 100px;
 }
 
@@ -1938,8 +1945,8 @@ table th {
 	display: inline-block;
 }
 
-.single-column-layout.archive .page-header {
-	text-align: center;
+.single-column-layout #masthead .main-navigation ul {
+	margin-left: -10px;
 }
 
 .single-column-layout.archive .page-title,
@@ -1957,8 +1964,10 @@ table th {
 }
 
 .single-column-layout #menu-social ul {
-	text-align: center;
-	margin-bottom: 0;
+	text-align: left;
+	margin-left: -5px;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .full-width-featured-image.single-column-layout.single .wp-post-image,
@@ -1981,7 +1990,6 @@ table th {
 #menu-social ul {
 	list-style: none;
 	margin: 0 0 25px;
-	text-align: right;
 }
 
 #menu-social ul li {
@@ -2150,7 +2158,7 @@ table th {
 
 	.multi-author-mode .site,
 	.multi-author-mode.single-column-layout .site {
-		margin-top: 80px;
+		margin-top: 40px;
 	}
 
 	.full-width-featured-image.single .wp-post-image,
@@ -2174,12 +2182,16 @@ table th {
 	}
 
 	.site-header {
-		text-align: center;
+		text-align: left;
 		margin-left: 0;
 		float: none;
 		display: block;
 		width: 100%;
 		position: relative;
+	}
+
+	.blog article.show-full-content-first-post {
+		padding-top: 40px;
 	}
 
 	.post-author-bottom {
@@ -2225,16 +2237,17 @@ table th {
 	}
 
 	.page article {
-		padding: 40px 0 40px 0;
+		padding: 0 0 40px 0;
 	}
 
 	.main-navigation {
 		clear: none;
 	}
 
-	.site-navigation {
+	#masthead .site-navigation {
 		border-bottom: 1px solid #eee;
-		padding-bottom: 20px;
+		margin-top: 0;
+		padding-bottom: 40px;
 		margin-bottom: 20px;
 	}
 
@@ -2256,25 +2269,25 @@ table th {
 	}
 
 	#masthead .site-title {
-		font-size: 24px;
+		font-size: 32px;
 		font-style: normal;
-		padding-top: 15px;
+		padding-top: 0;
 		padding-left: 0;
 	}
 
 	#masthead .site-description {
 		padding-left: 0;
-		padding-top: 20px;
+		padding-top: 10px;
+		margin-bottom: 10px;
 	}
 
 	#masthead .site-logo,
 	#masthead .site-logo img {
-		float: none;
-		max-width: 100px;
+		float: right;
 	}
 
-	.archive .page-header {
-		text-align: center;
+	#masthead .main-navigation ul {
+		margin-left: -10px;
 	}
 
 	.archive .page-title,
@@ -2283,8 +2296,10 @@ table th {
 	}
 
 	#menu-social ul {
-		text-align: center;
-		margin-bottom: 0;
+		text-align: left;
+		margin-left: -5px;
+		margin-bottom: 20px;
+		margin-top: 20px;
 	}
 }
 
@@ -2294,15 +2309,74 @@ table th {
 		margin-top: 20px;
 	}
 
+	.multi-author-mode .site,
+	.multi-author-mode.single-column-layout .site {
+		margin-top: 20px;
+	}
+
+	#masthead .site-title,
+	.single-column-layout #masthead .site-title {
+		padding-top: 0;
+		font-size: 24px;
+	}
+
+	#masthead .site-logo {
+		float: right;
+		margin-right: 0;
+	}
+
+	#masthead .site-logo img,
+	.single-column-layout #masthead .site-logo img {
+		max-width: 70px;
+		margin-right: 0;
+	}
+
+	#masthead .site-title,
+	#masthead .site-description,
+	.single-column-layout #masthead .site-title,
+	.single-column-layout #masthead .site-description {
+		margin-left: 0;
+	}
+
+	#menu-social {
+		clear: both;
+	}
+
+	#menu-social ul,
+	.single-column-layout #menu-social ul {
+		margin-left: 0;
+	}
+
+	#masthead .site-navigation {
+		margin-left: -10px;
+		padding-bottom: 20px;
+	}
+
+	.single-column-layout .site-navigation {
+		margin-bottom: 0;
+	}
+
+	#masthead .main-navigation ul,
+	.single-column-layout #masthead .main-navigation ul {
+		margin-left: inherit;
+	}
+
+	#masthead .main-navigation li {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.site-navigation button,
+	.paging-navigation button {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
 	.single .wp-post-image,
 	.page .wp-post-image,
 	.blog .wp-post-image,
 	.archive .wp-post-image {
 		margin-bottom: 10px;
-	}
-
-	#masthead {
-		margin-top: 0;
 	}
 
 	#page {
@@ -2347,29 +2421,6 @@ table th {
 
 	.entry-content ol, ul {
 		margin-left: 2em;
-	}
-
-	#masthead {
-		text-align: center;
-	}
-
-	#masthead .site-title {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		padding-left: 0;
-		clear: both;
-		margin-left: 5px;
-	}
-
-	#masthead .site-description {
-		padding-left: 0;
-		margin-left: 5px;
-	}
-
-	#masthead .site-logo,
-	#masthead .site-logo img {
-		float: none;
-		max-width: 100px;
 	}
 
 	.author .author-avatar img {
@@ -2469,11 +2520,28 @@ table th {
 	}
 
 	.archive .page-title,
-	.archive .archive-title {
+	.archive .archive-title,
+	.page h1.entry-title {
 		font-size: 2.2em;
+	}
+
+	.page h1.entry-title {
+		margin-top: 0;
 	}
 
 	.entry-title-meta {
 		letter-spacing: 0;
+	}
+
+	.page article {
+		padding-top: 20px;
+	}
+
+	.format-standard .entry-title {
+		width: 100%;
+	}
+
+	.post-excerpts h1.entry-title, .enhanced-excerpts h1.entry-title {
+		font-size: 1.5em;
 	}
 }
