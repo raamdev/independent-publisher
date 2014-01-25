@@ -98,7 +98,6 @@
 		value.bind(function (newval) {
 			$('.site-description').css('color', newval);
 			$('.site-published-date a').css('color', newval);
-			$('.site-published-location a').css('color', newval);
 		});
 	});
 

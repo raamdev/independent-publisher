@@ -1372,20 +1372,9 @@ body {
 	font-style: normal;
 }
 
-.site-published-date a, .site-published-location a {
+.site-published-date a {
 	color: #929292;
 	text-decoration: none;
-}
-
-.site-published-location {
-	margin: 0 0 20px 0;
-	color: #929292;
-	font-size: 14px;
-	font-family: inherit;
-	line-height: 1.4;
-	font-style: normal;
-	letter-spacing: inherit;
-	font-weight: inherit;
 }
 
 .main-navigation ul,
@@ -2172,8 +2161,7 @@ table th {
 		font-size: 15px;
 	}
 
-	.site-published-date,
-	.site-published {
+	.site-published-date {
 		font-size: 14px;
 	}
 
