@@ -56,6 +56,7 @@ endif;
 /**
  * When the Disqus Commenting System is active and enabled, don't load our comment form enhancements
  */
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); // Required to use is_plugin_active() here
 if ( is_plugin_active( 'disqus-comment-system/disqus.php' ) ) :
 	if ( get_option( 'disqus_active' ) !== '0' ) {
 		function independent_publisher_enhanced_comment_form() {
