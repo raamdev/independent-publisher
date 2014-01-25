@@ -18,7 +18,7 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links-next-prev">', 'after' => '</div>', 'nextpagelink' => __( '<button class="next-page-nav">Next page &rarr;</button>', 'independent_publisher' ), 'previouspagelink' => __( '<button class="previous-page-nav">&larr; Previous page</button>', 'independent_publisher' ), 'next_or_number' => 'next' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links-next-prev">', 'after' => '</div>', 'nextpagelink' => '<button class="next-page-nav">' . __( 'Next page &rarr;', 'independent_publisher' ) . '</button>', 'previouspagelink' => '<button class="previous-page-nav">' . __( '&larr; Previous page', 'independent_publisher' ) . '</button>', 'next_or_number' => 'next' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
 	</div>
 	<!-- .entry-content -->

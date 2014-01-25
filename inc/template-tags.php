@@ -46,11 +46,11 @@ if ( ! function_exists( 'independent_publisher_content_nav' ) ) :
 			<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 				<?php if ( get_next_posts_link() ) : ?>
-					<div class="nav-previous"><?php next_posts_link( __( '<button><span class="meta-nav">&larr;</span> Older posts</button>', 'independent_publisher' ) ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( '<button>' . __( '<span class="meta-nav">&larr;</span> Older posts', 'independent_publisher' ) . '</button>' ); ?></div>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-					<div class="nav-next"><?php previous_posts_link( __( '<button>Newer posts <span class="meta-nav">&rarr;</span></button>', 'independent_publisher' ) ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( '<button>' . __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) . '</button>' ); ?></div>
 				<?php endif; ?>
 
 			<?php endif; ?>
@@ -120,8 +120,8 @@ if ( ! function_exists( 'independent_publisher_pings' ) ) :
 	 */
 	function independent_publisher_pings() {
 		$args        = array(
-			'post_id' => get_the_ID(),
-			'type'    => 'pings'
+				'post_id' => get_the_ID(),
+				'type'    => 'pings'
 		);
 		$pings_query = new WP_Comment_Query;
 		$pings       = $pings_query->query( $args );
@@ -130,7 +130,7 @@ if ( ! function_exists( 'independent_publisher_pings' ) ) :
 			foreach ( $pings as $ping ) {
 				?>
 				<li <?php comment_class( '', $ping->comment_ID ); ?> id="li-comment-<?php echo $ping->comment_ID ?>">
-				<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link( $ping->comment_ID ) ) ?>
+				<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link( $ping->comment_ID ) ) ?>
 				<span> <?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), '  ', '' ) ?></span>
 			<?php
 			}
@@ -153,10 +153,10 @@ if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 		$post_author_id        = $wp_query->post->post_author;
 		$post_author_nice_name = get_the_author_meta( 'display_name', $post_author_id );
 
-		printf( __( '<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>', 'independent_publisher' ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), $post_author_nice_name ) ),
-			esc_html( $post_author_nice_name )
+		printf( '<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>',
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ) ),
+				esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), $post_author_nice_name ) ),
+				esc_html( $post_author_nice_name )
 		);
 	}
 endif;
@@ -184,21 +184,21 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 		if ( independent_publisher_is_multi_author_mode() ) :
 			if ( $categories_list && independent_publisher_categorized_blog() ) :
 				echo '<span class="cat-links">';
-				printf( __( '<a href="%1$s" title="%2$s">%3$s</a> %4$s %5$s', 'independent_publisher' ),
-					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-					esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
-					esc_html( get_the_author() ),
-					independent_publisher_entry_meta_category_prefix(),
-					$categories_list
+				printf( '<a href="%1$s" title="%2$s">%3$s</a> %4$s %5$s',
+						esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+						esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
+						esc_html( get_the_author() ),
+						independent_publisher_entry_meta_category_prefix(),
+						$categories_list
 				);
 				echo '</span> <span class="sep"> ' . $separator . '</span>';
 			else :
 				echo '<span class="cat-links">';
-				printf( __( '%1$s <a href="%2$s" title="%3$s">%4$s</a>', 'independent_publisher' ),
-					independent_publisher_entry_meta_author_prefix(),
-					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-					esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
-					esc_html( get_the_author() )
+				printf( '%1$s <a href="%2$s" title="%3$s">%4$s</a>',
+						independent_publisher_entry_meta_author_prefix(),
+						esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+						esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
+						esc_html( get_the_author() )
 				);
 				echo '</span>';
 			endif; // End if categories
@@ -206,8 +206,8 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 			if ( $categories_list && independent_publisher_categorized_blog() ) :
 				echo '<span class="cat-links">';
 				printf( __( '%1$s %2$s', 'independent_publisher' ),
-					independent_publisher_entry_meta_category_prefix(),
-					$categories_list
+						independent_publisher_entry_meta_category_prefix(),
+						$categories_list
 				);
 				echo '</span> <span class="sep"> ' . $separator . '</span>';
 			else :
@@ -225,11 +225,11 @@ if ( ! function_exists( 'independent_publisher_posted_on_date' ) ) :
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_posted_on_date() {
-		printf( __( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'independent_publisher' ),
-			esc_url( get_permalink() ),
-			esc_attr( get_the_time() ),
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() )
+		printf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>',
+				esc_url( get_permalink() ),
+				esc_attr( get_the_time() ),
+				esc_attr( get_the_date( 'c' ) ),
+				esc_html( get_the_date() )
 		);
 	}
 endif;
@@ -241,11 +241,11 @@ if ( ! function_exists( 'independent_publisher_continue_reading_link' ) ) :
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_continue_reading_link() {
-		$text = apply_filters( 'independent_publisher_continue_reading_link_text', ' ' . 'Continue Reading &rarr;' );
+		$text = apply_filters( 'independent_publisher_continue_reading_link_text', ' ' . __( 'Continue Reading &rarr;', 'independent_publisher' ) );
 
-		printf( __( '<span class="enhanced-excerpt-read-more"><a class="read-more" href="%1$s">%2$s</a></span>', 'independent_publisher' ),
-			esc_url( get_permalink() ),
-			esc_html( $text )
+		printf( '<span class="enhanced-excerpt-read-more"><a class="read-more" href="%1$s">%2$s</a></span>',
+				esc_url( get_permalink() ),
+				esc_html( $text )
 		);
 	}
 endif;
@@ -271,7 +271,7 @@ if ( ! function_exists( 'independent_publisher_categorized_blog' ) ) :
 		if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 			// Create an array of all the categories that are attached to posts
 			$all_the_cool_cats = get_categories( array(
-				'hide_empty' => 1,
+					'hide_empty' => 1,
 			) );
 
 			// Count the number of categories that are attached to the posts
@@ -471,7 +471,7 @@ if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 		else {
 			$separator = '';
 		}
-		return sprintf( __( '<span>%1$s Words</span>%2$s', 'independent_publisher' ), independent_publisher_post_word_count(), $separator );
+		return sprintf( '<span>' . __( '%1$s Words', 'independent_publisher' ) . '</span>%2$s', independent_publisher_post_word_count(), $separator );
 	}
 endif;
 
@@ -574,17 +574,17 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 			}
 			else if ( is_day() ) {
 				$date_archive_meta = sprintf( _n( 'There was one post published on %2$s.', 'There were %1$s posts published on %2$s' . $pagination_info . '.', $total, 'independent_publisher' ),
-					number_format_i18n( $total ), get_the_date() );
+						number_format_i18n( $total ), get_the_date() );
 			}
 			else if ( is_month() ) {
 				$year = get_query_var( 'year' );
 				if ( empty( $year ) ) {
 					$date_archive_meta = sprintf( _n( 'There was one post published in the month of %2$s.', 'There were %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent_publisher' ),
-						number_format_i18n( $total ), get_the_date( 'F' ) );
+							number_format_i18n( $total ), get_the_date( 'F' ) );
 				}
 				else {
 					$date_archive_meta = sprintf( _n( 'There was one post published in %2$s %3$s.', 'There were %1$s posts published in %2$s %3$s' . $pagination_info . '.', $total, 'independent_publisher' ),
-						number_format_i18n( $total ), get_the_date( 'F' ), get_the_date( 'Y' ) );
+							number_format_i18n( $total ), get_the_date( 'F' ), get_the_date( 'Y' ) );
 				}
 			}
 		}

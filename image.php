@@ -19,11 +19,12 @@ get_header();
 						<h2 class="entry-title-meta">
 							<?php
 							$metadata = wp_get_attachment_metadata();
-							printf( __( '"%1$s" - <a href="%2$s" title="Link to full-size image">%3$s &times; %4$s</a> in <a href="%5$s" title="Return to %6$s" rel="gallery">%6$s</a>', 'independent_publisher' ),
+							printf( __( '"%1$s" - <a href="%2$s" title="Link to full-size image">%3$s &times; %4$s</a> %5$s <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>', 'independent_publisher' ),
 								get_the_title(),
 								wp_get_attachment_url(),
 								$metadata['width'],
 								$metadata['height'],
+								independent_publisher_entry_meta_category_prefix(),
 								get_permalink( $post->post_parent ),
 								get_the_title( $post->post_parent )
 							);
