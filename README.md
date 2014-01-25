@@ -18,18 +18,17 @@ The following colors can be changed via the Colors section:
 
 ### Excerpts
 
-- **Default Excerpts**. Generate an excerpt using the first 55 words (see [`the_excerpt()`](http://codex.wordpress.org/Function_Reference/the_excerpt)) on the Blog, Archive, and Search pages and show that instead of the full post content. 
-- **One-Sentence Excerpts**. When no post excerpt is defined, one is generated using the first sentence of the post. A "Continue Reading →" link is also placed below the excerpt.
-- **Always Show Full Content for First Post**. When Post Excerpts are enabled, this option ensures that the very first post on the Latest Posts page shows the full post content instead of the excerpt.
+- **Post Excerpts**. Disabled by default. If you enable Post Excerpts the post excerpt will be shown on Blog, Archive, and Search pages instead of the full post content. If no excerpt is set, one is generated using the first 55 words (see [`the_excerpt()` - ](http://codex.wordpress.org/Function_Reference/the_excerpt)). This setting only applies to Standard and Chat post formats.
+- **Generate One-Sentence Excerpts**. Disabled by default. When this option is enabled, a one-sentence excerpt will be generated for all posts that don't have an excerpt set. A "Continue Reading →" link is also placed below the generated excerpt. This setting only applies to Standard post formats and is only relevant when Post Excerpts are enabled.
+- **Always Show Full Content for First Post**. When Post Excerpts are enabled, this option ensures that the very first post on the home page (or Posts Page, if different) shows the full post content instead of the excerpt.
 
 ### General Options
 
-- **Show Widgets on Single Pags**. By default, widgets are hidden from single pages to improve readability. If you prefer to show widgets on single pages, you can enable that here.
-- **Show Post Word Count in Entry Meta**. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
-
-### Hidden Options
-
-- **Multi Author Mode**. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (**WP Dashboard → Appearance → Customize → Header Image**) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page. Multi Author Mode can be enabled using a Child Theme. See `functions.php` in the [Independent Publisher Child Theme](https://github.com/raamdev/independent-publisher-child-theme) for instructions.
+- **Show Post Word Count in Entry Meta**. Enabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
+- **Show Widgets on Single Pages**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single pages.
+- **Use Single-Column Layout**. Disabled by default. This option allows you to force the site layout to a single-column, regardless of the browser width.
+- **Multi-Author Mode**. Disabled by default. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (*Dashboard → Appearance → Customize → Header Image*) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page.
+- **Comments Call to Action**. "Share a Comment" by default. This allows you to change the label that shows up on the 'Share a Comment' button and also changes the title of the comment form itself.
 
 ## Post Covers (Full Width Featured Images)
 
@@ -96,3 +95,67 @@ The [Independent Publisher Child Theme](https://github.com/raamdev/independent-p
 If you clear the JetPack Sharing Buttons "Sharing label" field so that it's empty, Independent Publisher will force the sharing buttons to float right and will remove the right padding so that the buttons look nicer.
 
 ![screen shot 2014-01-22 at 6 00 30 pm](https://f.cloud.github.com/assets/53005/1980007/4dc42092-83b9-11e3-96a3-8b9580f82f80.png)
+
+### Theme Filters and Actions
+
+WordPress Filters and Actions allow you to modify the theme without actually modifying any theme code. To use any of these filters or actions, start by creating a [Child Theme](#using-a-child-theme-to-customize-independent-publisher) and then adding the relevant function to the `functions.php` file. See also [add_filter()](http://codex.wordpress.org/Function_Reference/add_filter) and [add_action()](http://codex.wordpress.org/Function_Reference/add_action) on the WordPress Codex.
+
+#### Filters
+
+- `independent_publisher_taxonomy_category_stats` - Allows you to override the Category Archive stats that are appended to the category archive description.
+- `independent_publisher_taxonomy_tag_stats` - Allows you to override the Tag Archive stats that are appended to the Tag Archive description.
+- `independent_publisher_entry_meta_separator` - Allows you to override the default separator character that is used in the Entry Title Meta and Entry Post Meta (default is '|').
+- `independent_publisher_entry_meta_category_prefix` - Allows you to override the default Category prefix (default is 'in'; e.g., "<author name> in <category name>").
+- `independent_publisher_entry_meta_author_prefix` - Allows you to override the default Author prefix (default is 'by'; e.g., "by <author name>").
+- `independent_publisher_search_stats` - Allows you to override the Search stats shown on Search pages.
+- `independent_publisher_tag_list_title` - Allows you to override the default Tag List Title of 'Related Content by Tag' at the bottom of Single posts.
+- `independent_publisher_pingslist_title` - Allows you to override the default Pings List title of 'Readers who Shared This' at the bottom of Single posts.
+- `independent_publisher_pingslist_end_note` - Allows you to override the default Pings List end note of 'Thank you!' at the bottom of Single posts.
+
+#### Action Hooks
+
+- `independent_publisher_entry_meta_top` - Located at the top of post Entry Meta, just before the 'Share a Comment' button.
+- `independent_publisher_before_bottom_share_comment_button` - Located just before the second 'Share a Comment' button that shows up underneath post comments when there are more than 4 comments visible.
+- `independent_publisher_before_post_bottom_tag_list` - Located before the bottom 'Related Content by Tag' tag list on Single posts.
+
+### Functions that can be overridden in a Child Theme
+
+Functions in `inc/template-tags.php`:
+
+- `independent_publisher_content_nav()` - Display navigation to next/previous pages when applicable
+- `independent_publisher_comment()` - Template for comments and pingbacks.
+- `independent_publisher_pings()` - Creates a custom query for pingbacks/trackbacks (i.e., 'pings') and displays them. Using this custom query instead of `wp_list_comments()` allows us to always show all pings, even when we're showing paginated comments.
+- `independent_publisher_posted_author()` - Prints HTML with meta information for the current author.
+- `independent_publisher_posted_author_cats()` - Prints HTML with meta information for the current author and post categories. Only prints author name when Multi-Author Mode is enabled.
+- `independent_publisher_posted_on_date()` - Prints HTML with meta information for the current post-date/time.
+- `independent_publisher_continue_reading_link()` - Prints HTML with Continue Reading link
+- `independent_publisher_continue_reading_text()` - Returns Continue Reading text for usage in `the_content()`
+- `independent_publisher_categorized_blog()` - Returns true if a blog has more than 1 category
+- `independent_publisher_wp_title()` - Filters `wp_title` to print a neat `<title>` tag based on what is being viewed.
+- `independent_publisher_post_categories()` - Returns categories for current post with separator. Optionally returns only a single category.
+- `independent_publisher_site_info()` - Outputs site info for display on non-single pages
+- `independent_publisher_posted_author_card()` - Outputs post author info for display on single posts
+- `independent_publisher_posted_author_bottom_card()` - Outputs post author info for display on bottom of single posts
+- `independent_publisher_get_post_word_count()` - Returns number of words in a post formatted for display in theme
+- `independent_publisher_full_width_featured_image()` - Show Full Width Featured Image on single pages if post has full width featured image selected
+- `independent_publisher_search_stats()` - Returns stats for search results
+- `independent_publisher_taxonomy_archive_stats()` - Returns taxonomy archive stats and current page info for use in taxonomy archive descriptions
+- `independent_publisher_date_archive_description()` - Returns the Date Archive description
+- `independent_publisher_min_comments_bottom_share_button()` - Returns the minimum number of comments that must exist for the bottom 'Share a comment' button to appear
+- `independent_publisher_min_comments_comment_title()` - Returns the minimum number of comments that must exist for the comments title to appear
+
+Functions in `functions.php`:
+
+- `independent_publisher_author_comment_reply_link()` - Change the comment reply link to use 'Reply to [Author First Name]'
+- `independent_publisher_comment_form_args()` - Arguments for `comment_form()`
+- `independent_publisher_remove_textarea()` - Move the comment form textarea above the comment fields
+- `independent_publisher_add_textarea()` - Recreates the comment form textarea HTML for reinclusion in comment form
+- `independent_publisher_enhanced_comment_form()` - Enqueue enhanced comment form JavaScript
+- `independent_publisher_site_logo_icon_js()` - Enqueue Site Logo Icon JavaScript if Multi-Author Site enabled
+- `independent_publisher_is_multi_author_mode()` - Returns true if Multi-Author Mode is enabled
+- `independent_publisher_single_author_link()` - Returns the author link; defaults to home page when not using multi-author mode
+- `independent_publisher_post_word_count()` - Returns number of words in a post
+- `independent_publisher_first_sentence_excerpt()` - Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
+- `independent_publisher_clean_content()` - Cleans the content for display as a Quote or Aside by stripping anything that might screw up formatting
+- `independent_publisher_maybe_linkify_the_content()` - Returns the post content for Asides and Quotes with the content linked to the permalink, for display on non-Single pages
+- `independent_publisher_maybe_linkify_the_excerpt()` - Returns the excerpt with the excerpt linked to the permalink, for display on non-Single pages
