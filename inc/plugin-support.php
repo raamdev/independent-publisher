@@ -52,3 +52,14 @@ if ( ! function_exists( 'independent_publisher_jetpack_sharing_label_css' ) ) :
 		}
 	}
 endif;
+
+/**
+ * When the Disqus Commenting System is active and enabled, don't load our comment form enhancements
+ */
+if ( is_plugin_active( 'disqus-comment-system/disqus.php' ) ) :
+	if ( get_option( 'disqus_active' ) !== '0' ) {
+		function independent_publisher_enhanced_comment_form() {
+			return;
+		}
+	}
+endif;
