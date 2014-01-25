@@ -7,6 +7,8 @@ Theme Options can be found in `Dashboard → Apperance → Customize`.
 
 ### Colors
 
+![screen shot 2014-01-24 at 7 28 45 pm](https://f.cloud.github.com/assets/53005/2000340/b0fbe268-8557-11e3-9579-ca95e3f07ee8.png)
+
 The following colors can be changed via the Colors section:
 
 - Text Color
@@ -18,11 +20,15 @@ The following colors can be changed via the Colors section:
 
 ### Excerpts
 
-- **Post Excerpts**. Disabled by default. If you enable Post Excerpts the post excerpt will be shown on Blog, Archive, and Search pages instead of the full post content. If no excerpt is set, one is generated using the first 55 words (see [`the_excerpt()` - ](http://codex.wordpress.org/Function_Reference/the_excerpt)). This setting only applies to Standard and Chat post formats.
+![screen shot 2014-01-24 at 7 26 58 pm](https://f.cloud.github.com/assets/53005/2000332/844d8d20-8557-11e3-8308-f830930941ae.png)
+
+- **Post Excerpts**. Disabled by default. If you enable Post Excerpts the post excerpt will be shown on Blog, Archive, and Search pages instead of the full post content. If no excerpt is set, one is generated using the first 55 words (see [`the_excerpt()`](http://codex.wordpress.org/Function_Reference/the_excerpt)). This setting only applies to Standard and Chat post formats.
 - **Generate One-Sentence Excerpts**. Disabled by default. When this option is enabled, a one-sentence excerpt will be generated for all posts that don't have an excerpt set. A "Continue Reading →" link is also placed below the generated excerpt. This setting only applies to Standard post formats and is only relevant when Post Excerpts are enabled.
 - **Always Show Full Content for First Post**. When Post Excerpts are enabled, this option ensures that the very first post on the home page (or Posts Page, if different) shows the full post content instead of the excerpt.
 
 ### General Options
+
+![screen shot 2014-01-24 at 7 27 09 pm](https://f.cloud.github.com/assets/53005/2000331/844780e2-8557-11e3-9c6b-1688564cf612.png)
 
 - **Show Post Word Count in Entry Meta**. Enabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
 - **Show Widgets on Single Pages**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single pages.
