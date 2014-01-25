@@ -1649,6 +1649,7 @@ article.first-post {
 	font-size: 15px;
 }
 
+.entry-title,
 .entry-content,
 .widget-area .widget,
 .comment {
