@@ -2372,6 +2372,10 @@ table th {
 		max-width: 100px;
 	}
 
+	.author .author-avatar img {
+		margin-top: -15px;
+	}
+
 	.post-author-card .site-title {
 		padding-top: 0;
 		padding-left: 0;
