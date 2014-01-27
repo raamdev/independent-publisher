@@ -234,6 +234,7 @@ class IndependentPublisher_Customize {
 			<?php self::generate_css('.entry-title a:hover', 'color', 'link_color'); ?>
 			<?php self::generate_css('.entry-meta a:hover', 'color', 'link_color'); ?>
 			<?php self::generate_css('.site-footer a:hover', 'color', 'link_color'); ?>
+			<?php self::generate_css('blockquote', 'border-color', 'link_color'); ?>
 
 			/* Header Text Color */
 
