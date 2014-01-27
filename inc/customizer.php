@@ -236,6 +236,14 @@ class IndependentPublisher_Customize {
 			<?php self::generate_css('.site-footer a:hover', 'color', 'link_color'); ?>
 			<?php self::generate_css('blockquote', 'border-color', 'link_color'); ?>
 
+			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s:%3$s; /* Old browsers */ }'); ?>
+			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -moz-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* FF3.6+ */ }'); ?>
+			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -webkit-gradient(linear, left top, left bottom, color-stop(60%%, %3$s), color-stop(100%%, %3$s)); /* Chrome,Safari4+ */ }'); ?>
+			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -webkit-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* Chrome10+,Safari5.1+ */ }'); ?>
+			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -o-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* Opera 11.10+ */ }'); ?>
+			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -ms-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* IE10+ */ }'); ?>
+			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: linear-gradient(top, %3$s 60%%, %3$s 100%%); /* W3C */ }'); ?>
+
 			/* Header Text Color */
 
 			<?php self::generate_css('.site-published', 'color', 'header_text_color'); ?>
@@ -302,17 +310,18 @@ class IndependentPublisher_Customize {
 	 * @param string $prefix   Optional. Anything that needs to be output before the CSS property
 	 * @param string $postfix  Optional. Anything that needs to be output after the CSS property
 	 * @param bool   $echo     Optional. Whether to print directly to the page (default: true).
+	 * @param string $format   A sprintf() format to use when printing the style
 	 *
 	 * @return string Returns a single line of CSS with selectors and a property.
 	 * @since Independent Publisher 1.0
 	 */
-	public static function generate_css( $selector, $style, $mod_name, $prefix = '', $postfix = '', $echo = true ) {
+	public static function generate_css( $selector, $style, $mod_name, $prefix = '', $postfix = '', $echo = true, $format = '%1$s { %2$s:%3$s; }' ) {
 		$return = '';
 		$mod    = get_theme_mod( $mod_name );
 		if ( ! empty( $mod ) ) {
-			$return = sprintf( '%s { %s:%s; }' . "\n",
-				$selector,
-				$style,
+			$return = sprintf( $format . "\n",
+					$selector,
+					$style,
 					$prefix . $mod . $postfix
 			);
 			if ( $echo ) {
