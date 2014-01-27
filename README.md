@@ -94,6 +94,16 @@ If you clear the JetPack Sharing Buttons "Sharing label" field so that it's empt
 
 ![4dc42092-83b9-11e3-96a3-8b9580f82f80](https://f.cloud.github.com/assets/53005/2000387/8c1796bc-8558-11e3-8ee4-0c4f9f4fbf2e.png)
 
+### How do I make the Subscribe to Comments Reloaded Advanced Options look better?
+
+Go to *Settings -> Subscribe to Comments -> Comment Form -> Custom HTML* and wrap the contents in a paragraph tag with the `comment-form-subscriptions` class. For example:
+
+```
+<p class='comment-form-subscriptions'><label for='subscribe-reloaded'>[checkbox_label]</label> [checkbox_field]</p>
+```
+
+Note that double-quotes are not allowed in that field and that you *must* use single quotes, i.e., `class='comment-form-subscriptions'`, NOT `class="comment-form-subscriptions"`.
+
 ## Theme Filters and Actions
 
 WordPress Filters and Actions allow you to modify the theme without actually modifying any theme code. To use any of these filters or actions, start by creating a [Child Theme](#using-a-child-theme-to-customize-independent-publisher) and then adding the relevant function to the `functions.php` file. See also [add_filter()](http://codex.wordpress.org/Function_Reference/add_filter) and [add_action()](http://codex.wordpress.org/Function_Reference/add_action) on the WordPress Codex.
