@@ -1,6 +1,23 @@
 Independent Publisher WordPress Theme
 =====================
 
+## Table of Contents
+
+* [Theme Options](https://github.com/raamdev/independent-publisher#theme-options)
+* [Post Covers (Full-Width Featured Iamges)](https://github.com/raamdev/independent-publisher#post-covers-full-width-featured-images)
+* [Post Subtitles](https://github.com/raamdev/independent-publisher#post-subtitles)
+* [Using a Child Theme to Customize Independent Publisher](https://github.com/raamdev/independent-publisher#using-a-child-theme-to-customize-independent-publisher)
+* [Known Issues](https://github.com/raamdev/independent-publisher#known-issues)
+* [Frequently Asked Questions](https://github.com/raamdev/independent-publisher#frequently-asked-questions)
+    * [Why is my Header Image not showing on Single posts?](https://github.com/raamdev/independent-publisher#why-is-my-header-image-not-showing-on-single-posts)
+    * [How do I get the small logo to show up in the top-left corner?](https://github.com/raamdev/independent-publisher#how-do-i-get-the-small-logo-to-show-up-in-the-top-left-corner)
+    * [How do I make the JetPack Sharing Buttons look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-jetpack-sharing-buttons-look-better)
+    * [How do I make the Subscribe to Comments Reloaded Advanced Options look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-subscribe-to-comments-reloaded-advanced-options-look-better)
+    * [How do I make MailChimp Signup Forms look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-mailchimp-signup-forms-look-better)
+* [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
+* [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
+* [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
+
 ## Theme Options
 
 Theme Options can be found in `Dashboard → Apperance → Customize`.
@@ -106,7 +123,7 @@ Note that double-quotes are not allowed in that field and that you *must* use si
 
 ### How do I make MailChimp Signup Forms look better?
 
-MailChimp includes its own CSS in the HTML embed code that, by default, doesn't look quite right with Independent Publisher. To fix the MailChimp CSS, you can add the following to a Child Theme `style.css` file (or if you're using JetPack, simply go to *Appearance → Edit CSS* and insert the following):
+MailChimp includes its own CSS in the HTML embed code that, by default, doesn't look quite right with Independent Publisher. To fix the MailChimp CSS, you can add the following to the `style.css` file of a [Child Theme](https://github.com/raamdev/independent-publisher-child-theme/) (or if you're using JetPack, simply go to *Appearance → Edit CSS* and insert the following):
 
 ```
 #mc_embed_signup .button {
