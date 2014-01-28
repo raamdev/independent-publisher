@@ -104,6 +104,66 @@ Go to *Settings -> Subscribe to Comments -> Comment Form -> Custom HTML* and wra
 
 Note that double-quotes are not allowed in that field and that you *must* use single quotes, i.e., `class='comment-form-subscriptions'`, NOT `class="comment-form-subscriptions"`.
 
+### How do I make MailChimp Signup Forms look better?
+
+MailChimp includes its own CSS in the HTML embed code that, by default, doesn't look quite right with Independent Publisher. To fix the MailChimp CSS, you can add the following to a Child Theme `style.css` file (or if you're using JetPack, simply go to *Appearance → Edit CSS* and insert the following):
+
+```
+#mc_embed_signup .button {
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+	padding-top: 2px !important;
+	padding-bottom: 3px !important;
+	font-weight: normal !important;
+	width: 100% !important;
+}
+
+.entry-content #mc_embed_signup h2 {
+	font-size: 1.8em !important;
+}
+.entry-content #mc_embed_signup input.email {
+	width: 100% !important;
+}
+.entry-content #mc_embed_signup label {
+	padding-bottom: 0 !important;
+}
+.entry-content #mc_embed_signup .mc-field-group {
+	width: 99% !important;
+}
+
+.widget #mc_embed_signup form {
+	text-align: center !important;
+	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+.widget #mc_embed_signup input.email {
+	width: 100% !important;
+	text-align: center;
+}
+.widget #mc_embed_signup input.button {
+	width: 100% !important;
+}
+```
+
+![screen shot 2014-01-28 at 4 53 37 pm](https://f.cloud.github.com/assets/53005/2024233/c5642e38-8866-11e3-9d70-555eacbcb243.png)
+
+
+## Color Schemes
+
+You can modify the color scheme in *Appearance → Customize → Colors**. Here are a few recommended color schemes:
+
+### Blue
+
+* Set Link Color to `#26759e`
+
+### Black
+
+* Set Text color to `#f7f7f7`
+* Set Background Color to `#000000`
+* Set Link Color to `#1a609e`
+* Set Title and Header Text Color to `#d1d1d1`
+* Set Primary Meta Text Color to `#8e8e8e`
+* Set Secondary Meta Text color to `#666666`
+
 ## Theme Filters and Actions
 
 WordPress Filters and Actions allow you to modify the theme without actually modifying any theme code. To use any of these filters or actions, start by creating a [Child Theme](#using-a-child-theme-to-customize-independent-publisher) and then adding the relevant function to the `functions.php` file. See also [add_filter()](http://codex.wordpress.org/Function_Reference/add_filter) and [add_action()](http://codex.wordpress.org/Function_Reference/add_action) on the WordPress Codex.
