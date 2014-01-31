@@ -20,7 +20,7 @@ Independent Publisher WordPress Theme
 
 ## Theme Options
 
-Theme Options can be found in `Dashboard → Apperance → Customize`.
+Theme Options can be found in `Dashboard → Appearance → Customize`.
 
 ### Colors
 
