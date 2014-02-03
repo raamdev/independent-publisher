@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying search forms in Publish
+ * The template for displaying search forms in Independent Publisher
  *
  * @package Independent Publisher
  * @since   Independent Publisher 1.0

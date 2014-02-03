@@ -21,15 +21,13 @@ get_header(); ?>
 					comments_template( '', true );
 				?>
 
-				<?php if ( is_single() && function_exists( 'wp_related_posts' ) ) : ?>
-					<div id="further-reading">
-						<?php do_action( 'erp-show-related-posts', array( 'title' => 'Further Reading', 'num_to_display' => 5, 'no_rp_text' => 'No Related Posts Found' ) ); ?>
-					</div>
-				<?php endif; ?>
+				<?php do_action( 'independent_publisher_before_post_bottom_tag_list' ); ?>
 
 				<?php if ( get_the_tag_list() ) : ?>
+					<?php $tag_list_title = apply_filters( 'independent_publisher_tag_list_title', __( 'Related Content by Tag', 'independent_publisher' ) ); ?>
+					<?php $tag_list = get_the_tag_list( '<ul class="taglist"><li class="taglist-title">' . $tag_list_title . '</li><li>', '</li><li>', '</li></ul>' ); ?>
 					<div id="taglist">
-						<?php echo get_the_tag_list( '<ul class="taglist"><li class="taglist-title">Related Content by Tag</li><li>', '</li><li>', '</li></ul>' ); ?>
+						<?php printf( $tag_list ); ?>
 					</div>
 				<?php endif; ?>
 

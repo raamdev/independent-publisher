@@ -4,9 +4,18 @@
 
 jQuery(document).ready(function () {
 
-	jQuery('#respond').hide();
-	jQuery('#share-comment-button').show();
-	jQuery('#share-comment-button-bottom').show();
+	var identifier = window.location.hash;
+
+	if (identifier === "#respond") {
+		jQuery('#respond').show();
+		jQuery('#share-comment-button').hide();
+		jQuery('#share-comment-button-bottom').show();
+		jQuery('.comment-form-reply-title').hide();
+	} else {
+		jQuery('#respond').hide();
+		jQuery('#share-comment-button').show();
+		jQuery('#share-comment-button-bottom').show();
+	}
 
 	/* Share Comment Button (Top) */
 

@@ -18,9 +18,22 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links-next-prev">', 'after' => '</div>', 'nextpagelink' => '<button class="next-page-nav">' . __( 'Next page &rarr;', 'independent_publisher' ) . '</button>', 'previouspagelink' => '<button class="previous-page-nav">' . __( '&larr; Previous page', 'independent_publisher' ) . '</button>', 'next_or_number' => 'next' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
 	</div>
 	<!-- .entry-content -->
 
-	<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	<footer class="entry-meta">
+		<?php do_action( 'independent_publisher_entry_meta_top' ); ?>
+
+		<?php if ( comments_open() ) : ?>
+			<div id="share-comment-button">
+				<button><i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?></button>
+			</div>
+		<?php endif; ?>
+
+		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="edit-link">', '</span>' ); ?>
+	</footer>
+	<!-- .entry-meta -->
+
 </article><!-- #post-<?php the_ID(); ?> -->

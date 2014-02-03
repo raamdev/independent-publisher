@@ -6,10 +6,15 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php independent_publisher_post_classes(); ?>>
 	<header class="entry-header">
+		<?php /* Show entry title meta only when Show Full Content First Post enabled AND this is the very first standard post AND we're on the home page AND this is not a sticky post */ ?>
 		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() && ! is_sticky() ) ) : ?>
 			<h2 class="entry-title-meta">
-				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> in <?php echo independent_publisher_post_categories( '', TRUE ); ?>
-				<?php do_action('independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
+				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> <?php echo independent_publisher_entry_meta_category_prefix() ?> <?php echo independent_publisher_post_categories( '', TRUE ); ?>
+				<span class="entry-title-meta-post-date">
+					<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
+					<?php independent_publisher_posted_on_date() ?>
+				</span>
+				<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 			</h2>
 		<?php endif; ?>
 		<h1 class="entry-title">
@@ -18,67 +23,64 @@
 	</header>
 	<!-- .entry-header -->
 
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-		<div class="entry-summary">
+	<div class="entry-content">
+
+		<?php /* Only show excerpts for Standard format OR Chat format, non-Sticky posts,
+ 							when excerpts enabled or One-Sentence Excerpts enabled and
+								this is not the very first standard post when Show Full Content First Post enabled */
+		?>
+		<?php if ( ( ! get_post_format() || 'chat' === get_post_format() ) && ! is_sticky() &&
+				( independent_publisher_use_post_excerpts() || independent_publisher_generate_one_sentence_excerpts() ) &&
+				( ! ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() && is_home() ) )
+		) :
+			?>
+
 			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
-	<?php else : ?>
-		<div class="entry-content">
-			<?php if ( 'aside' === get_post_format() ) : // Do something special for Asides ?>
 
-				<?php // Asides might have footnotes, which don't display properly when linking Asides to themselves, so we strip <sup> here ?>
-				<?php $content = independent_publisher_strip_footnotes( get_the_content() ); ?>
+		<?php
+		else : ?>
 
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo $content; ?></a>
-
-			<?php elseif ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() ) : ?>
-
-				<?php if ( has_post_thumbnail() ) : ?>
-					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
-				<?php endif; ?>
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
-
-			<?php
-			elseif ( ! get_post_format() && ! is_sticky() &&
-					( independent_publisher_use_post_excerpts() || independent_publisher_use_enhanced_excerpts() )
-			) : // Standard post format
-				?>
-
-				<a style="text-decoration: none; color: inherit;" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_excerpt(); ?></a>
-
-			<?php
-			else : ?>
-				<?php if ( has_post_thumbnail() ) : ?>
-					<?php the_post_thumbnail( array( 700, 700 ) ); ?>
-				<?php endif; ?>
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
-
+			<?php /* Only show featured image for Standard post formats */ ?>
+			<?php if ( has_post_thumbnail() && ! get_post_format() ) : ?>
+				<?php the_post_thumbnail( array( 700, 700 ) ); ?>
 			<?php endif; ?>
-		</div><!-- .entry-content -->
-	<?php endif; ?>
+
+			<?php the_content( independent_publisher_continue_reading_text() ); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
+
+		<?php endif; ?>
+	</div>
+	<!-- .entry-content -->
 
 	<footer class="entry-meta">
-		<?php if ( 'post' == get_post_type() && independent_publisher_is_not_first_post_full_content() ) : // Hide category and tag text for pages on Search ?>
-			<?php independent_publisher_posted_author_cats() ?>
-		<?php endif; // End if 'post' == get_post_type() ?>
 
-		<?php if ( false === get_post_format() && independent_publisher_show_post_word_count() && independent_publisher_is_not_first_post_full_content() ) : // Only show word count on standard post format ?>
+		<?php /* Show Continue Reading link when this is a Standard post format AND One-Sentence Excerpts options is enabled AND
+ 							we're not showing the first post full content AND this is not a sticky post */
+		?>
+		<?php if ( false === get_post_format() && independent_publisher_generate_one_sentence_excerpts() && independent_publisher_is_not_first_post_full_content() && ! is_sticky() ) : ?>
+			<?php independent_publisher_continue_reading_link(); ?>
+		<?php endif; ?>
+
+		<?php /* Show author name and post categories only when post type == post AND we're not showing the first post full content */ ?>
+		<?php if ( 'post' == get_post_type() && independent_publisher_is_not_first_post_full_content() ) : // post type == post conditional hides category text for Pages on Search ?>
+			<?php independent_publisher_posted_author_cats() ?>
+		<?php endif; ?>
+
+		<?php /* Show post word count when post is not password-protected AND this is a Standard post format AND
+ 							post word count option enabled AND we're not showing the first post full content*/
+		?>
+		<?php if ( ! post_password_required() && false === get_post_format() && independent_publisher_show_post_word_count() && independent_publisher_is_not_first_post_full_content() ) : ?>
 			<?php echo independent_publisher_get_post_word_count() ?>
 		<?php endif; ?>
 
-		<?php if ( ! post_password_required() && comments_open() && independent_publisher_is_not_first_post_full_content() ) : ?>
-			<span class="sep"> | </span>
+		<?php /* Show comments link only when post is not password-protected AND comments are enabled on this post */ ?>
+		<?php if ( ! post_password_required() && comments_open() ) : ?>
 			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent_publisher' ), __( '1 Comment', 'independent_publisher' ), __( '% Comments', 'independent_publisher' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php $edit_link_separator = ( independent_publisher_is_not_first_post_full_content() ? '<span class="sep"> | </span>' : '' ); ?>
-		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), $edit_link_separator . '<span class="edit-link">', '</span>' ); ?>
+		<?php $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?>
+		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> ' . $separator . ' </span> <span class="edit-link">', '</span>' ); ?>
 
-		<?php if ( false === get_post_format() && independent_publisher_use_enhanced_excerpts() && independent_publisher_is_not_first_post_full_content() && ! is_sticky() ) : ?>
-			<span class="enhanced-excerpt-read-more"><a class="read-more" href="<?php the_permalink(); ?>"><?php echo __( 'Continue Reading &rarr;', 'independent_publisher' ); ?></a></span>
-		<?php endif; ?>
 	</footer>
 	<!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

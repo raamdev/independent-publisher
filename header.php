@@ -18,12 +18,15 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 	<![endif]-->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/hide-address-bar.js" type="text/javascript"></script>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php // Displays full-width featured image on Single Posts if applicable ?>
 <?php independent_publisher_full_width_featured_image(); ?>
+
+<?php // Makes the Header Image a small icon floating in the top left corner when Multi Author Mode is enabled ?>
 <?php if ( independent_publisher_is_multi_author_mode() && is_single() ) : ?>
 	<div class="site-master-logo">
 		<?php if ( get_header_image() ) : ?>
@@ -33,22 +36,24 @@
 		<?php endif; ?>
 	</div>
 <?php endif; ?>
+
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		<?php if ( ! is_single() ) { ?>
-			<?php independent_publisher_site_info(); ?>
-		<?php } else { ?>
-				<?php independent_publisher_posted_author_card(); ?>
-		<?php } ?>
 
+		<?php // Show only post author info on Single Pages ?>
+		<?php if ( is_single() ) : ?>
+			<?php independent_publisher_posted_author_card(); ?>
+		<?php endif; ?>
+
+		<?php // Show Header Image, Site Title, and Site Tagline on everything except Single Pages ?>
 		<?php if ( ! is_single() ) : ?>
+			<?php independent_publisher_site_info(); ?>
 			<nav role="navigation" class="site-navigation main-navigation">
 				<h1 class="assistive-text"><?php _e( 'Menu', 'independent_publisher' ); ?></h1>
 
 				<div class="assistive-text skip-link">
 					<a href="#content" title="<?php esc_attr_e( 'Skip to content', 'independent_publisher' ); ?>"><?php _e( 'Skip to content', 'independent_publisher' ); ?></a>
 				</div>
-
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
 			</nav><!-- .site-navigation .main-navigation -->
 		<?php endif; ?>

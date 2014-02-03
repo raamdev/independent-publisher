@@ -3,11 +3,11 @@ Theme Name: Independent Publisher
 Theme URI: http://independentpublisher.me/
 Author: Raam Dev
 Author URI: http://raamdev.com
-Description: A beautiful reader-focused WordPress theme, for you.
+Description: Independent Publisher is beautiful reader-focused WordPress theme, for you. Clean, responsive, and mobile-ready, it gets out of your way and lets you share what you create. Full support for all Post Formats. This theme is ideal for both single-author and multi-author blogs.
 Version: 1.0
 License: GNU GPLv3
 License URI: http://www.gnu.org/copyleft/gpl.html
-Tags: light, white, blue, two-columns, left-sidebar, flexible-width, custom-background, custom-colors, custom-menu, editor-style, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: light, white, green, one-column, two-columns, left-sidebar, fluid-layout, featured-images, full-width-template, custom-menu, responsive-layout, custom-background, custom-colors, custom-menu, editor-style, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, theme-options
 
 Based on _s http://underscores.me
 and Publish by Konstantin Kovshenin http://kovshenin.com/themes/publish
@@ -104,7 +104,17 @@ a img {
 /* =Global
 ----------------------------------------------- */
 
-/* Font style definitions can be found in css/xxx-scheme.css */
+body,
+button,
+input,
+select,
+textarea {
+	color: #000000;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-family: serif;
+	line-height: 1.5;
+}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -120,7 +130,7 @@ hr {
 
 /* Text elements */
 p {
-	margin-bottom: 1.2em;
+	margin-bottom: 1em;
 }
 
 ul, ol {
@@ -141,7 +151,7 @@ li > ol, li > ul {
 }
 
 dt {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-weight: bold;
 }
 
 dd {
@@ -149,26 +159,33 @@ dd {
 }
 
 b, strong {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-weight: bold;
 }
 
 dfn, cite, em, i {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-style: italic;
 }
 
 blockquote {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-left: 1em;
-	border-left: 6px solid #57ad68;
+	font-style: italic;
+	font-family: Georgia, "Bitstream Charter", serif;
+	border-left: 3px solid;
+	border-color: #57ad68;
 	padding-left: 20px;
 }
 
 blockquote cite {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 70%;
 }
 
 blockquote cite:before {
 	content: "\2014 \0020";
+}
+
+blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
+	font-weight: normal;
+	font-family: Georgia, "Bitstream Charter", serif;
 }
 
 address {
@@ -176,15 +193,18 @@ address {
 }
 
 pre {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	overflow: auto;
 	margin-bottom: 1.6em;
 	padding: 1.6em;
 	max-width: 100%;
+	background: #F2F7F9;
+	font: 12px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	line-height: 1.6;
 }
 
 code, kbd, tt, var {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font: 14px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	background: #eee;
 	padding: 2px 5px 2px 5px;
 }
 
@@ -200,10 +220,11 @@ mark, ins {
 
 sup,
 sub {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	position: relative;
 	height: 0;
 	vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
 }
 
 sup {
@@ -215,11 +236,11 @@ sub {
 }
 
 small {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 75%;
 }
 
 big {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 125%;
 }
 
 figure {
@@ -227,22 +248,22 @@ figure {
 }
 
 table {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 0 0 1.5em;
 	width: 100%;
+	font-size: 90%;
 }
 
 th {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-weight: bold;
 }
 
 button,
 input,
 select,
 textarea {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: middle; /* Improves appearance and consistency in all browsers */
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 }
 
 input:focus,
@@ -262,7 +283,11 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	line-height: 32px;
 	height: 32px;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -270,13 +295,16 @@ input[type="submit"] {
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
 	background: #57ad68; /* Old browsers */
-	background: -moz-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #57ad68), color-stop(100%, #57ad68)) !important; /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* IE10+ */
-	background: linear-gradient(top, #57ad68 60%, #57ad68 100%) !important; /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57ad68', endColorstr='#57ad68', GradientType=0) !important; /* IE6-9 */
+	background: -moz-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #57ad68), color-stop(100%, #57ad68)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #57ad68 60%, #57ad68 100%); /* IE10+ */
+	background: linear-gradient(top, #57ad68 60%, #57ad68 100%); /* W3C */
+	color: #ffffff;
+	font-size: 15px;
+	font-size: 1.5rem;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57ad68', endColorstr='#57ad68', GradientType=0); /* IE6-9 */
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	-webkit-font-smoothing: antialiased;
@@ -286,14 +314,15 @@ button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
+	color: #ffffff;
 	border-color: #bbb #bbb #aaa #bbb;
 	background: #65B675; /* Old browsers */
-	background: -moz-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #65B675), color-stop(100%, #65B675)) !important; /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* IE10+ */
-	background: linear-gradient(top, #65B675 60%, #65B675 100%) !important; /* W3C */
+	background: -moz-linear-gradient(top, #65B675 60%, #65B675 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #65B675), color-stop(100%, #65B675)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #65B675 60%, #65B675 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #65B675 60%, #65B675 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #65B675 60%, #65B675 100%); /* IE10+ */
+	background: linear-gradient(top, #65B675 60%, #65B675 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#65B675', endColorstr='#65B675', GradientType=0); /* IE6-9 */
 }
 
@@ -353,7 +382,7 @@ textarea:focus {
 input[type=text],
 input[type=password],
 input[type=email] {
-	padding: 3px;
+	padding: 6px;
 }
 
 textarea {
@@ -440,7 +469,9 @@ img.aligncenter {
 }
 
 .main-navigation a {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	text-decoration: none;
+	font-size: 15px;
+	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-seri;
 }
 
 .main-navigation ul ul {
@@ -535,7 +566,7 @@ img.aligncenter {
 
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0 0 0;
 }
 
 .entry-content > .sharedaddy {
@@ -544,7 +575,21 @@ img.aligncenter {
 
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+	margin: 0 0 1em;
+	text-align: center;
+	padding-top: 2em;
+}
+
+.page-links-next-prev {
+	margin-top: 4em;
+}
+
+.page-links-next-prev .next-page-nav {
+	float: right;
+}
+
+.page-links-next-prev .previous-page-nav {
+	float: left;
 }
 
 .entry-content .twitter-tweet-rendered {
@@ -581,53 +626,58 @@ img.aligncenter {
 	margin-bottom: 20px;
 }
 
+.single-attachment .entry-title-meta {
+	margin-bottom: 20px;
+}
+
+.single-attachment .entry-caption {
+	margin-top: 1.2em;
+}
+
 .post-excerpts h1.entry-title,
 .enhanced-excerpts h1.entry-title {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 1.8em;
 	margin-bottom: 0;
 }
 
 .post-excerpts .sticky h1.entry-title,
 .enhanced-excerpts .sticky h1.entry-title {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 2.5em;
 	margin-bottom: 20px;
 }
 
 .post-excerpts .entry-content,
-.enhanced-excerpts .entry-content {
+.enhanced-excerpts .entry-content,
+.post-excerpts .entry-content a,
+.enhanced-excerpts .entry-content a {
 	margin-top: 10px;
-}
-
-.enhanced-excerpts .format-standard .entry-meta {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	text-decoration: none;
 }
 
 .enhanced-excerpts .enhanced-excerpt-read-more a {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	display: block;
-	margin-top: 1em;
-}
-
-.show-full-content-first-post {
-	padding-top: 0 !important;
+	text-align: right;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.4em;
+	color: #57ad68;
+	margin-bottom: 1em;
 }
 
 .show-full-content-first-post h1.entry-title,
 .show-full-content-first-post-sticky h1.entry-title {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 2.5em;
 	margin-bottom: 20px;
 }
 
-article.first-post,
-.first-post .entry-content {
-	margin-top: 0;
-	padding-top: 0;
-}
-
 .entry-content .subtitle {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-style: italic;
+	font-weight: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.3em;
+	line-height: 1.2em;
 	margin-top: -5px;
 	margin-bottom: 1em;
+	letter-spacing: 0;
 }
 
 /* =Post Formats
@@ -651,16 +701,6 @@ article.first-post,
 	display: none;
 }
 
-.single .format-aside h1.entry-title,
-.single .format-quote h1.entry-title,
-.single .format-chat h1.entry-title,
-.single .format-status h1.entry-title,
-.single .format-image h1.entry-title,
-.single .format-link h1.entry-title,
-.single .format-gallery h1.entry-title {
-	/* Font style definitions can be found in css/xxx-scheme.css */
-}
-
 .format-aside .entry-format,
 .format-quote .entry-format,
 .format-chat .entry-format,
@@ -668,19 +708,22 @@ article.first-post,
 .format-image .entry-format,
 .format-link .entry-format,
 .format-gallery .entry-format {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	color: #b3b3b1;
+	font-weight: 300;
 }
 
 .format-aside {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-style: italic;
 }
 
 .format-aside,
 .format-quote {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 1.3em;
+	line-height: 1.4;
 }
 
-.format-aside .entry-content {
+.format-aside .entry-content,
+.format-quote .entry-content {
 	margin-top: 1em;
 }
 
@@ -688,13 +731,17 @@ article.first-post,
 	margin-bottom: 20px;
 }
 
-.format-aside a,
-.format-aside a:hover {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+.format-aside .entry-content a,
+.format-aside .entry-content a:hover,
+.format-quote .entry-content a,
+.format-quote .entry-content a:hover {
+	color: inherit;
+	text-decoration: none;
 }
 
 .format-aside sup, .format-aside .footnotes {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 15px;
+	font-style: normal;
 }
 
 .format-aside .footnotes hr {
@@ -706,12 +753,17 @@ article.first-post,
 	display: none;
 }
 
-.single-format-aside .entry-content {
-	margin-bottom: 100px;
-}
-
 .format-standard .entry-title {
 	width: 90%;
+}
+
+.format-chat .entry-content {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	background: #eee;
+	padding: 20px 20px 10px 20px;
+	margin-bottom: 2em;
+	font-size: 12px;
+	line-height: 1.6;
 }
 
 /* =Media
@@ -766,7 +818,8 @@ img.size-full {
 }
 
 .wp-caption-text {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	text-align: center;
+	font-size: 80%;
 }
 
 .wp-caption .wp-caption-text {
@@ -778,8 +831,9 @@ img.size-full {
 }
 
 .gallery-caption {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	padding: 0 10px 10px 10px;
+	color: #b3b3b1;
+	font-size: 13px;
 }
 
 .site-content .gallery a img {
@@ -828,6 +882,17 @@ object {
 	margin-top: 3em;
 }
 
+#nav-above {
+	padding-bottom: 1.5em;
+	padding-top: 1.5em;
+	margin-top: 0;
+	border-bottom: none;
+}
+
+#image-navigation {
+	margin-bottom: 20px;
+}
+
 /* =Comments
 ----------------------------------------------- */
 
@@ -841,7 +906,16 @@ object {
 }
 
 .comments-title {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	text-align: center;
+	color: rgb(213, 213, 213);
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+
+.comment-content.unapproved {
+	color: #b3b3b1;
 }
 
 .site-main .commentlist article {
@@ -860,9 +934,13 @@ object {
 	height: 50px;
 }
 
+#comment-nav-below {
+	margin-bottom: 50px;
+}
+
 ol.commentlist {
-	/* Font style definitions can be found in css/xxx-scheme.css */
-	margin-left: 0;
+	margin-left: 0px;
+	font-size: 90%;
 }
 
 ol.commentlist,
@@ -912,9 +990,17 @@ ol.commentlist .avatar {
 	margin-top: 5px;
 }
 
+.avatar {
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
 .comment-meta,
 .comment-meta a {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	color: #b3b3b1;
+	text-decoration: none;
+	font-size: 12px;
 }
 
 .comment-meta {
@@ -928,8 +1014,8 @@ ol.commentlist .avatar {
 }
 
 .comment .reply a {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-top: -10px;
+	font-size: 90%;
 }
 
 .comment-body:hover .reply {
@@ -944,15 +1030,18 @@ ol.commentlist .avatar {
 }
 
 .comment-author {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 48px;
 }
 
 .comment-author cite {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-style: normal;
 }
 
 .comment-author .fn a {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	text-decoration: none;
+	color: inherit;
 }
 
 .comment-author .says,
@@ -971,7 +1060,10 @@ ol.commentlist .avatar {
 }
 
 #pinglist {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 12px;
 	border-top: 1px solid #eee;
 	padding-top: 20px;
 	margin-top: 80px;
@@ -984,11 +1076,20 @@ ul.pinglist {
 
 .pinglist li {
 	display: inline;
-	margin-right: 20px;
+	margin-right: 5px;
+}
+
+.pinglist li::after {
+	content: '\b7';
+	margin-left: 5px;
 }
 
 .pinglist-title {
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
+}
+
+.pinglist li.pinglist-title::after {
+	content: '';
 }
 
 .pinglist a {
@@ -1000,7 +1101,10 @@ ul.pinglist {
 }
 
 .taglist {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 12px;
 }
 
 ul.taglist {
@@ -1014,7 +1118,7 @@ ul.taglist {
 }
 
 .taglist-title {
-	color: rgba(117, 117, 117, 0.78);
+	color: #929292;
 }
 
 .taglist a {
@@ -1026,25 +1130,15 @@ ul.taglist {
 }
 
 .trackback span, .pingback span {
-	display: none;
+	font-weight: normal;
 }
 
 .trackback cite, .pingback cite {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-style: normal;
 }
 
 .pingback {
 	position: relative;
-}
-
-.pingback > p:before {
-	/* Font style definitions can be found in css/xxx-scheme.css */
-	position: absolute;
-	left: -31px;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
 }
 
 .form-allowed-tags {
@@ -1059,9 +1153,11 @@ ul.taglist {
 .comment-form-comment label,
 .comment-form-subscriptions label,
 .comment-form-reply-title {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin-right: 5px;
+	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	color: #b3b3b1;
 	display: block;
+	font-size: 16px;
 }
 
 .comment-form-reply-title {
@@ -1101,13 +1197,15 @@ ul.taglist {
 }
 
 #cancel-comment-reply-link {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 80%;
+	letter-spacing: 0px;
 	float: right;
 	margin-right: 10px;
 }
 
 #commentform textarea {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	padding: 10px;
 	margin: 0px;
 	width: 98%;
@@ -1117,11 +1215,31 @@ ul.taglist {
 	clear: both;
 	margin-bottom: 0;
 	padding-bottom: 1.5em;
+	padding-top: 0.5em;
 }
 
-.icon-comment {
-	/* Font style definitions can be found in css/xxx-scheme.css */
-	margin-right: 10px;
+.share-comment-icon::before {
+	display: inline-block;
+	padding-right: 8px;
+	margin-top: -2px;
+	font-style: normal;
+	font-family: 'Genericons';
+	font-size: 20px;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+	content: '\f300';
+	color: white;
+}
+
+.comments-title-icon::before {
+	display: inline-block;
+	margin-top: -2px;
+	font-style: normal;
+	font-family: 'Genericons';
+	font-size: 20px;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+	content: '\f108';
 }
 
 .entry-meta #share-comment-button {
@@ -1154,15 +1272,18 @@ ul.taglist {
 .widget_rss .rss-date,
 .widget_rss li > cite,
 .widget_twitter .timesince {
-	/* Font style definitions can be found in css/xxx-scheme.css */
-	display: block;;
+	color: #b3b3b1;
+	display: block;
+	font-size: 12px;
 }
 
 /* =Layout
 ----------------------------------------------- */
 
 body {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	color: #000000;
+	font: 1.9em Georgia, "Times New Roman", Times, serif;
+	line-height: 1.5;
 }
 
 .site-master-logo {
@@ -1192,9 +1313,11 @@ body {
 
 .site-logo img {
 	margin-bottom: 10px;
-	-webkit-border-radius: 95px;
-	border-radius: 95px;
-	max-width: 70px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	max-width: 100px;
 	height: auto;
 }
 
@@ -1204,13 +1327,21 @@ body {
 }
 
 .site-title {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 0;
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: inherit;
 }
 
 .site-description {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 0 0 20px 0;
+	color: #929292;
+	font-size: 13px;
+	font-family: inherit;
+	line-height: 1.4;
+	font-style: italic;
+	letter-spacing: inherit;
+	font-weight: inherit;
 	margin-top: 5px;
 }
 
@@ -1222,22 +1353,29 @@ body {
 }
 
 .site-published {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 10px 0 0 0;
+	color: #333332;
+	font-size: 14px;
+	line-height: 1.4;
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: inherit;
 }
 
 .site-published-date {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 5px 0 0 0;
+	color: #929292;
+	font-size: 12px;
+	font-family: inherit;
+	line-height: 2;
+	letter-spacing: inherit;
+	font-weight: inherit;
+	font-style: normal;
 }
 
-.site-published-date a, .site-published-location a {
-	/* Font style definitions can be found in css/xxx-scheme.css */
-}
-
-.site-published-location {
-	/* Font style definitions can be found in css/xxx-scheme.css */
-	margin: 0 0 20px 0;
+.site-published-date a {
+	color: #929292;
+	text-decoration: none;
 }
 
 .main-navigation ul,
@@ -1260,7 +1398,11 @@ body {
 	padding: 5px 0px;
 	text-decoration: none;
 	display: block;
-	line-height: 1;
+	line-height: 1.2;
+}
+
+.widget-area ul li a {
+	line-height: 1.2;
 }
 
 .blogroll li a {
@@ -1272,7 +1414,8 @@ body {
 }
 
 .widget-area .widget-title {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 16px;
+	letter-spacing: inherit;
 	margin-bottom: 10px;
 }
 
@@ -1313,8 +1456,36 @@ h3,
 h4,
 h5,
 h6 {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	margin: 20px 0;
+	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	color: #333332;
+	letter-spacing: -1px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+h4 {
+	font-size: 1.4em;
+}
+
+h5 {
+	font-size: 1.3em;
+}
+
+h6 {
+	font-size: 1.2em;
 }
 
 .entry-content h1,
@@ -1328,11 +1499,22 @@ h6 {
 }
 
 .entry-content h1 {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 2.1em;
+}
+
+.entry-content table {
+	border-left: solid 1px #eee;
+	border-top: solid 1px #eee;
+}
+
+.entry-content table td {
+	border-right: solid 1px #eee;
+	border-bottom: solid 1px #eee;
 }
 
 .page h1.entry-title {
 	margin-top: 20px;
+	font-size: 3.5em;
 }
 
 .blog article,
@@ -1342,22 +1524,56 @@ h6 {
 	border-bottom: solid 1px #ddd;
 }
 
+.blog article.show-full-content-first-post {
+	padding-top: 0;
+}
+
+.archive .page-header,
+.search .page-header {
+	margin-bottom: 4em;
+	padding-bottom: 1em;
+	border-bottom: solid 1px;
+	border-color: #eee;
+}
+
+.archive .page-title,
+.search .page-title,
+.archive .archive-title {
+	font-size: 3.5em;
+}
+
+article.first-post {
+	margin-top: 0;
+	padding-top: 0;
+}
+
 .entry-title a {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	color: #333332;
+	text-decoration: none;
 }
 
 .entry-title a:hover {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	color: #57ad68;
 }
 
 .entry-title-meta {
-	/* Font style definitions can be found in css/xxx-scheme.css */
-	margin-bottom: 0;
-	margin-top: 0;
+	font-size: 13px;
+	color: #b3b3b1;
+	font-weight: 100;
+	letter-spacing: 1px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-style: normal;
+	line-height: 1.4;
+}
+
+.entry-title-meta-post-date {
+	display: none;
 }
 
 .entry-title-meta a {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	color: #b3b3b1;
+	text-decoration: none;
 }
 
 .entry-title-meta-author {
@@ -1366,16 +1582,23 @@ h6 {
 
 .entry-meta,
 .entry-meta a {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	color: #b3b3b1;
+	font-size: 13px;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-style: normal;
+	text-align: right;
 }
 
 .entry-meta a:hover {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	color: #57ad68;
 }
 
-.single .entry-meta {
+.single .entry-meta,
+.page .entry-meta {
 	border-top: 1px solid #eee;
-	padding-bottom: 40px;
+	margin-bottom: 40px;
+	margin-top: 40px;
 	padding-top: 40px;
 }
 
@@ -1385,18 +1608,18 @@ h6 {
 }
 
 .site {
-	/* Max-width settings can be found in css/xxx-scheme.css */
 	background-color: #ffffff;
 	margin: 80px auto;
 	padding: 0 40px;
+	max-width: 700px;
 	margin-bottom: 0;
-	margin-top: 150px;
+	margin-top: 100px;
 }
 
 .site-header {
 	float: left;
-	margin-top: 0px;
-	margin-bottom: 40px;
+	margin-top: 0;
+	margin-bottom: 30px;
 	width: 160px;
 	position: relative;
 	margin-left: -220px;
@@ -1405,19 +1628,22 @@ h6 {
 
 .site-content,
 .site-footer {
-	/* Max-width settings can be found in css/xxx-scheme.css */
 	float: right;
+	max-width: 700px;
 	width: 100%;
 }
 
 .widget-area {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	float: left;
 	width: 160px; /* Sidebar 1 */
 	clear: left;
 	margin-left: -220px;
+	text-align: right;
+	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-size: 15px;
 }
 
+.entry-title,
 .entry-content,
 .widget-area .widget,
 .comment {
@@ -1433,23 +1659,25 @@ h6 {
 }
 
 .site-footer {
-	/* Font style definitions can be found in css/xxx-scheme.css */
 	clear: both;
 	margin-top: 100px;
 	margin-bottom: 40px;
+	color: #b3b3b1;
 }
 
 .site-footer,
 .site-footer a {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-size: 13px;
+	text-align: center;
 }
 
 .site-footer a:hover {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	color: #57ad68;
 }
 
 .site-info {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-family: sans-serif;
+	font-weight: 100;
 }
 
 img#wpstats {
@@ -1459,7 +1687,6 @@ img#wpstats {
 
 table td {
 	padding: 4px;
-	border-bottom: solid 1px #eee;
 }
 
 table th {
@@ -1481,6 +1708,7 @@ table th {
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	display: none;
+	min-height: 100px;
 }
 
 .post-author-bottom .site-logo img {
@@ -1494,8 +1722,8 @@ table th {
 }
 
 .post-author-bottom .post-author-info {
-	margin-left: 100px;
-	margin-right: 200px;
+	margin-left: 140px;
+	margin-right: 120px;
 	padding-right: 25px;
 	padding-top: 10px;
 }
@@ -1506,22 +1734,436 @@ table th {
 }
 
 .post-author-bottom h1.site-title {
-	/* Font style definitions can be found in css/xxx-scheme.css */
+	font-style: normal;
+	font-size: 20px;
+	line-height: 1.6;
 }
 
 .post-author-bottom .post-published-date {
-	width: 177px;
+	width: 120px;
 	margin-left: 385px;
 	position: absolute;
 	margin-top: -85px;
-	top: 135px;
+	top: 145px;
 	right: 0;
+}
+
+/* Footnotes */
+
+.footnotes p,
+.blog .show-full-content-first-post .footnotes p,
+.blog .show-full-content-first-post-sticky .footnotes p {
+	margin-bottom: 0;
+}
+
+.footnotes,
+.blog .show-full-content-first-post .footnotes,
+.blog .show-full-content-first-post-sticky .footnotes {
+	font-size: 80%;
+}
+
+.blog div.footnotes,
+.archive div.footnotes,
+.search div.footnotes {
+	display: none;
+}
+
+.blog .show-full-content-first-post div.footnotes,
+.blog .show-full-content-first-post-sticky div.footnotes {
+	display: block;
+}
+
+/* Author Page Styles */
+
+.author-archive-author-avatar img {
+	margin-bottom: 10px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	max-width: 70px;
+	height: auto;
+}
+
+.author .author-description {
+	margin-right: 120px;
+}
+
+.author div.author-bio {
+	border-bottom: 1px solid;
+	border-color: #b3b3b1;
+	padding-bottom: 40px;
+	margin-bottom: 80px;
+}
+
+.author .author-avatar img {
+	float: right;
+	border-radius: 95px;
+	margin-top: -32px;
+}
+
+.author .archive-title a {
+	color: #333332;
+}
+
+.author .archive-title a:hover {
+	text-decoration: none;
+}
+
+/* WP Audio Shortcode */
+.blog .wp-audio-shortcode,
+.archive .wp-audio-shortcode,
+.search .wp-audio-shortcode,
+.single .wp-audio-shortcode {
+	margin-bottom: 1.2em;
+	margin-top: 10px;
+}
+
+/**
+ * Styles to apply when Use Single Column Layout option is enabled.
+ * (These should closely resemble the styles applied by the
+ * @media (max-width: 1200px) rules above.)
+ */
+
+.single-column-layout .site-header {
+	text-align: left;
+	margin-left: 0;
+	float: none;
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.single-column-layout.single .site-header {
+	display: none;
+}
+
+.single-column-layout.single .entry-meta {
+	border-top: none;
+}
+
+.single-column-layout .site {
+	margin-top: 40px;
+}
+
+.single-column-layout .post-author-bottom {
+	display: block;
+}
+
+.single-column-layout .entry-meta {
+	border-bottom: none;
+}
+
+.single-column-layout .entry-title-meta-author {
+	display: inline-block;
+}
+
+.single-column-layout .widget-area {
+	float: right;
+	width: 100%;
+	margin-left: 0;
+	text-align: inherit;
+	padding-top: 40px;
+}
+
+.single-column-layout .widget-area ul li a {
+	display: inline-block;
+}
+
+.single-column-layout #nav-below {
+	margin-top: 40px;
+	padding-bottom: 40px;
+}
+
+.single-column-layout .single .entry-meta {
+	border-top: none;
+}
+
+.single-column-layout .page article {
+	padding: 0 0 40px 0;
+}
+
+.single-column-layout .main-navigation {
+	clear: none;
+}
+
+.single-column-layout .site-navigation {
+	border-bottom: 1px solid #eee;
+	margin-top: 0;
+	padding-bottom: 40px;
+	margin-bottom: 20px;
+}
+
+.single-column-layout #nav-below .site-navigation {
+	margin-top: 40px;
+	padding-bottom: 40px;
+}
+
+.single-column-layout .main-navigation li {
+	display: inline-block;
+	padding: 5px 10px;
+	width: auto;
+}
+
+.single-column-layout #masthead .site-title,
+.single-column-layout #masthead .site-description {
+	clear: none;
+	margin-left: 0;
+	margin-top: 0;
+}
+
+.single-column-layout #masthead .site-title {
+	font-size: 32px;
+	font-style: normal;
+	padding-top: 0;
+	padding-left: 0;
+}
+
+.single-column-layout #masthead .site-description {
+	padding-left: 0;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+
+.single-column-layout #masthead .site-logo,
+.single-column-layout #masthead .site-logo img {
+	float: right;
+	max-width: 100px;
+}
+
+.single-column-layout .entry-title-meta-author {
+	display: inline-block;
+}
+
+.single-column-layout #masthead .main-navigation ul {
+	margin-left: -10px;
+}
+
+.single-column-layout.archive .page-title,
+.single-column-layout.archive .archive-title {
+	margin-top: 20px;
+}
+
+.single-column-layout .entry-title-meta-post-date {
+	display: inline;
+}
+
+.single-column-layout.single-format-aside .entry-title-meta-post-date,
+.single-column-layout.single-format-quote .entry-title-meta-post-date {
+	display: none;
+}
+
+.single-column-layout #menu-social ul {
+	text-align: left;
+	margin-left: -5px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.full-width-featured-image.single-column-layout.single .wp-post-image,
+.full-width-featured-image.single-column-layout.page .wp-post-image,
+.full-width-featured-image.single-column-layout.blog .wp-post-image,
+.full-width-featured-image.single-column-layout.archive .wp-post-image {
+	margin-bottom: 0;
+}
+
+/**
+ * Social menu styles; uses Genericons in font/genericons/
+ */
+
+.screen-reader-text {
+	position: absolute;
+	top: -9999em;
+	left: -9999em;
+}
+
+#menu-social ul {
+	list-style: none;
+	margin: 0 0 25px;
+}
+
+#menu-social ul li {
+	display: inline-block;
+	position: relative;
+}
+
+#menu-social li a::before {
+	content: '\f408';
+	display: inline-block;
+	padding: 0 5px;
+	font-family: 'Genericons';
+	font-size: 26px;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+}
+
+#menu-social li a[href*="wordpress.org"]::before,
+#menu-social li a[href*="wordpress.com"]::before {
+	content: '\f205';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="wordpress.org"]:hover::before,
+#menu-social li a[href*="wordpress.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="facebook.com"]::before {
+	content: '\f203';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="facebook.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="twitter.com"]::before {
+	content: '\f202';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="twitter.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="dribbble.com"]::before {
+	content: '\f201';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="dribbble.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="plus.google.com"]::before {
+	content: '\f206';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="plus.google.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="pinterest.com"]::before {
+	content: '\f210';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="pinterest.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="github.com"]::before {
+	content: '\f200';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="github.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="tumblr.com"]::before {
+	content: '\f214';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="tumblr.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="youtube.com"]::before {
+	content: '\f213';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="youtube.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="flickr.com"]::before {
+	content: '\f211';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="flickr.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="vimeo.com"]::before {
+	content: '\f212';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="vimeo.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="instagram.com"]::before {
+	content: '\f215';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="instagram.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="codepen.io"]::before {
+	content: '\f216';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="codepen.io"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
+#menu-social li a[href*="linkedin.com"]::before {
+	content: '\f208';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="linkedin.com"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
 }
 
 /* Hide left-side author card under 1200px */
 @media only screen and (max-width: 1200px) {
-	.site {
-		margin-top: 80px;
+	.site,
+	.single-column-layout .site {
+		margin-top: 40px;
+	}
+
+	.multi-author-mode .site,
+	.multi-author-mode.single-column-layout .site {
+		margin-top: 40px;
+	}
+
+	.full-width-featured-image.single .wp-post-image,
+	.full-width-featured-image.page .wp-post-image,
+	.full-width-featured-image.blog .wp-post-image,
+	.full-width-featured-image.archive .wp-post-image {
+		margin-bottom: 0;
+	}
+
+	.site-description {
+		font-size: 15px;
+	}
+
+	.site-published-date {
+		font-size: 14px;
 	}
 
 	.single .site-header {
@@ -1529,12 +2171,16 @@ table th {
 	}
 
 	.site-header {
-		text-align: center;
+		text-align: left;
 		margin-left: 0;
 		float: none;
 		display: block;
 		width: 100%;
 		position: relative;
+	}
+
+	.blog article.show-full-content-first-post {
+		padding-top: 40px;
 	}
 
 	.post-author-bottom {
@@ -1547,6 +2193,15 @@ table th {
 
 	.entry-title-meta-author {
 		display: inline-block;
+	}
+
+	.entry-title-meta-post-date {
+		display: inline;
+	}
+
+	.single-format-quote .entry-title-meta-post-date,
+	.single-format-aside .entry-title-meta-post-date {
+		display: none;
 	}
 
 	.widget-area {
@@ -1563,6 +2218,7 @@ table th {
 
 	#nav-below {
 		margin-top: 40px;
+		padding-bottom: 40px;
 	}
 
 	.single .entry-meta {
@@ -1570,16 +2226,17 @@ table th {
 	}
 
 	.page article {
-		padding: 40px 0 40px 0;
+		padding: 0 0 40px 0;
 	}
 
 	.main-navigation {
 		clear: none;
 	}
 
-	.site-navigation {
+	#masthead .site-navigation {
 		border-bottom: 1px solid #eee;
-		padding-bottom: 20px;
+		margin-top: 0;
+		padding-bottom: 40px;
 		margin-bottom: 20px;
 	}
 
@@ -1601,30 +2258,114 @@ table th {
 	}
 
 	#masthead .site-title {
-		/* Font style definitions can be found in css/xxx-scheme.css */
-		padding-top: 15px;
+		font-size: 32px;
+		font-style: normal;
+		padding-top: 0;
 		padding-left: 0;
 	}
 
 	#masthead .site-description {
 		padding-left: 0;
-		padding-top: 20px;
+		padding-top: 10px;
+		margin-bottom: 10px;
 	}
 
 	#masthead .site-logo,
 	#masthead .site-logo img {
-		float: none;
-		max-width: 100px;
+		float: right;
+	}
+
+	#masthead .main-navigation ul {
+		margin-left: -10px;
+	}
+
+	.archive .page-title,
+	.archive .archive-title {
+		margin-top: 20px;
+	}
+
+	#menu-social ul {
+		text-align: left;
+		margin-left: -5px;
+		margin-bottom: 20px;
+		margin-top: 20px;
 	}
 }
 
 @media only screen and (max-width: 500px) {
-	.site {
-		margin-top: 40px;
+	.site,
+	.single-column-layout .site {
+		margin-top: 20px;
 	}
 
-	#masthead {
-		margin-top: 0;
+	.multi-author-mode .site,
+	.multi-author-mode.single-column-layout .site {
+		margin-top: 20px;
+	}
+
+	#masthead .site-title,
+	.single-column-layout #masthead .site-title {
+		padding-top: 0;
+		font-size: 24px;
+	}
+
+	#masthead .site-logo {
+		float: right;
+		margin-right: 0;
+	}
+
+	#masthead .site-logo img,
+	.single-column-layout #masthead .site-logo img {
+		max-width: 70px;
+		margin-right: 0;
+	}
+
+	#masthead .site-title,
+	#masthead .site-description,
+	.single-column-layout #masthead .site-title,
+	.single-column-layout #masthead .site-description {
+		margin-left: 0;
+	}
+
+	#menu-social {
+		clear: both;
+	}
+
+	#menu-social ul,
+	.single-column-layout #menu-social ul {
+		margin-left: 0;
+	}
+
+	#masthead .site-navigation {
+		margin-left: -10px;
+		padding-bottom: 20px;
+	}
+
+	.single-column-layout .site-navigation {
+		margin-bottom: 0;
+	}
+
+	#masthead .main-navigation ul,
+	.single-column-layout #masthead .main-navigation ul {
+		margin-left: inherit;
+	}
+
+	#masthead .main-navigation li {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.site-navigation button,
+	.paging-navigation button {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.single .wp-post-image,
+	.page .wp-post-image,
+	.blog .wp-post-image,
+	.archive .wp-post-image {
+		margin-bottom: 10px;
 	}
 
 	#page {
@@ -1634,63 +2375,45 @@ table th {
 
 	.entry-content,
 	#comments {
-		/* Font style definitions can be found in css/xxx-scheme.css */;
+		font-size: 18px;
+		line-height: 1.4;
 		width: 100%;
 	}
 
 	h1.entry-title {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		font-size: 1.9em;
 	}
 
 	.entry-content h1 {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		font-size: 1.7em;
 	}
 
 	.entry-content h2 {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		font-size: 1.6em;
 	}
 
 	.entry-content h3 {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		font-size: 1.5em;
 	}
 
 	.entry-content h4 {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		font-size: 1.4em;
 	}
 
 	.entry-content h5 {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		font-size: 1.3em;
 	}
 
 	.entry-content h6 {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		font-size: 1.2em;
 	}
 
 	.entry-content ol, ul {
 		margin-left: 2em;
 	}
 
-	#masthead {
-		/* Font style definitions can be found in css/xxx-scheme.css */
-	}
-
-	#masthead .site-title {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		padding-left: 0;
-		clear: both;
-		margin-left: 5px;
-	}
-
-	#masthead .site-description {
-		padding-left: 0;
-		margin-left: 5px;
-	}
-
-	#masthead .site-logo,
-	#masthead .site-logo img {
-		float: none;
-		max-width: 100px;
+	.author .author-avatar img {
+		margin-top: -15px;
 	}
 
 	.post-author-card .site-title {
@@ -1702,23 +2425,30 @@ table th {
 		padding-left: 0;
 	}
 
-	.format-aside .entry-content {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+	.format-aside .entry-content,
+	.format-quote .entry-content {
+		font-size: 0.9em;
 		margin-bottom: 0;
 	}
 
+	.format-aside blockquote,
+	.format-quote blockquote {
+		margin-left: 0;
+	}
+
 	.single .entry-meta {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		text-align: center;
 		padding-bottom: 0;
 		padding-top: 0;
 	}
 
 	.post-author-bottom {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		text-align: center;
 	}
 
 	.post-author-bottom .site-title {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		font-size: 24px;
+		line-height: 2.2;
 	}
 
 	.post-author-bottom .site-logo, .post-author-bottom .site-logo img {
@@ -1758,7 +2488,7 @@ table th {
 	}
 
 	.entry-content .subtitle {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		font-size: 1.2em;
 	}
 
 	.comment-form-author,
@@ -1769,7 +2499,7 @@ table th {
 	}
 
 	.entry-meta #share-comment-button {
-		/* Font style definitions can be found in css/xxx-scheme.css */
+		text-align: center;
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
@@ -1778,65 +2508,29 @@ table th {
 		margin-top: 0;
 	}
 
-}
+	.archive .page-title,
+	.archive .archive-title,
+	.page h1.entry-title {
+		font-size: 2.2em;
+	}
 
-/* Footnotes */
+	.page h1.entry-title {
+		margin-top: 0;
+	}
 
-.footnotes p,
-.blog .show-full-content-first-post .footnotes p,
-.blog .show-full-content-first-post-sticky .footnotes p {
-	margin-bottom: 0 !important;
-}
+	.entry-title-meta {
+		letter-spacing: 0;
+	}
 
-.footnotes,
-.blog .show-full-content-first-post .footnotes,
-.blog .show-full-content-first-post-sticky .footnotes {
-	/* Font style definitions can be found in css/xxx-scheme.css */
-}
+	.page article {
+		padding-top: 20px;
+	}
 
-.blog div.footnotes,
-.archive div.footnotes,
-.search div.footnotes {
-	display: none;
-}
+	.format-standard .entry-title {
+		width: 100%;
+	}
 
-.blog .show-full-content-first-post div.footnotes,
-.blog .show-full-content-first-post-sticky div.footnotes {
-	display: block;
-}
-
-/* Author Page Styles */
-
-.author-archive-author-avatar img {
-	margin-bottom: 10px;
-	-webkit-border-radius: 95px;
-	border-radius: 95px;
-	max-width: 70px;
-	height: auto;
-}
-
-.author .author-info {
-	border-bottom: 1px solid #ddd;
-	padding-bottom: 40px;
-}
-
-.author .author-avatar img {
-	float: right;
-	border-radius: 95px;
-	margin-top: -32px;
-}
-
-.author .archive-title a {
-	color: #404040;
-}
-
-.author .archive-title a:hover {
-	text-decoration: none;
-}
-
-/* WP Audio Shortcode */
-.blog .wp-audio-shortcode,
-.archive .wp-audio-shortcode,
-.search .wp-audio-shortcode {
-	margin-bottom: 20px;
+	.post-excerpts h1.entry-title, .enhanced-excerpts h1.entry-title {
+		font-size: 1.5em;
+	}
 }

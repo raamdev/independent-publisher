@@ -4,7 +4,7 @@
  * http://codex.wordpress.org/Custom_Headers
  *
  * @package Independent Publisher
- * @since   Independent Publisher 1.2.4
+ * @since   Independent Publisher 1.0
  */
 
 /**
@@ -15,7 +15,6 @@
  * Use feature detection of wp_get_theme() which was introduced
  * in WordPress 3.4.
  *
- * @todo Rework this function to remove WordPress 3.4 support when WordPress 3.6 is released.
  * @uses independent_publisher_get_default_header_image()
  */
 function independent_publisher_custom_header_setup() {
@@ -35,7 +34,7 @@ function independent_publisher_custom_header_setup() {
 	$args = apply_filters( 'independent_publisher_custom_header_args', $args );
 
 	add_theme_support( 'custom-header', $args );
-	
+
 }
 
 add_action( 'after_setup_theme', 'independent_publisher_custom_header_setup' );

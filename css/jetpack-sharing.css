@@ -1,0 +1,21 @@
+/* JetPack Sharing Buttons; improves styling with this theme */
+div.sharedaddy div.sd-block {
+	padding-top: 40px !important;
+}
+
+div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3, #primary div.sharedaddy h3 {
+	font-family: Georgia, "Times New Roman", Times, serif !important;
+	font-family: -webkit-body !important;
+	font-weight: normal !important;
+	font-size: 16px !important;
+	margin-top: 0 !important;
+}
+
+div.sharedaddy div.sd-block {
+	border-top: none !important;
+}
+
+.single .entry-meta,
+.page .entry-meta {
+	margin-top: 0;
+}
