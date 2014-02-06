@@ -1528,6 +1528,10 @@ h6 {
 	padding-top: 0;
 }
 
+.blog.single-column-layout article.show-full-content-first-post {
+	padding-top: 40px;
+}
+
 .archive .page-header,
 .search .page-header {
 	margin-bottom: 4em;
@@ -1825,7 +1829,7 @@ table th {
  */
 
 .single-column-layout .site-header {
-	text-align: left;
+	text-align: center;
 	margin-left: 0;
 	float: none;
 	display: block;
@@ -1889,7 +1893,7 @@ table th {
 .single-column-layout .site-navigation {
 	border-bottom: 1px solid #eee;
 	margin-top: 0;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 	margin-bottom: 20px;
 }
 
@@ -1921,14 +1925,8 @@ table th {
 .single-column-layout #masthead .site-description {
 	padding-left: 0;
 	padding-top: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	font-size: 15px;
-}
-
-.single-column-layout #masthead .site-logo,
-.single-column-layout #masthead .site-logo img {
-	float: right;
-	max-width: 100px;
 }
 
 .single-column-layout .entry-title-meta-author {
@@ -1954,7 +1952,7 @@ table th {
 }
 
 .single-column-layout #menu-social ul {
-	text-align: left;
+	text-align: center;
 	margin-left: -5px;
 	margin-bottom: 20px;
 	margin-top: 20px;
@@ -2171,7 +2169,7 @@ table th {
 	}
 
 	.site-header {
-		text-align: left;
+		text-align: center;
 		margin-left: 0;
 		float: none;
 		display: block;
@@ -2236,7 +2234,7 @@ table th {
 	#masthead .site-navigation {
 		border-bottom: 1px solid #eee;
 		margin-top: 0;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 		margin-bottom: 20px;
 	}
 
@@ -2264,15 +2262,11 @@ table th {
 		padding-left: 0;
 	}
 
-	#masthead .site-description {
+	#masthead .site-description,
+	.single-column-layout #masthead .site-description {
 		padding-left: 0;
 		padding-top: 10px;
-		margin-bottom: 10px;
-	}
-
-	#masthead .site-logo,
-	#masthead .site-logo img {
-		float: right;
+		margin-bottom: 20px;
 	}
 
 	#masthead .main-navigation ul {
@@ -2285,7 +2279,7 @@ table th {
 	}
 
 	#menu-social ul {
-		text-align: left;
+		text-align: center;
 		margin-left: -5px;
 		margin-bottom: 20px;
 		margin-top: 20px;
@@ -2296,6 +2290,11 @@ table th {
 	.site,
 	.single-column-layout .site {
 		margin-top: 20px;
+	}
+
+	.site-header,
+	.single-column-layout .site-header {
+		text-align: left;
 	}
 
 	.multi-author-mode .site,
@@ -2327,6 +2326,11 @@ table th {
 		margin-left: 0;
 	}
 
+	#masthead .site-description,
+	.single-column-layout #masthead .site-description {
+		margin-bottom: 10px;
+	}
+
 	#menu-social {
 		clear: both;
 	}
@@ -2339,6 +2343,11 @@ table th {
 	#masthead .site-navigation {
 		margin-left: -10px;
 		padding-bottom: 20px;
+	}
+
+	#menu-social ul,
+	.single-column-layout #menu-social ul {
+		text-align: left;
 	}
 
 	.single-column-layout .site-navigation {
