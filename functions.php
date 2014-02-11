@@ -457,7 +457,7 @@ function independent_publisher_comments_call_to_action_text() {
 	if ( isset( $comments_call_to_action ) && trim( $comments_call_to_action ) !== '' )
 		return esc_attr( $comments_call_to_action );
 	else
-		return __( 'Leave a Comment', 'independent_publisher' );
+		return __( 'Write a Comment', 'independent_publisher' );
 }
 
 /**

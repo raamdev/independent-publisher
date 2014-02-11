@@ -121,7 +121,7 @@ class IndependentPublisher_Customize {
 
 		// Comments Call to Action text
 		$wp_customize->add_setting( 'comments_call_to_action', array(
-			'default'    => 'Leave a Comment',
+			'default'    => 'Write a Comment',
 			'type'       => 'theme_mod',
 			'capability' => 'edit_theme_options',
 		) );

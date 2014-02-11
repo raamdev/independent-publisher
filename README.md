@@ -51,7 +51,7 @@ The following colors can be changed via the Colors section:
 - **Show Widgets on Single Pages**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single pages.
 - **Use Single-Column Layout**. Disabled by default. This option allows you to force the site layout to a single-column, regardless of the browser width.
 - **Multi-Author Mode**. Disabled by default. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (*Dashboard → Appearance → Customize → Header Image*) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page.
-- **Comments Call to Action**. "Leave a Comment" by default. This allows you to change the label that shows up on the 'Leave a Comment' button and also changes the title of the comment form itself.
+- **Comments Call to Action**. "Write a Comment" by default. This allows you to change the label that shows up on the 'Write a Comment' button and also changes the title of the comment form itself.
 
 ## Post Covers (Full Width Featured Images)
 
@@ -199,8 +199,8 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 
 ### Action Hooks
 
-- `independent_publisher_entry_meta_top` - Located at the top of post Entry Meta, just before the 'Leave a Comment' button.
-- `independent_publisher_before_bottom_share_comment_button` - Located just before the second 'Leave a Comment' button that shows up underneath post comments when there are more than 4 comments visible.
+- `independent_publisher_entry_meta_top` - Located at the top of post Entry Meta, just before the 'Write a Comment' button.
+- `independent_publisher_before_bottom_share_comment_button` - Located just before the second 'Write a Comment' button that shows up underneath post comments when there are more than 4 comments visible.
 - `independent_publisher_before_post_bottom_tag_list` - Located before the bottom 'Related Content by Tag' tag list on Single posts.
 
 ## Functions you can Override in a Child Theme
@@ -226,7 +226,7 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_search_stats()` - Returns stats for search results
 - `independent_publisher_taxonomy_archive_stats()` - Returns taxonomy archive stats and current page info for use in taxonomy archive descriptions
 - `independent_publisher_date_archive_description()` - Returns the Date Archive description
-- `independent_publisher_min_comments_bottom_share_button()` - Returns the minimum number of comments that must exist for the bottom 'Leave a Comment' button to appear
+- `independent_publisher_min_comments_bottom_share_button()` - Returns the minimum number of comments that must exist for the bottom 'Write a Comment' button to appear
 - `independent_publisher_min_comments_comment_title()` - Returns the minimum number of comments that must exist for the comments title to appear
 
 ### Functions in `functions.php`:
