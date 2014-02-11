@@ -585,7 +585,7 @@ endif;
 
 if ( ! function_exists( 'independent_publisher_min_comments_bottom_share_button' ) ):
 	/**
-	 * Returns the minimum number of comments that must exist for the bottom 'Share a comment' button to appear
+	 * Returns the minimum number of comments that must exist for the bottom 'Leave a Comment' button to appear
 	 */
 	function independent_publisher_min_comments_bottom_share_button() {
 		return 4;

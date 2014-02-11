@@ -170,7 +170,7 @@ msgid "Website"
 msgstr ""
 
 #: ../functions.php:460
-msgid "Share a Comment"
+msgid "Leave a Comment"
 msgstr ""
 
 #: ../functions.php:605
