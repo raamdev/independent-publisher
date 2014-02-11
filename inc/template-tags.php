@@ -583,11 +583,11 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 	}
 endif;
 
-if ( ! function_exists( 'independent_publisher_min_comments_bottom_share_button' ) ):
+if ( ! function_exists( 'independent_publisher_min_comments_bottom_comment_button' ) ):
 	/**
 	 * Returns the minimum number of comments that must exist for the bottom 'Write a Comment' button to appear
 	 */
-	function independent_publisher_min_comments_bottom_share_button() {
+	function independent_publisher_min_comments_bottom_comment_button() {
 		return 4;
 	}
 endif;

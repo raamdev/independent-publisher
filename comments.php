@@ -78,9 +78,9 @@ if ( post_password_required() )
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'independent_publisher' ); ?></p>
 	<?php endif; ?>
 
-	<?php if ( comments_open() && get_comments_number() >= independent_publisher_min_comments_bottom_share_button() ) : ?>
+	<?php if ( comments_open() && get_comments_number() >= independent_publisher_min_comments_bottom_comment_button() ) : ?>
 
-		<?php do_action( 'independent_publisher_before_bottom_share_comment_button' ); ?>
+		<?php do_action( 'independent_publisher_before_bottom_comment_button' ); ?>
 
 		<div id="share-comment-button-bottom">
 			<button><i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?>
