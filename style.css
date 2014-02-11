@@ -2422,7 +2422,9 @@ table th {
 	}
 
 	.author .author-avatar img {
-		margin-top: -15px;
+		margin-top: 0;
+		max-width: 70px;
+		max-height: 70px;
 	}
 
 	.post-author-card .site-title {
