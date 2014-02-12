@@ -293,11 +293,11 @@ msgid "Show Widgets on Single Pages"
 msgstr ""
 
 #: ../inc/customizer.php:104
-msgid "Use Single-Column Layout"
+msgid "Single-Column Layout"
 msgstr ""
 
 #: ../inc/customizer.php:117
-msgid "Multi-Author Mode"
+msgid "Enable Multi-Author Mode"
 msgstr ""
 
 #: ../inc/customizer.php:130

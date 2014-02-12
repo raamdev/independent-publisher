@@ -14,8 +14,13 @@ class IndependentPublisher_Customize {
 
 	public static function register( $wp_customize ) {
 
+		$wp_customize->add_section( 'independent_publisher_layout_options', array(
+				'title'    => __( 'Layout Options', 'independent_publisher' ),
+				'priority' => 124,
+			) );
+
 		$wp_customize->add_section( 'independent_publisher_excerpt_options', array(
-			'title'    => __( 'Excerpts', 'independent_publisher' ),
+			'title'    => __( 'Excerpt Options', 'independent_publisher' ),
 			'priority' => 125,
 		) );
 
@@ -93,16 +98,16 @@ class IndependentPublisher_Customize {
 			'type'     => 'checkbox',
 		) );
 
-		// Use Single-Column Layout
-		$wp_customize->add_setting( 'independent_publisher_general_options[single_column_layout]', array(
+		// Single-Column Layout
+		$wp_customize->add_setting( 'independent_publisher_layout_options[single_column_layout]', array(
 			'default'    => false,
 			'type'       => 'option',
 			'capability' => 'edit_theme_options',
 		) );
 		$wp_customize->add_control( 'single_column_layout', array(
-			'settings' => 'independent_publisher_general_options[single_column_layout]',
-			'label'    => __( 'Use Single-Column Layout', 'independent_publisher' ),
-			'section'  => 'independent_publisher_general_options',
+			'settings' => 'independent_publisher_layout_options[single_column_layout]',
+			'label'    => __( 'Single-Column Layout', 'independent_publisher' ),
+			'section'  => 'independent_publisher_layout_options',
 			'type'     => 'checkbox',
 		) );
 
@@ -114,7 +119,7 @@ class IndependentPublisher_Customize {
 		) );
 		$wp_customize->add_control( 'multi_author_mode', array(
 			'settings' => 'independent_publisher_general_options[multi_author_mode]',
-			'label'    => __( 'Multi-Author Mode', 'independent_publisher' ),
+			'label'    => __( 'Enable Multi-Author Mode', 'independent_publisher' ),
 			'section'  => 'independent_publisher_general_options',
 			'type'     => 'checkbox',
 		) );

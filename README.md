@@ -35,9 +35,16 @@ The following colors can be changed via the Colors section:
 - Primary Meta Text Color
 - Secondary Meta Text Color
 
-### Excerpts
 
-![screen shot 2014-01-24 at 7 26 58 pm](https://f.cloud.github.com/assets/53005/2000332/844d8d20-8557-11e3-8308-f830930941ae.png)
+### Layout Options
+
+![screen shot 2014-02-11 at 7 14 06 pm](https://f.cloud.github.com/assets/53005/2143915/c9a17914-937a-11e3-8970-d6cf87a543f3.png)
+
+- **Single-Column Layout**. Disabled by default. This option allows you to force the site layout to a single-column, regardless of the browser width.
+
+### Excerpt Options
+
+![screen shot 2014-02-11 at 7 14 43 pm](https://f.cloud.github.com/assets/53005/2143914/c9a14fd4-937a-11e3-9a95-ff023ebf120f.png)
 
 - **Post Excerpts**. Disabled by default. If you enable Post Excerpts the post excerpt will be shown on Blog, Archive, and Search pages instead of the full post content. If no excerpt is set, one is generated using the first 55 words (see [`the_excerpt()`](http://codex.wordpress.org/Function_Reference/the_excerpt)). This setting only applies to Standard and Chat post formats.
 - **Generate One-Sentence Excerpts**. Disabled by default. When this option is enabled, a one-sentence excerpt will be generated for all posts that don't have an excerpt set. A "Continue Reading →" link is also placed below the generated excerpt. This setting only applies to Standard post formats and is only relevant when Post Excerpts are enabled.
@@ -45,12 +52,11 @@ The following colors can be changed via the Colors section:
 
 ### General Options
 
-![screen shot 2014-01-24 at 7 27 09 pm](https://f.cloud.github.com/assets/53005/2000331/844780e2-8557-11e3-9c6b-1688564cf612.png)
+![screen shot 2014-02-11 at 7 15 01 pm](https://f.cloud.github.com/assets/53005/2143913/c9a0184e-937a-11e3-8ae6-966e4a08be80.png)
 
 - **Show Post Word Count in Entry Meta**. Enabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
 - **Show Widgets on Single Pages**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single pages.
-- **Use Single-Column Layout**. Disabled by default. This option allows you to force the site layout to a single-column, regardless of the browser width.
-- **Multi-Author Mode**. Disabled by default. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (*Dashboard → Appearance → Customize → Header Image*) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page.
+- **Enable Multi-Author Mode**. Disabled by default. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (*Dashboard → Appearance → Customize → Header Image*) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page.
 - **Comments Call to Action**. "Write a Comment" by default. This allows you to change the label that shows up on the 'Write a Comment' button and also changes the title of the comment form itself.
 
 ## Post Covers (Full Width Featured Images)
