@@ -38,7 +38,7 @@ The following colors can be changed via the Colors section:
 
 ### Layout Options
 
-![screen shot 2014-02-11 at 7 14 06 pm](https://f.cloud.github.com/assets/53005/2143915/c9a17914-937a-11e3-8970-d6cf87a543f3.png)
+![screen shot 2014-02-11 at 7 19 46 pm](https://f.cloud.github.com/assets/53005/2143949/6c319bdc-937b-11e3-8e03-9af57e672ac8.png)
 
 - **Single-Column Layout**. Disabled by default. This option allows you to force the site layout to a single-column, regardless of the browser width.
 
