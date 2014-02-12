@@ -172,7 +172,7 @@ MailChimp includes its own CSS in the HTML embed code that, by default, doesn't 
 
 ## Color Schemes
 
-You can modify the color scheme in *Appearance → Customize → Colors**. Here are a few recommended color schemes:
+You can modify the color scheme in *Appearance → Customize → Colors*. Here are a few recommended color schemes:
 
 ### Blue
 
