@@ -11,6 +11,7 @@ Independent Publisher WordPress Theme
 * [Frequently Asked Questions](https://github.com/raamdev/independent-publisher#frequently-asked-questions)
     * [Why is my Header Image not showing on Single posts?](https://github.com/raamdev/independent-publisher#why-is-my-header-image-not-showing-on-single-posts)
     * [How do I get the small logo to show up in the top-left corner?](https://github.com/raamdev/independent-publisher#how-do-i-get-the-small-logo-to-show-up-in-the-top-left-corner)
+    * [How do I add Social Media Buttons below the Logo?](https://github.com/raamdev/independent-publisher#how-do-i-add-social-media-buttons-below-the-logo)
     * [How do I make the JetPack Sharing Buttons look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-jetpack-sharing-buttons-look-better)
     * [How do I make the Subscribe to Comments Reloaded Advanced Options look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-subscribe-to-comments-reloaded-advanced-options-look-better)
     * [How do I make MailChimp Signup Forms look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-mailchimp-signup-forms-look-better)
@@ -111,8 +112,10 @@ If there is only one author on your site, you probably want to set the Header Im
 
 First you need to enable **Multi-Author Mode** in *Dashboard → Appearance → Customizer → General Options* . With Multi-Author Mode enabled, the theme Header Image (*Dashboard → Appearance → Header Image*) will be placed in the top-left corner on all Single pages.
 
-### How do I add social media buttons below the logo?
-![screen shot 2014-02-03 at 12 54 31 pm](https://f.cloud.github.com/assets/5318719/2192069/f808996c-985d-11e3-8aba-561b79052d4c.png)
+### How do I add Social Media Buttons below the Logo?
+
+![screen shot 2014-02-03 at 12 54 31 pm](https://f.cloud.github.com/assets/5318719/2192243/00f7d5ec-9863-11e3-833f-3f28cd3d8cf4.png)
+
 First you need to go to *Dashboard → Appearance → Menu*. Once there, create a new menu called Social. After that, add your social media links to it. For example:
 
 ![screen shot 2014-02-18 at 11 27 24 am](https://f.cloud.github.com/assets/5318719/2192161/ad89e3ca-9860-11e3-91b4-c416265854ce.png)
