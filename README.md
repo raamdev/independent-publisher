@@ -113,12 +113,11 @@ First you need to enable **Multi-Author Mode** in *Dashboard → Appearance → 
 
 ### How do I add social media buttons below the logo?
 ![screen shot 2014-02-03 at 12 54 31 pm](https://f.cloud.github.com/assets/5318719/2192069/f808996c-985d-11e3-8aba-561b79052d4c.png)
-
 First you need to go to *Dashboard → Appearance → Menu*. Once there, create a new menu called Social. After that, add your social media links to it. For example:
 
 ![screen shot 2014-02-18 at 11 27 24 am](https://f.cloud.github.com/assets/5318719/2192161/ad89e3ca-9860-11e3-91b4-c416265854ce.png)
 
-After you're done, below in **Theme Locations**, located in the **Menu Settings** tab, choose **Social**.
+After you're done, below in **Theme Locations** (located in the **Menu Settings** tab), choose **Social**.
 
 ![screen shot 2014-02-18 at 11 42 31 am](https://f.cloud.github.com/assets/5318719/2192202/dcd5a848-9861-11e3-8e96-85cc4cdee1cb.png)
 
