@@ -4,7 +4,7 @@ Independent Publisher WordPress Theme
 ## Table of Contents
 
 * [Theme Options](https://github.com/raamdev/independent-publisher#theme-options)
-* [Post Covers (Full-Width Featured Iamges)](https://github.com/raamdev/independent-publisher#post-covers-full-width-featured-images)
+* [Post Covers (Full-Width Featured Images)](https://github.com/raamdev/independent-publisher#post-covers-full-width-featured-images)
 * [Post Subtitles](https://github.com/raamdev/independent-publisher#post-subtitles)
 * [Using a Child Theme to Customize Independent Publisher](https://github.com/raamdev/independent-publisher#using-a-child-theme-to-customize-independent-publisher)
 * [Known Issues](https://github.com/raamdev/independent-publisher#known-issues)
