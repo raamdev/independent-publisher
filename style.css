@@ -1539,12 +1539,11 @@ h6 {
 	border: solid 1px;
 	border-color: #eee;
 	background: #F5F5F5;
-	padding-top: 1px;
+	padding-top: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-bottom: 0px;
+	padding-bottom: 10px;
 	border-radius: 10px;
-
 }
 
 .archive .page-title,
@@ -2284,6 +2283,11 @@ table th {
 	.archive .page-title,
 	.archive .archive-title {
 		margin-top: 20px;
+	}
+
+	.archive .page-header,
+	.search .page-header {
+		text-align: center;
 	}
 
 	#menu-social ul {
