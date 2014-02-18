@@ -545,6 +545,9 @@ img.aligncenter {
 	padding-top: 20px;
 	background: #F5F5F5;
 	border: none;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 }
 
 .hentry {
