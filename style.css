@@ -1665,7 +1665,7 @@ article.first-post {
 .site-footer {
 	clear: both;
 	margin-top: 100px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	color: #b3b3b1;
 }
 
@@ -1687,6 +1687,7 @@ article.first-post {
 img#wpstats {
 	display: block;
 	margin: 5px auto;
+	margin-bottom: 25px;
 }
 
 table td {
