@@ -111,6 +111,13 @@ If there is only one author on your site, you probably want to set the Header Im
 
 First you need to enable **Multi-Author Mode** in *Dashboard → Appearance → Customizer → General Options* . With Multi-Author Mode enabled, the theme Header Image (*Dashboard → Appearance → Header Image*) will be placed in the top-left corner on all Single pages.
 
+### How do I add social media buttons below the logo?
+![screen shot 2014-02-03 at 12 54 31 pm](https://f.cloud.github.com/assets/5318719/2192069/f808996c-985d-11e3-8aba-561b79052d4c.png)
+
+First you need to go to *Dashboard → Appearance → Menu*. Once there, create a new menu called Social. After that, add your social media links to it. For example:
+![screen shot 2014-02-18 at 11 27 24 am](https://f.cloud.github.com/assets/5318719/2192161/ad89e3ca-9860-11e3-91b4-c416265854ce.png)
+After you're done, below in **Theme Locations**, choose **Social**.
+
 ### How do I make the JetPack Sharing Buttons look better?
 
 If you clear the JetPack Sharing Buttons "Sharing label" field so that it's empty, Independent Publisher will force the sharing buttons to float right and will remove the right padding so that the buttons look nicer.
