@@ -1536,8 +1536,15 @@ h6 {
 .search .page-header {
 	margin-bottom: 4em;
 	padding-bottom: 1em;
-	border-bottom: solid 1px;
+	border: solid 1px;
 	border-color: #eee;
+	background: #F5F5F5;
+	padding-top: 1px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 0px;
+	border-radius: 10px;
+
 }
 
 .archive .page-title,
