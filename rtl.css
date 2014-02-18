@@ -1547,6 +1547,8 @@ h6 {
 	padding-right: 20px;
 	padding-bottom: 10px;
 	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 }
 
 .archive .page-title,
