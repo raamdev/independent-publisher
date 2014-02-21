@@ -564,28 +564,36 @@ if ( ! function_exists( 'independent_publisher_first_sentence_excerpt' ) ):
 	/**
 	 * Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
 	 */
-	function independent_publisher_first_sentence_excerpt( $output ) {
+	function independent_publisher_first_sentence_excerpt( $text = '' ) {
 		global $post;
 		$content_post = get_post( $post->ID );
 
 		// Only generate a one-sentence excerpt if there is no excerpt set and One Sentence Excerpts is enabled
 		if ( ! $content_post->post_excerpt && independent_publisher_generate_one_sentence_excerpts() ) {
-			$post_content = $content_post->post_content;
 
-			// If the post starts with an image containing a caption, remove the caption before generating the excerpt
-			if ( strpos( trim( $post_content ), '[caption' ) === 0 ) {
-				$post_content = substr( $post_content, strpos( $post_content, '[/caption]' ) + 10, strlen( $post_content ) - ( strpos( $post_content, '[/caption]' ) + 10 ) );
-			}
+			// The following mimics the functionality of wp_trim_excerpt() in wp-includes/formatting.php
+			// and ensures that no shortcodes or embed URLs are included in our generated excerpt.
+			$text = get_the_content('');
+			$text = strip_shortcodes( $text );
+			$text = apply_filters( 'the_content', $text );
+			$text = str_replace(']]>', ']]&gt;', $text);
+			$excerpt_length = 150; // Something long enough that we're likely to get a full sentence.
+			$excerpt_more = ''; // Not used, but included here for clarity
+			$text = wp_trim_words( $text, $excerpt_length, $excerpt_more ); // See wp_trim_words() in wp-includes/formatting.php
 
-			// Get the first sentence in $post_content
-			$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $post_content ), 2, PREG_SPLIT_DELIM_CAPTURE );
+			// Get the first sentence
+			// This looks for three punctuation characters: . (period), ! (exclamation), or ? (question mark), followed by a space
+			$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $text ), 2, PREG_SPLIT_DELIM_CAPTURE );
 
 			// $strings[0] is the first sentence and $strings[1] is the punctuation character at the end
 			if ( ! empty( $strings[0] ) && ! empty( $strings[1] ) ) {
-				$output = $strings[0] . $strings[1];
+				$text = $strings[0] . $strings[1];
 			}
+
+			$text = wpautop($text);
 		}
-		return wpautop( $output );
+
+		return $text;
 	}
 endif;
 
