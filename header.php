@@ -8,7 +8,7 @@
  * @since   Independent Publisher 1.0
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php html_tag_schema(); ?> <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -21,7 +21,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
 
 <?php // Displays full-width featured image on Single Posts if applicable ?>
 <?php independent_publisher_full_width_featured_image(); ?>
@@ -38,7 +38,7 @@
 <?php endif; ?>
 
 <div id="page" class="hfeed site">
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 		<?php // Show only post author info on Single Pages ?>
 		<?php if ( is_single() ) : ?>
