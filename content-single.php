@@ -21,7 +21,7 @@
       } ?>
       <span class="entry-title-meta-post-date">
         <span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
-        <time class="entry-date" datetime="<?php independent_publisher_posted_on_date(); ?>" itemprop="datePublished" pubdate><?php independent_publisher_posted_on_date(); ?></time>
+        <time class="entry-date" datetime="<?php the_time('Y-m-d\TH:i:sO'); ?>" itemprop="datePublished" pubdate><?php independent_publisher_posted_on_date(); ?></time>
       </span>
       <?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
     </h2>
