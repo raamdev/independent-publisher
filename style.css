@@ -283,7 +283,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	text-decoration: none;
@@ -1063,7 +1063,7 @@ ol.commentlist .avatar {
 }
 
 #pinglist {
-	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 12px;
@@ -1104,7 +1104,7 @@ ul.pinglist {
 }
 
 .taglist {
-	font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 12px;
@@ -1157,7 +1157,7 @@ ul.taglist {
 .comment-form-subscriptions label,
 .comment-form-reply-title {
 	margin-right: 5px;
-	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	color: #b3b3b1;
 	display: block;
 	font-size: 16px;
@@ -1460,7 +1460,7 @@ h4,
 h5,
 h6 {
 	margin: 20px 0;
-	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	color: #333332;
 	letter-spacing: -1px;
 	font-weight: 700;
@@ -1654,7 +1654,7 @@ article.first-post {
 	clear: left;
 	margin-left: -220px;
 	text-align: right;
-	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 15px;
 }
 
