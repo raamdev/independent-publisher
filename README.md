@@ -151,6 +151,8 @@ MailChimp includes its own CSS in the HTML embed code that, by default, doesn't 
 	padding-right: 15px !important;
 	padding-top: 2px !important;
 	padding-bottom: 3px !important;
+	line-height: 1.45 !important;
+	height: 36px !important;
 	font-weight: normal !important;
 	width: 100% !important;
 }
