@@ -1197,6 +1197,10 @@ ul.taglist {
 	padding-left: 20px;
 }
 
+.comment-form .logged-in-as {
+	font-size: 80%;
+}
+
 #commentform input[type="submit"] {
 	width: 98%;
 }
