@@ -116,6 +116,11 @@ textarea {
 	line-height: 1.5;
 }
 
+select {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px !important; /* webkit annoyingly only lets <select> elements have a font-size of either 9px, 11px or 13px; forcing this to 13px maintains consistency */
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
@@ -1058,7 +1063,7 @@ ol.commentlist .avatar {
 #share-comment-button-bottom button {
 	padding-left: 15px;
 	padding-right: 15px;
-	height: 50px;
+	height: 3.4em;
 	line-height: 50px;
 }
 
@@ -1161,6 +1166,7 @@ ul.taglist {
 	color: #b3b3b1;
 	display: block;
 	font-size: 16px;
+	font-weight: 100;
 }
 
 .comment-form-reply-title {
