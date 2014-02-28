@@ -558,8 +558,11 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 		 * Only proceed if we're on the first page and the description has not been overridden via independent_publisher_custom_date_archive_meta
 		 */
 		if ( trim( $date_archive_meta ) === '' ) {
-			if ( is_year() ) {
+			if ( is_year() && ( get_the_date( 'Y' ) != date( 'Y' ) ) ) {
 				$date_archive_meta = sprintf( _n( 'There was one post published in %2$s.', 'There were %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ) );
+			}
+			else if ( is_year() && ( get_the_date( 'Y' ) == date( 'Y' ) ) ) {
+				$date_archive_meta = sprintf( _n( 'There is one post published in %2$s.', 'There are %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ) );
 			}
 			else if ( is_day() ) {
 				$date_archive_meta = sprintf( _n( 'There was one post published on %2$s.', 'There were %1$s posts published on %2$s' . $pagination_info . '.', $total, 'independent_publisher' ),
