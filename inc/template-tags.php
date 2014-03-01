@@ -243,7 +243,7 @@ if ( ! function_exists( 'independent_publisher_continue_reading_link' ) ) :
 	function independent_publisher_continue_reading_link() {
 		$text = apply_filters( 'independent_publisher_continue_reading_link_text', ' ' . __( 'Continue Reading &rarr;', 'independent_publisher' ) );
 
-		printf( '<span class="enhanced-excerpt-read-more"><a class="read-more" href="%1$s">%2$s</a></span>',
+		printf( '<div class="enhanced-excerpt-read-more"><a class="read-more" href="%1$s">%2$s</a></div>',
 				esc_url( get_permalink() ),
 				esc_html( $text )
 		);

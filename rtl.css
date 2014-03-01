@@ -663,12 +663,14 @@ img.aligncenter {
 }
 
 .enhanced-excerpts .enhanced-excerpt-read-more a {
-	display: block;
 	text-align: left;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 1.4em;
 	color: #57ad68;
-	margin-top: 1em;
+}
+
+.enhanced-excerpt-read-more {
+	margin-bottom: 1em;
 }
 
 .show-full-content-first-post h1.entry-title,
