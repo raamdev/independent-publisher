@@ -1567,6 +1567,10 @@ h6 {
 	font-size: 3.5em;
 }
 
+.archive.author .archive-title {
+	max-width: 80%;
+}
+
 article.first-post {
 	margin-top: 0;
 	padding-top: 0;
@@ -1822,7 +1826,7 @@ table th {
 .author .author-avatar img {
 	float: left;
 	border-radius: 95px;
-	margin-top: -32px;
+	margin-top: -85px;
 }
 
 .author .archive-title a {
@@ -2393,6 +2397,10 @@ table th {
 	.archive .archive-title,
 	.page h1.entry-title {
 		font-size: 2.2em;
+	}
+
+	.archive.author .archive-title {
+		max-width: 100%;
 	}
 
 	.page h1.entry-title {
