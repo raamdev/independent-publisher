@@ -442,8 +442,8 @@ function independent_publisher_show_widgets_on_single_pages() {
  * Returns true if Use Single Column Layout option is enabled
  */
 function independent_publisher_use_single_column_layout() {
-	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-	if ( isset( $independent_publisher_general_options['single_column_layout'] ) && $independent_publisher_general_options['single_column_layout'] )
+	$independent_publisher_layout_options = get_option( 'independent_publisher_layout_options' );
+	if ( isset( $independent_publisher_layout_options['single_column_layout'] ) && $independent_publisher_layout_options['single_column_layout'] )
 		return true;
 	else
 		return false;
