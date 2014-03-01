@@ -1475,6 +1475,10 @@ h6 {
 	letter-spacing: -1px;
 	font-weight: 700;
 	line-height: 1;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	word-wrap: break-word;
 }
 
 h1 {
@@ -1672,13 +1676,19 @@ article.first-post {
 	font-size: 15px;
 }
 
-.entry-title,
 .entry-content,
 .widget-area .widget,
 .comment {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+	word-wrap: break-word;
+}
+
+.entry-title {
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
 	word-wrap: break-word;
 }
 

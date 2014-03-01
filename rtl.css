@@ -1475,6 +1475,10 @@ h6 {
 	letter-spacing: -1px;
 	font-weight: 700;
 	line-height: 1;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	word-wrap: break-word;
 }
 
 h1 {
@@ -1678,6 +1682,13 @@ article.first-post {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+	word-wrap: break-word;
+}
+
+.entry-title {
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
 	word-wrap: break-word;
 }
 
@@ -2254,13 +2265,6 @@ table th {
 		font-size: 18px;
 		line-height: 1.4;
 		width: 100%;
-	}
-
-	.entry-title {
-		-webkit-hyphens: none;
-		-moz-hyphens: none;
-		hyphens: none;
-		word-wrap: break-word;
 	}
 
 	h1.entry-title {
