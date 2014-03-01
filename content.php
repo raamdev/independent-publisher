@@ -25,13 +25,15 @@
 
 	<div class="entry-content">
 
-		<?php /* Only show excerpts for Standard format OR Chat format, non-Sticky posts,
- 							when excerpts enabled or One-Sentence Excerpts enabled and
-								this is not the very first standard post when Show Full Content First Post enabled */
+		<?php /* Only show excerpts for Standard post format OR Chat format,
+							when this is not both the very first standard post and also a Sticky post AND
+								when excerpts enabled or One-Sentence Excerpts enabled AND
+									this is not the very first standard post when Show Full Content First Post enabled */
 		?>
-		<?php if ( ( ! get_post_format() || 'chat' === get_post_format() ) && ! is_sticky() &&
-				( independent_publisher_use_post_excerpts() || independent_publisher_generate_one_sentence_excerpts() ) &&
-				( ! ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() && is_home() ) )
+		<?php if ( ( ! get_post_format() || 'chat' === get_post_format() ) &&
+					( ! ( independent_publisher_is_very_first_standard_post() && is_sticky() ) )  &&
+						( independent_publisher_use_post_excerpts() || independent_publisher_generate_one_sentence_excerpts() ) &&
+							( ! ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() && is_home() ) )
 		) :
 			?>
 
