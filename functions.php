@@ -134,7 +134,6 @@ add_action( 'widgets_init', 'independent_publisher_widgets_init' );
 function independent_publisher_scripts() {
 	global $post;
 
-	wp_enqueue_style( 'independent-publisher-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons/genericons.css', array(), '3.0.3' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -150,6 +149,17 @@ function independent_publisher_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_scripts' );
+
+if ( ! function_exists( 'independent_publisher_stylesheet' ) ) :
+	/**
+	 * Enqueue main stylesheet
+	 */
+	function independent_publisher_stylesheet() {
+		wp_enqueue_style( 'independent-publisher-style', get_stylesheet_uri() );
+	}
+endif;
+
+add_action( 'wp_enqueue_scripts', 'independent_publisher_stylesheet' );
 
 /**
  * Echoes the theme's footer credits
