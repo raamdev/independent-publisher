@@ -53,9 +53,10 @@ The following colors can be changed via the Colors section:
 
 ### General Options
 
-![screen shot 2014-02-11 at 7 15 01 pm](https://f.cloud.github.com/assets/53005/2143913/c9a0184e-937a-11e3-8ae6-966e4a08be80.png)
+![screen shot 2014-03-04 at 4 18 13 pm](https://f.cloud.github.com/assets/53005/2326412/95fb35fa-a3e2-11e3-9e68-b97f472055d1.png)
 
 - **Show Post Word Count in Entry Meta**. Enabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
+- **Show Post Date in Entry Meta**. Disabled by default. When this option is enabled, the post date will be shown in the entry meta on Blog, Archive, and Search pages. It uses the date format specified in *Dashboard → Settings → General → Date Format*.
 - **Show Widgets on Single Pages**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single pages.
 - **Enable Multi-Author Mode**. Disabled by default. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (*Dashboard → Appearance → Customize → Header Image*) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page.
 - **Comments Call to Action**. "Write a Comment" by default. This allows you to change the label that shows up on the 'Write a Comment' button and also changes the title of the comment form itself.
