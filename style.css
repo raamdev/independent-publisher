@@ -1070,7 +1070,7 @@ ol.commentlist .avatar {
 }
 
 #pinglist {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 12px;
@@ -1111,7 +1111,7 @@ ul.pinglist {
 }
 
 .taglist {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 12px;
@@ -1164,7 +1164,7 @@ ul.taglist {
 .comment-form-subscriptions label,
 .comment-form-reply-title {
 	margin-right: 5px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
 	color: #b3b3b1;
 	display: block;
 	font-size: 16px;
@@ -1674,7 +1674,7 @@ article.first-post {
 	clear: left;
 	margin-left: -220px;
 	text-align: right;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
 	font-size: 15px;
 }
 
