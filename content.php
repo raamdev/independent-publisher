@@ -68,6 +68,12 @@
 			<?php independent_publisher_posted_author_cats() ?>
 		<?php endif; ?>
 
+		<?php /* Show post date when show post date option enabled */
+		?>
+		<?php if ( independent_publisher_show_date_entry_meta() ) : ?>
+			<?php echo independent_publisher_get_post_date() ?>
+		<?php endif; ?>
+
 		<?php /* Show post word count when post is not password-protected AND this is a Standard post format AND
  							post word count option enabled AND we're not showing the first post full content*/
 		?>

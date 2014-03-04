@@ -438,6 +438,17 @@ function independent_publisher_show_post_word_count() {
 }
 
 /**
+ * Returns true if Show Post Date in Entry Meta option is enabled
+ */
+function independent_publisher_show_date_entry_meta() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['show_date_entry_meta'] ) && $independent_publisher_general_options['show_date_entry_meta'] )
+		return true;
+	else
+		return false;
+}
+
+/**
  * Returns true if Show Widgets on Single Pages option is enabled
  */
 function independent_publisher_show_widgets_on_single_pages() {

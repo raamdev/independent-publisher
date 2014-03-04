@@ -85,6 +85,19 @@ class IndependentPublisher_Customize {
 			'type'     => 'checkbox',
 		) );
 
+		// Show Date in Entry Meta
+		$wp_customize->add_setting( 'independent_publisher_general_options[show_date_entry_meta]', array(
+				'default'    => false,
+				'type'       => 'option',
+				'capability' => 'edit_theme_options',
+			) );
+		$wp_customize->add_control( 'show_date_entry_meta', array(
+				'settings' => 'independent_publisher_general_options[show_date_entry_meta]',
+				'label'    => __( 'Show Post Date in Entry Meta', 'independent_publisher' ),
+				'section'  => 'independent_publisher_general_options',
+				'type'     => 'checkbox',
+			) );
+
 		// Show Widgets on Single pages
 		$wp_customize->add_setting( 'independent_publisher_general_options[show_widgets_on_single]', array(
 			'default'    => false,
