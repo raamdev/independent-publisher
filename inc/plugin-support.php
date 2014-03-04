@@ -16,16 +16,6 @@ if ( function_exists( 'subscribe_reloaded_show' ) ) {
 	}
 }
 
-/*
- * Adds support for showing WP Comment Subscriptions plugin options after comment form fields
- */
-if ( function_exists( 'wp_comment_subscriptions_show' ) ) {
-	if ( get_option( 'wp_comment_subscriptions_show_subscription_box', 'yes' ) !== 'yes' ) {
-		add_action( 'comment_form_logged_in_after', 'wp_comment_subscriptions_show' );
-		add_action( 'comment_form_after_fields', 'wp_comment_subscriptions_show' );
-	}
-}
-
 if ( ! function_exists( 'independent_publisher_jetpack_sharing_css' ) ) :
 	/**
 	 * Improves the style of JetPack Sharing Buttons when used with this theme
