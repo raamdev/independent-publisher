@@ -89,7 +89,7 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 						<time pubdate datetime="<?php comment_time( 'c' ); ?>">
 							<?php
 							/* translators: 1: date */
-							printf( __( '%1$s', 'independent_publisher' ), get_comment_date() ); ?>
+							printf( '%1$s', get_comment_date() ); ?>
 						</time>
 					</a>
 					<?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), ' ' );
@@ -205,7 +205,7 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 		else : // not Multi-Author Mode
 			if ( $categories_list && independent_publisher_categorized_blog() ) :
 				echo '<span class="cat-links">';
-				printf( __( '%1$s %2$s', 'independent_publisher' ),
+				printf( '%1$s %2$s',
 						independent_publisher_entry_meta_category_prefix(),
 						$categories_list
 				);

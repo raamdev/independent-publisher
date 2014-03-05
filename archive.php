@@ -19,11 +19,11 @@ get_header(); ?>
 					<h1 class="page-title">
 						<?php
 						if ( is_category() ) {
-							printf( __( '%s', 'independent_publisher' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+							printf( '%s', '<span>' . single_cat_title( '', false ) . '</span>' );
 
 						}
 						elseif ( is_tag() ) {
-							printf( __( '%s', 'independent_publisher' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+							printf( '%s', '<span>' . single_tag_title( '', false ) . '</span>' );
 
 						}
 						elseif ( is_author() ) {
@@ -31,7 +31,7 @@ get_header(); ?>
 							 * what author we're dealing with (if that is the case).
 							 */
 							the_post();
-							printf( __( '%s', 'independent_publisher' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+							printf( '%s', '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
 
 							/* Since we called the_post() above, we need to
 							 * rewind the loop back to the beginning that way
@@ -41,15 +41,15 @@ get_header(); ?>
 
 						}
 						elseif ( is_day() ) {
-							printf( __( '%s', 'independent_publisher' ), '<span>' . get_the_date() . '</span>' );
+							printf( '%s', '<span>' . get_the_date() . '</span>' );
 
 						}
 						elseif ( is_month() ) {
-							printf( __( '%s', 'independent_publisher' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+							printf( '%s', '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 						}
 						elseif ( is_year() ) {
-							printf( __( '%s', 'independent_publisher' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+							printf( '%s', '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 						}
 						else {
