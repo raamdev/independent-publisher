@@ -11,6 +11,7 @@ Independent Publisher WordPress Theme
 * [Frequently Asked Questions](https://github.com/raamdev/independent-publisher#frequently-asked-questions)
     * [Why is my Header Image not showing on Single posts?](https://github.com/raamdev/independent-publisher#why-is-my-header-image-not-showing-on-single-posts)
     * [How do I get the small logo to show up in the top-left corner?](https://github.com/raamdev/independent-publisher#how-do-i-get-the-small-logo-to-show-up-in-the-top-left-corner)
+    * [Why is my Author Bio and picture at the top of my home page (or below a blog post) and not on the side?](https://github.com/raamdev/independent-publisher#why-is-my-author-bio-and-picture-at-the-top-of-my-home-page-or-below-a-blog-post-and-not-on-the-side)
     * [How do I add Social Media Buttons below the Logo?](https://github.com/raamdev/independent-publisher#how-do-i-add-social-media-buttons-below-the-logo)
     * [How do I make the JetPack Sharing Buttons look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-jetpack-sharing-buttons-look-better)
     * [How do I make the Subscribe to Comments Reloaded Advanced Options look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-subscribe-to-comments-reloaded-advanced-options-look-better)
