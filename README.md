@@ -113,6 +113,10 @@ If there is only one author on your site, you probably want to set the Header Im
 
 First you need to enable **Multi-Author Mode** in *Dashboard → Appearance → Customizer → General Options* . With Multi-Author Mode enabled, the theme Header Image (*Dashboard → Appearance → Header Image*) will be placed in the top-left corner on all Single pages.
 
+### Why is my Author Bio and picture at the top of my home page (or below a blog post) and not on the side?
+
+Independent Publisher is a *responsive* theme, which fits the size of your browser depending on the size of your screen.  If you are on a computer, making your browser window wider will automatically move the Author Bio and picture to the side instead of at the top on your homepage or at the bottom of a blog post.
+
 ### How do I add Social Media Buttons below the Logo?
 
 ![screen shot 2014-02-03 at 12 54 31 pm](https://f.cloud.github.com/assets/5318719/2192243/00f7d5ec-9863-11e3-833f-3f28cd3d8cf4.png)
