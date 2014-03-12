@@ -37,8 +37,9 @@ if ( ! function_exists( 'independent_publisher_jetpack_sharing_label_css' ) ) :
 		$sharedaddy_options = get_option( 'sharing-options' );
 		if ( isset( $sharedaddy_options['global']['sharing_label'] ) ) {
 			$sharedaddy_disable_resources = get_option( 'sharedaddy_disable_resources' );
-			if ( trim( $sharedaddy_options['global']['sharing_label'] ) === '' && $sharedaddy_options['global']['sharing_label'] !== FALSE && ( ! isset( $sharedaddy_disable_resources ) || $sharedaddy_disable_resources !== "1" ) )
+			if ( trim( $sharedaddy_options['global']['sharing_label'] ) === '' && $sharedaddy_options['global']['sharing_label'] !== false && ( ! isset( $sharedaddy_disable_resources ) || $sharedaddy_disable_resources !== "1" ) ) {
 				wp_enqueue_style( 'independent-publisher-jetpack-sharing-label', get_template_directory_uri() . '/css/jetpack-sharing-label.css', array(), '1.0' );
+			}
 		}
 	}
 endif;

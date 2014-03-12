@@ -9,7 +9,7 @@
 		<?php /* Show entry title meta only when Show Full Content First Post enabled AND this is the very first standard post AND we're on the home page AND this is not a sticky post */ ?>
 		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() && ! is_sticky() ) ) : ?>
 			<h2 class="entry-title-meta">
-				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> <?php echo independent_publisher_entry_meta_category_prefix() ?> <?php echo independent_publisher_post_categories( '', TRUE ); ?>
+				<span class="entry-title-meta-author"><?php independent_publisher_posted_author() ?></span> <?php echo independent_publisher_entry_meta_category_prefix() ?> <?php echo independent_publisher_post_categories( '', true ); ?>
 				<span class="entry-title-meta-post-date">
 					<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
 					<?php independent_publisher_posted_on_date() ?>
@@ -31,9 +31,9 @@
 									this is not the very first standard post when Show Full Content First Post enabled */
 		?>
 		<?php if ( ( ! get_post_format() || 'chat' === get_post_format() ) &&
-					( ! ( independent_publisher_is_very_first_standard_post() && is_sticky() ) )  &&
-						( independent_publisher_use_post_excerpts() || independent_publisher_generate_one_sentence_excerpts() ) &&
-							( ! ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() && is_home() ) )
+				   ( ! ( independent_publisher_is_very_first_standard_post() && is_sticky() ) ) &&
+				   ( independent_publisher_use_post_excerpts() || independent_publisher_generate_one_sentence_excerpts() ) &&
+				   ( ! ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() && is_home() ) )
 		) :
 			?>
 
@@ -48,7 +48,12 @@
 			<?php endif; ?>
 
 			<?php the_content( independent_publisher_continue_reading_text() ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
+			<?php wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ),
+					'after'  => '</div>'
+				)
+			); ?>
 
 		<?php endif; ?>
 	</div>

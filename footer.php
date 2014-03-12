@@ -12,10 +12,10 @@
 </div><!-- #main .site-main -->
 
 <footer id="colophon" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
-  <div class="site-info">
-    <?php do_action( 'independent_publisher_credits' ); ?>
-  </div>
-  <!-- .site-info -->
+	<div class="site-info">
+		<?php do_action( 'independent_publisher_credits' ); ?>
+	</div>
+	<!-- .site-info -->
 </footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
 

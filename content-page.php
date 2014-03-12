@@ -18,8 +18,21 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links-next-prev">', 'after' => '</div>', 'nextpagelink' => '<button class="next-page-nav">' . __( 'Next page &rarr;', 'independent_publisher' ) . '</button>', 'previouspagelink' => '<button class="previous-page-nav">' . __( '&larr; Previous page', 'independent_publisher' ) . '</button>', 'next_or_number' => 'next' ) ); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages(
+			array(
+				'before'           => '<div class="page-links-next-prev">',
+				'after'            => '</div>',
+				'nextpagelink'     => '<button class="next-page-nav">' . __( 'Next page &rarr;', 'independent_publisher' ) . '</button>',
+				'previouspagelink' => '<button class="previous-page-nav">' . __( '&larr; Previous page', 'independent_publisher' ) . '</button>',
+				'next_or_number'   => 'next'
+			)
+		); ?>
+		<?php wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ),
+				'after'  => '</div>'
+			)
+		); ?>
 	</div>
 	<!-- .entry-content -->
 
@@ -28,7 +41,9 @@
 
 		<?php if ( comments_open() ) : ?>
 			<div id="share-comment-button">
-				<button><i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?></button>
+				<button>
+					<i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?>
+				</button>
 			</div>
 		<?php endif; ?>
 

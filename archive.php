@@ -21,12 +21,10 @@ get_header(); ?>
 						if ( is_category() ) {
 							printf( '%s', '<span>' . single_cat_title( '', false ) . '</span>' );
 
-						}
-						elseif ( is_tag() ) {
+						} elseif ( is_tag() ) {
 							printf( '%s', '<span>' . single_tag_title( '', false ) . '</span>' );
 
-						}
-						elseif ( is_author() ) {
+						} elseif ( is_author() ) {
 							/* Queue the first post, that way we know
 							 * what author we're dealing with (if that is the case).
 							 */
@@ -39,20 +37,16 @@ get_header(); ?>
 							 */
 							rewind_posts();
 
-						}
-						elseif ( is_day() ) {
+						} elseif ( is_day() ) {
 							printf( '%s', '<span>' . get_the_date() . '</span>' );
 
-						}
-						elseif ( is_month() ) {
+						} elseif ( is_month() ) {
 							printf( '%s', '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
-						}
-						elseif ( is_year() ) {
+						} elseif ( is_year() ) {
 							printf( '%s', '<span>' . get_the_date( 'Y' ) . '</span>' );
 
-						}
-						else {
+						} else {
 							_e( 'Archives', 'independent_publisher' );
 
 						}
@@ -68,13 +62,11 @@ get_header(); ?>
 
 						if ( ! empty( $category_description ) ) { // show the description + the taxonomy stats
 							echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . $taxonomy_stats . '</div>' );
-						}
-						else { // there was description set, so let's just show some stats
+						} else { // there was description set, so let's just show some stats
 							echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $taxonomy_stats . '</div>' );
 						}
 
-					}
-					elseif ( is_tag() ) {
+					} elseif ( is_tag() ) {
 						// Show an optional tag description
 						$tag_description = tag_description();
 
@@ -83,12 +75,10 @@ get_header(); ?>
 
 						if ( ! empty( $tag_description ) ) { // show the description + the taxonomy stats
 							echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . $taxonomy_stats . '</div>' );
-						}
-						else { // there was description set, so let's just show some stats
+						} else { // there was description set, so let's just show some stats
 							echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $taxonomy_stats . '</div>' );
 						}
-					}
-					elseif ( is_day() || is_month() || is_year() ) {
+					} elseif ( is_day() || is_month() || is_year() ) {
 						echo independent_publisher_date_archive_description();
 					}
 					?>

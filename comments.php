@@ -16,8 +16,9 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() )
+if ( post_password_required() ) {
 	return;
+}
 ?>
 
 <?php if ( comments_open() ) : ?>
@@ -33,8 +34,10 @@ if ( post_password_required() )
 			<h2 class="comments-title">
 				<i class="comments-title-icon"></i>
 				<?php
-				printf( _n( '1 Comment', '%1$s Comments', get_comments_number(), 'independent_publisher' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+				printf(
+					_n( '1 Comment', '%1$s Comments', get_comments_number(), 'independent_publisher' ),
+					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>'
+				);
 				?>
 			</h2>
 		<?php endif; ?>
