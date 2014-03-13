@@ -15,11 +15,6 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 700;
 } /* pixels */
 
-/**
- * Include additional plugin support routines
- */
-require_once( 'inc/plugin-support.php' );
-
 if ( ! function_exists( 'independent_publisher_setup' ) ):
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -122,9 +117,24 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		);
 
 		/**
+		 * Include additional plugin support routines
+		 */
+		require_once( 'inc/plugin-support.php' );
+
+		/**
 		 * Load Jetpack compatibility file.
 		 */
 		require get_template_directory() . '/inc/jetpack.php';
+
+		/**
+		 * Load JetPack Sharing Buttons Style Enhancements
+		 */
+		independent_publisher_jetpack_sharing_css();
+
+		/**
+		 * Load JetPack Sharing Buttons blank Sharing Label Enhancement
+		 */
+		independent_publisher_jetpack_sharing_label_css();
 	}
 endif; // independent_publisher_setup
 add_action( 'after_setup_theme', 'independent_publisher_setup' );

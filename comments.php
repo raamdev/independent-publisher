@@ -104,4 +104,8 @@ if ( post_password_required() ) {
 		<?php } // end if ( count($wp_query->comments_by_type['pings']))?>
 	<?php endif; // end have_comments() ?>
 
+	<?php if ( comments_open() && have_comments() && get_comments_number() > 0 ) : ?>
+		<?php independent_publisher_replytocom(); // Handles Reply to Comment links properly when JavaScript is enabled ?>
+	<?php endif; ?>
+
 </div><!-- #comments .comments-area -->
