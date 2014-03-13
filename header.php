@@ -49,11 +49,8 @@
 		<?php if ( ! is_single() ) : ?>
 			<?php independent_publisher_site_info(); ?>
 			<nav role="navigation" class="site-navigation main-navigation">
-				<h1 class="assistive-text"><?php _e( 'Menu', 'independent_publisher' ); ?></h1>
+				<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'independent_publisher' ); ?>"><?php _e( 'Skip to content', 'independent_publisher' ); ?></a>
 
-				<div class="assistive-text skip-link">
-					<a href="#content" title="<?php esc_attr_e( 'Skip to content', 'independent_publisher' ); ?>"><?php _e( 'Skip to content', 'independent_publisher' ); ?></a>
-				</div>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
 			</nav><!-- .site-navigation .main-navigation -->
 		<?php endif; ?>

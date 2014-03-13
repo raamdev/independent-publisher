@@ -9,7 +9,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+		<main id="content" class="site-content" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -32,11 +32,11 @@ get_header(); ?>
 
 			<?php else : ?>
 
-				<?php get_template_part( 'no-results', 'search' ); ?>
+				<?php get_template_part( 'content', 'none' ); ?>
 
 			<?php endif; ?>
 
-		</div>
+		</main>
 		<!-- #content .site-content -->
 	</section><!-- #primary .content-area -->
 

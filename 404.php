@@ -9,9 +9,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+		<main id="content" class="site-content" role="main">
 
-			<article id="post-0" class="post error404 not-found">
+			<section class="error-404 not-found">
 				<header class="entry-header">
 					<h1 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'independent_publisher' ); ?></h1>
 				</header>
@@ -24,7 +24,8 @@ get_header(); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-					<div class="widget">
+					<?php if ( independent_publisher_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+						<div class="widget widget_categories">
 						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'independent_publisher' ); ?></h2>
 						<ul>
 							<?php wp_list_categories( array( 'orderby'    => 'count',
@@ -37,6 +38,7 @@ get_header(); ?>
 						</ul>
 					</div>
 					<!-- .widget -->
+					<?php endif; ?>
 
 					<?php
 					/* translators: %1$s: smilie */
@@ -48,11 +50,11 @@ get_header(); ?>
 
 				</div>
 				<!-- .entry-content -->
-			</article>
-			<!-- #post-0 .post .error404 .not-found -->
+			</section>
+			<!-- .error-404 -->
 
-		</div>
-		<!-- #content .site-content -->
+		</main>
+		<!-- #main -->
 	</div><!-- #primary .content-area -->
 
 <?php get_footer(); ?>

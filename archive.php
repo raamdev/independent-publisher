@@ -11,7 +11,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+		<main id="content" class="site-content" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -46,6 +46,24 @@ get_header(); ?>
 						} elseif ( is_year() ) {
 							printf( '%s', '<span>' . get_the_date( 'Y' ) . '</span>' );
 
+						} elseif ( is_tax( 'post_format', 'post-format-aside' ) ) {
+							_e( 'Asides', 'independent-publisher' );
+						} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
+							_e( 'Galleries', 'independent-publisher' );
+						} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
+							_e( 'Images', 'independent-publisher' );
+						} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
+							_e( 'Videos', 'independent-publisher' );
+						} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
+							_e( 'Quotes', 'independent-publisher' );
+						} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
+							_e( 'Links', 'independent-publisher' );
+						} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
+							_e( 'Statuses', 'independent-publisher' );
+						} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
+							_e( 'Audios', 'independent-publisher' );
+						} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
+							_e( 'Chats', 'independent-publisher' );
 						} else {
 							_e( 'Archives', 'independent_publisher' );
 
@@ -102,11 +120,11 @@ get_header(); ?>
 
 			<?php else : ?>
 
-				<?php get_template_part( 'no-results', 'archive' ); ?>
+				<?php get_template_part( 'content', 'none' ); ?>
 
 			<?php endif; ?>
 
-		</div>
+		</main>
 		<!-- #content .site-content -->
 	</section><!-- #primary .content-area -->
 
