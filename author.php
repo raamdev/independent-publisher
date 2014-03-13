@@ -37,9 +37,7 @@ get_header(); ?>
 				rewind_posts();
 				?>
 
-				<?php if ( get_the_author_meta( 'description' ) ) : ?>
-					<?php get_template_part( 'author-bio' ); ?>
-				<?php endif; ?>
+				<?php get_template_part( 'author-bio' ); ?>
 
 				<?php /* The loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>

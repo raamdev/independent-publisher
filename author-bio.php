@@ -13,7 +13,9 @@
 	<!-- .author-avatar -->
 	<div class="author-description">
 		<p class="author-bio">
-			<?php the_author_meta( 'description' ); ?>
+			<?php if ( get_the_author_meta( 'description' ) ) : ?>
+				<?php the_author_meta( 'description' ); ?>
+			<?php endif; ?>
 		</p>
 	</div>
 	<!-- .author-description -->
