@@ -202,6 +202,11 @@ class IndependentPublisher_Customize {
 			'label'   => __( 'Text Color', 'independent_publisher' )
 		);
 		$colors[] = array(
+			'slug'    => 'comment_form_background_color',
+			'default' => '#F1F1F1',
+			'label'   => __( 'Comment Form Background Color', 'independent_publisher' )
+		);
+		$colors[] = array(
 			'slug'    => 'link_color',
 			'default' => '#57ad68',
 			'label'   => __( 'Link Color', 'independent_publisher' )
@@ -246,15 +251,16 @@ class IndependentPublisher_Customize {
 		}
 
 		// Let's make some stuff use live preview JS
-		$wp_customize->get_setting( 'blogname' )->transport                  = 'postMessage';
-		$wp_customize->get_setting( 'blogdescription' )->transport           = 'postMessage';
-		$wp_customize->get_setting( 'header_textcolor' )->transport          = 'postMessage';
-		$wp_customize->get_setting( 'background_color' )->transport          = 'postMessage';
-		$wp_customize->get_setting( 'text_color' )->transport                = 'postMessage';
-		$wp_customize->get_setting( 'header_text_color' )->transport         = 'postMessage';
-		$wp_customize->get_setting( 'link_color' )->transport                = 'postMessage';
-		$wp_customize->get_setting( 'primary_meta_text_color' )->transport   = 'postMessage';
-		$wp_customize->get_setting( 'secondary_meta_text_color' )->transport = 'postMessage';
+		$wp_customize->get_setting( 'blogname' )->transport                      = 'postMessage';
+		$wp_customize->get_setting( 'blogdescription' )->transport               = 'postMessage';
+		$wp_customize->get_setting( 'header_textcolor' )->transport              = 'postMessage';
+		$wp_customize->get_setting( 'background_color' )->transport              = 'postMessage';
+		$wp_customize->get_setting( 'text_color' )->transport                    = 'postMessage';
+		$wp_customize->get_setting( 'header_text_color' )->transport             = 'postMessage';
+		$wp_customize->get_setting( 'comment_form_background_color' )->transport = 'postMessage';
+		$wp_customize->get_setting( 'link_color' )->transport                    = 'postMessage';
+		$wp_customize->get_setting( 'primary_meta_text_color' )->transport       = 'postMessage';
+		$wp_customize->get_setting( 'secondary_meta_text_color' )->transport     = 'postMessage';
 	}
 
 	/**
@@ -275,6 +281,10 @@ class IndependentPublisher_Customize {
 			/* Background Color */
 
 			<?php self::generate_css('.site', 'background-color', 'background_color', '#'); ?>
+
+			/* Comment Form Background Color */
+
+			<?php self::generate_css('#commentform-top,#commentform-bottom,.comment-respond', 'background-color', 'comment_form_background_color'); ?>
 
 			/* Text Color */
 

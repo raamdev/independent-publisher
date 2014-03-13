@@ -1226,6 +1226,24 @@ ul.taglist {
 	font-size: 80%;
 }
 
+#commentform-top,
+#commentform-bottom {
+	background: #F1F1F1;
+	border-radius: 10px;
+	padding-left: 30px;
+	padding-top: 5px;
+	padding-right: 30px;
+	padding-bottom: 5px;
+}
+
+.commentlist .comment-respond {
+	background: #F1F1F1;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	margin-bottom: 20px;
+}
+
 #commentform input[type="submit"] {
 	width: 98%;
 }
@@ -1241,6 +1259,7 @@ ul.taglist {
 	letter-spacing: 0px;
 	float: right;
 	margin-right: 10px;
+	margin-top: -20px;
 }
 
 #commentform textarea {

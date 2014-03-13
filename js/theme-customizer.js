@@ -40,6 +40,15 @@
 		});
 	});
 
+	// Update comment form background color in real time
+	wp.customize('comment_form_background_color', function (value) {
+		value.bind(function (newval) {
+			$('#commentform-top').css('background-color', newval);
+			$('#commentform-bottom').css('background-color', newval);
+			$('.comment-respond').css('background-color', newval);
+		});
+	});
+
 	// Update text color in real time
 	wp.customize('text_color', function (value) {
 		value.bind(function (newval) {

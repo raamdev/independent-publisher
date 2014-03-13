@@ -15,11 +15,15 @@ jQuery(document).ready(function () {
 		jQuery('#respond').hide();
 		jQuery('#share-comment-button').show();
 		jQuery('#share-comment-button-bottom').show();
+		jQuery('#commentform-top').hide();
+		jQuery('#commentform-bottom').hide();
 	}
 
 	/* Share Comment Button (Top) */
 
 	jQuery('#share-comment-button').live('click', function (event) {
+		jQuery('#commentform-top').show();
+		jQuery('#commentform-bottom').hide();
 		jQuery('#cancel-comment-reply-link').click();
 		jQuery('#commentform-top').append(jQuery('#respond'));
 		jQuery('#respond').show();
@@ -33,6 +37,8 @@ jQuery(document).ready(function () {
 	/* Share Comment Button (Bottom)*/
 
 	jQuery('#share-comment-button-bottom').live('click', function (event) {
+		jQuery('#commentform-bottom').show();
+		jQuery('#commentform-top').hide();
 		jQuery('#cancel-comment-reply-link').click();
 		jQuery('#commentform-bottom').append(jQuery('#respond'));
 		jQuery('#share-comment-button-bottom').toggle('hide');
