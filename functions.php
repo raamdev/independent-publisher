@@ -125,16 +125,6 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		 * Load Jetpack compatibility file.
 		 */
 		require get_template_directory() . '/inc/jetpack.php';
-
-		/**
-		 * Load JetPack Sharing Buttons Style Enhancements
-		 */
-		independent_publisher_jetpack_sharing_css();
-
-		/**
-		 * Load JetPack Sharing Buttons blank Sharing Label Enhancement
-		 */
-		independent_publisher_jetpack_sharing_label_css();
 	}
 endif; // independent_publisher_setup
 add_action( 'after_setup_theme', 'independent_publisher_setup' );
@@ -188,7 +178,14 @@ function independent_publisher_scripts() {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 
+	/**
+	 * Load JetPack Sharing Buttons Style Enhancements
+	 */
 	independent_publisher_jetpack_sharing_css();
+
+	/**
+	 * Load JetPack Sharing Buttons blank Sharing Label Enhancement
+	 */
 	independent_publisher_jetpack_sharing_label_css();
 }
 
