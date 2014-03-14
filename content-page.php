@@ -36,7 +36,7 @@
 	<footer class="entry-meta">
 		<?php do_action( 'independent_publisher_entry_meta_top' ); ?>
 
-		<?php if ( comments_open() ) : ?>
+		<?php if ( comments_open() && ! independent_publisher_hide_comments() ) : ?>
 			<div id="share-comment-button">
 				<button>
 					<i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?>

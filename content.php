@@ -87,7 +87,7 @@
 		<?php endif; ?>
 
 		<?php /* Show comments link only when post is not password-protected AND comments are enabled on this post */ ?>
-		<?php if ( ! post_password_required() && comments_open() ) : ?>
+		<?php if ( ! post_password_required() && comments_open() && ! independent_publisher_hide_comments() ) : ?>
 			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent_publisher' ), __( '1 Comment', 'independent_publisher' ), __( '% Comments', 'independent_publisher' ) ); ?></span>
 		<?php endif; ?>
 

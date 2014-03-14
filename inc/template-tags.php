@@ -181,7 +181,7 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'independent_publisher' ) );
 
-		if ( ( ! post_password_required() && comments_open() ) || ( ! post_password_required() && independent_publisher_show_post_word_count() && ! get_post_format() ) || independent_publisher_show_date_entry_meta() ) {
+		if ( ( ! post_password_required() && comments_open() && ! independent_publisher_hide_comments() ) || ( ! post_password_required() && independent_publisher_show_post_word_count() && ! get_post_format() ) || independent_publisher_show_date_entry_meta() ) {
 			$separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' );
 		} else {
 			$separator = '';
@@ -467,7 +467,7 @@ if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 	 * @return string
 	 */
 	function independent_publisher_get_post_word_count() {
-		if ( ! post_password_required() && comments_open() ) {
+		if ( ! post_password_required() && comments_open() && ! independent_publisher_hide_comments() ) {
 			$separator = ' <span class="sep"> ' . apply_filters( 'independent_publisher_entry_meta_separator', '|' ) . ' </span>';
 		} else {
 			$separator = '';
@@ -483,7 +483,7 @@ if ( ! function_exists( 'independent_publisher_get_post_date' ) ) :
 	 * @return string
 	 */
 	function independent_publisher_get_post_date() {
-		if ( comments_open() || ( independent_publisher_show_post_word_count() && ! get_post_format() ) ) {
+		if ( ( comments_open() && ! independent_publisher_hide_comments() ) || ( independent_publisher_show_post_word_count() && ! get_post_format() ) ) {
 			$separator = ' <span class="sep"> ' . apply_filters( 'independent_publisher_entry_meta_separator', '|' ) . ' </span>';
 		} else {
 			$separator = '';
@@ -632,5 +632,17 @@ if ( ! function_exists( 'independent_publisher_min_comments_comment_title' ) ):
 	 */
 	function independent_publisher_min_comments_comment_title() {
 		return 10;
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_hide_comments' ) ):
+	/**
+	 * Determines if the comments and comment form should be hidden altogether.
+	 * This differs from disabling the comments by also hiding the
+	 * "Comments are closed." message and allows for easily overriding this
+	 * function in a Child Theme.
+	 */
+	function independent_publisher_hide_comments() {
+		return false;
 	}
 endif;
