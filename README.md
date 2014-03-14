@@ -256,6 +256,7 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_date_archive_description()` - Returns the Date Archive description
 - `independent_publisher_min_comments_bottom_comment_button()` - Returns the minimum number of comments that must exist for the bottom 'Write a Comment' button to appear
 - `independent_publisher_min_comments_comment_title()` - Returns the minimum number of comments that must exist for the comments title to appear
+- `independent_publisher_hide_comments()` - Determines if the comments and comment form should be hidden altogether. This differs from disabling the comments by also hiding the "Comments are closed." message and allows for easily overriding this function in a Child Theme.
 
 ### Functions in `functions.php`:
 
