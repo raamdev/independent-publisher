@@ -8,7 +8,7 @@
  * @since   Independent Publisher 1.0
  */
 ?><!DOCTYPE html>
-<html <?php html_tag_schema(); ?> <?php language_attributes(); ?>>
+<html <?php independent_publisher_html_tag_schema(); ?> <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />

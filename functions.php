@@ -930,7 +930,7 @@ add_filter( 'the_excerpt', 'independent_publisher_maybe_linkify_the_excerpt' );
 /**
  * Returns the proper schema type
  */
-function html_tag_schema() {
+function independent_publisher_html_tag_schema() {
 	$schema = 'http://schema.org/';
 
 	// Is single post
