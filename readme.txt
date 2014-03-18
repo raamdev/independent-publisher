@@ -4,4 +4,4 @@ Version history:
 
 1.0
 
-* Initial Release
+* Initial Release, after six months of life in beta.
