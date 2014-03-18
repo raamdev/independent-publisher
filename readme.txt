@@ -4,6 +4,7 @@ Version history:
 
 1.0.1
 
+* Update default language files
 * Remove erroneous __MACOSX direcories
 
 1.0

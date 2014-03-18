@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-03-04 19:33-0500\n"
-"PO-Revision-Date: 2014-03-04 19:34-0500\n"
+"POT-Creation-Date: 2014-03-18 09:32-0500\n"
+"PO-Revision-Date: 2014-03-18 09:32-0500\n"
 "Last-Translator: Raam Dev <raam@raamdev.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -26,168 +26,222 @@ msgid ""
 "below or a search?"
 msgstr ""
 
-#: ../404.php:28 ../page_archive-template.php:32
+#: ../404.php:29 ../page_archive-template.php:32
 msgid "Most Used Categories"
 msgstr ""
 
-#: ../404.php:37
+#: ../404.php:45
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
+#: ../archive.php:50
+msgid "Asides"
+msgstr ""
+
+#: ../archive.php:52
+msgid "Galleries"
+msgstr ""
+
+#: ../archive.php:54
+msgid "Images"
+msgstr ""
+
 #: ../archive.php:56
+msgid "Videos"
+msgstr ""
+
+#: ../archive.php:58
+msgid "Quotes"
+msgstr ""
+
+#: ../archive.php:60
+msgid "Links"
+msgstr ""
+
+#: ../archive.php:62
+msgid "Statuses"
+msgstr ""
+
+#: ../archive.php:64
+msgid "Audios"
+msgstr ""
+
+#: ../archive.php:66
+msgid "Chats"
+msgstr ""
+
+#: ../archive.php:68 ../sidebar.php:21
 msgid "Archives"
 msgstr ""
 
-#: ../comments.php:44 ../comments.php:65
+#: ../comments.php:49 ../comments.php:70
 msgid "Comment navigation"
 msgstr ""
 
-#: ../comments.php:46 ../comments.php:67
+#: ../comments.php:51 ../comments.php:72
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: ../comments.php:47 ../comments.php:68
+#: ../comments.php:52 ../comments.php:73
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: ../comments.php:78
+#: ../comments.php:83
 msgid "Comments are closed."
 msgstr ""
 
-#: ../comments.php:96
+#: ../comments.php:102
 msgid "Readers who shared this"
 msgstr ""
 
-#: ../comments.php:98
+#: ../comments.php:104
 msgid "Thank you!"
 msgstr ""
 
-#: ../content-page.php:21 ../content-single.php:35
-#: ../page_one-column-template.php:35
+#: ../content-none.php:13 ../no-results.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:20 ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../content-none.php:24 ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../content-none.php:30 ../no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../content-page.php:22 ../content-single.php:36
+#: ../page_one-column-template.php:39
 msgid "Next page &rarr;"
 msgstr ""
 
-#: ../content-page.php:21 ../content-single.php:35
-#: ../page_one-column-template.php:35
+#: ../content-page.php:23 ../content-single.php:37
+#: ../page_one-column-template.php:40
 msgid "&larr; Previous page"
 msgstr ""
 
-#: ../content-page.php:22 ../content-single.php:36 ../content.php:51
-#: ../page_one-column-template.php:36
+#: ../content-page.php:29 ../content-single.php:43 ../content.php:53
+#: ../page_one-column-template.php:46
 msgid "Pages:"
 msgstr ""
 
-#: ../content-page.php:35 ../content-single.php:51 ../content.php:90
-#: ../image.php:107 ../page_archive-template.php:66
-#: ../page_one-column-template.php:40
+#: ../content-page.php:47 ../content-single.php:63 ../content.php:95
+#: ../image.php:127 ../page_archive-template.php:72
+#: ../page_one-column-template.php:53
 msgid "Edit"
 msgstr ""
 
-#: ../content.php:21 ../functions.php:835 ../functions.php:849
+#: ../content.php:21 ../functions.php:906 ../functions.php:921
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: ../content.php:86 ../functions.php:340
+#: ../content.php:91 ../functions.php:388
 msgid "Comment"
 msgstr ""
 
-#: ../content.php:86
+#: ../content.php:91
 msgid "1 Comment"
 msgstr ""
 
-#: ../content.php:86
+#: ../content.php:91
 msgid "% Comments"
 msgstr ""
 
-#: ../functions.php:84
+#: ../functions.php:98
 msgid "Primary Menu"
 msgstr ""
 
-#: ../functions.php:85
+#: ../functions.php:99
 msgid "Social"
 msgstr ""
 
-#: ../functions.php:111
+#: ../functions.php:140
 msgid "Sidebar"
 msgstr ""
 
-#: ../functions.php:120
+#: ../functions.php:151
 msgid "Archive Page"
 msgstr ""
 
-#: ../functions.php:185
+#: ../functions.php:241
 #, php-format
 msgid "An %1$s empowered by %2$s."
 msgstr ""
 
-#: ../functions.php:227
+#: ../functions.php:282
 msgid "Anonymous"
 msgstr ""
 
-#: ../functions.php:276
+#: ../functions.php:329
 #, php-format
 msgid "Leave a Reply for %s"
 msgstr ""
 
-#: ../functions.php:277
+#: ../functions.php:330
 msgid "Cancel Reply"
 msgstr ""
 
-#: ../functions.php:278
+#: ../functions.php:331
 msgid "Submit Comment"
 msgstr ""
 
-#: ../functions.php:282
+#: ../functions.php:334
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: ../functions.php:288
+#: ../functions.php:339
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
 
-#: ../functions.php:300
+#: ../functions.php:349
 msgid "Name"
 msgstr ""
 
-#: ../functions.php:306
+#: ../functions.php:354
 msgid "Email"
 msgstr ""
 
-#: ../functions.php:312
+#: ../functions.php:359
 msgid "Website"
 msgstr ""
 
-#: ../functions.php:481
+#: ../functions.php:538
 msgid "Write a Comment"
 msgstr ""
 
-#: ../functions.php:634
+#: ../functions.php:701
 msgid "Use as post cover (full-width)"
 msgstr ""
 
-#: ../functions.php:813
+#: ../functions.php:882
 msgid "in"
 msgstr ""
 
-#: ../functions.php:821
+#: ../functions.php:891
 msgid "by"
 msgstr ""
 
 #: ../header.php:52
-msgid "Menu"
-msgstr ""
-
-#: ../header.php:55
 msgid "Skip to content"
 msgstr ""
 
-#: ../image.php:22
+#: ../image.php:23
 #, php-format
 msgid ""
 "\"%1$s\" - <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; "
@@ -195,57 +249,35 @@ msgid ""
 "%7$s</a>"
 msgstr ""
 
-#: ../image.php:88
+#: ../image.php:106
 msgid "&larr; Previous image"
 msgstr ""
 
-#: ../image.php:89
+#: ../image.php:107
 msgid "Next image &rarr;"
 msgstr ""
 
-#: ../no-results.php:14
-msgid "Nothing Found"
-msgstr ""
-
-#: ../no-results.php:21
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: ../no-results.php:25
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-
-#: ../no-results.php:31
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-
-#: ../page_archive-template.php:39
+#: ../page_archive-template.php:45
 msgid "Yearly Archives"
 msgstr ""
 
-#: ../page_archive-template.php:41
+#: ../page_archive-template.php:47
 msgid "Select Year"
 msgstr ""
 
-#: ../page_archive-template.php:47
+#: ../page_archive-template.php:53
 msgid "Monthly Archives"
 msgstr ""
 
-#: ../page_archive-template.php:49
+#: ../page_archive-template.php:55
 msgid "Select Month"
 msgstr ""
 
-#: ../page_archive-template.php:55 ../searchform.php:10
+#: ../page_archive-template.php:61 ../searchform.php:10
 msgid "Search"
 msgstr ""
 
-#: ../page_archive-template.php:59
+#: ../page_archive-template.php:65
 msgid "Explore by Tag"
 msgstr ""
 
@@ -254,133 +286,141 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: ../single.php:27
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr ""
+
+#: ../single.php:28
 msgid "Related Content by Tag"
 msgstr ""
 
-#: ../inc/customizer.php:18
+#: ../inc/customizer.php:19
 msgid "Layout Options"
 msgstr ""
 
-#: ../inc/customizer.php:23
+#: ../inc/customizer.php:26
 msgid "Excerpt Options"
 msgstr ""
 
-#: ../inc/customizer.php:28
+#: ../inc/customizer.php:33
 msgid "General Options"
 msgstr ""
 
-#: ../inc/customizer.php:39
+#: ../inc/customizer.php:48
 msgid "Post Excerpts"
 msgstr ""
 
-#: ../inc/customizer.php:57
+#: ../inc/customizer.php:70
 msgid "Generate One-Sentence Excerpts"
 msgstr ""
 
-#: ../inc/customizer.php:70
+#: ../inc/customizer.php:87
 msgid "Always Show Full Content for First Post"
 msgstr ""
 
-#: ../inc/customizer.php:83
+#: ../inc/customizer.php:104
 msgid "Show Post Word Count in Entry Meta"
 msgstr ""
 
-#: ../inc/customizer.php:96
+#: ../inc/customizer.php:121
 msgid "Show Post Date in Entry Meta"
 msgstr ""
 
-#: ../inc/customizer.php:109
+#: ../inc/customizer.php:138
 msgid "Show Widgets on Single Pages"
 msgstr ""
 
-#: ../inc/customizer.php:122
+#: ../inc/customizer.php:155
 msgid "Single-Column Layout"
 msgstr ""
 
-#: ../inc/customizer.php:135
+#: ../inc/customizer.php:172
 msgid "Enable Multi-Author Mode"
 msgstr ""
 
-#: ../inc/customizer.php:148
+#: ../inc/customizer.php:189
 msgid "Comments Call to Action"
 msgstr ""
 
-#: ../inc/customizer.php:160
+#: ../inc/customizer.php:202
 msgid "Text Color"
 msgstr ""
 
-#: ../inc/customizer.php:165
+#: ../inc/customizer.php:207
+msgid "Comment Form Background Color"
+msgstr ""
+
+#: ../inc/customizer.php:212
 msgid "Link Color"
 msgstr ""
 
-#: ../inc/customizer.php:170
+#: ../inc/customizer.php:217
 msgid "Title and Header Text Color"
 msgstr ""
 
-#: ../inc/customizer.php:175
+#: ../inc/customizer.php:222
 msgid "Primary Meta Text Color"
 msgstr ""
 
-#: ../inc/customizer.php:180
+#: ../inc/customizer.php:227
 msgid "Secondary Meta Text Color"
 msgstr ""
 
-#: ../inc/template-tags.php:39
+#: ../inc/template-tags.php:41
 msgid "Post navigation"
 msgstr ""
 
-#: ../inc/template-tags.php:49
+#: ../inc/template-tags.php:51
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: ../inc/template-tags.php:53
+#: ../inc/template-tags.php:55
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../inc/template-tags.php:83
+#: ../inc/template-tags.php:85
 msgid " - Your comment is awaiting moderation."
 msgstr ""
 
-#: ../inc/template-tags.php:95 ../inc/template-tags.php:134
+#: ../inc/template-tags.php:97 ../inc/template-tags.php:140
 msgid "(Edit)"
 msgstr ""
 
-#: ../inc/template-tags.php:158 ../inc/template-tags.php:189
-#: ../inc/template-tags.php:200
+#: ../inc/template-tags.php:165 ../inc/template-tags.php:196
+#: ../inc/template-tags.php:208
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: ../inc/template-tags.php:175
+#: ../inc/template-tags.php:182
 msgid ", "
 msgstr ""
 
-#: ../inc/template-tags.php:244
+#: ../inc/template-tags.php:254
 msgid "Continue Reading &rarr;"
 msgstr ""
 
-#: ../inc/template-tags.php:260
+#: ../inc/template-tags.php:271
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../inc/template-tags.php:329
+#: ../inc/template-tags.php:341
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: ../inc/template-tags.php:349
+#: ../inc/template-tags.php:361
 #, php-format
 msgid "View all posts in %s"
 msgstr ""
 
-#: ../inc/template-tags.php:463
+#: ../inc/template-tags.php:476
 #, php-format
 msgid "%1$s Words"
 msgstr ""
 
-#: ../inc/template-tags.php:516 ../inc/template-tags.php:541
-#: ../inc/template-tags.php:570
+#: ../inc/template-tags.php:529 ../inc/template-tags.php:554
+#: ../inc/template-tags.php:583
 #, php-format
 msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
 msgstr ""
