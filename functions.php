@@ -202,6 +202,21 @@ endif;
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_stylesheet' );
 
+if ( ! function_exists( 'independent_publisher_wp_fullscreen_title_editor_style' ) ) :
+	/**
+	 * Enqueues the stylesheet for styling the full-screen visual editor post title
+	 * so that it closely matches the front-end theme design. Hat tip to Helen:
+	 * https://core.trac.wordpress.org/ticket/25783#comment:3
+	 */
+	function independent_publisher_wp_fullscreen_title_editor_style() {
+		if ( 'post' === get_current_screen()->base ) {
+			wp_enqueue_style( 'independent-publisher-wp-fullscreen-title', get_template_directory_uri() . '/css/wp-fullscreen-title.css', array(), '1.0' );
+		}
+	}
+endif;
+
+add_action('admin_enqueue_scripts', 'independent_publisher_wp_fullscreen_title_editor_style');
+
 /**
  * Echoes the theme's footer credits
  *

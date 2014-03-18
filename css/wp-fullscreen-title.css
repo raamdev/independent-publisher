@@ -1,0 +1,12 @@
+/**
+ * CSS to make the full-screen visual post editor post tyle closely match the theme.
+ */
+#wp-fullscreen-title {
+	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+	color: #333332;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -1px;
+	font-size: 4em !important;
+	margin-bottom: 0 !important
+}
