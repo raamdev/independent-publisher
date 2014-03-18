@@ -204,7 +204,7 @@ add_action( 'wp_enqueue_scripts', 'independent_publisher_stylesheet' );
 
 if ( ! function_exists( 'independent_publisher_wp_fullscreen_title_editor_style' ) ) :
 	/**
-	 * Enqueues the stylesheet for styling the full-screen visual editor post title
+	 * Enqueue the stylesheet for styling the full-screen visual editor post title
 	 * so that it closely matches the front-end theme design. Hat tip to Helen:
 	 * https://core.trac.wordpress.org/ticket/25783#comment:3
 	 */

@@ -260,6 +260,9 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 
 ### Functions in `functions.php`:
 
+- `independent_publisher_setup()` - Sets up theme defaults and registers support for various WordPress features.
+- `independent_publisher_stylesheet()` - Enqueue the main stylesheet.
+- `independent_publisher_wp_fullscreen_title_editor_style()` - Enqueue the stylesheet for styling the full-screen visual editor post title so that it closely matches the front-end theme design. To disable, simply override this function in a Child Theme and return nothing.
 - `independent_publisher_author_comment_reply_link()` - Change the comment reply link to use 'Reply to [Author First Name]'
 - `independent_publisher_comment_form_args()` - Arguments for `comment_form()`
 - `independent_publisher_remove_textarea()` - Move the comment form textarea above the comment fields
