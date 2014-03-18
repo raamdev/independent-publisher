@@ -1,7 +1,7 @@
-Independent Publisher WordPress Theme
+Independent Publisher
 =====================
 
-This README documents theme options and features, along with known issues, and frequently asked questions. It also contains a list of theme filters and action hooks that can be used to modify and hook into various areas of the theme, as well as a list of functions that can be overriden in a Child Theme.
+Independent Publisher is a WordPress Theme. This README contains documentation for theme options and features, along with a list of known issues and frequently asked questions. It also contains a list of theme filters and action hooks that can be used to modify and hook into various areas of the theme, as well as a list of functions that can be overidden in a Child Theme.
 
  The main site for this project, along with a demo of this theme, is located at [http://independentpublisher.me](http://independentpublisher.me).
 
