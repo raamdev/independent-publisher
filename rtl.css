@@ -1490,12 +1490,14 @@ body {
 	margin-top: 20px;
 }
 
-.infinite-scroll .site-navigation {
+.infinite-scroll .site-navigation,
+.infinite-scroll .main-navigation,
+.infinite-scroll .site-footer {
 	display: none;
 }
 
-.infinite-scroll .main-navigation {
-	display: block;
+.infinite-wrap {
+	float: right;
 }
 
 .infinite-loader {
