@@ -13,7 +13,7 @@
 
 <footer id="colophon" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
 	<div class="site-info">
-		<?php do_action( 'independent_publisher_credits' ); ?>
+		<?php echo independent_publisher_footer_credits(); ?>
 	</div>
 	<!-- .site-info -->
 </footer><!-- #colophon .site-footer -->

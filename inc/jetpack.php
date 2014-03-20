@@ -20,3 +20,4 @@ function independent_publisher_jetpack_setup() {
 }
 
 add_action( 'after_setup_theme', 'independent_publisher_jetpack_setup' );
+add_filter( 'infinite_scroll_credit', 'independent_publisher_footer_credits' );

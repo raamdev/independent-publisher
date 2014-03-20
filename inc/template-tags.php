@@ -646,3 +646,13 @@ if ( ! function_exists( 'independent_publisher_hide_comments' ) ):
 		return false;
 	}
 endif;
+
+if ( ! function_exists( 'independent_publisher_footer_credits' ) ):
+	/**
+	 * Echoes the theme footer credits. Overriding this function in a Child Theme also
+	 * applies the changes to JetPack's Infinite Scroll footer.
+	 */
+	function independent_publisher_footer_credits() {
+		return independent_publisher_get_footer_credits();
+	}
+endif;

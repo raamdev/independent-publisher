@@ -218,17 +218,6 @@ endif;
 add_action('admin_enqueue_scripts', 'independent_publisher_wp_fullscreen_title_editor_style');
 
 /**
- * Echoes the theme's footer credits
- *
- * @since Independent Publisher 1.0
- */
-function independent_publisher_footer_credits() {
-	echo independent_publisher_get_footer_credits();
-}
-
-add_action( 'independent_publisher_credits', 'independent_publisher_footer_credits' );
-
-/**
  * Returns the theme's footer credits
  *
  * @return string
@@ -241,8 +230,6 @@ function independent_publisher_get_footer_credits() {
 		sprintf( __( '%1$s empowered by %2$s', 'independent_publisher' ), '<a href="' . esc_url( 'http://independentpublisher.me' ) . '" rel="designer" title="Independent Publisher: A beautiful reader-focused WordPress theme, for you.">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator" title="WordPress: A free open-source publishing platform">WordPress</a>' )
 	);
 }
-
-add_filter( 'infinite_scroll_credit', 'independent_publisher_get_footer_credits' );
 
 /**
  * Implement the Custom Header feature
