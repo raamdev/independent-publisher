@@ -2256,10 +2256,10 @@ table th {
 	.site-header {
 		text-align: center;
 		margin-left: 0;
-		float: none;
 		display: block;
 		width: 100%;
 		position: relative;
+		margin-bottom: 10px;
 	}
 
 	.blog article.show-full-content-first-post {
