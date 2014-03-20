@@ -307,6 +307,7 @@ class IndependentPublisher_Customize {
 			<?php self::generate_css('.entry-meta a:hover', 'color', 'link_color'); ?>
 			<?php self::generate_css('.site-footer a:hover', 'color', 'link_color'); ?>
 			<?php self::generate_css('blockquote', 'border-color', 'link_color'); ?>
+			<?php self::generate_css('#infinite-footer .blog-credits a, #infinite-footer .blog-credits a:hover', 'color', 'link_color'); ?>
 
 			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s:%3$s; /* Old browsers */ }'); ?>
 			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -moz-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* FF3.6+ */ }'); ?>
@@ -342,6 +343,7 @@ class IndependentPublisher_Customize {
 			<?php self::generate_css('.widget_rss .rss-date, .widget_rss li > cite, .widget_twitter .timesince', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.site-footer', 'color', 'secondary_meta_text_color'); ?>
 			<?php self::generate_css('.comment-content.unapproved', 'color', 'secondary_meta_text_color'); ?>
+			<?php self::generate_css('#infinite-footer .blog-credits', 'color', 'secondary_meta_text_color'); ?>
 
 		</style>
 		<!--/WordPress Theme Customizer CSS-->
