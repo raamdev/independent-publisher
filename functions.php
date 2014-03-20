@@ -238,7 +238,7 @@ add_action( 'independent_publisher_credits', 'independent_publisher_footer_credi
 function independent_publisher_get_footer_credits() {
 	return sprintf(
 		'%1$s',
-		sprintf( __( 'An %1$s empowered by %2$s.', 'independent_publisher' ), '<a href="' . esc_url( 'http://independentpublisher.me' ) . '" rel="designer">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator">open-source publishing</a>' )
+		sprintf( __( '%1$s empowered by %2$s', 'independent_publisher' ), '<a href="' . esc_url( 'http://independentpublisher.me' ) . '" rel="designer" title="Independent Publisher: A beautiful reader-focused WordPress theme, for you.">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator" title="WordPress: A free open-source publishing platform">WordPress</a>' )
 	);
 }
 
