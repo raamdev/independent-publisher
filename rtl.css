@@ -1490,8 +1490,7 @@ body {
 	margin-top: 20px;
 }
 
-.infinite-scroll .site-navigation,
-.infinite-scroll .main-navigation,
+.infinite-scroll .paging-navigation,
 .infinite-scroll .site-footer {
 	display: none;
 }
@@ -2083,6 +2082,14 @@ table th {
 	.site,
 	.single-column-layout .site {
 		margin-top: 40px;
+	}
+
+	.infinite-scroll #secondary {
+		display: none;
+	}
+
+	.infinite-scroll .site-content {
+		padding-bottom: 60px;
 	}
 
 	.multi-author-mode .site,
