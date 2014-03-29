@@ -2,6 +2,15 @@ Independent Publisher is a beautiful reader-focused WordPress theme, for you.
 
 Version history:
 
+1.3
+
+* Fixed spelling mistake in theme description
+* Fixed Jetpack Infinite Scroll when browser width < 1200px
+* Fixed comment form bugs when using comment reply links
+* Added props to theme project contributors in style.css
+* Fixed issue with Theme Customizer Live Preview incorrectly changing the color of the Continue Reading link when modifying the Secondary Meta Text color
+* Fixed Sticky post alignment on browsers < 500px
+
 1.2
 
 * Properly escaped all occurrences of home_url()
