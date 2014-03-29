@@ -1,0 +1,439 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Independent Publisher\n"
+"POT-Creation-Date: 2014-03-18 09:32-0500\n"
+"PO-Revision-Date: 2014-03-29 20:35+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oups ! Cette page ne peut être trouvée."
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Il semble que rien n'ait été trouvée à cette adresse. Peut-être pouvez-vous "
+"essayer un des liens ci-dessous ou effectuer une recherche ?"
+
+#: ../404.php:29 ../page_archive-template.php:32
+msgid "Most Used Categories"
+msgstr "Catégories les Plus Utilisées"
+
+#: ../404.php:45
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Essayez de chercher dans les archives mensuelles. %1$s"
+
+#: ../archive.php:50
+msgid "Asides"
+msgstr "Apartés"
+
+#: ../archive.php:52
+msgid "Galleries"
+msgstr "Galleries"
+
+#: ../archive.php:54
+msgid "Images"
+msgstr "Images"
+
+#: ../archive.php:56
+msgid "Videos"
+msgstr "Vidéos"
+
+#: ../archive.php:58
+msgid "Quotes"
+msgstr "Guillemets"
+
+#: ../archive.php:60
+msgid "Links"
+msgstr "Liens"
+
+#: ../archive.php:62
+msgid "Statuses"
+msgstr "Statuts"
+
+#: ../archive.php:64
+msgid "Audios"
+msgstr "Audios"
+
+#: ../archive.php:66
+msgid "Chats"
+msgstr "Chats"
+
+#: ../archive.php:68 ../sidebar.php:21
+msgid "Archives"
+msgstr "Archives"
+
+#: ../comments.php:49 ../comments.php:70
+msgid "Comment navigation"
+msgstr "Parcourir les Commentaires"
+
+#: ../comments.php:51 ../comments.php:72
+msgid "&larr; Older Comments"
+msgstr "&larr; Commentaires plus Anciens"
+
+#: ../comments.php:52 ../comments.php:73
+msgid "Newer Comments &rarr;"
+msgstr "Commentaires plus Récents &rarr;"
+
+#: ../comments.php:83
+msgid "Comments are closed."
+msgstr "Commentaires Clos"
+
+#: ../comments.php:102
+msgid "Readers who shared this"
+msgstr "Lecteurs l'ayant partagé"
+
+#: ../comments.php:104
+msgid "Thank you!"
+msgstr "Merci !"
+
+#: ../content-none.php:13 ../no-results.php:14
+msgid "Nothing Found"
+msgstr "Aucun Résultat Trouvé"
+
+#: ../content-none.php:20 ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier billet ?  <a href=\"%1$s\">Commencez ici</a>."
+
+#: ../content-none.php:24 ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, la recherche n'a donné aucun résultat... SVP, ré-essayer avec des "
+"mots clés différents."
+
+#: ../content-none.php:30 ../no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Il semble que rien n'ait été trouvé à cette adresse. Peut-être qu'une "
+"recherche pourrait vous aider."
+
+#: ../content-page.php:22 ../content-single.php:36
+#: ../page_one-column-template.php:39
+msgid "Next page &rarr;"
+msgstr "Page suivante &rarr;"
+
+#: ../content-page.php:23 ../content-single.php:37
+#: ../page_one-column-template.php:40
+msgid "&larr; Previous page"
+msgstr "&larr; Page précédente"
+
+#: ../content-page.php:29 ../content-single.php:43 ../content.php:53
+#: ../page_one-column-template.php:46
+msgid "Pages:"
+msgstr "Pages:"
+
+#: ../content-page.php:47 ../content-single.php:63 ../content.php:95
+#: ../image.php:127 ../page_archive-template.php:72
+#: ../page_one-column-template.php:53
+msgid "Edit"
+msgstr "Editer"
+
+#: ../content.php:21 ../functions.php:906 ../functions.php:921
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalien vers %s"
+
+#: ../content.php:91 ../functions.php:388
+msgid "Comment"
+msgstr "Commentaire"
+
+#: ../content.php:91
+msgid "1 Comment"
+msgstr "1 Commentaire"
+
+#: ../content.php:91
+msgid "% Comments"
+msgstr "% Commentaires"
+
+#: ../functions.php:98
+msgid "Primary Menu"
+msgstr "Menu Primaire"
+
+#: ../functions.php:99
+msgid "Social"
+msgstr "Social"
+
+#: ../functions.php:140
+msgid "Sidebar"
+msgstr "Barre Latérale"
+
+#: ../functions.php:151
+msgid "Archive Page"
+msgstr "Page d'Archive"
+
+#: ../functions.php:241
+#, php-format
+msgid "An %1$s empowered by %2$s."
+msgstr "Un(e) %1$s autorisé(e) par %2$s."
+
+#: ../functions.php:282
+msgid "Anonymous"
+msgstr "Anonyme"
+
+#: ../functions.php:329
+#, php-format
+msgid "Leave a Reply for %s"
+msgstr "Laisser une Réponse à %s"
+
+#: ../functions.php:330
+msgid "Cancel Reply"
+msgstr "Annuler la Réponse"
+
+#: ../functions.php:331
+msgid "Submit Comment"
+msgstr "Soumettre un Commentaire"
+
+#: ../functions.php:334
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Vous devez être <a href=\"%s\">identifié</a> pour soumettre un commentaire."
+
+#: ../functions.php:339
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Identifié comme <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Fermer "
+"cette session\">Log out?</a>"
+
+#: ../functions.php:349
+msgid "Name"
+msgstr "Nom"
+
+#: ../functions.php:354
+msgid "Email"
+msgstr "Email"
+
+#: ../functions.php:359
+msgid "Website"
+msgstr "Site Web"
+
+#: ../functions.php:538
+msgid "Write a Comment"
+msgstr "Ecrire un Commentaire"
+
+#: ../functions.php:701
+msgid "Use as post cover (full-width)"
+msgstr "Utiliser comme billet de couverture (grande largeur)"
+
+#: ../functions.php:882
+msgid "in"
+msgstr "dans"
+
+#: ../functions.php:891
+msgid "by"
+msgstr "par"
+
+#: ../header.php:52
+msgid "Skip to content"
+msgstr "Passer au contenu"
+
+#: ../image.php:23
+#, php-format
+msgid ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
+"%7$s</a>"
+msgstr ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Lien vers l'image originale\">%3$s "
+"&times; %4$s</a> %5$s <a href=\"%6$s\" title=\"Retourner à %7$s\" rel="
+"\"gallery\">%7$s</a>"
+
+#: ../image.php:106
+msgid "&larr; Previous image"
+msgstr "&larr; Image Précédente"
+
+#: ../image.php:107
+msgid "Next image &rarr;"
+msgstr "Image Suivante &rarr;"
+
+#: ../page_archive-template.php:45
+msgid "Yearly Archives"
+msgstr "Archives Annuelles"
+
+#: ../page_archive-template.php:47
+msgid "Select Year"
+msgstr "Choisir l'Année"
+
+#: ../page_archive-template.php:53
+msgid "Monthly Archives"
+msgstr "Archives Mensuelles"
+
+#: ../page_archive-template.php:55
+msgid "Select Month"
+msgstr "Choisir le Mois"
+
+#: ../page_archive-template.php:61 ../searchform.php:10
+msgid "Search"
+msgstr "Rechercher"
+
+#: ../page_archive-template.php:65
+msgid "Explore by Tag"
+msgstr "Parcourir par Etiquette"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de la Recherche pour : %s"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Méta-Donnée"
+
+#: ../single.php:28
+msgid "Related Content by Tag"
+msgstr "Contenu par Etiquette"
+
+#: ../inc/customizer.php:19
+msgid "Layout Options"
+msgstr "Options de Mise en Page"
+
+#: ../inc/customizer.php:26
+msgid "Excerpt Options"
+msgstr "Options des Extraits"
+
+#: ../inc/customizer.php:33
+msgid "General Options"
+msgstr "Options Générales"
+
+#: ../inc/customizer.php:48
+msgid "Post Excerpts"
+msgstr "Extraits de Billet"
+
+#: ../inc/customizer.php:70
+msgid "Generate One-Sentence Excerpts"
+msgstr "Générer les Extraits à partir d'une Phrase"
+
+#: ../inc/customizer.php:87
+msgid "Always Show Full Content for First Post"
+msgstr "Toujours Montrer le Contenu Complet du Premier Billet"
+
+#: ../inc/customizer.php:104
+msgid "Show Post Word Count in Entry Meta"
+msgstr "Montrer le Nombre de Mots du Billet dans les Méta-Données d'Entrée"
+
+#: ../inc/customizer.php:121
+msgid "Show Post Date in Entry Meta"
+msgstr "Montrer la Date du Billet dans les Méta-Données d'Entrée"
+
+#: ../inc/customizer.php:138
+msgid "Show Widgets on Single Pages"
+msgstr "Montrer les Widgets sur les Pages Simples"
+
+#: ../inc/customizer.php:155
+msgid "Single-Column Layout"
+msgstr "Disposition en une Seule Colonne"
+
+#: ../inc/customizer.php:172
+msgid "Enable Multi-Author Mode"
+msgstr "Activer le Mode Multi-Auteur"
+
+#: ../inc/customizer.php:189
+msgid "Comments Call to Action"
+msgstr "Appel aux Commentaires"
+
+#: ../inc/customizer.php:202
+msgid "Text Color"
+msgstr "Couleur de Texte"
+
+#: ../inc/customizer.php:207
+msgid "Comment Form Background Color"
+msgstr "Couleur de Fond du Formulaire des Commentaires"
+
+#: ../inc/customizer.php:212
+msgid "Link Color"
+msgstr "Couleur des Liens"
+
+#: ../inc/customizer.php:217
+msgid "Title and Header Text Color"
+msgstr "Couleur du Titre et de l'En-Tête"
+
+#: ../inc/customizer.php:222
+msgid "Primary Meta Text Color"
+msgstr "Couleur des Méta-Données Primaires"
+
+#: ../inc/customizer.php:227
+msgid "Secondary Meta Text Color"
+msgstr "Couleur des Méta-Données Secondaires"
+
+#: ../inc/template-tags.php:41
+msgid "Post navigation"
+msgstr "Parcourir les billets"
+
+#: ../inc/template-tags.php:51
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Billets plus anciens"
+
+#: ../inc/template-tags.php:55
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Billets plus récents <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:85
+msgid " - Your comment is awaiting moderation."
+msgstr " - Votre commentaire est en attente de modération."
+
+#: ../inc/template-tags.php:97 ../inc/template-tags.php:140
+msgid "(Edit)"
+msgstr "(Editer)"
+
+#: ../inc/template-tags.php:165 ../inc/template-tags.php:196
+#: ../inc/template-tags.php:208
+#, php-format
+msgid "View all posts by %s"
+msgstr "Visualiser tous les billets par %s"
+
+#: ../inc/template-tags.php:182
+msgid ", "
+msgstr ","
+
+#: ../inc/template-tags.php:254
+msgid "Continue Reading &rarr;"
+msgstr "Poursuivre la Lecture &rarr;"
+
+#: ../inc/template-tags.php:271
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Poursuivre la lecture <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:341
+#, php-format
+msgid "Page %s"
+msgstr "Page %s"
+
+#: ../inc/template-tags.php:361
+#, php-format
+msgid "View all posts in %s"
+msgstr "Visualiser tous les billets dans %s"
+
+#: ../inc/template-tags.php:476
+#, php-format
+msgid "%1$s Words"
+msgstr "%1$s Mots"
+
+#: ../inc/template-tags.php:529 ../inc/template-tags.php:554
+#: ../inc/template-tags.php:583
+#, php-format
+msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
+msgstr " (page <strong>%1$s</strong> de <strong>%2$s</strong>)"
