@@ -59,14 +59,14 @@
 	</div>
 	<!-- .entry-content -->
 
-	<footer class="entry-meta">
-
-		<?php /* Show Continue Reading link when this is a Standard post format AND One-Sentence Excerpts options is enabled AND
+	<?php /* Show Continue Reading link when this is a Standard post format AND One-Sentence Excerpts options is enabled AND
  							we're not showing the first post full content AND this is not a sticky post */
-		?>
-		<?php if ( false === get_post_format() && independent_publisher_generate_one_sentence_excerpts() && independent_publisher_is_not_first_post_full_content() && ! is_sticky() ) : ?>
-			<?php independent_publisher_continue_reading_link(); ?>
-		<?php endif; ?>
+	?>
+	<?php if ( false === get_post_format() && independent_publisher_generate_one_sentence_excerpts() && independent_publisher_is_not_first_post_full_content() && ! is_sticky() ) : ?>
+		<?php independent_publisher_continue_reading_link(); ?>
+	<?php endif; ?>
+
+	<footer class="entry-meta">
 
 		<?php /* Show author name and post categories only when post type == post AND we're not showing the first post full content */ ?>
 		<?php if ( 'post' == get_post_type() && independent_publisher_is_not_first_post_full_content() ) : // post type == post conditional hides category text for Pages on Search ?>

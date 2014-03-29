@@ -704,6 +704,8 @@ Accessibility
 
 .enhanced-excerpt-read-more {
 	margin-bottom: 1em;
+	font-size: 13px;
+	text-align: right;
 }
 
 .show-full-content-first-post h1.entry-title,
