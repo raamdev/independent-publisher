@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-03-29 22:23-0500\n"
-"PO-Revision-Date: 2014-03-29 22:24-0500\n"
+"POT-Creation-Date: 2014-03-29 22:42-0500\n"
+"PO-Revision-Date: 2014-03-29 22:42-0500\n"
 "Last-Translator: Raam Dev <raam@raamdev.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -10,7 +10,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
-"X-Poedit-KeywordsList: _e;__;_n\n"
+"X-Poedit-KeywordsList: _e;__;_n;_x;esc_attr__;esc_attr_e;_nx;_ex;esc_attr_x;"
+"esc_html__;esc_html_e;esc_html_x;_n_noop;_nx_noop;translate_nooped_plural\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -273,7 +274,7 @@ msgstr ""
 msgid "Select Month"
 msgstr ""
 
-#: ../page_archive-template.php:61 ../searchform.php:10
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
 msgid "Search"
 msgstr ""
 
@@ -284,6 +285,10 @@ msgstr ""
 #: ../search.php:19
 #, php-format
 msgid "Search Results for: %s"
+msgstr ""
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
 msgstr ""
 
 #: ../sidebar.php:28
@@ -368,6 +373,14 @@ msgstr ""
 
 #: ../inc/template-tags.php:41
 msgid "Post navigation"
+msgstr ""
+
+#: ../inc/template-tags.php:45
+msgid "&larr;"
+msgstr ""
+
+#: ../inc/template-tags.php:46
+msgid "&rarr;"
 msgstr ""
 
 #: ../inc/template-tags.php:51
