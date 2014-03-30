@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-03-18 09:32-0500\n"
-"PO-Revision-Date: 2014-03-18 09:32-0500\n"
+"POT-Creation-Date: 2014-03-29 22:23-0500\n"
+"PO-Revision-Date: 2014-03-29 22:24-0500\n"
 "Last-Translator: Raam Dev <raam@raamdev.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
-"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-KeywordsList: _e;__;_n\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -73,6 +73,10 @@ msgstr ""
 
 #: ../archive.php:68 ../sidebar.php:21
 msgid "Archives"
+msgstr ""
+
+#: ../comments.php:40 ../content.php:91
+msgid "1 Comment"
 msgstr ""
 
 #: ../comments.php:49 ../comments.php:70
@@ -142,17 +146,13 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: ../content.php:21 ../functions.php:906 ../functions.php:921
+#: ../content.php:21 ../functions.php:893 ../functions.php:908
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: ../content.php:91 ../functions.php:388
+#: ../content.php:91 ../functions.php:375
 msgid "Comment"
-msgstr ""
-
-#: ../content.php:91
-msgid "1 Comment"
 msgstr ""
 
 #: ../content.php:91
@@ -175,65 +175,65 @@ msgstr ""
 msgid "Archive Page"
 msgstr ""
 
-#: ../functions.php:241
+#: ../functions.php:230
 #, php-format
-msgid "An %1$s empowered by %2$s."
+msgid "%1$s empowered by %2$s"
 msgstr ""
 
-#: ../functions.php:282
+#: ../functions.php:269
 msgid "Anonymous"
 msgstr ""
 
-#: ../functions.php:329
+#: ../functions.php:316
 #, php-format
 msgid "Leave a Reply for %s"
 msgstr ""
 
-#: ../functions.php:330
+#: ../functions.php:317
 msgid "Cancel Reply"
 msgstr ""
 
-#: ../functions.php:331
+#: ../functions.php:318
 msgid "Submit Comment"
 msgstr ""
 
-#: ../functions.php:334
+#: ../functions.php:321
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: ../functions.php:339
+#: ../functions.php:326
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
 
-#: ../functions.php:349
+#: ../functions.php:336
 msgid "Name"
 msgstr ""
 
-#: ../functions.php:354
+#: ../functions.php:341
 msgid "Email"
 msgstr ""
 
-#: ../functions.php:359
+#: ../functions.php:346
 msgid "Website"
 msgstr ""
 
-#: ../functions.php:538
+#: ../functions.php:525
 msgid "Write a Comment"
 msgstr ""
 
-#: ../functions.php:701
+#: ../functions.php:688
 msgid "Use as post cover (full-width)"
 msgstr ""
 
-#: ../functions.php:882
+#: ../functions.php:869
 msgid "in"
 msgstr ""
 
-#: ../functions.php:891
+#: ../functions.php:878
 msgid "by"
 msgstr ""
 
@@ -423,4 +423,44 @@ msgstr ""
 #: ../inc/template-tags.php:583
 #, php-format
 msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
+msgstr ""
+
+#: ../inc/template-tags.php:532
+#, php-format
+msgid "Found one search result for <strong>%2$s</strong>."
+msgstr ""
+
+#: ../inc/template-tags.php:558
+#, php-format
+msgid "There is one post filed in <strong>%2$s</strong>."
+msgstr ""
+
+#: ../inc/template-tags.php:560
+#, php-format
+msgid "There is one post tagged <strong>%2$s</strong>."
+msgstr ""
+
+#: ../inc/template-tags.php:591
+#, php-format
+msgid "There was one post published in %2$s."
+msgstr ""
+
+#: ../inc/template-tags.php:593
+#, php-format
+msgid "There is one post published in %2$s."
+msgstr ""
+
+#: ../inc/template-tags.php:596
+#, php-format
+msgid "There was one post published on %2$s."
+msgstr ""
+
+#: ../inc/template-tags.php:603
+#, php-format
+msgid "There was one post published in the month of %2$s."
+msgstr ""
+
+#: ../inc/template-tags.php:608
+#, php-format
+msgid "There was one post published in %2$s %3$s."
 msgstr ""
