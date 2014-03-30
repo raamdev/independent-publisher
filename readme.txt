@@ -2,6 +2,11 @@ Independent Publisher is a beautiful reader-focused WordPress theme, for you.
 
 Version history:
 
+1.3.1
+
+* Added French translation (contributed by Eddy Lelièvre-Berna)
+* Updated default language file (it was missing several strings)
+
 1.3
 
 * Fixed spelling mistake in theme description
