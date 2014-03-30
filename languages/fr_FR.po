@@ -1,10 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-03-18 09:32-0500\n"
-"PO-Revision-Date: 2014-03-29 20:35+0100\n"
+"POT-Creation-Date: 2014-03-29 22:42-0500\n"
+"PO-Revision-Date: 2014-03-30 10:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +14,6 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Language: fr_FR\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:16
@@ -76,6 +76,10 @@ msgstr "Chats"
 #: ../archive.php:68 ../sidebar.php:21
 msgid "Archives"
 msgstr "Archives"
+
+#: ../comments.php:40 ../content.php:91
+msgid "1 Comment"
+msgstr "1 Commentaire"
 
 #: ../comments.php:49 ../comments.php:70
 msgid "Comment navigation"
@@ -149,18 +153,14 @@ msgstr "Pages:"
 msgid "Edit"
 msgstr "Editer"
 
-#: ../content.php:21 ../functions.php:906 ../functions.php:921
+#: ../content.php:21 ../functions.php:893 ../functions.php:908
 #, php-format
 msgid "Permalink to %s"
 msgstr "Permalien vers %s"
 
-#: ../content.php:91 ../functions.php:388
+#: ../content.php:91 ../functions.php:375
 msgid "Comment"
 msgstr "Commentaire"
-
-#: ../content.php:91
-msgid "1 Comment"
-msgstr "1 Commentaire"
 
 #: ../content.php:91
 msgid "% Comments"
@@ -182,35 +182,35 @@ msgstr "Barre Latérale"
 msgid "Archive Page"
 msgstr "Page d'Archive"
 
-#: ../functions.php:241
+#: ../functions.php:230
 #, php-format
-msgid "An %1$s empowered by %2$s."
-msgstr "Un(e) %1$s autorisé(e) par %2$s."
+msgid "%1$s empowered by %2$s"
+msgstr "%1$s fièrement propulsé par %2$s"
 
-#: ../functions.php:282
+#: ../functions.php:269
 msgid "Anonymous"
 msgstr "Anonyme"
 
-#: ../functions.php:329
+#: ../functions.php:316
 #, php-format
 msgid "Leave a Reply for %s"
 msgstr "Laisser une Réponse à %s"
 
-#: ../functions.php:330
+#: ../functions.php:317
 msgid "Cancel Reply"
 msgstr "Annuler la Réponse"
 
-#: ../functions.php:331
+#: ../functions.php:318
 msgid "Submit Comment"
 msgstr "Soumettre un Commentaire"
 
-#: ../functions.php:334
+#: ../functions.php:321
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
-"Vous devez être <a href=\"%s\">identifié</a> pour soumettre un commentaire."
+"Vous devez être <a href=\"%s\">identifié</a> pour envoyer un commentaire."
 
-#: ../functions.php:339
+#: ../functions.php:326
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -219,31 +219,31 @@ msgstr ""
 "Identifié comme <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Fermer "
 "cette session\">Log out?</a>"
 
-#: ../functions.php:349
+#: ../functions.php:336
 msgid "Name"
 msgstr "Nom"
 
-#: ../functions.php:354
+#: ../functions.php:341
 msgid "Email"
 msgstr "Email"
 
-#: ../functions.php:359
+#: ../functions.php:346
 msgid "Website"
 msgstr "Site Web"
 
-#: ../functions.php:538
+#: ../functions.php:525
 msgid "Write a Comment"
 msgstr "Ecrire un Commentaire"
 
-#: ../functions.php:701
+#: ../functions.php:688
 msgid "Use as post cover (full-width)"
 msgstr "Utiliser comme billet de couverture (grande largeur)"
 
-#: ../functions.php:882
+#: ../functions.php:869
 msgid "in"
 msgstr "dans"
 
-#: ../functions.php:891
+#: ../functions.php:878
 msgid "by"
 msgstr "par"
 
@@ -286,7 +286,7 @@ msgstr "Archives Mensuelles"
 msgid "Select Month"
 msgstr "Choisir le Mois"
 
-#: ../page_archive-template.php:61 ../searchform.php:10
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
 msgid "Search"
 msgstr "Rechercher"
 
@@ -298,6 +298,10 @@ msgstr "Parcourir par Etiquette"
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la Recherche pour : %s"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Rechercher &hellip;"
 
 #: ../sidebar.php:28
 msgid "Meta"
@@ -383,6 +387,14 @@ msgstr "Couleur des Méta-Données Secondaires"
 msgid "Post navigation"
 msgstr "Parcourir les billets"
 
+#: ../inc/template-tags.php:45
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/template-tags.php:46
+msgid "&rarr;"
+msgstr "&rarr;"
+
 #: ../inc/template-tags.php:51
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Billets plus anciens"
@@ -403,7 +415,7 @@ msgstr "(Editer)"
 #: ../inc/template-tags.php:208
 #, php-format
 msgid "View all posts by %s"
-msgstr "Visualiser tous les billets par %s"
+msgstr "Voir tous les billets par %s"
 
 #: ../inc/template-tags.php:182
 msgid ", "
@@ -425,7 +437,7 @@ msgstr "Page %s"
 #: ../inc/template-tags.php:361
 #, php-format
 msgid "View all posts in %s"
-msgstr "Visualiser tous les billets dans %s"
+msgstr "Voir tous les billets dans %s"
 
 #: ../inc/template-tags.php:476
 #, php-format
@@ -437,3 +449,43 @@ msgstr "%1$s Mots"
 #, php-format
 msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
 msgstr " (page <strong>%1$s</strong> de <strong>%2$s</strong>)"
+
+#: ../inc/template-tags.php:532
+#, php-format
+msgid "Found one search result for <strong>%2$s</strong>."
+msgstr "Un résultat trouvé pour <strong>%2$s</strong>."
+
+#: ../inc/template-tags.php:558
+#, php-format
+msgid "There is one post filed in <strong>%2$s</strong>."
+msgstr "Un billet est classé dans <strong>%2$s</strong>."
+
+#: ../inc/template-tags.php:560
+#, php-format
+msgid "There is one post tagged <strong>%2$s</strong>."
+msgstr "Un billet est étiqueté <strong>%2$s</strong>."
+
+#: ../inc/template-tags.php:591
+#, php-format
+msgid "There was one post published in %2$s."
+msgstr "Un billet a été publié dans %2$s."
+
+#: ../inc/template-tags.php:593
+#, php-format
+msgid "There is one post published in %2$s."
+msgstr "Un billet est publié dans %2$s."
+
+#: ../inc/template-tags.php:596
+#, php-format
+msgid "There was one post published on %2$s."
+msgstr "Un billet a été publié le %2$s."
+
+#: ../inc/template-tags.php:603
+#, php-format
+msgid "There was one post published in the month of %2$s."
+msgstr "Un billet a été publié en %2$s."
+
+#: ../inc/template-tags.php:608
+#, php-format
+msgid "There was one post published in %2$s %3$s."
+msgstr "Un billet a été publié dans %2$s %3$s."
