@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-03-29 22:42-0500\n"
-"PO-Revision-Date: 2014-03-29 22:42-0500\n"
+"POT-Creation-Date: 2014-04-02 12:56-0500\n"
+"PO-Revision-Date: 2014-04-02 12:57-0500\n"
 "Last-Translator: Raam Dev <raam@raamdev.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -183,6 +183,10 @@ msgstr ""
 
 #: ../functions.php:269
 msgid "Anonymous"
+msgstr ""
+
+#: ../functions.php:282
+msgid "Reply to"
 msgstr ""
 
 #: ../functions.php:316

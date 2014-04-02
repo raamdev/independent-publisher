@@ -279,7 +279,7 @@ if ( ! function_exists( 'independent_publisher_author_comment_reply_link' ) ) :
 
 		// Replace Reply Link with "Reply to <Author First Name>"
 		$reply_link_text = $args['reply_text'];
-		$link            = str_replace( $reply_link_text, 'Reply to ' . $author, $link );
+		$link            = str_replace( $reply_link_text, __('Reply to', 'independent-publisher') . ' ' . $author, $link );
 
 		return $link;
 	}
