@@ -49,7 +49,7 @@
 		<?php if ( ! is_single() ) : ?>
 			<?php independent_publisher_site_info(); ?>
 			<nav role="navigation" class="site-navigation main-navigation">
-				<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'independent_publisher' ); ?>"><?php _e( 'Skip to content', 'independent_publisher' ); ?></a>
+				<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'independent-publisher' ); ?>"><?php _e( 'Skip to content', 'independent-publisher' ); ?></a>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
 			</nav><!-- .site-navigation .main-navigation -->

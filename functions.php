@@ -41,7 +41,7 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		 * Make theme available for translation
 		 * Translations can be filed in the /languages/ directory
 		 */
-		load_theme_textdomain( 'independent_publisher', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'independent-publisher', get_template_directory() . '/languages' );
 
 		/**
 		 * Add default posts and comments RSS feed links to head
@@ -95,8 +95,8 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		 */
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Menu', 'independent_publisher' ),
-				'social'  => __( 'Social', 'independent_publisher' )
+				'primary' => __( 'Primary Menu', 'independent-publisher' ),
+				'social'  => __( 'Social', 'independent-publisher' )
 			)
 		);
 
@@ -137,7 +137,7 @@ require ( get_template_directory() . '/inc/jetpack.php' );
 function independent_publisher_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Sidebar', 'independent_publisher' ),
+			'name'          => __( 'Sidebar', 'independent-publisher' ),
 			'id'            => 'sidebar-1',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
@@ -148,7 +148,7 @@ function independent_publisher_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Archive Page', 'independent_publisher' ),
+			'name'          => __( 'Archive Page', 'independent-publisher' ),
 			'id'            => 'archive-page',
 			'before_widget' => '<div class="widget">',
 			'after_widget'  => '</div>',
@@ -227,7 +227,7 @@ add_action('admin_enqueue_scripts', 'independent_publisher_wp_fullscreen_title_e
 function independent_publisher_get_footer_credits() {
 	return sprintf(
 		'%1$s',
-		sprintf( __( '%1$s empowered by %2$s', 'independent_publisher' ), '<a href="' . esc_url( 'http://independentpublisher.me' ) . '" rel="designer" title="Independent Publisher: A beautiful reader-focused WordPress theme, for you.">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator" title="WordPress: A free open-source publishing platform">WordPress</a>' )
+		sprintf( __( '%1$s empowered by %2$s', 'independent-publisher' ), '<a href="' . esc_url( 'http://independentpublisher.me' ) . '" rel="designer" title="Independent Publisher: A beautiful reader-focused WordPress theme, for you.">Independent Publisher</a>', '<a href="http://wordpress.org/" rel="generator" title="WordPress: A free open-source publishing platform">WordPress</a>' )
 	);
 }
 
@@ -266,7 +266,7 @@ if ( ! function_exists( 'independent_publisher_author_comment_reply_link' ) ) :
 				$user   = get_userdata( $comment->user_id );
 				$author = $user->user_login;
 			} else {
-				$author = __( 'Anonymous', 'independent_publisher' );
+				$author = __( 'Anonymous', 'independent-publisher' );
 			}
 		} else {
 			$author = $comment->comment_author;
@@ -313,9 +313,9 @@ if ( ! function_exists( 'independent_publisher_comment_form_args' ) ) :
 			'id_form'              => 'commentform',
 			'id_submit'            => 'submit',
 			'title_reply'          => '',
-			'title_reply_to'       => __( 'Leave a Reply for %s', 'independent_publisher' ),
-			'cancel_reply_link'    => __( 'Cancel Reply', 'independent_publisher' ),
-			'label_submit'         => __( 'Submit Comment', 'independent_publisher' ),
+			'title_reply_to'       => __( 'Leave a Reply for %s', 'independent-publisher' ),
+			'cancel_reply_link'    => __( 'Cancel Reply', 'independent-publisher' ),
+			'label_submit'         => __( 'Submit Comment', 'independent-publisher' ),
 			'must_log_in'          => '<p class="must-log-in">' .
 									  sprintf(
 										  __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
@@ -333,17 +333,17 @@ if ( ! function_exists( 'independent_publisher_comment_form_args' ) ) :
 			'fields'               => apply_filters(
 				'comment_form_default_fields', array(
 					'author' =>
-						'<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent_publisher' ) . '</label>' .
+						'<p class="comment-form-author"><label for="author">' . __( 'Name', 'independent-publisher' ) . '</label>' .
 						( $req ? '' : '' ) .
 						'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 						'"' . $aria_req . ' /></p>',
 					'email'  =>
-						'<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent_publisher' ) . '</label>' .
+						'<p class="comment-form-email"><label for="email">' . __( 'Email', 'independent-publisher' ) . '</label>' .
 						( $req ? '' : '' ) .
 						'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
 						'"' . $aria_req . ' /></p>',
 					'url'    =>
-						'<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent_publisher' ) . '</label>' .
+						'<p class="comment-form-url"><label for="url">' . __( 'Website', 'independent-publisher' ) . '</label>' .
 						'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
 						'" /></p>',
 				)
@@ -372,7 +372,7 @@ if ( ! function_exists( 'independent_publisher_add_textarea' ) ) :
 	 */
 	function independent_publisher_add_textarea() {
 		echo '<div id="main-reply-title"><h3>' . independent_publisher_comments_call_to_action_text() . '</h3></div>';
-		echo '<div class="comment-form-reply-title"><p>' . __( 'Comment', 'independent_publisher' ) . '</p></div>';
+		echo '<div class="comment-form-reply-title"><p>' . __( 'Comment', 'independent-publisher' ) . '</p></div>';
 		echo '<p class="comment-form-comment" id="comment-form-field"><textarea id="comment" name="comment" cols="60" rows="6" aria-required="true"></textarea></p>';
 	}
 endif;
@@ -522,7 +522,7 @@ function independent_publisher_comments_call_to_action_text() {
 	if ( isset( $comments_call_to_action ) && trim( $comments_call_to_action ) !== '' ) {
 		return esc_attr( $comments_call_to_action );
 	} else {
-		return __( 'Write a Comment', 'independent_publisher' );
+		return __( 'Write a Comment', 'independent-publisher' );
 	}
 }
 
@@ -685,7 +685,7 @@ function independent_publisher_featured_image_meta( $content ) {
 	global $post;
 
 	// Text for checkbox
-	$text = __( "Use as post cover (full-width)", 'independent_publisher' );
+	$text = __( "Use as post cover (full-width)", 'independent-publisher' );
 
 	// Meta value ID
 	$id    = 'full_width_featured_image';
@@ -866,7 +866,7 @@ function independent_publisher_replytocom() {
  * Returns the entry title meta category prefix (e.g., "<author name> in <category name>"; 'in' is the portion this function returns)
  */
 function independent_publisher_entry_meta_category_prefix() {
-	$prefix = __( 'in', 'independent_publisher' );
+	$prefix = __( 'in', 'independent-publisher' );
 
 	return apply_filters( 'independent_publisher_entry_meta_category_prefix', $prefix );
 }
@@ -875,7 +875,7 @@ function independent_publisher_entry_meta_category_prefix() {
  * Returns the entry meta author prefix (e.g., "by <author name>"; 'by' is the portion this function returns)
  */
 function independent_publisher_entry_meta_author_prefix() {
-	$prefix = __( 'by', 'independent_publisher' );
+	$prefix = __( 'by', 'independent-publisher' );
 
 	return apply_filters( 'independent_publisher_entry_meta_author_prefix', $prefix );
 }
@@ -890,7 +890,7 @@ if ( ! function_exists( 'independent_publisher_maybe_linkify_the_content' ) ) :
 			// Asides and Quotes might have footnotes, which don't display properly when linking the content to itself, so let's clean things up
 			$content = independent_publisher_clean_content( $content );
 
-			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
+			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
 		}
 
 		return $content;
@@ -905,7 +905,7 @@ if ( ! function_exists( 'independent_publisher_maybe_linkify_the_excerpt' ) ) :
 	 */
 	function independent_publisher_maybe_linkify_the_excerpt( $content ) {
 		if ( ! is_single() ) {
-			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
+			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
 		}
 
 		return $content;

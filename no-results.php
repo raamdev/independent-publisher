@@ -11,24 +11,24 @@
 
 <article id="post-0" class="post no-results not-found">
 	<header class="entry-header">
-		<h1 class="entry-title"><?php _e( 'Nothing Found', 'independent_publisher' ); ?></h1>
+		<h1 class="entry-title"><?php _e( 'Nothing Found', 'independent-publisher' ); ?></h1>
 	</header>
 	<!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'independent_publisher' ), admin_url( 'post-new.php' ) ); ?></p>
+			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'independent-publisher' ), admin_url( 'post-new.php' ) ); ?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'independent_publisher' ); ?></p>
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'independent-publisher' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php
 		else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'independent_publisher' ); ?></p>
+			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'independent-publisher' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>

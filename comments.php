@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 					<i class="comments-title-icon"></i>
 					<?php
 					printf(
-						_n( '1 Comment', '%1$s Comments', get_comments_number(), 'independent_publisher' ),
+						_n( '1 Comment', '%1$s Comments', get_comments_number(), 'independent-publisher' ),
 						number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>'
 					);
 					?>
@@ -46,10 +46,10 @@ if ( post_password_required() ) {
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 				<nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation">
-					<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'independent_publisher' ); ?></h1>
+					<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'independent-publisher' ); ?></h1>
 
-					<div class="nav-previous"><?php previous_comments_link( '<button>' . __( '&larr; Older Comments', 'independent_publisher' ) . '</button>' ); ?></div>
-					<div class="nav-next"><?php next_comments_link( '<button>' . __( 'Newer Comments &rarr;', 'independent_publisher' ) . '</button>' ); ?></div>
+					<div class="nav-previous"><?php previous_comments_link( '<button>' . __( '&larr; Older Comments', 'independent-publisher' ) . '</button>' ); ?></div>
+					<div class="nav-next"><?php next_comments_link( '<button>' . __( 'Newer Comments &rarr;', 'independent-publisher' ) . '</button>' ); ?></div>
 				</nav><!-- #comment-nav-before .site-navigation .comment-navigation -->
 			<?php endif; // check for comment navigation ?>
 
@@ -67,10 +67,10 @@ if ( post_password_required() ) {
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 				<nav role="navigation" id="comment-nav-below" class="site-navigation comment-navigation">
-					<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'independent_publisher' ); ?></h1>
+					<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'independent-publisher' ); ?></h1>
 
-					<div class="nav-previous"><?php previous_comments_link( '<button>' . __( '&larr; Older Comments', 'independent_publisher' ) . '</button>' ); ?></div>
-					<div class="nav-next"><?php next_comments_link( '<button>' . __( 'Newer Comments &rarr;', 'independent_publisher' ) . '</button>' ); ?></div>
+					<div class="nav-previous"><?php previous_comments_link( '<button>' . __( '&larr; Older Comments', 'independent-publisher' ) . '</button>' ); ?></div>
+					<div class="nav-next"><?php next_comments_link( '<button>' . __( 'Newer Comments &rarr;', 'independent-publisher' ) . '</button>' ); ?></div>
 				</nav><!-- #comment-nav-below .site-navigation .comment-navigation -->
 			<?php endif; // check for comment navigation ?>
 
@@ -80,7 +80,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 			?>
-			<p class="nocomments"><?php _e( 'Comments are closed.', 'independent_publisher' ); ?></p>
+			<p class="nocomments"><?php _e( 'Comments are closed.', 'independent-publisher' ); ?></p>
 		<?php endif; ?>
 
 		<?php if ( comments_open() && get_comments_number() >= independent_publisher_min_comments_bottom_comment_button() ) : ?>
@@ -99,9 +99,9 @@ if ( post_password_required() ) {
 			<?php if ( count( $wp_query->comments_by_type['pings'] ) ) { ?>
 				<div id="pinglist">
 					<ul class="pinglist">
-						<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_title', __( 'Readers who shared this', 'independent_publisher' ) ); ?></li>
+						<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_title', __( 'Readers who shared this', 'independent-publisher' ) ); ?></li>
 						<?php independent_publisher_pings(); ?>
-						<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_end_note', __( 'Thank you!', 'independent_publisher' ) ); ?></li>
+						<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_end_note', __( 'Thank you!', 'independent-publisher' ) ); ?></li>
 					</ul>
 				</div>
 			<?php } // end if ( count($wp_query->comments_by_type['pings']))?>

@@ -18,7 +18,7 @@
 			</h2>
 		<?php endif; ?>
 		<h1 class="entry-title">
-			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
 	</header>
 	<!-- .entry-header -->
@@ -50,7 +50,7 @@
 			<?php the_content( independent_publisher_continue_reading_text() ); ?>
 			<?php wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'independent-publisher' ),
 					'after'  => '</div>'
 				)
 			); ?>
@@ -88,11 +88,11 @@
 
 		<?php /* Show comments link only when post is not password-protected AND comments are enabled on this post */ ?>
 		<?php if ( ! post_password_required() && comments_open() && ! independent_publisher_hide_comments() ) : ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent_publisher' ), __( '1 Comment', 'independent_publisher' ), __( '% Comments', 'independent_publisher' ) ); ?></span>
+			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent-publisher' ), __( '1 Comment', 'independent-publisher' ), __( '% Comments', 'independent-publisher' ) ); ?></span>
 		<?php endif; ?>
 
 		<?php $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?>
-		<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="sep"> ' . $separator . ' </span> <span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'independent-publisher' ), '<span class="sep"> ' . $separator . ' </span> <span class="edit-link">', '</span>' ); ?>
 
 	</footer>
 	<!-- .entry-meta -->

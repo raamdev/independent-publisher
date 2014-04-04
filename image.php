@@ -20,7 +20,7 @@ get_header();
 							<?php
 							$metadata = wp_get_attachment_metadata();
 							printf(
-								__( '"%1$s" - <a href="%2$s" title="Link to full-size image">%3$s &times; %4$s</a> %5$s <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>', 'independent_publisher' ),
+								__( '"%1$s" - <a href="%2$s" title="Link to full-size image">%3$s &times; %4$s</a> %5$s <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>', 'independent-publisher' ),
 								get_the_title(),
 								wp_get_attachment_url(),
 								$metadata['width'],
@@ -103,8 +103,8 @@ get_header();
 						<?php the_content(); ?>
 
 						<nav id="image-navigation" class="site-navigation">
-							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous image', 'independent_publisher' ) ); ?></span>
-							<span class="next-image"><?php next_image_link( false, __( 'Next image &rarr;', 'independent_publisher' ) ); ?></span>
+							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous image', 'independent-publisher' ) ); ?></span>
+							<span class="next-image"><?php next_image_link( false, __( 'Next image &rarr;', 'independent-publisher' ) ); ?></span>
 						</nav>
 						<!-- #image-navigation -->
 
@@ -124,7 +124,7 @@ get_header();
 							</div>
 						<?php endif; ?>
 
-						<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'independent-publisher' ), '<span class="edit-link">', '</span>' ); ?>
 					</footer>
 
 					<!-- .entry-meta -->
