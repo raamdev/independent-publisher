@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-04-02 12:56-0500\n"
-"PO-Revision-Date: 2014-04-02 12:57-0500\n"
+"POT-Creation-Date: 2014-04-04 19:36-0500\n"
+"PO-Revision-Date: 2014-04-04 19:36-0500\n"
 "Last-Translator: Raam Dev <raam@raamdev.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -10,8 +10,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
-"X-Poedit-KeywordsList: _e;__;_n;_x;esc_attr__;esc_attr_e;_nx;_ex;esc_attr_x;"
-"esc_html__;esc_html_e;esc_html_x;_n_noop;_nx_noop;translate_nooped_plural\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
+"esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
+"translate_nooped_plural\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -77,8 +78,11 @@ msgid "Archives"
 msgstr ""
 
 #: ../comments.php:40 ../content.php:91
+#, php-format
 msgid "1 Comment"
-msgstr ""
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../comments.php:49 ../comments.php:70
 msgid "Comment navigation"
@@ -445,39 +449,55 @@ msgstr ""
 #: ../inc/template-tags.php:532
 #, php-format
 msgid "Found one search result for <strong>%2$s</strong>."
-msgstr ""
+msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../inc/template-tags.php:558
 #, php-format
 msgid "There is one post filed in <strong>%2$s</strong>."
-msgstr ""
+msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../inc/template-tags.php:560
 #, php-format
 msgid "There is one post tagged <strong>%2$s</strong>."
-msgstr ""
+msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../inc/template-tags.php:591
 #, php-format
 msgid "There was one post published in %2$s."
-msgstr ""
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../inc/template-tags.php:593
 #, php-format
 msgid "There is one post published in %2$s."
-msgstr ""
+msgid_plural "There are %1$s posts published in %2$s"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../inc/template-tags.php:596
 #, php-format
 msgid "There was one post published on %2$s."
-msgstr ""
+msgid_plural "There were %1$s posts published on %2$s"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../inc/template-tags.php:603
 #, php-format
 msgid "There was one post published in the month of %2$s."
-msgstr ""
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../inc/template-tags.php:608
 #, php-format
 msgid "There was one post published in %2$s %3$s."
-msgstr ""
+msgid_plural "There were %1$s posts published in %2$s %3$s"
+msgstr[0] ""
+msgstr[1] ""
