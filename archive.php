@@ -65,7 +65,7 @@ get_header(); ?>
 						} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
 							_e( 'Chats', 'independent-publisher' );
 						} else {
-							_e( 'Archives', 'independent_publisher' );
+							_e( 'Archives', 'independent-publisher' );
 
 						}
 						?>

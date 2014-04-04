@@ -38,21 +38,21 @@ if ( ! function_exists( 'independent_publisher_content_nav' ) ) :
 
 		?>
 		<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'independent_publisher' ); ?></h1>
+			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'independent-publisher' ); ?></h1>
 
 			<?php if ( is_single() ) : // navigation links for single posts ?>
 
-				<?php previous_post_link( '<div class="nav-previous"><button>%link</button></div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'independent_publisher' ) . '</span> %title' ); ?>
-				<?php next_post_link( '<div class="nav-next"><button>%link</button></div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'independent_publisher' ) . '</span>' ); ?>
+				<?php previous_post_link( '<div class="nav-previous"><button>%link</button></div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'independent-publisher' ) . '</span> %title' ); ?>
+				<?php next_post_link( '<div class="nav-next"><button>%link</button></div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'independent-publisher' ) . '</span>' ); ?>
 
 			<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 				<?php if ( get_next_posts_link() ) : ?>
-					<div class="nav-previous"><?php next_posts_link( '<button>' . __( '<span class="meta-nav">&larr;</span> Older posts', 'independent_publisher' ) . '</button>' ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( '<button>' . __( '<span class="meta-nav">&larr;</span> Older posts', 'independent-publisher' ) . '</button>' ); ?></div>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-					<div class="nav-next"><?php previous_posts_link( '<button>' . __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) . '</button>' ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( '<button>' . __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'independent-publisher' ) . '</button>' ); ?></div>
 				<?php endif; ?>
 
 			<?php endif; ?>
@@ -82,7 +82,7 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 					<?php printf( sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 					<?php if ( $comment->comment_approved == '0' ) : ?>
 						<?php $comment_content_class = "unapproved"; ?>
-						<em><?php _e( ' - Your comment is awaiting moderation.', 'independent_publisher' ); ?></em>
+						<em><?php _e( ' - Your comment is awaiting moderation.', 'independent-publisher' ); ?></em>
 					<?php endif; ?>
 				</div>
 				<!-- .comment-author .vcard -->
@@ -94,7 +94,7 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 							printf( '%1$s', get_comment_date() ); ?>
 						</time>
 					</a>
-					<?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), ' ' );
+					<?php edit_comment_link( __( '(Edit)', 'independent-publisher' ), ' ' );
 					?>
 				</div>
 				<!-- .comment-meta .commentmetadata -->
@@ -137,7 +137,7 @@ if ( ! function_exists( 'independent_publisher_pings' ) ) :
 				?>
 				<li <?php comment_class( '', $ping->comment_ID ); ?> id="li-comment-<?php echo $ping->comment_ID ?>">
 				<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link( $ping->comment_ID ) ) ?>
-				<span> <?php edit_comment_link( __( '(Edit)', 'independent_publisher' ), '  ', '' ) ?></span>
+				<span> <?php edit_comment_link( __( '(Edit)', 'independent-publisher' ), '  ', '' ) ?></span>
 			<?php
 			}
 		}
@@ -162,7 +162,7 @@ if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 		printf(
 			'<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), $post_author_nice_name ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'independent-publisher' ), $post_author_nice_name ) ),
 			esc_html( $post_author_nice_name )
 		);
 	}
@@ -179,7 +179,7 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 	function independent_publisher_posted_author_cats() {
 
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'independent_publisher' ) );
+		$categories_list = get_the_category_list( __( ', ', 'independent-publisher' ) );
 
 		if ( ( ! post_password_required() && comments_open() && ! independent_publisher_hide_comments() ) || ( ! post_password_required() && independent_publisher_show_post_word_count() && ! get_post_format() ) || independent_publisher_show_date_entry_meta() ) {
 			$separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' );
@@ -193,7 +193,7 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 				printf(
 					'<a href="%1$s" title="%2$s">%3$s</a> %4$s %5$s',
 					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-					esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
+					esc_attr( sprintf( __( 'View all posts by %s', 'independent-publisher' ), get_the_author() ) ),
 					esc_html( get_the_author() ),
 					independent_publisher_entry_meta_category_prefix(),
 					$categories_list
@@ -205,7 +205,7 @@ if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 					'%1$s <a href="%2$s" title="%3$s">%4$s</a>',
 					independent_publisher_entry_meta_author_prefix(),
 					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-					esc_attr( sprintf( __( 'View all posts by %s', 'independent_publisher' ), get_the_author() ) ),
+					esc_attr( sprintf( __( 'View all posts by %s', 'independent-publisher' ), get_the_author() ) ),
 					esc_html( get_the_author() )
 				);
 				echo '</span>';
@@ -251,7 +251,7 @@ if ( ! function_exists( 'independent_publisher_continue_reading_link' ) ) :
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_continue_reading_link() {
-		$text = apply_filters( 'independent_publisher_continue_reading_link_text', ' ' . __( 'Continue Reading &rarr;', 'independent_publisher' ) );
+		$text = apply_filters( 'independent_publisher_continue_reading_link_text', ' ' . __( 'Continue Reading &rarr;', 'independent-publisher' ) );
 
 		printf(
 			'<div class="enhanced-excerpt-read-more"><a class="read-more" href="%1$s">%2$s</a></div>',
@@ -268,7 +268,7 @@ if ( ! function_exists( 'independent_publisher_continue_reading_text' ) ) :
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_continue_reading_text() {
-		return apply_filters( 'independent_publisher_continue_reading_text', __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent_publisher' ) );
+		return apply_filters( 'independent_publisher_continue_reading_text', __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'independent-publisher' ) );
 	}
 endif;
 
@@ -338,7 +338,7 @@ if ( ! function_exists( 'independent_publisher_wp_title' ) ) :
 
 		// Add a page number if necessary:
 		if ( $paged >= 2 || $page >= 2 )
-			$title .= " $sep " . sprintf( __( 'Page %s', 'independent_publisher' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( __( 'Page %s', 'independent-publisher' ), max( $paged, $page ) );
 
 		return $title;
 	}
@@ -358,7 +358,7 @@ if ( ! function_exists( 'independent_publisher_post_categories' ) ) :
 		$output     = '';
 		if ( $categories ) {
 			foreach ( $categories as $category ) {
-				$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'independent_publisher' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+				$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'independent-publisher' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
 				if ( $single )
 					break;
 			}
@@ -473,7 +473,7 @@ if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 			$separator = '';
 		}
 
-		return sprintf( '<span>' . __( '%1$s Words', 'independent_publisher' ) . '</span>%2$s', independent_publisher_post_word_count(), $separator );
+		return sprintf( '<span>' . __( '%1$s Words', 'independent-publisher' ) . '</span>%2$s', independent_publisher_post_word_count(), $separator );
 	}
 endif;
 
@@ -526,10 +526,10 @@ if ( ! function_exists( 'independent_publisher_search_stats' ) ):
 		 * Only show pagination info when there is more than 1 page
 		 */
 		if ( $total_pages > 1 ) {
-			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent_publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
+			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
 		}
 
-		$stats_text = sprintf( _n( 'Found one search result for <strong>%2$s</strong>.', 'Found %1$s search results for <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), get_search_query() );
+		$stats_text = sprintf( _n( 'Found one search result for <strong>%2$s</strong>.', 'Found %1$s search results for <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent-publisher' ), number_format_i18n( $total ), get_search_query() );
 
 		return wpautop( $stats_text );
 	}
@@ -551,13 +551,13 @@ if ( ! function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 		 * Only show pagination info when there is more than 1 page
 		 */
 		if ( $total_pages > 1 ) {
-			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent_publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
+			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
 		}
 
 		if ( $taxonomy === 'category' ) {
-			$stats_text = sprintf( _n( 'There is one post filed in <strong>%2$s</strong>.', 'There are %1$s posts filed in <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
+			$stats_text = sprintf( _n( 'There is one post filed in <strong>%2$s</strong>.', 'There are %1$s posts filed in <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent-publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
 		} elseif ( $taxonomy === 'post_tag' ) {
-			$stats_text = sprintf( _n( 'There is one post tagged <strong>%2$s</strong>.', 'There are %1$s posts tagged <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
+			$stats_text = sprintf( _n( 'There is one post tagged <strong>%2$s</strong>.', 'There are %1$s posts tagged <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent-publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
 		}
 
 		return wpautop( $stats_text );
@@ -580,7 +580,7 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 		 * Only show pagination info when there is more than 1 page
 		 */
 		if ( $total_pages > 1 ) {
-			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent_publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
+			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
 		}
 
 		/**
@@ -588,24 +588,24 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 		 */
 		if ( trim( $date_archive_meta ) === '' ) {
 			if ( is_year() && ( get_the_date( 'Y' ) != date( 'Y' ) ) ) {
-				$date_archive_meta = sprintf( _n( 'There was one post published in %2$s.', 'There were %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ) );
+				$date_archive_meta = sprintf( _n( 'There was one post published in %2$s.', 'There were %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent-publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ) );
 			} else if ( is_year() && ( get_the_date( 'Y' ) == date( 'Y' ) ) ) {
-				$date_archive_meta = sprintf( _n( 'There is one post published in %2$s.', 'There are %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent_publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ) );
+				$date_archive_meta = sprintf( _n( 'There is one post published in %2$s.', 'There are %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent-publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ) );
 			} else if ( is_day() ) {
 				$date_archive_meta = sprintf(
-					_n( 'There was one post published on %2$s.', 'There were %1$s posts published on %2$s' . $pagination_info . '.', $total, 'independent_publisher' ),
+					_n( 'There was one post published on %2$s.', 'There were %1$s posts published on %2$s' . $pagination_info . '.', $total, 'independent-publisher' ),
 					number_format_i18n( $total ), get_the_date()
 				);
 			} else if ( is_month() ) {
 				$year = get_query_var( 'year' );
 				if ( empty( $year ) ) {
 					$date_archive_meta = sprintf(
-						_n( 'There was one post published in the month of %2$s.', 'There were %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent_publisher' ),
+						_n( 'There was one post published in the month of %2$s.', 'There were %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent-publisher' ),
 						number_format_i18n( $total ), get_the_date( 'F' )
 					);
 				} else {
 					$date_archive_meta = sprintf(
-						_n( 'There was one post published in %2$s %3$s.', 'There were %1$s posts published in %2$s %3$s' . $pagination_info . '.', $total, 'independent_publisher' ),
+						_n( 'There was one post published in %2$s %3$s.', 'There were %1$s posts published in %2$s %3$s' . $pagination_info . '.', $total, 'independent-publisher' ),
 						number_format_i18n( $total ), get_the_date( 'F' ), get_the_date( 'Y' )
 					);
 				}

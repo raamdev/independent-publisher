@@ -36,21 +36,21 @@ get_header(); ?>
 							array(
 								'before'           => '<div class="page-links-next-prev">',
 								'after'            => '</div>',
-								'nextpagelink'     => '<button class="next-page-nav">' . __( 'Next page &rarr;', 'independent_publisher' ) . '</button>',
-								'previouspagelink' => '<button class="previous-page-nav">' . __( '&larr; Previous page', 'independent_publisher' ) . '</button>',
+								'nextpagelink'     => '<button class="next-page-nav">' . __( 'Next page &rarr;', 'independent-publisher' ) . '</button>',
+								'previouspagelink' => '<button class="previous-page-nav">' . __( '&larr; Previous page', 'independent-publisher' ) . '</button>',
 								'next_or_number'   => 'next'
 							)
 						); ?>
 						<?php wp_link_pages(
 							array(
-								'before' => '<div class="page-links">' . __( 'Pages:', 'independent_publisher' ),
+								'before' => '<div class="page-links">' . __( 'Pages:', 'independent-publisher' ),
 								'after'  => '</div>'
 							)
 						); ?>
 					</div>
 					<!-- .entry-content -->
 
-					<?php edit_post_link( __( 'Edit', 'independent_publisher' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'independent-publisher' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<?php comments_template( '', true ); ?>
