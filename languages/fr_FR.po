@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-03-29 22:42-0500\n"
-"PO-Revision-Date: 2014-03-30 10:10+0100\n"
+"POT-Creation-Date: 2014-04-02 12:56-0500\n"
+"PO-Revision-Date: 2014-04-04 23:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -25,8 +25,8 @@ msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Il semble que rien n'ait été trouvée à cette adresse. Peut-être pouvez-vous "
-"essayer un des liens ci-dessous ou effectuer une recherche ?"
+"Il semble que rien n&rsquo;ait été trouvée à cette adresse. Peut-être pouvez-"
+"vous essayer un des liens ci-dessous ou effectuer une recherche ?"
 
 #: ../404.php:29 ../page_archive-template.php:32
 msgid "Most Used Categories"
@@ -99,7 +99,7 @@ msgstr "Commentaires Clos"
 
 #: ../comments.php:102
 msgid "Readers who shared this"
-msgstr "Lecteurs l'ayant partagé"
+msgstr "Lecteurs l&rsquo;ayant partagé"
 
 #: ../comments.php:104
 msgid "Thank you!"
@@ -121,16 +121,16 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Désolé, la recherche n'a donné aucun résultat... SVP, ré-essayer avec des "
-"mots clés différents."
+"Désolé, la recherche n&rsquo;a donné aucun résultat... SVP, ré-essayer avec "
+"des mots clés différents."
 
 #: ../content-none.php:30 ../no-results.php:31
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Il semble que rien n'ait été trouvé à cette adresse. Peut-être qu'une "
-"recherche pourrait vous aider."
+"Il semble que rien n&rsquo;ait été trouvé à cette adresse. Peut-être "
+"qu&rsquo;une recherche pourrait vous aider."
 
 #: ../content-page.php:22 ../content-single.php:36
 #: ../page_one-column-template.php:39
@@ -160,7 +160,7 @@ msgstr "Permalien vers %s"
 
 #: ../content.php:91 ../functions.php:375
 msgid "Comment"
-msgstr "Commentaire"
+msgstr "Commenter"
 
 #: ../content.php:91
 msgid "% Comments"
@@ -180,7 +180,7 @@ msgstr "Barre Latérale"
 
 #: ../functions.php:151
 msgid "Archive Page"
-msgstr "Page d'Archive"
+msgstr "Page d&rsquo;Archive"
 
 #: ../functions.php:230
 #, php-format
@@ -190,6 +190,10 @@ msgstr "%1$s fièrement propulsé par %2$s"
 #: ../functions.php:269
 msgid "Anonymous"
 msgstr "Anonyme"
+
+#: ../functions.php:282
+msgid "Reply to"
+msgstr "Répondre à"
 
 #: ../functions.php:316
 #, php-format
@@ -258,7 +262,7 @@ msgid ""
 "%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
 "%7$s</a>"
 msgstr ""
-"\"%1$s\" - <a href=\"%2$s\" title=\"Lien vers l'image originale\">%3$s "
+"\"%1$s\" - <a href=\"%2$s\" title=\"Lien vers l&rsquo;image originale\">%3$s "
 "&times; %4$s</a> %5$s <a href=\"%6$s\" title=\"Retourner à %7$s\" rel="
 "\"gallery\">%7$s</a>"
 
@@ -276,7 +280,7 @@ msgstr "Archives Annuelles"
 
 #: ../page_archive-template.php:47
 msgid "Select Year"
-msgstr "Choisir l'Année"
+msgstr "Choisir l&rsquo;Année"
 
 #: ../page_archive-template.php:53
 msgid "Monthly Archives"
@@ -329,7 +333,7 @@ msgstr "Extraits de Billet"
 
 #: ../inc/customizer.php:70
 msgid "Generate One-Sentence Excerpts"
-msgstr "Générer les Extraits à partir d'une Phrase"
+msgstr "Générer les Extraits à partir d&rsquo;une Phrase"
 
 #: ../inc/customizer.php:87
 msgid "Always Show Full Content for First Post"
@@ -337,11 +341,12 @@ msgstr "Toujours Montrer le Contenu Complet du Premier Billet"
 
 #: ../inc/customizer.php:104
 msgid "Show Post Word Count in Entry Meta"
-msgstr "Montrer le Nombre de Mots du Billet dans les Méta-Données d'Entrée"
+msgstr ""
+"Montrer le Nombre de Mots du Billet dans les Méta-Données d&rsquo;Entrée"
 
 #: ../inc/customizer.php:121
 msgid "Show Post Date in Entry Meta"
-msgstr "Montrer la Date du Billet dans les Méta-Données d'Entrée"
+msgstr "Montrer la Date du Billet dans les Méta-Données d&rsquo;Entrée"
 
 #: ../inc/customizer.php:138
 msgid "Show Widgets on Single Pages"
@@ -373,7 +378,7 @@ msgstr "Couleur des Liens"
 
 #: ../inc/customizer.php:217
 msgid "Title and Header Text Color"
-msgstr "Couleur du Titre et de l'En-Tête"
+msgstr "Couleur du Titre et de l&rsquo;En-Tête"
 
 #: ../inc/customizer.php:222
 msgid "Primary Meta Text Color"
