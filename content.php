@@ -44,7 +44,7 @@
 
 			<?php /* Only show featured image for Standard post formats */ ?>
 			<?php if ( has_post_thumbnail() && ! get_post_format() ) : ?>
-				<?php the_post_thumbnail( array( 700, 700 ) ); ?>
+				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent_publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail( array( 700, 700 ) ); ?></a>
 			<?php endif; ?>
 
 			<?php the_content( independent_publisher_continue_reading_text() ); ?>
