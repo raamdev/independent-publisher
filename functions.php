@@ -962,3 +962,44 @@ function independent_publisher_show_page_load_progress_bar() {
 		return false;
 	}
 }
+
+/**
+ * Drops the html/css/javscript necessary to enable page load progress bar
+ */
+function independent_publisher_replytocom() { ?>
+		<style media="screen" type="text/css">
+			#nprogress .bar {
+			  background: #29d;
+
+			  position: fixed;
+			  z-index: 100;
+			  top: 0;
+			  left: 0;
+
+			  width: 100%;
+			  height: 5px;
+			}
+		</style>
+		<div class="bar" role="bar"></div>
+		<script type="text/javascript">
+			NProgress.start();
+
+			setTimeout(function() {
+
+				NProgress.done();
+
+				$('.fade').removeClass('out');
+
+			}, 1000);
+
+			$("#b-0").click(function() { NProgress.start(); });
+
+			$("#b-40").click(function() { NProgress.set(0.4); });
+
+			$("#b-inc").click(function() { NProgress.inc(); });
+
+			$("#b-100").click(function() { NProgress.done(); });
+
+		</script>
+	<?php
+}
