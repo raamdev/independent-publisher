@@ -192,6 +192,23 @@ class IndependentPublisher_Customize {
 						 )
 		);
 
+		// Show Page Load Progress Bar
+		$wp_customize->add_setting(
+					 'independent_publisher_general_options[show_page_load_progress_bar]', array(
+							 'default'    => false,
+							 'type'       => 'option',
+							 'capability' => 'edit_theme_options',
+						 )
+		);
+		$wp_customize->add_control(
+					 'show_page_load_progress_bar', array(
+							 'settings' => 'independent_publisher_general_options[show_page_load_progress_bar]',
+							 'label'    => __( 'Show Page Load Progress Bar', 'independent-publisher' ),
+							 'section'  => 'independent_publisher_general_options',
+							 'type'     => 'checkbox',
+						 )
+		);
+
 		// Color options
 
 		$colors = array();
