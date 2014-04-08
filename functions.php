@@ -170,6 +170,12 @@ function independent_publisher_scripts() {
 
 	wp_enqueue_script( 'independent-publisher-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	if (independent_publisher_page_load_progress_bar_enabled()) {
+		wp_enqueue_style( 'nprogress-css', get_template_directory_uri() . '/css/nprogress.css', array(), '0.1.3' );
+
+		wp_enqueue_script( 'nprogress', get_template_directory_uri() . '/js/nprogress.js', array(), '0.1.3' );
+	}
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) && ! independent_publisher_hide_comments() ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -195,6 +201,17 @@ function independent_publisher_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_scripts' );
+
+/**
+ * Insert Page Load Progress Bar markup
+ */
+function progress_bar_markup() {
+	if (independent_publisher_page_load_progress_bar_enabled()) {
+		independent_publisher_show_page_load_progress_bar();
+	}
+}
+
+add_action( 'wp_footer', 'progress_bar_markup' );
 
 if ( ! function_exists( 'independent_publisher_stylesheet' ) ) :
 	/**
@@ -950,4 +967,57 @@ function independent_publisher_html_tag_schema() {
 	}
 
 	echo 'itemscope="itemscope" itemtype="' . $schema . $type . '"';
+}
+
+/**
+ * Returns true if Enable Page Load Progress Bar option is enabled
+ */
+function independent_publisher_page_load_progress_bar_enabled() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['show_page_load_progress_bar'] ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
+ * Drops the html/css/javscript necessary to enable page load progress bar
+ */
+function independent_publisher_show_page_load_progress_bar() { ?>
+		<style media="screen" type="text/css">
+			#nprogress .bar {
+			  background: #29d;
+
+			  position: fixed;
+			  z-index: 100;
+			  top: 0;
+			  left: 0;
+
+			  width: 100%;
+			  height: 5px;
+			}
+		</style>
+		<div class="bar" role="bar"></div>
+		<script type="text/javascript">
+			NProgress.start();
+
+			setTimeout(function() {
+
+				NProgress.done();
+
+				jQuery('.fade').removeClass('out');
+
+			}, 1000);
+
+			jQuery("#b-0").click(function() { NProgress.start(); });
+
+			jQuery("#b-40").click(function() { NProgress.set(0.4); });
+
+			jQuery("#b-inc").click(function() { NProgress.inc(); });
+
+			jQuery("#b-100").click(function() { NProgress.done(); });
+
+		</script>
+	<?php
 }
