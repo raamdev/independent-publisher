@@ -325,6 +325,10 @@ class IndependentPublisher_Customize {
 			<?php self::generate_css('.site-footer a:hover', 'color', 'link_color'); ?>
 			<?php self::generate_css('blockquote', 'border-color', 'link_color'); ?>
 			<?php self::generate_css('#infinite-footer .blog-credits a, #infinite-footer .blog-credits a:hover', 'color', 'link_color'); ?>
+			<?php self::generate_css('#nprogress .bar', 'background', 'link_color'); ?>
+			<?php self::generate_css('#nprogress .spinner-icon', 'border-top-color', 'link_color'); ?>
+			<?php self::generate_css('#nprogress .spinner-icon', 'border-left-color', 'link_color'); ?>
+			<?php self::generate_css('#nprogress .peg', 'box-shadow', 'link_color', '', '', true, '%1$s { %2$s:0 0 10px %3$s, 0 0 5px %3$s; }'); ?>
 
 			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s:%3$s; /* Old browsers */ }'); ?>
 			<?php self::generate_css('button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -moz-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* FF3.6+ */ }'); ?>
