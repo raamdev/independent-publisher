@@ -44,6 +44,18 @@ if ( ! function_exists( 'independent_publisher_jetpack_sharing_label_css' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'independent_publisher_jetpack_dark_overlay_fix_css' ) ) :
+	/**
+	 * Fixes an issue with a dark overlay that appears < 800px when the Jetpack Infinite Scroll
+	 * module is enabled. See https://github.com/raamdev/independent-publisher/issues/72
+	 */
+	function independent_publisher_jetpack_dark_overlay_fix_css() {
+		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) ) {
+			wp_enqueue_style( 'independent-publisher-jetpack-infinite-scroll-dark-overlay-fix', get_template_directory_uri() . '/css/jetpack-infinite-scroll-dark-overlay-fix.css', array(), '1.0' );
+		}
+	}
+endif;
+
 /**
  * When the Disqus Commenting System is active and enabled, don't load our comment form enhancements
  */

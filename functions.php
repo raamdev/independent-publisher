@@ -187,6 +187,11 @@ function independent_publisher_scripts() {
 	 * Load JetPack Sharing Buttons blank Sharing Label Enhancement
 	 */
 	independent_publisher_jetpack_sharing_label_css();
+
+	/**
+	 * Load JetPack Infinite Scroll Dark Overlay Bug Fix
+	 */
+	independent_publisher_jetpack_dark_overlay_fix_css();
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_scripts' );

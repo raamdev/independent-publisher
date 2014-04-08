@@ -1,0 +1,9 @@
+/**
+ * Fixes an issue with a dark overlay that appears < 800px when the Jetpack Infinite Scroll
+ * module is enabled. See https://github.com/raamdev/independent-publisher/issues/72
+ */
+@media (max-width: 800px) {
+	#infinite-handle span {
+		display: inline;
+	}
+}
