@@ -950,3 +950,15 @@ function independent_publisher_html_tag_schema() {
 
 	echo 'itemscope="itemscope" itemtype="' . $schema . $type . '"';
 }
+
+/**
+ * Returns true if Enable Page Load Progress Bar option is enabled
+ */
+function independent_publisher_show_page_load_progress_bar() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['show_page_load_progress_bar'] ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
