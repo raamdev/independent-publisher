@@ -947,64 +947,68 @@ endif;
 
 add_filter( 'the_excerpt', 'independent_publisher_maybe_linkify_the_excerpt' );
 
-/**
- * Returns the proper schema type
- */
-function independent_publisher_html_tag_schema() {
-	$schema = 'http://schema.org/';
+if ( ! function_exists( 'independent_publisher_html_tag_schema' ) ) :
+	/**
+	 * Returns the proper schema type
+	 */
+	function independent_publisher_html_tag_schema() {
+		$schema = 'http://schema.org/';
 
-	// Is single post
-	if ( is_single() ) {
-		$type = "Article";
-	} // Contact form page ID
-	else {
-		if ( is_page( 1 ) ) {
-			$type = 'ContactPage';
-		} // Is author page
-		elseif ( is_author() ) {
-			$type = 'ProfilePage';
-		} // Is search results page
-		elseif ( is_search() ) {
-			$type = 'SearchResultsPage';
-		} // Is of movie post type
-		elseif ( is_singular( 'movies' ) ) {
-			$type = 'Movie';
-		} // Is of book post type
-		elseif ( is_singular( 'books' ) ) {
-			$type = 'Book';
-		} else {
-			$type = 'WebPage';
+		// Is single post
+		if ( is_single() ) {
+			$type = "Article";
+		} // Contact form page ID
+		else {
+			if ( is_page( 1 ) ) {
+				$type = 'ContactPage';
+			} // Is author page
+			elseif ( is_author() ) {
+				$type = 'ProfilePage';
+			} // Is search results page
+			elseif ( is_search() ) {
+				$type = 'SearchResultsPage';
+			} // Is of movie post type
+			elseif ( is_singular( 'movies' ) ) {
+				$type = 'Movie';
+			} // Is of book post type
+			elseif ( is_singular( 'books' ) ) {
+				$type = 'Book';
+			} else {
+				$type = 'WebPage';
+			}
 		}
+
+		echo 'itemscope="itemscope" itemtype="' . $schema . $type . '"';
 	}
+endif;
 
-	echo 'itemscope="itemscope" itemtype="' . $schema . $type . '"';
-}
+if ( ! function_exists( 'independent_publisher_show_page_load_progress_bar' ) ) :
+	/**
+	 * Echos the HTML and JavScript necessary to enable page load progress bar
+	 */
+	function independent_publisher_show_page_load_progress_bar() { ?>
+	<!-- Progress Bar - https://github.com/rstacruz/nprogress -->
 
-/**
- * Drops the html/css/javscript necessary to enable page load progress bar
- */
-function independent_publisher_show_page_load_progress_bar() { ?>
-<!-- Progress Bar - https://github.com/rstacruz/nprogress -->
+		<div class="bar" role="bar"></div>
+		<script type="text/javascript">
+			NProgress.start();
 
-	<div class="bar" role="bar"></div>
-	<script type="text/javascript">
-		NProgress.start();
+			setTimeout(function() {
 
-		setTimeout(function() {
+				NProgress.done();
 
-			NProgress.done();
+				jQuery('.fade').removeClass('out');
 
-			jQuery('.fade').removeClass('out');
+			}, 1000);
 
-		}, 1000);
+			jQuery("#b-0").click(function() { NProgress.start(); });
+			jQuery("#b-40").click(function() { NProgress.set(0.4); });
+			jQuery("#b-inc").click(function() { NProgress.inc(); });
+			jQuery("#b-100").click(function() { NProgress.done(); });
+		</script>
 
-		jQuery("#b-0").click(function() { NProgress.start(); });
-		jQuery("#b-40").click(function() { NProgress.set(0.4); });
-		jQuery("#b-inc").click(function() { NProgress.inc(); });
-		jQuery("#b-100").click(function() { NProgress.done(); });
-	</script>
+	<!-- End Progress Bar -->
 
-<!-- End Progress Bar -->
-
-	<?php
-}
+		<?php
+	}
+endif;

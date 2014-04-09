@@ -281,3 +281,5 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_clean_content()` - Cleans the content for display as a Quote or Aside by stripping anything that might screw up formatting
 - `independent_publisher_maybe_linkify_the_content()` - Returns the post content for Asides and Quotes with the content linked to the permalink, for display on non-Single pages
 - `independent_publisher_maybe_linkify_the_excerpt()` - Returns the excerpt with the excerpt linked to the permalink, for display on non-Single pages
+- `independent_publisher_html_tag_schema()` - Returns the proper schema type
+- `independent_publisher_show_page_load_progress_bar()` - Echos the HTML and JavScript necessary to enable page load progress bar
