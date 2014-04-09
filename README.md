@@ -58,11 +58,12 @@ The following colors can be changed via the Colors section:
 
 ### General Options
 
-![screen shot 2014-03-04 at 4 18 13 pm](https://f.cloud.github.com/assets/53005/2326412/95fb35fa-a3e2-11e3-9e68-b97f472055d1.png)
+![screen shot 2014-04-09 at 5 59 32 pm](https://cloud.githubusercontent.com/assets/53005/2661818/4c9f84a8-c032-11e3-82ca-a402685c0690.png)
 
-- **Show Post Word Count in Entry Meta**. Enabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
 - **Show Post Date in Entry Meta**. Disabled by default. When this option is enabled, the post date will be shown in the entry meta on Blog, Archive, and Search pages. It uses the date format specified in *Dashboard → Settings → General → Date Format*.
-- **Show Widgets on Single Pages**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single pages.
+- **Show Post Word Count in Entry Meta**. Enabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
+- **Show Widgets on Single Post Pages**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single Post pages.
+- **Show Nav Menu on Single Post Pages**. Disabled by default. When this option is enabled, the primary navigation menu will also be shown on Single Post pages.
 - **Enable Multi-Author Mode**. Disabled by default. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (*Dashboard → Appearance → Customize → Header Image*) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page.
 - **Comments Call to Action**. "Write a Comment" by default. This allows you to change the label that shows up on the 'Write a Comment' button and also changes the title of the comment form itself.
 

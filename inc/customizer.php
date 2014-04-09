@@ -124,7 +124,7 @@ class IndependentPublisher_Customize {
 						 )
 		);
 
-		// Show Widgets on Single pages
+		// Show Widgets on Single Post pages
 		$wp_customize->add_setting(
 					 'independent_publisher_general_options[show_widgets_on_single]', array(
 							 'default'    => false,
@@ -135,7 +135,24 @@ class IndependentPublisher_Customize {
 		$wp_customize->add_control(
 					 'show_widgets_on_single', array(
 							 'settings' => 'independent_publisher_general_options[show_widgets_on_single]',
-							 'label'    => __( 'Show Widgets on Single Pages', 'independent-publisher' ),
+							 'label'    => __( 'Show Widgets on Single Post Pages', 'independent-publisher' ),
+							 'section'  => 'independent_publisher_general_options',
+							 'type'     => 'checkbox',
+						 )
+		);
+
+		// Show Nav Menu on Single Post pages
+		$wp_customize->add_setting(
+					 'independent_publisher_general_options[show_nav_menu_on_single]', array(
+							 'default'    => false,
+							 'type'       => 'option',
+							 'capability' => 'edit_theme_options',
+						 )
+		);
+		$wp_customize->add_control(
+					 'show_nav_menu_on_single', array(
+							 'settings' => 'independent_publisher_general_options[show_nav_menu_on_single]',
+							 'label'    => __( 'Show Nav Menu on Single Post Pages', 'independent-publisher' ),
 							 'section'  => 'independent_publisher_general_options',
 							 'type'     => 'checkbox',
 						 )
