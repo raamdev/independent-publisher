@@ -2293,6 +2293,7 @@ table th {
 
 	.site-published-date {
 		font-size: 14px;
+		line-height: 1;
 	}
 
 	.single .site-header-info {

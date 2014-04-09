@@ -58,12 +58,13 @@ The following colors can be changed via the Colors section:
 
 ### General Options
 
-![screen shot 2014-04-09 at 5 59 32 pm](https://cloud.githubusercontent.com/assets/53005/2661818/4c9f84a8-c032-11e3-82ca-a402685c0690.png)
+![screen shot 2014-04-09 at 7 24 01 pm](https://cloud.githubusercontent.com/assets/53005/2662472/1aac03a2-c03e-11e3-8093-258870e5f1fc.png)
 
+- **Show Widgets on Single Posts**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single Post pages.
 - **Show Post Date in Entry Meta**. Disabled by default. When this option is enabled, the post date will be shown in the entry meta on Blog, Archive, and Search pages. It uses the date format specified in *Dashboard → Settings → General → Date Format*.
-- **Show Post Word Count in Entry Meta**. Enabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
-- **Show Widgets on Single Post Pages**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single Post pages.
-- **Show Nav Menu on Single Post Pages**. Disabled by default. When this option is enabled, the primary navigation menu will also be shown on Single Post pages.
+- **Show Post Word Count in Entry Meta**. Disabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
+- **Show Nav Menu on Single Posts**. Disabled by default. When this option is enabled, the primary navigation menu will also be shown on Single Post pages.
+- **Show Updated Date on Single Posts**. Disabled by default. When this option is enabled, the post's last modified date will be shown underneath the published date. If you enable this, you can disable this on a per-post basis by adding a Custom Field to a post with the name `independent_publisher_hide_updated_date` and any value (`yes` or `true` will do).
 - **Enable Multi-Author Mode**. Disabled by default. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (*Dashboard → Appearance → Customize → Header Image*) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page.
 - **Comments Call to Action**. "Write a Comment" by default. This allows you to change the label that shows up on the 'Write a Comment' button and also changes the title of the comment form itself.
 
@@ -246,6 +247,7 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_posted_author()` - Prints HTML with meta information for the current author.
 - `independent_publisher_posted_author_cats()` - Prints HTML with meta information for the current author and post categories. Only prints author name when Multi-Author Mode is enabled.
 - `independent_publisher_posted_on_date()` - Prints HTML with meta information for the current post-date/time.
+- `independent_publisher_post_updated_date()` - Prints HTML with meta information for the current post's last updated date/time.
 - `independent_publisher_continue_reading_link()` - Prints HTML with Continue Reading link
 - `independent_publisher_continue_reading_text()` - Returns Continue Reading text for usage in `the_content()`
 - `independent_publisher_categorized_blog()` - Returns true if a blog has more than 1 category

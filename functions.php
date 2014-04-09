@@ -573,7 +573,7 @@ function independent_publisher_page_load_progress_bar_enabled() {
 }
 
 /**
- * Returns true if Show Nav Menu on Single Post Pages option is enabled
+ * Returns true if Show Nav Menu on Single Posts option is enabled
  */
 function independent_publisher_show_nav_on_single() {
 	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
@@ -584,6 +584,18 @@ function independent_publisher_show_nav_on_single() {
 	}
 }
 
+
+/**
+ * Returns true if Show Updated Date on Single Posts option is enabled
+ */
+function independent_publisher_show_updated_date_on_single() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['show_updated_date_on_single'] ) && $independent_publisher_general_options['show_updated_date_on_single'] ) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 /**
  * Add full-width-featured-image to body class when displaying a post with Full Width Featured Image enabled

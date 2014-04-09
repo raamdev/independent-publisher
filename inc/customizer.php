@@ -93,7 +93,7 @@ class IndependentPublisher_Customize {
 		// Show Post Word Count
 		$wp_customize->add_setting(
 					 'independent_publisher_general_options[show_post_word_count]', array(
-							 'default'    => true,
+							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
 						 )
@@ -124,7 +124,7 @@ class IndependentPublisher_Customize {
 						 )
 		);
 
-		// Show Widgets on Single Post pages
+		// Show Widgets on Single Posts
 		$wp_customize->add_setting(
 					 'independent_publisher_general_options[show_widgets_on_single]', array(
 							 'default'    => false,
@@ -135,13 +135,13 @@ class IndependentPublisher_Customize {
 		$wp_customize->add_control(
 					 'show_widgets_on_single', array(
 							 'settings' => 'independent_publisher_general_options[show_widgets_on_single]',
-							 'label'    => __( 'Show Widgets on Single Post Pages', 'independent-publisher' ),
+							 'label'    => __( 'Show Widgets on Single Posts', 'independent-publisher' ),
 							 'section'  => 'independent_publisher_general_options',
 							 'type'     => 'checkbox',
 						 )
 		);
 
-		// Show Nav Menu on Single Post pages
+		// Show Nav Menu on Single Posts
 		$wp_customize->add_setting(
 					 'independent_publisher_general_options[show_nav_menu_on_single]', array(
 							 'default'    => false,
@@ -152,7 +152,24 @@ class IndependentPublisher_Customize {
 		$wp_customize->add_control(
 					 'show_nav_menu_on_single', array(
 							 'settings' => 'independent_publisher_general_options[show_nav_menu_on_single]',
-							 'label'    => __( 'Show Nav Menu on Single Post Pages', 'independent-publisher' ),
+							 'label'    => __( 'Show Nav Menu on Single Posts', 'independent-publisher' ),
+							 'section'  => 'independent_publisher_general_options',
+							 'type'     => 'checkbox',
+						 )
+		);
+
+		// Show Updated Date on Single Posts
+		$wp_customize->add_setting(
+					 'independent_publisher_general_options[show_updated_date_on_single]', array(
+							 'default'    => false,
+							 'type'       => 'option',
+							 'capability' => 'edit_theme_options',
+						 )
+		);
+		$wp_customize->add_control(
+					 'show_updated_date_on_single', array(
+							 'settings' => 'independent_publisher_general_options[show_updated_date_on_single]',
+							 'label'    => __( 'Show Updated Date on Single Posts', 'independent-publisher' ),
 							 'section'  => 'independent_publisher_general_options',
 							 'type'     => 'checkbox',
 						 )

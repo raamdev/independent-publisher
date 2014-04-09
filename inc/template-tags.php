@@ -235,11 +235,28 @@ if ( ! function_exists( 'independent_publisher_posted_on_date' ) ) :
 	 */
 	function independent_publisher_posted_on_date() {
 		printf(
-			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>',
+			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate="pubdate">%4$s</time></a>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_title() ),
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() )
+		);
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_post_updated_date' ) ) :
+	/**
+	 * Prints HTML with meta information for the current post's last updated date/time.
+	 *
+	 * @since Independent Publisher 1.4
+	 */
+	function independent_publisher_post_updated_date() {
+		printf(
+			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date-modified" datetime="%3$s" moddate="moddate">%4$s</time></a>',
+			esc_url( get_permalink() ),
+			esc_attr( get_the_title() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
 		);
 	}
 endif;
@@ -414,8 +431,17 @@ if ( ! function_exists( 'independent_publisher_posted_author_card' ) ) :
 		<?php get_template_part( 'menu', 'social' ); ?>
 
 		<div class="site-published-separator"></div>
-		<h2 class="site-published">Published</h2>
+		<h2 class="site-published"><?php _e('Published', 'independent-publisher'); ?></h2>
 		<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
+		<?php /* Show last updated date if the post was modified AND
+					Show Updated Date on Single Posts option is enabled AND
+						'independent_publisher_hide_updated_date' Custom Field is not present on this post */ ?>
+		<?php if ( get_the_modified_date() !== get_the_date() &&
+					independent_publisher_show_updated_date_on_single() &&
+						! get_post_meta( get_the_ID(), 'independent_publisher_hide_updated_date', TRUE ) ) : ?>
+			<h2 class="site-published"><?php _e('Updated', 'independent-publisher'); ?></h2>
+			<h2 class="site-published-date"><?php independent_publisher_post_updated_date(); ?></h2>
+		<?php endif; ?>
 
 		<?php do_action( 'independent_publisher_after_post_published_date' ); ?>
 	<?php
@@ -447,8 +473,16 @@ if ( ! function_exists( 'independent_publisher_posted_author_bottom_card' ) ) :
 				</div>
 				<div class="post-published-date">
 					<h2 class="site-published">Published</h2>
-
 					<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
+					<?php /* Show last updated date if the post was modified AND
+							Show Updated Date on Single Posts option is enabled AND
+								'independent_publisher_hide_updated_date' Custom Field is not present on this post */ ?>
+					<?php if ( get_the_modified_date() !== get_the_date() &&
+								independent_publisher_show_updated_date_on_single() &&
+									! get_post_meta( get_the_ID(), 'independent_publisher_hide_updated_date', TRUE ) ) : ?>
+						<h2 class="site-published"><?php _e('Updated', 'independent-publisher'); ?></h2>
+						<h2 class="site-published-date"><?php independent_publisher_post_updated_date(); ?></h2>
+					<?php endif; ?>
 
 					<?php do_action( 'independent_publisher_after_post_published_date' ); ?>
 
