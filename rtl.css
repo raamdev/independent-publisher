@@ -929,6 +929,10 @@ object {
 	text-align: left;
 }
 
+.single .site-navigation {
+	margin-top: 40px;
+}
+
 #nav-below {
 	margin-top: 3em;
 }
@@ -1954,7 +1958,7 @@ table th {
 	position: relative;
 }
 
-.single-column-layout.single .site-header {
+.single-column-layout.single .site-header-info {
 	display: none;
 }
 
@@ -2126,7 +2130,7 @@ table th {
 		font-size: 14px;
 	}
 
-	.single .site-header {
+	.single .site-header-info {
 		display: none;
 	}
 
