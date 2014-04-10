@@ -15,19 +15,41 @@
   height: 2px;
 }
 
+/**
+ * Move progress bar down when WordPress Admin Bar is loaded
+ */
+.admin-bar #nprogress .bar {
+	top: 32px;
+}
+
+/**
+ * Move progress bar down 46px and disable fancy blur effect
+ * when extra-thick WordPress Admin Bar is loaded
+ */
+@media only screen and (max-width: 800px) {
+	.admin-bar #nprogress .bar {
+		top: 46px;
+	}
+
+	.admin-bar #nprogress .peg {
+		display: none;
+	}
+
+}
+
 /* Fancy blur effect */
 #nprogress .peg {
-  display: block;
-  position: absolute;
-  right: 0px;
-  width: 100px;
-  height: 100%;
-  box-shadow: 0 0 10px #57ad68, 0 0 5px #57ad68;
-  opacity: 1.0;
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 100px;
+	height: 100%;
+	box-shadow: 0 0 10px #57ad68, 0 0 5px #57ad68;
+	opacity: 1.0;
 
-  -webkit-transform: rotate(3deg) translate(0px, -4px);
-      -ms-transform: rotate(3deg) translate(0px, -4px);
-          transform: rotate(3deg) translate(0px, -4px);
+	-webkit-transform: rotate(3deg) translate(0px, -4px);
+	-ms-transform: rotate(3deg) translate(0px, -4px);
+	transform: rotate(3deg) translate(0px, -4px);
 }
 
 /* Remove these to get rid of the spinner */
