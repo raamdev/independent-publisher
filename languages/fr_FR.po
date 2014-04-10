@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-04-04 19:36-0500\n"
-"PO-Revision-Date: 2014-04-08 09:00+0100\n"
+"POT-Creation-Date: 2014-04-09 20:28-0500\n"
+"PO-Revision-Date: 2014-04-10 08:29+0100\n"
 "Last-Translator: Eddy Lelièvre-Berna\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -158,12 +158,13 @@ msgstr "Pages :"
 msgid "Edit"
 msgstr "Editer"
 
-#: ../content.php:21 ../functions.php:893 ../functions.php:908
+#: ../content.php:21 ../content.php:47 ../functions.php:951
+#: ../functions.php:966
 #, php-format
 msgid "Permalink to %s"
 msgstr "Permalien vers %s"
 
-#: ../content.php:91 ../functions.php:375
+#: ../content.php:91 ../functions.php:396
 msgid "Comment"
 msgstr "Commenter"
 
@@ -187,39 +188,39 @@ msgstr "Barre Latérale"
 msgid "Archive Page"
 msgstr "Page d&rsquo;Archive"
 
-#: ../functions.php:230
+#: ../functions.php:251
 #, php-format
 msgid "%1$s empowered by %2$s"
 msgstr "%1$s fièrement propulsé par %2$s"
 
-#: ../functions.php:269
+#: ../functions.php:290
 msgid "Anonymous"
 msgstr "Anonyme"
 
-#: ../functions.php:282
+#: ../functions.php:303
 msgid "Reply to"
 msgstr "Répondre à"
 
-#: ../functions.php:316
+#: ../functions.php:337
 #, php-format
 msgid "Leave a Reply for %s"
 msgstr "Laisser une Réponse à %s"
 
-#: ../functions.php:317
+#: ../functions.php:338
 msgid "Cancel Reply"
 msgstr "Annuler la Réponse"
 
-#: ../functions.php:318
+#: ../functions.php:339
 msgid "Submit Comment"
 msgstr "Soumettre un Commentaire"
 
-#: ../functions.php:321
+#: ../functions.php:342
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 "Vous devez être <a href=\"%s\">identifié</a> pour envoyer un commentaire."
 
-#: ../functions.php:326
+#: ../functions.php:347
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -228,35 +229,35 @@ msgstr ""
 "Identifié comme <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Fermer "
 "cette session\">Log out?</a>"
 
-#: ../functions.php:336
+#: ../functions.php:357
 msgid "Name"
 msgstr "Nom"
 
-#: ../functions.php:341
+#: ../functions.php:362
 msgid "Email"
 msgstr "Email"
 
-#: ../functions.php:346
+#: ../functions.php:367
 msgid "Website"
 msgstr "Site Web"
 
-#: ../functions.php:525
+#: ../functions.php:546
 msgid "Write a Comment"
 msgstr "Ecrire un Commentaire"
 
-#: ../functions.php:688
+#: ../functions.php:746
 msgid "Use as post cover (full-width)"
 msgstr "Utiliser comme billet de couverture (grande largeur)"
 
-#: ../functions.php:869
+#: ../functions.php:927
 msgid "in"
 msgstr "dans"
 
-#: ../functions.php:878
+#: ../functions.php:936
 msgid "by"
 msgstr "par"
 
-#: ../header.php:52
+#: ../header.php:56
 msgid "Skip to content"
 msgstr "Passer au contenu"
 
@@ -354,42 +355,54 @@ msgid "Show Post Date in Entry Meta"
 msgstr "Montrer la Date du Billet dans les Méta-Données d&rsquo;Entrée"
 
 #: ../inc/customizer.php:138
-msgid "Show Widgets on Single Pages"
-msgstr "Montrer les Widgets sur les Pages Simples"
+msgid "Show Widgets on Single Posts"
+msgstr "Montrer les Widgets sur les Billets Simples"
 
 #: ../inc/customizer.php:155
+msgid "Show Nav Menu on Single Posts"
+msgstr "Montrer le Menu de Navigation sur les Billets Simples"
+
+#: ../inc/customizer.php:172
+msgid "Show Updated Date on Single Posts"
+msgstr "Montrer la Date de Mise à Jour sur les Billets Simples"
+
+#: ../inc/customizer.php:189
 msgid "Single-Column Layout"
 msgstr "Disposition en une Seule Colonne"
 
-#: ../inc/customizer.php:172
+#: ../inc/customizer.php:206
 msgid "Enable Multi-Author Mode"
 msgstr "Activer le Mode Multi-Auteur"
 
-#: ../inc/customizer.php:189
+#: ../inc/customizer.php:223
+msgid "Show Page Load Progress Bar"
+msgstr "Montrer la Barre de Progression de Chargement des Pages"
+
+#: ../inc/customizer.php:240
 msgid "Comments Call to Action"
 msgstr "Appel aux Commentaires"
 
-#: ../inc/customizer.php:202
+#: ../inc/customizer.php:253
 msgid "Text Color"
 msgstr "Couleur de Texte"
 
-#: ../inc/customizer.php:207
+#: ../inc/customizer.php:258
 msgid "Comment Form Background Color"
 msgstr "Couleur de Fond du Formulaire des Commentaires"
 
-#: ../inc/customizer.php:212
+#: ../inc/customizer.php:263
 msgid "Link Color"
 msgstr "Couleur des Liens"
 
-#: ../inc/customizer.php:217
+#: ../inc/customizer.php:268
 msgid "Title and Header Text Color"
 msgstr "Couleur du Titre et de l&rsquo;En-Tête"
 
-#: ../inc/customizer.php:222
+#: ../inc/customizer.php:273
 msgid "Primary Meta Text Color"
 msgstr "Couleur des Méta-Données Primaires"
 
-#: ../inc/customizer.php:227
+#: ../inc/customizer.php:278
 msgid "Secondary Meta Text Color"
 msgstr "Couleur des Méta-Données Secondaires"
 
@@ -431,85 +444,93 @@ msgstr "Voir tous les billets par %s"
 msgid ", "
 msgstr ","
 
-#: ../inc/template-tags.php:254
+#: ../inc/template-tags.php:271
 msgid "Continue Reading &rarr;"
 msgstr "Poursuivre la Lecture &rarr;"
 
-#: ../inc/template-tags.php:271
+#: ../inc/template-tags.php:288
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Poursuivre la lecture <span class=\"meta-nav\">&rarr;</span>"
 
-#: ../inc/template-tags.php:341
+#: ../inc/template-tags.php:358
 #, php-format
 msgid "Page %s"
 msgstr "Page %s"
 
-#: ../inc/template-tags.php:361
+#: ../inc/template-tags.php:378
 #, php-format
 msgid "View all posts in %s"
 msgstr "Voir tous les billets dans %s"
 
-#: ../inc/template-tags.php:476
+#: ../inc/template-tags.php:434
+msgid "Published"
+msgstr "Publié"
+
+#: ../inc/template-tags.php:442 ../inc/template-tags.php:483
+msgid "Updated"
+msgstr "Mis à Jour"
+
+#: ../inc/template-tags.php:510
 #, php-format
 msgid "%1$s Words"
 msgstr "%1$s Mots"
 
-#: ../inc/template-tags.php:529 ../inc/template-tags.php:554
-#: ../inc/template-tags.php:583
+#: ../inc/template-tags.php:563 ../inc/template-tags.php:588
+#: ../inc/template-tags.php:617
 #, php-format
 msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
 msgstr " (page <strong>%1$s</strong> de <strong>%2$s</strong>)"
 
-#: ../inc/template-tags.php:532
+#: ../inc/template-tags.php:566
 #, php-format
 msgid "Found one search result for <strong>%2$s</strong>."
 msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
 msgstr[0] "Un résultat trouvé pour <strong>%2$s</strong>."
 msgstr[1] "%1$s résultats trouvés pour <strong>%2$s</strong>."
 
-#: ../inc/template-tags.php:558
+#: ../inc/template-tags.php:592
 #, php-format
 msgid "There is one post filed in <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
 msgstr[0] "Un billet est classé dans <strong>%2$s</strong>."
 msgstr[1] "%1$s billets sont classés dans <strong>%2$s</strong>."
 
-#: ../inc/template-tags.php:560
+#: ../inc/template-tags.php:594
 #, php-format
 msgid "There is one post tagged <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
 msgstr[0] "Un billet est étiqueté <strong>%2$s</strong>."
 msgstr[1] "%1$s billets sont étiquetés <strong>%2$s</strong>."
 
-#: ../inc/template-tags.php:591
+#: ../inc/template-tags.php:625
 #, php-format
 msgid "There was one post published in %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
 msgstr[0] "Un billet a été publié dans %2$s."
 msgstr[1] "%1$s billets ont été publiés dans %2$s."
 
-#: ../inc/template-tags.php:593
+#: ../inc/template-tags.php:627
 #, php-format
 msgid "There is one post published in %2$s."
 msgid_plural "There are %1$s posts published in %2$s"
 msgstr[0] "Un billet est publié dans %2$s."
 msgstr[1] "%1$s billets sont publiés dans %2$s."
 
-#: ../inc/template-tags.php:596
+#: ../inc/template-tags.php:630
 #, php-format
 msgid "There was one post published on %2$s."
 msgid_plural "There were %1$s posts published on %2$s"
 msgstr[0] "Un billet a été publié le %2$s."
 msgstr[1] "%1$s billets ont été publiés le %2$s."
 
-#: ../inc/template-tags.php:603
+#: ../inc/template-tags.php:637
 #, php-format
 msgid "There was one post published in the month of %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
 msgstr[0] "Un billet a été publié en %2$s."
 msgstr[1] "%1$s billets ont été publiés en %2$s."
 
-#: ../inc/template-tags.php:608
+#: ../inc/template-tags.php:642
 #, php-format
 msgid "There was one post published in %2$s %3$s."
 msgid_plural "There were %1$s posts published in %2$s %3$s"
