@@ -2,6 +2,19 @@ Independent Publisher is a beautiful reader-focused WordPress theme, for you.
 
 Version history:
 
+1.4
+
+* New Feature: Progress Bar. There is a new "Show Page Load Progress Bar" option in Appearance -> Customize -> General Options. Enabling this shows a thin progress bar across the top of the page while loading. The color of the bar is determined by the Link Color chosen in the Customizer. See https://github.com/raamdev/independent-publisher/issues/35 (Thanks to Tyler Longren)
+* New Feature: The last modified date of a post can now be shown underneath the Published date on Single Post pages. There is a new "Show Updated Date on Single Posts" option in Appearance -> Customize -> General Options. This will only appear when the published date and the modified date are different (i.e., you've modified a post).
+* Enhancement: Featured Images are now properly linked to the post permalink. (Thanks to Tyler Longren)
+* Enhancement: The Primary Navigation menu can now be shown on Single Post pages. There is a new "Show Nav Menu on Single Posts" option in Appearance -> Customize -> General Options. See https://github.com/raamdev/independent-publisher/issues/82
+* Fixed "Reply to", "Published", and "Updated" strings; they can now be translated
+* Updated French translation. (Contributed by Eddy Lelièvre-Berna)
+* Fixed inconsistencies with the text-domain for translations. See https://github.com/raamdev/independent-publisher/issues/75
+* Bug fix: Fixed "dark overlay" bug. This was related to a conflict with Jetpack's Infinite Scroll module. See https://github.com/raamdev/independent-publisher/issues/72
+* Changed the default value for the Customizer option "Show Post Word Count" from true to false. This does not affect theme upgrades; it only applies to new installations of the theme.
+
+
 1.3.1
 
 * Added French translation (contributed by Eddy Lelièvre-Berna)
