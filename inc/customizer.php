@@ -41,6 +41,7 @@ class IndependentPublisher_Customize {
 							 'default'    => '0',
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_select_excerpt_options',
 						 )
 		);
 		$wp_customize->add_control(
@@ -62,6 +63,7 @@ class IndependentPublisher_Customize {
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
 						 )
 		);
 		$wp_customize->add_control(
@@ -79,6 +81,7 @@ class IndependentPublisher_Customize {
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
 						 )
 		);
 		$wp_customize->add_control(
@@ -96,6 +99,7 @@ class IndependentPublisher_Customize {
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
 						 )
 		);
 		$wp_customize->add_control(
@@ -113,6 +117,7 @@ class IndependentPublisher_Customize {
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
 						 )
 		);
 		$wp_customize->add_control(
@@ -130,6 +135,7 @@ class IndependentPublisher_Customize {
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
 						 )
 		);
 		$wp_customize->add_control(
@@ -147,6 +153,7 @@ class IndependentPublisher_Customize {
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
 						 )
 		);
 		$wp_customize->add_control(
@@ -164,6 +171,7 @@ class IndependentPublisher_Customize {
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
 						 )
 		);
 		$wp_customize->add_control(
@@ -181,6 +189,7 @@ class IndependentPublisher_Customize {
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
 						 )
 		);
 		$wp_customize->add_control(
@@ -198,6 +207,7 @@ class IndependentPublisher_Customize {
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
 						 )
 		);
 		$wp_customize->add_control(
@@ -215,6 +225,7 @@ class IndependentPublisher_Customize {
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
 						 )
 		);
 		$wp_customize->add_control(
@@ -232,6 +243,7 @@ class IndependentPublisher_Customize {
 							 'default'    => 'Write a Comment',
 							 'type'       => 'theme_mod',
 							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'sanitize_text_field',
 						 )
 		);
 		$wp_customize->add_control(
@@ -460,6 +472,43 @@ class IndependentPublisher_Customize {
 		}
 
 		return $return;
+	}
+}
+
+/**
+ * Callback function for sanitizing checkbox settings.
+ *
+ * Used by IndependentPublisher_Customize
+ *
+ * @param $input
+ *
+ * @return int|string
+ */
+function independent_publisher_sanitize_checkbox( $input ) {
+	if ( $input == 1 ) {
+		return 1;
+	} else {
+		return '';
+	}
+}
+
+/**
+ * Callback function for sanitizing select menu for Excerpt Options.
+ *
+ * Used by IndependentPublisher_Customize
+ *
+ * @param $input
+ *
+ * @return string
+ */
+function independent_publisher_sanitize_select_excerpt_options( $input ) {
+	$valid = array( '0' => 'Disabled',
+					'1' => 'Enabled', );
+
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
 	}
 }
 
