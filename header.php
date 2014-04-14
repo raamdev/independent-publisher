@@ -50,12 +50,18 @@
 			<?php endif; ?>
 		</div>
 
-		<?php // Show primary navigation menu on everything except Single pages, unless Show Primary Nav Menu on Single Pages is enabled ?>
+		<?php // Show navigation menu on everything except Single pages, unless Show Primary Nav Menu on Single Pages is enabled ?>
 		<?php if ( ! is_single() || independent_publisher_show_nav_on_single() ) : ?>
 			<nav role="navigation" class="site-navigation main-navigation">
 				<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'independent-publisher' ); ?>"><?php _e( 'Skip to content', 'independent-publisher' ); ?></a>
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
+				<?php // If this is a Single Post and we have a menu assigned to the "Single Posts Menu", show that ?>
+				<?php if ( is_single() && has_nav_menu( 'single' ) ) : ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'single', 'depth' => 1 ) ); ?>
+				<?php else : ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
+				<?php endif; ?>
+
 			</nav><!-- .site-navigation .main-navigation -->
 		<?php endif; ?>
 

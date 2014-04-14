@@ -96,6 +96,7 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		register_nav_menus(
 			array(
 				'primary' => __( 'Primary Menu', 'independent-publisher' ),
+				'single' => __( 'Single Posts Menu', 'independent-publisher' ),
 				'social'  => __( 'Social', 'independent-publisher' )
 			)
 		);
