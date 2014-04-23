@@ -2,6 +2,14 @@ Independent Publisher is a beautiful reader-focused WordPress theme, for you.
 
 Version history:
 
+1.5
+
+* New Feature: Auto-Set Featured Image as Post Cover. There is a new "Auto-Set Featured Image as Post Cover" option in Appearance -> Customize -> General Options. When enabled, the featured image selected for a post will automatically become the Post Cover. This saves time by not needing to check the "Use as post cover" option in the Featured Image meta box. When this option is enabled, you can disable the Post Cover on a post-by-post basis using the "Disable post cover" checkbox that appears in the Featured Image meta box.
+* New Feature: Single Posts menu location. If you want your Single posts menu to be different than your Primary navigation menu, you can now create a new menu and assign it to the Single Posts menu location.
+* New Translation: Russian translation (thanks to Артем Рябков).
+* Bug Fix: Added missing Featured Image support from Single posts. This was accidentally removed in an earlier update. If you have a featured image, and you're not using it as the Post Cover, it will now properly appear at the top of the post.
+* Bug Fix: Fixed a bug with oEmbeds not working on Quote and Aside Post Formats.
+
 1.4.1
 
 * Fix hidden progress bar when Admin Bar is loaded
