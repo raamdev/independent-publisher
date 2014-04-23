@@ -58,13 +58,15 @@ The following colors can be changed via the Colors section:
 
 ### General Options
 
-![screen shot 2014-04-09 at 7 24 01 pm](https://cloud.githubusercontent.com/assets/53005/2662472/1aac03a2-c03e-11e3-8093-258870e5f1fc.png)
+![screen shot 2014-04-23 at 4 30 50 pm](https://cloud.githubusercontent.com/assets/53005/2782883/40146740-cb26-11e3-9c54-80301a57e3ac.png)
 
 - **Show Widgets on Single Posts**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single Post pages.
 - **Show Post Date in Entry Meta**. Disabled by default. When this option is enabled, the post date will be shown in the entry meta on Blog, Archive, and Search pages. It uses the date format specified in *Dashboard → Settings → General → Date Format*.
 - **Show Post Word Count in Entry Meta**. Disabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
 - **Show Nav Menu on Single Posts**. Disabled by default. When this option is enabled, the primary navigation menu will also be shown on Single Post pages.
 - **Show Updated Date on Single Posts**. Disabled by default. When this option is enabled, the post's last modified date will be shown underneath the published date. If you enable this, you can disable this on a per-post basis by adding a Custom Field to a post with the name `independent_publisher_hide_updated_date` and any value (`yes` or `true` will do).
+- **Auto-Set Featured Image as Post Cover**. Disabled by default. When this option is enabled, any Featured Image set for a post will automatically be used as a Post Cover (see [Post Covers (Full-Width Featured Images)](https://github.com/raamdev/independent-publisher#post-covers-full-width-featured-images)).
+- **Show Page Load Progress Bar**. Disabled by default. When enabled, a progress bar will appear across the top of the page as the page is loading. The color of the progress bar is determined by the Link Color setting in *Appearance → Customizer → Colors*.
 - **Enable Multi-Author Mode**. Disabled by default. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (*Dashboard → Appearance → Customize → Header Image*) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page.
 - **Comments Call to Action**. "Write a Comment" by default. This allows you to change the label that shows up on the 'Write a Comment' button and also changes the title of the comment form itself.
 

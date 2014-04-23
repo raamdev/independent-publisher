@@ -237,6 +237,24 @@ class IndependentPublisher_Customize {
 						 )
 		);
 
+		// Auto-Set Featured Image as Post Cover
+		$wp_customize->add_setting(
+					 'independent_publisher_general_options[auto_featured_image_post_cover]', array(
+							 'default'    => false,
+							 'type'       => 'option',
+							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+						 )
+		);
+		$wp_customize->add_control(
+					 'auto_featured_image_post_cover', array(
+							 'settings' => 'independent_publisher_general_options[auto_featured_image_post_cover]',
+							 'label'    => __( 'Auto-Set Featured Image as Post Cover', 'independent-publisher' ),
+							 'section'  => 'independent_publisher_general_options',
+							 'type'     => 'checkbox',
+						 )
+		);
+
 		// Comments Call to Action text
 		$wp_customize->add_setting(
 					 'comments_call_to_action', array(

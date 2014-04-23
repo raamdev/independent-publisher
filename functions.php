@@ -548,17 +548,37 @@ function independent_publisher_comments_call_to_action_text() {
 	}
 }
 
-/**
- * Returns true if the the current post has Full Width Featured Image enabled
+/*
+ * Return true if Auto-Set Featured Image as Post Cover is enabled and it hasn't
+ * been disabled for this post.
+ *
+ * Returns true if the current post has Full Width Featured Image enabled.
+ *
+ * Returns false if not a Single post type or there is no Featured Image selected
+ * or none of the above conditions are true.
  */
 function independent_publisher_has_full_width_featured_image() {
-	$full_width_featured_image = get_post_meta( get_the_ID(), 'full_width_featured_image' );
 
-	if ( $full_width_featured_image ) {
-		return true;
-	} else {
+	// If this isn't a Single post type or we don't have a Featured Image set
+	if ( ! is_single() || ! has_post_thumbnail() ) {
 		return false;
 	}
+
+	$full_width_featured_image             = get_post_meta( get_the_ID(), 'full_width_featured_image' );
+	$full_width_featured_image_disabled    = get_post_meta( get_the_ID(), 'full_width_featured_image_disabled' );
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+
+	// If Auto-Set Featured Image as Post Cover is enabled and it hasn't been disabled for this post, return true.
+	if ( isset( $independent_publisher_general_options['auto_featured_image_post_cover'] ) && $independent_publisher_general_options['auto_featured_image_post_cover'] && ! $full_width_featured_image_disabled ) {
+		return true;
+	}
+
+	// If Use featured image as Post Cover has been checked in the Featured Image meta box, return true.
+	if ( $full_width_featured_image ) {
+		return true;
+	}
+
+	return false; // Default
 }
 
 /**
@@ -585,7 +605,6 @@ function independent_publisher_show_nav_on_single() {
 	}
 }
 
-
 /**
  * Returns true if Show Updated Date on Single Posts option is enabled
  */
@@ -599,10 +618,22 @@ function independent_publisher_show_updated_date_on_single() {
 }
 
 /**
+ * Returns true if Auto-Set Featured Image as Post Cover option is enabled
+ */
+function independent_publisher_auto_featured_image_post_cover() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['auto_featured_image_post_cover'] ) && $independent_publisher_general_options['auto_featured_image_post_cover'] ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
  * Add full-width-featured-image to body class when displaying a post with Full Width Featured Image enabled
  */
 function independent_publisher_full_width_featured_image_body_class( $classes ) {
-	if ( is_single() && has_post_thumbnail() && get_post_meta( get_the_ID(), 'full_width_featured_image', true ) ) {
+	if ( independent_publisher_has_full_width_featured_image() ) {
 		$classes[] = 'full-width-featured-image';
 	}
 
@@ -732,25 +763,42 @@ endif;
 
 add_filter( 'the_excerpt', 'independent_publisher_first_sentence_excerpt' );
 
-/**
- * Add a checkbox to the featured image metabox
+/*
+ * Add a checkbox for Post Covers to the featured image metabox
  */
 function independent_publisher_featured_image_meta( $content ) {
 
+	// If we don't have a featured image, nothing to do.
 	if ( ! has_post_thumbnail() ) {
 		return $content;
 	}
 
 	global $post;
 
+	// Meta key
+	$meta_key = 'full_width_featured_image';
+
 	// Text for checkbox
 	$text = __( "Use as post cover (full-width)", 'independent-publisher' );
 
-	// Meta value ID
-	$id    = 'full_width_featured_image';
-	$value = esc_attr( get_post_meta( $post->ID, $id, true ) );
+	// Option type (for use when saving post data in independent_publisher_save_featured_image_meta()
+	$option_type = "enable";
+
+	/* If Auto-Set Featured Image as Post Cover enabled, this checkbox's functionality should reverse and
+	 * allow for disabling Post Covers on a post-by-post basis.
+	 */
+	if ( independent_publisher_auto_featured_image_post_cover() ) {
+		$meta_key    = 'full_width_featured_image_disabled';
+		$text        = __( "Disable post cover (full-width)", 'independent-publisher' );
+		$option_type = "disable";
+	}
+
+	// Get the current setting
+	$value = esc_attr( get_post_meta( $post->ID, $meta_key, true ) );
+
 	// Output the checkbox HTML
-	$label = '<label for="' . $id . '" class="selectit"><input name="' . $id . '" type="checkbox" id="' . $id . '" value="1" ' . checked( $value, 1, false ) . '> ' . $text . '</label>';
+	$label = '<label for="' . $meta_key . '" class="selectit"><input name="' . $meta_key . '" type="checkbox" id="' . $meta_key . '" value="1" ' . checked( $value, 1, false ) . '> ' . $text . '</label>';
+	$label .= '<input type="hidden" name="full_width_featured_image_enable_disable" value="' . $option_type . '">';
 
 	$label = wp_nonce_field( basename( __FILE__ ), 'independent_publisher_full_width_featured_image_meta_nonce' ) . $label;
 
@@ -759,8 +807,8 @@ function independent_publisher_featured_image_meta( $content ) {
 
 add_filter( 'admin_post_thumbnail_html', 'independent_publisher_featured_image_meta' );
 
-/**
- * Save the meta box's post metadata.
+/*
+ * Save the Featured Image meta box's post metadata for Post Cover options.
  */
 function independent_publisher_save_featured_image_meta( $post_id, $post ) {
 
@@ -778,10 +826,27 @@ function independent_publisher_save_featured_image_meta( $post_id, $post ) {
 	}
 
 	/* Get the posted data and sanitize it for use as an HTML class. */
-	$new_meta_value = ( isset( $_POST['full_width_featured_image'] ) ? esc_attr( $_POST['full_width_featured_image'] ) : '' );
+	if ( isset( $_POST['full_width_featured_image'] ) ) {
+		$new_meta_value = esc_attr( $_POST['full_width_featured_image'] );
+		$meta_key       = 'full_width_featured_image';
+	} elseif ( isset( $_POST['full_width_featured_image_disabled'] ) ) {
+		$new_meta_value = esc_attr( $_POST['full_width_featured_image_disabled'] );
+		$meta_key       = 'full_width_featured_image_disabled';
+	} else {
+		$new_meta_value = ''; // Empty value means we're unchecking this option
+	}
 
-	/* Get the meta key. */
-	$meta_key = 'full_width_featured_image';
+	// Figure out which option was being unchecked (this routine handles two types)
+	if ( isset( $_POST['full_width_featured_image_enable_disable'] ) ) {
+		if ( $_POST['full_width_featured_image_enable_disable'] === 'enable' ) {
+			$meta_key = 'full_width_featured_image';
+		} elseif ( $_POST['full_width_featured_image_enable_disable'] === 'disable' ) {
+			$meta_key = 'full_width_featured_image_disabled';
+		}
+	} else {
+		$meta_key = 'full_width_featured_image'; // Default
+	}
+
 
 	/* Get the meta value of the custom field key. */
 	$meta_value = get_post_meta( $post_id, $meta_key, true );
