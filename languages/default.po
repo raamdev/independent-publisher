@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-04-09 20:28-0500\n"
-"PO-Revision-Date: 2014-04-09 20:29-0500\n"
+"POT-Creation-Date: 2014-04-23 17:36-0500\n"
+"PO-Revision-Date: 2014-04-23 17:36-0500\n"
 "Last-Translator: Raam Dev <raam@raamdev.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -130,34 +130,34 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: ../content-page.php:22 ../content-single.php:36
+#: ../content-page.php:22 ../content-single.php:39
 #: ../page_one-column-template.php:39
 msgid "Next page &rarr;"
 msgstr ""
 
-#: ../content-page.php:23 ../content-single.php:37
+#: ../content-page.php:23 ../content-single.php:40
 #: ../page_one-column-template.php:40
 msgid "&larr; Previous page"
 msgstr ""
 
-#: ../content-page.php:29 ../content-single.php:43 ../content.php:53
+#: ../content-page.php:29 ../content-single.php:46 ../content.php:53
 #: ../page_one-column-template.php:46
 msgid "Pages:"
 msgstr ""
 
-#: ../content-page.php:47 ../content-single.php:63 ../content.php:95
+#: ../content-page.php:47 ../content-single.php:66 ../content.php:95
 #: ../image.php:127 ../page_archive-template.php:72
 #: ../page_one-column-template.php:53
 msgid "Edit"
 msgstr ""
 
-#: ../content.php:21 ../content.php:47 ../functions.php:951
-#: ../functions.php:966
+#: ../content.php:21 ../content.php:47 ../functions.php:1014
+#: ../functions.php:1029
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: ../content.php:91 ../functions.php:396
+#: ../content.php:91 ../functions.php:397
 msgid "Comment"
 msgstr ""
 
@@ -170,80 +170,88 @@ msgid "Primary Menu"
 msgstr ""
 
 #: ../functions.php:99
+msgid "Single Posts Menu"
+msgstr ""
+
+#: ../functions.php:100
 msgid "Social"
 msgstr ""
 
-#: ../functions.php:140
+#: ../functions.php:141
 msgid "Sidebar"
 msgstr ""
 
-#: ../functions.php:151
+#: ../functions.php:152
 msgid "Archive Page"
 msgstr ""
 
-#: ../functions.php:251
+#: ../functions.php:252
 #, php-format
 msgid "%1$s empowered by %2$s"
 msgstr ""
 
-#: ../functions.php:290
+#: ../functions.php:291
 msgid "Anonymous"
 msgstr ""
 
-#: ../functions.php:303
+#: ../functions.php:304
 msgid "Reply to"
 msgstr ""
 
-#: ../functions.php:337
+#: ../functions.php:338
 #, php-format
 msgid "Leave a Reply for %s"
 msgstr ""
 
-#: ../functions.php:338
+#: ../functions.php:339
 msgid "Cancel Reply"
 msgstr ""
 
-#: ../functions.php:339
+#: ../functions.php:340
 msgid "Submit Comment"
 msgstr ""
 
-#: ../functions.php:342
+#: ../functions.php:343
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: ../functions.php:347
+#: ../functions.php:348
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
 
-#: ../functions.php:357
+#: ../functions.php:358
 msgid "Name"
 msgstr ""
 
-#: ../functions.php:362
+#: ../functions.php:363
 msgid "Email"
 msgstr ""
 
-#: ../functions.php:367
+#: ../functions.php:368
 msgid "Website"
 msgstr ""
 
-#: ../functions.php:546
+#: ../functions.php:547
 msgid "Write a Comment"
 msgstr ""
 
-#: ../functions.php:746
+#: ../functions.php:782
 msgid "Use as post cover (full-width)"
 msgstr ""
 
-#: ../functions.php:927
+#: ../functions.php:792
+msgid "Disable post cover (full-width)"
+msgstr ""
+
+#: ../functions.php:990
 msgid "in"
 msgstr ""
 
-#: ../functions.php:936
+#: ../functions.php:999
 msgid "by"
 msgstr ""
 
@@ -320,75 +328,79 @@ msgstr ""
 msgid "General Options"
 msgstr ""
 
-#: ../inc/customizer.php:48
+#: ../inc/customizer.php:49
 msgid "Post Excerpts"
 msgstr ""
 
-#: ../inc/customizer.php:70
+#: ../inc/customizer.php:72
 msgid "Generate One-Sentence Excerpts"
 msgstr ""
 
-#: ../inc/customizer.php:87
+#: ../inc/customizer.php:90
 msgid "Always Show Full Content for First Post"
 msgstr ""
 
-#: ../inc/customizer.php:104
+#: ../inc/customizer.php:108
 msgid "Show Post Word Count in Entry Meta"
 msgstr ""
 
-#: ../inc/customizer.php:121
+#: ../inc/customizer.php:126
 msgid "Show Post Date in Entry Meta"
 msgstr ""
 
-#: ../inc/customizer.php:138
+#: ../inc/customizer.php:144
 msgid "Show Widgets on Single Posts"
 msgstr ""
 
-#: ../inc/customizer.php:155
+#: ../inc/customizer.php:162
 msgid "Show Nav Menu on Single Posts"
 msgstr ""
 
-#: ../inc/customizer.php:172
+#: ../inc/customizer.php:180
 msgid "Show Updated Date on Single Posts"
 msgstr ""
 
-#: ../inc/customizer.php:189
+#: ../inc/customizer.php:198
 msgid "Single-Column Layout"
 msgstr ""
 
-#: ../inc/customizer.php:206
+#: ../inc/customizer.php:216
 msgid "Enable Multi-Author Mode"
 msgstr ""
 
-#: ../inc/customizer.php:223
+#: ../inc/customizer.php:234
 msgid "Show Page Load Progress Bar"
 msgstr ""
 
-#: ../inc/customizer.php:240
+#: ../inc/customizer.php:252
+msgid "Auto-Set Featured Image as Post Cover"
+msgstr ""
+
+#: ../inc/customizer.php:270
 msgid "Comments Call to Action"
 msgstr ""
 
-#: ../inc/customizer.php:253
+#: ../inc/customizer.php:283
 msgid "Text Color"
 msgstr ""
 
-#: ../inc/customizer.php:258
+#: ../inc/customizer.php:288
 msgid "Comment Form Background Color"
 msgstr ""
 
-#: ../inc/customizer.php:263
+#: ../inc/customizer.php:293
 msgid "Link Color"
 msgstr ""
 
-#: ../inc/customizer.php:268
+#: ../inc/customizer.php:298
 msgid "Title and Header Text Color"
 msgstr ""
 
-#: ../inc/customizer.php:273
+#: ../inc/customizer.php:303
 msgid "Primary Meta Text Color"
 msgstr ""
 
-#: ../inc/customizer.php:278
+#: ../inc/customizer.php:308
 msgid "Secondary Meta Text Color"
 msgstr ""
 
@@ -461,62 +473,62 @@ msgstr ""
 msgid "%1$s Words"
 msgstr ""
 
-#: ../inc/template-tags.php:563 ../inc/template-tags.php:588
-#: ../inc/template-tags.php:617
+#: ../inc/template-tags.php:561 ../inc/template-tags.php:586
+#: ../inc/template-tags.php:615
 #, php-format
 msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
 msgstr ""
 
-#: ../inc/template-tags.php:566
+#: ../inc/template-tags.php:564
 #, php-format
 msgid "Found one search result for <strong>%2$s</strong>."
 msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:592
+#: ../inc/template-tags.php:590
 #, php-format
 msgid "There is one post filed in <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:594
+#: ../inc/template-tags.php:592
 #, php-format
 msgid "There is one post tagged <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:625
+#: ../inc/template-tags.php:623
 #, php-format
 msgid "There was one post published in %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:627
+#: ../inc/template-tags.php:625
 #, php-format
 msgid "There is one post published in %2$s."
 msgid_plural "There are %1$s posts published in %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:630
+#: ../inc/template-tags.php:628
 #, php-format
 msgid "There was one post published on %2$s."
 msgid_plural "There were %1$s posts published on %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:637
+#: ../inc/template-tags.php:635
 #, php-format
 msgid "There was one post published in the month of %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:642
+#: ../inc/template-tags.php:640
 #, php-format
 msgid "There was one post published in %2$s %3$s."
 msgid_plural "There were %1$s posts published in %2$s %3$s"

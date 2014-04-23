@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
 "POT-Creation-Date: 2014-04-12 21:39+0400\n"
-"PO-Revision-Date: 2014-04-15 18:48-0500\n"
-"Last-Translator: Raam Dev <raam@raamdev.com>\n"
+"PO-Revision-Date: 2014-04-23 17:48-0500\n"
+"Last-Translator: Артем Рябков\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
@@ -15,8 +15,7 @@ msgstr ""
 "translate_nooped_plural\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:16
@@ -35,7 +34,6 @@ msgstr ""
 msgid "Most Used Categories"
 msgstr "Наиболее используемые категории"
 
-#. translators: %1$s: smilie
 #: ../404.php:45
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
@@ -85,9 +83,8 @@ msgstr "Архивы"
 #, php-format
 msgid "1 Comment"
 msgid_plural "%1$s Comments"
-msgstr[0] "1 Комментарий"
+msgstr[0] "1 Комментарии"
 msgstr[1] "%1$s Комментария"
-msgstr[2] "%1$s Комментариев"
 
 #: ../comments.php:49 ../comments.php:70
 #, fuzzy
@@ -143,34 +140,34 @@ msgstr ""
 "Выглядит так, будто мы можем помочь вам с тем что вы ищите. Пожалуйста "
 "используйте поиск."
 
-#: ../content-page.php:22 ../content-single.php:36
+#: ../content-page.php:22 ../content-single.php:39
 #: ../page_one-column-template.php:39
 msgid "Next page &rarr;"
 msgstr "Следующая страница &rarr;"
 
-#: ../content-page.php:23 ../content-single.php:37
+#: ../content-page.php:23 ../content-single.php:40
 #: ../page_one-column-template.php:40
 msgid "&larr; Previous page"
 msgstr "&larr; Предыдущая страница"
 
-#: ../content-page.php:29 ../content-single.php:43 ../content.php:53
+#: ../content-page.php:29 ../content-single.php:46 ../content.php:53
 #: ../page_one-column-template.php:46
 msgid "Pages:"
 msgstr "Страницы:"
 
-#: ../content-page.php:47 ../content-single.php:63 ../content.php:95
+#: ../content-page.php:47 ../content-single.php:66 ../content.php:95
 #: ../image.php:127 ../page_archive-template.php:72
 #: ../page_one-column-template.php:53
 msgid "Edit"
 msgstr "Редактировать"
 
-#: ../content.php:21 ../content.php:47 ../functions.php:951
-#: ../functions.php:966
+#: ../content.php:21 ../content.php:47 ../functions.php:1014
+#: ../functions.php:1029
 #, php-format
 msgid "Permalink to %s"
 msgstr "Постоянная ссылка на %s"
 
-#: ../content.php:91 ../functions.php:396
+#: ../content.php:91 ../functions.php:397
 msgid "Comment"
 msgstr "Комментарии"
 
@@ -183,82 +180,90 @@ msgid "Primary Menu"
 msgstr "Основное меню"
 
 #: ../functions.php:99
+msgid "Single Posts Menu"
+msgstr ""
+
+#: ../functions.php:100
 #, fuzzy
 msgid "Social"
 msgstr "Социалки"
 
-#: ../functions.php:140
+#: ../functions.php:141
 msgid "Sidebar"
 msgstr "Боковая панель"
 
-#: ../functions.php:151
+#: ../functions.php:152
 #, fuzzy
 msgid "Archive Page"
 msgstr "Архивная страница"
 
-#: ../functions.php:251
+#: ../functions.php:252
 #, php-format
 msgid "%1$s empowered by %2$s"
 msgstr ""
 
-#: ../functions.php:290
+#: ../functions.php:291
 msgid "Anonymous"
 msgstr "Аноним"
 
-#: ../functions.php:303
+#: ../functions.php:304
 msgid "Reply to"
 msgstr "Ответить"
 
-#: ../functions.php:337
+#: ../functions.php:338
 #, php-format
 msgid "Leave a Reply for %s"
 msgstr "Оставить ответ для %s"
 
-#: ../functions.php:338
+#: ../functions.php:339
 msgid "Cancel Reply"
 msgstr "Отменить ответ"
 
-#: ../functions.php:339
+#: ../functions.php:340
 msgid "Submit Comment"
 msgstr "Отправить комментарий"
 
-#: ../functions.php:342
+#: ../functions.php:343
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: ../functions.php:347
+#: ../functions.php:348
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
 
-#: ../functions.php:357
+#: ../functions.php:358
 msgid "Name"
 msgstr "Имя"
 
-#: ../functions.php:362
+#: ../functions.php:363
 msgid "Email"
 msgstr "E-Mail"
 
-#: ../functions.php:367
+#: ../functions.php:368
 msgid "Website"
 msgstr "Сайт"
 
-#: ../functions.php:546
+#: ../functions.php:547
 msgid "Write a Comment"
 msgstr "Написать Комментарий"
 
-#: ../functions.php:746
+#: ../functions.php:782
 msgid "Use as post cover (full-width)"
 msgstr ""
 
-#: ../functions.php:927
+#: ../functions.php:792
+msgid "Disable post cover (full-width)"
+msgstr ""
+
+#: ../functions.php:990
 msgid "in"
 msgstr "в"
 
-#: ../functions.php:936
+#: ../functions.php:999
 msgid "by"
 msgstr "от"
 
@@ -281,6 +286,47 @@ msgstr "&larr; Предыдущее изображение"
 #: ../image.php:107
 msgid "Next image &rarr;"
 msgstr "Следующее изображение"
+
+#: ../page_archive-template.php:45
+msgid "Yearly Archives"
+msgstr "Годовые Архивы"
+
+#: ../page_archive-template.php:47
+msgid "Select Year"
+msgstr "Выбрать Год"
+
+#: ../page_archive-template.php:53
+msgid "Monthly Archives"
+msgstr "Месячные архивы"
+
+#: ../page_archive-template.php:55
+msgid "Select Month"
+msgstr "Выбрать Месяц"
+
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
+msgid "Search"
+msgstr "Поиск"
+
+#: ../page_archive-template.php:65
+msgid "Explore by Tag"
+msgstr "Поиск по тегу"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результат поиска по %s"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Поиск &hellip;"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Мета"
+
+#: ../single.php:28
+msgid "Related Content by Tag"
+msgstr "Посты с тегом"
 
 #: ../inc/customizer.php:19
 msgid "Layout Options"
@@ -339,30 +385,34 @@ msgid "Show Page Load Progress Bar"
 msgstr "Показать индикатор загрузки страницыц"
 
 #: ../inc/customizer.php:252
+msgid "Auto-Set Featured Image as Post Cover"
+msgstr ""
+
+#: ../inc/customizer.php:270
 msgid "Comments Call to Action"
 msgstr ""
 
-#: ../inc/customizer.php:265
+#: ../inc/customizer.php:283
 msgid "Text Color"
 msgstr "Цвет текста"
 
-#: ../inc/customizer.php:270
+#: ../inc/customizer.php:288
 msgid "Comment Form Background Color"
 msgstr ""
 
-#: ../inc/customizer.php:275
+#: ../inc/customizer.php:293
 msgid "Link Color"
 msgstr "Цвет ссылок"
 
-#: ../inc/customizer.php:280
+#: ../inc/customizer.php:298
 msgid "Title and Header Text Color"
 msgstr ""
 
-#: ../inc/customizer.php:285
+#: ../inc/customizer.php:303
 msgid "Primary Meta Text Color"
 msgstr "Основной цвет Мета текста"
 
-#: ../inc/customizer.php:290
+#: ../inc/customizer.php:308
 msgid "Secondary Meta Text Color"
 msgstr "Вторичный цвет Мета текста"
 
@@ -391,7 +441,6 @@ msgstr "Новые посты <span class=\"meta-nav\">&rarr;</span>"
 msgid " - Your comment is awaiting moderation."
 msgstr "- Ваш комментарий ожидает проверки -"
 
-#. translators: 1: date
 #: ../inc/template-tags.php:97 ../inc/template-tags.php:140
 msgid "(Edit)"
 msgstr "(Редактировать)"
@@ -402,7 +451,6 @@ msgstr "(Редактировать)"
 msgid "View all posts by %s"
 msgstr "Показать все записи от %s"
 
-#. translators: used between list items, there is a space after the comma
 #: ../inc/template-tags.php:182
 msgid ", "
 msgstr ","
@@ -438,105 +486,64 @@ msgstr "Обновлено"
 msgid "%1$s Words"
 msgstr "%1$s Слов"
 
-#: ../inc/template-tags.php:563 ../inc/template-tags.php:588
-#: ../inc/template-tags.php:617
+#: ../inc/template-tags.php:561 ../inc/template-tags.php:586
+#: ../inc/template-tags.php:615
 #, php-format
 msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
 msgstr ""
 
-#: ../inc/template-tags.php:566
+#: ../inc/template-tags.php:564
 #, php-format
 msgid "Found one search result for <strong>%2$s</strong>."
 msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:592
+#: ../inc/template-tags.php:590
 #, php-format
 msgid "There is one post filed in <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:594
+#: ../inc/template-tags.php:592
 #, php-format
 msgid "There is one post tagged <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:625
+#: ../inc/template-tags.php:623
 #, php-format
 msgid "There was one post published in %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:627
+#: ../inc/template-tags.php:625
 #, php-format
 msgid "There is one post published in %2$s."
 msgid_plural "There are %1$s posts published in %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:630
+#: ../inc/template-tags.php:628
 #, php-format
 msgid "There was one post published on %2$s."
 msgid_plural "There were %1$s posts published on %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:637
+#: ../inc/template-tags.php:635
 #, php-format
 msgid "There was one post published in the month of %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:642
+#: ../inc/template-tags.php:640
 #, php-format
 msgid "There was one post published in %2$s %3$s."
 msgid_plural "There were %1$s posts published in %2$s %3$s"
 msgstr[0] ""
 msgstr[1] ""
-
-#: ../page_archive-template.php:45
-msgid "Yearly Archives"
-msgstr "Годовые Архивы"
-
-#: ../page_archive-template.php:47
-msgid "Select Year"
-msgstr "Выбрать Год"
-
-#: ../page_archive-template.php:53
-msgid "Monthly Archives"
-msgstr "Месячные архивы"
-
-#: ../page_archive-template.php:55
-msgid "Select Month"
-msgstr "Выбрать Месяц"
-
-#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
-msgid "Search"
-msgstr "Поиск"
-
-#: ../page_archive-template.php:65
-msgid "Explore by Tag"
-msgstr "Поиск по тегу"
-
-#: ../search.php:19
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Результат поиска по %s"
-
-#: ../searchform.php:11
-msgid "Search &hellip;"
-msgstr "Поиск &hellip;"
-
-#: ../sidebar.php:28
-msgid "Meta"
-msgstr "Мета"
-
-#: ../single.php:28
-msgid "Related Content by Tag"
-msgstr "Посты с тегом"
