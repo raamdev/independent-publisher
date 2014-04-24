@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
 "POT-Creation-Date: 2014-04-23 17:38-0500\n"
-"PO-Revision-Date: 2014-04-24 22:55+0100\n"
+"PO-Revision-Date: 2014-04-24 22:58+0100\n"
 "Last-Translator: Eddy Lelièvre-Berna\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -255,7 +255,7 @@ msgstr "Utiliser comme billet de couverture (grande largeur)"
 
 #: ../functions.php:792
 msgid "Disable post cover (full-width)"
-msgstr "Désactiver ls mise en couverture (grande largeur)"
+msgstr "Désactiver la mise en couverture (grande largeur)"
 
 #: ../functions.php:990
 msgid "in"
