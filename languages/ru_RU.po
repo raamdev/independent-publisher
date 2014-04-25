@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
 "POT-Creation-Date: 2014-04-12 21:39+0400\n"
-"PO-Revision-Date: 2014-04-12 22:46+0400\n"
+"PO-Revision-Date: 2014-04-26 00:28+0400\n"
 "Last-Translator: Артём Рябко <rad964@ya.ru>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -96,7 +96,7 @@ msgstr "Навигация по комментариям"
 
 #: ../comments.php:51 ../comments.php:72
 msgid "&larr; Older Comments"
-msgstr "&larr; Старые Комментарии"
+msgstr "&larr; Предыдущие комментарии"
 
 #: ../comments.php:52 ../comments.php:73
 msgid "Newer Comments &rarr;"
@@ -183,9 +183,8 @@ msgid "Primary Menu"
 msgstr "Основное меню"
 
 #: ../functions.php:99
-#, fuzzy
 msgid "Social"
-msgstr "Социалки"
+msgstr "Социальные сети"
 
 #: ../functions.php:140
 msgid "Sidebar"
@@ -194,12 +193,12 @@ msgstr "Боковая панель"
 #: ../functions.php:151
 #, fuzzy
 msgid "Archive Page"
-msgstr "Архивная страница"
+msgstr "Архив"
 
 #: ../functions.php:251
-#, php-format
+#, fuzzy, php-format
 msgid "%1$s empowered by %2$s"
-msgstr ""
+msgstr "%1$s при помощи %2$s"
 
 #: ../functions.php:290
 msgid "Anonymous"
@@ -225,7 +224,7 @@ msgstr "Отправить комментарий"
 #: ../functions.php:342
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr ""
+msgstr "Вы должны выполнить <a href=\"%s\">вход</a> для комментирования."
 
 #: ../functions.php:347
 #, php-format
@@ -288,7 +287,7 @@ msgstr "Настройка Макета"
 
 #: ../inc/customizer.php:26
 msgid "Excerpt Options"
-msgstr ""
+msgstr "Опции цитирования"
 
 #: ../inc/customizer.php:33
 msgid "General Options"
@@ -296,11 +295,11 @@ msgstr "Основные настройки"
 
 #: ../inc/customizer.php:49
 msgid "Post Excerpts"
-msgstr ""
+msgstr "Цитата записи"
 
 #: ../inc/customizer.php:72
 msgid "Generate One-Sentence Excerpts"
-msgstr ""
+msgstr "Создать цитату из одного предложения"
 
 #: ../inc/customizer.php:90
 msgid "Always Show Full Content for First Post"
@@ -327,8 +326,9 @@ msgid "Show Updated Date on Single Posts"
 msgstr ""
 
 #: ../inc/customizer.php:198
+#, fuzzy
 msgid "Single-Column Layout"
-msgstr ""
+msgstr "Макет с одной колонкой"
 
 #: ../inc/customizer.php:216
 msgid "Enable Multi-Author Mode"
@@ -336,7 +336,7 @@ msgstr "Включить режим Мульти-Авторства"
 
 #: ../inc/customizer.php:234
 msgid "Show Page Load Progress Bar"
-msgstr "Показать индикатор загрузки страницыц"
+msgstr "Показать индикатор загрузки страницы"
 
 #: ../inc/customizer.php:252
 msgid "Comments Call to Action"
@@ -355,8 +355,9 @@ msgid "Link Color"
 msgstr "Цвет ссылок"
 
 #: ../inc/customizer.php:280
+#, fuzzy
 msgid "Title and Header Text Color"
-msgstr ""
+msgstr "Цвет текста заголовка"
 
 #: ../inc/customizer.php:285
 msgid "Primary Meta Text Color"
@@ -381,11 +382,11 @@ msgstr "&rarr;"
 
 #: ../inc/template-tags.php:51
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Старые посты"
+msgstr "<span class=\"meta-nav\">&larr;</span> Предыдущие записи"
 
 #: ../inc/template-tags.php:55
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Новые посты <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Новые записи <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:85
 msgid " - Your comment is awaiting moderation."
