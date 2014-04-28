@@ -20,6 +20,7 @@ Independent Publisher is a WordPress Theme. This README contains documentation f
     * [How do I make the JetPack Sharing Buttons look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-jetpack-sharing-buttons-look-better)
     * [How do I make the Subscribe to Comments Reloaded Advanced Options look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-subscribe-to-comments-reloaded-advanced-options-look-better)
     * [How do I make MailChimp Signup Forms look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-mailchimp-signup-forms-look-better)
+    * [How do I add an Archive Page?](https://github.com/raamdev/independent-publisher/#how-do-i-add-an-archive-page)
 * [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
 * [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
 * [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
@@ -199,6 +200,26 @@ MailChimp includes its own CSS in the HTML embed code that, by default, doesn't 
 
 ![screen shot 2014-01-28 at 4 53 37 pm](https://f.cloud.github.com/assets/53005/2024233/c5642e38-8866-11e3-9d70-555eacbcb243.png)
 
+### How do I add an Archive page?
+
+The Independent Publisher theme includes a Page Template called "Archive Page" that you can use to create an Archive page. Simply create a new Page (*Pages -> Add New*), give it a title (e.g., "Archives"), then select the "Archive Page" template from the Template section in the Page Attributes meta box:
+
+![screen shot 2014-04-28 at 3 51 36 pm](https://cloud.githubusercontent.com/assets/53005/2822091/a3c75ba8-cf0e-11e3-9ba4-62f2e81f6c04.png)
+
+By default, the Archives Page Template will load the following:
+
+- Recent Posts
+- Most Used Categories
+- Yearly Archives
+- Monthly Archives
+- Search
+- Explore by Tag
+
+If you'd like to use your own custom set of widgets, you can simply add widgets to the Archive Page widget area (*Appearance -> Widgets*):
+
+![screen shot 2014-04-28 at 3 55 48 pm](https://cloud.githubusercontent.com/assets/53005/2822132/296236d4-cf0f-11e3-82e8-0fea749dcc3d.png)
+
+To get the default set of widgets back, simply remove all widgets from the Archive Page widget area.
 
 ## Color Schemes
 
