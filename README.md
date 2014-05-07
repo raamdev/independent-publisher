@@ -22,6 +22,7 @@ Independent Publisher is a WordPress Theme. This README contains documentation f
     * [How do I make MailChimp Signup Forms look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-mailchimp-signup-forms-look-better)
     * [How do I add an Archive Page?](https://github.com/raamdev/independent-publisher/#how-do-i-add-an-archive-page)
     * [How do I show a menu on the Single Post pages?](https://github.com/raamdev/independent-publisher/#how-do-i-show-a-menu-on-the-single-post-pages)
+    * [How do I change the footer credits?](https://github.com/raamdev/independent-publisher/#how-do-i-change-the-footer-credits)
 * [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
 * [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
 * [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
@@ -227,6 +228,12 @@ To get the default set of widgets back, simply remove all widgets from the Archi
 By default, the main navigation menu (Primary Menu) only appears on non-Single pages. This is meant to keep the Single Post pages clean and simple. You can change this default behavior by enabling "Show Nav Menu on Single Posts" in *Appearance -> Customize -> General Options*.
 
 If you want your Single Posts menu to be differnet than your Primary Navigation menu, you can select a different menu for Single Posts in *Apperanace -> Menus -> Manage Locations -> Single Posts Menu*. 
+
+### How do I change the footer credits?
+
+You can change the footer credits by overriding the function that displays them (`independent_publisher_footer_credits()`) and making that function return something else (or return blank to remove footer content entirely).
+
+Before making such a change, you'll want make sure you're using a [Child Theme](https://github.com/raamdev/independent-publisher#using-a-child-theme-to-customize-independent-publisher) so that future theme updates don't override your modifications. The `functions.php` file that comes with the [Independent Publisher Child Theme](https://github.com/raamdev/independent-publisher-child-theme/) includes [an example](https://github.com/raamdev/independent-publisher-child-theme/blob/master/functions.php#L36) for overriding the footer credits function.
 
 ## Color Schemes
 
