@@ -21,6 +21,7 @@ Independent Publisher is a WordPress Theme. This README contains documentation f
     * [How do I make the Subscribe to Comments Reloaded Advanced Options look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-subscribe-to-comments-reloaded-advanced-options-look-better)
     * [How do I make MailChimp Signup Forms look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-mailchimp-signup-forms-look-better)
     * [How do I add an Archive Page?](https://github.com/raamdev/independent-publisher/#how-do-i-add-an-archive-page)
+    * [How do I show a menu on the Single Post pages?](https://github.com/raamdev/independent-publisher/#how-do-i-show-a-menu-on-the-single-post-pages)
 * [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
 * [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
 * [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
@@ -220,6 +221,12 @@ If you'd like to use your own custom set of widgets, you can simply add widgets 
 ![screen shot 2014-04-28 at 3 55 48 pm](https://cloud.githubusercontent.com/assets/53005/2822132/296236d4-cf0f-11e3-82e8-0fea749dcc3d.png)
 
 To get the default set of widgets back, simply remove all widgets from the Archive Page widget area.
+
+### How do I show a menu on the Single Post pages?
+
+By default, the main navigation menu (Primary Menu) only appears on non-Single pages. This is meant to keep the Single Post pages clean and simple. You can change this default behavior by enabling "Show Nav Menu on Single Posts" in *Appearance -> Customize -> General Options*.
+
+If you want your Single Posts menu to be differnet than your Primary Navigation menu, you can select a different menu for Single Posts in *Apperanace -> Menus -> Manage Locations -> Single Posts Menu*. 
 
 ## Color Schemes
 
