@@ -238,7 +238,7 @@ Before making such a change, you'll want make sure you're using a [Child Theme](
 
 ### How do I add my own Social Icons to the Social Menu?
 
-The [Social Menu]((https://github.com/raamdev/independent-publisher#how-do-i-add-social-media-buttons-below-the-logo)) works by detecting the social media URL you're using and matching that URL to an icon. If you want to add a new social media icon to use on the Social Menu, you can do so by adding the following block of code to your child theme's `style.css` file:
+The [Social Menu](https://github.com/raamdev/independent-publisher#how-do-i-add-social-media-buttons-below-the-logo) works by detecting the social media URL you're using and matching that URL to an icon. If you want to add a new social media icon to use on the Social Menu, you can do so by adding the following block of code to your child theme's `style.css` file:
 
 ```css
 #menu-social li a[href*="example.com"]::before {
