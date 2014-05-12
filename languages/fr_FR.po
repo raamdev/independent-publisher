@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-04-23 17:38-0500\n"
-"PO-Revision-Date: 2014-04-24 22:58+0100\n"
+"POT-Creation-Date: 2014-04-23 17:36-0500\n"
+"PO-Revision-Date: 2014-05-12 21:24+0100\n"
 "Last-Translator: Eddy Lelièvre-Berna\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
 "esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
 "translate_nooped_plural\n"
@@ -518,15 +518,15 @@ msgstr[1] "%1$s billets sont étiquetés <strong>%2$s</strong>."
 #, php-format
 msgid "There was one post published in %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
-msgstr[0] "Un billet a été publié dans %2$s."
-msgstr[1] "%1$s billets ont été publiés dans %2$s."
+msgstr[0] "Un billet a été publié en %2$s."
+msgstr[1] "%1$s billets ont été publiés en %2$s."
 
 #: ../inc/template-tags.php:625
 #, php-format
 msgid "There is one post published in %2$s."
 msgid_plural "There are %1$s posts published in %2$s"
-msgstr[0] "Un billet est publié dans %2$s."
-msgstr[1] "%1$s billets sont publiés dans %2$s."
+msgstr[0] "Un billet est publié en %2$s."
+msgstr[1] "%1$s billets sont publiés en %2$s."
 
 #: ../inc/template-tags.php:628
 #, php-format
@@ -546,5 +546,5 @@ msgstr[1] "%1$s billets ont été publiés en %2$s."
 #, php-format
 msgid "There was one post published in %2$s %3$s."
 msgid_plural "There were %1$s posts published in %2$s %3$s"
-msgstr[0] "Un billet a été publié dans %2$s %3$s."
-msgstr[1] "%1$s billets ont été publiés dans  %2$s %3$s"
+msgstr[0] "Un billet a été publié en %2$s %3$s."
+msgstr[1] "%1$s billets ont été publiés en  %2$s %3$s"
