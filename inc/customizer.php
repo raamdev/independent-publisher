@@ -51,8 +51,8 @@ class IndependentPublisher_Customize {
 							 'section'  => 'independent_publisher_excerpt_options',
 							 'type'     => 'select',
 							 'choices'  => array(
-								 '0' => 'Disabled',
-								 '1' => 'Enabled'
+								 '0' => __( 'Disabled', 'independent-publisher' ),
+								 '1' => __( 'Enabled', 'independent-publisher' )
 							 ),
 						 )
 		);
