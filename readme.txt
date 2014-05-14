@@ -2,6 +2,16 @@ Independent Publisher is a beautiful reader-focused WordPress theme, for you.
 
 Version history:
 
+1.5.1
+
+* Bug Fix: Fixed a nasty bug with Galleries where all galleries were one-column, instead of following the default 3-column layout. This also affected 4-column, 5-column, etc., layouts.
+* Bug Fix: Fixed issue with content not resizing properly on mobile devices when using the Jetpack Infinite Scroll module.
+* Enhancement: Gallery image captions are now hidden by default and hovering over the image shows the caption overlayed on top of the image.
+* Translations: Updated French translations (thanks to @EddyLB)
+* Translations: Fixed Russian translations (thanks to @rad96)
+* Translations: Allowed "Enabled" and "Disabled" strings in Theme Customizer to be translated.
+* Misc: Fixed printf() warning in single.php. (Props to Zhuo)
+
 1.5
 
 * New Feature: Auto-Set Featured Image as Post Cover. There is a new "Auto-Set Featured Image as Post Cover" option in Appearance -> Customize -> General Options. When enabled, the featured image selected for a post will automatically become the Post Cover. This saves time by not needing to check the "Use as post cover" option in the Featured Image meta box. When this option is enabled, you can disable the Post Cover on a post-by-post basis using the "Disable post cover" checkbox that appears in the Featured Image meta box.
