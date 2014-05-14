@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-04-23 17:36-0500\n"
-"PO-Revision-Date: 2014-05-14 21:37+0100\n"
+"POT-Creation-Date: 2014-05-14 21:44+0100\n"
+"PO-Revision-Date: 2014-05-14 21:44+0100\n"
 "Last-Translator: Pavel Tajduš <tajdik@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -33,6 +33,7 @@ msgstr ""
 msgid "Most Used Categories"
 msgstr "Nejčastěji použité kategorie"
 
+#. translators: %1$s: smilie
 #: ../404.php:45
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
@@ -285,47 +286,6 @@ msgstr "&larr; Předchozí obrázek"
 msgid "Next image &rarr;"
 msgstr "Další obrázek &rarr;"
 
-#: ../page_archive-template.php:45
-msgid "Yearly Archives"
-msgstr "Roční archív"
-
-#: ../page_archive-template.php:47
-msgid "Select Year"
-msgstr "Vyberte rok"
-
-#: ../page_archive-template.php:53
-msgid "Monthly Archives"
-msgstr "Měsíční archív"
-
-#: ../page_archive-template.php:55
-msgid "Select Month"
-msgstr "Vyberte měsíc"
-
-#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
-msgid "Search"
-msgstr "Hledat"
-
-#: ../page_archive-template.php:65
-msgid "Explore by Tag"
-msgstr "Procházet podle štítku"
-
-#: ../search.php:19
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Hledat výsledky pro: %s"
-
-#: ../searchform.php:11
-msgid "Search &hellip;"
-msgstr "Hledat &hellip;"
-
-#: ../sidebar.php:28
-msgid "Meta"
-msgstr "Popisek"
-
-#: ../single.php:28
-msgid "Related Content by Tag"
-msgstr "Podobný obsah podle štítku"
-
 #: ../inc/customizer.php:19
 msgid "Layout Options"
 msgstr "Nastavení rozvržení stránky"
@@ -341,6 +301,14 @@ msgstr "Hlavní nastavení"
 #: ../inc/customizer.php:49
 msgid "Post Excerpts"
 msgstr "Výňatky příspěvku"
+
+#: ../inc/customizer.php:54
+msgid "Disabled"
+msgstr "Deaktivovat"
+
+#: ../inc/customizer.php:55
+msgid "Enabled"
+msgstr "Aktivovat"
 
 #: ../inc/customizer.php:72
 msgid "Generate One-Sentence Excerpts"
@@ -438,6 +406,7 @@ msgstr "Novější příspěvky <span class=\"meta-nav\">&rarr;</span>"
 msgid " - Your comment is awaiting moderation."
 msgstr " - Váš komentář čeká na schválení."
 
+#. translators: 1: date
 #: ../inc/template-tags.php:97 ../inc/template-tags.php:140
 msgid "(Edit)"
 msgstr "(Upravit)"
@@ -448,6 +417,7 @@ msgstr "(Upravit)"
 msgid "View all posts by %s"
 msgstr "Zobrazit všechny příspěvky autora %s"
 
+#. translators: used between list items, there is a space after the comma
 #: ../inc/template-tags.php:182
 msgid ", "
 msgstr ", "
@@ -494,8 +464,8 @@ msgstr " (strana <strong>%1$s</strong> z <strong>%2$s</strong>)"
 #, php-format
 msgid "Found one search result for <strong>%2$s</strong>."
 msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
-msgstr[0] "Nalezen jeden výsledek pro <strong>%2$s</strong>."
-msgstr[1] "Nalezeno %1$s výsledků hledání pro <strong>%2$s</strong>"
+msgstr[0] "Nalezen jeden výsledek vyhledávání pro <strong>%2$s</strong>."
+msgstr[1] "Nalezeno %1$s výsledků vyhledávání pro <strong>%2$s</strong>"
 
 #: ../inc/template-tags.php:590
 #, php-format
@@ -545,3 +515,44 @@ msgid "There was one post published in %2$s %3$s."
 msgid_plural "There were %1$s posts published in %2$s %3$s"
 msgstr[0] "Příspěvek publikovaný v měsíci %2$s %3$s."
 msgstr[1] "%1$s příspěvků v měsíci %2$s %3$s"
+
+#: ../page_archive-template.php:45
+msgid "Yearly Archives"
+msgstr "Roční archív"
+
+#: ../page_archive-template.php:47
+msgid "Select Year"
+msgstr "Vyberte rok"
+
+#: ../page_archive-template.php:53
+msgid "Monthly Archives"
+msgstr "Měsíční archív"
+
+#: ../page_archive-template.php:55
+msgid "Select Month"
+msgstr "Vyberte měsíc"
+
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
+msgid "Search"
+msgstr "Hledat"
+
+#: ../page_archive-template.php:65
+msgid "Explore by Tag"
+msgstr "Procházet podle štítku"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Hledat výsledky pro: %s"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Hledat &hellip;"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Popisek"
+
+#: ../single.php:28
+msgid "Related Content by Tag"
+msgstr "Podobný obsah podle štítku"
