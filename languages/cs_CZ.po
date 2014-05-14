@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-05-14 21:44+0100\n"
-"PO-Revision-Date: 2014-05-14 21:44+0100\n"
+"POT-Creation-Date: 2014-05-14 21:47+0100\n"
+"PO-Revision-Date: 2014-05-14 22:07+0100\n"
 "Last-Translator: Pavel Tajduš <tajdik@gmail.com>\n"
 "Language-Team: \n"
-"Language: en\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +15,7 @@ msgstr ""
 "translate_nooped_plural\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:16
@@ -84,7 +84,8 @@ msgstr "Archívy"
 msgid "1 Comment"
 msgid_plural "%1$s Comments"
 msgstr[0] "1 komentář"
-msgstr[1] "%1$s komentářů"
+msgstr[1] "%1$s komentáře"
+msgstr[2] "%1$s komentářů"
 
 #: ../comments.php:49 ../comments.php:70
 msgid "Comment navigation"
@@ -181,7 +182,7 @@ msgstr "Menu pro jednotlivé příspěvky"
 
 #: ../functions.php:100
 msgid "Social"
-msgstr "Sdílení"
+msgstr "Sociální sítě"
 
 #: ../functions.php:141
 msgid "Sidebar"
@@ -304,11 +305,11 @@ msgstr "Výňatky příspěvku"
 
 #: ../inc/customizer.php:54
 msgid "Disabled"
-msgstr "Deaktivovat"
+msgstr "Zakázat"
 
 #: ../inc/customizer.php:55
 msgid "Enabled"
-msgstr "Aktivovat"
+msgstr "Povolit"
 
 #: ../inc/customizer.php:72
 msgid "Generate One-Sentence Excerpts"
@@ -465,56 +466,64 @@ msgstr " (strana <strong>%1$s</strong> z <strong>%2$s</strong>)"
 msgid "Found one search result for <strong>%2$s</strong>."
 msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
 msgstr[0] "Nalezen jeden výsledek vyhledávání pro <strong>%2$s</strong>."
-msgstr[1] "Nalezeno %1$s výsledků vyhledávání pro <strong>%2$s</strong>"
+msgstr[1] "Nalezeny %1$s výsledky vyhledávání pro <strong>%2$s</strong>"
+msgstr[2] "Nalezeno %1$s výsledků vyhledávání pro <strong>%2$s</strong>"
 
 #: ../inc/template-tags.php:590
 #, php-format
 msgid "There is one post filed in <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
-msgstr[0] "Je zde jeden příspěvek v rubrice <strong>%2$s</strong>."
-msgstr[1] "%1$s příspěvků v rubrice <strong>%2$s</strong>"
+msgstr[0] "Jeden příspěvek v rubrice <strong>%2$s</strong>."
+msgstr[1] "%1$s příspěvky v rubrice <strong>%2$s</strong>"
+msgstr[2] "%1$s příspěvků v rubrice <strong>%2$s</strong>"
 
 #: ../inc/template-tags.php:592
 #, php-format
 msgid "There is one post tagged <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
-msgstr[0] "Je zde jeden příspěvek se štítkem <strong>%2$s</strong>."
-msgstr[1] "%1$s příspěvků se štítkem <strong>%2$s</strong>"
+msgstr[0] "Jeden příspěvek se štítkem <strong>%2$s</strong>."
+msgstr[1] "%1$s příspěvky se štítkem <strong>%2$s</strong>"
+msgstr[2] "%1$s příspěvků se štítkem <strong>%2$s</strong>"
 
 #: ../inc/template-tags.php:623
 #, php-format
 msgid "There was one post published in %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
-msgstr[0] "Byl zde jeden příspěvek publikovaný v %2$s."
-msgstr[1] "%1$s příspěvků publikovaných v %2$s"
+msgstr[0] "Jeden příspěvek publikovaný v %2$s."
+msgstr[1] "%1$s příspěvky publikované v %2$s"
+msgstr[2] "%1$s příspěvků publikovaných v %2$s"
 
 #: ../inc/template-tags.php:625
 #, php-format
 msgid "There is one post published in %2$s."
 msgid_plural "There are %1$s posts published in %2$s"
-msgstr[0] "Je zde jeden příspěvek publikovaný v %2$s."
-msgstr[1] "%1$s příspěvků publikovaných v %2$s"
+msgstr[0] "Jeden příspěvek publikovaný v %2$s."
+msgstr[1] "%1$s příspěvky publikované v %2$s"
+msgstr[2] "%1$s příspěvků publikovaných v %2$s"
 
 #: ../inc/template-tags.php:628
 #, php-format
 msgid "There was one post published on %2$s."
 msgid_plural "There were %1$s posts published on %2$s"
 msgstr[0] "Jeden příspěvek publikovaný dne %2$s."
-msgstr[1] "%1$s příspěvků publikovaných dne %2$s"
+msgstr[1] "%1$s příspěvky publikované dne %2$s"
+msgstr[2] "%1$s příspěvků publikovaných dne %2$s"
 
 #: ../inc/template-tags.php:635
 #, php-format
 msgid "There was one post published in the month of %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
-msgstr[0] "Příspěvek publikovaný v měsíci %2$s."
-msgstr[1] "%1$s příspěvků publikovaných v %2$s"
+msgstr[0] "Jeden příspěvek publikovaný v měsíci %2$s."
+msgstr[1] "%1$s příspěvky publikované v měsíci %2$s"
+msgstr[2] "%1$s příspěvků publikovaných v měsíci %2$s"
 
 #: ../inc/template-tags.php:640
 #, php-format
 msgid "There was one post published in %2$s %3$s."
 msgid_plural "There were %1$s posts published in %2$s %3$s"
-msgstr[0] "Příspěvek publikovaný v měsíci %2$s %3$s."
-msgstr[1] "%1$s příspěvků v měsíci %2$s %3$s"
+msgstr[0] "Jeden příspěvek publikovaný v měsíci %2$s %3$s."
+msgstr[1] "%1$s příspěvky v měsíci %2$s %3$s"
+msgstr[2] "%1$s příspěvků v měsíci %2$s %3$s"
 
 #: ../page_archive-template.php:45
 msgid "Yearly Archives"
