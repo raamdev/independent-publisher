@@ -116,9 +116,14 @@ For more information on using Child Themes, see the [WordPress Codex](http://cod
 
 ### Why is my Header Image not showing on Single posts?
 
-On Single pages, the Gravatar image for the author of the post is shown. The Header Image (*Dashboard → Appearance → Header*) is only shown on non-Single pages.
+![screen shot 2014-05-15 at 6 53 32 pm](https://cloud.githubusercontent.com/assets/53005/2991763/cfad8b34-dc83-11e3-8f30-7ad98ac13486.png)
 
-If there is only one author on your site, you probably want to set the Header Image to be the same as the author Gravatar. (You also probably want the site Tagline, *Dashboard → Settings → General → Tagline*, to be the same as your bio in *Dashboard → Users → Your Profile → Biographical Info*.)
+
+On Single Post pages, the image of the author of the post is shown. On non-Single pages like the Home Page, the Header Image (*Dashboard → Appearance → Header*) is shown. If you only select a Header Image and don't see something like the screenshot above on your Single Post pages, that means you haven't configured an Author Image.
+
+WordPress uses [Gravatar](http://gravatar.com) to link your email address with an image of your choosing. If you don't already have a Gravatar account, signup using the same email address that you have configured in **Dashboard → Users → Your Profile**. After you upload and associate an image with the email address you have configured in WordPress, you should see the new image appear on your Single Post pages. (Sometimes it take a little while for Gravatar to update things, so if you don't see it immediately, give it some time.)
+
+Note that if there is only one author on your site, you probably want to set the Header Image to be the same as the author Gravatar. (You also probably want the site Tagline, *Dashboard → Settings → General → Tagline*, to be the same as your bio in *Dashboard → Users → Your Profile → Biographical Info*.)
 
 ### How do I get the small logo to show up in the top-left corner?
 
