@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
 "POT-Creation-Date: 2014-05-14 21:47+0100\n"
-"PO-Revision-Date: 2014-05-14 22:07+0100\n"
+"PO-Revision-Date: 2014-05-14 22:41+0100\n"
 "Last-Translator: Pavel Tajduš <tajdik@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team:  <tajdik@gmail.com>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -195,7 +195,7 @@ msgstr "Archivovat stránku"
 #: ../functions.php:252
 #, php-format
 msgid "%1$s empowered by %2$s"
-msgstr "%1$s pohání %2$s"
+msgstr "%1$s poháněn systémem %2$s"
 
 #: ../functions.php:291
 msgid "Anonymous"
@@ -313,7 +313,7 @@ msgstr "Povolit"
 
 #: ../inc/customizer.php:72
 msgid "Generate One-Sentence Excerpts"
-msgstr "Generovat jednoslovné výňatky"
+msgstr "Generovat výňatky o délce jedné věty"
 
 #: ../inc/customizer.php:90
 msgid "Always Show Full Content for First Post"
@@ -353,7 +353,7 @@ msgstr "Zobrazit ukazatel průběhu načítání stránky"
 
 #: ../inc/customizer.php:252
 msgid "Auto-Set Featured Image as Post Cover"
-msgstr "Automaticky nastavit náhledový obrázek jako hlavní"
+msgstr "Automaticky nastavit náhledový obrázek jako pozadí"
 
 #: ../inc/customizer.php:270
 msgid "Comments Call to Action"
