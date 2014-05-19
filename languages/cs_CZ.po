@@ -1,0 +1,567 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Independent Publisher\n"
+"POT-Creation-Date: 2014-05-14 21:47+0100\n"
+"PO-Revision-Date: 2014-05-14 22:41+0100\n"
+"Last-Translator: Pavel Tajduš <tajdik@gmail.com>\n"
+"Language-Team:  <tajdik@gmail.com>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
+"esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
+"translate_nooped_plural\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Jejda! Stránka nebyla nalezena."
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Vypadá to, že tady nic není. Zkuste jeden z odkazů dole, nebo vyhledávání."
+
+#: ../404.php:29 ../page_archive-template.php:32
+msgid "Most Used Categories"
+msgstr "Nejčastěji použité kategorie"
+
+#. translators: %1$s: smilie
+#: ../404.php:45
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Zkuste hledat v archívech po měsících. %1$s"
+
+#: ../archive.php:50
+msgid "Asides"
+msgstr "Postranní panely"
+
+#: ../archive.php:52
+msgid "Galleries"
+msgstr "Galerie"
+
+#: ../archive.php:54
+msgid "Images"
+msgstr "Obrázky"
+
+#: ../archive.php:56
+msgid "Videos"
+msgstr "Videa"
+
+#: ../archive.php:58
+msgid "Quotes"
+msgstr "Citáty"
+
+#: ../archive.php:60
+msgid "Links"
+msgstr "Odkazy"
+
+#: ../archive.php:62
+msgid "Statuses"
+msgstr "Statusy"
+
+#: ../archive.php:64
+msgid "Audios"
+msgstr "Audio"
+
+#: ../archive.php:66
+msgid "Chats"
+msgstr "Chaty"
+
+#: ../archive.php:68 ../sidebar.php:21
+msgid "Archives"
+msgstr "Archívy"
+
+#: ../comments.php:40 ../content.php:91
+#, php-format
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "1 komentář"
+msgstr[1] "%1$s komentáře"
+msgstr[2] "%1$s komentářů"
+
+#: ../comments.php:49 ../comments.php:70
+msgid "Comment navigation"
+msgstr "Navigace v komentářích"
+
+#: ../comments.php:51 ../comments.php:72
+msgid "&larr; Older Comments"
+msgstr "&larr; Starší komentáře"
+
+#: ../comments.php:52 ../comments.php:73
+msgid "Newer Comments &rarr;"
+msgstr "Novější komentáře &rarr;"
+
+#: ../comments.php:83
+msgid "Comments are closed."
+msgstr "Komentáře jsou uzavřeny."
+
+#: ../comments.php:102
+msgid "Readers who shared this"
+msgstr "Čtenáři, kteří toto sdíleli"
+
+#: ../comments.php:104
+msgid "Thank you!"
+msgstr "Díky!"
+
+#: ../content-none.php:13 ../no-results.php:14
+msgid "Nothing Found"
+msgstr "Nenalezeno"
+
+#: ../content-none.php:20 ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Připraveni publikovat první příspěvek? <a href=\"%1$s\">Začněte zde</a>."
+
+#: ../content-none.php:24 ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Omlouváme se, ale nic neodpovídá vašemu hledání. Zkuste to znovu s jiným "
+"slovem."
+
+#: ../content-none.php:30 ../no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Vypadá to, že jsme nenašli to, co jste hledali. Pomoci může vyhledávání."
+
+#: ../content-page.php:22 ../content-single.php:39
+#: ../page_one-column-template.php:39
+msgid "Next page &rarr;"
+msgstr "další strana &rarr;"
+
+#: ../content-page.php:23 ../content-single.php:40
+#: ../page_one-column-template.php:40
+msgid "&larr; Previous page"
+msgstr "&larr; předchozí strana"
+
+#: ../content-page.php:29 ../content-single.php:46 ../content.php:53
+#: ../page_one-column-template.php:46
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: ../content-page.php:47 ../content-single.php:66 ../content.php:95
+#: ../image.php:127 ../page_archive-template.php:72
+#: ../page_one-column-template.php:53
+msgid "Edit"
+msgstr "Upravit"
+
+#: ../content.php:21 ../content.php:47 ../functions.php:1014
+#: ../functions.php:1029
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink na %s"
+
+#: ../content.php:91 ../functions.php:397
+msgid "Comment"
+msgstr "Komentář"
+
+#: ../content.php:91
+msgid "% Comments"
+msgstr "% Komentářů"
+
+#: ../functions.php:98
+msgid "Primary Menu"
+msgstr "Hlavní menu"
+
+#: ../functions.php:99
+msgid "Single Posts Menu"
+msgstr "Menu pro jednotlivé příspěvky"
+
+#: ../functions.php:100
+msgid "Social"
+msgstr "Sociální sítě"
+
+#: ../functions.php:141
+msgid "Sidebar"
+msgstr "Postranní lišta"
+
+#: ../functions.php:152
+msgid "Archive Page"
+msgstr "Archivovat stránku"
+
+#: ../functions.php:252
+#, php-format
+msgid "%1$s empowered by %2$s"
+msgstr "%1$s poháněn systémem %2$s"
+
+#: ../functions.php:291
+msgid "Anonymous"
+msgstr "Anonym"
+
+#: ../functions.php:304
+msgid "Reply to"
+msgstr "Odpovědět uživateli"
+
+#: ../functions.php:338
+#, php-format
+msgid "Leave a Reply for %s"
+msgstr "Odpovědět na %s"
+
+#: ../functions.php:339
+msgid "Cancel Reply"
+msgstr "Zrušit odpověď"
+
+#: ../functions.php:340
+msgid "Submit Comment"
+msgstr "Přidat komentář"
+
+#: ../functions.php:343
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Musíte být <a href=\"%s\">přihlášeni</a> pro přidání komentáře."
+
+#: ../functions.php:348
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Přihlášen jako <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Odhlásit "
+"se\">Odhlásit se?</a>"
+
+#: ../functions.php:358
+msgid "Name"
+msgstr "Jméno"
+
+#: ../functions.php:363
+msgid "Email"
+msgstr "E-mail"
+
+#: ../functions.php:368
+msgid "Website"
+msgstr "Web"
+
+#: ../functions.php:547
+msgid "Write a Comment"
+msgstr "Napsat komentář"
+
+#: ../functions.php:782
+msgid "Use as post cover (full-width)"
+msgstr "Použít úvodní obrázek příspěvku (plná šířka)"
+
+#: ../functions.php:792
+msgid "Disable post cover (full-width)"
+msgstr "Vypnout úvodní obrázek příspěvku (plná šířka)"
+
+#: ../functions.php:990
+msgid "in"
+msgstr "v"
+
+#: ../functions.php:999
+msgid "by"
+msgstr "by"
+
+#: ../header.php:56
+msgid "Skip to content"
+msgstr "Přejít k obsahu"
+
+#: ../image.php:23
+#, php-format
+msgid ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
+"%7$s</a>"
+msgstr ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Odkaz na plnou velikost obrázku\">%3$s "
+"&times; %4$s</a> %5$s <a href=\"%6$s\" title=\"Zpět k %7$s\" rel=\"galerie\">"
+"%7$s</a>"
+
+#: ../image.php:106
+msgid "&larr; Previous image"
+msgstr "&larr; Předchozí obrázek"
+
+#: ../image.php:107
+msgid "Next image &rarr;"
+msgstr "Další obrázek &rarr;"
+
+#: ../inc/customizer.php:19
+msgid "Layout Options"
+msgstr "Nastavení rozvržení stránky"
+
+#: ../inc/customizer.php:26
+msgid "Excerpt Options"
+msgstr "Nastavení výňatku"
+
+#: ../inc/customizer.php:33
+msgid "General Options"
+msgstr "Hlavní nastavení"
+
+#: ../inc/customizer.php:49
+msgid "Post Excerpts"
+msgstr "Výňatky příspěvku"
+
+#: ../inc/customizer.php:54
+msgid "Disabled"
+msgstr "Zakázat"
+
+#: ../inc/customizer.php:55
+msgid "Enabled"
+msgstr "Povolit"
+
+#: ../inc/customizer.php:72
+msgid "Generate One-Sentence Excerpts"
+msgstr "Generovat výňatky o délce jedné věty"
+
+#: ../inc/customizer.php:90
+msgid "Always Show Full Content for First Post"
+msgstr "Vždy zobratovat kompletní obsah pro první příspěvek"
+
+#: ../inc/customizer.php:108
+msgid "Show Post Word Count in Entry Meta"
+msgstr "Zobrazit počítadlo znaků v popisku"
+
+#: ../inc/customizer.php:126
+msgid "Show Post Date in Entry Meta"
+msgstr "Ukázat datum vytvoření v popisku"
+
+#: ../inc/customizer.php:144
+msgid "Show Widgets on Single Posts"
+msgstr "Zobrazit Widgety u jednotlivých příspěvků"
+
+#: ../inc/customizer.php:162
+msgid "Show Nav Menu on Single Posts"
+msgstr "Zobrazit navigaci u jednotlivých příspěvků"
+
+#: ../inc/customizer.php:180
+msgid "Show Updated Date on Single Posts"
+msgstr "Zobrazit datum aktualizace u jednotlivých příspěvků"
+
+#: ../inc/customizer.php:198
+msgid "Single-Column Layout"
+msgstr "Jednosloupcové rozvržení stránky"
+
+#: ../inc/customizer.php:216
+msgid "Enable Multi-Author Mode"
+msgstr "Zapnout mód pro více autorů"
+
+#: ../inc/customizer.php:234
+msgid "Show Page Load Progress Bar"
+msgstr "Zobrazit ukazatel průběhu načítání stránky"
+
+#: ../inc/customizer.php:252
+msgid "Auto-Set Featured Image as Post Cover"
+msgstr "Automaticky nastavit náhledový obrázek jako pozadí"
+
+#: ../inc/customizer.php:270
+msgid "Comments Call to Action"
+msgstr "Výzva ke komentování"
+
+#: ../inc/customizer.php:283
+msgid "Text Color"
+msgstr "Barva textu"
+
+#: ../inc/customizer.php:288
+msgid "Comment Form Background Color"
+msgstr "Barva pozadí u komentářů"
+
+#: ../inc/customizer.php:293
+msgid "Link Color"
+msgstr "Barva odkazů"
+
+#: ../inc/customizer.php:298
+msgid "Title and Header Text Color"
+msgstr "Barva hlavního nadpisu"
+
+#: ../inc/customizer.php:303
+msgid "Primary Meta Text Color"
+msgstr "Barva hlavního popisku stránky"
+
+#: ../inc/customizer.php:308
+msgid "Secondary Meta Text Color"
+msgstr "Barva popisku u příspěvků"
+
+#: ../inc/template-tags.php:41
+msgid "Post navigation"
+msgstr "Navigace"
+
+#: ../inc/template-tags.php:45
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/template-tags.php:46
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/template-tags.php:51
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Starší příspěvky"
+
+#: ../inc/template-tags.php:55
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Novější příspěvky <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:85
+msgid " - Your comment is awaiting moderation."
+msgstr " - Váš komentář čeká na schválení."
+
+#. translators: 1: date
+#: ../inc/template-tags.php:97 ../inc/template-tags.php:140
+msgid "(Edit)"
+msgstr "(Upravit)"
+
+#: ../inc/template-tags.php:165 ../inc/template-tags.php:196
+#: ../inc/template-tags.php:208
+#, php-format
+msgid "View all posts by %s"
+msgstr "Zobrazit všechny příspěvky autora %s"
+
+#. translators: used between list items, there is a space after the comma
+#: ../inc/template-tags.php:182
+msgid ", "
+msgstr ", "
+
+#: ../inc/template-tags.php:271
+msgid "Continue Reading &rarr;"
+msgstr "Číst dále &rarr;"
+
+#: ../inc/template-tags.php:288
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Číst dále <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:358
+#, php-format
+msgid "Page %s"
+msgstr "Strana %s"
+
+#: ../inc/template-tags.php:378
+#, php-format
+msgid "View all posts in %s"
+msgstr "Zobrazit všechny příspěvky v %s"
+
+#: ../inc/template-tags.php:434
+msgid "Published"
+msgstr "Publikováno"
+
+#: ../inc/template-tags.php:442 ../inc/template-tags.php:483
+msgid "Updated"
+msgstr "Aktualizováno"
+
+#: ../inc/template-tags.php:510
+#, php-format
+msgid "%1$s Words"
+msgstr "%1$s slov"
+
+#: ../inc/template-tags.php:561 ../inc/template-tags.php:586
+#: ../inc/template-tags.php:615
+#, php-format
+msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
+msgstr " (strana <strong>%1$s</strong> z <strong>%2$s</strong>)"
+
+# Plural is not working well in czech language.
+#: ../inc/template-tags.php:564
+#, php-format
+msgid "Found one search result for <strong>%2$s</strong>."
+msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
+msgstr[0] "Nalezen jeden výsledek vyhledávání pro <strong>%2$s</strong>."
+msgstr[1] "Nalezeny %1$s výsledky vyhledávání pro <strong>%2$s</strong>"
+msgstr[2] "Nalezeno %1$s výsledků vyhledávání pro <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:590
+#, php-format
+msgid "There is one post filed in <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
+msgstr[0] "Jeden příspěvek v rubrice <strong>%2$s</strong>."
+msgstr[1] "%1$s příspěvky v rubrice <strong>%2$s</strong>"
+msgstr[2] "%1$s příspěvků v rubrice <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:592
+#, php-format
+msgid "There is one post tagged <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
+msgstr[0] "Jeden příspěvek se štítkem <strong>%2$s</strong>."
+msgstr[1] "%1$s příspěvky se štítkem <strong>%2$s</strong>"
+msgstr[2] "%1$s příspěvků se štítkem <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:623
+#, php-format
+msgid "There was one post published in %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "Jeden příspěvek publikovaný v %2$s."
+msgstr[1] "%1$s příspěvky publikované v %2$s"
+msgstr[2] "%1$s příspěvků publikovaných v %2$s"
+
+#: ../inc/template-tags.php:625
+#, php-format
+msgid "There is one post published in %2$s."
+msgid_plural "There are %1$s posts published in %2$s"
+msgstr[0] "Jeden příspěvek publikovaný v %2$s."
+msgstr[1] "%1$s příspěvky publikované v %2$s"
+msgstr[2] "%1$s příspěvků publikovaných v %2$s"
+
+#: ../inc/template-tags.php:628
+#, php-format
+msgid "There was one post published on %2$s."
+msgid_plural "There were %1$s posts published on %2$s"
+msgstr[0] "Jeden příspěvek publikovaný dne %2$s."
+msgstr[1] "%1$s příspěvky publikované dne %2$s"
+msgstr[2] "%1$s příspěvků publikovaných dne %2$s"
+
+#: ../inc/template-tags.php:635
+#, php-format
+msgid "There was one post published in the month of %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "Jeden příspěvek publikovaný v měsíci %2$s."
+msgstr[1] "%1$s příspěvky publikované v měsíci %2$s"
+msgstr[2] "%1$s příspěvků publikovaných v měsíci %2$s"
+
+#: ../inc/template-tags.php:640
+#, php-format
+msgid "There was one post published in %2$s %3$s."
+msgid_plural "There were %1$s posts published in %2$s %3$s"
+msgstr[0] "Jeden příspěvek publikovaný v měsíci %2$s %3$s."
+msgstr[1] "%1$s příspěvky v měsíci %2$s %3$s"
+msgstr[2] "%1$s příspěvků v měsíci %2$s %3$s"
+
+#: ../page_archive-template.php:45
+msgid "Yearly Archives"
+msgstr "Roční archív"
+
+#: ../page_archive-template.php:47
+msgid "Select Year"
+msgstr "Vyberte rok"
+
+#: ../page_archive-template.php:53
+msgid "Monthly Archives"
+msgstr "Měsíční archív"
+
+#: ../page_archive-template.php:55
+msgid "Select Month"
+msgstr "Vyberte měsíc"
+
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
+msgid "Search"
+msgstr "Hledat"
+
+#: ../page_archive-template.php:65
+msgid "Explore by Tag"
+msgstr "Procházet podle štítku"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Hledat výsledky pro: %s"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Hledat &hellip;"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Popisek"
+
+#: ../single.php:28
+msgid "Related Content by Tag"
+msgstr "Podobný obsah podle štítku"
