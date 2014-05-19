@@ -2372,6 +2372,16 @@ table th {
 	color: #4A4A4E;
 }
 
+#menu-social li a[href*="mailto"]::before {
+	content: '\f410';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="mailto"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
 /* Hide left-side author card under 1200px */
 @media only screen and (max-width: 1200px) {
 	.site,
