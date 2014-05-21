@@ -137,7 +137,7 @@ big {
 	font-family: Georgia, "Bitstream Charter", serif !important;
 	font-style: italic !important;
 	font-weight: normal;
-	margin: 0;
+	margin-bottom: 1em;
 }
 
 .mceContentBody blockquote {
