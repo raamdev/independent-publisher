@@ -1,0 +1,559 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Independent Publisher\n"
+"POT-Creation-Date: 2014-05-25 22:59-0600\n"
+"PO-Revision-Date: 2014-05-25 23:48-0600\n"
+"Last-Translator: Guillermo Dolores <momosolamente@gmail.com>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
+"esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
+"translate_nooped_plural\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Esa página no puede ser encontrada"
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Parece que no se encontró nada en ésta ubicación. Tal vez si intentas con "
+"uno de los enlaces a continuación o ¿Con una búsqueda?"
+
+#: ../404.php:29 ../page_archive-template.php:32
+msgid "Most Used Categories"
+msgstr "Categorías más usadas"
+
+#. translators: %1$s: smilie
+#: ../404.php:45
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Intenta buscando en los archivos mensuales. %1$s"
+
+#: ../archive.php:50
+msgid "Asides"
+msgstr "Asides"
+
+#: ../archive.php:52
+msgid "Galleries"
+msgstr "Galerías"
+
+#: ../archive.php:54
+msgid "Images"
+msgstr "Imágenes"
+
+#: ../archive.php:56
+msgid "Videos"
+msgstr "Videos"
+
+#: ../archive.php:58
+msgid "Quotes"
+msgstr "Citas"
+
+#: ../archive.php:60
+msgid "Links"
+msgstr "Enlaces"
+
+#: ../archive.php:62
+msgid "Statuses"
+msgstr "Estados"
+
+#: ../archive.php:64
+msgid "Audios"
+msgstr "Audios"
+
+#: ../archive.php:66
+msgid "Chats"
+msgstr "Chats"
+
+#: ../archive.php:68 ../sidebar.php:21
+msgid "Archives"
+msgstr "Archivos"
+
+#: ../comments.php:40 ../content.php:91
+#, php-format
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "1 Comentario"
+msgstr[1] "%1$s Comentarios"
+
+#: ../comments.php:49 ../comments.php:70
+msgid "Comment navigation"
+msgstr "Navegación de Comentarios"
+
+#: ../comments.php:51 ../comments.php:72
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarios Antiguos"
+
+#: ../comments.php:52 ../comments.php:73
+msgid "Newer Comments &rarr;"
+msgstr "Comentarios Recientes &rarr;"
+
+#: ../comments.php:83
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: ../comments.php:102
+msgid "Readers who shared this"
+msgstr "Lectores que compartieron esto"
+
+#: ../comments.php:104
+msgid "Thank you!"
+msgstr "¡Gracias!"
+
+#: ../content-none.php:13 ../no-results.php:14
+msgid "Nothing Found"
+msgstr "No se encontró nada."
+
+#: ../content-none.php:20 ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"¿Listo para publicar tu primer post? <a href=\"%1$s\">Empieza aquí</a>."
+
+#: ../content-none.php:24 ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Disculpa, pero nada coincide con tus términos de búsqueda. Por favor intenta "
+"nuevamente con algunas palabras clave diferentes."
+
+#: ../content-none.php:30 ../no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que no podemos encontrar lo que estabas buscando. Quizá una búsqueda "
+"pueda ayudar."
+
+#: ../content-page.php:22 ../content-single.php:39
+#: ../page_one-column-template.php:39
+msgid "Next page &rarr;"
+msgstr "Siguiente página &rarr;"
+
+#: ../content-page.php:23 ../content-single.php:40
+#: ../page_one-column-template.php:40
+msgid "&larr; Previous page"
+msgstr "&larr; Página anterior"
+
+#: ../content-page.php:29 ../content-single.php:46 ../content.php:53
+#: ../page_one-column-template.php:46
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: ../content-page.php:47 ../content-single.php:66 ../content.php:95
+#: ../image.php:127 ../page_archive-template.php:72
+#: ../page_one-column-template.php:53
+msgid "Edit"
+msgstr "Editar"
+
+#: ../content.php:21 ../content.php:47 ../functions.php:1014
+#: ../functions.php:1029
+#, php-format
+msgid "Permalink to %s"
+msgstr "Enlace permanente %s"
+
+#: ../content.php:91 ../functions.php:397
+msgid "Comment"
+msgstr "Comentario"
+
+#: ../content.php:91
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: ../functions.php:98
+msgid "Primary Menu"
+msgstr "Menú Principal"
+
+#: ../functions.php:99
+msgid "Single Posts Menu"
+msgstr "Menú de Posts Individuales"
+
+#: ../functions.php:100
+msgid "Social"
+msgstr "Social"
+
+#: ../functions.php:141
+msgid "Sidebar"
+msgstr "Barra Lateral"
+
+#: ../functions.php:152
+msgid "Archive Page"
+msgstr "Página de Archivo"
+
+#: ../functions.php:252
+#, php-format
+msgid "%1$s empowered by %2$s"
+msgstr "%1$s potencializado por %2$s"
+
+#: ../functions.php:291
+msgid "Anonymous"
+msgstr "Anónimo"
+
+#: ../functions.php:304
+msgid "Reply to"
+msgstr "Responder a"
+
+#: ../functions.php:338
+#, php-format
+msgid "Leave a Reply for %s"
+msgstr "Deja una respuesta a %s"
+
+#: ../functions.php:339
+msgid "Cancel Reply"
+msgstr "Cancelar respuesta"
+
+#: ../functions.php:340
+msgid "Submit Comment"
+msgstr "Enviar Comentario"
+
+#: ../functions.php:343
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Debes estar <a href=\"%s\">registrado</a> para publicar un comentario"
+
+#: ../functions.php:348
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Registrado como <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Cerrar "
+"sesión de esta cuenta\">¿Cerrar sesión?</a>"
+
+#: ../functions.php:358
+msgid "Name"
+msgstr "Nombre"
+
+#: ../functions.php:363
+msgid "Email"
+msgstr "Email"
+
+#: ../functions.php:368
+msgid "Website"
+msgstr "Sitio web"
+
+#: ../functions.php:547
+msgid "Write a Comment"
+msgstr "Escribe un comentario"
+
+#: ../functions.php:782
+msgid "Use as post cover (full-width)"
+msgstr "Usar como cubierta de Post (ancho-completo)"
+
+#: ../functions.php:792
+msgid "Disable post cover (full-width)"
+msgstr "Desactivar cubierta de Post (ancho-completo)"
+
+#: ../functions.php:990
+msgid "in"
+msgstr "en"
+
+#: ../functions.php:999
+msgid "by"
+msgstr "por"
+
+#: ../header.php:56
+msgid "Skip to content"
+msgstr "Saltar a contenido"
+
+#: ../image.php:23
+#, php-format
+msgid ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
+"%7$s</a>"
+msgstr ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Enlace a imagen de tamaño completo\">"
+"%3$s &times; %4$s</a> %5$s <a href=\"%6$s\" title=\"Regresar a %7$s\" rel="
+"\"gallery\">%7$s</a>"
+
+#: ../image.php:106
+msgid "&larr; Previous image"
+msgstr "&larr; Imagen previa"
+
+#: ../image.php:107
+msgid "Next image &rarr;"
+msgstr "Imagen siguiente &rarr;"
+
+#: ../inc/customizer.php:19
+msgid "Layout Options"
+msgstr "Opciones de Diseño"
+
+#: ../inc/customizer.php:26
+msgid "Excerpt Options"
+msgstr "Opciones de Excerpt"
+
+#: ../inc/customizer.php:33
+msgid "General Options"
+msgstr "Opciones Generales"
+
+#: ../inc/customizer.php:49
+msgid "Post Excerpts"
+msgstr "Excerpts de Post"
+
+#: ../inc/customizer.php:54
+msgid "Disabled"
+msgstr "Deshabilitado"
+
+#: ../inc/customizer.php:55
+msgid "Enabled"
+msgstr "Habilitado"
+
+#: ../inc/customizer.php:72
+msgid "Generate One-Sentence Excerpts"
+msgstr "Generar Excerpts de una oración"
+
+#: ../inc/customizer.php:90
+msgid "Always Show Full Content for First Post"
+msgstr "Mostrar siempre el contenido completo para el primer Post"
+
+#: ../inc/customizer.php:108
+msgid "Show Post Word Count in Entry Meta"
+msgstr "Mostrar el número de palabras del Post en los metadatos"
+
+#: ../inc/customizer.php:126
+msgid "Show Post Date in Entry Meta"
+msgstr "Mostar la fecha del Post en los metadatos"
+
+#: ../inc/customizer.php:144
+msgid "Show Widgets on Single Posts"
+msgstr "Mostrar Widgets en Posts individuales"
+
+#: ../inc/customizer.php:162
+msgid "Show Nav Menu on Single Posts"
+msgstr "Mostrar Menu de navegación en Posts individuales"
+
+#: ../inc/customizer.php:180
+msgid "Show Updated Date on Single Posts"
+msgstr "Mostrar fecha de actualización en Posts individuales"
+
+#: ../inc/customizer.php:198
+msgid "Single-Column Layout"
+msgstr "Diseño de una columna"
+
+#: ../inc/customizer.php:216
+msgid "Enable Multi-Author Mode"
+msgstr "Habilitar el Modo Multi-Autor"
+
+#: ../inc/customizer.php:234
+msgid "Show Page Load Progress Bar"
+msgstr "Mostrar barra de progreso de la carga de página"
+
+#: ../inc/customizer.php:252
+msgid "Auto-Set Featured Image as Post Cover"
+msgstr "Auto-Definir la imagen destacada como Portada de Post"
+
+#: ../inc/customizer.php:270
+msgid "Comments Call to Action"
+msgstr "Llamada de acción de Comentarios"
+
+#: ../inc/customizer.php:283
+msgid "Text Color"
+msgstr "Color de Texto"
+
+#: ../inc/customizer.php:288
+msgid "Comment Form Background Color"
+msgstr "Color de fondo del Formulario de comentarios"
+
+#: ../inc/customizer.php:293
+msgid "Link Color"
+msgstr "Color de enlaces"
+
+#: ../inc/customizer.php:298
+msgid "Title and Header Text Color"
+msgstr "Color de Título y Encabezado"
+
+#: ../inc/customizer.php:303
+msgid "Primary Meta Text Color"
+msgstr "Color de texto de Metadatos principales"
+
+#: ../inc/customizer.php:308
+msgid "Secondary Meta Text Color"
+msgstr "Color de texto de Metadatos secundarios"
+
+#: ../inc/template-tags.php:41
+msgid "Post navigation"
+msgstr "Navegación de Post"
+
+#: ../inc/template-tags.php:45
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/template-tags.php:46
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/template-tags.php:51
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Posts antiguos"
+
+#: ../inc/template-tags.php:55
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Post recientes <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:85
+msgid " - Your comment is awaiting moderation."
+msgstr " - Tu comentario está en espera de moderación."
+
+#. translators: 1: date
+#: ../inc/template-tags.php:97 ../inc/template-tags.php:140
+msgid "(Edit)"
+msgstr "(Editar)"
+
+#: ../inc/template-tags.php:165 ../inc/template-tags.php:196
+#: ../inc/template-tags.php:208
+#, php-format
+msgid "View all posts by %s"
+msgstr "Ver todos los Post por %s"
+
+#. translators: used between list items, there is a space after the comma
+#: ../inc/template-tags.php:182
+msgid ", "
+msgstr ", "
+
+#: ../inc/template-tags.php:271
+msgid "Continue Reading &rarr;"
+msgstr "Continuar leyendo &rarr;"
+
+#: ../inc/template-tags.php:288
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continuar leyendo <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:358
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+#: ../inc/template-tags.php:378
+#, php-format
+msgid "View all posts in %s"
+msgstr "Ver todos los posts en %s"
+
+#: ../inc/template-tags.php:434
+msgid "Published"
+msgstr "Publicado"
+
+#: ../inc/template-tags.php:442 ../inc/template-tags.php:483
+msgid "Updated"
+msgstr "Actualizado"
+
+#: ../inc/template-tags.php:510
+#, php-format
+msgid "%1$s Words"
+msgstr "%1$s Palabras"
+
+#: ../inc/template-tags.php:561 ../inc/template-tags.php:586
+#: ../inc/template-tags.php:615
+#, php-format
+msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
+msgstr " (Esta es página <strong>%1$s</strong> de <strong>%2$s</strong>)"
+
+#: ../inc/template-tags.php:564
+#, php-format
+msgid "Found one search result for <strong>%2$s</strong>."
+msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
+msgstr[0] "Un resultado encontrado para <strong>%2$s</strong>."
+msgstr[1] "%1$s resultados encontrados para <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:590
+#, php-format
+msgid "There is one post filed in <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
+msgstr[0] "Hay un post archivado en <strong>%2$s</strong>."
+msgstr[1] "Hay %1$s posts archivados en <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:592
+#, php-format
+msgid "There is one post tagged <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
+msgstr[0] "Hay un post etiquetado con <strong>%2$s</strong>."
+msgstr[1] "Hay %1$s posts etiquetados con <strong>%2$s</strong>."
+
+#: ../inc/template-tags.php:623
+#, php-format
+msgid "There was one post published in %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "Hubo un post publicado en <strong>%2$s</strong>."
+msgstr[1] "Hubieron %1$s posts publicados en <strong>%2$s</strong>."
+
+#: ../inc/template-tags.php:625
+#, php-format
+msgid "There is one post published in %2$s."
+msgid_plural "There are %1$s posts published in %2$s"
+msgstr[0] "Hay un post publicado el %2$s."
+msgstr[1] "Hay %1$s posts publicados el %2$s"
+
+#: ../inc/template-tags.php:628
+#, php-format
+msgid "There was one post published on %2$s."
+msgid_plural "There were %1$s posts published on %2$s"
+msgstr[0] "Hubo un post publicado el %2$s."
+msgstr[1] "Hubieron %1$s posts publicados el %2$s"
+
+#: ../inc/template-tags.php:635
+#, php-format
+msgid "There was one post published in the month of %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "Hubo un post publicado en el mes de %2$s."
+msgstr[1] "Hubieron %1$s posts publicados en %2$s"
+
+#: ../inc/template-tags.php:640
+#, php-format
+msgid "There was one post published in %2$s %3$s."
+msgid_plural "There were %1$s posts published in %2$s %3$s"
+msgstr[0] "Hubo un post publicado en %2$s %3$s."
+msgstr[1] "Hubieron %1$s posts publicados en %2$s %3$s"
+
+#: ../page_archive-template.php:45
+msgid "Yearly Archives"
+msgstr "Archivos anuales"
+
+#: ../page_archive-template.php:47
+msgid "Select Year"
+msgstr "Seleccionar Año"
+
+#: ../page_archive-template.php:53
+msgid "Monthly Archives"
+msgstr "Archivos Mensuales"
+
+#: ../page_archive-template.php:55
+msgid "Select Month"
+msgstr "Seleccionar Mes"
+
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
+msgid "Search"
+msgstr "Buscar"
+
+#: ../page_archive-template.php:65
+msgid "Explore by Tag"
+msgstr "Explorar por Etiqueta"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Buscar Resultados para: %s"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Buscar &hellip;"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Meta"
+
+#: ../single.php:28
+msgid "Related Content by Tag"
+msgstr "Contenido relacionado por Etiqueta"
