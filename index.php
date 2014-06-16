@@ -42,7 +42,7 @@ get_header(); ?>
 
 		</main>
 		<!-- #content .site-content -->
-	</><!-- #primary .content-area -->
+	</div><!-- #primary .content-area -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
