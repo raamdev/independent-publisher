@@ -201,10 +201,6 @@ blockquote cite {
 	font-size: 70%;
 }
 
-blockquote cite:before {
-	content: "\2014 \0020";
-}
-
 blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	font-weight: normal;
 	font-family: Georgia, "Bitstream Charter", serif;
