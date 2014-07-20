@@ -16,9 +16,11 @@
 			echo independent_publisher_entry_meta_author_prefix() . ' ';
 		}
 		independent_publisher_posted_author() ?></span>
-			<?php if ( independent_publisher_categorized_blog() ) {
-				echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', true );
-			} ?>
+		<?php if ( is_plugin_active( 'advanced-custom-fields/acf.php' ) && get_field('primary_category') ) { // check for ACF and a custom field named 'primary_category'
+        	echo independent_publisher_entry_meta_category_prefix() . ' ' . get_field('primary_category'); // show the primary category as set in ACF
+      	} else if ( independent_publisher_categorized_blog() ) {
+        	echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', true );
+      	} ?>
 			<span class="entry-title-meta-post-date">
         <span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
 				<?php independent_publisher_posted_on_date() ?>
