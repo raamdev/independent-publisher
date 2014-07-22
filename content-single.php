@@ -16,7 +16,7 @@
 			echo independent_publisher_entry_meta_author_prefix() . ' ';
 		}
 		independent_publisher_posted_author() ?></span>
-		<?php if ( get_field('independent_publisher_primary_category') ) { // check a custom field named 'independent_publisher_primary_category'
+		<?php if ( get_field('independent_publisher_primary_category') ) { // check for a custom field named 'independent_publisher_primary_category'
         	echo independent_publisher_entry_meta_category_prefix() . ' ' . get_field('independent_publisher_primary_category'); // show the primary category as set in ACF
       	} else if ( independent_publisher_categorized_blog() ) {
         	echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', true );
