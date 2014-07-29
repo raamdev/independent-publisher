@@ -184,6 +184,10 @@ function independent_publisher_scripts() {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 
+	if ( is_singular() ) {
+		wp_enqueue_script( 'fade-post-title', get_template_directory_uri() . '/js/fade-post-title.js', array( 'jquery' ));
+	}
+
 	/**
 	 * Load JetPack Sharing Buttons Style Enhancements
 	 */
@@ -580,6 +584,28 @@ function independent_publisher_has_full_width_featured_image() {
 
 	return false; // Default
 }
+/**
+ * Return true if post has the custom field independent_publisher_post_cover_title set to true
+ */
+function independent_publisher_post_has_post_cover_title() {
+	$post_has_cover_title 	= get_post_meta( get_the_ID(), 'independent_publisher_post_cover_title', true);
+
+	$has_full_width_featured_image = independent_publisher_has_full_width_featured_image();
+
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+
+
+	if ( $post_has_cover_title === 'true' && $has_full_width_featured_image ) {
+		return true;
+	}
+
+	if( isset( $independent_publisher_general_options['auto_post_with_post_cover_title'] ) && $independent_publisher_general_options['auto_post_with_post_cover_title'] && $has_full_width_featured_image ) {
+		return true;
+	}
+
+	return false; // Default
+}
+
 
 /**
  * Returns true if Enable Page Load Progress Bar option is enabled
@@ -630,6 +656,18 @@ function independent_publisher_auto_featured_image_post_cover() {
 }
 
 /**
+ * Returns true if Auto-Set Post with Post Cover Title option is enabled
+ */
+function independent_publisher_auto_post_with_post_cover_title() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['auto_post_with_post_cover_title'] ) && $independent_publisher_general_options['auto_post_with_post_cover_title'] ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
  * Add full-width-featured-image to body class when displaying a post with Full Width Featured Image enabled
  */
 function independent_publisher_full_width_featured_image_body_class( $classes ) {
@@ -641,6 +679,19 @@ function independent_publisher_full_width_featured_image_body_class( $classes ) 
 }
 
 add_filter( 'body_class', 'independent_publisher_full_width_featured_image_body_class' );
+
+/**
+ * Add full-width-featured-image to body class when displaying a post with Full Width Featured Image enabled
+ */
+function independent_publisher_post_cover_title_body_class( $classes ) {
+	if ( independent_publisher_post_has_post_cover_title() &&  independent_publisher_has_full_width_featured_image() ) {
+		$classes[] = 'post-has-post-cover-title';
+	}
+
+	return $classes;
+}
+
+add_filter( 'body_class', 'independent_publisher_post_cover_title_body_class' );
 
 /**
  * Add single-column-layout to body class when Use Single Column Layout option enabled

@@ -255,6 +255,24 @@ class IndependentPublisher_Customize {
 						 )
 		);
 
+		// Auto-Set Post with Post Cover Title
+		$wp_customize->add_setting(
+					 'independent_publisher_general_options[auto_post_with_post_cover_title]', array(
+							 'default'    => false,
+							 'type'       => 'option',
+							 'capability' => 'edit_theme_options',
+							 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+						 )
+		);
+		$wp_customize->add_control(
+					 'auto_post_with_post_cover_title', array(
+							 'settings' => 'independent_publisher_general_options[auto_post_with_post_cover_title]',
+							 'label'    => __( 'Auto-Set post with Post Cover Title style', 'independent-publisher' ),
+							 'section'  => 'independent_publisher_general_options',
+							 'type'     => 'checkbox',
+						 )
+		);
+
 		// Comments Call to Action text
 		$wp_customize->add_setting(
 					 'comments_call_to_action', array(
