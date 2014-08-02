@@ -76,6 +76,11 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		add_theme_support( 'post-thumbnails' );
 
 		/**
+		 * Enable responsive video support
+		 */
+		add_theme_support( 'jetpack-responsive-videos' );
+
+		/**
 		 * Enable editor style
 		 */
 		add_editor_style();
