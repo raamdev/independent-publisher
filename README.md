@@ -261,6 +261,25 @@ The [Social Menu](https://github.com/raamdev/independent-publisher#how-do-i-add-
 
 You'll simply need to replace `example.com` and `http://example.com/logo.png` in the code with the domain for the new social media site and the URL to the logo you want to appear on the social menu.
 
+### How can I enable "Single-Column Layout" on only the home page?
+
+Add the following code to child theme's `functions.php` file to enable the Single-Column layout for only the home page:
+
+```php
+/**
+ * Add single-column-layout to body class when on home page
+ */
+function __custom_independent_publisher_single_column_layout_body_class( $classes ) {
+	if ( is_home() ) {
+		$classes[] = 'single-column-layout';
+	}
+
+	return $classes;
+}
+
+add_filter( 'body_class', '__custom_independent_publisher_single_column_layout_body_class' );
+```
+
 ## Color Schemes
 
 You can modify the color scheme in *Appearance → Customize → Colors*. Here are a few recommended color schemes:
