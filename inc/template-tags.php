@@ -536,7 +536,7 @@ if ( ! function_exists( 'independent_publisher_full_width_featured_image' ) ):
 		if ( independent_publisher_has_full_width_featured_image() ) {
 			while ( have_posts() ) : the_post();
 				if ( has_post_thumbnail() ) :
-					the_post_thumbnail( 'full', array( 'class' => 'full-width-featured-image' ) );
+					the_post_thumbnail( apply_filters( 'independent_publisher_full_width_featured_image_size', array( 700, 700) ), array( 'class' => 'full-width-featured-image' ) );
 				endif;
 			endwhile; // end of the loop.
 		}
