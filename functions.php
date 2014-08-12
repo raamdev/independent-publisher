@@ -601,8 +601,11 @@ function independent_publisher_post_has_post_cover_title() {
 	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
 
 
-	if ( $post_has_cover_title === 'true' && $has_full_width_featured_image ) {
+	// Allow site owner to set this option on a per-post basis using a Custom Field
+	if ( $post_has_cover_title === '1' && $has_full_width_featured_image ) {
 		return true;
+	} else if ( $post_has_cover_title === '0' && $has_full_width_featured_image ) {
+		return false;
 	}
 
 	if( isset( $independent_publisher_general_options['post_cover_overlay_post_title'] ) && $independent_publisher_general_options['post_cover_overlay_post_title'] && $has_full_width_featured_image ) {
