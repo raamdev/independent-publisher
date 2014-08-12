@@ -257,7 +257,7 @@ class IndependentPublisher_Customize {
 
 		// Overlay Post Title on Post Cover
 		$wp_customize->add_setting(
-					 'independent_publisher_general_options[auto_post_with_post_cover_title]', array(
+					 'independent_publisher_general_options[post_cover_overlay_post_title]', array(
 							 'default'    => false,
 							 'type'       => 'option',
 							 'capability' => 'edit_theme_options',
@@ -265,8 +265,8 @@ class IndependentPublisher_Customize {
 						 )
 		);
 		$wp_customize->add_control(
-					 'auto_post_with_post_cover_title', array(
-							 'settings' => 'independent_publisher_general_options[auto_post_with_post_cover_title]',
+					 'post_cover_overlay_post_title', array(
+							 'settings' => 'independent_publisher_general_options[post_cover_overlay_post_title]',
 							 'label'    => __( 'Overlay Post Title on Post Cover', 'independent-publisher' ),
 							 'section'  => 'independent_publisher_general_options',
 							 'type'     => 'checkbox',

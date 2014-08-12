@@ -605,7 +605,7 @@ function independent_publisher_post_has_post_cover_title() {
 		return true;
 	}
 
-	if( isset( $independent_publisher_general_options['auto_post_with_post_cover_title'] ) && $independent_publisher_general_options['auto_post_with_post_cover_title'] && $has_full_width_featured_image ) {
+	if( isset( $independent_publisher_general_options['post_cover_overlay_post_title'] ) && $independent_publisher_general_options['post_cover_overlay_post_title'] && $has_full_width_featured_image ) {
 		return true;
 	}
 
@@ -664,9 +664,9 @@ function independent_publisher_auto_featured_image_post_cover() {
 /**
  * Returns true if Auto-Set Post with Post Cover Title option is enabled
  */
-function independent_publisher_auto_post_with_post_cover_title() {
+function independent_publisher_post_cover_overlay_post_title() {
 	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-	if ( isset( $independent_publisher_general_options['auto_post_with_post_cover_title'] ) && $independent_publisher_general_options['auto_post_with_post_cover_title'] ) {
+	if ( isset( $independent_publisher_general_options['post_cover_overlay_post_title'] ) && $independent_publisher_general_options['post_cover_overlay_post_title'] ) {
 		return true;
 	} else {
 		return false;
