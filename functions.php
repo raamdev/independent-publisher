@@ -75,6 +75,12 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		/*
+		 * Add custom thumbnail size for use with featured images
+		 */
+
+		add_image_size( 'independent_publisher_post_thumbnail', 700, 700);
+
 		/**
 		 * Enable editor style
 		 */

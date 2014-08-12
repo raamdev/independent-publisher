@@ -7,7 +7,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 	<?php if ( has_post_thumbnail() && ! independent_publisher_has_full_width_featured_image() ) : ?>
-		<?php the_post_thumbnail( array( 700, 700 ), array( 'itemprop' => 'image' ) ); ?>
+		<?php the_post_thumbnail( 'independent_publisher_post_thumbnail', array( 'itemprop' => 'image' ) ); ?>
 	<?php endif; ?>
 	<header class="entry-header">
 		<h2 class="entry-title-meta">
