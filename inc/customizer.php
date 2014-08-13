@@ -383,7 +383,7 @@ class IndependentPublisher_Customize {
 
 			/* Comment Form Background Color */
 
-			<?php self::generate_css('#commentform-top,#commentform-bottom,.comment-respond', 'background-color', 'comment_form_background_color'); ?>
+			<?php self::generate_css('.comment-respond', 'background-color', 'comment_form_background_color'); ?>
 
 			/* Text Color */
 

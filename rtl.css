@@ -1357,14 +1357,17 @@ ul.taglist {
 	font-size: 80%;
 }
 
-#commentform-top,
-#commentform-bottom {
+.comment-respond {
 	background: #F1F1F1;
 	border-radius: 10px;
 	padding-left: 30px;
 	padding-top: 5px;
 	padding-right: 30px;
 	padding-bottom: 5px;
+}
+
+#commentform-top,
+#commentform-bottom {
 	display: none;
 }
 
