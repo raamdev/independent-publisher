@@ -1095,6 +1095,17 @@ endif;
 
 add_filter( 'the_excerpt', 'independent_publisher_maybe_linkify_the_excerpt' );
 
+if ( ! function_exists( 'independent_publisher_cancel_comment_reply_link' ) ) :
+	/**
+	 * Returns the cancel comment reply link with #respond stripped out so it behaves with jQuery used to enhance comments
+	 */
+	function independent_publisher_cancel_comment_reply_link( $formatted_link) {
+		return str_ireplace('#respond', '', $formatted_link);
+	}
+endif;
+
+add_filter( 'cancel_comment_reply_link', 'independent_publisher_cancel_comment_reply_link', 10, 1 );
+
 if ( ! function_exists( 'independent_publisher_html_tag_schema' ) ) :
 	/**
 	 * Returns the proper schema type
