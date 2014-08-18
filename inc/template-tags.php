@@ -472,7 +472,7 @@ if ( ! function_exists( 'independent_publisher_posted_author_bottom_card' ) ) :
 					<h2 class="site-description"><?php the_author_meta( 'description' ) ?></h2>
 				</div>
 				<div class="post-published-date">
-					<h2 class="site-published">Published</h2>
+					<h2 class="site-published"><?php _e('Published', 'independent-publisher'); ?></h2>
 					<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
 					<?php /* Show last updated date if the post was modified AND
 							Show Updated Date on Single Posts option is enabled AND
