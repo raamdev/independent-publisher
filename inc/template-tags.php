@@ -617,6 +617,11 @@ if ( ! function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 	 * Returns taxonomy archive stats and current page info for use in taxonomy archive descriptions
 	 */
 	function independent_publisher_taxonomy_archive_stats( $taxonomy = 'category' ) {
+
+		// There's no point in showing page numbers of we're using JetPack's Infinite Scroll module
+		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) )
+			return '';
+
 		global $wp_query;
 		$total            = $wp_query->found_posts;
 		$total_pages      = $wp_query->max_num_pages; // The total number of pages
