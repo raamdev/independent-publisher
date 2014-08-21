@@ -119,7 +119,8 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 				'quote',
 				'chat',
 				'image',
-				'video'
+				'video',
+			   'audio'
 			)
 		);
 	}
