@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-08-21 10:30-0500\n"
-"PO-Revision-Date: 2014-08-21 10:30-0500\n"
+"POT-Creation-Date: 2014-08-21 10:36-0500\n"
+"PO-Revision-Date: 2014-08-21 10:36-0500\n"
 "Last-Translator: Raam Dev <raam@raamdev.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -472,7 +472,7 @@ msgstr ""
 msgid "View all posts in %s"
 msgstr ""
 
-#: ../inc/template-tags.php:434
+#: ../inc/template-tags.php:434 ../inc/template-tags.php:475
 msgid "Published"
 msgstr ""
 
