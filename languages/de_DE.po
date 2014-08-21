@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-04-23 17:36-0500\n"
-"PO-Revision-Date: 2014-08-15 16:56+0100\n"
+"POT-Creation-Date: 2014-08-21 10:36-0500\n"
+"PO-Revision-Date: 2014-08-21 16:59+0100\n"
 "Last-Translator: J. Hillert <41st@hillert.net>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.6.8\n"
 "X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
 "esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
 "translate_nooped_plural\n"
@@ -137,34 +137,34 @@ msgstr ""
 "Scheinbar k&ouml;nnen wir nicht finden, wonach Du suchst. Eventuell hilft "
 "suchen."
 
-#: ../content-page.php:22 ../content-single.php:39
+#: ../content-page.php:22 ../content-single.php:58
 #: ../page_one-column-template.php:39
 msgid "Next page &rarr;"
 msgstr "N&auml;chste Seite &rarr;"
 
-#: ../content-page.php:23 ../content-single.php:40
+#: ../content-page.php:23 ../content-single.php:59
 #: ../page_one-column-template.php:40
 msgid "&larr; Previous page"
 msgstr "&larr; Vorherige Seite"
 
-#: ../content-page.php:29 ../content-single.php:46 ../content.php:53
+#: ../content-page.php:29 ../content-single.php:65 ../content.php:53
 #: ../page_one-column-template.php:46
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: ../content-page.php:47 ../content-single.php:66 ../content.php:95
+#: ../content-page.php:47 ../content-single.php:85 ../content.php:95
 #: ../image.php:127 ../page_archive-template.php:72
 #: ../page_one-column-template.php:53
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: ../content.php:21 ../content.php:47 ../functions.php:1014
-#: ../functions.php:1029
+#: ../content.php:21 ../content.php:47 ../functions.php:1075
+#: ../functions.php:1090
 #, php-format
 msgid "Permalink to %s"
 msgstr "Permaling zu %s"
 
-#: ../content.php:91 ../functions.php:397
+#: ../content.php:91 ../functions.php:408
 msgid "Comment"
 msgstr "Kommentar"
 
@@ -172,59 +172,59 @@ msgstr "Kommentar"
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#: ../functions.php:98
+#: ../functions.php:104
 msgid "Primary Menu"
 msgstr "Hauptmen&uuml;"
 
-#: ../functions.php:99
+#: ../functions.php:105
 msgid "Single Posts Menu"
 msgstr "Men&uuml; im Artikel"
 
-#: ../functions.php:100
+#: ../functions.php:106
 msgid "Social"
 msgstr "Social-Men&uuml;"
 
-#: ../functions.php:141
+#: ../functions.php:148
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
-#: ../functions.php:152
+#: ../functions.php:159
 msgid "Archive Page"
 msgstr "Archivseite"
 
-#: ../functions.php:252
+#: ../functions.php:263
 #, php-format
 msgid "%1$s empowered by %2$s"
 msgstr "%1$s von %2$s"
 
-#: ../functions.php:291
+#: ../functions.php:302
 msgid "Anonymous"
 msgstr "Anonymous"
 
-#: ../functions.php:304
+#: ../functions.php:315
 msgid "Reply to"
 msgstr "Antworte an"
 
-#: ../functions.php:338
+#: ../functions.php:349
 #, php-format
 msgid "Leave a Reply for %s"
 msgstr "Hinterlasse eine Antwort f&uuml;r %s"
 
-#: ../functions.php:339
+#: ../functions.php:350
 msgid "Cancel Reply"
 msgstr "Antwort Abbrechen"
 
-#: ../functions.php:340
+#: ../functions.php:351
 msgid "Submit Comment"
 msgstr "Kommentar absenden"
 
-#: ../functions.php:343
+#: ../functions.php:354
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 "Um einen Kommentar zu schreiben muss Du Dich <a href=\"%s\">anmelden</a>."
 
-#: ../functions.php:348
+#: ../functions.php:359
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -233,35 +233,35 @@ msgstr ""
 "Angemeldet als <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Von "
 "diesem Konto abmelden\">Log out?</a>"
 
-#: ../functions.php:358
+#: ../functions.php:369
 msgid "Name"
 msgstr "Name"
 
-#: ../functions.php:363
+#: ../functions.php:374
 msgid "Email"
 msgstr "E-Mail"
 
-#: ../functions.php:368
+#: ../functions.php:379
 msgid "Website"
 msgstr "Webseite"
 
-#: ../functions.php:547
+#: ../functions.php:558
 msgid "Write a Comment"
 msgstr "Schreibe einen Kommentar"
 
-#: ../functions.php:782
+#: ../functions.php:843
 msgid "Use as post cover (full-width)"
 msgstr "Als Cover benutzen (volle Breite)"
 
-#: ../functions.php:792
+#: ../functions.php:853
 msgid "Disable post cover (full-width)"
 msgstr "Cover nicht verwenden (volle Breite)"
 
-#: ../functions.php:990
+#: ../functions.php:1051
 msgid "in"
 msgstr "in"
 
-#: ../functions.php:999
+#: ../functions.php:1060
 msgid "by"
 msgstr "von"
 
@@ -331,11 +331,11 @@ msgstr "Anderer Inhalt mit diesem Tag"
 
 #: ../inc/customizer.php:19
 msgid "Layout Options"
-msgstr "Layout-Optionen"
+msgstr "Layout-Einstellungen"
 
 #: ../inc/customizer.php:26
 msgid "Excerpt Options"
-msgstr "Optionen für Text-Auszüge"
+msgstr "Einstellungen für Text-Auszüge"
 
 #: ../inc/customizer.php:33
 msgid "General Options"
@@ -344,6 +344,14 @@ msgstr "Allgemeine Einstellungen"
 #: ../inc/customizer.php:49
 msgid "Post Excerpts"
 msgstr "Text-Auszug in der Übersicht"
+
+#: ../inc/customizer.php:54
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+#: ../inc/customizer.php:55
+msgid "Enabled"
+msgstr "Aktiviert"
 
 #: ../inc/customizer.php:72
 msgid "Generate One-Sentence Excerpts"
@@ -390,30 +398,34 @@ msgid "Auto-Set Featured Image as Post Cover"
 msgstr "Beitragsbild als Cover verwenden"
 
 #: ../inc/customizer.php:270
+msgid "Overlay Post Title on Post Cover"
+msgstr "Beitragstitel im Cover-Bild anzeigen"
+
+#: ../inc/customizer.php:288
 msgid "Comments Call to Action"
 msgstr "Aufforderung zum Kommentar"
 
-#: ../inc/customizer.php:283
+#: ../inc/customizer.php:301
 msgid "Text Color"
 msgstr "Textfarbe"
 
-#: ../inc/customizer.php:288
+#: ../inc/customizer.php:306
 msgid "Comment Form Background Color"
 msgstr "Hintergrundfarbe des Kommentarformulars"
 
-#: ../inc/customizer.php:293
+#: ../inc/customizer.php:311
 msgid "Link Color"
 msgstr "Linkfarbe"
 
-#: ../inc/customizer.php:298
+#: ../inc/customizer.php:316
 msgid "Title and Header Text Color"
 msgstr "Textfarbe f&uuml;r Titel und Kopfzeile"
 
-#: ../inc/customizer.php:303
+#: ../inc/customizer.php:321
 msgid "Primary Meta Text Color"
 msgstr "Textfarbe f&uuml;r prim&auml;re Meta-Infos"
 
-#: ../inc/customizer.php:308
+#: ../inc/customizer.php:326
 msgid "Secondary Meta Text Color"
 msgstr "Textfarbe f&uuml;r sekund&auml;re Meta-Infos"
 
@@ -473,7 +485,7 @@ msgstr "Seite %s"
 msgid "View all posts in %s"
 msgstr "Alle Beitr&auml;ge in %s ansehen"
 
-#: ../inc/template-tags.php:434
+#: ../inc/template-tags.php:434 ../inc/template-tags.php:475
 msgid "Published"
 msgstr "Ver&ouml;ffentlicht"
 
@@ -486,27 +498,27 @@ msgstr "Aktualisiert"
 msgid "%1$s Words"
 msgstr "%1$s W&ouml;rter"
 
-#: ../inc/template-tags.php:561 ../inc/template-tags.php:586
-#: ../inc/template-tags.php:615
+#: ../inc/template-tags.php:606 ../inc/template-tags.php:636
+#: ../inc/template-tags.php:665
 #, php-format
 msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
 msgstr " (dies ist Seite <strong>%1$s</strong> von <strong>%2$s</strong>)"
 
-#: ../inc/template-tags.php:564
+#: ../inc/template-tags.php:609
 #, php-format
 msgid "Found one search result for <strong>%2$s</strong>."
 msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
 msgstr[0] "Ein Suchergebnis f&uuml;r <strong>%2$s</strong>."
 msgstr[1] "%1$s Suchergebnisse <strong>%2$s</strong> gefunden."
 
-#: ../inc/template-tags.php:590
+#: ../inc/template-tags.php:640
 #, php-format
 msgid "There is one post filed in <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
 msgstr[0] "Es gibt einen Beitrag in <strong>%2$s</strong>."
 msgstr[1] "Es gibt %1$s Beitr&auml;ge in <strong>%2$s</strong>."
 
-#: ../inc/template-tags.php:592
+#: ../inc/template-tags.php:642
 #, php-format
 msgid "There is one post tagged <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
@@ -514,35 +526,35 @@ msgstr[0] "Es gibt einen Beitrag mit dem Schlagwort <strong>%2$s</strong>."
 msgstr[1] ""
 "Es gibt %1$s Beitr&auml;ge mit dem Schlagwort <strong>%2$s</strong>."
 
-#: ../inc/template-tags.php:623
+#: ../inc/template-tags.php:673
 #, php-format
 msgid "There was one post published in %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
 msgstr[0] "Es wurde ein Beitrag in %2$s ver&ouml;ffentlicht."
 msgstr[1] "Es wurden %1$s Beitr&auml;ge in %2$s ver&ouml;ffentlicht."
 
-#: ../inc/template-tags.php:625
+#: ../inc/template-tags.php:675
 #, php-format
 msgid "There is one post published in %2$s."
 msgid_plural "There are %1$s posts published in %2$s"
 msgstr[0] "Es ist ein Beitrag in %2$s ver&ouml;ffentlicht."
 msgstr[1] "Es sind %1$s Beitr&auml;ge in %2$s ver&ouml;ffentlicht."
 
-#: ../inc/template-tags.php:628
+#: ../inc/template-tags.php:678
 #, php-format
 msgid "There was one post published on %2$s."
 msgid_plural "There were %1$s posts published on %2$s"
 msgstr[0] "Es wurde ein Beitrag am %2$s ver&ouml;ffentlicht."
 msgstr[1] "Es wurden %1$s Beitr&auml;ge am %2$s ver&ouml;ffentlicht."
 
-#: ../inc/template-tags.php:635
+#: ../inc/template-tags.php:685
 #, php-format
 msgid "There was one post published in the month of %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
 msgstr[0] "Es wurde ein Beitrag im %2$s ver&ouml;ffentlicht."
 msgstr[1] "Es wurden %1$s Beitr&auml;ge im %2$s ver&ouml;ffentlicht."
 
-#: ../inc/template-tags.php:640
+#: ../inc/template-tags.php:690
 #, php-format
 msgid "There was one post published in %2$s %3$s."
 msgid_plural "There were %1$s posts published in %2$s %3$s"
