@@ -788,15 +788,6 @@ Accessibility
 	text-decoration: none;
 }
 
-.format-aside sup, .format-aside .footnotes {
-	font-size: 15px;
-	font-style: normal;
-}
-
-.format-aside .footnotes hr {
-	display: none;
-}
-
 .single-format-aside .entry-title,
 .single-format-quote .entry-title {
 	display: none;
@@ -2005,15 +1996,29 @@ table th {
 	font-size: 80%;
 }
 
-.blog div.footnotes,
-.archive div.footnotes,
-.search div.footnotes {
+.blog .format-aside .footnotes,
+.blog .format-quote .footnotes,
+.archive .format-aside .footnotes,
+.archive .format-quote .footnotes,
+.search .format-aside .footnotes,
+.search .format-quote .footnotes {
 	display: none;
 }
 
-.blog .show-full-content-first-post div.footnotes,
-.blog .show-full-content-first-post-sticky div.footnotes {
-	display: block;
+.blog hr.footnotes,
+.archive hr.footnotes,
+.search hr.footnotes {
+	margin-left: 0;
+	width: 50%;
+	background-color: #ddd;
+}
+
+.format-aside sup,
+.format-quote sup,
+.format-aside .footnotes,
+.format-quote .footnotes{
+	font-size: 15px;
+	font-style: normal;
 }
 
 /* Author Page Styles */

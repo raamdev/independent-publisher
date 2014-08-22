@@ -978,12 +978,15 @@ function independent_publisher_is_not_first_post_full_content() {
 
 if ( ! function_exists( 'independent_publisher_clean_content' ) ):
 	/**
-	 * Cleans and returns the content for display as a Quote or Aside by stripping anything that might screw up formatting
+	 * Cleans and returns the content for display as a Quote or Aside by stripping anything that might screw up formatting. This is necessary because we link Quotes and Asides to their own permalink. If the Quote or Aside contains a footnote with an anchor tag, or even just an anchor tag, then nesting anchor within anchor will break formatting.
 	 */
 	function independent_publisher_clean_content( $content ) {
 
-		// Remove footnotes, if any
-		$content = preg_replace( '!<div\s+class="footnotes.*?">.*?</div>!is', '', $content );
+		// Remove footnotes
+		$content = preg_replace( '!<sup\s+.*?>.*?</sup>!is', '', $content );
+
+		// Remove anchor tags
+		$content = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $content);
 
 		return $content;
 	}
@@ -1069,9 +1072,10 @@ if ( ! function_exists( 'independent_publisher_maybe_linkify_the_content' ) ) :
 	function independent_publisher_maybe_linkify_the_content( $content ) {
 		if ( ! is_single() && ( 'aside' === get_post_format() || 'quote' === get_post_format() ) ) {
 
-			// Asides and Quotes might have footnotes, which don't display properly when linking the content to itself, so let's clean things up
+			// Asides and Quotes might have footnotes with anchor tags, or just anchor tags, both of which would screw things up when linking the content to itself (anchors cannot have anchors inside them), so let's clean things up
 			$content = independent_publisher_clean_content( $content );
 
+			// Now we can link the Quote or Aside content to itself
 			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
 		}
 
@@ -1079,7 +1083,7 @@ if ( ! function_exists( 'independent_publisher_maybe_linkify_the_content' ) ) :
 	}
 endif;
 
-add_filter( 'the_content', 'independent_publisher_maybe_linkify_the_content' );
+add_filter( 'the_content', 'independent_publisher_maybe_linkify_the_content', 100 );
 
 if ( ! function_exists( 'independent_publisher_maybe_linkify_the_excerpt' ) ) :
 	/**
