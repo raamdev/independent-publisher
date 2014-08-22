@@ -482,7 +482,7 @@ img.aligncenter {
 .main-navigation a {
 	text-decoration: none;
 	font-size: 15px;
-	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-seri;
+	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 
 .main-navigation ul ul {
@@ -1571,17 +1571,15 @@ body {
 
 .main-navigation li,
 .widget-area li {
-	display: block;
+	line-height: .80;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	margin: 0;
-	padding: 0;
 }
 
 .main-navigation a,
 .widget-area ul li a {
-	padding: 5px 0px;
 	text-decoration: none;
-	display: block;
-	line-height: 1.2;
 }
 
 .widget-area ul li a {
