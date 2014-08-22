@@ -1652,6 +1652,13 @@ body {
 	color: #57ad68;
 }
 
+/* Inifnite Scroll - Spinner */
+.infinite-loader {
+	color: #000;
+	position: fixed;
+	bottom: 0;
+}
+
 h1,
 h2,
 h3,
