@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
 "POT-Creation-Date: 2014-04-23 17:36-0500\n"
-"PO-Revision-Date: 2014-08-24 13:41+0100\n"
+"PO-Revision-Date: 2014-08-24 15:46+0100\n"
 "Last-Translator: Eddy Lelièvre-Berna\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -119,7 +119,7 @@ msgstr "Aucun Résultat Trouvé"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Prêt à publier votre premier billet ?  <a href=\"%1$s\">Commencez ici</a>."
+"Prêt à publier votre premier article ?  <a href=\"%1$s\">Commencez ici</a>."
 
 #: ../content-none.php:24 ../no-results.php:25
 msgid ""
@@ -351,7 +351,7 @@ msgstr "Générer les Extraits à partir d&rsquo;une Phrase"
 
 #: ../inc/customizer.php:90
 msgid "Always Show Full Content for First Post"
-msgstr "Toujours Montrer le Contenu Complet du Premier Billet"
+msgstr "Toujours Montrer le Contenu Complet du Premier Article"
 
 #: ../inc/customizer.php:108
 msgid "Show Post Word Count in Entry Meta"
