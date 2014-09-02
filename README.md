@@ -28,6 +28,7 @@ Independent Publisher is a WordPress Theme. This README contains documentation f
     * [How do I change the footer credits?](https://github.com/raamdev/independent-publisher#how-do-i-change-the-footer-credits)
     * [How do I add my own Social Icons to the Social Menu?](https://github.com/raamdev/independent-publisher#how-do-i-add-my-own-social-icons-to-the-social-menu)
     * [How can I enable "Single-Column Layout" on only the home page?](https://github.com/raamdev/independent-publisher#how-can-i-enable-single-column-layout-on-only-the-home-page)
+    * [Why is the Navigation Menu and/or Widgets not Appearing on Single Post Pages?](https://github.com/raamdev/independent-publisher#why-is-the-navigation-menu-andor-widgets-not-appearing-on-single-post-pages)
 * [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
 * [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
 * [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
@@ -283,7 +284,7 @@ add_filter( 'body_class', '__custom_independent_publisher_single_column_layout_b
 
 ### Why is the Navigation Menu and/or Widgets not appearing on Single Post pages?
 
-By default, the main navigation menu and all widges are hidden from the Single Post pages to keep things clean and simple, however, if you prefer to show these there, you can enable _Show Nav Menu on Single Posts_ and _Show Widgets on Single Posts_:
+By default, the main navigation menu and all widges are hidden from the Single Post pages to keep things clean and simple, however, if you prefer to show these there, you can enable _Show Nav Menu on Single Posts_ and _Show Widgets on Single Posts_ in **Dashboard → Apperance → Customize → General Options**:
 
 ![2014-09-02_16-00-24](https://cloud.githubusercontent.com/assets/53005/4124836/faeaf062-32db-11e4-8e5b-b4f04be33ffb.png)
 
