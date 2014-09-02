@@ -1,0 +1,557 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Independent Publisher\n"
+"POT-Creation-Date: 2014-08-31 17:26+0100\n"
+"PO-Revision-Date: 2014-08-31 17:26+0100\n"
+"Last-Translator: Marco Raaphorst <marco@melodiefabriek.nl>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
+"esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
+"translate_nooped_plural\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oeps! De pagina werd niet gevonden."
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "Helaas werd niets gevonden. Probeer de links onderaan of zoek opnieuw."
+
+#: ../404.php:29 ../page_archive-template.php:32
+msgid "Most Used Categories"
+msgstr "Meest gebruikte categorieën"
+
+#. translators: %1$s: smilie
+#: ../404.php:45
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Bekijk de archieven per maand. %1$s"
+
+#: ../archive.php:50
+msgid "Asides"
+msgstr "Terzijdes"
+
+#: ../archive.php:52
+msgid "Galleries"
+msgstr "Gallerijen"
+
+#: ../archive.php:54
+msgid "Images"
+msgstr "Plaatjes"
+
+#: ../archive.php:56
+msgid "Videos"
+msgstr "Video&rsquo;s"
+
+#: ../archive.php:58
+msgid "Quotes"
+msgstr "Quotes"
+
+#: ../archive.php:60
+msgid "Links"
+msgstr "Links"
+
+#: ../archive.php:62
+msgid "Statuses"
+msgstr "Statusen"
+
+#: ../archive.php:64
+msgid "Audios"
+msgstr "Audio items"
+
+#: ../archive.php:66
+msgid "Chats"
+msgstr "Gespreken"
+
+#: ../archive.php:68 ../sidebar.php:21
+msgid "Archives"
+msgstr "Archief"
+
+#: ../comments.php:40 ../content.php:91
+#, php-format
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "1 reactie"
+msgstr[1] "%1$s reacties"
+
+#: ../comments.php:49 ../comments.php:70
+msgid "Comment navigation"
+msgstr "Reactie-navigatie"
+
+#: ../comments.php:51 ../comments.php:72
+msgid "&larr; Older Comments"
+msgstr "&larr; Oudere reacties"
+
+#: ../comments.php:52 ../comments.php:73
+msgid "Newer Comments &rarr;"
+msgstr "Meer recente reacties &rarr;"
+
+#: ../comments.php:83
+msgid "Comments are closed."
+msgstr "Reacties niet toegestaan."
+
+#: ../comments.php:102
+msgid "Readers who shared this"
+msgstr "Lezers die dit delen"
+
+#: ../comments.php:104
+msgid "Thank you!"
+msgstr "Bedankt!"
+
+#: ../content-none.php:13 ../no-results.php:14
+msgid "Nothing Found"
+msgstr "Niets gevonden"
+
+#: ../content-none.php:20 ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Klaar om je eerste blogpost the publiceren? <a href=\"%1$s\">Begin hier</a>."
+
+#: ../content-none.php:24 ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Helaas, niets werd gevonden op basis van de zoektermen. Probeer het opnieuw "
+"met andere zoektermen."
+
+#: ../content-none.php:30 ../no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Niets werd gevonden. Misschien dat je het via Zoeken wel kunt vinden."
+
+#: ../content-page.php:22 ../content-single.php:39
+#: ../page_one-column-template.php:39
+msgid "Next page &rarr;"
+msgstr "Volgende pagina &rarr;"
+
+#: ../content-page.php:23 ../content-single.php:40
+#: ../page_one-column-template.php:40
+msgid "&larr; Previous page"
+msgstr "&larr; Vorige pagina"
+
+#: ../content-page.php:29 ../content-single.php:46 ../content.php:53
+#: ../page_one-column-template.php:46
+msgid "Pages:"
+msgstr "Pagina&rsquo;s:"
+
+#: ../content-page.php:47 ../content-single.php:66 ../content.php:95
+#: ../image.php:127 ../page_archive-template.php:72
+#: ../page_one-column-template.php:53
+msgid "Edit"
+msgstr "Bewerk"
+
+#: ../content.php:21 ../content.php:47 ../functions.php:1015
+#: ../functions.php:1030
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink naar %s"
+
+#: ../content.php:91 ../functions.php:398
+msgid "Comment"
+msgstr "Reactie"
+
+#: ../content.php:91
+msgid "% Comments"
+msgstr "% reacties"
+
+#: ../functions.php:98
+msgid "Primary Menu"
+msgstr "Hoofdmenu"
+
+#: ../functions.php:99
+msgid "Single Posts Menu"
+msgstr "Enkelvoudige Posten Menu"
+
+#: ../functions.php:100
+msgid "Social"
+msgstr "Sociaal"
+
+#: ../functions.php:142
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: ../functions.php:153
+msgid "Archive Page"
+msgstr "Archiefpagina"
+
+#: ../functions.php:253
+#, php-format
+msgid "%1$s empowered by %2$s"
+msgstr "%1$s aangevoerd door %2$s"
+
+#: ../functions.php:292
+msgid "Anonymous"
+msgstr "Anoniem"
+
+#: ../functions.php:305
+msgid "Reply to"
+msgstr "Reageer op"
+
+#: ../functions.php:339
+#, php-format
+msgid "Leave a Reply for %s"
+msgstr "Geef een reactie op %s"
+
+#: ../functions.php:340
+msgid "Cancel Reply"
+msgstr "Cancel reactie"
+
+#: ../functions.php:341
+msgid "Submit Comment"
+msgstr "Reactie plaatsen"
+
+#: ../functions.php:344
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Je moet <a href=\"%s\">ingelogd zijn</a> als je een reactie wilt "
+"achterlaten. "
+
+#: ../functions.php:349
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Ingelogd als <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Loguit?</a>"
+
+#: ../functions.php:359
+msgid "Name"
+msgstr "Naam"
+
+#: ../functions.php:364
+msgid "Email"
+msgstr "E-mail"
+
+#: ../functions.php:369
+msgid "Website"
+msgstr "Website"
+
+#: ../functions.php:548
+msgid "Write a Comment"
+msgstr "Geef een reactie"
+
+#: ../functions.php:783
+msgid "Use as post cover (full-width)"
+msgstr "Gebruik als omslag voor post (volledige breedte)"
+
+#: ../functions.php:793
+msgid "Disable post cover (full-width)"
+msgstr "Deactiveer omslag voor post (volledige breedte)"
+
+#: ../functions.php:991
+msgid "in"
+msgstr "in"
+
+#: ../functions.php:1000
+msgid "by"
+msgstr "door"
+
+#: ../header.php:56
+msgid "Skip to content"
+msgstr "Spring naar de inhoud"
+
+#: ../image.php:23
+#, php-format
+msgid ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
+"%7$s</a>"
+msgstr ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link naar plaatje op volledige grootte\">"
+"%3$s &times; %4$s</a> %5$s <a href=\"%6$s\" title=\"Keer terug naar %7$s\" "
+"rel=\"gallerij\">%7$s</a>"
+
+#: ../image.php:106
+msgid "&larr; Previous image"
+msgstr "&larr; Vorige plaatje"
+
+#: ../image.php:107
+msgid "Next image &rarr;"
+msgstr "Volgende plaatje &rarr;"
+
+#: ../inc/customizer.php:19
+msgid "Layout Options"
+msgstr "Layout Opties"
+
+#: ../inc/customizer.php:26
+msgid "Excerpt Options"
+msgstr "Uittreksel Opties"
+
+#: ../inc/customizer.php:33
+msgid "General Options"
+msgstr "Algemene Opties"
+
+#: ../inc/customizer.php:49
+msgid "Post Excerpts"
+msgstr "Post samenvattingen"
+
+#: ../inc/customizer.php:54
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+#: ../inc/customizer.php:55
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#: ../inc/customizer.php:72
+msgid "Generate One-Sentence Excerpts"
+msgstr "Genereer uittreksels van 1 zin"
+
+#: ../inc/customizer.php:90
+msgid "Always Show Full Content for First Post"
+msgstr "Toon altijd de volledige inhoud voor de eerste post"
+
+#: ../inc/customizer.php:108
+msgid "Show Post Word Count in Entry Meta"
+msgstr "Toon het aantal woorden van de post als meta informatie"
+
+#: ../inc/customizer.php:126
+msgid "Show Post Date in Entry Meta"
+msgstr "Toon de datum als meta informatie"
+
+#: ../inc/customizer.php:144
+msgid "Show Widgets on Single Posts"
+msgstr "Toon widgets voor enkelvoudige posten"
+
+#: ../inc/customizer.php:162
+msgid "Show Nav Menu on Single Posts"
+msgstr "Toon navigate menu voor enkelvoudige posten"
+
+#: ../inc/customizer.php:180
+msgid "Show Updated Date on Single Posts"
+msgstr "Toon datum van update in enkelvoudige posten"
+
+#: ../inc/customizer.php:198
+msgid "Single-Column Layout"
+msgstr "Layout van 1 kolom"
+
+#: ../inc/customizer.php:216
+msgid "Enable Multi-Author Mode"
+msgstr "Activeer multi-auteur modus"
+
+#: ../inc/customizer.php:234
+msgid "Show Page Load Progress Bar"
+msgstr "Toon pagina voortgangsbalk"
+
+#: ../inc/customizer.php:252
+msgid "Auto-Set Featured Image as Post Cover"
+msgstr "Automatisch zet het uitgelichtte plaatje als omslag"
+
+#: ../inc/customizer.php:270
+msgid "Comments Call to Action"
+msgstr "Reactie die tot actie moeten aanzetten"
+
+#: ../inc/customizer.php:283
+msgid "Text Color"
+msgstr "Tekstkleur"
+
+#: ../inc/customizer.php:288
+msgid "Comment Form Background Color"
+msgstr "Achtergrondkleur reactieformulier"
+
+#: ../inc/customizer.php:293
+msgid "Link Color"
+msgstr "Linkkleur"
+
+#: ../inc/customizer.php:298
+msgid "Title and Header Text Color"
+msgstr "Titel en header tekstkleur"
+
+#: ../inc/customizer.php:303
+msgid "Primary Meta Text Color"
+msgstr "Primaire tekstkleur"
+
+#: ../inc/customizer.php:308
+msgid "Secondary Meta Text Color"
+msgstr "Secundaire tekstkleur"
+
+#: ../inc/template-tags.php:41
+msgid "Post navigation"
+msgstr "Navigatie van blogposten"
+
+#: ../inc/template-tags.php:45
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/template-tags.php:46
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/template-tags.php:51
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Eerdere blogposts"
+
+#: ../inc/template-tags.php:55
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Latere blogposts <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:85
+msgid " - Your comment is awaiting moderation."
+msgstr " - Jouw reactie wacht op moderatie."
+
+#. translators: 1: date
+#: ../inc/template-tags.php:97 ../inc/template-tags.php:140
+msgid "(Edit)"
+msgstr "(Bewerk)"
+
+#: ../inc/template-tags.php:165 ../inc/template-tags.php:196
+#: ../inc/template-tags.php:208
+#, php-format
+msgid "View all posts by %s"
+msgstr "Bekijk alle blogposten van %s"
+
+#. translators: used between list items, there is a space after the comma
+#: ../inc/template-tags.php:182
+msgid ", "
+msgstr ", "
+
+#: ../inc/template-tags.php:271
+msgid "Continue Reading &rarr;"
+msgstr "Lees verder &rarr;"
+
+#: ../inc/template-tags.php:288
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Lees verder <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:358
+#, php-format
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#: ../inc/template-tags.php:378
+#, php-format
+msgid "View all posts in %s"
+msgstr "Bekijk alle posten in %s"
+
+#: ../inc/template-tags.php:434
+msgid "Published"
+msgstr "Gepubliceerd"
+
+#: ../inc/template-tags.php:442 ../inc/template-tags.php:483
+msgid "Updated"
+msgstr "Geupdate"
+
+#: ../inc/template-tags.php:510
+#, php-format
+msgid "%1$s Words"
+msgstr "%1$s woorden"
+
+#: ../inc/template-tags.php:561 ../inc/template-tags.php:586
+#: ../inc/template-tags.php:615
+#, php-format
+msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
+msgstr " (dit is pagina <strong>%1$s</strong> van <strong>%2$s</strong>)"
+
+#: ../inc/template-tags.php:564
+#, php-format
+msgid "Found one search result for <strong>%2$s</strong>."
+msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
+msgstr[0] "Een resultaat gevonden op <strong>%2$s</strong>."
+msgstr[1] "%1$s resultaten gevonden op <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:590
+#, php-format
+msgid "There is one post filed in <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
+msgstr[0] "Er is 1 blogpost onder <strong>%2$s</strong>."
+msgstr[1] "Er zijn %1$s blogposts onder <strong>%2$s</strong>."
+
+#: ../inc/template-tags.php:592
+#, php-format
+msgid "There is one post tagged <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
+msgstr[0] "Er is 1 blogpost getagd als <strong>%2$s</strong>."
+msgstr[1] "Er zijn %1$s blogpost getagd als <strong>%2$s</strong>."
+
+#: ../inc/template-tags.php:623
+#, php-format
+msgid "There was one post published in %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "Er was 1 blogpost gepubliceerd in %2$s."
+msgstr[1] "Er werden %1$s blogposts gepubliceerd in %2$s."
+
+#: ../inc/template-tags.php:625
+#, php-format
+msgid "There is one post published in %2$s."
+msgid_plural "There are %1$s posts published in %2$s"
+msgstr[0] "Er is 1 blogpost gepubliceerd in %2$s."
+msgstr[1] "Er zijn %1$s blogposts gepubliceerd in %2$s."
+
+#: ../inc/template-tags.php:628
+#, php-format
+msgid "There was one post published on %2$s."
+msgid_plural "There were %1$s posts published on %2$s"
+msgstr[0] "Er is 1 blogpost gepubliceerd op %2$s."
+msgstr[1] "Er zijn %1$s blogposts gepubliceerd op %2$s."
+
+#: ../inc/template-tags.php:635
+#, php-format
+msgid "There was one post published in the month of %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "Er was 1 blogpost gepubliceerd in de maand %2$s."
+msgstr[1] "Er werden %1$s blogposts gepubliceerd in %2$s."
+
+#: ../inc/template-tags.php:640
+#, php-format
+msgid "There was one post published in %2$s %3$s."
+msgid_plural "There were %1$s posts published in %2$s %3$s"
+msgstr[0] "Er is 1 blogpost gepubliceerd in %2$s %3$s."
+msgstr[1] "Er zijn %1$s blogposten gepubliceerd in %2$s %3$s."
+
+#: ../page_archive-template.php:45
+msgid "Yearly Archives"
+msgstr "Archief op jaar"
+
+#: ../page_archive-template.php:47
+msgid "Select Year"
+msgstr "Selecteer het jaar"
+
+#: ../page_archive-template.php:53
+msgid "Monthly Archives"
+msgstr "Archief op maand"
+
+#: ../page_archive-template.php:55
+msgid "Select Month"
+msgstr "Selecteer de maand"
+
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
+msgid "Search"
+msgstr "Zoeken"
+
+#: ../page_archive-template.php:65
+msgid "Explore by Tag"
+msgstr "Bekijk op Tag"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Zoekresultaten voor: %s"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Zoek &hellip;"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Meta"
+
+#: ../single.php:28
+msgid "Related Content by Tag"
+msgstr "Gerelateerde content per Tag"
