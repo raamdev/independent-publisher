@@ -281,6 +281,13 @@ function __custom_independent_publisher_single_column_layout_body_class( $classe
 add_filter( 'body_class', '__custom_independent_publisher_single_column_layout_body_class' );
 ```
 
+### Why is the Navigation Menu and/or Widgets not appearing on Single Post pages?
+
+By default, the main navigation menu and all widges are hidden from the Single Post pages to keep things clean and simple, however, if you prefer to show these there, you can enable _Show Nav Menu on Single Posts_ and _Show Widgets on Single Posts_:
+
+![2014-09-02_16-00-24](https://cloud.githubusercontent.com/assets/53005/4124836/faeaf062-32db-11e4-8e5b-b4f04be33ffb.png)
+
+
 ## Color Schemes
 
 You can modify the color scheme in *Appearance → Customize → Colors*. Here are a few recommended color schemes:
