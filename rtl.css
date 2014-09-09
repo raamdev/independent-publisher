@@ -2082,6 +2082,10 @@ table th {
 	position: relative;
 }
 
+.single-column-layout.single .site-header {
+	margin-bottom: 0;
+}
+
 .single-column-layout.single .site-header-info {
 	display: none;
 }
