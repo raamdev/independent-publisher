@@ -1,0 +1,559 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Independent Publisher\n"
+"POT-Creation-Date: 2014-08-21 10:36-0500\n"
+"PO-Revision-Date: 2014-09-12 14:47+0700\n"
+"Last-Translator: Eka Y Saputra <ekajogja@gmail.com>\n"
+"Language-Team: \n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
+"esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
+"translate_nooped_plural\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ups! Laman tersebut tak ditemukan."
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Tampaknya tak ada apapun di alamat ini. Coba tautan di bawah ini atau "
+"lakukan pencarian?"
+
+#: ../404.php:29 ../page_archive-template.php:32
+msgid "Most Used Categories"
+msgstr "Kategori Terbanyak Dipakai"
+
+#: ../404.php:45
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Coba cari di arsip bulanan. %1$s"
+
+#: ../archive.php:50
+msgid "Asides"
+msgstr "Aside"
+
+#: ../archive.php:52
+msgid "Galleries"
+msgstr "Galeri"
+
+#: ../archive.php:54
+msgid "Images"
+msgstr "Gambar"
+
+#: ../archive.php:56
+msgid "Videos"
+msgstr "Video"
+
+#: ../archive.php:58
+msgid "Quotes"
+msgstr "Kutipan"
+
+#: ../archive.php:60
+msgid "Links"
+msgstr "Tautan"
+
+#: ../archive.php:62
+msgid "Statuses"
+msgstr "Status"
+
+#: ../archive.php:64
+msgid "Audios"
+msgstr "Audio"
+
+#: ../archive.php:66
+msgid "Chats"
+msgstr "Chat"
+
+#: ../archive.php:68 ../sidebar.php:21
+msgid "Archives"
+msgstr "Arsip"
+
+#: ../comments.php:40 ../content.php:91
+#, php-format
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "1 Komentar"
+msgstr[1] "%1$s Komentar"
+
+#: ../comments.php:49 ../comments.php:70
+msgid "Comment navigation"
+msgstr "Navigasi komentar"
+
+#: ../comments.php:51 ../comments.php:72
+msgid "&larr; Older Comments"
+msgstr "&larr; Komentar Sebelumnya"
+
+#: ../comments.php:52 ../comments.php:73
+msgid "Newer Comments &rarr;"
+msgstr "Komentar Berikutnya &rarr;"
+
+#: ../comments.php:83
+msgid "Comments are closed."
+msgstr "Komentar ditutup."
+
+#: ../comments.php:102
+msgid "Readers who shared this"
+msgstr "Pembaca yang membagikan ini"
+
+#: ../comments.php:104
+msgid "Thank you!"
+msgstr "Terima kasih!"
+
+#: ../content-none.php:13 ../no-results.php:14
+msgid "Nothing Found"
+msgstr "Tak Ditemukan"
+
+#: ../content-none.php:20 ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Siap menerbitkan pos pertamamu? <a href=\"%1$s\">Mulai di sini</a>."
+
+#: ../content-none.php:24 ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Maaf, tak ada yang cocok dengan terma pencarianmu. Silakan coba lagi dengan "
+"keyword berbeda."
+
+#: ../content-none.php:30 ../no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Tampaknya kami tak menemukan apa yang kamu cari. Mungkin pencarian ulang "
+"bisa membantu."
+
+#: ../content-page.php:22 ../content-single.php:58
+#: ../page_one-column-template.php:39
+msgid "Next page &rarr;"
+msgstr "Laman berikutnya &rarr;"
+
+#: ../content-page.php:23 ../content-single.php:59
+#: ../page_one-column-template.php:40
+msgid "&larr; Previous page"
+msgstr "&larr; Laman sebelumnya"
+
+#: ../content-page.php:29 ../content-single.php:65 ../content.php:53
+#: ../page_one-column-template.php:46
+msgid "Pages:"
+msgstr "Laman:"
+
+#: ../content-page.php:47 ../content-single.php:85 ../content.php:95
+#: ../image.php:127 ../page_archive-template.php:72
+#: ../page_one-column-template.php:53
+msgid "Edit"
+msgstr "Sunting"
+
+#: ../content.php:21 ../content.php:47 ../functions.php:1075
+#: ../functions.php:1090
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink ke %s"
+
+#: ../content.php:91 ../functions.php:408
+msgid "Comment"
+msgstr "Komentar"
+
+#: ../content.php:91
+msgid "% Comments"
+msgstr "% Komentar"
+
+#: ../functions.php:104
+msgid "Primary Menu"
+msgstr "Menu Utama"
+
+#: ../functions.php:105
+msgid "Single Posts Menu"
+msgstr "Menu Pos Tunggal"
+
+#: ../functions.php:106
+msgid "Social"
+msgstr "Sosial"
+
+#: ../functions.php:148
+msgid "Sidebar"
+msgstr "Bilahsisi"
+
+#: ../functions.php:159
+msgid "Archive Page"
+msgstr "Laman Arsip"
+
+#: ../functions.php:263
+#, php-format
+msgid "%1$s empowered by %2$s"
+msgstr "%1$s diberdayakan oleh %2$s"
+
+#: ../functions.php:302
+msgid "Anonymous"
+msgstr "Anonim"
+
+#: ../functions.php:315
+msgid "Reply to"
+msgstr "Balas ke"
+
+#: ../functions.php:349
+#, php-format
+msgid "Leave a Reply for %s"
+msgstr "Tinggalkan Balasan untuk %s"
+
+#: ../functions.php:350
+msgid "Cancel Reply"
+msgstr "Batalkan Balasan"
+
+#: ../functions.php:351
+msgid "Submit Comment"
+msgstr "Kirimkan Komentar"
+
+#: ../functions.php:354
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Kamu harus <a href=\"%s\">log masuk</a> untuk memposkan komentar."
+
+#: ../functions.php:359
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Log masuk sebagai <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log "
+"keluar dari akun ini\">Log keluar?</a>"
+
+#: ../functions.php:369
+msgid "Name"
+msgstr "Nama"
+
+#: ../functions.php:374
+msgid "Email"
+msgstr "Email"
+
+#: ../functions.php:379
+msgid "Website"
+msgstr "Website"
+
+#: ../functions.php:558
+msgid "Write a Comment"
+msgstr "Tulis Komentar"
+
+#: ../functions.php:843
+msgid "Use as post cover (full-width)"
+msgstr "Jadikan sampul pos (lebar-utuh)"
+
+#: ../functions.php:853
+msgid "Disable post cover (full-width)"
+msgstr "Hilangkan sampul pos (lebar-utuh)"
+
+#: ../functions.php:1051
+msgid "in"
+msgstr "dalam"
+
+#: ../functions.php:1060
+msgid "by"
+msgstr "oleh"
+
+#: ../header.php:56
+msgid "Skip to content"
+msgstr "Melompat ke konten"
+
+#: ../image.php:23
+#, php-format
+msgid ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
+"%7$s</a>"
+msgstr ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Tautan ke gambar ukuran penuh\">%3$s "
+"&times; %4$s</a> %5$s <a href=\"%6$s\" title=\"Kembali ke %7$s\" rel="
+"\"gallery\">%7$s</a>"
+
+#: ../image.php:106
+msgid "&larr; Previous image"
+msgstr "&larr; Gambar sebelumnya"
+
+#: ../image.php:107
+msgid "Next image &rarr;"
+msgstr "Gambar berikutnya &rarr;"
+
+#: ../page_archive-template.php:45
+msgid "Yearly Archives"
+msgstr "Arsip Tahunan"
+
+#: ../page_archive-template.php:47
+msgid "Select Year"
+msgstr "Pilih Tahun"
+
+#: ../page_archive-template.php:53
+msgid "Monthly Archives"
+msgstr "Arsip Bulanan"
+
+#: ../page_archive-template.php:55
+msgid "Select Month"
+msgstr "Pilih Bulan"
+
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
+msgid "Search"
+msgstr "Cari"
+
+#: ../page_archive-template.php:65
+msgid "Explore by Tag"
+msgstr "Telusuri dengan Tag"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Hasil Pencarian untuk: %s"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Cari &hellip;"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Meta"
+
+#: ../single.php:28
+msgid "Related Content by Tag"
+msgstr "Konten Terkait dengan Tag"
+
+#: ../inc/customizer.php:19
+msgid "Layout Options"
+msgstr "Opsi Tataletak"
+
+#: ../inc/customizer.php:26
+msgid "Excerpt Options"
+msgstr "Opsi Nukilan"
+
+#: ../inc/customizer.php:33
+msgid "General Options"
+msgstr "Opsi Umum"
+
+#: ../inc/customizer.php:49
+msgid "Post Excerpts"
+msgstr "Nukilan Pos"
+
+#: ../inc/customizer.php:54
+msgid "Disabled"
+msgstr "Nonaktifkan"
+
+#: ../inc/customizer.php:55
+msgid "Enabled"
+msgstr "Aktifkan"
+
+#: ../inc/customizer.php:72
+msgid "Generate One-Sentence Excerpts"
+msgstr "Buat Nukilan Satu Kalimat"
+
+#: ../inc/customizer.php:90
+msgid "Always Show Full Content for First Post"
+msgstr "Selalu Tampilkan Konten Utuh untuk Pos Pertama"
+
+#: ../inc/customizer.php:108
+msgid "Show Post Word Count in Entry Meta"
+msgstr "Tampilkan Jumlah Kata Pos dalam Entri Meta"
+
+#: ../inc/customizer.php:126
+msgid "Show Post Date in Entry Meta"
+msgstr "Tampilkan Tanggal Pos dalam Entri Meta"
+
+#: ../inc/customizer.php:144
+msgid "Show Widgets on Single Posts"
+msgstr "Tampilkan Widget pada Pos Tunggal"
+
+#: ../inc/customizer.php:162
+msgid "Show Nav Menu on Single Posts"
+msgstr "Tampilkan Menu Nav pada Pos Tunggal"
+
+#: ../inc/customizer.php:180
+msgid "Show Updated Date on Single Posts"
+msgstr "Tampilkan Tanggal Pembaruan pada Pos Tunggal"
+
+#: ../inc/customizer.php:198
+msgid "Single-Column Layout"
+msgstr "Tataletak Kolom-Tunggal"
+
+#: ../inc/customizer.php:216
+msgid "Enable Multi-Author Mode"
+msgstr "Aktifkan Mode Beberapa-Penulis"
+
+#: ../inc/customizer.php:234
+msgid "Show Page Load Progress Bar"
+msgstr "Tampilkan Bilah Progres Pemuatan Laman"
+
+#: ../inc/customizer.php:252
+msgid "Auto-Set Featured Image as Post Cover"
+msgstr "Otomasikan Gambar Andalan sebagai Sampul Pos"
+
+#: ../inc/customizer.php:270
+msgid "Overlay Post Title on Post Cover"
+msgstr "Timpakan Judul Pos pada Sampul Pos"
+
+#: ../inc/customizer.php:288
+msgid "Comments Call to Action"
+msgstr "Ajakan Memberikan Komentar"
+
+#: ../inc/customizer.php:301
+msgid "Text Color"
+msgstr "Warna Teks"
+
+#: ../inc/customizer.php:306
+msgid "Comment Form Background Color"
+msgstr "Warna Latar Form Komentar"
+
+#: ../inc/customizer.php:311
+msgid "Link Color"
+msgstr "Warna Tautan"
+
+#: ../inc/customizer.php:316
+msgid "Title and Header Text Color"
+msgstr "Warna Teks Title dan Header"
+
+#: ../inc/customizer.php:321
+msgid "Primary Meta Text Color"
+msgstr "Warna Teks Meta Utama"
+
+#: ../inc/customizer.php:326
+msgid "Secondary Meta Text Color"
+msgstr "Warna Teks Meta Sekunder"
+
+#: ../inc/template-tags.php:41
+msgid "Post navigation"
+msgstr "Navigasi pos"
+
+#: ../inc/template-tags.php:45
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/template-tags.php:46
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/template-tags.php:51
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Pos-pos Sebelumnya"
+
+#: ../inc/template-tags.php:55
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Pos-pos Berikutnya <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:85
+msgid " - Your comment is awaiting moderation."
+msgstr "- Komentar Anda menunggu moderasi."
+
+#: ../inc/template-tags.php:97 ../inc/template-tags.php:140
+msgid "(Edit)"
+msgstr "(Sunting)"
+
+#: ../inc/template-tags.php:165 ../inc/template-tags.php:196
+#: ../inc/template-tags.php:208
+#, php-format
+msgid "View all posts by %s"
+msgstr "Tampilkan seluruh pos menurut %s"
+
+#: ../inc/template-tags.php:182
+msgid ", "
+msgstr ", "
+
+#: ../inc/template-tags.php:271
+msgid "Continue Reading &rarr;"
+msgstr "Lanjutkan Membaca &rarr;"
+
+#: ../inc/template-tags.php:288
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Lanjutkan membaca <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:358
+#, php-format
+msgid "Page %s"
+msgstr "Laman %s"
+
+#: ../inc/template-tags.php:378
+#, php-format
+msgid "View all posts in %s"
+msgstr "Tampilkan seluruh pos dalam %s"
+
+#: ../inc/template-tags.php:434 ../inc/template-tags.php:475
+msgid "Published"
+msgstr "Diterbitkan"
+
+#: ../inc/template-tags.php:442 ../inc/template-tags.php:483
+msgid "Updated"
+msgstr "Diperbarui"
+
+#: ../inc/template-tags.php:510
+#, php-format
+msgid "%1$s Words"
+msgstr "%1$s Kata"
+
+#: ../inc/template-tags.php:606 ../inc/template-tags.php:636
+#: ../inc/template-tags.php:665
+#, php-format
+msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
+msgstr " (ini adalah laman <strong>%1$s</strong> dari <strong>%2$s</strong>)"
+
+#: ../inc/template-tags.php:609
+#, php-format
+msgid "Found one search result for <strong>%2$s</strong>."
+msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
+msgstr[0] "Ditemukan satu hasil pencarian untuk <strong>%2$s</strong>."
+msgstr[1] "Ditemukan %1$s hasil pencarian untuk <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:640
+#, php-format
+msgid "There is one post filed in <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
+msgstr[0] "Ada satu pos tercatat di <strong>%2$s</strong>."
+msgstr[1] "Ada %1$s pos tercatat di <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:642
+#, php-format
+msgid "There is one post tagged <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
+msgstr[0] "Ada satu pos bertag <strong>%2$s</strong>."
+msgstr[1] "Ada %1$s pos bertag <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:673
+#, php-format
+msgid "There was one post published in %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "Tadinya ada satu pos diterbitkan di %2$s."
+msgstr[1] "Tadinya ada %1$s pos diterbitkan di %2$s"
+
+#: ../inc/template-tags.php:675
+#, php-format
+msgid "There is one post published in %2$s."
+msgid_plural "There are %1$s posts published in %2$s"
+msgstr[0] "Ada satu pos diterbitkan di %2$s."
+msgstr[1] "Ada %1$s pos diterbitkan di %2$s"
+
+#: ../inc/template-tags.php:678
+#, php-format
+msgid "There was one post published on %2$s."
+msgid_plural "There were %1$s posts published on %2$s"
+msgstr[0] "Tadinya ada satu pos diterbitkan pada %2$s."
+msgstr[1] "Tadinya ada %1$s pos diterbitkan pada %2$s"
+
+#: ../inc/template-tags.php:685
+#, php-format
+msgid "There was one post published in the month of %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "Tadinya ada satu pos diterbitkan pada bulan %2$s"
+msgstr[1] "Tadinya ada %1$s pos diterbitkan pada bulan %2$s."
+
+#: ../inc/template-tags.php:690
+#, php-format
+msgid "There was one post published in %2$s %3$s."
+msgid_plural "There were %1$s posts published in %2$s %3$s"
+msgstr[0] "Tadinya ada satu pos diterbitkan di %2$s %3$s."
+msgstr[1] "Tadinya ada %1$s pos diterbitkan di %2$s %3$s"
