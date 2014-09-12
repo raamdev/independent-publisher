@@ -272,7 +272,7 @@ Add the following code to child theme's `functions.php` file to enable the Singl
  * Add single-column-layout to body class when on home page
  */
 function __custom_independent_publisher_single_column_layout_body_class( $classes ) {
-	if ( is_home() ) {
+	if ( is_home() || is_front_page() ) {
 		$classes[] = 'single-column-layout';
 	}
 
