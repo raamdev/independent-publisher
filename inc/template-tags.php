@@ -235,7 +235,7 @@ if ( ! function_exists( 'independent_publisher_posted_on_date' ) ) :
 	 */
 	function independent_publisher_posted_on_date() {
 		printf(
-			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate="pubdate">%4$s</time></a>',
+			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" itemprop="datePublished" pubdate="pubdate">%4$s</time></a>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_title() ),
 			esc_attr( get_the_date( 'c' ) ),
