@@ -29,6 +29,7 @@ Independent Publisher is a WordPress Theme. This README contains documentation f
     * [How do I add my own Social Icons to the Social Menu?](https://github.com/raamdev/independent-publisher#how-do-i-add-my-own-social-icons-to-the-social-menu)
     * [How can I enable "Single-Column Layout" on only the home page?](https://github.com/raamdev/independent-publisher#how-can-i-enable-single-column-layout-on-only-the-home-page)
     * [Why is the Navigation Menu and/or Widgets not Appearing on Single Post Pages?](https://github.com/raamdev/independent-publisher#why-is-the-navigation-menu-andor-widgets-not-appearing-on-single-post-pages)
+    * [How can I obfuscate my email address in the Social Menu?](https://github.com/raamdev/independent-publisher/#how-can-i-obfuscate-my-email-address-in-the-social-menu)
 * [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
 * [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
 * [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
