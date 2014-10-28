@@ -29,6 +29,7 @@ Independent Publisher is a WordPress Theme. This README contains documentation f
     * [How do I add my own Social Icons to the Social Menu?](https://github.com/raamdev/independent-publisher#how-do-i-add-my-own-social-icons-to-the-social-menu)
     * [How can I enable "Single-Column Layout" on only the home page?](https://github.com/raamdev/independent-publisher#how-can-i-enable-single-column-layout-on-only-the-home-page)
     * [Why is the Navigation Menu and/or Widgets not Appearing on Single Post Pages?](https://github.com/raamdev/independent-publisher#why-is-the-navigation-menu-andor-widgets-not-appearing-on-single-post-pages)
+    * [How can I obfuscate my email address in the Social Menu?](https://github.com/raamdev/independent-publisher/#how-can-i-obfuscate-my-email-address-in-the-social-menu)
 * [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
 * [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
 * [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
@@ -288,6 +289,52 @@ By default, the main navigation menu and all widges are hidden from the Single P
 
 ![2014-09-02_16-00-24](https://cloud.githubusercontent.com/assets/53005/4124836/faeaf062-32db-11e4-8e5b-b4f04be33ffb.png)
 
+### How can I obfuscate my email address in the Social Menu?
+
+The Social Menu uses the WordPress menu system and most email obfuscation plugins don't filter those for email addresses.
+
+I've written a special filter that will tell the [Email Address Encoder plugin](https://wordpress.org/plugins/email-address-encoder/) to encode any navigation menu items in the Social menu that contain `mailto:<email-address>` or `<email-address>`. 
+
+Add the following to a Child Theme `functions.php` file:
+
+```php
+add_filter( 'wp_nav_menu_objects', '__social_menu_eae_encode_emails', 10, 2 );
+/**
+ * Filters the Social Menu navigation items looking for email addresses and
+ * filters those email addresses through the Email Address Encoder plugin.
+ *
+ * @since 1.0.0
+ *
+ * @param object $objects An array of nav menu objects
+ * @param object $args    Nav menu object args
+ *
+ * @return object $objects Amended array of nav menu objects with items containing email addresses filtered through Email Address Encoder plugin
+ */
+function __social_menu_eae_encode_emails( $objects, $args ) {
+
+	// Only apply the social navigation menu
+	if ( isset( $args->theme_location ) ) {
+		if ( 'social' !== $args->theme_location || ! function_exists( 'eae_encode_emails' ) ) {
+			return $objects;
+		}
+	}
+
+	// Find any menu items with an email address and run them through the Email Address Encoder plugin
+	foreach ( $objects as $object ) {
+		if ( is_email( $object->url ) ) {
+			$object->url = eae_encode_emails( $object->url );
+		}
+		if ( stristr( $object->url, 'mailto:' ) ) {
+			$email = substr( $object->url, 7 );
+			if ( is_email( $email ) ) {
+				$object->url = 'mailto:' . eae_encode_emails( $email );
+			}
+		}
+	}
+
+	// Return the modified objects
+	return $objects;
+```
 
 ## Color Schemes
 
