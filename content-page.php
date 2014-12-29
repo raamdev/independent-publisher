@@ -8,8 +8,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( has_post_thumbnail() && ! independent_publisher_has_full_width_featured_image() ) : ?>
+		<?php the_post_thumbnail( 'independent_publisher_post_thumbnail', array( 'itemprop' => 'image' ) ); ?>
+	<?php endif; ?>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<?php if ( ! independent_publisher_post_has_post_cover_title() ): ?>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
+		<?php endif; ?>
 	</header>
 	<!-- .entry-header -->
 

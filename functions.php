@@ -571,7 +571,7 @@ function independent_publisher_comments_call_to_action_text() {
 function independent_publisher_has_full_width_featured_image() {
 
 	// If this isn't a Single post type or we don't have a Featured Image set
-	if ( ! is_single() || ! has_post_thumbnail() ) {
+	if ( ! ( is_single() || is_page() ) || ! has_post_thumbnail() ) {
 		return false;
 	}
 

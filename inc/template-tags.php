@@ -554,27 +554,29 @@ if ( ! function_exists( 'independent_publisher_full_width_featured_image' ) ):
 												<?php echo $subtitle;?>
 											</h2>
 										<?php endif; ?>
-										<h3 class="entry-title-meta">
-											<span class="entry-title-meta-author">
-												<a class="author-avatar" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-													<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
-												</a>
-												<?php
-													if ( ! independent_publisher_categorized_blog() ) {
-														echo independent_publisher_entry_meta_author_prefix() . ' ';
-													}
-													independent_publisher_posted_author();
-												?>
-											</span>
-											<?php if ( independent_publisher_categorized_blog() ) {
-												echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', true );
-											} ?>
-											<span class="entry-title-meta-post-date">
-												<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
-												<?php independent_publisher_posted_on_date() ?>
-											</span>
-											<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
-										</h3>
+										<?php if ( ! is_page() ) : ?>
+											<h3 class="entry-title-meta">
+												<span class="entry-title-meta-author">
+													<a class="author-avatar" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+														<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+													</a>
+													<?php
+														if ( ! independent_publisher_categorized_blog() ) {
+															echo independent_publisher_entry_meta_author_prefix() . ' ';
+														}
+														independent_publisher_posted_author();
+													?>
+												</span>
+												<?php if ( independent_publisher_categorized_blog() ) {
+													echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', true );
+												} ?>
+												<span class="entry-title-meta-post-date">
+													<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
+													<?php independent_publisher_posted_on_date() ?>
+												</span>
+												<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
+											</h3>
+										<?php endif; ?>
 									</header>
 								</div>
 							</div>

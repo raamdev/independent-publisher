@@ -2219,14 +2219,17 @@ table th {
  * Styles to apply when Post Cover Title is enabled.
  */
 
- .single.post-cover-overlay-post-title .entry-title-meta {
+.single.post-cover-overlay-post-title .entry-title-meta,
+.page.post-cover-overlay-post-title .entry-title-meta {
     display: none;
 }
-.single.post-cover-overlay-post-title .post-cover-title-wrapper {
+.single.post-cover-overlay-post-title .post-cover-title-wrapper,
+.page.post-cover-overlay-post-title .post-cover-title-wrapper {
     position: relative;
     background: #000
 }
-.single.post-cover-overlay-post-title .post-cover-title-image {
+.single.post-cover-overlay-post-title .post-cover-title-image,
+.page.post-cover-overlay-post-title .post-cover-title-image {
     position: relative;
     background: no-repeat center center;
     -webkit-background-size: cover;
@@ -2237,7 +2240,8 @@ table th {
     height: 75vh;
     opacity: 0.75;
 }
-.single.post-cover-overlay-post-title .post-cover-title-head {
+.single.post-cover-overlay-post-title .post-cover-title-head,
+.page.post-cover-overlay-post-title .post-cover-title-head {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -2247,44 +2251,57 @@ table th {
     background-image: -webkit-linear-gradient(transparent 0%,#000 200%);
     background-image: linear-gradient(transparent 0%,#000 200%);
 }
-.single.post-cover-overlay-post-title .post-cover-title-head .post-cover-title {
+.single.post-cover-overlay-post-title .post-cover-title-head .post-cover-title,
+.page.post-cover-overlay-post-title .post-cover-title-head .post-cover-title {
     margin: 0 auto;
     padding: 20px 40px;
     max-width: 700px;
 }
 .single.post-cover-overlay-post-title .post-cover-title-head .entry-subtitle,
-.single.post-cover-overlay-post-title .post-cover-title-head .entry-title {
+.single.post-cover-overlay-post-title .post-cover-title-head .entry-title
+.page.post-cover-overlay-post-title .post-cover-title-head .entry-subtitle,
+.page.post-cover-overlay-post-title .post-cover-title-head .entry-title {
     padding: 20px 0 5px;
     color:#fff;
     margin: 0;
 }
-.single.post-cover-overlay-post-title .post-cover-title-head .entry-subtitle {
+.single.post-cover-overlay-post-title .post-cover-title-head .entry-subtitle,
+.page.post-cover-overlay-post-title .post-cover-title-head .entry-subtitle {
     font-weight: lighter;
     padding: 5px 0 10px;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-style: italic;
 }
-.single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta {
+.single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta,
+.page.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta {
     height: 32px;
     line-height: 32px;
     display: block;
     margin-top: 20px;
 }
-.single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta-author {
+.single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta-author,
+.page.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta-author {
     display: inline;
 }
-.single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta img {
+.single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta img,
+.page.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta img {
     float: right;
     margin-left: 10px;
 }
 .single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta,
-.single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta a {
+.single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta a,
+.page.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta,
+.page.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta a {
     color: rgba(255,255,255,0.80);
 }
-.single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta a:hover {
+.single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta a:hover,
+.page.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta a:hover {
     text-decoration: underline;
 }
-
+.page.post-cover-overlay-post-title h1.entry-title,
+.page.full-width-featured-image h1.entry-title {
+	font-size: 2.5em;
+}
 
 /**
  * Social menu styles; uses Genericons in font/genericons/
