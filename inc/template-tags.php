@@ -138,6 +138,7 @@ if ( ! function_exists( 'independent_publisher_pings' ) ) :
 				<li <?php comment_class( '', $ping->comment_ID ); ?> id="li-comment-<?php echo $ping->comment_ID ?>">
 				<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link( $ping->comment_ID ) ) ?>
 				<span> <?php edit_comment_link( __( '(Edit)', 'independent-publisher' ), '  ', '' ) ?></span>
+				</li>
 			<?php
 			}
 		}
