@@ -175,7 +175,8 @@ Note that double-quotes are not allowed in that field and that you *must* use si
 MailChimp includes its own CSS in the HTML embed code that, by default, doesn't look quite right with Independent Publisher. To fix the MailChimp CSS, you can add the following to the `style.css` file of a [Child Theme](https://github.com/raamdev/independent-publisher-child-theme/) (or if you're using JetPack, simply go to *Appearance → Edit CSS* and insert the following):
 
 ```
-#mc_embed_signup .button {
+#mc_signup .button {
+	margin-top: 0 !important;
 	padding-left: 15px !important;
 	padding-right: 15px !important;
 	padding-top: 2px !important;
@@ -186,28 +187,28 @@ MailChimp includes its own CSS in the HTML embed code that, by default, doesn't 
 	width: 100% !important;
 }
 
-.entry-content #mc_embed_signup h2 {
+.entry-content #mc_signup h2 {
 	font-size: 1.8em !important;
 }
-.entry-content #mc_embed_signup input.email {
+.entry-content #mc_signup input.email {
 	width: 100% !important;
 }
-.entry-content #mc_embed_signup label {
+.entry-content #mc_signup label {
 	padding-bottom: 0 !important;
 }
-.entry-content #mc_embed_signup .mc-field-group {
+.entry-content #mc_signup .mc-field-group {
 	width: 99% !important;
 }
 
-.widget #mc_embed_signup form {
+.widget #mc_signup form {
 	text-align: center !important;
 	font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
-.widget #mc_embed_signup input.email {
+.widget #mc_signup input.email {
 	width: 100% !important;
 	text-align: center;
 }
-.widget #mc_embed_signup input.button {
+.widget #mc_signup input.button {
 	width: 100% !important;
 }
 ```
