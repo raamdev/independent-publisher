@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
 "POT-Creation-Date: 2014-08-31 17:26+0100\n"
-"PO-Revision-Date: 2014-08-31 17:26+0100\n"
+"PO-Revision-Date: 2015-01-19 14:42+0100\n"
 "Last-Translator: Marco Raaphorst <marco@melodiefabriek.nl>\n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.7.3\n"
 "X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
 "esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
 "translate_nooped_plural\n"
@@ -44,11 +44,11 @@ msgstr "Terzijdes"
 
 #: ../archive.php:52
 msgid "Galleries"
-msgstr "Gallerijen"
+msgstr "Galerijen"
 
 #: ../archive.php:54
 msgid "Images"
-msgstr "Plaatjes"
+msgstr "Afbeeldingen"
 
 #: ../archive.php:56
 msgid "Videos"
@@ -64,7 +64,7 @@ msgstr "Links"
 
 #: ../archive.php:62
 msgid "Statuses"
-msgstr "Statusen"
+msgstr "Statussen"
 
 #: ../archive.php:64
 msgid "Audios"
@@ -72,7 +72,7 @@ msgstr "Audio items"
 
 #: ../archive.php:66
 msgid "Chats"
-msgstr "Gespreken"
+msgstr "Gesprekken"
 
 #: ../archive.php:68 ../sidebar.php:21
 msgid "Archives"
@@ -118,7 +118,7 @@ msgstr "Niets gevonden"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Klaar om je eerste blogpost the publiceren? <a href=\"%1$s\">Begin hier</a>."
+"Klaar om je eerste bericht the publiceren? <a href=\"%1$s\">Begin hier</a>."
 
 #: ../content-none.php:24 ../no-results.php:25
 msgid ""
@@ -175,7 +175,7 @@ msgstr "Hoofdmenu"
 
 #: ../functions.php:99
 msgid "Single Posts Menu"
-msgstr "Enkelvoudige Posten Menu"
+msgstr "Enkelvoudige Berichten Menu"
 
 #: ../functions.php:100
 msgid "Social"
@@ -183,7 +183,7 @@ msgstr "Sociaal"
 
 #: ../functions.php:142
 msgid "Sidebar"
-msgstr "Sidebar"
+msgstr "Zijbalk"
 
 #: ../functions.php:153
 msgid "Archive Page"
@@ -209,7 +209,7 @@ msgstr "Geef een reactie op %s"
 
 #: ../functions.php:340
 msgid "Cancel Reply"
-msgstr "Cancel reactie"
+msgstr "Annuleer reactie"
 
 #: ../functions.php:341
 msgid "Submit Comment"
@@ -228,8 +228,8 @@ msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
-"Ingelogd als <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
-"this account\">Loguit?</a>"
+"Ingelogd als <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log uit op "
+"dit account\">Loguit?</a>"
 
 #: ../functions.php:359
 msgid "Name"
@@ -249,11 +249,11 @@ msgstr "Geef een reactie"
 
 #: ../functions.php:783
 msgid "Use as post cover (full-width)"
-msgstr "Gebruik als omslag voor post (volledige breedte)"
+msgstr "Gebruik als omslag voor bericht (volledige breedte)"
 
 #: ../functions.php:793
 msgid "Disable post cover (full-width)"
-msgstr "Deactiveer omslag voor post (volledige breedte)"
+msgstr "Deactiveer omslag voor bericht (volledige breedte)"
 
 #: ../functions.php:991
 msgid "in"
@@ -274,17 +274,17 @@ msgid ""
 "%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
 "%7$s</a>"
 msgstr ""
-"\"%1$s\" - <a href=\"%2$s\" title=\"Link naar plaatje op volledige grootte\">"
-"%3$s &times; %4$s</a> %5$s <a href=\"%6$s\" title=\"Keer terug naar %7$s\" "
-"rel=\"gallerij\">%7$s</a>"
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link naar afbeelding op volledige grootte"
+"\">%3$s &times; %4$s</a> %5$s <a href=\"%6$s\" title=\"Keer terug naar %7$s"
+"\" rel=\"galerij\">%7$s</a>"
 
 #: ../image.php:106
 msgid "&larr; Previous image"
-msgstr "&larr; Vorige plaatje"
+msgstr "&larr; Vorige afbeelding"
 
 #: ../image.php:107
 msgid "Next image &rarr;"
-msgstr "Volgende plaatje &rarr;"
+msgstr "Volgende afbeelding &rarr;"
 
 #: ../inc/customizer.php:19
 msgid "Layout Options"
@@ -300,7 +300,7 @@ msgstr "Algemene Opties"
 
 #: ../inc/customizer.php:49
 msgid "Post Excerpts"
-msgstr "Post samenvattingen"
+msgstr "Bericht samenvattingen"
 
 #: ../inc/customizer.php:54
 msgid "Disabled"
@@ -316,11 +316,11 @@ msgstr "Genereer uittreksels van 1 zin"
 
 #: ../inc/customizer.php:90
 msgid "Always Show Full Content for First Post"
-msgstr "Toon altijd de volledige inhoud voor de eerste post"
+msgstr "Toon altijd de volledige inhoud voor het eerste bericht"
 
 #: ../inc/customizer.php:108
 msgid "Show Post Word Count in Entry Meta"
-msgstr "Toon het aantal woorden van de post als meta informatie"
+msgstr "Toon het aantal woorden van het bericht als meta informatie"
 
 #: ../inc/customizer.php:126
 msgid "Show Post Date in Entry Meta"
@@ -328,15 +328,15 @@ msgstr "Toon de datum als meta informatie"
 
 #: ../inc/customizer.php:144
 msgid "Show Widgets on Single Posts"
-msgstr "Toon widgets voor enkelvoudige posten"
+msgstr "Toon widgets voor enkelvoudige berichten"
 
 #: ../inc/customizer.php:162
 msgid "Show Nav Menu on Single Posts"
-msgstr "Toon navigate menu voor enkelvoudige posten"
+msgstr "Toon navigate menu voor enkelvoudige berichten"
 
 #: ../inc/customizer.php:180
 msgid "Show Updated Date on Single Posts"
-msgstr "Toon datum van update in enkelvoudige posten"
+msgstr "Toon datum van update in enkelvoudige berichten"
 
 #: ../inc/customizer.php:198
 msgid "Single-Column Layout"
@@ -352,7 +352,7 @@ msgstr "Toon pagina voortgangsbalk"
 
 #: ../inc/customizer.php:252
 msgid "Auto-Set Featured Image as Post Cover"
-msgstr "Automatisch zet het uitgelichtte plaatje als omslag"
+msgstr "Stel de uitgelichtte afbeelding automatisch als omslag in"
 
 #: ../inc/customizer.php:270
 msgid "Comments Call to Action"
@@ -384,7 +384,7 @@ msgstr "Secundaire tekstkleur"
 
 #: ../inc/template-tags.php:41
 msgid "Post navigation"
-msgstr "Navigatie van blogposten"
+msgstr "Navigatie van berichten"
 
 #: ../inc/template-tags.php:45
 msgid "&larr;"
@@ -396,11 +396,11 @@ msgstr "&rarr;"
 
 #: ../inc/template-tags.php:51
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Eerdere blogposts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Eerdere berichten"
 
 #: ../inc/template-tags.php:55
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Latere blogposts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Latere berichten <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:85
 msgid " - Your comment is awaiting moderation."
@@ -415,7 +415,7 @@ msgstr "(Bewerk)"
 #: ../inc/template-tags.php:208
 #, php-format
 msgid "View all posts by %s"
-msgstr "Bekijk alle blogposten van %s"
+msgstr "Bekijk alle berichten van %s"
 
 #. translators: used between list items, there is a space after the comma
 #: ../inc/template-tags.php:182
@@ -438,7 +438,7 @@ msgstr "Pagina %s"
 #: ../inc/template-tags.php:378
 #, php-format
 msgid "View all posts in %s"
-msgstr "Bekijk alle posten in %s"
+msgstr "Bekijk alle berichten in %s"
 
 #: ../inc/template-tags.php:434
 msgid "Published"
@@ -446,7 +446,7 @@ msgstr "Gepubliceerd"
 
 #: ../inc/template-tags.php:442 ../inc/template-tags.php:483
 msgid "Updated"
-msgstr "Geupdate"
+msgstr "Geüpdatet"
 
 #: ../inc/template-tags.php:510
 #, php-format
@@ -470,50 +470,50 @@ msgstr[1] "%1$s resultaten gevonden op <strong>%2$s</strong>"
 #, php-format
 msgid "There is one post filed in <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
-msgstr[0] "Er is 1 blogpost onder <strong>%2$s</strong>."
-msgstr[1] "Er zijn %1$s blogposts onder <strong>%2$s</strong>."
+msgstr[0] "Er is 1 bericht onder <strong>%2$s</strong>."
+msgstr[1] "Er zijn %1$s berichten onder <strong>%2$s</strong>."
 
 #: ../inc/template-tags.php:592
 #, php-format
 msgid "There is one post tagged <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
-msgstr[0] "Er is 1 blogpost getagd als <strong>%2$s</strong>."
-msgstr[1] "Er zijn %1$s blogpost getagd als <strong>%2$s</strong>."
+msgstr[0] "Er is 1 bericht getagd als <strong>%2$s</strong>."
+msgstr[1] "Er zijn %1$s berichten getagd als <strong>%2$s</strong>."
 
 #: ../inc/template-tags.php:623
 #, php-format
 msgid "There was one post published in %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
-msgstr[0] "Er was 1 blogpost gepubliceerd in %2$s."
-msgstr[1] "Er werden %1$s blogposts gepubliceerd in %2$s."
+msgstr[0] "Er was 1 bericht gepubliceerd in %2$s."
+msgstr[1] "Er werden %1$s berichten gepubliceerd in %2$s."
 
 #: ../inc/template-tags.php:625
 #, php-format
 msgid "There is one post published in %2$s."
 msgid_plural "There are %1$s posts published in %2$s"
-msgstr[0] "Er is 1 blogpost gepubliceerd in %2$s."
-msgstr[1] "Er zijn %1$s blogposts gepubliceerd in %2$s."
+msgstr[0] "Er is 1 bericht gepubliceerd in %2$s."
+msgstr[1] "Er zijn %1$s berichten gepubliceerd in %2$s."
 
 #: ../inc/template-tags.php:628
 #, php-format
 msgid "There was one post published on %2$s."
 msgid_plural "There were %1$s posts published on %2$s"
-msgstr[0] "Er is 1 blogpost gepubliceerd op %2$s."
-msgstr[1] "Er zijn %1$s blogposts gepubliceerd op %2$s."
+msgstr[0] "Er is 1 bericht gepubliceerd op %2$s."
+msgstr[1] "Er zijn %1$s berichten gepubliceerd op %2$s."
 
 #: ../inc/template-tags.php:635
 #, php-format
 msgid "There was one post published in the month of %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
-msgstr[0] "Er was 1 blogpost gepubliceerd in de maand %2$s."
-msgstr[1] "Er werden %1$s blogposts gepubliceerd in %2$s."
+msgstr[0] "Er was 1 bericht gepubliceerd in de maand %2$s."
+msgstr[1] "Er werden %1$s berichten gepubliceerd in %2$s."
 
 #: ../inc/template-tags.php:640
 #, php-format
 msgid "There was one post published in %2$s %3$s."
 msgid_plural "There were %1$s posts published in %2$s %3$s"
-msgstr[0] "Er is 1 blogpost gepubliceerd in %2$s %3$s."
-msgstr[1] "Er zijn %1$s blogposten gepubliceerd in %2$s %3$s."
+msgstr[0] "Er is 1 bericht gepubliceerd in %2$s %3$s."
+msgstr[1] "Er zijn %1$s berichten gepubliceerd in %2$s %3$s."
 
 #: ../page_archive-template.php:45
 msgid "Yearly Archives"
@@ -537,7 +537,7 @@ msgstr "Zoeken"
 
 #: ../page_archive-template.php:65
 msgid "Explore by Tag"
-msgstr "Bekijk op Tag"
+msgstr "Bekijk op tag"
 
 #: ../search.php:19
 #, php-format
@@ -554,4 +554,4 @@ msgstr "Meta"
 
 #: ../single.php:28
 msgid "Related Content by Tag"
-msgstr "Gerelateerde content per Tag"
+msgstr "Gerelateerde content per tag"
