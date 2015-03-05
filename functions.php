@@ -75,6 +75,12 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		/*
+		 * Add custom thumbnail size for use with featured images
+		 */
+
+		add_image_size( 'independent_publisher_post_thumbnail', 700, 700);
+
 		/**
 		 * Enable editor style
 		 */
@@ -96,6 +102,7 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		register_nav_menus(
 			array(
 				'primary' => __( 'Primary Menu', 'independent-publisher' ),
+				'single' => __( 'Single Posts Menu', 'independent-publisher' ),
 				'social'  => __( 'Social', 'independent-publisher' )
 			)
 		);
@@ -112,7 +119,8 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 				'quote',
 				'chat',
 				'image',
-				'video'
+				'video',
+			   'audio'
 			)
 		);
 	}
@@ -166,7 +174,7 @@ add_action( 'widgets_init', 'independent_publisher_widgets_init' );
 function independent_publisher_scripts() {
 	global $post;
 
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons/genericons.css', array(), '3.0.3' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons/genericons.css', array(), '3.1' );
 
 	wp_enqueue_script( 'independent-publisher-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -181,6 +189,10 @@ function independent_publisher_scripts() {
 
 	if ( is_singular() && wp_attachment_is_image( $post->ID ) ) {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+	}
+
+	if ( is_singular() ) {
+		wp_enqueue_script( 'fade-post-title', get_template_directory_uri() . '/js/fade-post-title.js', array( 'jquery' ));
 	}
 
 	/**
@@ -547,18 +559,63 @@ function independent_publisher_comments_call_to_action_text() {
 	}
 }
 
-/**
- * Returns true if the the current post has Full Width Featured Image enabled
+/*
+ * Return true if Auto-Set Featured Image as Post Cover is enabled and it hasn't
+ * been disabled for this post.
+ *
+ * Returns true if the current post has Full Width Featured Image enabled.
+ *
+ * Returns false if not a Single post type or there is no Featured Image selected
+ * or none of the above conditions are true.
  */
 function independent_publisher_has_full_width_featured_image() {
-	$full_width_featured_image = get_post_meta( get_the_ID(), 'full_width_featured_image' );
 
-	if ( $full_width_featured_image ) {
-		return true;
-	} else {
+	// If this isn't a Single post type or we don't have a Featured Image set
+	if ( ! ( is_single() || is_page() ) || ! has_post_thumbnail() ) {
 		return false;
 	}
+
+	$full_width_featured_image             = get_post_meta( get_the_ID(), 'full_width_featured_image' );
+	$full_width_featured_image_disabled    = get_post_meta( get_the_ID(), 'full_width_featured_image_disabled' );
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+
+	// If Auto-Set Featured Image as Post Cover is enabled and it hasn't been disabled for this post, return true.
+	if ( isset( $independent_publisher_general_options['auto_featured_image_post_cover'] ) && $independent_publisher_general_options['auto_featured_image_post_cover'] && ! $full_width_featured_image_disabled ) {
+		return true;
+	}
+
+	// If Use featured image as Post Cover has been checked in the Featured Image meta box, return true.
+	if ( $full_width_featured_image ) {
+		return true;
+	}
+
+	return false; // Default
 }
+/**
+ * Return true if post has the custom field post_cover_overlay_post_title set to true
+ */
+function independent_publisher_post_has_post_cover_title() {
+	$post_has_cover_title 	= get_post_meta( get_the_ID(), 'post_cover_overlay_post_title', true);
+
+	$has_full_width_featured_image = independent_publisher_has_full_width_featured_image();
+
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+
+
+	// Allow site owner to set this option on a per-post basis using a Custom Field
+	if ( ( $post_has_cover_title === '1' || $post_has_cover_title === 'true' ) && $has_full_width_featured_image ) {
+		return true;
+	} else if ( ( $post_has_cover_title === '0' || $post_has_cover_title === 'false' ) && $has_full_width_featured_image ) {
+		return false;
+	}
+
+	if( isset( $independent_publisher_general_options['post_cover_overlay_post_title'] ) && $independent_publisher_general_options['post_cover_overlay_post_title'] && $has_full_width_featured_image ) {
+		return true;
+	}
+
+	return false; // Default
+}
+
 
 /**
  * Returns true if Enable Page Load Progress Bar option is enabled
@@ -573,10 +630,58 @@ function independent_publisher_page_load_progress_bar_enabled() {
 }
 
 /**
+ * Returns true if Show Nav Menu on Single Posts option is enabled
+ */
+function independent_publisher_show_nav_on_single() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['show_nav_menu_on_single'] ) && $independent_publisher_general_options['show_nav_menu_on_single'] ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
+ * Returns true if Show Updated Date on Single Posts option is enabled
+ */
+function independent_publisher_show_updated_date_on_single() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['show_updated_date_on_single'] ) && $independent_publisher_general_options['show_updated_date_on_single'] ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
+ * Returns true if Auto-Set Featured Image as Post Cover option is enabled
+ */
+function independent_publisher_auto_featured_image_post_cover() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['auto_featured_image_post_cover'] ) && $independent_publisher_general_options['auto_featured_image_post_cover'] ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
+ * Returns true if Auto-Set Post with Post Cover Title option is enabled
+ */
+function independent_publisher_post_cover_overlay_post_title() {
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['post_cover_overlay_post_title'] ) && $independent_publisher_general_options['post_cover_overlay_post_title'] ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
  * Add full-width-featured-image to body class when displaying a post with Full Width Featured Image enabled
  */
 function independent_publisher_full_width_featured_image_body_class( $classes ) {
-	if ( is_single() && has_post_thumbnail() && get_post_meta( get_the_ID(), 'full_width_featured_image', true ) ) {
+	if ( independent_publisher_has_full_width_featured_image() ) {
 		$classes[] = 'full-width-featured-image';
 	}
 
@@ -584,6 +689,19 @@ function independent_publisher_full_width_featured_image_body_class( $classes ) 
 }
 
 add_filter( 'body_class', 'independent_publisher_full_width_featured_image_body_class' );
+
+/**
+ * Add post-cover-overlay-post-title to body class when displaying a post with Post Title Overlay on Post Cover enabled
+ */
+function independent_publisher_post_cover_title_body_class( $classes ) {
+	if ( independent_publisher_post_has_post_cover_title() &&  independent_publisher_has_full_width_featured_image() ) {
+		$classes[] = 'post-cover-overlay-post-title';
+	}
+
+	return $classes;
+}
+
+add_filter( 'body_class', 'independent_publisher_post_cover_title_body_class' );
 
 /**
  * Add single-column-layout to body class when Use Single Column Layout option enabled
@@ -706,25 +824,42 @@ endif;
 
 add_filter( 'the_excerpt', 'independent_publisher_first_sentence_excerpt' );
 
-/**
- * Add a checkbox to the featured image metabox
+/*
+ * Add a checkbox for Post Covers to the featured image metabox
  */
 function independent_publisher_featured_image_meta( $content ) {
 
+	// If we don't have a featured image, nothing to do.
 	if ( ! has_post_thumbnail() ) {
 		return $content;
 	}
 
 	global $post;
 
+	// Meta key
+	$meta_key = 'full_width_featured_image';
+
 	// Text for checkbox
 	$text = __( "Use as post cover (full-width)", 'independent-publisher' );
 
-	// Meta value ID
-	$id    = 'full_width_featured_image';
-	$value = esc_attr( get_post_meta( $post->ID, $id, true ) );
+	// Option type (for use when saving post data in independent_publisher_save_featured_image_meta()
+	$option_type = "enable";
+
+	/* If Auto-Set Featured Image as Post Cover enabled, this checkbox's functionality should reverse and
+	 * allow for disabling Post Covers on a post-by-post basis.
+	 */
+	if ( independent_publisher_auto_featured_image_post_cover() ) {
+		$meta_key    = 'full_width_featured_image_disabled';
+		$text        = __( "Disable post cover (full-width)", 'independent-publisher' );
+		$option_type = "disable";
+	}
+
+	// Get the current setting
+	$value = esc_attr( get_post_meta( $post->ID, $meta_key, true ) );
+
 	// Output the checkbox HTML
-	$label = '<label for="' . $id . '" class="selectit"><input name="' . $id . '" type="checkbox" id="' . $id . '" value="1" ' . checked( $value, 1, false ) . '> ' . $text . '</label>';
+	$label = '<label for="' . $meta_key . '" class="selectit"><input name="' . $meta_key . '" type="checkbox" id="' . $meta_key . '" value="1" ' . checked( $value, 1, false ) . '> ' . $text . '</label>';
+	$label .= '<input type="hidden" name="full_width_featured_image_enable_disable" value="' . $option_type . '">';
 
 	$label = wp_nonce_field( basename( __FILE__ ), 'independent_publisher_full_width_featured_image_meta_nonce' ) . $label;
 
@@ -733,8 +868,8 @@ function independent_publisher_featured_image_meta( $content ) {
 
 add_filter( 'admin_post_thumbnail_html', 'independent_publisher_featured_image_meta' );
 
-/**
- * Save the meta box's post metadata.
+/*
+ * Save the Featured Image meta box's post metadata for Post Cover options.
  */
 function independent_publisher_save_featured_image_meta( $post_id, $post ) {
 
@@ -752,10 +887,27 @@ function independent_publisher_save_featured_image_meta( $post_id, $post ) {
 	}
 
 	/* Get the posted data and sanitize it for use as an HTML class. */
-	$new_meta_value = ( isset( $_POST['full_width_featured_image'] ) ? esc_attr( $_POST['full_width_featured_image'] ) : '' );
+	if ( isset( $_POST['full_width_featured_image'] ) ) {
+		$new_meta_value = esc_attr( $_POST['full_width_featured_image'] );
+		$meta_key       = 'full_width_featured_image';
+	} elseif ( isset( $_POST['full_width_featured_image_disabled'] ) ) {
+		$new_meta_value = esc_attr( $_POST['full_width_featured_image_disabled'] );
+		$meta_key       = 'full_width_featured_image_disabled';
+	} else {
+		$new_meta_value = ''; // Empty value means we're unchecking this option
+	}
 
-	/* Get the meta key. */
-	$meta_key = 'full_width_featured_image';
+	// Figure out which option was being unchecked (this routine handles two types)
+	if ( isset( $_POST['full_width_featured_image_enable_disable'] ) ) {
+		if ( $_POST['full_width_featured_image_enable_disable'] === 'enable' ) {
+			$meta_key = 'full_width_featured_image';
+		} elseif ( $_POST['full_width_featured_image_enable_disable'] === 'disable' ) {
+			$meta_key = 'full_width_featured_image_disabled';
+		}
+	} else {
+		$meta_key = 'full_width_featured_image'; // Default
+	}
+
 
 	/* Get the meta value of the custom field key. */
 	$meta_value = get_post_meta( $post_id, $meta_key, true );
@@ -826,15 +978,15 @@ function independent_publisher_is_not_first_post_full_content() {
 
 if ( ! function_exists( 'independent_publisher_clean_content' ) ):
 	/**
-	 * Cleans and returns the content for display as a Quote or Aside by stripping anything that might screw up formatting
+	 * Cleans and returns the content for display as a Quote or Aside by stripping anything that might screw up formatting. This is necessary because we link Quotes and Asides to their own permalink. If the Quote or Aside contains a footnote with an anchor tag, or even just an anchor tag, then nesting anchor within anchor will break formatting.
 	 */
 	function independent_publisher_clean_content( $content ) {
 
-		// Remove footnotes, if any
-		$content = preg_replace( '!<div\s+class="footnotes.*?">.*?</div>!is', '', $content );
+		// Remove footnotes
+		$content = preg_replace( '!<sup\s+.*?>.*?</sup>!is', '', $content );
 
-		// Strip all other tags except these allowed tags
-		$content = strip_tags( $content, '<cite><blockquote><b><i><em><strong><ins><del><mark><code><abbr><sup><p>' );
+		// Remove anchor tags
+		$content = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $content);
 
 		return $content;
 	}
@@ -920,9 +1072,10 @@ if ( ! function_exists( 'independent_publisher_maybe_linkify_the_content' ) ) :
 	function independent_publisher_maybe_linkify_the_content( $content ) {
 		if ( ! is_single() && ( 'aside' === get_post_format() || 'quote' === get_post_format() ) ) {
 
-			// Asides and Quotes might have footnotes, which don't display properly when linking the content to itself, so let's clean things up
+			// Asides and Quotes might have footnotes with anchor tags, or just anchor tags, both of which would screw things up when linking the content to itself (anchors cannot have anchors inside them), so let's clean things up
 			$content = independent_publisher_clean_content( $content );
 
+			// Now we can link the Quote or Aside content to itself
 			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
 		}
 
@@ -930,7 +1083,7 @@ if ( ! function_exists( 'independent_publisher_maybe_linkify_the_content' ) ) :
 	}
 endif;
 
-add_filter( 'the_content', 'independent_publisher_maybe_linkify_the_content' );
+add_filter( 'the_content', 'independent_publisher_maybe_linkify_the_content', 100 );
 
 if ( ! function_exists( 'independent_publisher_maybe_linkify_the_excerpt' ) ) :
 	/**
@@ -947,64 +1100,79 @@ endif;
 
 add_filter( 'the_excerpt', 'independent_publisher_maybe_linkify_the_excerpt' );
 
-/**
- * Returns the proper schema type
- */
-function independent_publisher_html_tag_schema() {
-	$schema = 'http://schema.org/';
-
-	// Is single post
-	if ( is_single() ) {
-		$type = "Article";
-	} // Contact form page ID
-	else {
-		if ( is_page( 1 ) ) {
-			$type = 'ContactPage';
-		} // Is author page
-		elseif ( is_author() ) {
-			$type = 'ProfilePage';
-		} // Is search results page
-		elseif ( is_search() ) {
-			$type = 'SearchResultsPage';
-		} // Is of movie post type
-		elseif ( is_singular( 'movies' ) ) {
-			$type = 'Movie';
-		} // Is of book post type
-		elseif ( is_singular( 'books' ) ) {
-			$type = 'Book';
-		} else {
-			$type = 'WebPage';
-		}
+if ( ! function_exists( 'independent_publisher_cancel_comment_reply_link' ) ) :
+	/**
+	 * Returns the cancel comment reply link with #respond stripped out so it behaves with jQuery used to enhance comments
+	 */
+	function independent_publisher_cancel_comment_reply_link( $formatted_link) {
+		return str_ireplace('#respond', '', $formatted_link);
 	}
+endif;
 
-	echo 'itemscope="itemscope" itemtype="' . $schema . $type . '"';
-}
+add_filter( 'cancel_comment_reply_link', 'independent_publisher_cancel_comment_reply_link', 10, 1 );
 
-/**
- * Drops the html/css/javscript necessary to enable page load progress bar
- */
-function independent_publisher_show_page_load_progress_bar() { ?>
-<!-- Progress Bar - https://github.com/rstacruz/nprogress -->
+if ( ! function_exists( 'independent_publisher_html_tag_schema' ) ) :
+	/**
+	 * Returns the proper schema type
+	 */
+	function independent_publisher_html_tag_schema() {
+		$schema = 'http://schema.org/';
 
-	<div class="bar" role="bar"></div>
-	<script type="text/javascript">
-		NProgress.start();
+		// Is single post
+		if ( is_single() ) {
+			$type = "Article";
+		} // Contact form page ID
+		else {
+			if ( is_page( 1 ) ) {
+				$type = 'ContactPage';
+			} // Is author page
+			elseif ( is_author() ) {
+				$type = 'ProfilePage';
+			} // Is search results page
+			elseif ( is_search() ) {
+				$type = 'SearchResultsPage';
+			} // Is of movie post type
+			elseif ( is_singular( 'movies' ) ) {
+				$type = 'Movie';
+			} // Is of book post type
+			elseif ( is_singular( 'books' ) ) {
+				$type = 'Book';
+			} else {
+				$type = 'WebPage';
+			}
+		}
 
-		setTimeout(function() {
+		echo 'itemscope="itemscope" itemtype="' . $schema . $type . '"';
+	}
+endif;
 
-			NProgress.done();
+if ( ! function_exists( 'independent_publisher_show_page_load_progress_bar' ) ) :
+	/**
+	 * Echos the HTML and JavScript necessary to enable page load progress bar
+	 */
+	function independent_publisher_show_page_load_progress_bar() { ?>
+	<!-- Progress Bar - https://github.com/rstacruz/nprogress -->
 
-			jQuery('.fade').removeClass('out');
+		<div class="bar" role="bar"></div>
+		<script type="text/javascript">
+			NProgress.start();
 
-		}, 1000);
+			setTimeout(function() {
 
-		jQuery("#b-0").click(function() { NProgress.start(); });
-		jQuery("#b-40").click(function() { NProgress.set(0.4); });
-		jQuery("#b-inc").click(function() { NProgress.inc(); });
-		jQuery("#b-100").click(function() { NProgress.done(); });
-	</script>
+				NProgress.done();
 
-<!-- End Progress Bar -->
+				jQuery('.fade').removeClass('out');
 
-	<?php
-}
+			}, 1000);
+
+			jQuery("#b-0").click(function() { NProgress.start(); });
+			jQuery("#b-40").click(function() { NProgress.set(0.4); });
+			jQuery("#b-inc").click(function() { NProgress.inc(); });
+			jQuery("#b-100").click(function() { NProgress.done(); });
+		</script>
+
+	<!-- End Progress Bar -->
+
+		<?php
+	}
+endif;

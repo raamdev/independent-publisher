@@ -138,6 +138,7 @@ if ( ! function_exists( 'independent_publisher_pings' ) ) :
 				<li <?php comment_class( '', $ping->comment_ID ); ?> id="li-comment-<?php echo $ping->comment_ID ?>">
 				<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link( $ping->comment_ID ) ) ?>
 				<span> <?php edit_comment_link( __( '(Edit)', 'independent-publisher' ), '  ', '' ) ?></span>
+				</li>
 			<?php
 			}
 		}
@@ -235,11 +236,28 @@ if ( ! function_exists( 'independent_publisher_posted_on_date' ) ) :
 	 */
 	function independent_publisher_posted_on_date() {
 		printf(
-			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>',
+			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" itemprop="datePublished" pubdate="pubdate">%4$s</time></a>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_title() ),
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() )
+		);
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_post_updated_date' ) ) :
+	/**
+	 * Prints HTML with meta information for the current post's last updated date/time.
+	 *
+	 * @since Independent Publisher 1.4
+	 */
+	function independent_publisher_post_updated_date() {
+		printf(
+			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date-modified" datetime="%3$s" moddate="moddate">%4$s</time></a>',
+			esc_url( get_permalink() ),
+			esc_attr( get_the_title() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
 		);
 	}
 endif;
@@ -414,8 +432,17 @@ if ( ! function_exists( 'independent_publisher_posted_author_card' ) ) :
 		<?php get_template_part( 'menu', 'social' ); ?>
 
 		<div class="site-published-separator"></div>
-		<h2 class="site-published">Published</h2>
+		<h2 class="site-published"><?php _e('Published', 'independent-publisher'); ?></h2>
 		<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
+		<?php /* Show last updated date if the post was modified AND
+					Show Updated Date on Single Posts option is enabled AND
+						'independent_publisher_hide_updated_date' Custom Field is not present on this post */ ?>
+		<?php if ( get_the_modified_date() !== get_the_date() &&
+					independent_publisher_show_updated_date_on_single() &&
+						! get_post_meta( get_the_ID(), 'independent_publisher_hide_updated_date', TRUE ) ) : ?>
+			<h2 class="site-published"><?php _e('Updated', 'independent-publisher'); ?></h2>
+			<h2 class="site-published-date"><?php independent_publisher_post_updated_date(); ?></h2>
+		<?php endif; ?>
 
 		<?php do_action( 'independent_publisher_after_post_published_date' ); ?>
 	<?php
@@ -446,9 +473,17 @@ if ( ! function_exists( 'independent_publisher_posted_author_bottom_card' ) ) :
 					<h2 class="site-description"><?php the_author_meta( 'description' ) ?></h2>
 				</div>
 				<div class="post-published-date">
-					<h2 class="site-published">Published</h2>
-
+					<h2 class="site-published"><?php _e('Published', 'independent-publisher'); ?></h2>
 					<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
+					<?php /* Show last updated date if the post was modified AND
+							Show Updated Date on Single Posts option is enabled AND
+								'independent_publisher_hide_updated_date' Custom Field is not present on this post */ ?>
+					<?php if ( get_the_modified_date() !== get_the_date() &&
+								independent_publisher_show_updated_date_on_single() &&
+									! get_post_meta( get_the_ID(), 'independent_publisher_hide_updated_date', TRUE ) ) : ?>
+						<h2 class="site-published"><?php _e('Updated', 'independent-publisher'); ?></h2>
+						<h2 class="site-published-date"><?php independent_publisher_post_updated_date(); ?></h2>
+					<?php endif; ?>
 
 					<?php do_action( 'independent_publisher_after_post_published_date' ); ?>
 
@@ -496,14 +531,59 @@ endif;
 if ( ! function_exists( 'independent_publisher_full_width_featured_image' ) ):
 	/**
 	 * Show Full Width Featured Image on single pages if post has full width featured image selected
+	 * or if Auto-Set Featured Image as Post Cover option is enabled
 	 */
 	function independent_publisher_full_width_featured_image() {
-		if ( is_single() && independent_publisher_has_full_width_featured_image() ) {
+		if ( independent_publisher_has_full_width_featured_image() ) {
 			while ( have_posts() ) : the_post();
-				$full_width_featured_image = get_post_meta( get_the_ID(), 'full_width_featured_image' );
-				if ( $full_width_featured_image ) :
-					if ( has_post_thumbnail() ) :
-						the_post_thumbnail( array( 700, 700 ), array( 'class' => 'full-width-featured-image' ) );
+				if ( has_post_thumbnail() ) :
+					if ( independent_publisher_post_has_post_cover_title() ):
+						$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), apply_filters( 'independent_publisher_full_width_featured_image_size', 'independent_publisher_post_thumbnail' ));
+						$featured_image_url = $featured_image_url[0];
+					?>
+						<div class="post-cover-title-wrapper">
+							<div class="post-cover-title-image" style="background-image:url('<?php echo $featured_image_url; ?>');"></div>
+								<div class="post-cover-title-head">
+									<header class="post-cover-title">
+										<h1 class="entry-title" itemprop="name">
+											<?php echo get_the_title(); ?>
+										</h1>
+										<?php $subtitle = get_post_meta(get_the_id(), 'independent_publisher_post_cover_subtitle', true); ?>
+										<?php if ( $subtitle ): ?>
+											<h2 class="entry-subtitle">
+												<?php echo $subtitle;?>
+											</h2>
+										<?php endif; ?>
+										<?php if ( ! is_page() ) : ?>
+											<h3 class="entry-title-meta">
+												<span class="entry-title-meta-author">
+													<a class="author-avatar" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+														<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+													</a>
+													<?php
+														if ( ! independent_publisher_categorized_blog() ) {
+															echo independent_publisher_entry_meta_author_prefix() . ' ';
+														}
+														independent_publisher_posted_author();
+													?>
+												</span>
+												<?php if ( independent_publisher_categorized_blog() ) {
+													echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', true );
+												} ?>
+												<span class="entry-title-meta-post-date">
+													<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
+													<?php independent_publisher_posted_on_date() ?>
+												</span>
+												<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
+											</h3>
+										<?php endif; ?>
+									</header>
+								</div>
+							</div>
+						</div>
+					<?php
+					else:
+						the_post_thumbnail( apply_filters( 'independent_publisher_full_width_featured_image_size', 'independent_publisher_post_thumbnail' ), array( 'class' => 'full-width-featured-image' ) );
 					endif;
 				endif;
 			endwhile; // end of the loop.
@@ -540,6 +620,11 @@ if ( ! function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 	 * Returns taxonomy archive stats and current page info for use in taxonomy archive descriptions
 	 */
 	function independent_publisher_taxonomy_archive_stats( $taxonomy = 'category' ) {
+
+		// There's no point in showing page numbers of we're using JetPack's Infinite Scroll module
+		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) )
+			return '';
+
 		global $wp_query;
 		$total            = $wp_query->found_posts;
 		$total_pages      = $wp_query->max_num_pages; // The total number of pages

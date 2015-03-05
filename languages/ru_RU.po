@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-08-21 10:36-0500\n"
-"PO-Revision-Date: 2014-08-21 10:36-0500\n"
-"Last-Translator: Raam Dev <raam@raamdev.com>\n"
+"POT-Creation-Date: 2014-04-12 21:39+0400\n"
+"PO-Revision-Date: 2014-04-26 00:28+0400\n"
+"Last-Translator: Артём Рябко <rad964@ya.ru>\n"
 "Language-Team: \n"
-"Language: en\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,245 +15,257 @@ msgstr ""
 "translate_nooped_plural\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:16
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Упс! Страница не найдена."
 
 #: ../404.php:21
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"По данному запросу ничего не найдено. Попробуйте одну из этих ссылок или "
+"поиск."
 
 #: ../404.php:29 ../page_archive-template.php:32
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Наиболее используемые категории"
 
 #: ../404.php:45
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Просмотрите архив за этот месяц. %1$s"
 
 #: ../archive.php:50
 msgid "Asides"
-msgstr ""
+msgstr "Резервы"
 
 #: ../archive.php:52
 msgid "Galleries"
-msgstr ""
+msgstr "Галереи"
 
 #: ../archive.php:54
 msgid "Images"
-msgstr ""
+msgstr "Изображение"
 
 #: ../archive.php:56
 msgid "Videos"
-msgstr ""
+msgstr "Видео"
 
 #: ../archive.php:58
 msgid "Quotes"
-msgstr ""
+msgstr "Цитаты"
 
 #: ../archive.php:60
 msgid "Links"
-msgstr ""
+msgstr "Ссылки"
 
 #: ../archive.php:62
 msgid "Statuses"
-msgstr ""
+msgstr "Статусы"
 
 #: ../archive.php:64
 msgid "Audios"
-msgstr ""
+msgstr "Аудио"
 
 #: ../archive.php:66
 msgid "Chats"
-msgstr ""
+msgstr "Чаты"
 
 #: ../archive.php:68 ../sidebar.php:21
 msgid "Archives"
-msgstr ""
+msgstr "Архивы"
 
 #: ../comments.php:40 ../content.php:91
 #, php-format
 msgid "1 Comment"
 msgid_plural "%1$s Comments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 Комментарии"
+msgstr[1] "%1$s Комментария"
 
 #: ../comments.php:49 ../comments.php:70
+#, fuzzy
 msgid "Comment navigation"
-msgstr ""
+msgstr "Навигация по комментариям"
 
 #: ../comments.php:51 ../comments.php:72
 msgid "&larr; Older Comments"
-msgstr ""
+msgstr "&larr; Предыдущие комментарии"
 
 #: ../comments.php:52 ../comments.php:73
 msgid "Newer Comments &rarr;"
-msgstr ""
+msgstr "Новые комментарии &rarr;"
 
 #: ../comments.php:83
 msgid "Comments are closed."
-msgstr ""
+msgstr "Комментарии закрыты"
 
 #: ../comments.php:102
 msgid "Readers who shared this"
-msgstr ""
+msgstr "Читатели которые поделились этим"
 
 #: ../comments.php:104
 msgid "Thank you!"
-msgstr ""
+msgstr "Спасибо вам!"
 
 #: ../content-none.php:13 ../no-results.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "Ничего не найдено"
 
 #: ../content-none.php:20 ../no-results.php:21
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Готовы опубликовать свой первый пост? <a href=\"%1$s\">Начните здесь</a>."
 
 #: ../content-none.php:24 ../no-results.php:25
+#, fuzzy
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Простите, но по вашему запросу ничего не найдено. Попробуйте с другими "
+"ключевыми словами."
 
 #: ../content-none.php:30 ../no-results.php:31
+#, fuzzy
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Выглядит так, будто мы можем помочь вам с тем что вы ищите. Пожалуйста "
+"используйте поиск."
 
-#: ../content-page.php:22 ../content-single.php:58
+#: ../content-page.php:22 ../content-single.php:39
 #: ../page_one-column-template.php:39
 msgid "Next page &rarr;"
-msgstr ""
+msgstr "Следующая страница &rarr;"
 
-#: ../content-page.php:23 ../content-single.php:59
+#: ../content-page.php:23 ../content-single.php:40
 #: ../page_one-column-template.php:40
 msgid "&larr; Previous page"
-msgstr ""
+msgstr "&larr; Предыдущая страница"
 
-#: ../content-page.php:29 ../content-single.php:65 ../content.php:53
+#: ../content-page.php:29 ../content-single.php:46 ../content.php:53
 #: ../page_one-column-template.php:46
 msgid "Pages:"
-msgstr ""
+msgstr "Страницы:"
 
-#: ../content-page.php:47 ../content-single.php:85 ../content.php:95
+#: ../content-page.php:47 ../content-single.php:66 ../content.php:95
 #: ../image.php:127 ../page_archive-template.php:72
 #: ../page_one-column-template.php:53
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
-#: ../content.php:21 ../content.php:47 ../functions.php:1075
-#: ../functions.php:1090
+#: ../content.php:21 ../content.php:47 ../functions.php:1014
+#: ../functions.php:1029
 #, php-format
 msgid "Permalink to %s"
-msgstr ""
+msgstr "Постоянная ссылка на %s"
 
-#: ../content.php:91 ../functions.php:408
+#: ../content.php:91 ../functions.php:397
 msgid "Comment"
-msgstr ""
+msgstr "Комментарии"
 
 #: ../content.php:91
 msgid "% Comments"
-msgstr ""
+msgstr "% Комментарии"
 
-#: ../functions.php:104
+#: ../functions.php:98
 msgid "Primary Menu"
-msgstr ""
+msgstr "Основное меню"
 
-#: ../functions.php:105
+#: ../functions.php:99
 msgid "Single Posts Menu"
 msgstr ""
 
-#: ../functions.php:106
+#: ../functions.php:100
+#, fuzzy
 msgid "Social"
-msgstr ""
+msgstr "Социальные сети"
 
-#: ../functions.php:148
+#: ../functions.php:141
 msgid "Sidebar"
-msgstr ""
+msgstr "Боковая панель"
 
-#: ../functions.php:159
+#: ../functions.php:152
+#, fuzzy
 msgid "Archive Page"
-msgstr ""
+msgstr "Архив"
 
-#: ../functions.php:263
-#, php-format
+#: ../functions.php:252
+#, fuzzy, php-format
 msgid "%1$s empowered by %2$s"
-msgstr ""
+msgstr "%1$s при помощи %2$s"
 
-#: ../functions.php:302
+#: ../functions.php:291
 msgid "Anonymous"
-msgstr ""
+msgstr "Аноним"
 
-#: ../functions.php:315
+#: ../functions.php:304
 msgid "Reply to"
-msgstr ""
+msgstr "Ответить"
 
-#: ../functions.php:349
+#: ../functions.php:338
 #, php-format
 msgid "Leave a Reply for %s"
-msgstr ""
+msgstr "Оставить ответ для %s"
 
-#: ../functions.php:350
+#: ../functions.php:339
 msgid "Cancel Reply"
-msgstr ""
+msgstr "Отменить ответ"
 
-#: ../functions.php:351
+#: ../functions.php:340
 msgid "Submit Comment"
-msgstr ""
+msgstr "Отправить комментарий"
 
-#: ../functions.php:354
+#: ../functions.php:343
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr ""
+msgstr "Вы должны выполнить <a href=\"%s\">вход</a> для комментирования."
 
-#: ../functions.php:359
+#: ../functions.php:348
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
 
-#: ../functions.php:369
+#: ../functions.php:358
 msgid "Name"
-msgstr ""
+msgstr "Имя"
 
-#: ../functions.php:374
+#: ../functions.php:363
 msgid "Email"
-msgstr ""
+msgstr "E-Mail"
 
-#: ../functions.php:379
+#: ../functions.php:368
 msgid "Website"
-msgstr ""
+msgstr "Сайт"
 
-#: ../functions.php:558
+#: ../functions.php:547
 msgid "Write a Comment"
-msgstr ""
+msgstr "Написать Комментарий"
 
-#: ../functions.php:843
+#: ../functions.php:782
 msgid "Use as post cover (full-width)"
 msgstr ""
 
-#: ../functions.php:853
+#: ../functions.php:792
 msgid "Disable post cover (full-width)"
 msgstr ""
 
-#: ../functions.php:1051
+#: ../functions.php:990
 msgid "in"
-msgstr ""
+msgstr "в"
 
-#: ../functions.php:1060
+#: ../functions.php:999
 msgid "by"
-msgstr ""
+msgstr "от"
 
 #: ../header.php:56
 msgid "Skip to content"
@@ -269,84 +281,76 @@ msgstr ""
 
 #: ../image.php:106
 msgid "&larr; Previous image"
-msgstr ""
+msgstr "&larr; Предыдущее изображение"
 
 #: ../image.php:107
 msgid "Next image &rarr;"
-msgstr ""
+msgstr "Следующее изображение"
 
 #: ../page_archive-template.php:45
 msgid "Yearly Archives"
-msgstr ""
+msgstr "Годовые Архивы"
 
 #: ../page_archive-template.php:47
 msgid "Select Year"
-msgstr ""
+msgstr "Выбрать Год"
 
 #: ../page_archive-template.php:53
 msgid "Monthly Archives"
-msgstr ""
+msgstr "Месячные архивы"
 
 #: ../page_archive-template.php:55
 msgid "Select Month"
-msgstr ""
+msgstr "Выбрать Месяц"
 
 #: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
 msgid "Search"
-msgstr ""
+msgstr "Поиск"
 
 #: ../page_archive-template.php:65
 msgid "Explore by Tag"
-msgstr ""
+msgstr "Поиск по тегу"
 
 #: ../search.php:19
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Результат поиска по %s"
 
 #: ../searchform.php:11
 msgid "Search &hellip;"
-msgstr ""
+msgstr "Поиск &hellip;"
 
 #: ../sidebar.php:28
 msgid "Meta"
-msgstr ""
+msgstr "Мета"
 
 #: ../single.php:28
 msgid "Related Content by Tag"
-msgstr ""
+msgstr "Посты с тегом"
 
 #: ../inc/customizer.php:19
 msgid "Layout Options"
-msgstr ""
+msgstr "Настройка Макета"
 
 #: ../inc/customizer.php:26
 msgid "Excerpt Options"
-msgstr ""
+msgstr "Опции цитирования"
 
 #: ../inc/customizer.php:33
 msgid "General Options"
-msgstr ""
+msgstr "Основные настройки"
 
 #: ../inc/customizer.php:49
 msgid "Post Excerpts"
-msgstr ""
-
-#: ../inc/customizer.php:54
-msgid "Disabled"
-msgstr ""
-
-#: ../inc/customizer.php:55
-msgid "Enabled"
-msgstr ""
+msgstr "Цитата записи"
 
 #: ../inc/customizer.php:72
 msgid "Generate One-Sentence Excerpts"
-msgstr ""
+msgstr "Создать цитату из одного предложения"
 
 #: ../inc/customizer.php:90
 msgid "Always Show Full Content for First Post"
-msgstr ""
+msgstr "Всегда показывать первый пост полностью"
 
 #: ../inc/customizer.php:108
 msgid "Show Post Word Count in Entry Meta"
@@ -358,189 +362,188 @@ msgstr ""
 
 #: ../inc/customizer.php:144
 msgid "Show Widgets on Single Posts"
-msgstr ""
+msgstr "Отображать виджеты в посте"
 
 #: ../inc/customizer.php:162
 msgid "Show Nav Menu on Single Posts"
-msgstr ""
+msgstr "Отображать меню навигации в посте"
 
 #: ../inc/customizer.php:180
 msgid "Show Updated Date on Single Posts"
 msgstr ""
 
 #: ../inc/customizer.php:198
+#, fuzzy
 msgid "Single-Column Layout"
-msgstr ""
+msgstr "Макет с одной колонкой"
 
 #: ../inc/customizer.php:216
 msgid "Enable Multi-Author Mode"
-msgstr ""
+msgstr "Включить режим Мульти-Авторства"
 
 #: ../inc/customizer.php:234
 msgid "Show Page Load Progress Bar"
-msgstr ""
+msgstr "Показать индикатор загрузки страницы"
 
 #: ../inc/customizer.php:252
 msgid "Auto-Set Featured Image as Post Cover"
 msgstr ""
 
 #: ../inc/customizer.php:270
-msgid "Overlay Post Title on Post Cover"
-msgstr ""
-
-#: ../inc/customizer.php:288
 msgid "Comments Call to Action"
 msgstr ""
 
-#: ../inc/customizer.php:301
+#: ../inc/customizer.php:283
 msgid "Text Color"
-msgstr ""
+msgstr "Цвет текста"
 
-#: ../inc/customizer.php:306
+#: ../inc/customizer.php:288
 msgid "Comment Form Background Color"
 msgstr ""
 
-#: ../inc/customizer.php:311
+#: ../inc/customizer.php:293
 msgid "Link Color"
-msgstr ""
+msgstr "Цвет ссылок"
 
-#: ../inc/customizer.php:316
+#: ../inc/customizer.php:298
+#, fuzzy
 msgid "Title and Header Text Color"
-msgstr ""
+msgstr "Цвет текста заголовка"
 
-#: ../inc/customizer.php:321
+#: ../inc/customizer.php:303
 msgid "Primary Meta Text Color"
-msgstr ""
+msgstr "Основной цвет Мета текста"
 
-#: ../inc/customizer.php:326
+#: ../inc/customizer.php:308
 msgid "Secondary Meta Text Color"
-msgstr ""
+msgstr "Вторичный цвет Мета текста"
 
 #: ../inc/template-tags.php:41
+#, fuzzy
 msgid "Post navigation"
-msgstr ""
+msgstr "Навигация по посту"
 
 #: ../inc/template-tags.php:45
 msgid "&larr;"
-msgstr ""
+msgstr "&larr;"
 
 #: ../inc/template-tags.php:46
 msgid "&rarr;"
-msgstr ""
+msgstr "&rarr;"
 
 #: ../inc/template-tags.php:51
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> Предыдущие записи"
 
 #: ../inc/template-tags.php:55
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Новые записи <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:85
 msgid " - Your comment is awaiting moderation."
-msgstr ""
+msgstr "- Ваш комментарий ожидает проверки -"
 
 #: ../inc/template-tags.php:97 ../inc/template-tags.php:140
 msgid "(Edit)"
-msgstr ""
+msgstr "(Редактировать)"
 
 #: ../inc/template-tags.php:165 ../inc/template-tags.php:196
 #: ../inc/template-tags.php:208
 #, php-format
 msgid "View all posts by %s"
-msgstr ""
+msgstr "Показать все записи от %s"
 
 #: ../inc/template-tags.php:182
 msgid ", "
-msgstr ""
+msgstr ","
 
 #: ../inc/template-tags.php:271
 msgid "Continue Reading &rarr;"
-msgstr ""
+msgstr "Продолжить чтение &rarr;"
 
 #: ../inc/template-tags.php:288
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Продолжить чтение <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:358
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "Страница %s"
 
 #: ../inc/template-tags.php:378
 #, php-format
 msgid "View all posts in %s"
-msgstr ""
+msgstr "Просмотреть все записи в %s"
 
-#: ../inc/template-tags.php:434 ../inc/template-tags.php:475
+#: ../inc/template-tags.php:434
 msgid "Published"
-msgstr ""
+msgstr "Опубликовано"
 
 #: ../inc/template-tags.php:442 ../inc/template-tags.php:483
 msgid "Updated"
-msgstr ""
+msgstr "Обновлено"
 
 #: ../inc/template-tags.php:510
 #, php-format
 msgid "%1$s Words"
-msgstr ""
+msgstr "%1$s Слов"
 
-#: ../inc/template-tags.php:606 ../inc/template-tags.php:636
-#: ../inc/template-tags.php:665
+#: ../inc/template-tags.php:561 ../inc/template-tags.php:586
+#: ../inc/template-tags.php:615
 #, php-format
 msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
 msgstr ""
 
-#: ../inc/template-tags.php:609
+#: ../inc/template-tags.php:564
 #, php-format
 msgid "Found one search result for <strong>%2$s</strong>."
 msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:640
+#: ../inc/template-tags.php:590
 #, php-format
 msgid "There is one post filed in <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:642
+#: ../inc/template-tags.php:592
 #, php-format
 msgid "There is one post tagged <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:673
+#: ../inc/template-tags.php:623
 #, php-format
 msgid "There was one post published in %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:675
+#: ../inc/template-tags.php:625
 #, php-format
 msgid "There is one post published in %2$s."
 msgid_plural "There are %1$s posts published in %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:678
+#: ../inc/template-tags.php:628
 #, php-format
 msgid "There was one post published on %2$s."
 msgid_plural "There were %1$s posts published on %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:685
+#: ../inc/template-tags.php:635
 #, php-format
 msgid "There was one post published in the month of %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:690
+#: ../inc/template-tags.php:640
 #, php-format
 msgid "There was one post published in %2$s %3$s."
 msgid_plural "There were %1$s posts published in %2$s %3$s"

@@ -1,228 +1,223 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
-"POT-Creation-Date: 2014-04-23 17:36-0500\n"
-"PO-Revision-Date: 2014-08-24 15:46+0100\n"
-"Last-Translator: Eddy Lelièvre-Berna\n"
-"Language-Team: \n"
-"Language: fr_FR\n"
+"POT-Creation-Date: 2014-04-12 21:39+0400\n"
+"PO-Revision-Date: 2015-01-27 12:25+0800\n"
+"Last-Translator: Артём Рябко <rad964@ya.ru>\n"
+"Language-Team: Uugankhuu <yamasushy@gmail.com>\n"
+"Language: mn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.6\n"
+"X-Generator: Poedit 1.7.3\n"
 "X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
 "esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
 "translate_nooped_plural\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:16
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oups ! Cette page ne peut être trouvée."
+msgstr "Алдаа! Энэ хуудас олдсонгүй."
 
 #: ../404.php:21
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Il semble que rien n&rsquo;ait été trouvé à cette adresse. Peut-être pouvez-"
-"vous essayer un des liens ci-dessous ou effectuer une recherche ?"
+"Эндээс юу ч олдсонгүй. Доорх холбоосуудын аль нэгээр орох эсвэл хайлт хийх "
+"үү?"
 
 #: ../404.php:29 ../page_archive-template.php:32
 msgid "Most Used Categories"
-msgstr "Catégories les Plus Utilisées"
+msgstr "Хамгийн эрэлттэй төрөл"
 
 #: ../404.php:45
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Essayez de chercher dans les archives mensuelles. %1$s"
+msgstr "Сар бүрийн архиваас хайж үзнэ үү. %1$s"
 
 #: ../archive.php:50
 msgid "Asides"
-msgstr "Apartés"
+msgstr "Онцлох"
 
 #: ../archive.php:52
 msgid "Galleries"
-msgstr "Galleries"
+msgstr "Галлерей"
 
 #: ../archive.php:54
 msgid "Images"
-msgstr "Images"
+msgstr "Зураг"
 
 #: ../archive.php:56
 msgid "Videos"
-msgstr "Vidéos"
+msgstr "Видео"
 
 #: ../archive.php:58
 msgid "Quotes"
-msgstr "Guillemets"
+msgstr "Ишлэл"
 
 #: ../archive.php:60
 msgid "Links"
-msgstr "Liens"
+msgstr "Холбоос"
 
 #: ../archive.php:62
 msgid "Statuses"
-msgstr "Statuts"
+msgstr "Төлөв"
 
 #: ../archive.php:64
 msgid "Audios"
-msgstr "Audios"
+msgstr "Дуу хөгжим"
 
 #: ../archive.php:66
 msgid "Chats"
-msgstr "Discussions"
+msgstr "Чат"
 
 #: ../archive.php:68 ../sidebar.php:21
 msgid "Archives"
-msgstr "Archives"
+msgstr "Архив"
 
 #: ../comments.php:40 ../content.php:91
 #, php-format
 msgid "1 Comment"
 msgid_plural "%1$s Comments"
-msgstr[0] "1 Commentaire"
-msgstr[1] "%1$s Commentaires"
+msgstr[0] "1 Сэтгэгдэл"
+msgstr[1] "%1$s Сэтгэгдэл"
 
 #: ../comments.php:49 ../comments.php:70
 msgid "Comment navigation"
-msgstr "Parcourir les Commentaires"
+msgstr "Сэтгэгдэлийн зам"
 
 #: ../comments.php:51 ../comments.php:72
 msgid "&larr; Older Comments"
-msgstr "&larr; Commentaires Anciens"
+msgstr "&larr; Хуучин сэтгэгдэл"
 
 #: ../comments.php:52 ../comments.php:73
 msgid "Newer Comments &rarr;"
-msgstr "Commentaires Récents &rarr;"
+msgstr "Шинэ сэтгэгдэл &rarr;"
 
 #: ../comments.php:83
 msgid "Comments are closed."
-msgstr "Commentaires clos."
+msgstr "Сэтгэгдэл бичих боломжгүй."
 
 #: ../comments.php:102
 msgid "Readers who shared this"
-msgstr "Lecteurs l&rsquo;ayant partagé"
+msgstr "Энэ нийтлэлийг хуваалцсан уншигчид"
 
 #: ../comments.php:104
 msgid "Thank you!"
-msgstr "Merci !"
+msgstr "Баярлалаа!"
 
 #: ../content-none.php:13 ../no-results.php:14
 msgid "Nothing Found"
-msgstr "Aucun Résultat Trouvé"
+msgstr "Юу ч Олдсонгүй"
 
 #: ../content-none.php:20 ../no-results.php:21
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Prêt à publier votre premier article ?  <a href=\"%1$s\">Commencez ici</a>."
+msgstr "Анхны нийтлэлээ оруулахад бэлэн үү? <a href=\"%1$s\">Энд дарна уу</a>."
 
 #: ../content-none.php:24 ../no-results.php:25
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Désolé, la recherche n&rsquo;a donné aucun résultat... SVP, ré-essayez avec "
-"des mots clés différents."
+"Уучлаарай, таны хайлтанд юу ч олдсонгүй. Өөр түлхүүр үгээр дахин хайна уу."
 
 #: ../content-none.php:30 ../no-results.php:31
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-"Il semble que rien n&rsquo;ait été trouvé à cette adresse. Peut-être "
-"qu&rsquo;une recherche pourrait vous aider."
+msgstr "Бид таны хүссэнийг олсонгүй. Танд хайлт хийхийг зөвлөж байна."
 
 #: ../content-page.php:22 ../content-single.php:39
 #: ../page_one-column-template.php:39
 msgid "Next page &rarr;"
-msgstr "Page suivante &rarr;"
+msgstr "Дараагийн хуудас &rarr;"
 
 #: ../content-page.php:23 ../content-single.php:40
 #: ../page_one-column-template.php:40
 msgid "&larr; Previous page"
-msgstr "&larr; Page précédente"
+msgstr "&larr; Өмнөх хуудас"
 
 #: ../content-page.php:29 ../content-single.php:46 ../content.php:53
 #: ../page_one-column-template.php:46
 msgid "Pages:"
-msgstr "Pages :"
+msgstr "Хуудаснууд:"
 
 #: ../content-page.php:47 ../content-single.php:66 ../content.php:95
 #: ../image.php:127 ../page_archive-template.php:72
 #: ../page_one-column-template.php:53
 msgid "Edit"
-msgstr "Editer"
+msgstr "Засах"
 
 #: ../content.php:21 ../content.php:47 ../functions.php:1014
 #: ../functions.php:1029
 #, php-format
 msgid "Permalink to %s"
-msgstr "Permalien vers %s"
+msgstr "%s-н холбоос"
 
 #: ../content.php:91 ../functions.php:397
 msgid "Comment"
-msgstr "Commenter"
+msgstr "Сэтгэгдэл"
 
 #: ../content.php:91
 msgid "% Comments"
-msgstr "% Commentaires"
+msgstr "% Сэтгэгдэл"
 
 #: ../functions.php:98
 msgid "Primary Menu"
-msgstr "Menu Primaire"
+msgstr "Үндсэн цэс"
 
 #: ../functions.php:99
 msgid "Single Posts Menu"
-msgstr "Menu des Articles Pleine-page"
+msgstr "Дан нийтлэлийн цэс"
 
 #: ../functions.php:100
 msgid "Social"
-msgstr "Social"
+msgstr "Сошл"
 
 #: ../functions.php:141
 msgid "Sidebar"
-msgstr "Barre Latérale"
+msgstr "Хажуугийн хэсэг"
 
 #: ../functions.php:152
 msgid "Archive Page"
-msgstr "Page d&rsquo;Archive"
+msgstr "Архивын хуудас"
 
 #: ../functions.php:252
 #, php-format
 msgid "%1$s empowered by %2$s"
-msgstr "%1$s fièrement propulsé par %2$s"
+msgstr "%1$s-г дэмжсэн %2$s"
 
 #: ../functions.php:291
 msgid "Anonymous"
-msgstr "Anonyme"
+msgstr "Үл мэдэгдэх хүн"
 
 #: ../functions.php:304
 msgid "Reply to"
-msgstr "Répondre à"
+msgstr "Хариу ->"
 
 #: ../functions.php:338
 #, php-format
 msgid "Leave a Reply for %s"
-msgstr "Laisser une Réponse à %s"
+msgstr "%s-д хариу бичих"
 
 #: ../functions.php:339
 msgid "Cancel Reply"
-msgstr "Annuler la Réponse"
+msgstr "Цуцлах"
 
 #: ../functions.php:340
 msgid "Submit Comment"
-msgstr "Soumettre un Commentaire"
+msgstr "Сэтгэгдэл оруулах"
 
 #: ../functions.php:343
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr ""
-"Vous devez être <a href=\"%s\">identifié</a> pour envoyer un commentaire."
+msgstr "Та сэтгэгдэл бичихийн тулд <a href=\"%s\">нэвтрэх</a> шаардлагатай."
 
 #: ../functions.php:348
 #, php-format
@@ -230,44 +225,44 @@ msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
-"Identifié comme <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Fermer "
-"cette session\">Log out?</a>"
+"Та <a href=\"%1$s\">%2$s</a> эрхээр нэвтэрсэн байна. <a href=\"%3$s\" title="
+"\"Гарах\">Гарах уу?</a>"
 
 #: ../functions.php:358
 msgid "Name"
-msgstr "Nom"
+msgstr "Нэр"
 
 #: ../functions.php:363
 msgid "Email"
-msgstr "Email"
+msgstr "И-мэйл"
 
 #: ../functions.php:368
 msgid "Website"
-msgstr "Site Web"
+msgstr "Веб"
 
 #: ../functions.php:547
 msgid "Write a Comment"
-msgstr "Ecrire un Commentaire"
+msgstr "Сэтгэгдэл бичих"
 
 #: ../functions.php:782
 msgid "Use as post cover (full-width)"
-msgstr "Utiliser comme article de couverture (grande largeur)"
+msgstr "Нийтлэлийн хавтасны зураг болгох (бүтэн хэмжээгээр)"
 
 #: ../functions.php:792
 msgid "Disable post cover (full-width)"
-msgstr "Désactiver la mise en couverture (grande largeur)"
+msgstr "Нийтлэлийн хавтасны зургийг болиулах (бүтэн хэмжээгээр)"
 
 #: ../functions.php:990
 msgid "in"
-msgstr "dans"
+msgstr "Төрөл: "
 
 #: ../functions.php:999
 msgid "by"
-msgstr "par"
+msgstr "Бичсэн: "
 
 #: ../header.php:56
 msgid "Skip to content"
-msgstr "Passer au contenu"
+msgstr "Агуулга руу алгасах"
 
 #: ../image.php:23
 #, php-format
@@ -276,153 +271,150 @@ msgid ""
 "%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
 "%7$s</a>"
 msgstr ""
-"\"%1$s\" - <a href=\"%2$s\" title=\"Lien vers l&rsquo;image originale\">%3$s "
-"&times; %4$s</a> %5$s <a href=\"%6$s\" title=\"Retourner à %7$s\" rel="
-"\"gallery\">%7$s</a>"
+"\"%1$s\" - <a href=\"%2$s\" title=\"Бүтэн зургийн холбоос\">%3$s &times; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\"%7$s руу буцах\" rel=\"галлерей\">"
+"%7$s</a>"
 
 #: ../image.php:106
 msgid "&larr; Previous image"
-msgstr "&larr; Image Précédente"
+msgstr "&larr; Өмнөх зураг"
 
 #: ../image.php:107
 msgid "Next image &rarr;"
-msgstr "Image suivante &rarr;"
+msgstr "Дараагийн зураг &rarr;"
 
 #: ../page_archive-template.php:45
 msgid "Yearly Archives"
-msgstr "Archives Annuelles"
+msgstr "Жилийн архив"
 
 #: ../page_archive-template.php:47
 msgid "Select Year"
-msgstr "Choisir l&rsquo;Année"
+msgstr "Жилээ сонгоно уу"
 
 #: ../page_archive-template.php:53
 msgid "Monthly Archives"
-msgstr "Archives Mensuelles"
+msgstr "Сарын архив"
 
 #: ../page_archive-template.php:55
 msgid "Select Month"
-msgstr "Choisir le Mois"
+msgstr "Сараа сонгоно уу"
 
 #: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
 msgid "Search"
-msgstr "Rechercher"
+msgstr "Хайх"
 
 #: ../page_archive-template.php:65
 msgid "Explore by Tag"
-msgstr "Parcourir par Etiquette"
+msgstr "Тагаар дэлгэрэнгүй харах"
 
 #: ../search.php:19
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Résultats de la Recherche pour : %s"
+msgstr "&rsquo;%s&rsquo; түлхүүр үгээр хайсан илэрцүүд"
 
 #: ../searchform.php:11
 msgid "Search &hellip;"
-msgstr "Rechercher &hellip;"
+msgstr "Хайх &hellip;"
 
 #: ../sidebar.php:28
 msgid "Meta"
-msgstr "Méta-Donnée"
+msgstr "Мета"
 
 #: ../single.php:28
 msgid "Related Content by Tag"
-msgstr "Contenu par Etiquette"
+msgstr "Тагд холбоотой агуулга"
 
 #: ../inc/customizer.php:19
 msgid "Layout Options"
-msgstr "Options de Mise en Page"
+msgstr "Зохион байгуулалтын тохиргоо"
 
 #: ../inc/customizer.php:26
 msgid "Excerpt Options"
-msgstr "Options des Extraits"
+msgstr "Товч агуулгын тохиргоо"
 
 #: ../inc/customizer.php:33
 msgid "General Options"
-msgstr "Options Générales"
+msgstr "Ерөнхий тохиргоо"
 
 #: ../inc/customizer.php:49
 msgid "Post Excerpts"
-msgstr "Extraits d&rsquo;Article"
+msgstr "Нийтлэлийн товч агуулга"
 
 #: ../inc/customizer.php:72
 msgid "Generate One-Sentence Excerpts"
-msgstr "Générer les Extraits à partir d&rsquo;une Phrase"
+msgstr "Нэг өгүүлбэр ашиглан Товч агуулгыг гаргах"
 
 #: ../inc/customizer.php:90
 msgid "Always Show Full Content for First Post"
-msgstr "Toujours Montrer le Contenu Complet du Premier Article"
+msgstr "Эхний нийтлэлийн бүх агуулгыг харуулдаг байх"
 
 #: ../inc/customizer.php:108
 msgid "Show Post Word Count in Entry Meta"
-msgstr ""
-"Montrer le Nombre de Mots de l&rsquo;Article dans les Méta-Données d&rsquo;"
-"Entrée"
+msgstr "Мета утганд нийтлэлийн үгний тоог харуулдаг байх"
 
 #: ../inc/customizer.php:126
 msgid "Show Post Date in Entry Meta"
-msgstr ""
-"Montrer la Date de l&rsquo;Article dans les Méta-Données d&rsquo;Entrée"
+msgstr "Мета утганд  нийтлэлийн огноог оруулдаг байх"
 
 #: ../inc/customizer.php:144
 msgid "Show Widgets on Single Posts"
-msgstr "Montrer les Widgets sur les Articles Pleine-page"
+msgstr "Дан нийтлэлд нэмэлтүүдийг харуулдаг байх"
 
 #: ../inc/customizer.php:162
 msgid "Show Nav Menu on Single Posts"
-msgstr "Montrer le Menu de Navigation sur les Articles Pleine-page"
+msgstr "Дан нийтлэлд цэсийг харуулдаг байх"
 
 #: ../inc/customizer.php:180
 msgid "Show Updated Date on Single Posts"
-msgstr "Montrer la Date de Mise à Jour sur les Articles Pleine-page"
+msgstr "Дан нийтлэлд шинэчилсэн огноог харуулдаг байх"
 
 #: ../inc/customizer.php:198
 msgid "Single-Column Layout"
-msgstr "Disposition en une Seule Colonne"
+msgstr "Нэг баганатайгаар зохион байгуулах"
 
 #: ../inc/customizer.php:216
 msgid "Enable Multi-Author Mode"
-msgstr "Activer le Mode Multi-Auteur"
+msgstr "Олон нийтлэлчтэй байх горимыг идэвхижүүлэх"
 
 #: ../inc/customizer.php:234
 msgid "Show Page Load Progress Bar"
-msgstr "Montrer la Barre de Progression de Chargement des Pages"
+msgstr "Хуудас уншиж буйг харуулдаг байх"
 
 #: ../inc/customizer.php:252
 msgid "Auto-Set Featured Image as Post Cover"
-msgstr "Mise en Couverture Automatique des Vignettes des Articles"
+msgstr "Онцлох зургийг нийтлэлийн хавтасны зургаар автоматаар тохируулах"
 
 #: ../inc/customizer.php:270
 msgid "Comments Call to Action"
-msgstr "Appel aux Commentaires"
+msgstr "Сэтгэгдэл бичих хэсгийн текстийг солих"
 
 #: ../inc/customizer.php:283
 msgid "Text Color"
-msgstr "Couleur de Texte"
+msgstr "Текстийн өнгө"
 
 #: ../inc/customizer.php:288
 msgid "Comment Form Background Color"
-msgstr "Couleur de Fond du Formulaire des Commentaires"
+msgstr "Сэтгэгдэл бичих талбарын арын өнгө"
 
 #: ../inc/customizer.php:293
 msgid "Link Color"
-msgstr "Couleur des Liens"
+msgstr "Холбоосны өнгө"
 
 #: ../inc/customizer.php:298
 msgid "Title and Header Text Color"
-msgstr "Couleur du Titre et de l&rsquo;En-Tête"
+msgstr "Гарчиг болон толгой текстийн өнгө"
 
 #: ../inc/customizer.php:303
 msgid "Primary Meta Text Color"
-msgstr "Couleur des Méta-Données Primaires"
+msgstr "Үндсэн мета текстийн өнгө"
 
 #: ../inc/customizer.php:308
 msgid "Secondary Meta Text Color"
-msgstr "Couleur des Méta-Données Secondaires"
+msgstr "Хоёрдогч мета текстийн өнгө"
 
 #: ../inc/template-tags.php:41
 msgid "Post navigation"
-msgstr "Parcourir les articles"
+msgstr "Нийтлэлийн зам"
 
 #: ../inc/template-tags.php:45
 msgid "&larr;"
@@ -434,119 +426,149 @@ msgstr "&rarr;"
 
 #: ../inc/template-tags.php:51
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Articles anciens"
+msgstr "<span class=\"meta-nav\">&larr;</span> Өмнөх нийтлэл"
 
 #: ../inc/template-tags.php:55
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Articles récents <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Дараагийн нийтлэл <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:85
 msgid " - Your comment is awaiting moderation."
-msgstr " - Votre commentaire est en attente de modération."
+msgstr "- Таны сэтгэгдэл админы зөвшөөрөл хүлээж байна."
 
 #: ../inc/template-tags.php:97 ../inc/template-tags.php:140
 msgid "(Edit)"
-msgstr "(Editer)"
+msgstr "(Засах)"
 
 #: ../inc/template-tags.php:165 ../inc/template-tags.php:196
 #: ../inc/template-tags.php:208
 #, php-format
 msgid "View all posts by %s"
-msgstr "Voir tous les articles par %s"
+msgstr "%s-н бүх нийтлэлийг харах"
 
 #: ../inc/template-tags.php:182
 msgid ", "
-msgstr ","
+msgstr ", "
 
 #: ../inc/template-tags.php:271
 msgid "Continue Reading &rarr;"
-msgstr "Poursuivre la Lecture &rarr;"
+msgstr "Цааш нь унших &rarr;"
 
 #: ../inc/template-tags.php:288
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Poursuivre la lecture <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Цааш нь унших <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:358
 #, php-format
 msgid "Page %s"
-msgstr "Page %s"
+msgstr "%s хуудас"
 
 #: ../inc/template-tags.php:378
 #, php-format
 msgid "View all posts in %s"
-msgstr "Voir tous les articles dans %s"
+msgstr "%s төрлийн бүх нийтлэлийг харах"
 
 #: ../inc/template-tags.php:434
 msgid "Published"
-msgstr "Publié"
+msgstr "Нийтэлсэн огноо"
 
 #: ../inc/template-tags.php:442 ../inc/template-tags.php:483
 msgid "Updated"
-msgstr "Mis à Jour"
+msgstr "Шинэчилсэн огноо"
 
 #: ../inc/template-tags.php:510
 #, php-format
 msgid "%1$s Words"
-msgstr "%1$s Mots"
+msgstr "%1$s үгтэй"
 
 #: ../inc/template-tags.php:561 ../inc/template-tags.php:586
 #: ../inc/template-tags.php:615
 #, php-format
 msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
-msgstr " (page <strong>%1$s</strong> de <strong>%2$s</strong>)"
+msgstr " (<strong>%2$s</strong> хуудаснаас <strong>%1$s</strong> дэх нь)"
 
 #: ../inc/template-tags.php:564
 #, php-format
 msgid "Found one search result for <strong>%2$s</strong>."
 msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
-msgstr[0] "Un résultat trouvé pour <strong>%2$s</strong>."
-msgstr[1] "%1$s résultats trouvés pour <strong>%2$s</strong>."
+msgstr[0] "<strong>%2$s</strong> түлхүүр үгийн хайлтанд ганцхан илэрц олдлоо."
+msgstr[1] "<strong>%2$s</strong> түлхүүр үгийн хайлтанд %1$s илэрц олдлоо."
 
 #: ../inc/template-tags.php:590
 #, php-format
 msgid "There is one post filed in <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
-msgstr[0] "Un article est classé dans <strong>%2$s</strong>."
-msgstr[1] "%1$s articles sont classés dans <strong>%2$s</strong>."
+msgstr[0] "<strong>%2$s</strong> төрөлд ганцхан нийтлэл байна."
+msgstr[1] "<strong>%2$s</strong> төрөлд %1$s нийтлэл байна."
 
 #: ../inc/template-tags.php:592
 #, php-format
 msgid "There is one post tagged <strong>%2$s</strong>."
 msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
-msgstr[0] "Un article est étiqueté <strong>%2$s</strong>."
-msgstr[1] "%1$s articles sont étiquetés <strong>%2$s</strong>."
+msgstr[0] "<strong>%2$s</strong> тагтай ганцхан нийтлэл байна."
+msgstr[1] "<strong>%2$s</strong> тагтай %1$s нийтлэл байна."
 
 #: ../inc/template-tags.php:623
 #, php-format
 msgid "There was one post published in %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
-msgstr[0] "Un article a été publié en %2$s."
-msgstr[1] "%1$s articles ont été publiés en %2$s."
+msgstr[0] "%2$s-д ганцхан нийтлэл нийтлэгдсэн байна."
+msgstr[1] "%2$s-д %1$s нийтлэл нийтлэгдсэн байна."
 
 #: ../inc/template-tags.php:625
 #, php-format
 msgid "There is one post published in %2$s."
 msgid_plural "There are %1$s posts published in %2$s"
-msgstr[0] "Un article est publié en %2$s."
-msgstr[1] "%1$s articles sont publiés en %2$s."
+msgstr[0] "%2$s-д ганцхан нийтлэл байна."
+msgstr[1] "%2$s-д %1$s нийтлэл байна."
 
 #: ../inc/template-tags.php:628
 #, php-format
 msgid "There was one post published on %2$s."
 msgid_plural "There were %1$s posts published on %2$s"
-msgstr[0] "Un article a été publié le %2$s."
-msgstr[1] "%1$s articles ont été publiés le %2$s."
+msgstr[0] "%2$s-д ганцхан нийтлэл нийтлэгдсэн байна."
+msgstr[1] "%2$s-д %1$s нийтлэл нийтлэгдсэн байна."
 
 #: ../inc/template-tags.php:635
 #, php-format
 msgid "There was one post published in the month of %2$s."
 msgid_plural "There were %1$s posts published in %2$s"
-msgstr[0] "Un article a été publié en %2$s."
-msgstr[1] "%1$s articles ont été publiés en %2$s."
+msgstr[0] "%2$s-ийн сард ганцхан нийтлэл нийтлэгдсэн байна."
+msgstr[1] "%2$s-д %1$s нийтлэл нийтлэгдсэн байна."
 
 #: ../inc/template-tags.php:640
 #, php-format
 msgid "There was one post published in %2$s %3$s."
 msgid_plural "There were %1$s posts published in %2$s %3$s"
-msgstr[0] "Un article a été publié en %2$s %3$s."
-msgstr[1] "%1$s articles ont été publiés en  %2$s %3$s"
+msgstr[0] "%2$s %3$s-д ганцхан нийтлэл нийтлэгдсэн байна"
+msgstr[1] "%2$s %3$s-д %1$s нийтлэл нийтлэгдсэн байна"
+
+#~ msgid "Post:"
+#~ msgstr "Нийтлэл:"
+
+#~ msgid "You can limit reposting to only specific days and hours."
+#~ msgstr "Та тодорхой өдөр, цаг зааж нийтлэлээ дахин оруулах боломжтой."
+
+#~ msgid "Current server time is: "
+#~ msgstr "Серверийн цаг:"
+
+#~ msgid "All the time"
+#~ msgstr "Бүх цаг"
+
+#~ msgid "Only between hours"
+#~ msgstr "Зөвхөн дараах цагийн хооронд"
+
+#~ msgid "and"
+#~ msgstr "болон"
+
+#~ msgid "on"
+#~ msgstr "-д"
+
+#~ msgid "Time to post:"
+#~ msgstr "Нийтлэх цаг:"
+
+#~ msgid "Set time"
+#~ msgstr "Цагийг тохируулах"
+
+#~ msgid "Immediately"
+#~ msgstr "Яг одоо оруулах"

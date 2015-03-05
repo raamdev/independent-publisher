@@ -1,9 +1,12 @@
+![screenshot](https://cloud.githubusercontent.com/assets/53005/3689770/d0d6eb0e-1342-11e4-901d-392ed565905f.png)
+
 Independent Publisher
 =====================
 
 Independent Publisher is a WordPress Theme. This README contains documentation for theme options and features, along with a list of known issues and frequently asked questions. It also contains a list of theme filters and action hooks that can be used to modify and hook into various areas of the theme, as well as a list of functions that can be overidden in a Child Theme.
 
  The main site for this project, along with a demo of this theme, is located at [http://independentpublisher.me](http://independentpublisher.me).
+
 
 ## Table of Contents
 
@@ -20,6 +23,13 @@ Independent Publisher is a WordPress Theme. This README contains documentation f
     * [How do I make the JetPack Sharing Buttons look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-jetpack-sharing-buttons-look-better)
     * [How do I make the Subscribe to Comments Reloaded Advanced Options look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-subscribe-to-comments-reloaded-advanced-options-look-better)
     * [How do I make MailChimp Signup Forms look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-mailchimp-signup-forms-look-better)
+    * [How do I add an Archive Page?](https://github.com/raamdev/independent-publisher#how-do-i-add-an-archive-page)
+    * [How do I show a menu on the Single Post pages?](https://github.com/raamdev/independent-publisher#how-do-i-show-a-menu-on-the-single-post-pages)
+    * [How do I change the footer credits?](https://github.com/raamdev/independent-publisher#how-do-i-change-the-footer-credits)
+    * [How do I add my own Social Icons to the Social Menu?](https://github.com/raamdev/independent-publisher#how-do-i-add-my-own-social-icons-to-the-social-menu)
+    * [How can I enable "Single-Column Layout" on only the home page?](https://github.com/raamdev/independent-publisher#how-can-i-enable-single-column-layout-on-only-the-home-page)
+    * [Why is the Navigation Menu and/or Widgets not Appearing on Single Post Pages?](https://github.com/raamdev/independent-publisher#why-is-the-navigation-menu-andor-widgets-not-appearing-on-single-post-pages)
+    * [How can I obfuscate my email address in the Social Menu?](https://github.com/raamdev/independent-publisher/#how-can-i-obfuscate-my-email-address-in-the-social-menu)
 * [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
 * [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
 * [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
@@ -58,11 +68,15 @@ The following colors can be changed via the Colors section:
 
 ### General Options
 
-![screen shot 2014-03-04 at 4 18 13 pm](https://f.cloud.github.com/assets/53005/2326412/95fb35fa-a3e2-11e3-9e68-b97f472055d1.png)
+![screen shot 2014-04-23 at 4 30 50 pm](https://cloud.githubusercontent.com/assets/53005/2782883/40146740-cb26-11e3-9c54-80301a57e3ac.png)
 
-- **Show Post Word Count in Entry Meta**. Enabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
+- **Show Widgets on Single Posts**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single Post pages.
 - **Show Post Date in Entry Meta**. Disabled by default. When this option is enabled, the post date will be shown in the entry meta on Blog, Archive, and Search pages. It uses the date format specified in *Dashboard → Settings → General → Date Format*.
-- **Show Widgets on Single Pages**. Disabled by default. When this option is enabled, sidebar widgets will also be shown on Single pages.
+- **Show Post Word Count in Entry Meta**. Disabled by default. Shows the post word count in the entry meta on Blog, Archive, and Search pages. Only shows post word count for posts with the Standard Post Format.
+- **Show Nav Menu on Single Posts**. Disabled by default. When this option is enabled, the primary navigation menu will also be shown on Single Post pages.
+- **Show Updated Date on Single Posts**. Disabled by default. When this option is enabled, the post's last modified date will be shown underneath the published date. If you enable this, you can disable this on a per-post basis by adding a Custom Field to a post with the name `independent_publisher_hide_updated_date` and any value (`yes` or `true` will do).
+- **Auto-Set Featured Image as Post Cover**. Disabled by default. When this option is enabled, any Featured Image set for a post will automatically be used as a Post Cover (see [Post Covers (Full-Width Featured Images)](https://github.com/raamdev/independent-publisher#post-covers-full-width-featured-images)).
+- **Show Page Load Progress Bar**. Disabled by default. When enabled, a progress bar will appear across the top of the page as the page is loading. The color of the progress bar is determined by the Link Color setting in *Appearance → Customizer → Colors*.
 - **Enable Multi-Author Mode**. Disabled by default. Enabling Multi Author Mode changes the behavior of the site to better support multiple authors. The author name is mentioned in the entry meta and the authors name always links to the author page instead of the home page. The Header Image (*Dashboard → Appearance → Customize → Header Image*) is treated as the site logo and placed as a small icon in top left of the single pages to provide a way of getting back to the home page.
 - **Comments Call to Action**. "Write a Comment" by default. This allows you to change the label that shows up on the 'Write a Comment' button and also changes the title of the comment form itself.
 
@@ -108,9 +122,14 @@ For more information on using Child Themes, see the [WordPress Codex](http://cod
 
 ### Why is my Header Image not showing on Single posts?
 
-On Single pages, the Gravatar image for the author of the post is shown. The Header Image (*Dashboard → Appearance → Header*) is only shown on non-Single pages.
+![screen shot 2014-05-15 at 6 53 32 pm](https://cloud.githubusercontent.com/assets/53005/2991763/cfad8b34-dc83-11e3-8f30-7ad98ac13486.png)
 
-If there is only one author on your site, you probably want to set the Header Image to be the same as the author Gravatar. (You also probably want the site Tagline, *Dashboard → Settings → General → Tagline*, to be the same as your bio in *Dashboard → Users → Your Profile → Biographical Info*.)
+
+On Single Post pages, the Author Image (the image of the post author) is shown. On non-Single pages like the Home Page, the Header Image (*Dashboard → Appearance → Header*) is shown. If you see something like the screenshot above on your Single Post pages, that means you haven't configured an Author Image.
+
+WordPress uses [Gravatar](http://gravatar.com) to link your email address with the image you want to show up when posting comments and publishing posts. If you don't already have a Gravatar account, signup using the same email address that you have configured in *Dashboard → Users → Your Profile*. After you upload and associate an image with the email address you have configured in WordPress, you should see the new image appear on your Single Post pages. (Sometimes it take a little while for Gravatar to update things, so if you don't see it immediately, give it some time.)
+
+Note that if there is only one author on your site, you probably want to set the Header Image to be the same as the author Gravatar. (You also probably want the site Tagline, *Dashboard → Settings → General → Tagline*, to be the same as your bio in *Dashboard → Users → Your Profile → Biographical Info*.)
 
 ### How do I get the small logo to show up in the top-left corner?
 
@@ -195,6 +214,127 @@ MailChimp includes its own CSS in the HTML embed code that, by default, doesn't 
 
 ![screen shot 2014-01-28 at 4 53 37 pm](https://f.cloud.github.com/assets/53005/2024233/c5642e38-8866-11e3-9d70-555eacbcb243.png)
 
+### How do I add an Archive page?
+
+The Independent Publisher theme includes a Page Template called "Archive Page" that you can use to create an Archive page. Simply create a new Page (*Pages -> Add New*), give it a title (e.g., "Archives"), then select the "Archive Page" template from the Template section in the Page Attributes meta box:
+
+![screen shot 2014-04-28 at 3 51 36 pm](https://cloud.githubusercontent.com/assets/53005/2822091/a3c75ba8-cf0e-11e3-9ba4-62f2e81f6c04.png)
+
+By default, the Archives Page Template will load the following:
+
+- Recent Posts
+- Most Used Categories
+- Yearly Archives
+- Monthly Archives
+- Search
+- Explore by Tag
+
+If you'd like to use your own custom set of widgets, you can simply add widgets to the Archive Page widget area (*Appearance -> Widgets*):
+
+![screen shot 2014-04-28 at 3 55 48 pm](https://cloud.githubusercontent.com/assets/53005/2822132/296236d4-cf0f-11e3-82e8-0fea749dcc3d.png)
+
+To get the default set of widgets back, simply remove all widgets from the Archive Page widget area.
+
+### How do I show a menu on the Single Post pages?
+
+By default, the main navigation menu (Primary Menu) only appears on non-Single pages. This is meant to keep the Single Post pages clean and simple. You can change this default behavior by enabling "Show Nav Menu on Single Posts" in *Appearance -> Customize -> General Options*.
+
+If you want your Single Posts menu to be differnet than your Primary Navigation menu, you can select a different menu for Single Posts in *Apperanace -> Menus -> Manage Locations -> Single Posts Menu*. 
+
+### How do I change the footer credits?
+
+You can change the footer credits by overriding the function that displays them (`independent_publisher_footer_credits()`) and making that function return something else (or return blank to remove footer content entirely).
+
+Before making such a change, you'll want make sure you're using a [Child Theme](https://github.com/raamdev/independent-publisher#using-a-child-theme-to-customize-independent-publisher) so that future theme updates don't override your modifications. The `functions.php` file that comes with the [Independent Publisher Child Theme](https://github.com/raamdev/independent-publisher-child-theme/) includes [an example](https://github.com/raamdev/independent-publisher-child-theme/blob/master/functions.php#L36) for overriding the footer credits function.
+
+### How do I add my own Social Icons to the Social Menu?
+
+The [Social Menu](https://github.com/raamdev/independent-publisher#how-do-i-add-social-media-buttons-below-the-logo) works by detecting the social media URL you're using and matching that URL to an icon. If you want to add a new social media icon to use on the Social Menu, you can do so by adding the following block of code to your child theme's `style.css` file:
+
+```css
+#menu-social li a[href*="example.com"]::before {
+	content: url('http://example.com/logo.png');
+	opacity: 0.5;
+}
+
+#menu-social li a[href*="example.com"]:hover::before {
+	opacity: 1;
+}
+```
+
+You'll simply need to replace `example.com` and `http://example.com/logo.png` in the code with the domain for the new social media site and the URL to the logo you want to appear on the social menu.
+
+### How can I enable "Single-Column Layout" on only the home page?
+
+Add the following code to child theme's `functions.php` file to enable the Single-Column layout for only the home page:
+
+```php
+/**
+ * Add single-column-layout to body class when on home page
+ */
+function __custom_independent_publisher_single_column_layout_body_class( $classes ) {
+	if ( is_home() || is_front_page() ) {
+		$classes[] = 'single-column-layout';
+	}
+
+	return $classes;
+}
+
+add_filter( 'body_class', '__custom_independent_publisher_single_column_layout_body_class' );
+```
+
+### Why is the Navigation Menu and/or Widgets not appearing on Single Post pages?
+
+By default, the main navigation menu and all widges are hidden from the Single Post pages to keep things clean and simple, however, if you prefer to show these there, you can enable _Show Nav Menu on Single Posts_ and _Show Widgets on Single Posts_ in **Dashboard → Apperance → Customize → General Options**:
+
+![2014-09-02_16-00-24](https://cloud.githubusercontent.com/assets/53005/4124836/faeaf062-32db-11e4-8e5b-b4f04be33ffb.png)
+
+### How can I obfuscate my email address in the Social Menu?
+
+The Social Menu uses the WordPress menu system and most email obfuscation plugins don't filter those for email addresses.
+
+I've written a special filter that will tell the [Email Address Encoder plugin](https://wordpress.org/plugins/email-address-encoder/) to encode any navigation menu items in the Social menu that contain `mailto:<email-address>` or `<email-address>`. 
+
+Add the following to a Child Theme `functions.php` file:
+
+```php
+add_filter( 'wp_nav_menu_objects', '__social_menu_eae_encode_emails', 10, 2 );
+/**
+ * Filters the Social Menu navigation items looking for email addresses and
+ * filters those email addresses through the Email Address Encoder plugin.
+ *
+ * @since 1.0.0
+ *
+ * @param object $objects An array of nav menu objects
+ * @param object $args    Nav menu object args
+ *
+ * @return object $objects Amended array of nav menu objects with items containing email addresses filtered through Email Address Encoder plugin
+ */
+function __social_menu_eae_encode_emails( $objects, $args ) {
+
+	// Only apply the social navigation menu
+	if ( isset( $args->theme_location ) ) {
+		if ( 'social' !== $args->theme_location || ! function_exists( 'eae_encode_emails' ) ) {
+			return $objects;
+		}
+	}
+
+	// Find any menu items with an email address and run them through the Email Address Encoder plugin
+	foreach ( $objects as $object ) {
+		if ( is_email( $object->url ) ) {
+			$object->url = eae_encode_emails( $object->url );
+		}
+		if ( stristr( $object->url, 'mailto:' ) ) {
+			$email = substr( $object->url, 7 );
+			if ( is_email( $email ) ) {
+				$object->url = 'mailto:' . eae_encode_emails( $email );
+			}
+		}
+	}
+
+	// Return the modified objects
+	return $objects;
+```
 
 ## Color Schemes
 
@@ -245,6 +385,7 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_posted_author()` - Prints HTML with meta information for the current author.
 - `independent_publisher_posted_author_cats()` - Prints HTML with meta information for the current author and post categories. Only prints author name when Multi-Author Mode is enabled.
 - `independent_publisher_posted_on_date()` - Prints HTML with meta information for the current post-date/time.
+- `independent_publisher_post_updated_date()` - Prints HTML with meta information for the current post's last updated date/time.
 - `independent_publisher_continue_reading_link()` - Prints HTML with Continue Reading link
 - `independent_publisher_continue_reading_text()` - Returns Continue Reading text for usage in `the_content()`
 - `independent_publisher_categorized_blog()` - Returns true if a blog has more than 1 category
@@ -281,3 +422,5 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_clean_content()` - Cleans the content for display as a Quote or Aside by stripping anything that might screw up formatting
 - `independent_publisher_maybe_linkify_the_content()` - Returns the post content for Asides and Quotes with the content linked to the permalink, for display on non-Single pages
 - `independent_publisher_maybe_linkify_the_excerpt()` - Returns the excerpt with the excerpt linked to the permalink, for display on non-Single pages
+- `independent_publisher_html_tag_schema()` - Returns the proper schema type
+- `independent_publisher_show_page_load_progress_bar()` - Echos the HTML and JavScript necessary to enable page load progress bar
