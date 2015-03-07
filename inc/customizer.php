@@ -306,6 +306,11 @@ class IndependentPublisher_Customize {
 			'label'   => __( 'Comment Form Background Color', 'independent-publisher' )
 		);
 		$colors[] = array(
+			'slug'    => 'comment_form_text_color',
+			'default' => '#000000',
+			'label'   => __( 'Comment Form Text Color', 'independent-publisher' )
+		);
+		$colors[] = array(
 			'slug'    => 'link_color',
 			'default' => '#57ad68',
 			'label'   => __( 'Link Color', 'independent-publisher' )
@@ -357,6 +362,7 @@ class IndependentPublisher_Customize {
 		$wp_customize->get_setting( 'text_color' )->transport                    = 'postMessage';
 		$wp_customize->get_setting( 'header_text_color' )->transport             = 'postMessage';
 		$wp_customize->get_setting( 'comment_form_background_color' )->transport = 'postMessage';
+		$wp_customize->get_setting( 'comment_form_text_color' )->transport 		 = 'postMessage';
 		$wp_customize->get_setting( 'link_color' )->transport                    = 'postMessage';
 		$wp_customize->get_setting( 'primary_meta_text_color' )->transport       = 'postMessage';
 		$wp_customize->get_setting( 'secondary_meta_text_color' )->transport     = 'postMessage';
@@ -381,9 +387,10 @@ class IndependentPublisher_Customize {
 
 			<?php self::generate_css('.site', 'background-color', 'background_color', '#'); ?>
 
-			/* Comment Form Background Color */
+			/* Comment Form Color */
 
 			<?php self::generate_css('.comment-respond', 'background-color', 'comment_form_background_color'); ?>
+			<?php self::generate_css('.comment-respond', 'color', 'comment_form_text_color'); ?>
 
 			/* Text Color */
 
