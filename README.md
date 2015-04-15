@@ -341,7 +341,7 @@ function __social_menu_eae_encode_emails( $objects, $args ) {
 
 By default, the theme will use a maximum of `700x700` pixels for the Post Cover image. You can override this and use the full image size by adding the following to your Child Theme's `functions.php` file:
 
-```
+```php
 function __custom_independent_publisher_full_width_featured_image_size() {
     return "full";
 }
