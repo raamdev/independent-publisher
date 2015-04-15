@@ -30,6 +30,7 @@ Independent Publisher is a WordPress Theme. This README contains documentation f
     * [How can I enable "Single-Column Layout" on only the home page?](https://github.com/raamdev/independent-publisher#how-can-i-enable-single-column-layout-on-only-the-home-page)
     * [Why is the Navigation Menu and/or Widgets not Appearing on Single Post Pages?](https://github.com/raamdev/independent-publisher#why-is-the-navigation-menu-andor-widgets-not-appearing-on-single-post-pages)
     * [How can I obfuscate my email address in the Social Menu?](https://github.com/raamdev/independent-publisher/#how-can-i-obfuscate-my-email-address-in-the-social-menu)
+    * [How can I use a Full Size Image for the Post Cover?](https://github.com/raamdev/independent-publisher/#how-can-i-use-a-full-size-image-for-the-post-cover)
 * [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
 * [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
 * [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
@@ -334,6 +335,18 @@ function __social_menu_eae_encode_emails( $objects, $args ) {
 
 	// Return the modified objects
 	return $objects;
+```
+
+### How can I use a Full Size Image for the Post Cover?
+
+By default, the theme will use a maximum of `700x700` pixels for the Post Cover image. You can override this and use the full image size by adding the following to your Child Theme's `functions.php` file:
+
+```
+function __custom_independent_publisher_full_width_featured_image_size() {
+    return "full";
+}
+
+add_filter( 'independent_publisher_full_width_featured_image_size', '__custom_independent_publisher_full_width_featured_image_size' );
 ```
 
 ## Color Schemes
