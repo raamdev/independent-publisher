@@ -2493,6 +2493,16 @@ table th {
 	color: #4A4A4E;
 }
 
+#menu-social li a[href*="/feed"]::before {
+	content: '\f413';
+	color: #BBC7D3;
+}
+
+#menu-social li a[href*="/feed"]:hover::before {
+	transition: color ease 0.3s;
+	color: #4A4A4E;
+}
+
 /* Hide left-side author card under 1200px */
 @media only screen and (max-width: 1200px) {
 	.site,
