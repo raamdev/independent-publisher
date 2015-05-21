@@ -120,7 +120,7 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 				'chat',
 				'image',
 				'video',
-			   'audio'
+				'audio'
 			)
 		);
 	}
@@ -233,7 +233,31 @@ if ( ! function_exists( 'independent_publisher_stylesheet' ) ) :
 	}
 endif;
 
+/*
+ * Loads the PHP file that generates the Customizer CSS for the front-end
+ */
+function independent_publisher_customizer_css() {
+	require(get_template_directory().'/css/customizer.css.php');
+	wp_die();
+}
+
+/*
+ * Enqueue the AJAX call to the dynamic Customizer CSS
+ * See http://codex.wordpress.org/AJAX_in_Plugins
+ */
+function independent_publisher_customizer_stylesheet() {
+	wp_enqueue_style('customizer', admin_url('admin-ajax.php').'?action=independent_publisher_customizer_css');
+
+}
+add_action('wp_ajax_independent_publisher_customizer_css', 'independent_publisher_customizer_css');
+add_action('wp_ajax_nopriv_independent_publisher_customizer_css', 'independent_publisher_customizer_css');
+
+/*
+ * IMPORTANT: Customizer CSS *must* be called _after_ the main stylesheet,
+ * to ensure that customizer-modified styles override the defaults.
+ */
 add_action( 'wp_enqueue_scripts', 'independent_publisher_stylesheet' );
+add_action( 'wp_enqueue_scripts', 'independent_publisher_customizer_stylesheet' );
 
 if ( ! function_exists( 'independent_publisher_wp_fullscreen_title_editor_style' ) ) :
 	/**
