@@ -1,0 +1,542 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Independent Publisher\n"
+"POT-Creation-Date: 2014-08-21 10:36-0500\n"
+"PO-Revision-Date: 2015-05-21 12:32+0800\n"
+"Last-Translator: Raam Dev <raam@raamdev.com>\n"
+"Language-Team: Amos Lee <iwillhappy1314@gmail.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
+"esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
+"translate_nooped_plural\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "我勒个去！居然没有找到~"
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "这里好像什么都没有，试试搜索功能吧"
+
+#: ../404.php:29 ../page_archive-template.php:32
+msgid "Most Used Categories"
+msgstr "最常用的分类"
+
+#: ../404.php:45
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "看看每月的归档.%1$s"
+
+#: ../archive.php:50
+msgid "Asides"
+msgstr "边栏"
+
+#: ../archive.php:52
+msgid "Galleries"
+msgstr "画廊"
+
+#: ../archive.php:54
+msgid "Images"
+msgstr "图像"
+
+#: ../archive.php:56
+msgid "Videos"
+msgstr "视频"
+
+#: ../archive.php:58
+msgid "Quotes"
+msgstr "引用"
+
+#: ../archive.php:60
+msgid "Links"
+msgstr "链接"
+
+#: ../archive.php:62
+msgid "Statuses"
+msgstr "状态"
+
+#: ../archive.php:64
+msgid "Audios"
+msgstr "音频"
+
+#: ../archive.php:66
+msgid "Chats"
+msgstr "聊天"
+
+#: ../archive.php:68 ../sidebar.php:21
+msgid "Archives"
+msgstr "存档"
+
+#: ../comments.php:40 ../content.php:91
+#, php-format
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "%1$s 条评论"
+
+#: ../comments.php:49 ../comments.php:70
+msgid "Comment navigation"
+msgstr "评论导航"
+
+#: ../comments.php:51 ../comments.php:72
+msgid "&larr; Older Comments"
+msgstr "&larr; 较早的评论"
+
+#: ../comments.php:52 ../comments.php:73
+msgid "Newer Comments &rarr;"
+msgstr "较新的评论 &rarr;"
+
+#: ../comments.php:83
+msgid "Comments are closed."
+msgstr "评论被关闭"
+
+#: ../comments.php:102
+msgid "Readers who shared this"
+msgstr "分享这篇文章的读者"
+
+#: ../comments.php:104
+msgid "Thank you!"
+msgstr "谢谢！"
+
+#: ../content-none.php:13 ../no-results.php:14
+msgid "Nothing Found"
+msgstr "暂无数据."
+
+#: ../content-none.php:20 ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "赶紧写点儿东西给这儿塞满咯？<a href=\"%s\">戳我开始</a>。"
+
+#: ../content-none.php:24 ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "对不起，找不到您搜索的内容，请再试一次或更换关键词"
+
+#: ../content-none.php:30 ../no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "看来我们不能找到你要找的东西。请试试下面的链接或者搜索。"
+
+#: ../content-page.php:22 ../content-single.php:58
+#: ../page_one-column-template.php:39
+msgid "Next page &rarr;"
+msgstr "下一页 &rarr;"
+
+#: ../content-page.php:23 ../content-single.php:59
+#: ../page_one-column-template.php:40
+msgid "&larr; Previous page"
+msgstr "&larr; 前一页"
+
+#: ../content-page.php:29 ../content-single.php:65 ../content.php:53
+#: ../page_one-column-template.php:46
+msgid "Pages:"
+msgstr "页面:"
+
+#: ../content-page.php:47 ../content-single.php:85 ../content.php:95
+#: ../image.php:127 ../page_archive-template.php:72
+#: ../page_one-column-template.php:53
+msgid "Edit"
+msgstr "编辑"
+
+#: ../content.php:21 ../content.php:47 ../functions.php:1075
+#: ../functions.php:1090
+#, php-format
+msgid "Permalink to %s"
+msgstr "跳转到 %s"
+
+#: ../content.php:91 ../functions.php:408
+msgid "Comment"
+msgstr "评论"
+
+#: ../content.php:91
+msgid "% Comments"
+msgstr "% 条评论"
+
+#: ../functions.php:104
+msgid "Primary Menu"
+msgstr "主菜单"
+
+#: ../functions.php:105
+msgid "Single Posts Menu"
+msgstr "单个文章菜单"
+
+#: ../functions.php:106
+msgid "Social"
+msgstr "社交网络"
+
+#: ../functions.php:148
+msgid "Sidebar"
+msgstr "侧边栏"
+
+#: ../functions.php:159
+msgid "Archive Page"
+msgstr "存档页"
+
+#: ../functions.php:263
+#, php-format
+msgid "%1$s empowered by %2$s"
+msgstr "%1$s 由 %2$s 驱动"
+
+#: ../functions.php:302
+msgid "Anonymous"
+msgstr "匿名"
+
+#: ../functions.php:315
+msgid "Reply to"
+msgstr "回复"
+
+#: ../functions.php:349
+#, php-format
+msgid "Leave a Reply for %s"
+msgstr "回复给 %s"
+
+#: ../functions.php:350
+msgid "Cancel Reply"
+msgstr "取消回复"
+
+#: ../functions.php:351
+msgid "Submit Comment"
+msgstr "发表评论"
+
+#: ../functions.php:354
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "您必须<a href=\"%s\">登录</a>才可以发表评论。"
+
+#: ../functions.php:359
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"当前登录<a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"注销\">注销？</a>"
+
+#: ../functions.php:369
+msgid "Name"
+msgstr "名称"
+
+#: ../functions.php:374
+msgid "Email"
+msgstr "电子邮件"
+
+#: ../functions.php:379
+msgid "Website"
+msgstr "网站"
+
+#: ../functions.php:558
+msgid "Write a Comment"
+msgstr "发表评论"
+
+#: ../functions.php:843
+msgid "Use as post cover (full-width)"
+msgstr "用作温宿封面 （全宽）"
+
+#: ../functions.php:853
+msgid "Disable post cover (full-width)"
+msgstr "禁用文章封面 （全宽）"
+
+#: ../functions.php:1051
+msgid "in"
+msgstr "分类："
+
+#: ../functions.php:1060
+msgid "by"
+msgstr "作者："
+
+#: ../header.php:56
+msgid "Skip to content"
+msgstr "跳转到主要内容"
+
+#: ../image.php:23
+#, php-format
+msgid ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
+"%7$s</a>"
+msgstr ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"查看原图\">%3$s &times; %4$s</a> %5$s <a "
+"href=\"%6$s\" title=\"返回 %7$s\" rel=\"gallery\">%7$s</a>"
+
+#: ../image.php:106
+msgid "&larr; Previous image"
+msgstr "&larr; 上一张图片"
+
+#: ../image.php:107
+msgid "Next image &rarr;"
+msgstr "下一张图片 &rarr;"
+
+#: ../page_archive-template.php:45
+msgid "Yearly Archives"
+msgstr "年度归档"
+
+#: ../page_archive-template.php:47
+msgid "Select Year"
+msgstr "选择年份"
+
+#: ../page_archive-template.php:53
+msgid "Monthly Archives"
+msgstr "每月归档"
+
+#: ../page_archive-template.php:55
+msgid "Select Month"
+msgstr "选择月份"
+
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
+msgid "Search"
+msgstr "搜索"
+
+#: ../page_archive-template.php:65
+msgid "Explore by Tag"
+msgstr "按标签过滤"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "%s的搜索结果"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "搜索 &hellip;"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Meta"
+
+#: ../single.php:28
+msgid "Related Content by Tag"
+msgstr "标签："
+
+#: ../inc/customizer.php:19
+msgid "Layout Options"
+msgstr "布局选项"
+
+#: ../inc/customizer.php:26
+msgid "Excerpt Options"
+msgstr "摘要选项"
+
+#: ../inc/customizer.php:33
+msgid "General Options"
+msgstr "常规选项"
+
+#: ../inc/customizer.php:49
+msgid "Post Excerpts"
+msgstr "文章摘录"
+
+#: ../inc/customizer.php:54
+msgid "Disabled"
+msgstr "禁用"
+
+#: ../inc/customizer.php:55
+msgid "Enabled"
+msgstr "启用"
+
+#: ../inc/customizer.php:72
+msgid "Generate One-Sentence Excerpts"
+msgstr "自动生成摘要"
+
+#: ../inc/customizer.php:90
+msgid "Always Show Full Content for First Post"
+msgstr "第一篇文章始终显示全文"
+
+#: ../inc/customizer.php:108
+msgid "Show Post Word Count in Entry Meta"
+msgstr "在文章信息上显示文章字数"
+
+#: ../inc/customizer.php:126
+msgid "Show Post Date in Entry Meta"
+msgstr "在文章信息上显示发布日期"
+
+#: ../inc/customizer.php:144
+msgid "Show Widgets on Single Posts"
+msgstr "在文章页面显示小工具"
+
+#: ../inc/customizer.php:162
+msgid "Show Nav Menu on Single Posts"
+msgstr "在单篇文章上显示导航菜单"
+
+#: ../inc/customizer.php:180
+msgid "Show Updated Date on Single Posts"
+msgstr "在文章上显示更新的日期"
+
+#: ../inc/customizer.php:198
+msgid "Single-Column Layout"
+msgstr "单栏布局"
+
+#: ../inc/customizer.php:216
+msgid "Enable Multi-Author Mode"
+msgstr "启用多作者模式"
+
+#: ../inc/customizer.php:234
+msgid "Show Page Load Progress Bar"
+msgstr "显示页面加载进度栏"
+
+#: ../inc/customizer.php:252
+msgid "Auto-Set Featured Image as Post Cover"
+msgstr "自动设置特色图像为文章封面"
+
+#: ../inc/customizer.php:270
+msgid "Overlay Post Title on Post Cover"
+msgstr "在文章封面上显示标题"
+
+#: ../inc/customizer.php:288
+msgid "Comments Call to Action"
+msgstr "鼓励评论"
+
+#: ../inc/customizer.php:301
+msgid "Text Color"
+msgstr "文字颜色"
+
+#: ../inc/customizer.php:306
+msgid "Comment Form Background Color"
+msgstr "评论表单背景颜色"
+
+#: ../inc/customizer.php:311
+msgid "Link Color"
+msgstr "链接颜色"
+
+#: ../inc/customizer.php:316
+msgid "Title and Header Text Color"
+msgstr "标题和头部文字颜色"
+
+#: ../inc/customizer.php:321
+msgid "Primary Meta Text Color"
+msgstr "主要元数据文字颜色"
+
+#: ../inc/customizer.php:326
+msgid "Secondary Meta Text Color"
+msgstr "次要元数据文字颜色"
+
+#: ../inc/template-tags.php:41
+msgid "Post navigation"
+msgstr "文章导航"
+
+#: ../inc/template-tags.php:45
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/template-tags.php:46
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/template-tags.php:51
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 较早文章"
+
+#: ../inc/template-tags.php:55
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "较新文章<span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:85
+msgid " - Your comment is awaiting moderation."
+msgstr "- 您的评论正在等待审核。"
+
+#: ../inc/template-tags.php:97 ../inc/template-tags.php:140
+msgid "(Edit)"
+msgstr "(编辑)"
+
+#: ../inc/template-tags.php:165 ../inc/template-tags.php:196
+#: ../inc/template-tags.php:208
+#, php-format
+msgid "View all posts by %s"
+msgstr "查看 %s的所有文章"
+
+#: ../inc/template-tags.php:182
+msgid ", "
+msgstr ", "
+
+#: ../inc/template-tags.php:271
+msgid "Continue Reading &rarr;"
+msgstr "继续阅读 &rarr;"
+
+#: ../inc/template-tags.php:288
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "继续阅读： %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:358
+#, php-format
+msgid "Page %s"
+msgstr "%s 页"
+
+#: ../inc/template-tags.php:378
+#, php-format
+msgid "View all posts in %s"
+msgstr "查看 %s 中的所有文章"
+
+#: ../inc/template-tags.php:434 ../inc/template-tags.php:475
+msgid "Published"
+msgstr "发表于"
+
+#: ../inc/template-tags.php:442 ../inc/template-tags.php:483
+msgid "Updated"
+msgstr "更新于"
+
+#: ../inc/template-tags.php:510
+#, php-format
+msgid "%1$s Words"
+msgstr "%1$s 个字"
+
+#: ../inc/template-tags.php:606 ../inc/template-tags.php:636
+#: ../inc/template-tags.php:665
+#, php-format
+msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
+msgstr "（这是页<strong>%1$s</strong>的<strong>%2$s</strong>)"
+
+#: ../inc/template-tags.php:609
+#, php-format
+msgid "Found one search result for <strong>%2$s</strong>."
+msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
+msgstr[0] "找到 %1$s 个关于<strong>%2$s</strong>搜索结果"
+
+#: ../inc/template-tags.php:640
+#, php-format
+msgid "There is one post filed in <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
+msgstr[0] "<strong>%2$s</strong> 分类中有 %1$s 篇文章"
+
+#: ../inc/template-tags.php:642
+#, php-format
+msgid "There is one post tagged <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
+msgstr[0] "<strong>%2$s</strong> 标签中有 %1$s 篇文章"
+
+#: ../inc/template-tags.php:673
+#, php-format
+msgid "There was one post published in %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "%2$s %3$s 发表了 %1$s  篇文章"
+
+#: ../inc/template-tags.php:675
+#, php-format
+msgid "There is one post published in %2$s."
+msgid_plural "There are %1$s posts published in %2$s"
+msgstr[0] "%2$s %3$s 发表了1篇文章"
+
+#: ../inc/template-tags.php:678
+#, php-format
+msgid "There was one post published on %2$s."
+msgid_plural "There were %1$s posts published on %2$s"
+msgstr[0] "%2$s %3$s 发表了1篇文章"
+
+#: ../inc/template-tags.php:685
+#, php-format
+msgid "There was one post published in the month of %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "%2$s %3$s 发表了 %1$s  篇文章"
+
+#: ../inc/template-tags.php:690
+#, php-format
+msgid "There was one post published in %2$s %3$s."
+msgid_plural "There were %1$s posts published in %2$s %3$s"
+msgstr[0] "%2$s %3$s 发表了 %1$s  篇文章"
