@@ -588,7 +588,6 @@ if ( ! function_exists( 'independent_publisher_full_width_featured_image' ) ):
 									</header>
 								</div>
 							</div>
-						</div>
 					<?php
 					else:
 						the_post_thumbnail( apply_filters( 'independent_publisher_full_width_featured_image_size', 'independent_publisher_post_thumbnail' ), array( 'class' => 'full-width-featured-image' ) );
