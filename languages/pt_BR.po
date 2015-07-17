@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../404.php:16
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Esa página não pode ser encontrada.\n"
+msgstr "Oops! Essa página não pode ser encontrada.\n"
 
 #: ../404.php:21
 msgid ""
