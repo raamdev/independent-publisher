@@ -1052,7 +1052,7 @@ function independent_publisher_post_classes() {
  */
 function independent_publisher_replytocom() {
 	if ( isset( $_GET['replytocom'] ) ) {
-		$replytocom_comment_id = $_GET['replytocom'];
+		$replytocom_comment_id = intval($_GET['replytocom']);
 		$replytocom_post_id    = get_the_ID();
 		?>
 		<script type="text/javascript">
