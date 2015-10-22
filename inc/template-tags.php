@@ -748,3 +748,16 @@ if ( ! function_exists( 'independent_publisher_footer_credits' ) ):
 		return independent_publisher_get_footer_credits();
 	}
 endif;
+
+if ( ! function_exists( '_wp_render_title_tag' ) ) :
+	/*
+	 * Backwards compatibility for <= WP v4.0.
+	 * See https://make.wordpress.org/core/2015/10/20/document-title-in-4-4/
+	 */
+	function independent_publisher_render_title() {
+		?>
+		<title><?php wp_title( '-', true, 'right' ); ?></title>
+	<?php
+	}
+	add_action( 'wp_head', 'independent_publisher_render_title' );
+endif;
