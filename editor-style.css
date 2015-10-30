@@ -338,11 +338,10 @@ img.aligncenter {
 }
 
 .wp-caption {
-	background: #eee;
-	border: none;
-	margin-bottom: 1.625em;
+	background: transparent;
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
 	max-width: 96%;
-	padding: 9px;
 }
 
 .wp-caption img {
@@ -354,13 +353,11 @@ img.aligncenter {
 
 .wp-caption .wp-caption-text,
 .wp-caption-dd {
-	color: #666;
 	font-family: Georgia, serif !important;
-	font-size: 12px;
-	margin: 0 0 0.6em 0 !important;
-	padding: 0 0 5px 40px;
+	font-size: 80%;
+	margin: 0.8075em 0;
 	position: relative;
-	text-align: left;
+	text-align: center;
 }
 
 .wp-caption .wp-caption-text:before {

@@ -5,7 +5,7 @@ jQuery(function($) {
     var post_title = $('.post-cover-title'),
         post_title_wrapper = $('.post-cover-title-wrapper');
 
-    if($('body').hasClass('post-has-post-cover-title')) {
+    if($('body').hasClass('post-cover-overlay-post-title')) {
         $(window).on('scroll', function() {
             var st = $(this).scrollTop(),
                 post_title_wrapper_height = post_title_wrapper.height(),

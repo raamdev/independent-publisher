@@ -67,3 +67,10 @@ if ( is_plugin_active( 'disqus-comment-system/disqus.php' ) ) :
 		}
 	}
 endif;
+
+/*
+ * When JetPack Comments is enabled, don't load our comment form enhancements
+ */
+if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'comments' ) ) {
+	function independent_publisher_enhanced_comment_form() { return; }
+}

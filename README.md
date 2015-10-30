@@ -23,10 +23,14 @@ Independent Publisher is a WordPress Theme. This README contains documentation f
     * [How do I make the JetPack Sharing Buttons look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-jetpack-sharing-buttons-look-better)
     * [How do I make the Subscribe to Comments Reloaded Advanced Options look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-subscribe-to-comments-reloaded-advanced-options-look-better)
     * [How do I make MailChimp Signup Forms look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-mailchimp-signup-forms-look-better)
-    * [How do I add an Archive Page?](https://github.com/raamdev/independent-publisher/#how-do-i-add-an-archive-page)
-    * [How do I show a menu on the Single Post pages?](https://github.com/raamdev/independent-publisher/#how-do-i-show-a-menu-on-the-single-post-pages)
-    * [How do I change the footer credits?](https://github.com/raamdev/independent-publisher/#how-do-i-change-the-footer-credits)
-    * [How do I add my own Social Icons to the Social Menu?](https://github.com/raamdev/independent-publisher/#how-do-i-add-my-own-social-icons-to-the-social-menu)
+    * [How do I add an Archive Page?](https://github.com/raamdev/independent-publisher#how-do-i-add-an-archive-page)
+    * [How do I show a menu on the Single Post pages?](https://github.com/raamdev/independent-publisher#how-do-i-show-a-menu-on-the-single-post-pages)
+    * [How do I change the footer credits?](https://github.com/raamdev/independent-publisher#how-do-i-change-the-footer-credits)
+    * [How do I add my own Social Icons to the Social Menu?](https://github.com/raamdev/independent-publisher#how-do-i-add-my-own-social-icons-to-the-social-menu)
+    * [How can I enable "Single-Column Layout" on only the home page?](https://github.com/raamdev/independent-publisher#how-can-i-enable-single-column-layout-on-only-the-home-page)
+    * [Why is the Navigation Menu and/or Widgets not Appearing on Single Post Pages?](https://github.com/raamdev/independent-publisher#why-is-the-navigation-menu-andor-widgets-not-appearing-on-single-post-pages)
+    * [How can I obfuscate my email address in the Social Menu?](https://github.com/raamdev/independent-publisher/#how-can-i-obfuscate-my-email-address-in-the-social-menu)
+    * [How can I use a Full Size Image for the Post Cover?](https://github.com/raamdev/independent-publisher/#how-can-i-use-a-full-size-image-for-the-post-cover)
 * [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
 * [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
 * [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
@@ -260,6 +264,90 @@ The [Social Menu](https://github.com/raamdev/independent-publisher#how-do-i-add-
 ```
 
 You'll simply need to replace `example.com` and `http://example.com/logo.png` in the code with the domain for the new social media site and the URL to the logo you want to appear on the social menu.
+
+### How can I enable "Single-Column Layout" on only the home page?
+
+Add the following code to child theme's `functions.php` file to enable the Single-Column layout for only the home page:
+
+```php
+/**
+ * Add single-column-layout to body class when on home page
+ */
+function __custom_independent_publisher_single_column_layout_body_class( $classes ) {
+	if ( is_home() || is_front_page() ) {
+		$classes[] = 'single-column-layout';
+	}
+
+	return $classes;
+}
+
+add_filter( 'body_class', '__custom_independent_publisher_single_column_layout_body_class' );
+```
+
+### Why is the Navigation Menu and/or Widgets not appearing on Single Post pages?
+
+By default, the main navigation menu and all widges are hidden from the Single Post pages to keep things clean and simple, however, if you prefer to show these there, you can enable _Show Nav Menu on Single Posts_ and _Show Widgets on Single Posts_ in **Dashboard → Apperance → Customize → General Options**:
+
+![2014-09-02_16-00-24](https://cloud.githubusercontent.com/assets/53005/4124836/faeaf062-32db-11e4-8e5b-b4f04be33ffb.png)
+
+### How can I obfuscate my email address in the Social Menu?
+
+The Social Menu uses the WordPress menu system and most email obfuscation plugins don't filter those for email addresses.
+
+I've written a special filter that will tell the [Email Address Encoder plugin](https://wordpress.org/plugins/email-address-encoder/) to encode any navigation menu items in the Social menu that contain `mailto:<email-address>` or `<email-address>`. 
+
+Add the following to a Child Theme `functions.php` file:
+
+```php
+add_filter( 'wp_nav_menu_objects', '__social_menu_eae_encode_emails', 10, 2 );
+/**
+ * Filters the Social Menu navigation items looking for email addresses and
+ * filters those email addresses through the Email Address Encoder plugin.
+ *
+ * @since 1.0.0
+ *
+ * @param object $objects An array of nav menu objects
+ * @param object $args    Nav menu object args
+ *
+ * @return object $objects Amended array of nav menu objects with items containing email addresses filtered through Email Address Encoder plugin
+ */
+function __social_menu_eae_encode_emails( $objects, $args ) {
+
+	// Only apply the social navigation menu
+	if ( isset( $args->theme_location ) ) {
+		if ( 'social' !== $args->theme_location || ! function_exists( 'eae_encode_emails' ) ) {
+			return $objects;
+		}
+	}
+
+	// Find any menu items with an email address and run them through the Email Address Encoder plugin
+	foreach ( $objects as $object ) {
+		if ( is_email( $object->url ) ) {
+			$object->url = eae_encode_emails( $object->url );
+		}
+		if ( stristr( $object->url, 'mailto:' ) ) {
+			$email = substr( $object->url, 7 );
+			if ( is_email( $email ) ) {
+				$object->url = 'mailto:' . eae_encode_emails( $email );
+			}
+		}
+	}
+
+	// Return the modified objects
+	return $objects;
+```
+
+### How can I use a Full Size Image for the Post Cover?
+
+By default, the theme will use a maximum of `700x700` pixels for the Post Cover image. You can override this and use the full image size by adding the following to your Child Theme's `functions.php` file:
+
+```php
+function __custom_independent_publisher_full_width_featured_image_size() {
+    return "full";
+}
+
+add_filter( 'independent_publisher_full_width_featured_image_size', '__custom_independent_publisher_full_width_featured_image_size' );
+```
 
 ## Color Schemes
 

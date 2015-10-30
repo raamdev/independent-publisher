@@ -2,6 +2,28 @@ Independent Publisher is a beautiful reader-focused WordPress theme, for you.
 
 Version history:
 
+1.6
+
+* **New Feature**: Overlay Post Title on Post Cover. You can now choose to have the Post Title overlayed on top of the Post Cover, when setting a featured image to be full-width (Post Cover). See [#47](https://github.com/raamdev/independent-publisher/issues/47). (Thanks to @descubraomundo)
+* **Enhancement**: Social Menu now includes support for `mailto:` links. When you add a menu item with a `mailto:` link, an envelope icon will be displayed on the Social Menu. See [#105](https://github.com/raamdev/independent-publisher/pull/105). (Thanks to @bitzl)
+* **Enhancement**: When a Post has multiple categories, you can now define a single category to be shown in the post meta using a custom field called `independent_publisher_primary_category` and then the name of the category you want to show. See [#122](https://github.com/raamdev/independent-publisher/pull/122). (Thanks to @tlongren)
+* **Enhancement**: It is now possible to override the default maximum resolution of 700px for featured images. This is useful if you use Full-Width Featured Images (Post Covers) and want to use higher resolution images. See [#129](https://github.com/raamdev/independent-publisher/issues/129)
+* **Enhancement**: Add support for Audio post format. See [#140](https://github.com/raamdev/independent-publisher/issues/140).
+* **Enhancement**: Added support for JetPack Responsive Videos. See [#124](https://github.com/raamdev/independent-publisher/issues/124).
+* **Enhancement**: Images with captions inside the Visual Editor now appear styled like they do when published. See [#103](https://github.com/raamdev/independent-publisher/issues/103). (Reported by @saddington)
+* **Style Change**: Removed long-dash prepend from `<cite>` elements. See [#115](https://github.com/raamdev/independent-publisher/issues/115).
+* **Bug Fix**: When using the Visual Editor, quotes now display newlines properly. See [#108](https://github.com/raamdev/independent-publisher/issues/108). (Reported by @saddington)
+* **Bug FIx**: Fixed a missing closing div that was causing validation errors. See [#113](https://github.com/raamdev/independent-publisher/pull/113). (Thanks to @peterk)
+* **Bug Fix**: The JetPack Infinite Scroll loading wheel no longer displays at the top of the page, but rather at the bottom. See [#104](https://github.com/raamdev/independent-publisher/issues/104). (Reported by @manishsuwal)
+* **Bug FIx**: When using the JetPack Infinite Scroll module, the archive pages no longer display the irrelevant current page number content. See [#110](https://github.com/raamdev/independent-publisher/issues/110). (Reported by @manishsuwal)
+* **Bug Fix**: When a visitor submits a comment on a page without comments, and their comment requires moderation, the visitor will now see their unapproved comment on the page. See [#119](https://github.com/raamdev/independent-publisher/issues/119). (Reported by @manishsuwal)
+* **Bug Fix**: Fixed an issue footnotes inside Aside and Quote format posts. See [#125](https://github.com/raamdev/independent-publisher/issues/125). (Reported by @manishsuwal)
+* **Bug Fix**: Main navigation menu and widget menu anchor elements are no longer set as block elements. This fixes an issue with browser plugins that utilize anchor elements for on-screen hints. See [#127](https://github.com/raamdev/independent-publisher/issues/127).
+* **Translations**: Added Czech language translation. (Thanks to @Tajdik)
+* **Translations**: Added Spanish language translation. (Thanks to @mkiramu)
+* **Translations**: Added German language translation. (Thanks to @JHillert)
+* **Translations**: Updated French language translation. (Thanks to @EddyLB)
+
 1.5.1
 
 * Bug Fix: Fixed a nasty bug with Galleries where all galleries were one-column, instead of following the default 3-column layout. This also affected 4-column, 5-column, etc., layouts.

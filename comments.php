@@ -30,7 +30,7 @@ if ( post_password_required() ) {
 
 	<div id="comments" class="comments-area">
 		<?php // You can start editing here -- including this comment! ?>
-		<?php if ( have_comments() && get_comments_number() > 0 ) : ?>
+		<?php if ( have_comments() ) : ?>
 
 			<?php if ( get_comments_number() > independent_publisher_min_comments_comment_title() ) : ?>
 				<h2 class="comments-title">
