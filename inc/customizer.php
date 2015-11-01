@@ -482,7 +482,8 @@ class IndependentPublisher_Customize {
 	 */
 	public static function generate_css( $selector, $style, $mod_name, $prefix = '', $postfix = '', $echo = true, $format = '%1$s { %2$s:%3$s; }' ) {
 		$return = '';
-		$mod    = get_theme_mod( $mod_name );
+		$default_mod_value = ($mod_name === 'text_color' ? '#000000' : ''); // Fixes bug where post excerpts use customized link color when text color has not been set.
+		$mod    = get_theme_mod( $mod_name, $default_mod_value );
 		if ( ! empty( $mod ) ) {
 			$return = sprintf(
 				$format . "\n",
