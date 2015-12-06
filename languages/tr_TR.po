@@ -1,0 +1,549 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Independent Publisher\n"
+"POT-Creation-Date: 2014-08-21 10:36-0500\n"
+"PO-Revision-Date: 2015-12-06 10:52+0200\n"
+"Last-Translator: Raam Dev <raam@raamdev.com>\n"
+"Language-Team: yazilimportal.com <pmoksuz@gmail.com>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
+"esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
+"translate_nooped_plural\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Üzgünüm! Sayfa bulunamadı."
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Burada her hangi birşey yok gibi. Belki aşağıdaki linkleri yada arama "
+"kutusunu deneyebilirsin."
+
+#: ../404.php:29 ../page_archive-template.php:32
+msgid "Most Used Categories"
+msgstr "Sık Kullanılan Kategoriler"
+
+#: ../404.php:45
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Aylık arşivlere bakmayı deneyin. %1$s"
+
+#: ../archive.php:50
+msgid "Asides"
+msgstr "Notlar"
+
+#: ../archive.php:52
+msgid "Galleries"
+msgstr "Galeriler"
+
+#: ../archive.php:54
+msgid "Images"
+msgstr "Resimler"
+
+#: ../archive.php:56
+msgid "Videos"
+msgstr "Videolar"
+
+#: ../archive.php:58
+msgid "Quotes"
+msgstr "Alıntılar"
+
+#: ../archive.php:60
+msgid "Links"
+msgstr "Bağlantılar"
+
+#: ../archive.php:62
+msgid "Statuses"
+msgstr "Durumlar"
+
+#: ../archive.php:64
+msgid "Audios"
+msgstr "Sesler"
+
+#: ../archive.php:66
+msgid "Chats"
+msgstr "Konuşmalar"
+
+#: ../archive.php:68 ../sidebar.php:21
+msgid "Archives"
+msgstr "Arşivler"
+
+#: ../comments.php:40 ../content.php:91
+#, php-format
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "%1$s Yorum\t"
+
+#: ../comments.php:49 ../comments.php:70
+msgid "Comment navigation"
+msgstr "Yorum sayfaları"
+
+#: ../comments.php:51 ../comments.php:72
+msgid "&larr; Older Comments"
+msgstr "&larr; Eski Yorumlar"
+
+#: ../comments.php:52 ../comments.php:73
+msgid "Newer Comments &rarr;"
+msgstr "Yeni Yorumlar &rarr;"
+
+#: ../comments.php:83
+msgid "Comments are closed."
+msgstr "Yorumlar kapatıldı."
+
+#: ../comments.php:102
+msgid "Readers who shared this"
+msgstr "Bunu paylaşan okuyucular"
+
+#: ../comments.php:104
+msgid "Thank you!"
+msgstr "Teşekkürler!"
+
+#: ../content-none.php:13 ../no-results.php:14
+msgid "Nothing Found"
+msgstr "Hiçbir şey bulunamadı"
+
+#: ../content-none.php:20 ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"İlk yazını paylaşmaya hazır mısın ? <a href=\"%1$s\">Get started here</a>."
+
+#: ../content-none.php:24 ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Üzünüm, aradığın kelime ile eşleşen bir şey bulunamadı. Farklı anahtar "
+"kelimeler deneyebilirsin."
+
+#: ../content-none.php:30 ../no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Aradığın şeyi bulamamışsın gibi görünüyor. Belki arama yapmak isteyebilirsin."
+
+#: ../content-page.php:22 ../content-single.php:58
+#: ../page_one-column-template.php:39
+msgid "Next page &rarr;"
+msgstr "Sonraki sayfa &rarr;"
+
+#: ../content-page.php:23 ../content-single.php:59
+#: ../page_one-column-template.php:40
+msgid "&larr; Previous page"
+msgstr "&larr; Önceki sayfa"
+
+#: ../content-page.php:29 ../content-single.php:65 ../content.php:53
+#: ../page_one-column-template.php:46
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: ../content-page.php:47 ../content-single.php:85 ../content.php:95
+#: ../image.php:127 ../page_archive-template.php:72
+#: ../page_one-column-template.php:53
+msgid "Edit"
+msgstr "Düzenle"
+
+#: ../content.php:21 ../content.php:47 ../functions.php:1075
+#: ../functions.php:1090
+#, php-format
+msgid "Permalink to %s"
+msgstr "Bağlantı %s"
+
+#: ../content.php:91 ../functions.php:408
+msgid "Comment"
+msgstr "Yorum"
+
+#: ../content.php:91
+msgid "% Comments"
+msgstr "% Yorumlar"
+
+#: ../functions.php:104
+msgid "Primary Menu"
+msgstr "Birincil Menü"
+
+#: ../functions.php:105
+msgid "Single Posts Menu"
+msgstr "Tekli Yazı Menüsü"
+
+#: ../functions.php:106
+msgid "Social"
+msgstr "Sosyal"
+
+#: ../functions.php:148
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: ../functions.php:159
+msgid "Archive Page"
+msgstr "Arşiv Sayfası"
+
+#: ../functions.php:263
+#, php-format
+msgid "%1$s empowered by %2$s"
+msgstr "%1$s empowered by %2$s"
+
+#: ../functions.php:302
+msgid "Anonymous"
+msgstr "Anonim"
+
+#: ../functions.php:315
+msgid "Reply to"
+msgstr "Cevapla"
+
+#: ../functions.php:349
+#, php-format
+msgid "Leave a Reply for %s"
+msgstr "%s için cevap yaz"
+
+#: ../functions.php:350
+msgid "Cancel Reply"
+msgstr "Vazgeç"
+
+#: ../functions.php:351
+msgid "Submit Comment"
+msgstr "Yorum Gönder"
+
+#: ../functions.php:354
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Yorum yazmak için <a href=\"%s\">giriş </a> yapmanız gerekli."
+
+#: ../functions.php:359
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+" <a href=\"%1$s\">%2$s</a> olarak giriş yapıldı. <a href=\"%3$s\" title="
+"\"Oturumu kapat\">Çıkış</a>"
+
+#: ../functions.php:369
+msgid "Name"
+msgstr "İsim"
+
+#: ../functions.php:374
+msgid "Email"
+msgstr "E-Posta"
+
+#: ../functions.php:379
+msgid "Website"
+msgstr "Website"
+
+#: ../functions.php:558
+msgid "Write a Comment"
+msgstr "Yorumla"
+
+#: ../functions.php:843
+msgid "Use as post cover (full-width)"
+msgstr "Yazı görseli olarak kullan (tam boy)"
+
+#: ../functions.php:853
+msgid "Disable post cover (full-width)"
+msgstr "Yazı görselini iptal et (tam-boy)"
+
+#: ../functions.php:1051
+msgid "in"
+msgstr "--"
+
+#: ../functions.php:1060
+msgid "by"
+msgstr "ile"
+
+#: ../header.php:56
+msgid "Skip to content"
+msgstr "İçeriğe atla"
+
+#: ../image.php:23
+#, php-format
+msgid ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
+"%7$s</a>"
+msgstr ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Tam boy resim bağlantısı\">%3$s &kez; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\" %7$s 'e dön\" rel=\"galeri\">%7$s</a>"
+
+#: ../image.php:106
+msgid "&larr; Previous image"
+msgstr "&larr; Önceki resim"
+
+#: ../image.php:107
+msgid "Next image &rarr;"
+msgstr "Sonraki resim &rarr;"
+
+#: ../page_archive-template.php:45
+msgid "Yearly Archives"
+msgstr "Yıllık Arşivler"
+
+#: ../page_archive-template.php:47
+msgid "Select Year"
+msgstr "Yıl Seçin"
+
+#: ../page_archive-template.php:53
+msgid "Monthly Archives"
+msgstr "Aylık Arşivler"
+
+#: ../page_archive-template.php:55
+msgid "Select Month"
+msgstr "Ay Seçin"
+
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
+msgid "Search"
+msgstr "Arama"
+
+#: ../page_archive-template.php:65
+msgid "Explore by Tag"
+msgstr "Etiketler ile bulun"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "%s için arama sonuçları :"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Arama &hellip;"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Meta"
+
+#: ../single.php:28
+msgid "Related Content by Tag"
+msgstr "İçerik ile ilgili etiketler"
+
+#: ../inc/customizer.php:19
+msgid "Layout Options"
+msgstr "Sayfa düzeni seçenekleri"
+
+#: ../inc/customizer.php:26
+msgid "Excerpt Options"
+msgstr "Özet yazı seçenekleri"
+
+#: ../inc/customizer.php:33
+msgid "General Options"
+msgstr "Genel Ayarlar"
+
+#: ../inc/customizer.php:49
+msgid "Post Excerpts"
+msgstr "Yazı Özetleri"
+
+#: ../inc/customizer.php:54
+msgid "Disabled"
+msgstr "Devredışı"
+
+#: ../inc/customizer.php:55
+msgid "Enabled"
+msgstr "Aktif"
+
+#: ../inc/customizer.php:72
+msgid "Generate One-Sentence Excerpts"
+msgstr "Bir cümlelik özet oluştur."
+
+#: ../inc/customizer.php:90
+msgid "Always Show Full Content for First Post"
+msgstr "İlk yazı için her zaman tüm içeriği göster"
+
+#: ../inc/customizer.php:108
+msgid "Show Post Word Count in Entry Meta"
+msgstr "Kelime sayacını göneri bilgilerinde göster"
+
+#: ../inc/customizer.php:126
+msgid "Show Post Date in Entry Meta"
+msgstr "Tarihi gönderi bilgilerinde göster"
+
+#: ../inc/customizer.php:144
+msgid "Show Widgets on Single Posts"
+msgstr "Wigdetları tekli yazı sayfasında göster"
+
+#: ../inc/customizer.php:162
+msgid "Show Nav Menu on Single Posts"
+msgstr "Nav Menü tekli yazı sayfasında göster"
+
+#: ../inc/customizer.php:180
+msgid "Show Updated Date on Single Posts"
+msgstr "Güncelleme tarihini yazılarda göster"
+
+#: ../inc/customizer.php:198
+msgid "Single-Column Layout"
+msgstr "Tek kolon tarzı gösterim"
+
+#: ../inc/customizer.php:216
+msgid "Enable Multi-Author Mode"
+msgstr "Çoklu yazar modunu aktif et"
+
+#: ../inc/customizer.php:234
+msgid "Show Page Load Progress Bar"
+msgstr "Yükleme çubuğunu göster"
+
+#: ../inc/customizer.php:252
+msgid "Auto-Set Featured Image as Post Cover"
+msgstr "Öne çıkan görseli otomatik olarak gönderi kapağına ekle"
+
+#: ../inc/customizer.php:270
+msgid "Overlay Post Title on Post Cover"
+msgstr "Gönderi Kapak resmine gelince yazı başlığını göster"
+
+#: ../inc/customizer.php:288
+msgid "Comments Call to Action"
+msgstr "Yorumlar için kullanılacak ifade"
+
+#: ../inc/customizer.php:301
+msgid "Text Color"
+msgstr "Yazı Rengi"
+
+#: ../inc/customizer.php:306
+msgid "Comment Form Background Color"
+msgstr "Yorum arkaplan rengi"
+
+#: ../inc/customizer.php:311
+msgid "Link Color"
+msgstr "Bağlantı Renkleri"
+
+#: ../inc/customizer.php:316
+msgid "Title and Header Text Color"
+msgstr "Başlık Yazı Rengi"
+
+#: ../inc/customizer.php:321
+msgid "Primary Meta Text Color"
+msgstr "Birincil Meta Rengi"
+
+#: ../inc/customizer.php:326
+msgid "Secondary Meta Text Color"
+msgstr "İkincil Meta Rengi"
+
+#: ../inc/template-tags.php:41
+msgid "Post navigation"
+msgstr "Gönderi gezgini"
+
+#: ../inc/template-tags.php:45
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/template-tags.php:46
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/template-tags.php:51
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Daha eski"
+
+#: ../inc/template-tags.php:55
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Daha yeni <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:85
+msgid " - Your comment is awaiting moderation."
+msgstr "- Yorumun moderatör onayını bekliyor."
+
+#: ../inc/template-tags.php:97 ../inc/template-tags.php:140
+msgid "(Edit)"
+msgstr "(Düzenle)"
+
+#: ../inc/template-tags.php:165 ../inc/template-tags.php:196
+#: ../inc/template-tags.php:208
+#, php-format
+msgid "View all posts by %s"
+msgstr "Tüm gönerileri %s ile göster"
+
+#: ../inc/template-tags.php:182
+msgid ", "
+msgstr ","
+
+#: ../inc/template-tags.php:271
+msgid "Continue Reading &rarr;"
+msgstr "Devamını Oku &rarr;"
+
+#: ../inc/template-tags.php:288
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Devamını Oku <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:358
+#, php-format
+msgid "Page %s"
+msgstr "Sayfa %s"
+
+#: ../inc/template-tags.php:378
+#, php-format
+msgid "View all posts in %s"
+msgstr "%s içindeki tüm gönderiler"
+
+#: ../inc/template-tags.php:434 ../inc/template-tags.php:475
+msgid "Published"
+msgstr "Yayınlandı"
+
+#: ../inc/template-tags.php:442 ../inc/template-tags.php:483
+msgid "Updated"
+msgstr "Güncellendi"
+
+#: ../inc/template-tags.php:510
+#, php-format
+msgid "%1$s Words"
+msgstr "%1$s Kelime"
+
+#: ../inc/template-tags.php:606 ../inc/template-tags.php:636
+#: ../inc/template-tags.php:665
+#, php-format
+msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
+msgstr " (Aktif sayfa <strong>%1$s</strong> toplam <strong>%2$s</strong>)"
+
+#: ../inc/template-tags.php:609
+#, php-format
+msgid "Found one search result for <strong>%2$s</strong>."
+msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
+msgstr[0] "%1$s içerik bulundu : <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:640
+#, php-format
+msgid "There is one post filed in <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
+msgstr[0] "%1$s gönderi işaretli <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:642
+#, php-format
+msgid "There is one post tagged <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
+msgstr[0] "%1$s gönderi etiketli <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:673
+#, php-format
+msgid "There was one post published in %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "%2$s içinde %1$s gönderi yayınlandı"
+
+#: ../inc/template-tags.php:675
+#, php-format
+msgid "There is one post published in %2$s."
+msgid_plural "There are %1$s posts published in %2$s"
+msgstr[0] "%2$s içinde %1$s gönderi yayınlandı"
+
+#: ../inc/template-tags.php:678
+#, php-format
+msgid "There was one post published on %2$s."
+msgid_plural "There were %1$s posts published on %2$s"
+msgstr[0] " %2$s 'de %1$s gönderi yayında"
+
+#: ../inc/template-tags.php:685
+#, php-format
+msgid "There was one post published in the month of %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "%2$s 'da  %1$s gönderi yayınlandı"
+
+#: ../inc/template-tags.php:690
+#, php-format
+msgid "There was one post published in %2$s %3$s."
+msgid_plural "There were %1$s posts published in %2$s %3$s"
+msgstr[0] " %2$s %3$s da %1$s gönderi yayınlandı"
