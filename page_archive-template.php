@@ -29,7 +29,7 @@ get_header(); ?>
 							<?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 15 ) ); ?>
 
 							<div class="widget">
-								<h2 class="widget-title"><?php _e( 'Most Used Categories', 'independent-publisher' ); ?></h2>
+								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'independent-publisher' ); ?></h2>
 								<ul>
 									<?php wp_list_categories( array( 'orderby'    => 'count',
 																	 'order'      => 'DESC',
@@ -42,9 +42,9 @@ get_header(); ?>
 							</div>
 
 							<div class="widget">
-								<h2 class="widget-title"><?php echo __( 'Yearly Archives', 'independent-publisher' ); ?></h2>
+								<h2 class="widget-title"><?php esc_html_e( 'Yearly Archives', 'independent-publisher' ); ?></h2>
 								<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-									<option value=""><?php echo esc_attr( __( 'Select Year', 'independent-publisher' ) ); ?></option>
+									<option value=""><?php esc_html_e( 'Select Year', 'independent-publisher' ); ?></option>
 									<?php wp_get_archives( array( 'type' => 'yearly', 'format' => 'option' ) ); ?>
 								</select>
 							</div>
@@ -52,13 +52,13 @@ get_header(); ?>
 							<div class="widget">
 								<h2 class="widget-title"><?php echo __( 'Monthly Archives', 'independent-publisher' ); ?></h2>
 								<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-									<option value=""><?php echo esc_attr( __( 'Select Month', 'independent-publisher' ) ); ?></option>
+									<option value=""><?php echo esc_html_e( 'Select Month', 'independent-publisher' ); ?></option>
 									<?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option' ) ); ?>
 								</select>
 							</div>
 
 							<div class="widget">
-								<h2 class="widget-title"><?php _e( 'Search', 'independent-publisher' ); ?></h2>
+								<h2 class="widget-title"><?php esc_html_e( 'Search', 'independent-publisher' ); ?></h2>
 								<?php get_search_form(); ?>
 							</div>
 
