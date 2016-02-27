@@ -1,0 +1,557 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Independent Publisher\n"
+"POT-Creation-Date: 2014-08-21 10:36-0500\n"
+"PO-Revision-Date: 2015-11-16 16:14+0100\n"
+"Last-Translator: Nicola Losito “kOoLiNuS” <nicola@koolinus.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
+"esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
+"translate_nooped_plural\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it_IT\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ops! Questa pagina non può essere trovata."
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Sembra che non sia  stato trovato nulla in questa posizione. Forse e il caso "
+"di provare uno dei link sottostanti o una ricerca?"
+
+#: ../404.php:29 ../page_archive-template.php:32
+msgid "Most Used Categories"
+msgstr "Categorie Più Utilizzate"
+
+#: ../404.php:45
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Prova a guardare negli archivi mensili. %1$s"
+
+#: ../archive.php:50
+msgid "Asides"
+msgstr "Digressioni"
+
+#: ../archive.php:52
+msgid "Galleries"
+msgstr "Gallerie"
+
+#: ../archive.php:54
+msgid "Images"
+msgstr "Immagini"
+
+#: ../archive.php:56
+msgid "Videos"
+msgstr "Video"
+
+#: ../archive.php:58
+msgid "Quotes"
+msgstr "Citazioni"
+
+#: ../archive.php:60
+msgid "Links"
+msgstr "Link"
+
+#: ../archive.php:62
+msgid "Statuses"
+msgstr "Status"
+
+#: ../archive.php:64
+msgid "Audios"
+msgstr "Audio"
+
+#: ../archive.php:66
+msgid "Chats"
+msgstr "Chat"
+
+#: ../archive.php:68 ../sidebar.php:21
+msgid "Archives"
+msgstr "Archivi"
+
+#: ../comments.php:40 ../content.php:91
+#, php-format
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "1 Commento"
+msgstr[1] "%1$s Commenti"
+
+#: ../comments.php:49 ../comments.php:70
+msgid "Comment navigation"
+msgstr "Navigazione tra i commenti"
+
+#: ../comments.php:51 ../comments.php:72
+msgid "&larr; Older Comments"
+msgstr "&larr; Commenti Precedenti"
+
+#: ../comments.php:52 ../comments.php:73
+msgid "Newer Comments &rarr;"
+msgstr "Commenti Recenti &rarr;"
+
+#: ../comments.php:83
+msgid "Comments are closed."
+msgstr "I commenti sono chiusi."
+
+#: ../comments.php:102
+msgid "Readers who shared this"
+msgstr ""
+
+#: ../comments.php:104
+msgid "Thank you!"
+msgstr "Grazie"
+
+#: ../content-none.php:13 ../no-results.php:14
+msgid "Nothing Found"
+msgstr "Nessun risultato"
+
+#: ../content-none.php:20 ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Pronto a pubblicare il tuo primo articolo? <a href=\"%1$s\">Comincia qui</a>."
+
+#: ../content-none.php:24 ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Spiacente, nulla ha soddisfatto i tuoi termini di ricerca. Per favore prova "
+"ancora con termini differenti."
+
+#: ../content-none.php:30 ../no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Sembra non si possa trovare quello che desideravi. Probabilmente una ricerca "
+"potrà aiutarti."
+
+#: ../content-page.php:22 ../content-single.php:58
+#: ../page_one-column-template.php:39
+msgid "Next page &rarr;"
+msgstr "Prossima pagina &rarr;"
+
+#: ../content-page.php:23 ../content-single.php:59
+#: ../page_one-column-template.php:40
+msgid "&larr; Previous page"
+msgstr "&larr; Pagina precedente"
+
+#: ../content-page.php:29 ../content-single.php:65 ../content.php:53
+#: ../page_one-column-template.php:46
+msgid "Pages:"
+msgstr "Pagine:"
+
+#: ../content-page.php:47 ../content-single.php:85 ../content.php:95
+#: ../image.php:127 ../page_archive-template.php:72
+#: ../page_one-column-template.php:53
+msgid "Edit"
+msgstr "Modifica"
+
+#: ../content.php:21 ../content.php:47 ../functions.php:1075
+#: ../functions.php:1090
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink a %s"
+
+#: ../content.php:91 ../functions.php:408
+msgid "Comment"
+msgstr "Commento"
+
+#: ../content.php:91
+msgid "% Comments"
+msgstr "% Commenti"
+
+#: ../functions.php:104
+msgid "Primary Menu"
+msgstr "Menù Principale"
+
+#: ../functions.php:105
+msgid "Single Posts Menu"
+msgstr "Menù del Singolo"
+
+#: ../functions.php:106
+msgid "Social"
+msgstr "Social"
+
+#: ../functions.php:148
+msgid "Sidebar"
+msgstr "Barra Laterale"
+
+#: ../functions.php:159
+msgid "Archive Page"
+msgstr "Pagina Archivio"
+
+#: ../functions.php:263
+#, php-format
+msgid "%1$s empowered by %2$s"
+msgstr "%1$s realizzato con %2$s"
+
+#: ../functions.php:302
+msgid "Anonymous"
+msgstr "Anonimo"
+
+#: ../functions.php:315
+msgid "Reply to"
+msgstr "Rispondi a"
+
+#: ../functions.php:349
+#, php-format
+msgid "Leave a Reply for %s"
+msgstr "Lascia una Risposta per %s"
+
+#: ../functions.php:350
+msgid "Cancel Reply"
+msgstr "Cancella Risposta"
+
+#: ../functions.php:351
+msgid "Submit Comment"
+msgstr "Invia Commento"
+
+#: ../functions.php:354
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Devi essere <a href=\"%s\">autorizzato</a> per lasciare un commento."
+
+#: ../functions.php:359
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Sei connesso come <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log "
+"out of this account\">Uscire?</a>"
+
+#: ../functions.php:369
+msgid "Name"
+msgstr "Nome"
+
+#: ../functions.php:374
+msgid "Email"
+msgstr "Email"
+
+#: ../functions.php:379
+msgid "Website"
+msgstr "Sito Web"
+
+#: ../functions.php:558
+msgid "Write a Comment"
+msgstr "Scrivi un commento"
+
+#: ../functions.php:843
+msgid "Use as post cover (full-width)"
+msgstr "Utilizza come copertina dell’articolo (a piena larghezza)"
+
+#: ../functions.php:853
+msgid "Disable post cover (full-width)"
+msgstr "Disabilita la copertina dell’articolo (a piena larghezza)"
+
+#: ../functions.php:1051
+msgid "in"
+msgstr ""
+
+#: ../functions.php:1060
+msgid "by"
+msgstr ""
+
+#: ../header.php:56
+msgid "Skip to content"
+msgstr "Salta al contenuto"
+
+#: ../image.php:23
+#, php-format
+msgid ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
+"%7$s</a>"
+msgstr ""
+
+#: ../image.php:106
+msgid "&larr; Previous image"
+msgstr "&larr; Immagine precedente"
+
+#: ../image.php:107
+msgid "Next image &rarr;"
+msgstr "&larr; Immagine successiva"
+
+#: ../page_archive-template.php:45
+msgid "Yearly Archives"
+msgstr "Archivi per Anno"
+
+#: ../page_archive-template.php:47
+msgid "Select Year"
+msgstr "Seleziona Anno"
+
+#: ../page_archive-template.php:53
+msgid "Monthly Archives"
+msgstr "Archivi Mensili"
+
+#: ../page_archive-template.php:55
+msgid "Select Month"
+msgstr "Seleziona Mese"
+
+#: ../page_archive-template.php:61 ../searchform.php:10 ../searchform.php:12
+msgid "Search"
+msgstr "Cerca"
+
+#: ../page_archive-template.php:65
+msgid "Explore by Tag"
+msgstr "Esplora per Tag"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Risultati della Ricerca per: %s"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Cerca &hellip;"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr ""
+
+#: ../single.php:28
+msgid "Related Content by Tag"
+msgstr "Articoli Correlati per Tag :"
+
+#: ../inc/customizer.php:19
+msgid "Layout Options"
+msgstr "Opzioni Layout"
+
+#: ../inc/customizer.php:26
+msgid "Excerpt Options"
+msgstr ""
+
+#: ../inc/customizer.php:33
+msgid "General Options"
+msgstr "Opzioni Generali"
+
+#: ../inc/customizer.php:49
+msgid "Post Excerpts"
+msgstr ""
+
+#: ../inc/customizer.php:54
+msgid "Disabled"
+msgstr "Disabilitato"
+
+#: ../inc/customizer.php:55
+msgid "Enabled"
+msgstr "Abilitato"
+
+#: ../inc/customizer.php:72
+msgid "Generate One-Sentence Excerpts"
+msgstr ""
+
+#: ../inc/customizer.php:90
+msgid "Always Show Full Content for First Post"
+msgstr "Mostra sempre per intero il primo Articolo"
+
+#: ../inc/customizer.php:108
+msgid "Show Post Word Count in Entry Meta"
+msgstr "Mostra il Conteggio Parole nei Metadati dell’Articolo"
+
+#: ../inc/customizer.php:126
+msgid "Show Post Date in Entry Meta"
+msgstr "Mostra la Data nei Metadati dell’Articolo"
+
+#: ../inc/customizer.php:144
+msgid "Show Widgets on Single Posts"
+msgstr "Mostra Widget nella Pagina del Singolo Articolo"
+
+#: ../inc/customizer.php:162
+msgid "Show Nav Menu on Single Posts"
+msgstr "Mostra il Menù di Navigazione per l’Articolo Singolo"
+
+#: ../inc/customizer.php:180
+msgid "Show Updated Date on Single Posts"
+msgstr "Mostra la Data di Aggiornamento per l’Articolo Singolo"
+
+#: ../inc/customizer.php:198
+msgid "Single-Column Layout"
+msgstr "Layout a Singola Colonna"
+
+#: ../inc/customizer.php:216
+msgid "Enable Multi-Author Mode"
+msgstr "Abilita la Modalità Multi-Autore"
+
+#: ../inc/customizer.php:234
+msgid "Show Page Load Progress Bar"
+msgstr "Mostra la Barra di Avanzamento delle Pagine"
+
+#: ../inc/customizer.php:252
+msgid "Auto-Set Featured Image as Post Cover"
+msgstr "Auto-Imposta l’Immagine in Evidenza come Copertina dell’Articolo"
+
+#: ../inc/customizer.php:270
+msgid "Overlay Post Title on Post Cover"
+msgstr "Sovrapponi il Titolo dell’Articolo sull’Immagine di Copertina"
+
+#: ../inc/customizer.php:288
+msgid "Comments Call to Action"
+msgstr "“Call to Action” per i Commenti"
+
+#: ../inc/customizer.php:301
+msgid "Text Color"
+msgstr ""
+
+#: ../inc/customizer.php:306
+msgid "Comment Form Background Color"
+msgstr ""
+
+#: ../inc/customizer.php:311
+msgid "Link Color"
+msgstr ""
+
+#: ../inc/customizer.php:316
+msgid "Title and Header Text Color"
+msgstr ""
+
+#: ../inc/customizer.php:321
+msgid "Primary Meta Text Color"
+msgstr ""
+
+#: ../inc/customizer.php:326
+msgid "Secondary Meta Text Color"
+msgstr ""
+
+#: ../inc/template-tags.php:41
+msgid "Post navigation"
+msgstr "Navigazione Articoli"
+
+#: ../inc/template-tags.php:45
+msgid "&larr;"
+msgstr ""
+
+#: ../inc/template-tags.php:46
+msgid "&rarr;"
+msgstr ""
+
+#: ../inc/template-tags.php:51
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Articoli Precedenti"
+
+#: ../inc/template-tags.php:55
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Articoli Successivi <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:85
+msgid " - Your comment is awaiting moderation."
+msgstr " - Il tuo commento è in attesa di moderazione."
+
+#: ../inc/template-tags.php:97 ../inc/template-tags.php:140
+msgid "(Edit)"
+msgstr "(Modifica)"
+
+#: ../inc/template-tags.php:165 ../inc/template-tags.php:196
+#: ../inc/template-tags.php:208
+#, php-format
+msgid "View all posts by %s"
+msgstr "Tutti gli articoli di %s"
+
+#: ../inc/template-tags.php:182
+msgid ", "
+msgstr ""
+
+#: ../inc/template-tags.php:271
+msgid "Continue Reading &rarr;"
+msgstr "Continua a Leggere &rarr;"
+
+#: ../inc/template-tags.php:288
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continua a leggere <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:358
+#, php-format
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#: ../inc/template-tags.php:378
+#, php-format
+msgid "View all posts in %s"
+msgstr "Visualizza tutti gli articoli in %s"
+
+#: ../inc/template-tags.php:434 ../inc/template-tags.php:475
+msgid "Published"
+msgstr "Pubblicato"
+
+#: ../inc/template-tags.php:442 ../inc/template-tags.php:483
+msgid "Updated"
+msgstr "Aggiornato"
+
+#: ../inc/template-tags.php:510
+#, php-format
+msgid "%1$s Words"
+msgstr "%1$s Parole"
+
+#: ../inc/template-tags.php:606 ../inc/template-tags.php:636
+#: ../inc/template-tags.php:665
+#, php-format
+msgid " (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)"
+msgstr " (questa è la pagina <strong>%1$s</strong> di<strong>%2$s</strong>)"
+
+#: ../inc/template-tags.php:609
+#, php-format
+msgid "Found one search result for <strong>%2$s</strong>."
+msgid_plural "Found %1$s search results for <strong>%2$s</strong>"
+msgstr[0] "Trovato un unico risultato per <strong>%2$s</strong>."
+msgstr[1] "Trovati %1$s risultati della ricerca per <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:640
+#, php-format
+msgid "There is one post filed in <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts filed in <strong>%2$s</strong>"
+msgstr[0] "C’è un articolo archiviato in <strong>%2$s</strong>."
+msgstr[1] "Ci sono %1$s articoli archiviati in <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:642
+#, php-format
+msgid "There is one post tagged <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts tagged <strong>%2$s</strong>"
+msgstr[0] "C’è un solo articolo con tag <strong>%2$s</strong>."
+msgstr[1] "Ci sono %1$s articoli con tag <strong>%2$s</strong>"
+
+#: ../inc/template-tags.php:673
+#, php-format
+msgid "There was one post published in %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "C’è stato un solo articolo pubblicato in %2$s."
+msgstr[1] "Ci sono %1$s articoli pubblicati in %2$s"
+
+#: ../inc/template-tags.php:675
+#, php-format
+msgid "There is one post published in %2$s."
+msgid_plural "There are %1$s posts published in %2$s"
+msgstr[0] "C’è un solo articolo pubblicato in %2$s."
+msgstr[1] "Ci sono %1$s articoli pubblicati in %2$s"
+
+#: ../inc/template-tags.php:678
+#, php-format
+msgid "There was one post published on %2$s."
+msgid_plural "There were %1$s posts published on %2$s"
+msgstr[0] "C’è stato un solo articolo pubblicato in %2$s."
+msgstr[1] "Ci sono %1$s articoli pubblicati in %2$s"
+
+#: ../inc/template-tags.php:685
+#, php-format
+msgid "There was one post published in the month of %2$s."
+msgid_plural "There were %1$s posts published in %2$s"
+msgstr[0] "C’è stato un solo articolo pubblicato nel mese di %2$s."
+msgstr[1] "Ci sono stati %1$s articoli pubblicati in %2$s"
+
+#: ../inc/template-tags.php:690
+#, php-format
+msgid "There was one post published in %2$s %3$s."
+msgid_plural "There were %1$s posts published in %2$s %3$s"
+msgstr[0] "C’è stato un solo articolo pubblicato in %2$s %3$s."
+msgstr[1] "Ci sono stati %1$s articoli pubblicati in %2$s %3$s"
