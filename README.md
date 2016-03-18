@@ -6,7 +6,10 @@ Independent Publisher
 Independent Publisher is a WordPress Theme. This README contains documentation for theme options and features, along with a list of known issues and frequently asked questions. It also contains a list of theme filters and action hooks that can be used to modify and hook into various areas of the theme, as well as a list of functions that can be overidden in a Child Theme.
 
  The main site for this project, along with a demo of this theme, is located at [http://independentpublisher.me](http://independentpublisher.me).
+ 
+**Nota bene**: There are two versions of this theme: the primary version, which is being developed _here_ on GitHub, is also on [WordPress.org](https://wordpress.org/themes/independent-publisher/), and the secondary (forked) version is on [WordPress.com](https://wordpress.com/themes/independent-publisher). 
 
+WordPress.com took the original Independent Publisher theme from WordPress.org and changed it a bit to make it work on WordPress.com. I have no control over the WordPress.com version, as that's a closed-system, so if you have issues with that version, please post your support related questions [there](https://en.support.wordpress.com/). You can read more about the WordPress.com [version here](http://independentpublisher.me/2015/independent-publisher-announced-on-wordpress-com/).
 
 ## Table of Contents
 
