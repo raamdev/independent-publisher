@@ -30,12 +30,12 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		/**
 		 * Custom template tags for this theme.
 		 */
-		require ( get_stylesheet_directory() . '/inc/template-tags.php' );
+		require ( get_template_directory() . '/inc/template-tags.php' );
 
 		/**
 		 * Customizer additions.
 		 */
-		require ( get_stylesheet_directory() . '/inc/customizer.php' );
+		require ( get_template_directory() . '/inc/customizer.php' );
 
 		/**
 		 * Make theme available for translation
@@ -130,12 +130,12 @@ add_action( 'after_setup_theme', 'independent_publisher_setup' );
 /**
  * Include additional plugin support routines
  */
-require ( get_stylesheet_directory() . '/inc/plugin-support.php' );
+require ( get_template_directory() . '/inc/plugin-support.php' );
 
 /**
  * Load Jetpack compatibility file.
  */
-require ( get_stylesheet_directory() . '/inc/jetpack.php' );
+require ( get_template_directory() . '/inc/jetpack.php' );
 
 /**
  * Register widgetized areas and update sidebar with default widgets
@@ -291,7 +291,7 @@ function independent_publisher_get_footer_credits() {
 /**
  * Implement the Custom Header feature
  */
-require( get_stylesheet_directory() . '/inc/custom-header.php' );
+require( get_template_directory() . '/inc/custom-header.php' );
 
 /**
  * Fix comment count so that it doesn't include pings/trackbacks
