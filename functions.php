@@ -127,6 +127,15 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 endif; // independent_publisher_setup
 add_action( 'after_setup_theme', 'independent_publisher_setup' );
 
+/*
+ * Add WP 4.1+ support for Title Tags.
+ * See https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
+ */
+function independent_publisher_theme_slug_setup() {
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'independent_publisher_theme_slug_setup' );
+
 /**
  * Include additional plugin support routines
  */
