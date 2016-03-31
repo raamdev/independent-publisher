@@ -456,7 +456,7 @@ class IndependentPublisher_Customize {
 	public static function live_preview() {
 		wp_enqueue_script(
 			'independent-publisher-themecustomizer', // Give the script a unique ID
-			get_stylesheet_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
+			get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
 			array( 'jquery', 'customize-preview' ), // Define dependencies
 			'', // Define a version (optional)
 			true // Specify whether to put in footer (leave this true)
