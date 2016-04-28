@@ -371,14 +371,22 @@ if ( ! function_exists( 'independent_publisher_post_categories' ) ) :
 	 *
 	 * @since Independent Publisher 1.0
 	 */
-	function independent_publisher_post_categories( $separator = ',', $single = false ) {
-		$categories = get_the_category();
-		$output     = '';
-		if ( $categories ) {
-			foreach ( $categories as $category ) {
-				$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'independent-publisher' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
-				if ( $single )
-					break;
+	function independent_publisher_post_categories( $separator = ', ', $single = false ) {
+		$separator = apply_filters('independent_publisher_post_categories_separator', $separator);
+		$single = apply_filters('independent_publisher_post_categories_single', $single);
+
+		if($single === false) {
+			$categories = get_the_category_list($separator);
+			$output = $categories;
+		} else { // Only need one category
+			$categories = get_the_category();
+			$output     = '';
+			if ( $categories ) {
+				foreach ( $categories as $category ) {
+					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'independent-publisher' ), $category->name ) ) . '">' . $category->cat_name . '</a>';
+					if ( $single )
+						break;
+				}
 			}
 		}
 
@@ -576,7 +584,7 @@ if ( ! function_exists( 'independent_publisher_full_width_featured_image' ) ):
 													?>
 												</span>
 												<?php if ( independent_publisher_categorized_blog() ) {
-													echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', true );
+													echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories();
 												} ?>
 												<span class="entry-title-meta-post-date">
 													<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>

@@ -20,7 +20,7 @@
 		<?php if ( get_post_meta( get_the_ID(), 'independent_publisher_primary_category', true ) ) { // check for a custom field named 'independent_publisher_primary_category'
             echo independent_publisher_entry_meta_category_prefix() . ' ' . get_post_meta( get_the_ID(), 'independent_publisher_primary_category', true ); // show the primary category as set in ACF
       	} else if ( independent_publisher_categorized_blog() ) {
-        	   echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', true );
+        	   echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories();
       	} ?>
 			<span class="entry-title-meta-post-date">
 				<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
@@ -37,7 +37,7 @@
 				independent_publisher_posted_author() ?>
 			</span>
 			<?php if ( independent_publisher_categorized_blog() ) {
-				echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories( '', true );
+				echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories();
 			} ?>
 			<span class="entry-title-meta-post-date">
 				<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
