@@ -52,7 +52,7 @@ get_header(); ?>
 							<div class="widget">
 								<h2 class="widget-title"><?php echo __( 'Monthly Archives', 'independent-publisher' ); ?></h2>
 								<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-									<option value=""><?php echo esc_html_e( 'Select Month', 'independent-publisher' ); ?></option>
+									<option value=""><?php esc_html_e( 'Select Month', 'independent-publisher' ); ?></option>
 									<?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option' ) ); ?>
 								</select>
 							</div>
