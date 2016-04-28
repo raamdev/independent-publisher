@@ -69,7 +69,7 @@ get_header(); ?>
 					</div>
 					<!-- .entry-content -->
 
-					<?php edit_post_link( __( 'Edit', 'publish' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'independent-publisher' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 			<?php endwhile; // end of the loop. ?>

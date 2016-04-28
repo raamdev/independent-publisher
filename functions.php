@@ -384,12 +384,12 @@ if ( ! function_exists( 'independent_publisher_comment_form_args' ) ) :
 			'label_submit'         => __( 'Submit Comment', 'independent-publisher' ),
 			'must_log_in'          => '<p class="must-log-in">' .
 									  sprintf(
-										  __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+										  __( 'You must be <a href="%s">logged in</a> to post a comment.', 'independent-publisher' ),
 										  wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
 									  ) . '</p>',
 			'logged_in_as'         => '<p class="logged-in-as">' .
 									  sprintf(
-										  __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+										  __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'independent-publisher' ),
 										  admin_url( 'profile.php' ),
 										  $user->display_name,
 										  wp_logout_url( apply_filters( 'the_permalink', get_permalink() ) )
