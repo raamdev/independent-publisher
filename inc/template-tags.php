@@ -613,10 +613,10 @@ if ( ! function_exists( 'independent_publisher_search_stats' ) ):
 		 * Only show pagination info when there is more than 1 page
 		 */
 		if ( $total_pages > 1 ) {
-			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
+			$pagination_info = sprintf( __( ' this is page <strong>%1$s</strong> of <strong>%2$s</strong>', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
 		}
 
-		$stats_text = sprintf( _n( 'Found one search result for <strong>%2$s</strong>.', 'Found %1$s search results for <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent-publisher' ), number_format_i18n( $total ), get_search_query() );
+		$stats_text = sprintf( _n( 'Found one search result for <strong>%2$s</strong>.', 'Found %1$s search results for <strong>%2$s</strong> (%3$s).', $total, 'independent-publisher' ), number_format_i18n( $total ), get_search_query(), $pagination_info );
 
 		return wpautop( $stats_text );
 	}
@@ -643,13 +643,13 @@ if ( ! function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 		 * Only show pagination info when there is more than 1 page
 		 */
 		if ( $total_pages > 1 ) {
-			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
+			$pagination_info = sprintf( __( ' this is page <strong>%1$s</strong> of <strong>%2$s</strong>', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
 		}
 
 		if ( $taxonomy === 'category' ) {
-			$stats_text = sprintf( _n( 'There is one post filed in <strong>%2$s</strong>.', 'There are %1$s posts filed in <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent-publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
+			$stats_text = sprintf( _n( 'There is one post filed in <strong>%2$s</strong>.', 'There are %1$s posts filed in <strong>%2$s</strong> (%3$s).', $total, 'independent-publisher' ), number_format_i18n( $total ), single_term_title( '', false ), $pagination_info );
 		} elseif ( $taxonomy === 'post_tag' ) {
-			$stats_text = sprintf( _n( 'There is one post tagged <strong>%2$s</strong>.', 'There are %1$s posts tagged <strong>%2$s</strong>' . $pagination_info . '.', $total, 'independent-publisher' ), number_format_i18n( $total ), single_term_title( '', false ) );
+			$stats_text = sprintf( _n( 'There is one post tagged <strong>%2$s</strong>.', 'There are %1$s posts tagged <strong>%2$s</strong> (%3$s).', $total, 'independent-publisher' ), number_format_i18n( $total ), single_term_title( '', false ), $pagination_info );
 		}
 
 		return wpautop( $stats_text );
@@ -672,7 +672,7 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 		 * Only show pagination info when there is more than 1 page
 		 */
 		if ( $total_pages > 1 ) {
-			$pagination_info = sprintf( __( ' (this is page <strong>%1$s</strong> of <strong>%2$s</strong>)', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
+			$pagination_info = sprintf( __( ' this is page <strong>%1$s</strong> of <strong>%2$s</strong>', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
 		}
 
 		/**
@@ -680,25 +680,25 @@ if ( ! function_exists( 'independent_publisher_date_archive_description' ) ):
 		 */
 		if ( trim( $date_archive_meta ) === '' ) {
 			if ( is_year() && ( get_the_date( 'Y' ) != date( 'Y' ) ) ) {
-				$date_archive_meta = sprintf( _n( 'There was one post published in %2$s.', 'There were %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent-publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ) );
+				$date_archive_meta = sprintf( _n( 'There was one post published in %2$s.', 'There were %1$s posts published in %2$s (%3$s).', $total, 'independent-publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ), $pagination_info );
 			} else if ( is_year() && ( get_the_date( 'Y' ) == date( 'Y' ) ) ) {
-				$date_archive_meta = sprintf( _n( 'There is one post published in %2$s.', 'There are %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent-publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ) );
+				$date_archive_meta = sprintf( _n( 'There is one post published in %2$s.', 'There are %1$s posts published in %2$s (%3$s).', $total, 'independent-publisher' ), number_format_i18n( $total ), get_the_date( 'Y' ), $pagination_info );
 			} else if ( is_day() ) {
 				$date_archive_meta = sprintf(
-					_n( 'There was one post published on %2$s.', 'There were %1$s posts published on %2$s' . $pagination_info . '.', $total, 'independent-publisher' ),
-					number_format_i18n( $total ), get_the_date()
+					_n( 'There was one post published on %2$s.', 'There were %1$s posts published on %2$s (%3$s).', $total, 'independent-publisher' ),
+					number_format_i18n( $total ), get_the_date(), $pagination_info
 				);
 			} else if ( is_month() ) {
 				$year = get_query_var( 'year' );
 				if ( empty( $year ) ) {
 					$date_archive_meta = sprintf(
-						_n( 'There was one post published in the month of %2$s.', 'There were %1$s posts published in %2$s' . $pagination_info . '.', $total, 'independent-publisher' ),
-						number_format_i18n( $total ), get_the_date( 'F' )
+						_n( 'There was one post published in the month of %2$s.', 'There were %1$s posts published in %2$s (%3$s).', $total, 'independent-publisher' ),
+						number_format_i18n( $total ), get_the_date( 'F' ), $pagination_info
 					);
 				} else {
 					$date_archive_meta = sprintf(
-						_n( 'There was one post published in %2$s %3$s.', 'There were %1$s posts published in %2$s %3$s' . $pagination_info . '.', $total, 'independent-publisher' ),
-						number_format_i18n( $total ), get_the_date( 'F' ), get_the_date( 'Y' )
+						_n( 'There was one post published in %2$s %3$s.', 'There were %1$s posts published in %2$s %3$s (%4$s).', $total, 'independent-publisher' ),
+						number_format_i18n( $total ), get_the_date( 'F' ), get_the_date( 'Y' ), $pagination_info
 					);
 				}
 			}
