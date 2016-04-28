@@ -332,7 +332,8 @@ class IndependentPublisher_Customize {
 								 'default'    => $color['default'],
 								 'type'       => 'theme_mod',
 								 'capability' =>
-									 'edit_theme_options'
+									 'edit_theme_options',
+								 'sanitize_callback' => 'sanitize_hex_color'
 							 )
 			);
 			// CONTROLS
