@@ -21,12 +21,12 @@ if ( post_password_required() ) {
 }
 ?>
 
-<?php if ( comments_open() && ! independent_publisher_hide_comments() ) : ?>
+<?php if ( comments_open() && !independent_publisher_hide_comments() ) : ?>
 	<div id="commentform-top"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
 	<?php comment_form( independent_publisher_comment_form_args() ); ?>
 <?php endif; ?>
 
-<?php if ( ! independent_publisher_hide_comments() ) : ?>
+<?php if ( !independent_publisher_hide_comments() ) : ?>
 
 	<div id="comments" class="comments-area">
 		<?php // You can start editing here -- including this comment! ?>
@@ -78,7 +78,7 @@ if ( post_password_required() ) {
 
 		<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+		if ( !comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 			?>
 			<p class="nocomments"><?php _e( 'Comments are closed.', 'independent-publisher' ); ?></p>
 		<?php endif; ?>

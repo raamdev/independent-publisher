@@ -26,18 +26,20 @@ get_header(); ?>
 
 					<?php if ( independent_publisher_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 						<div class="widget widget_categories">
-						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'independent-publisher' ); ?></h2>
-						<ul>
-							<?php wp_list_categories( array( 'orderby'    => 'count',
-															 'order'      => 'DESC',
-															 'show_count' => 1,
-															 'title_li'   => '',
-															 'number'     => 10
-								)
-							); ?>
-						</ul>
-					</div>
-					<!-- .widget -->
+							<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'independent-publisher' ); ?></h2>
+							<ul>
+								<?php wp_list_categories(
+									array(
+										'orderby'    => 'count',
+										'order'      => 'DESC',
+										'show_count' => 1,
+										'title_li'   => '',
+										'number'     => 10
+									)
+								); ?>
+							</ul>
+						</div>
+						<!-- .widget -->
 					<?php endif; ?>
 
 					<?php

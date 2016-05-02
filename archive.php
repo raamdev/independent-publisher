@@ -78,7 +78,7 @@ get_header(); ?>
 						// Get some stats about this taxonomy to include in the description
 						$taxonomy_stats = apply_filters( 'independent_publisher_taxonomy_category_stats', independent_publisher_taxonomy_archive_stats( 'category' ) );
 
-						if ( ! empty( $category_description ) ) { // show the description + the taxonomy stats
+						if ( !empty( $category_description ) ) { // show the description + the taxonomy stats
 							echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . $taxonomy_stats . '</div>' );
 						} else { // there was description set, so let's just show some stats
 							echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $taxonomy_stats . '</div>' );
@@ -91,7 +91,7 @@ get_header(); ?>
 						// Get some stats about this taxonomy to include in the description
 						$taxonomy_stats = apply_filters( 'independent_publisher_taxonomy_tag_stats', independent_publisher_taxonomy_archive_stats( 'post_tag' ) );
 
-						if ( ! empty( $tag_description ) ) { // show the description + the taxonomy stats
+						if ( !empty( $tag_description ) ) { // show the description + the taxonomy stats
 							echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . $taxonomy_stats . '</div>' );
 						} else { // there was description set, so let's just show some stats
 							echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $taxonomy_stats . '</div>' );

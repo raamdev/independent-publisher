@@ -24,7 +24,7 @@
 			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'independent-publisher' ); ?></p>
 			<?php get_search_form(); ?>
 
-		<?php
+			<?php
 		else : ?>
 
 			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'independent-publisher' ); ?></p>

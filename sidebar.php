@@ -9,9 +9,9 @@
  */
 ?>
 <div id="secondary" class="widget-area" role="complementary">
-	<?php if ( ! is_single() || ( is_single() && independent_publisher_show_widgets_on_single_pages() ) ) : ?>
+	<?php if ( !is_single() || ( is_single() && independent_publisher_show_widgets_on_single_pages() ) ) : ?>
 		<?php do_action( 'independent_publisher_before_sidebar' ); ?>
-		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+		<?php if ( !dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 			<aside id="search" class="widget widget_search">
 				<?php get_search_form(); ?>

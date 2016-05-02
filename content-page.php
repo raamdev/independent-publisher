@@ -8,11 +8,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( has_post_thumbnail() && ! independent_publisher_has_full_width_featured_image() ) : ?>
+	<?php if ( has_post_thumbnail() && !independent_publisher_has_full_width_featured_image() ) : ?>
 		<?php the_post_thumbnail( 'independent_publisher_post_thumbnail', array( 'itemprop' => 'image' ) ); ?>
 	<?php endif; ?>
 	<header class="entry-header">
-		<?php if ( ! independent_publisher_post_has_post_cover_title() ): ?>
+		<?php if ( !independent_publisher_post_has_post_cover_title() ): ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php endif; ?>
 	</header>
@@ -41,7 +41,7 @@
 	<footer class="entry-meta">
 		<?php do_action( 'independent_publisher_entry_meta_top' ); ?>
 
-		<?php if ( comments_open() && ! independent_publisher_hide_comments() ) : ?>
+		<?php if ( comments_open() && !independent_publisher_hide_comments() ) : ?>
 			<div id="share-comment-button">
 				<button>
 					<i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?>

@@ -17,7 +17,7 @@ get_header(); ?>
 
 				<?php
 				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() && ! independent_publisher_hide_comments() ) {
+				if ( comments_open() || '0' != get_comments_number() && !independent_publisher_hide_comments() ) {
 					comments_template( '', true );
 				}
 				?>
@@ -26,7 +26,7 @@ get_header(); ?>
 
 				<?php if ( get_the_tag_list() ) : ?>
 					<?php $tag_list_title = apply_filters( 'independent_publisher_tag_list_title', __( 'Related Content by Tag', 'independent-publisher' ) ); ?>
-					<?php $tag_list = (string)get_the_tag_list( '<ul class="taglist"><li class="taglist-title">' . $tag_list_title . '</li><li>', '</li><li>', '</li></ul>' ); ?>
+					<?php $tag_list = (string) get_the_tag_list( '<ul class="taglist"><li class="taglist-title">' . $tag_list_title . '</li><li>', '</li><li>', '</li></ul>' ); ?>
 					<div id="taglist">
 						<?php echo $tag_list; ?>
 					</div>
