@@ -7,10 +7,10 @@
 <article id="post-<?php the_ID(); ?>" <?php independent_publisher_post_classes(); ?>>
 	<header class="entry-header">
 		<?php
-		/* Show entry title meta only when 
-		 * Show Full Content First Post enabled AND 
-		 * this is the very first standard post AND 
-		 * we're on the home page AND this is not a sticky post 
+		/* Show entry title meta only when
+		 * Show Full Content First Post enabled AND
+		 * this is the very first standard post AND
+		 * we're on the home page AND this is not a sticky post
 		 */
 		?>
 		<?php if ( independent_publisher_show_full_content_first_post() && ( independent_publisher_is_very_first_standard_post() && is_home() && !is_sticky() ) ) : ?>
@@ -35,7 +35,7 @@
 		/* Only show excerpts for Standard post format OR Chat format,
 		 * when this is not both the very first standard post and also a Sticky post AND
 		 * when excerpts enabled or One-Sentence Excerpts enabled AND
-		 * this is not the very first standard post when Show Full Content First Post enabled 
+		 * this is not the very first standard post when Show Full Content First Post enabled
 		 */
 		?>
 		<?php if ( ( !get_post_format() || 'chat' === get_post_format() ) &&
@@ -56,22 +56,30 @@
 			<?php endif; ?>
 
 			<?php the_content( independent_publisher_continue_reading_text() ); ?>
-			<?php wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'independent-publisher' ),
-					'after'  => '</div>'
-				)
-			); ?>
+			<?php if (function_exists('wp_pagenavi')) : // WP-PageNavi support ?>
+
+				<?php wp_pagenavi( array( 'type' => 'multipart' ) ); ?>
+
+			<?php else: ?>
+
+				<?php wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . __( 'Pages:', 'independent-publisher' ),
+						'after'  => '</div>'
+					)
+				); ?>
+
+			<?php endif; ?>
 
 		<?php endif; ?>
 	</div>
 	<!-- .entry-content -->
 
 	<?php
-	/* Show Continue Reading link when this is a Standard post format AND 
+	/* Show Continue Reading link when this is a Standard post format AND
 	 * One-Sentence Excerpts options is enabled AND
- 	 * we're not showing the first post full content AND 
- 	 * this is not a sticky post 
+ 	 * we're not showing the first post full content AND
+ 	 * this is not a sticky post
  	 */
 	?>
 	<?php if ( false === get_post_format() && independent_publisher_generate_one_sentence_excerpts() && independent_publisher_is_not_first_post_full_content() && !is_sticky() ) : ?>
@@ -81,8 +89,8 @@
 	<footer class="entry-meta">
 
 		<?php
-		/* Show author name and post categories only when post type == post AND 
-		 * we're not showing the first post full content 
+		/* Show author name and post categories only when post type == post AND
+		 * we're not showing the first post full content
 		 */
 		?>
 		<?php if ( 'post' == get_post_type() && independent_publisher_is_not_first_post_full_content() ) : // post type == post conditional hides category text for Pages on Search ?>
@@ -96,9 +104,9 @@
 		<?php endif; ?>
 
 		<?php
-		/* Show post word count when post is not password-protected AND 
+		/* Show post word count when post is not password-protected AND
 		 * this is a Standard post format AND
-		 * post word count option enabled AND 
+		 * post word count option enabled AND
 		 * we're not showing the first post full content
 		 */
 		?>

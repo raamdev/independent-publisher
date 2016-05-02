@@ -43,17 +43,27 @@ if ( !function_exists( 'independent_publisher_content_nav' ) ) :
 
 			<?php if ( is_single() ) : // navigation links for single posts ?>
 
+				<?php wp_pagenavi(); ?>
+				
 				<?php previous_post_link( '<div class="nav-previous"><button>%link</button></div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'independent-publisher' ) . '</span> %title' ); ?>
 				<?php next_post_link( '<div class="nav-next"><button>%link</button></div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'independent-publisher' ) . '</span>' ); ?>
 
 			<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
-				<?php if ( get_next_posts_link() ) : ?>
-					<div class="nav-previous"><?php next_posts_link( '<button>' . __( '<span class="meta-nav">&larr;</span> Older posts', 'independent-publisher' ) . '</button>' ); ?></div>
-				<?php endif; ?>
+				<?php if (function_exists('wp_pagenavi')) : // WP-PageNavi support ?>
 
-				<?php if ( get_previous_posts_link() ) : ?>
-					<div class="nav-next"><?php previous_posts_link( '<button>' . __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'independent-publisher' ) . '</button>' ); ?></div>
+					<?php wp_pagenavi(); ?>
+
+				<?php else : ?>
+
+					<?php if ( get_next_posts_link() ) : ?>
+						<div class="nav-previous"><?php next_posts_link( '<button>' . __( '<span class="meta-nav">&larr;</span> Older posts', 'independent-publisher' ) . '</button>' ); ?></div>
+					<?php endif; ?>
+
+					<?php if ( get_previous_posts_link() ) : ?>
+						<div class="nav-next"><?php previous_posts_link( '<button>' . __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'independent-publisher' ) . '</button>' ); ?></div>
+					<?php endif; ?>
+
 				<?php endif; ?>
 
 			<?php endif; ?>

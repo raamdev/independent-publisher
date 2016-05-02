@@ -76,3 +76,14 @@ if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'comments' ) ) {
 		return;
 	}
 }
+
+if ( !function_exists( 'independent_publisher_wp_pagenavi_css' ) ) :
+	/**
+	 * Improves the style of WP-PageNavi when used with this theme
+	 */
+	function independent_publisher_wp_pagenavi_css() {
+		if ( function_exists('wp_pagenavi') ) {
+			wp_enqueue_style( 'independent-publisher-wp-pagenavi-css', get_template_directory_uri() . '/css/wp-pagenavi.css', array(), '1.7' );
+		}
+	}
+endif;

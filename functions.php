@@ -224,6 +224,11 @@ function independent_publisher_scripts() {
 	 * Load JetPack Infinite Scroll Dark Overlay Bug Fix
 	 */
 	independent_publisher_jetpack_dark_overlay_fix_css();
+
+	/*
+	 * Load WP-PageNavi CSS enhancements, if applicable.
+	 */
+	independent_publisher_wp_pagenavi_css();
 }
 
 add_action( 'wp_enqueue_scripts', 'independent_publisher_scripts' );

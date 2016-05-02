@@ -1,0 +1,39 @@
+/**
+ * When the WP-PageNavi plugin is active, this CSS improves how the navigation items look.
+ */
+.wp-pagenavi {
+	text-align:center;
+}
+
+.wp-pagenavi span.current {
+	border-color: #C3C3C3;
+}
+
+.wp-pagenavi span {
+	padding: 7px 5px 8px 5px;
+}
+
+.wp-pagenavi .page,
+.wp-pagenavi .current,
+.wp-pagenavi .nextpostslink,
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .extend,
+.wp-pagenavi .last,
+.wp-pagenavi .first {
+	background-color:#FFF;
+	color : #000;
+	display: inline-block;
+	padding:4px 9px;
+	margin:0 1px;
+	min-width: 10px;
+}
+
+.wp-pagenavi .current,
+.wp-pagenavi a:hover,
+.wp-pagenavi a:focus,
+.wp-pagenavi a:active {
+	transition: background-color 0.1s linear;
+	text-decoration: none;
+	background-color:#E2E2E2;
+	border-color: #E2E2E2;
+}
