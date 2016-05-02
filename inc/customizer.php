@@ -183,6 +183,24 @@ class IndependentPublisher_Customize {
 						 )
 		);
 
+		// Show Author Card on Single Posts
+		$wp_customize->add_setting(
+			'independent_publisher_general_options[show_author_card]', array(
+				'default'    => true,
+				'type'       => 'option',
+				'capability' => 'edit_theme_options',
+				'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'show_author_card', array(
+				'settings' => 'independent_publisher_general_options[show_author_card]',
+				'label'    => __( 'Show Author Card on Single Posts', 'independent-publisher' ),
+				'section'  => 'independent_publisher_general_options',
+				'type'     => 'checkbox',
+			)
+		);
+
 		// Single-Column Layout
 		$wp_customize->add_setting(
 					 'independent_publisher_layout_options[single_column_layout]', array(

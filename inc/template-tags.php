@@ -472,6 +472,9 @@ if ( ! function_exists( 'independent_publisher_posted_author_bottom_card' ) ) :
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_posted_author_bottom_card() {
+		if ( !independent_publisher_show_author_card() ) {
+			return; // This option has been disabled
+		}
 
 		do_action( 'independent_publisher_before_post_author_bottom_card' );
 		?>

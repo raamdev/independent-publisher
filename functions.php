@@ -97,6 +97,11 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 		add_option( 'independent_publisher_general_options', array( 'show_post_word_count' => true ) );
 
 		/**
+		 * Set default value for Show Author Card theme option
+		 */
+		add_option( 'independent_publisher_general_options', array( 'show_author_card' => true ) );
+
+		/**
 		 * This theme uses wp_nav_menu() in two locations.
 		 */
 		register_nav_menus(
@@ -473,6 +478,25 @@ if ( ! function_exists( 'independent_publisher_is_multi_author_mode' ) ):
 	function independent_publisher_is_multi_author_mode() {
 		$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
 		if ( isset( $independent_publisher_general_options['multi_author_mode'] ) && $independent_publisher_general_options['multi_author_mode'] ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_show_author_card' ) ):
+	/*
+	 * Returns true if Show Author Card is enabled
+	 *
+	 * @since Independent Publisher 1.7
+	 *
+	 * @note This defaults to true if the option does not exist because that was the original behavior
+	 */
+	function independent_publisher_show_author_card() {
+		$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+
+		if ( !isset($independent_publisher_general_options['show_author_card']) || $independent_publisher_general_options['show_author_card'] ) {
 			return true;
 		} else {
 			return false;
