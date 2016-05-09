@@ -95,17 +95,15 @@ if ( post_password_required() ) {
 			<div id="commentform-bottom"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
 		<?php endif; ?>
 
-		<?php if ( have_comments() && get_comments_number() > 0 ) : // Only show pings/trackbacks if there's at least 1 comment ?>
-			<?php if ( count( $wp_query->comments_by_type['pings'] ) ) { ?>
-				<div id="pinglist">
-					<ul class="pinglist">
-						<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_title', __( 'Readers who shared this', 'independent-publisher' ) ); ?></li>
-						<?php independent_publisher_pings(); ?>
-						<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_end_note', __( 'Thank you!', 'independent-publisher' ) ); ?></li>
-					</ul>
-				</div>
-			<?php } // end if ( count($wp_query->comments_by_type['pings']))?>
-		<?php endif; // end have_comments() ?>
+		<?php if ( count( $wp_query->comments_by_type['pings'] ) ) { ?>
+			<div id="pinglist">
+				<ul class="pinglist">
+					<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_title', __( 'Readers who shared this', 'independent-publisher' ) ); ?></li>
+					<?php independent_publisher_pings(); ?>
+					<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_end_note', __( 'Thank you!', 'independent-publisher' ) ); ?></li>
+				</ul>
+			</div>
+		<?php } // end if ( count($wp_query->comments_by_type['pings']))?>
 
 		<?php if ( comments_open() && have_comments() && get_comments_number() > 0 ) : ?>
 			<?php independent_publisher_replytocom(); // Handles Reply to Comment links properly when JavaScript is enabled ?>
