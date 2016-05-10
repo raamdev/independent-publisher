@@ -1112,6 +1112,18 @@ function independent_publisher_replytocom() {
 	}
 }
 
+/*
+ * Returns the number of webmentions, pings/trackbacks the current post has
+ */
+function independent_publisher_comment_count_mentions() {
+	$args        = array(
+		'post_id' => get_the_ID(),
+		'type__in'    => array('pings', 'webmention')
+	);
+	$_query = new WP_Comment_Query;
+	return count($_query->query( $args ));
+}
+
 /**
  * Returns the entry title meta category prefix (e.g., "<author name> in <category name>"; 'in' is the portion this function returns)
  */

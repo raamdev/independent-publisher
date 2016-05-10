@@ -1258,6 +1258,27 @@ ul.pinglist {
 	text-decoration: underline;
 }
 
+.mentions-list {
+	font-size: 80%;
+	margin-top: 80px;
+}
+
+.mentions-list li {
+	list-style: none;
+}
+
+.mentions-list h3 {
+	color: #b3b3b1;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 13px;
+	letter-spacing: 1px;
+	border-top: 1px solid #eee;
+	padding-top: 10px;
+	display: inline-block;
+	font-family: sans-serif;
+}
+
 .taglist {
 	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
 	font-weight: 700;

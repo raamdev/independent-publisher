@@ -159,6 +159,39 @@ if ( !function_exists( 'independent_publisher_pings' ) ) :
 	}
 endif; // ends check for independent_publisher_pings()
 
+if ( !function_exists( 'independent_publisher_mentions' ) ) :
+	/**
+	 * Creates a custom query for webmentions, pings, and trackbacks
+	 * and displays them using this custom query instead of
+	 * wp_list_comments() allows us to always show all webmentions,
+	 * even when we're showing paginated comments.
+	 *
+	 * @since Independent Publisher 1.7
+	 */
+	function independent_publisher_mentions() {
+		$args        = array(
+			'post_id' => get_the_ID(),
+			'type__in'    => array('pings', 'webmention')
+		);
+		$mention_query = new WP_Comment_Query;
+		$mentions = $mention_query->query( $args );
+
+		if ( $mentions ) {
+			foreach ( $mentions as $mention ) {
+				?>
+				<li <?php comment_class( '', $mention->comment_ID ); ?> id="li-comment-<?php echo $mention->comment_ID ?>">
+					<?php if ($mention->comment_type !== 'webmention') : // Webmentions already include author in the comment text ?>
+						<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link( $mention->comment_ID ) ) ?>
+						<small><?php printf( '%1$s', get_comment_date() ); ?></small>
+					<?php endif; ?>
+					<?php comment_text($mention->comment_ID); ?>
+				</li>
+				<?php
+			}
+		}
+	}
+endif; // ends check for independent_publisher_mentions()
+
 if ( !function_exists( 'independent_publisher_posted_author' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
