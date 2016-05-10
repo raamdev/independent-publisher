@@ -96,7 +96,7 @@ if ( post_password_required() ) {
 		<?php endif; ?>
 
 		<?php if ( independent_publisher_comment_count_mentions() ) { // If we have mentions, let's show them ?>
-			<div class="mentions-list">
+			<div id="webmentions" class="mentions-list">
 				<h3><?php _e( 'Webmentions', 'independent-publisher' ); ?></h3>
 				<?php independent_publisher_mentions(); ?>
 			</div>

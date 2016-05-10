@@ -114,12 +114,20 @@
 			<?php echo independent_publisher_get_post_word_count() ?>
 		<?php endif; ?>
 
+		<?php $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?>
+
+		<?php /* Show webmentions link only when post is not password-protected AND pings open AND there are mentions on this post */ ?>
+		<?php if ( !post_password_required() && pings_open() && independent_publisher_comment_count_mentions() ) : ?>
+			<?php $mention_count = independent_publisher_comment_count_mentions(); ?>
+			<?php $mention_label = (independent_publisher_comment_count_mentions() > 1 ? __( 'Webmentions', 'independent-publisher' ) : __( 'Webmention', 'independent-publisher' ) ); ?>
+			<span class="mentions-link"><a href="<?php the_permalink(); ?>#webmentions"><?php echo $mention_count . ' ' . $mention_label; ?></a></span><span class="sep"><?php echo (comments_open() && !independent_publisher_hide_comments()) ?  ' '.$separator : '' ?></span>
+		<?php endif; ?>
+
 		<?php /* Show comments link only when post is not password-protected AND comments are enabled on this post */ ?>
 		<?php if ( !post_password_required() && comments_open() && !independent_publisher_hide_comments() ) : ?>
 			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent-publisher' ), __( '1 Comment', 'independent-publisher' ), __( '% Comments', 'independent-publisher' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?>
 		<?php edit_post_link( __( 'Edit', 'independent-publisher' ), '<span class="sep"> ' . $separator . ' </span> <span class="edit-link">', '</span>' ); ?>
 
 	</footer>
