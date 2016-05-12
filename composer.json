@@ -1,0 +1,10 @@
+{
+    "name": "raamdev/independent-publisher",
+    "description": "A beautiful reader-focused WordPress theme, for you.",
+    "homepage": "http://independentpublisher.me/",
+    "license": "GPL-3.0+",
+    "type": "wordpress-theme",
+    "require": {
+        "composer/installers": "~1.0"
+    },
+}
