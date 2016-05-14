@@ -13,12 +13,12 @@
 	<?php endif; ?>
 	<header class="entry-header">
 		<?php if ( !independent_publisher_post_has_post_cover_title() ): ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<h1 class="entry-title p-name"><?php the_title(); ?></h1>
 		<?php endif; ?>
 	</header>
 	<!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content e-content">
 		<?php the_content(); ?>
 
 		<?php if (function_exists('wp_pagenavi')) : // WP-PageNavi support ?>

@@ -45,11 +45,11 @@
 			</span>
 				<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 			</h2>
-			<h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1>
+			<h1 class="entry-title p-name" itemprop="name"><?php the_title(); ?></h1>
 		<?php endif; ?>
 	</header>
 	<!-- .entry-header -->
-	<div class="entry-content" itemprop="mainContentOfPage">
+	<div class="entry-content e-content" itemprop="mainContentOfPage">
 		<?php the_content(); ?>
 
 		<?php if (function_exists('wp_pagenavi')) : // WP-PageNavi support ?>

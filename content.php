@@ -23,13 +23,13 @@
 				<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 			</h2>
 		<?php endif; ?>
-		<h1 class="entry-title">
+		<h1 class="entry-title p-name">
 			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
 	</header>
 	<!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-summary e-summary">
 
 		<?php
 		/* Only show excerpts for Standard post format OR Chat format,

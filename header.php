@@ -36,7 +36,7 @@
 	</div>
 <?php endif; ?>
 
-<div id="page" class="hfeed site">
+<div id="page" class="site">
 	<header id="masthead" class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 		<div class="site-header-info">
