@@ -411,6 +411,8 @@ class IndependentPublisher_Customize {
 		self::generate_css( '.format-quote .entry-content a, .format-quote .entry-content a:hover, .format-quote .entry-content a:visited, .format-quote .entry-content a:active, .format-quote .entry-content a:focus', 'color', 'text_color' );
 		self::generate_css( '.post-excerpts .format-standard .entry-content a, .post-excerpts .format-standard .entry-content a:focus, .post-excerpts .format-standard .entry-content a:hover, .post-excerpts .format-standard .entry-content a:active, .post-excerpts .format-standard .entry-content a:visited', 'color', 'text_color' );
 		self::generate_css( '.post-excerpts .format-chat .entry-content a, .post-excerpts .format-chat .entry-content a:focus, .post-excerpts .format-chat .entry-content a:hover, .post-excerpts .format-chat .entry-content a:active, .post-excerpts .format-chat .entry-content a:visited', 'color', 'text_color' );
+		self::generate_css( '.post-excerpts .format-standard .entry-summary a, .post-excerpts .format-standard .entry-summary a:focus, .post-excerpts .format-standard .entry-summary a:hover, .post-excerpts .format-standard .entry-summary a:active, .post-excerpts .format-standard .entry-summary a:visited', 'color', 'text_color' );
+		self::generate_css( '.post-excerpts .format-chat .entry-summary a, .post-excerpts .format-chat .entry-summary a:focus, .post-excerpts .format-chat .entry-summary a:hover, .post-excerpts .format-chat .entry-summary a:active, .post-excerpts .format-chat .entry-summary a:visited', 'color', 'text_color' );
 
 		/* Link Color */
 
@@ -420,6 +422,10 @@ class IndependentPublisher_Customize {
 		self::generate_css( '.post-excerpts .format-standard.show-full-content-first-post .entry-content a', 'color', 'link_color' );
 		self::generate_css( '.post-excerpts .format-standard .entry-content a.moretag', 'color', 'link_color' );
 		self::generate_css( '.post-excerpts .format-standard .entry-content a.more-link', 'color', 'link_color' );
+		self::generate_css( '.post-excerpts .sticky.format-standard .entry-summary a, .post-excerpts .sticky.format-standard .entry-summary a:focus, .post-excerpts .sticky.format-standard .entry-summary a:hover, .post-excerpts .sticky.format-standard .entry-summary a:active, .post-excerpts .sticky.format-standard .entry-summary a:visited', 'color', 'link_color' );
+		self::generate_css( '.post-excerpts .format-standard.show-full-content-first-post .entry-summary a', 'color', 'link_color' );
+		self::generate_css( '.post-excerpts .format-standard .entry-summary a.moretag', 'color', 'link_color' );
+		self::generate_css( '.post-excerpts .format-standard .entry-summary a.more-link', 'color', 'link_color' );
 		self::generate_css( '.read-more a, .read-more a:hover', 'color', 'link_color' );
 		self::generate_css( '.entry-title a:hover', 'color', 'link_color' );
 		self::generate_css( '.entry-meta a:hover', 'color', 'link_color' );
