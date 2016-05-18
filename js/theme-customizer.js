@@ -62,6 +62,11 @@
 			$('.format-aside .entry-content a:focus').css('color', newval);
 			$('.format-aside .entry-content a:active').css('color', newval);
 			$('.format-aside .entry-content a:visited').css('color', newval);
+			$('.format-aside .entry-summary a').css('color', newval);
+			$('.format-aside .entry-summary a:hover').css('color', newval);
+			$('.format-aside .entry-summary a:focus').css('color', newval);
+			$('.format-aside .entry-summary a:active').css('color', newval);
+			$('.format-aside .entry-summary a:visited').css('color', newval);
 		});
 	});
 
@@ -97,6 +102,12 @@
 			$('.entry-content h4').css('color', newval);
 			$('.entry-content h5').css('color', newval);
 			$('.entry-content h6').css('color', newval);
+			$('.entry-summary h1').css('color', newval);
+			$('.entry-summary h2').css('color', newval);
+			$('.entry-summary h3').css('color', newval);
+			$('.entry-summary h4').css('color', newval);
+			$('.entry-summary h5').css('color', newval);
+			$('.entry-summary h6').css('color', newval);
 			$('.entry-title a').css('color', newval);
 			$('.author .archive-title a').css('color', newval);
 		});

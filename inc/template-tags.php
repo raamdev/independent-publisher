@@ -827,3 +827,25 @@ if ( !function_exists( '_wp_render_title_tag' ) ) :
 
 	add_action( 'wp_head', 'independent_publisher_render_title' );
 endif;
+
+if ( !function_exists( 'independent_publisher_show_excerpt' ) ):
+	/*
+	 * Determines if an excerpt should be shown for a given post. Used in the loop.
+	 */
+	function independent_publisher_show_excerpt() {
+		/* Only show excerpts for Standard post format OR Chat format,
+		 * when this is not both the very first standard post and also a Sticky post AND
+		 * when excerpts enabled or One-Sentence Excerpts enabled AND
+		 * this is not the very first standard post when Show Full Content First Post enabled
+		 */
+		if ( ( !get_post_format() || 'chat' === get_post_format() ) &&
+			( !( independent_publisher_is_very_first_standard_post() && is_sticky() ) ) &&
+			( independent_publisher_use_post_excerpts() || independent_publisher_generate_one_sentence_excerpts() ) &&
+			( !( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() && is_home() ) )
+		) {
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+endif;
