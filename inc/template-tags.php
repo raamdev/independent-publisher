@@ -208,7 +208,7 @@ if ( !function_exists( 'independent_publisher_posted_author' ) ) :
 		$post_author_nice_name = get_the_author_meta( 'display_name', $post_author_id );
 
 		printf(
-			'<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>',
+			'<span class="byline"><span class="author p-author vcard h-card"><a class="u-url url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ) ),
 			esc_attr( sprintf( __( 'View all posts by %s', 'independent-publisher' ), $post_author_nice_name ) ),
 			esc_html( $post_author_nice_name )
@@ -283,10 +283,10 @@ if ( !function_exists( 'independent_publisher_posted_on_date' ) ) :
 	 */
 	function independent_publisher_posted_on_date() {
 		printf(
-			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" itemprop="datePublished" pubdate="pubdate">%4$s</time></a>',
+			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date dt-published" datetime="%3$s" itemprop="datePublished" pubdate="pubdate">%4$s</time></a>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_title() ),
-			esc_attr( get_the_date( 'c' ) ),
+			esc_attr( get_the_date( DATE_ISO8601 ) ),
 			esc_html( get_the_date() )
 		);
 	}
@@ -300,10 +300,10 @@ if ( !function_exists( 'independent_publisher_post_updated_date' ) ) :
 	 */
 	function independent_publisher_post_updated_date() {
 		printf(
-			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date-modified" datetime="%3$s" moddate="moddate">%4$s</time></a>',
+			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date-modified dt-updated" datetime="%3$s" moddate="moddate">%4$s</time></a>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_title() ),
-			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_attr( get_the_modified_date( DATE_ISO8601 ) ),
 			esc_html( get_the_modified_date() )
 		);
 	}
@@ -617,7 +617,7 @@ if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
 							<div class="post-cover-title-image" style="background-image:url('<?php echo $featured_image_url; ?>');"></div>
 							<div class="post-cover-title-head">
 								<header class="post-cover-title">
-									<h1 class="entry-title" itemprop="name">
+									<h1 class="entry-title p-name" itemprop="name">
 										<?php echo get_the_title(); ?>
 									</h1>
 									<?php $subtitle = get_post_meta( get_the_id(), 'independent_publisher_post_cover_subtitle', true ); ?>
@@ -826,4 +826,26 @@ if ( !function_exists( '_wp_render_title_tag' ) ) :
 	}
 
 	add_action( 'wp_head', 'independent_publisher_render_title' );
+endif;
+
+if ( !function_exists( 'independent_publisher_show_excerpt' ) ):
+	/*
+	 * Determines if an excerpt should be shown for a given post. Used in the loop.
+	 */
+	function independent_publisher_show_excerpt() {
+		/* Only show excerpts for Standard post format OR Chat format,
+		 * when this is not both the very first standard post and also a Sticky post AND
+		 * when excerpts enabled or One-Sentence Excerpts enabled AND
+		 * this is not the very first standard post when Show Full Content First Post enabled
+		 */
+		if ( ( !get_post_format() || 'chat' === get_post_format() ) &&
+			( !( independent_publisher_is_very_first_standard_post() && is_sticky() ) ) &&
+			( independent_publisher_use_post_excerpts() || independent_publisher_generate_one_sentence_excerpts() ) &&
+			( !( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() && is_home() ) )
+		) {
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
 endif;

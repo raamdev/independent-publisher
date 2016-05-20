@@ -564,21 +564,25 @@ Accessibility
 ----------------------------------------------- */
 
 .site,
-.entry-content {
+.entry-content,
+.entry-summary {
 	*zoom: 1;
 }
 
 .site:before,
 .site:after,
 .entry-content:before,
-.entry-content:after {
+.entry-content:after,
+.entry-summary:before,
+.entry-summary:after {
 	display: table;
 	content: "";
 	line-height: 0;
 }
 
 .site:after,
-.entry-content:after {
+.entry-content:after,
+.entry-summary:after {
 	clear: both;
 }
 
@@ -616,7 +620,8 @@ Accessibility
 	margin: 0 0 0;
 }
 
-.entry-content > .sharedaddy {
+.entry-content > .sharedaddy,
+.entry-summary > .sharedaddy {
 	margin: 1.5em 0;
 }
 
@@ -640,11 +645,13 @@ Accessibility
 	float: left;
 }
 
-.entry-content .twitter-tweet-rendered {
+.entry-content .twitter-tweet-rendered,
+.entry-summary .twitter-tweet-rendered {
 	max-width: 100% !important;
 }
 
-.single .entry-content {
+.single .entry-content,
+.single .entry-summary {
 	padding-bottom: 20px;
 	margin-top: 0;
 }
@@ -697,7 +704,11 @@ Accessibility
 .post-excerpts .entry-content,
 .enhanced-excerpts .entry-content,
 .post-excerpts .entry-content a,
-.enhanced-excerpts .entry-content a {
+.enhanced-excerpts .entry-content a,
+.post-excerpts .entry-summary,
+.enhanced-excerpts .entry-summary,
+.post-excerpts .entry-summary a,
+.enhanced-excerpts .entry-summary a {
 	margin-top: 10px;
 	text-decoration: none;
 }
@@ -721,7 +732,8 @@ Accessibility
 	margin-bottom: 20px;
 }
 
-.entry-content .subtitle {
+.entry-content .subtitle,
+.entry-summary .subtitle {
 	font-style: italic;
 	font-weight: normal;
 	font-family: Georgia, "Times New Roman", Times, serif;
@@ -811,7 +823,8 @@ Accessibility
 	width: 90%;
 }
 
-.format-chat .entry-content {
+.format-chat .entry-content,
+.format-chat .entry-summary {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	background: #eee;
 	padding: 20px 20px 10px 20px;
@@ -825,6 +838,7 @@ Accessibility
 
 .site-header img,
 .entry-content img,
+.entry-summary img,
 .comment-content img,
 .widget img {
 	max-width: 100%; /* Fluid images for posts, comments, and widgets */
@@ -832,6 +846,7 @@ Accessibility
 
 .site-header img,
 .entry-content img,
+.entry-summary img,
 .widget img,
 img[class*="align"],
 img[class*="wp-image-"] {
@@ -840,12 +855,14 @@ img[class*="wp-image-"] {
 
 .site-header img,
 .entry-content img,
+.entry-summary img,
 img.size-full {
 	max-width: 100%;
 	width: auto\9; /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
 
 .entry-content img.wp-smiley,
+.entry-summary img.wp-smiley,
 .comment-content img.wp-smiley {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -1612,7 +1629,7 @@ body {
 	margin: 0;
 }
 
-.main-navigation a
+.main-navigation a,
 .widget-area ul li a {
 	text-decoration: none;
 }
@@ -1739,21 +1756,30 @@ h6 {
 .entry-content h3,
 .entry-content h4,
 .entry-content h5,
-.entry-content h6 {
+.entry-content h6,
+.entry-summary h1,
+.entry-summary h2,
+.entry-summary h3,
+.entry-summary h4,
+.entry-summary h5,
+.entry-summary h6 {
 	margin-top: 40px;
 	margin-bottom: 15px;
 }
 
-.entry-content h1 {
+.entry-content h1,
+.entry-summary h1 {
 	font-size: 2.1em;
 }
 
-.entry-content table {
+.entry-content table,
+.entry-summary table {
 	border-left: solid 1px #eee;
 	border-top: solid 1px #eee;
 }
 
-.entry-content table td {
+.entry-content table td,
+.entry-summary table td {
 	border-right: solid 1px #eee;
 	border-bottom: solid 1px #eee;
 }
@@ -1907,6 +1933,7 @@ article.first-post {
 }
 
 .entry-content,
+.entry-summary,
 .widget-area .widget,
 .comment {
 	-webkit-hyphens: auto;
@@ -2801,6 +2828,7 @@ table th {
 	}
 
 	.entry-content,
+	.entry-summary,
 	#comments {
 		font-size: 18px;
 		line-height: 1.4;
@@ -2818,31 +2846,39 @@ table th {
 		font-size: 1.9em;
 	}
 
-	.entry-content h1 {
+	.entry-content h1,
+	.entry-summary h1 {
 		font-size: 1.7em;
 	}
 
-	.entry-content h2 {
+	.entry-content h2,
+	.entry-summary h2 {
 		font-size: 1.6em;
 	}
 
-	.entry-content h3 {
+	.entry-content h3,
+	.entry-summary h3 {
 		font-size: 1.5em;
 	}
 
-	.entry-content h4 {
+	.entry-content h4,
+	.entry-summary h4 {
 		font-size: 1.4em;
 	}
 
-	.entry-content h5 {
+	.entry-content h5,
+	.entry-summary h5 {
 		font-size: 1.3em;
 	}
 
-	.entry-content h6 {
+	.entry-content h6,
+	.entry-summary h6 {
 		font-size: 1.2em;
 	}
 
-	.entry-content ol, ul {
+	.entry-content ol,
+	.entry-summary ol,
+	ul {
 		margin-left: 2em;
 	}
 
@@ -2923,7 +2959,8 @@ table th {
 		padding-left: 10px;
 	}
 
-	.entry-content .subtitle {
+	.entry-content .subtitle,
+	.entry-summary .subtitle {
 		font-size: 1.2em;
 	}
 

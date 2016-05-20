@@ -23,32 +23,19 @@
 				<?php do_action( 'independent_publisher_entry_title_meta', $separator = ' | ' ); ?>
 			</h2>
 		<?php endif; ?>
-		<h1 class="entry-title">
+		<h1 class="entry-title p-name">
 			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
 	</header>
 	<!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="<?php echo independent_publisher_show_excerpt() ? 'entry-summary e-summary' : 'entry-content e-content'; ?>">
 
-		<?php
-		/* Only show excerpts for Standard post format OR Chat format,
-		 * when this is not both the very first standard post and also a Sticky post AND
-		 * when excerpts enabled or One-Sentence Excerpts enabled AND
-		 * this is not the very first standard post when Show Full Content First Post enabled
-		 */
-		?>
-		<?php if ( ( !get_post_format() || 'chat' === get_post_format() ) &&
-			( !( independent_publisher_is_very_first_standard_post() && is_sticky() ) ) &&
-			( independent_publisher_use_post_excerpts() || independent_publisher_generate_one_sentence_excerpts() ) &&
-			( !( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() && is_home() ) )
-		) :
-			?>
+		<?php if ( independent_publisher_show_excerpt() ) : ?>
 
 			<?php the_excerpt(); ?>
 
-			<?php
-		else : ?>
+		<?php else : ?>
 
 			<?php /* Only show featured image for Standard post and gallery post formats */ ?>
 			<?php if ( has_post_thumbnail() && in_array( get_post_format(), array( 'gallery', false ) ) ) : ?>
