@@ -4,10 +4,10 @@ Theme URI: http://independentpublisher.me/
 Author: Raam Dev
 Author URI: http://raamdev.com
 Description: Independent Publisher is a beautiful reader-focused WordPress theme, for you. Clean, responsive, and mobile-ready, it gets out of your way and lets you share what you create. Full support for all Post Formats, HTML5-ready, and includes Schema.org markup. This theme is ideal for both single-author and multi-author blogs.
-Version: 1.6
+Version: 1.7
 License: GNU GPLv3
 License URI: http://www.gnu.org/copyleft/gpl.html
-Independent Publisher, Copyright 2014 Raam Dev
+Independent Publisher, Copyright 2016 Raam Dev
 Independent Publisher is distributed under the terms of the GNU GPL
 Tags: light, white, green, one-column, two-columns, left-sidebar, fluid-layout, featured-images, full-width-template, custom-menu, responsive-layout, custom-background, custom-colors, custom-menu, editor-style, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, theme-options
 
@@ -28,7 +28,9 @@ and Blueprint http://www.blueprintcss.org/
 Props to Manish Suwal 'Enwil' (http://enwil.com) and Radhika Morabia (http://rmorabia.com) for
 help with testing and contributing to the project during its early stages.
 
-Thanks also to @tlongren, @pcutler, @descubraomundo, @manishsuwal, @bitzl, and @peterk for their contributions on GitHub.
+Thanks also to @tlongren, @pcutler, @descubraomundo, @manishsuwal, @bitzl, @peterk,
+@EddyLB, @rmmartins, @PavelTajdus, @JHillert, @joch, @ryanmarkel, @mkiramu, @stevenatwork,
+@dshanske, @SpaceK33z, @iwillhappy1314, @henryk, @chrisaldrich, and @rad96 for their contributions on GitHub.
 
 Thanks to the following contributors for providing translation files:
 - French (contributed by Eddy Lelièvre-Berna; https://github.com/EddyLB)
@@ -36,6 +38,13 @@ Thanks to the following contributors for providing translation files:
 - Spanish (contributed by Guillermo Dolores; https://github.com/mkiramu)
 - German (contributed by J. Hillert; https://github.com/JHillert)
 - Czech (contributed by Tajdik; https://github.com/Tajdik)
+- Indonesian (contributed by @ekajogja; https://github.com/ekajogja)
+- Dutch (contributd by @raaphorst and @SpaceK33z; https://github.com/raaphorst and https://github.com/spaceK33z)
+- Mongolian (contributed by @uugankhuu; https://github.com/uugankhuu)
+- Portuguese-Brazil (contributed by @rmmartins; https://github.com/rmmartins)
+- Chinese (contributed by @iwillhappy1314; https://github.com/iwillhappy1314)
+- Turkish (contributed by @pekermert; https://github.com/pekermert)
+- Italian (contributed by Nicola)
 */
 
 /* =Reset

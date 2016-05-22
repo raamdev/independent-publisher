@@ -2,6 +2,38 @@ Independent Publisher is a beautiful reader-focused WordPress theme, for you.
 
 Version history:
 
+1.7
+
+* **Bug Fix**: When using the Single-column Layout, there was an unnecessary margin between the top of the post content and the bottom of the featured image. This has been removed.
+* **Bug Fix**: Fixed a missing closing `</li>` element in the Pings List function.
+* **Bug Fix**: When "Show Avatars" was disabled, the Header Image would appear on all pages except the Single Posts (where the Author Avatar shows up). For Single-Author Blogs who want to disable Avatars for the comments section, this resulted in the Header Image (often set to the single author's personal avatar) would show everywhere except on Single Posts. This was fixed by using the Header Image on Single Posts when Show Avatars is disabled and "Enable Multi-Author Mode" (in Appearance --> Customize --> General Options) was also disabled (i.e., the blog is a single-author blog). Props to @rmorabia for reporting this. See [#187](https://github.com/raamdev/independent-publisher/issues/187).
+* **Bug Fix**: Fixed an erroneous closing `</div>` in `inc/template-tags.php`. Props to @poolghost. See [#195](https://github.com/raamdev/independent-publisher/issues/195).
+* **Bug Fix**: Fixed an XSS vulnerability in `independent_publisher_replytocom()`. Props to @henryk. See [#200](https://github.com/raamdev/independent-publisher/pull/200).
+* **Bug Fix**: Fixed a bug where the post excerpts on the home page would use the Link Color instead of the Text Color. Props @adamcroom and Jakub Kapusnak. See [Issue #188](https://github.com/raamdev/independent-publisher/issues/188).
+* **Bug Fix**: Fixed a bug with changing Comment Form Background color in Customizer. Props @manishsuwal and @diogeneskelsen. See [Issue #173](https://github.com/raamdev/independent-publisher/issues/173).
+* **Bug Fix**: Fixed a bug where only one category would appear above the title on the Single Post Page when more than one category was selected; now all of categories appear. If you prefer the old behavior of only showing one category even when multiple categories have been selected, see [Issue #196](https://github.com/raamdev/independent-publisher/issues/196).
+* **Enhancement**: Pages now support Featured Images and Full-Width Featured Images (i.e., Post Covers). See [#171](https://github.com/raamdev/independent-publisher/issues/171).
+* **Enhancement**: Posts with a Gallery Post Format that include a Featured Image now display the Featured Image in Archive views (home page, date-based archives, category/tag-based archives, etc.). Props to @joch. See [#178](https://github.com/raamdev/independent-publisher/pull/178).
+* **Enhancement**: Added RSS Icon support to Social Menu. You can now add menu items to the Social Menu that have URLs containing `/feed` and those will show the RSS Icon. See [Issue #190](https://github.com/raamdev/independent-publisher/issues/190).
+* **Enhancement**: Theme Customizer CSS is now compressed and loaded via an external file. This increases page load time and cleans up the main HTML source. See [#116](https://github.com/raamdev/independent-publisher/issues/116).
+* **Enhancement**: Deprecated the `wp_title()` function. The WordPress Core `wp_title()` function has been deprecated as of WordPress v4.1. See [this post](https://make.wordpress.org/core/2015/10/20/document-title-in-4-4/) for more information.
+* **Enhancement**: Optimized several escape and translation functions, replacing `esc_attr( __() )` with `esc_html_e()`. Props @stevenatwork. See [Issue #214](https://github.com/raamdev/independent-publisher/pull/214) and [Issue #215](https://github.com/raamdev/independent-publisher/pull/215).
+* **Enhancement**: Improved the Link Post Format style. The title is now shown and includes an external link icon. Props @iksa01 and @kOoLiNuS for feedback. See [Issue #160](https://github.com/raamdev/independent-publisher/issues/160).
+* **Enhancement**: Added a new "Show Author Card on Single Posts" option to the Theme Customizer General Options. The default is enabled (the original behavior) but this can be disabled if you prefer not to show the author card at the bottom of Single posts. (Note that the author card only appears at the bottom of Single posts when using Single-Column Layout or when the browser resizes to less than 1200px wide.) See [Issue #134](https://github.com/raamdev/independent-publisher/issues/134).
+* **Enhancement**: Added support for [WP-PageNavi](https://wordpress.org/plugins/wp-pagenavi/). Props @tarampampam. See [Issue #179](https://github.com/raamdev/independent-publisher/issues/179).
+* **Enhancement**: Pings/trackbacks at the bottom of Single Posts are now shown even if the post has no comments. (Previously they only appeared when there was at least one comment.)
+* **Enhancement**: Added support for [Webmentions](https://indiewebcamp.com/Webmention) via the [IndieWebCamp WordPress plugins](https://indiewebcamp.com/wordpress). Props to @chrisaldrich, @dshanske, @raaphorst, @raumzeit77 for help and ideas. See Issues [#201](https://github.com/raamdev/independent-publisher/issues/201), [#197](https://github.com/raamdev/independent-publisher/issues/197), and [#155](https://github.com/raamdev/independent-publisher/issues/155).
+* **Enhancement**: Added [Microformats 2](http://microformats.org/wiki/microformats-2) markup. This includes a change to the classes applied to the content DIV on listings of posts: If an excerpt is being shown, the classes are `entry-summary e-summary`; if the full content is being shown, `entry-content e-content` is used. If you have a Child Theme with custom CSS targeting `entry-content`, you may need to update it to include `entry-summary`. Props @dshanske. See [Issue #221](https://github.com/raamdev/independent-publisher/issues/221).
+* **Translations**: Added Indonesian language translation (props to @ekajogja). See [#159](https://github.com/raamdev/independent-publisher/pull/159).
+* **Translations**: Added Dutch language translation (props to @raaphorst). See [#151]
+(https://github.com/raamdev/independent-publisher/issues/151).
+* **Translations**: Improved Dutch language translation (props to @SpaceK33z). See [#174](https://github.com/raamdev/independent-publisher/pull/174).
+* **Translations**: Added Mongolian translation (props @uugankhuu). See [#175](https://github.com/raamdev/independent-publisher/issues/175).
+* **Translations**: Added Portuguese-Brazil language translation (props to @rmmartins). See [#183](https://github.com/raamdev/independent-publisher/pull/183).
+* **Translations**: Added Simplified Chinese language translation (props to @iwillhappy1314). See [#193](https://github.com/raamdev/independent-publisher/pull/193).
+* **Translations:** Added Turkish language translation (props @pekermert). See [#207](https://github.com/raamdev/independent-publisher/pull/207).
+* **Translations**: Added Italian translations. Props Nicola.
+
 1.6
 
 * **New Feature**: Overlay Post Title on Post Cover. You can now choose to have the Post Title overlayed on top of the Post Cover, when setting a featured image to be full-width (Post Cover). See [#47](https://github.com/raamdev/independent-publisher/issues/47). (Thanks to @descubraomundo)
