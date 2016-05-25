@@ -43,20 +43,34 @@
 			<?php endif; ?>
 
 			<?php the_content( independent_publisher_continue_reading_text() ); ?>
-			<?php if (function_exists('wp_pagenavi')) : // WP-PageNavi support ?>
+		<?php
+		if ( is_front_page() && is_home() ): 
+  			// do nothing because multi-page links are odd on the homepage under an excerpt and existing read more link 
+		else:
+		?>
+		<?php if (function_exists('wp_pagenavi')) : // WP-PageNavi support ?>
+			<?php wp_pagenavi( array( 'type' => 'multipart' ) ); ?>
 
-				<?php wp_pagenavi( array( 'type' => 'multipart' ) ); ?>
+		<?php else : ?>
 
-			<?php else: ?>
+			<?php wp_link_pages(
+				array(
+					'before'           => '<div class="page-links-next-prev">',
+					'after'            => '</div>',
+					'nextpagelink'     => '<button class="next-page-nav">' . __( 'Next page &rarr;', 'independent-publisher' ) . '</button>',
+					'previouspagelink' => '<button class="previous-page-nav">' . __( '&larr; Previous page', 'independent-publisher' ) . '</button>',
+					'next_or_number'   => 'next'
+				)
+			); ?>
+			<?php wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'independent-publisher' ),
+					'after'  => '</div>'
+				)
+			); ?>
+		<?php endif; ?>
 
-				<?php wp_link_pages(
-					array(
-						'before' => '<div class="page-links">' . __( 'Pages:', 'independent-publisher' ),
-						'after'  => '</div>'
-					)
-				); ?>
-
-			<?php endif; ?>
+		<?php endif; ?>
 
 		<?php endif; ?>
 	</div>
