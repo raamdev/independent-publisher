@@ -24,13 +24,7 @@ get_header(); ?>
 
 				<?php do_action( 'independent_publisher_before_post_bottom_tag_list' ); ?>
 
-				<?php if ( get_the_tag_list() ) : ?>
-					<?php $tag_list_title = apply_filters( 'independent_publisher_tag_list_title', __( 'Related Content by Tag', 'independent-publisher' ) ); ?>
-					<?php $tag_list = (string) get_the_tag_list( '<ul class="taglist"><li class="taglist-title">' . $tag_list_title . '</li><li>', '</li><li>', '</li></ul>' ); ?>
-					<div id="taglist">
-						<?php echo $tag_list; ?>
-					</div>
-				<?php endif; ?>
+				<?php independent_publisher_show_related_tags(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 

@@ -849,3 +849,19 @@ if ( !function_exists( 'independent_publisher_show_excerpt' ) ):
 		}
 	}
 endif;
+
+if ( ! function_exists( 'independent_publisher_show_related_tags' ) ) :
+	/**
+	 * Display a list of all other tags at the bottom of each post.
+	 */
+	function independent_publisher_show_related_tags() {
+		if ( get_the_tag_list() ) :
+
+			$tag_list_title = apply_filters( 'independent_publisher_tag_list_title', __( 'Related Content by Tag', 'independent-publisher' ) );
+			$tag_list = (string) get_the_tag_list( '<ul class="taglist"><li class="taglist-title">' . $tag_list_title . '</li><li>', '</li><li>', '</li></ul>' );
+
+			printf( '<div id="taglist">%s</div>', $tag_list );
+
+		endif;
+	}
+endif;
