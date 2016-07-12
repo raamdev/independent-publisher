@@ -34,6 +34,7 @@ WordPress.com took the original Independent Publisher theme from WordPress.org a
     * [Why is the Navigation Menu and/or Widgets not Appearing on Single Post Pages?](https://github.com/raamdev/independent-publisher#why-is-the-navigation-menu-andor-widgets-not-appearing-on-single-post-pages)
     * [How can I obfuscate my email address in the Social Menu?](https://github.com/raamdev/independent-publisher/#how-can-i-obfuscate-my-email-address-in-the-social-menu)
     * [How can I use a Full Size Image for the Post Cover?](https://github.com/raamdev/independent-publisher/#how-can-i-use-a-full-size-image-for-the-post-cover)
+    * [How can I use the Full Size Image for Featured Images?](https://github.com/raamdev/independent-publisher/#how-can-i-use-a-full-size-image-for-featured-images)
 * [Color Schemes](https://github.com/raamdev/independent-publisher#color-schemes)
 * [Theme Filters and Actions](https://github.com/raamdev/independent-publisher#theme-filters-and-actions)
 * [Functions you can Override in a Child Theme](https://github.com/raamdev/independent-publisher#functions-you-can-override-in-a-child-theme)
@@ -351,6 +352,19 @@ function __custom_independent_publisher_full_width_featured_image_size() {
 }
 
 add_filter( 'independent_publisher_full_width_featured_image_size', '__custom_independent_publisher_full_width_featured_image_size' );
+```
+
+### How can I use a Full Size Image for the Post Cover?
+
+By default, the theme will use a 100% width for featured images, which means`700px` wide. You can override this and use whatever the full image size is by adding the following to your Child Theme's `style.css` file:
+
+```php
+.single .wp-post-image,
+.page .wp-post-image,
+.blog .wp-post-image,
+.archive .wp-post-image {
+	width: auto;
+}
 ```
 
 ## Color Schemes
