@@ -354,7 +354,7 @@ function __custom_independent_publisher_full_width_featured_image_size() {
 add_filter( 'independent_publisher_full_width_featured_image_size', '__custom_independent_publisher_full_width_featured_image_size' );
 ```
 
-### How can I use a Full Size Image for the Post Cover?
+### How can I use a Full Size Image for Featured Images?
 
 By default, the theme will use a 100% width for featured images, which means`700px` wide. You can override this and use whatever the full image size is by adding the following to your Child Theme's `style.css` file:
 
