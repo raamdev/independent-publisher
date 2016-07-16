@@ -293,7 +293,7 @@ class IndependentPublisher_Customize {
 		
 		// Show comment author's full name in reply-link
 		$wp_customize->add_setting(
-			'independent_publisher_general_options[show_comment_authors_full_name_in_reply_link]', array(
+			'independent_publisher_general_options[show_full_name_comment_reply_to]', array(
 				'default'           => false,
 				'type'              => 'option',
 				'capability'        => 'edit_theme_options',
@@ -301,8 +301,8 @@ class IndependentPublisher_Customize {
 			)
 		);
 		$wp_customize->add_control(
-			'show_comment_authors_full_name_in_reply_link', array(
-				'settings' => 'independent_publisher_general_options[show_comment_authors_full_name_in_reply_link]',
+			'show_full_name_comment_reply_to', array(
+				'settings' => 'independent_publisher_general_options[show_full_name_comment_reply_to]',
 				'label'    => __( 'Show Full Name in Comment Reply-to', 'independent-publisher' ),
 				'section'  => 'independent_publisher_general_options',
 				'type'     => 'checkbox',

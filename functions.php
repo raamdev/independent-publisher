@@ -336,7 +336,7 @@ function independent_publisher_comment_count( $count ) {
 if ( ! function_exists( 'independent_publisher_show_comment_authors_full_name_in_reply_link' ) ):
 	function independent_publisher_show_comment_authors_full_name_in_reply_link() {
 		$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
-		if ( isset( $independent_publisher_general_options['show_comment_authors_full_name_in_reply_link'] ) && $independent_publisher_general_options['show_comment_authors_full_name_in_reply_link'] ) {
+		if ( isset( $independent_publisher_general_options['show_full_name_comment_reply_to'] ) && $independent_publisher_general_options['show_full_name_comment_reply_to'] ) {
 			return true;
 		} else {
 			return false;
