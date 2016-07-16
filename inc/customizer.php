@@ -303,7 +303,7 @@ class IndependentPublisher_Customize {
 		$wp_customize->add_control(
 			'show_comment_authors_full_name_in_reply_link', array(
 				'settings' => 'independent_publisher_general_options[show_comment_authors_full_name_in_reply_link]',
-				'label'    => __( 'Show comment author\'s full name in reply-link', 'independent-publisher' ),
+				'label'    => __( 'Show Full Name in Comment Reply-to', 'independent-publisher' ),
 				'section'  => 'independent_publisher_general_options',
 				'type'     => 'checkbox',
 			)
