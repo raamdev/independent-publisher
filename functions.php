@@ -333,8 +333,8 @@ function independent_publisher_comment_count( $count ) {
 	}
 }
 
-if ( ! function_exists( 'independent_publisher_show_comment_authors_full_name_in_reply_link' ) ):
-	function independent_publisher_show_comment_authors_full_name_in_reply_link() {
+if ( ! function_exists( 'independent_publisher_show_full_name_comment_reply_to' ) ):
+	function independent_publisher_show_full_name_comment_reply_to() {
 		$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
 		if ( isset( $independent_publisher_general_options['show_full_name_comment_reply_to'] ) && $independent_publisher_general_options['show_full_name_comment_reply_to'] ) {
 			return true;
@@ -365,7 +365,7 @@ if ( ! function_exists( 'independent_publisher_author_comment_reply_link' ) ) :
 		}
 
 		// If the user provided more than a first name, use only first name if the theme is configured to do so
-		if ( strpos( $author, ' ' ) && !independent_publisher_show_comment_authors_full_name_in_reply_link() ) {
+		if ( strpos( $author, ' ' ) && !independent_publisher_show_full_name_comment_reply_to() ) {
 			$author = substr( $author, 0, strpos( $author, ' ' ) );
 		}
 
