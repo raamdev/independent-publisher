@@ -290,6 +290,24 @@ class IndependentPublisher_Customize {
 				'type'     => 'checkbox',
 			)
 		);
+		
+		// Show comment author's full name in reply-link
+		$wp_customize->add_setting(
+			'independent_publisher_general_options[show_comment_authors_full_name_in_reply_link]', array(
+				'default'           => false,
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'show_comment_authors_full_name_in_reply_link', array(
+				'settings' => 'independent_publisher_general_options[show_comment_authors_full_name_in_reply_link]',
+				'label'    => __( 'Show comment author\'s full name in reply-link', 'independent-publisher' ),
+				'section'  => 'independent_publisher_general_options',
+				'type'     => 'checkbox',
+			)
+		);
 
 		// Comments Call to Action text
 		$wp_customize->add_setting(
