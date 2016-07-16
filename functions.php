@@ -364,8 +364,7 @@ if ( ! function_exists( 'independent_publisher_author_comment_reply_link' ) ) :
 			$author = $comment->comment_author;
 		}
 
-		// If the user provided more than a first name, use only first name
-		$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+		// If the user provided more than a first name, use only first name if the theme is configured to do so
 		if ( strpos( $author, ' ' ) && !independent_publisher_show_comment_authors_full_name_in_reply_link() ) {
 			$author = substr( $author, 0, strpos( $author, ' ' ) );
 		}
