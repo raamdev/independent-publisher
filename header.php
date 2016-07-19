@@ -38,7 +38,11 @@
 
 <div id="page" class="site">
 	<header id="masthead" class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-
+		<input id="mobile-menu-icon" type="checkbox" />
+		<label for="mobile-menu-icon"></label>
+		<div id="site-header-info-mobile">
+			<?php independent_publisher_site_info(); ?>
+		</div>
 		<div class="site-header-info">
 			<?php if ( is_single() ) : ?>
 				<?php // Show only post author info on Single Pages ?>
