@@ -38,6 +38,13 @@ if ( ! function_exists( 'independent_publisher_setup' ) ) :
 		require( get_template_directory() . '/inc/customizer.php' );
 
 		/**
+		 * Load support for Microformats 2
+		 *
+		 * @since 1.7.5
+		 */
+		require( get_template_directory() . '/inc/mf2.php' );
+
+		/**
 		 * Make theme available for translation
 		 * Translations can be filed in the /languages/ directory
 		 */
