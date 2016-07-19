@@ -333,9 +333,20 @@ function independent_publisher_comment_count( $count ) {
 	}
 }
 
+if ( ! function_exists( 'independent_publisher_show_full_name_comment_reply_to' ) ):
+	function independent_publisher_show_full_name_comment_reply_to() {
+		$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+		if ( isset( $independent_publisher_general_options['show_full_name_comment_reply_to'] ) && $independent_publisher_general_options['show_full_name_comment_reply_to'] ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+endif;
+
 if ( ! function_exists( 'independent_publisher_author_comment_reply_link' ) ) :
 	/*
-	 * Change the comment reply link to use 'Reply to [Author First Name]'
+	 * Change the comment reply link to use 'Reply to [Author Name]'
 	 */
 	function independent_publisher_author_comment_reply_link( $link, $args, $comment ) {
 
@@ -353,12 +364,12 @@ if ( ! function_exists( 'independent_publisher_author_comment_reply_link' ) ) :
 			$author = $comment->comment_author;
 		}
 
-		// If the user provided more than a first name, use only first name
-		if ( strpos( $author, ' ' ) ) {
+		// If the user provided more than a first name, use only first name if the theme is configured to do so
+		if ( strpos( $author, ' ' ) && !independent_publisher_show_full_name_comment_reply_to() ) {
 			$author = substr( $author, 0, strpos( $author, ' ' ) );
 		}
 
-		// Replace Reply Link with "Reply to <Author First Name>"
+		// Replace Reply Link with "Reply to <Author Name>"
 		$reply_link_text = $args['reply_text'];
 		$link            = str_replace( $reply_link_text, __( 'Reply to', 'independent-publisher' ) . ' ' . $author, $link );
 
