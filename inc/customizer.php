@@ -19,7 +19,7 @@ class IndependentPublisher_Customize {
 			'link_color' => '#57ad68',
 			'header_text_color' => '#333332',
 			'primary_meta_text_color' => '#929292',
-			'secondary_meta_text_color' => 'b3b3b1'
+			'secondary_meta_text_color' => '#b3b3b1'
 	);
 
 	public static function register( $wp_customize ) {
