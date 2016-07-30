@@ -1298,6 +1298,18 @@ endif;
 
 if ( ! function_exists( 'independent_publisher_post_thumbnail_link_title' ) ) :
 	function independent_publisher_post_thumbnail_link_title() {
+		independent_publisher_post_link_title_common();
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_post_link_title' ) ) :
+	function independent_publisher_post_link_title() {
+		independent_publisher_post_link_title_common();
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_post_link_title_common' ) ) :
+	function independent_publisher_post_link_title_common() {
 		echo esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) );
 	}
 endif;

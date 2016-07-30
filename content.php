@@ -24,7 +24,7 @@
 			</h2>
 		<?php endif; ?>
 		<h1 class="entry-title p-name">
-			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+			<a href="<?php the_permalink(); ?>" title="<?php independent_publisher_post_link_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
 	</header>
 	<!-- .entry-header -->
