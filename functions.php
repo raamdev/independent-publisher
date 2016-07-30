@@ -1296,8 +1296,10 @@ if ( ! function_exists( 'independent_publisher_show_page_load_progress_bar' ) ) 
 	}
 endif;
 
-if ( ! function_exists( 'independent_publisher_post_thumbnail_frontpage_link_title' ) ) :
-	function independent_publisher_post_thumbnail_frontpage_link_title() {
+if ( ! function_exists( 'independent_publisher_post_thumbnail_link_title' ) ) :
+	function independent_publisher_post_thumbnail_link_title() {
 		echo esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) );
 	}
 endif;
+
+?>
