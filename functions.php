@@ -1187,7 +1187,7 @@ if ( ! function_exists( 'independent_publisher_maybe_linkify_the_content' ) ) :
 			$content = independent_publisher_clean_content( $content );
 
 			// Now we can link the Quote or Aside content to itself
-			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
+			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . independent_publisher_post_link_title() . '">' . $content . '</a>';
 		}
 
 		return $content;
@@ -1202,7 +1202,7 @@ if ( ! function_exists( 'independent_publisher_maybe_linkify_the_excerpt' ) ) :
 	 */
 	function independent_publisher_maybe_linkify_the_excerpt( $content ) {
 		if ( !is_single() ) {
-			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) ) . '">' . $content . '</a>';
+			$content = '<a href="' . get_permalink() . '" rel="bookmark" title="' . independent_publisher_post_link_title() . '">' . $content . '</a>';
 		}
 
 		return $content;
@@ -1298,19 +1298,19 @@ endif;
 
 if ( ! function_exists( 'independent_publisher_post_thumbnail_link_title' ) ) :
 	function independent_publisher_post_thumbnail_link_title() {
-		independent_publisher_post_link_title_common();
+		return independent_publisher_post_link_title_common();
 	}
 endif;
 
 if ( ! function_exists( 'independent_publisher_post_link_title' ) ) :
 	function independent_publisher_post_link_title() {
-		independent_publisher_post_link_title_common();
+		return independent_publisher_post_link_title_common();
 	}
 endif;
 
 if ( ! function_exists( 'independent_publisher_post_link_title_common' ) ) :
 	function independent_publisher_post_link_title_common() {
-		echo esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) );
+		return esc_attr( sprintf( __( 'Permalink to %s', 'independent-publisher' ), the_title_attribute( 'echo=0' ) ) );
 	}
 endif;
 

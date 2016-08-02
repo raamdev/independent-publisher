@@ -24,7 +24,7 @@
 			</h2>
 		<?php endif; ?>
 		<h1 class="entry-title p-name">
-			<a href="<?php the_permalink(); ?>" title="<?php independent_publisher_post_link_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
+			<a href="<?php the_permalink(); ?>" title="<?php echo independent_publisher_post_link_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
 	</header>
 	<!-- .entry-header -->
@@ -39,7 +39,7 @@
 
 			<?php /* Only show featured image for Standard post and gallery post formats */ ?>
 			<?php if ( has_post_thumbnail() && in_array( get_post_format(), array( 'gallery', false ) ) ) : ?>
-				<a href="<?php the_permalink(); ?>" title="<?php independent_publisher_post_thumbnail_link_title(); ?>"><?php the_post_thumbnail( 'independent_publisher_post_thumbnail' ); ?></a>
+				<a href="<?php the_permalink(); ?>" title="<?php echo independent_publisher_post_thumbnail_link_title(); ?>"><?php the_post_thumbnail( 'independent_publisher_post_thumbnail' ); ?></a>
 			<?php endif; ?>
 
 			<?php the_content( independent_publisher_continue_reading_text() ); ?>
