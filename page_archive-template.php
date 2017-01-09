@@ -28,6 +28,7 @@ get_header(); ?>
 
 						<?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 15 ) ); ?>
 
+						<?php if ( independent_publisher_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 						<div class="widget">
 							<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'independent-publisher' ); ?></h2>
 							<ul>
@@ -42,6 +43,7 @@ get_header(); ?>
 								); ?>
 							</ul>
 						</div>
+						<?php endif; ?>
 
 						<div class="widget">
 							<h2 class="widget-title"><?php esc_html_e( 'Yearly Archives', 'independent-publisher' ); ?></h2>
