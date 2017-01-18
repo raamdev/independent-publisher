@@ -356,7 +356,9 @@ add_filter( 'independent_publisher_full_width_featured_image_size', '__custom_in
 
 ### How can I use a Full Size Image for Featured Images?
 
-By default, the theme will use a 100% width for featured images, which means`700px` wide. You can override this and use whatever the full image size is by adding the following to your Child Theme's `style.css` file:
+The theme uses the default of `700px` for various reasons, including bandwidth considerations. However, you can easily override the default featured image width and show the `full` width (or any of the [WordPress thumbnail sizes](http://codex.wordpress.org/Function_Reference/the_post_thumbnail#Thumbnail_Sizes)).
+
+First, you'll need to update teh CSS. By default, the theme CSS will use a 100% width for featured images (which means `700px` wide by default). You can override this and use whatever the full image size is by adding the following to your Child Theme's `style.css` file:
 
 ```php
 .single .wp-post-image,
@@ -366,6 +368,18 @@ By default, the theme will use a 100% width for featured images, which means`700
 	width: auto;
 }
 ```
+
+You'll also need to add the following code to a Child Theme's `functions.php` file (instead of `full`, you can use any of the [WordPress thumbnail sizes](http://codex.wordpress.org/Function_Reference/the_post_thumbnail#Thumbnail_Sizes)):
+
+``` php
+function __custom_independent_publisher_full_width_featured_image_size() {
+    return "full";
+}
+
+add_filter( 'independent_publisher_full_width_featured_image_size', '__custom_independent_publisher_full_width_featured_image_size' );
+```
+
+If you add the above PHP code and discover that your post Featured Images are too big, try removing the CSS that you added above so that images get a 100% width.
 
 ## Color Schemes
 
