@@ -355,9 +355,7 @@ if ( ! function_exists( 'independent_publisher_author_comment_reply_link' ) ) :
 	/*
 	 * Change the comment reply link to use 'Reply to [Author Name]'
 	 */
-	function independent_publisher_author_comment_reply_link( $link, $args, $comment ) {
-
-		$comment = get_comment( $comment );
+	function independent_publisher_author_comment_reply_link( $args, $comment, $post ) {
 
 		// If no comment author is blank, use 'Anonymous'
 		if ( empty( $comment->comment_author ) ) {
@@ -376,16 +374,14 @@ if ( ! function_exists( 'independent_publisher_author_comment_reply_link' ) ) :
 			$author = substr( $author, 0, strpos( $author, ' ' ) );
 		}
 
-		// Replace Reply Link with "Reply to <Author Name>"
-		$reply_link_text = $args['reply_text'];
-		$link            = str_replace( $reply_link_text, __( 'Reply to', 'independent-publisher' ) . ' ' . $author, $link );
+		// Replace Reply Text with "Reply to <Author Name>"
+		$args['reply_text'] = __( 'Reply to', 'independent-publisher' ) . ' ' . $author;
 
-		return $link;
+		return $args;
 	}
 endif;
 
-add_filter( 'comment_reply_link', 'independent_publisher_author_comment_reply_link', 420, 4 );
-
+add_filter( 'comment_reply_link_args', 'independent_publisher_author_comment_reply_link', 420, 4 );
 
 if ( ! function_exists( 'independent_publisher_comment_form_args' ) ) :
 	/**

@@ -44,7 +44,7 @@ if ( !function_exists( 'independent_publisher_content_nav' ) ) :
 			<?php if ( is_single() ) : // navigation links for single posts ?>
 
 				<?php wp_pagenavi(); ?>
-				
+
 				<?php previous_post_link( '<div class="nav-previous"><button>%link</button></div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'independent-publisher' ) . '</span> %title' ); ?>
 				<?php next_post_link( '<div class="nav-next"><button>%link</button></div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'independent-publisher' ) . '</span>' ); ?>
 
@@ -90,7 +90,7 @@ if ( !function_exists( 'independent_publisher_comment' ) ) :
 			<footer>
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 48 ); ?>
-					<?php printf( sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
 					<?php if ( $comment->comment_approved == '0' ) : ?>
 						<?php $comment_content_class = "unapproved"; ?>
 						<em><?php _e( ' - Your comment is awaiting moderation.', 'independent-publisher' ); ?></em>
@@ -673,13 +673,7 @@ if ( !function_exists( 'independent_publisher_search_stats' ) ):
 		$current_page_num = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$pagination_info  = '';
 
-		/**
-		 * Only show pagination info when there is more than 1 page
-		 */
-		if ( $total_pages > 1 ) {
-			$pagination_info = sprintf( __( 'this is page <strong>%1$s</strong> of <strong>%2$s</strong>', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
-		}
-
+		$pagination_info = sprintf( __( 'this is page <strong>%1$s</strong> of <strong>%2$s</strong>', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
 		$stats_text = sprintf( _n( 'Found one search result for <strong>%2$s</strong>.', 'Found %1$s search results for <strong>%2$s</strong> (%3$s).', $total, 'independent-publisher' ), number_format_i18n( $total ), get_search_query(), $pagination_info );
 
 		return wpautop( $stats_text );
@@ -704,12 +698,7 @@ if ( !function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 		$pagination_info  = '';
 		$stats_text       = '';
 
-		/**
-		 * Only show pagination info when there is more than 1 page
-		 */
-		if ( $total_pages > 1 ) {
-			$pagination_info = sprintf( __( 'this is page <strong>%1$s</strong> of <strong>%2$s</strong>', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
-		}
+		$pagination_info = sprintf( __( 'this is page <strong>%1$s</strong> of <strong>%2$s</strong>', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
 
 		if ( $taxonomy === 'category' ) {
 			$stats_text = sprintf( _n( 'There is one post filed in <strong>%2$s</strong>.', 'There are %1$s posts filed in <strong>%2$s</strong> (%3$s).', $total, 'independent-publisher' ), number_format_i18n( $total ), single_term_title( '', false ), $pagination_info );
@@ -733,12 +722,7 @@ if ( !function_exists( 'independent_publisher_date_archive_description' ) ):
 		$pagination_info   = '';
 		$date_archive_meta = '';
 
-		/**
-		 * Only show pagination info when there is more than 1 page
-		 */
-		if ( $total_pages > 1 ) {
-			$pagination_info = sprintf( __( 'this is page <strong>%1$s</strong> of <strong>%2$s</strong>', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
-		}
+		$pagination_info = sprintf( __( 'this is page <strong>%1$s</strong> of <strong>%2$s</strong>', 'independent-publisher' ), number_format_i18n( $current_page_num ), number_format_i18n( $total_pages ) );
 
 		/**
 		 * Only proceed if we're on the first page and the description has not been overridden via independent_publisher_custom_date_archive_meta
