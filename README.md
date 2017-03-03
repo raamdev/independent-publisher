@@ -23,7 +23,6 @@ WordPress.com took the original Independent Publisher theme from WordPress.org a
     * [How do I get the small logo to show up in the top-left corner?](https://github.com/raamdev/independent-publisher#how-do-i-get-the-small-logo-to-show-up-in-the-top-left-corner)
     * [Why is my Author Bio and picture at the top of my home page (or below a blog post) and not on the side?](https://github.com/raamdev/independent-publisher#why-is-my-author-bio-and-picture-at-the-top-of-my-home-page-or-below-a-blog-post-and-not-on-the-side)
     * [How do I add Social Media Buttons below the Logo?](https://github.com/raamdev/independent-publisher#how-do-i-add-social-media-buttons-below-the-logo)
-    * [How do I make the JetPack Sharing Buttons look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-jetpack-sharing-buttons-look-better)
     * [How do I make the Subscribe to Comments Reloaded Advanced Options look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-subscribe-to-comments-reloaded-advanced-options-look-better)
     * [How do I make MailChimp Signup Forms look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-mailchimp-signup-forms-look-better)
     * [How do I add an Archive Page?](https://github.com/raamdev/independent-publisher#how-do-i-add-an-archive-page)
@@ -157,13 +156,6 @@ First you need to go to *Dashboard → Appearance → Menu*. Once there, create 
 After you're done, below in **Theme Locations** (located in the **Menu Settings** tab), choose **Social**.
 
 ![screen shot 2014-02-18 at 11 42 31 am](https://f.cloud.github.com/assets/5318719/2192202/dcd5a848-9861-11e3-8e96-85cc4cdee1cb.png)
-
-
-### How do I make the JetPack Sharing Buttons look better?
-
-If you clear the JetPack Sharing Buttons "Sharing label" field so that it's empty, Independent Publisher will force the sharing buttons to float right and will remove the right padding so that the buttons look nicer.
-
-![4dc42092-83b9-11e3-96a3-8b9580f82f80](https://f.cloud.github.com/assets/53005/2000387/8c1796bc-8558-11e3-8ee4-0c4f9f4fbf2e.png)
 
 ### How do I make the Subscribe to Comments Reloaded Advanced Options look better?
 
