@@ -44,7 +44,7 @@ if (
 endif;
 
 /*
- * When JetPack Comments is enabled, don't load our comment form enhancements
+ * When Jetpack Comments is enabled, don't load our comment form enhancements
  */
 if (
 	class_exists( 'Jetpack' )

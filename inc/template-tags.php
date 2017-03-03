@@ -686,7 +686,7 @@ if ( !function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 	 */
 	function independent_publisher_taxonomy_archive_stats( $taxonomy = 'category' ) {
 
-		// There's no point in showing page numbers of we're using JetPack's Infinite Scroll module
+		// There's no point in showing page numbers of we're using Jetpack's Infinite Scroll module
 		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) ) {
 			return '';
 		}
@@ -791,7 +791,7 @@ endif;
 if ( !function_exists( 'independent_publisher_footer_credits' ) ):
 	/**
 	 * Echoes the theme footer credits. Overriding this function in a Child Theme also
-	 * applies the changes to JetPack's Infinite Scroll footer.
+	 * applies the changes to Jetpack's Infinite Scroll footer.
 	 */
 	function independent_publisher_footer_credits() {
 		return independent_publisher_get_footer_credits();

@@ -169,7 +169,7 @@ Note that double-quotes are not allowed in that field and that you *must* use si
 
 ### How do I make MailChimp Signup Forms look better?
 
-MailChimp includes its own CSS in the HTML embed code that, by default, doesn't look quite right with Independent Publisher. To fix the MailChimp CSS, you can add the following to the `style.css` file of a [Child Theme](https://github.com/raamdev/independent-publisher-child-theme/) (or if you're using JetPack, simply go to *Appearance → Edit CSS* and insert the following):
+MailChimp includes its own CSS in the HTML embed code that, by default, doesn't look quite right with Independent Publisher. To fix the MailChimp CSS, you can add the following to the `style.css` file of a [Child Theme](https://github.com/raamdev/independent-publisher-child-theme/) (or if you're using Jetpack, simply go to *Appearance → Edit CSS* and insert the following):
 
 ```
 #mc_signup .button {
@@ -439,7 +439,7 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_min_comments_bottom_comment_button()` - Returns the minimum number of comments that must exist for the bottom 'Write a Comment' button to appear
 - `independent_publisher_min_comments_comment_title()` - Returns the minimum number of comments that must exist for the comments title to appear
 - `independent_publisher_hide_comments()` - Determines if the comments and comment form should be hidden altogether. This differs from disabling the comments by also hiding the "Comments are closed." message and allows for easily overriding this function in a Child Theme.
-- `independent_publisher_footer_credits()` - Echoes the theme footer credits. Overriding this function in a Child Theme also applies the changes to JetPack's Infinite Scroll footer.
+- `independent_publisher_footer_credits()` - Echoes the theme footer credits. Overriding this function in a Child Theme also applies the changes to Jetpack's Infinite Scroll footer.
 
 ### Functions in `functions.php`:
 

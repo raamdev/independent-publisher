@@ -218,17 +218,17 @@ function independent_publisher_scripts() {
 	}
 
 	/**
-	 * Load JetPack Sharing Buttons Style Enhancements
+	 * Load Jetpack Sharing Buttons Style Enhancements
 	 */
 	independent_publisher_jetpack_sharing_css();
 
 	/**
-	 * Load JetPack Sharing Buttons blank Sharing Label Enhancement
+	 * Load Jetpack Sharing Buttons blank Sharing Label Enhancement
 	 */
 	independent_publisher_jetpack_sharing_label_css();
 
 	/**
-	 * Load JetPack Infinite Scroll Dark Overlay Bug Fix
+	 * Load Jetpack Infinite Scroll Dark Overlay Bug Fix
 	 */
 	independent_publisher_jetpack_dark_overlay_fix_css();
 
