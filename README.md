@@ -418,7 +418,7 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 
 - `independent_publisher_content_nav()` - Display navigation to next/previous pages when applicable
 - `independent_publisher_comment()` - Template for comments and pingbacks.
-- `independent_publisher_pings()` - Creates a custom query for pingbacks/trackbacks (i.e., 'pings') and displays them. Using this custom query instead of `wp_list_comments()` allows us to always show all pings, even when we're showing paginated comments.
+- `independent_publisher_mentions()` - Creates a custom query for webmentions, pings, and trackbacks and displays them. Using this custom query instead of `wp_list_comments()` allows us to always show all mentions, even when we're showing paginated comments.
 - `independent_publisher_posted_author()` - Prints HTML with meta information for the current author.
 - `independent_publisher_posted_author_cats()` - Prints HTML with meta information for the current author and post categories. Only prints author name when Multi-Author Mode is enabled.
 - `independent_publisher_posted_on_date()` - Prints HTML with meta information for the current post-date/time.

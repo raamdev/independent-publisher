@@ -137,6 +137,9 @@ if ( !function_exists( 'independent_publisher_pings' ) ) :
 	 * even when we're showing paginated comments.
 	 *
 	 * @since Independent Publisher 1.0
+	 *
+	 * @deprecated 1.7 No longer used in code; replaced by independent_publisher_mentions()
+	 * @see independent_publisher_mentions()
 	 */
 	function independent_publisher_pings() {
 		$args        = array(
