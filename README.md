@@ -403,8 +403,7 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_entry_meta_author_prefix` - Allows you to override the default Author prefix (default is 'by'; e.g., "by <author name>").
 - `independent_publisher_search_stats` - Allows you to override the Search stats shown on Search pages.
 - `independent_publisher_tag_list_title` - Allows you to override the default Tag List Title of 'Related Content by Tag' at the bottom of Single posts.
-- `independent_publisher_pingslist_title` - Allows you to override the default Pings List title of 'Readers who Shared This' at the bottom of Single posts.
-- `independent_publisher_pingslist_end_note` - Allows you to override the default Pings List end note of 'Thank you!' at the bottom of Single posts.
+- `independent_publisher_webmentions_title` - Allows you to override the default Webmentions title of 'Webmentions' at the bottom of Single posts.
 
 ### Action Hooks
 
