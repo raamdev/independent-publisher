@@ -223,16 +223,6 @@ function independent_publisher_scripts() {
 	}
 
 	/**
-	 * Load Jetpack Sharing Buttons Style Enhancements
-	 */
-	independent_publisher_jetpack_sharing_css();
-
-	/**
-	 * Load Jetpack Sharing Buttons blank Sharing Label Enhancement
-	 */
-	independent_publisher_jetpack_sharing_label_css();
-
-	/**
 	 * Load Jetpack Infinite Scroll Dark Overlay Bug Fix
 	 */
 	independent_publisher_jetpack_dark_overlay_fix_css();
