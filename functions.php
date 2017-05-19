@@ -109,6 +109,11 @@ if ( ! function_exists( 'independent_publisher_setup' ) ) :
 		add_option( 'independent_publisher_general_options', array( 'show_author_card' => true ) );
 
 		/**
+		 * Set default value for Show Post Thumbnails theme option
+		 */
+		add_option( 'independent_publisher_excerpt_options', array( 'show_post_thumbnails' => false ) );
+
+		/**
 		 * This theme uses wp_nav_menu() in two locations.
 		 */
 		register_nav_menus(
@@ -574,6 +579,18 @@ function independent_publisher_generate_one_sentence_excerpts() {
 function independent_publisher_show_full_content_first_post() {
 	$independent_publisher_excerpt_options = get_option( 'independent_publisher_excerpt_options' );
 	if ( isset( $independent_publisher_excerpt_options['show_full_content_first_post'] ) && $independent_publisher_excerpt_options['show_full_content_first_post'] ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
+ * Returns true if Show Post Thumbnails option is enabled
+ */
+function independent_publisher_show_post_thumbnails() {
+	$independent_publisher_excerpt_options = get_option( 'independent_publisher_excerpt_options' );
+	if ( isset( $independent_publisher_excerpt_options['show_post_thumbnails'] ) && $independent_publisher_excerpt_options['show_post_thumbnails'] ) {
 		return true;
 	} else {
 		return false;

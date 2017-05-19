@@ -103,6 +103,24 @@ class IndependentPublisher_Customize {
 			)
 		);
 
+		// Show Post Thumbnails
+		$wp_customize->add_setting(
+			'independent_publisher_excerpt_options[show_post_thumbnails]', array(
+				'default'           => false,
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'show_post_thumbnails', array(
+				'settings' => 'independent_publisher_excerpt_options[show_post_thumbnails]',
+				'label'    => __( 'Show Post Thumbnails', 'independent-publisher' ),
+				'section'  => 'independent_publisher_excerpt_options',
+				'type'     => 'checkbox',
+			)
+		);
+
 		// Show Post Word Count
 		$wp_customize->add_setting(
 			'independent_publisher_general_options[show_post_word_count]', array(
@@ -300,7 +318,7 @@ class IndependentPublisher_Customize {
 				'type'     => 'checkbox',
 			)
 		);
-		
+
 		// Show comment author's full name in reply-link
 		$wp_customize->add_setting(
 			'independent_publisher_general_options[show_full_name_comment_reply_to]', array(
