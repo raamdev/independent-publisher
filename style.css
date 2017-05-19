@@ -1575,6 +1575,14 @@ body {
 	font-size: 16px;
 	line-height: 1.2;
 	letter-spacing: inherit;
+	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-weight: 700;
+	color: #333332;
 }
 
 .site-description {
@@ -1587,6 +1595,11 @@ body {
 	letter-spacing: inherit;
 	font-weight: inherit;
 	margin-top: 5px;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .site-published-separator {
@@ -2038,12 +2051,12 @@ table th {
 	padding-top: 10px;
 }
 
-.post-author-bottom h1.site-title,
-.post-author-bottom h2.site-description {
+.post-author-bottom div.site-title,
+.post-author-bottom div.site-description {
 	margin-left: 0;
 }
 
-.post-author-bottom h1.site-title {
+.post-author-bottom div.site-title {
 	font-style: normal;
 	font-size: 20px;
 	line-height: 1.6;
@@ -2952,7 +2965,7 @@ table th {
 	}
 
 	.entry-header {
-		word-wrap: none;
+		word-wrap: normal;
 		hyphens: none;
 		-webkit-hyphens: none;
 		-moz-hyphens: none;

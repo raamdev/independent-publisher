@@ -2041,12 +2041,12 @@ table th {
 	padding-top: 10px;
 }
 
-.post-author-bottom h1.site-title,
-.post-author-bottom h2.site-description {
+.post-author-bottom div.site-title,
+.post-author-bottom div.site-description {
 	margin-right: 0;
 }
 
-.post-author-bottom h1.site-title {
+.post-author-bottom div.site-title {
 	font-style: normal;
 	font-size: 20px;
 	line-height: 1.6;
@@ -2955,7 +2955,7 @@ table th {
 	}
 
 	.entry-header {
-		word-wrap: none;
+		word-wrap: normal;
 		hyphens: none;
 		-webkit-hyphens: none;
 		-moz-hyphens: none;
