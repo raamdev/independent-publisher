@@ -247,6 +247,28 @@ if ( ! function_exists( 'independent_publisher_progress_bar_markup' ) ) :
 endif;
 add_action( 'wp_footer', 'independent_publisher_progress_bar_markup' );
 
+if ( ! function_exists( 'independent_publisher_remove_locale_stylesheet' ) ) :
+	/**
+	 * Remove locale_stylesheet() hook to prevent WordPress from
+	 * automatically loading rtl.css. We need to load this manually
+	 * so that we can load it before loading CSS from Customizer.
+	 *
+	 * @see https://github.com/raamdev/independent-publisher/issues/230
+	 */
+	function independent_publisher_remove_locale_stylesheet() {
+		remove_action( 'wp_head', 'locale_stylesheet' );
+	}
+endif;
+
+if ( ! function_exists( 'independent_publisher_stylesheet_rtl' ) ) :
+	/**
+	 * Enqueue RTL stylesheet
+	 */
+	function independent_publisher_stylesheet_rtl() {
+		wp_enqueue_style( 'independent-publisher-style', get_template_directory() . '/css/rtl-style.css' );
+	}
+endif;
+
 if ( ! function_exists( 'independent_publisher_stylesheet' ) ) :
 	/**
 	 * Enqueue main stylesheet
@@ -280,7 +302,13 @@ add_action( 'wp_ajax_nopriv_independent_publisher_customizer_css', 'independent_
  * IMPORTANT: Customizer CSS *must* be called _after_ the main stylesheet,
  * to ensure that customizer-modified styles override the defaults.
  */
-add_action( 'wp_enqueue_scripts', 'independent_publisher_stylesheet' );
+if( is_rtl() ) {
+	add_action( 'init', 'independent_publisher_remove_locale_stylesheet' );
+	add_action( 'wp_enqueue_scripts', 'independent_publisher_stylesheet_rtl' );
+} else {
+	add_action( 'wp_enqueue_scripts', 'independent_publisher_stylesheet' );
+}
+
 add_action( 'wp_enqueue_scripts', 'independent_publisher_customizer_stylesheet' );
 
 if ( ! function_exists( 'independent_publisher_wp_fullscreen_title_editor_style' ) ) :
