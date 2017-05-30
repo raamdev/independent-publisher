@@ -2,6 +2,31 @@ Independent Publisher is a beautiful reader-focused WordPress theme, for you.
 
 Version history:
 
+1.8
+
+- **Bug Fix**: Fixed bug where Microformats 2 support was not being loaded during theme setup. Props @Ruxton. See [Issue #231](https://github.com/raamdev/independent-publisher/issues/231).
+- **Bug Fix:** Fixed CSS padding for WP-PageNavi integration that was breaking in Firefox. Props @johlym and @vskjefst. See [Issue #229](https://github.com/raamdev/independent-publisher/issues/229).
+- **Bug Fix**: Removed an extra space after the opening parenthesis in the pagination page count on Archive Views, e.g., "( this is page 1 of 2)". Props @vskjefst and @jimmymansaray. See [Issue #263](https://github.com/raamdev/independent-publisher/issues/263).
+- **Bug Fix**: Fixed a bug where an empty parenthesis would be displayed when archive views have more than one item, but less than enough items to require pagination. Props @vskjefst and @Furgelnod. See [Issue #249](https://github.com/raamdev/independent-publisher/issues/249).
+- **Bug Fix**: Fixed a bug where leaving a comment with a Site URL that contains a percent sign would generate a PHP Notice indicating "Warning: printf(): Too few arguments". Props @mritzmann. See [Issue #248](https://github.com/raamdev/independent-publisher/issues/248).
+- **Bug Fix**: Fixed a bug where the `aria-label` attribute in the comment "Reply to" link contained a duplicate copy of the author name, which affected users with screen readers. Props to [Alex](https://raamdev.com/2013/personalizing-the-wordpress-comment-reply-link/#comment-11983) for reporting. See [Issue #252](https://github.com/raamdev/independent-publisher/issues/252).
+- **Bug Fix**: Fixed a bug when using RTL mode that prevented the Customizer CSS from being applied. See [Issue #230](https://github.com/raamdev/independent-publisher/issues/230).
+- **Enhancement:** Improved compliance with WP coding standards. Props @jeherve. See [Issue #232](https://github.com/raamdev/independent-publisher/pull/232).
+- **Enhancement:** Added additional `if ( ! function_exists() )` checks to allow overriding from a Child Theme. Props @jeherve. See [Issue #232](https://github.com/raamdev/independent-publisher/pull/232).
+- **Enhancement:** Moved "Related Tags" to its own function so that it could be easily overwritten with a Child Theme. Props @jeherve. See [Issue #233](https://github.com/raamdev/independent-publisher/pull/233).
+- **Enhancement**: Added a new option to Show Post Thumbnails when displaying excerpts. By default, this option is disabled but if you have excerpts enabled and you want show the Post Thumbnail above the excerpt, you can enable this option in Dashboard → Appearance → Customize → Excerpt Options. See [Issue #218](https://github.com/raamdev/independent-publisher/issues/218).
+- **Enhancement:** Added new option to Show Full Name in Comment Reply-to Link. By default, Independent Publisher only shows the First Name of the commenter in the "Reply to..." link below each comment. This new option lets you always show the Full Name (first name + last name), if available. Props @vskjefst. See [Issue #237](https://github.com/raamdev/independent-publisher/pull/237).
+- **Enhancement**: Improved handling of Customizer default colors. Props @vskjefst. See [Issue #240](https://github.com/raamdev/independent-publisher/pull/240).
+- **Enhancement**: Refactored code that outputs the `title=""` attribute for Post Title and Post Thumbnail links. The functions `independent_publisher_post_link_title()` and `independent_publisher_post_thumbnail_link_title()` can now be easily overridden in a Child Theme. Props @vskjefst. See [Issue #241](https://github.com/raamdev/independent-publisher/pull/241).
+- **Enhancement**: Upgraded Genericons to v3.4.1. Props @vskjefst. See [Issue #245](https://github.com/raamdev/independent-publisher/pull/245).
+- **Enhancement**: Updated the Archive Page Template (`page_archive-template.php`) to only show "Most Used Categories" list when there are more than one. Props @FokkeZB. See [Issue #255](https://github.com/raamdev/independent-publisher/pull/255).
+- **Translations:** Updated Italian translation. Props @kOoLiNuS. See [this commit](https://github.com/raamdev/independent-publisher/commit/4f236641c0721aa79aaed70b9b62c35232a27fcd).
+- **Translations:** Added Armenian translation. Props @hanumanum. See [Issue #265](https://github.com/raamdev/independent-publisher/pull/265).
+- **Validation**: The Site Title and Site Description now use `div`'s instead of `h1` and `h2`, which should be reserved for the post content. Props @PedroFumero. See [Issue #261](https://github.com/raamdev/independent-publisher/issues/261).
+- **Deprecated:** `independent_publisher_pings()` has been deprecated in favor of `independent_publisher_mentions()`, which also supports Webmentions. See [this commit](https://github.com/raamdev/independent-publisher/commit/59709196f701832feb23db225ffeabb83a1cb768)
+- **Removed:** Removed Jetpack Sharing enhancements. These enhancements are no longer necessary as the Jetpack sharing output has improved since these were implemented. Any desired changes to the Jetpack Sharing buttons should now be applied on a case-by-case basis using a Child Theme. See [this commit](https://github.com/raamdev/independent-publisher/commit/f0aa17b7ce96242e76e3af1d43c6f4c214baeb01).
+- **New Filter:** Added filter for the 'Webmentions' title section at the bottom of Single posts. This can now be filtered using `independent_publisher_webmentions_title`. Also removed `independent_publisher_pingslist_*` filters from `README.md` as those filters were removed when webmention support was added in v1.7. See [this commit](https://github.com/raamdev/independent-publisher/commit/92e9d0ddcd2068ababa026e36386d4d03dadef3f).
+
 1.7
 
 * **Bug Fix**: When using the Single-column Layout, there was an unnecessary margin between the top of the post content and the bottom of the featured image. This has been removed.
