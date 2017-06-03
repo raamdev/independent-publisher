@@ -1,15 +1,16 @@
 /*
 Theme Name: Independent Publisher
-Theme URI: http://independentpublisher.me/
+Theme URI: https://independentpublisher.me/
 Author: Raam Dev
-Author URI: http://raamdev.com
+Author URI: https://raamdev.com/
 Description: Independent Publisher is a beautiful reader-focused WordPress theme, for you. Clean, responsive, and mobile-ready, it gets out of your way and lets you share what you create. Full support for all Post Formats, HTML5-ready, and includes Schema.org markup. This theme is ideal for both single-author and multi-author blogs.
-Version: 1.7
+Version: 1.8
 License: GNU GPLv3
 License URI: http://www.gnu.org/copyleft/gpl.html
-Independent Publisher, Copyright 2016 Raam Dev
+Independent Publisher, Copyright 2017 Raam Dev
 Independent Publisher is distributed under the terms of the GNU GPL
-Tags: light, white, green, one-column, two-columns, left-sidebar, fluid-layout, featured-images, full-width-template, custom-menu, responsive-layout, custom-background, custom-colors, custom-menu, editor-style, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, theme-options
+Tags: one-column, two-columns, left-sidebar, featured-images, full-width-template, custom-menu, custom-background, custom-colors, custom-menu, editor-style, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, theme-options
+Text Domain: independent-publisher
 
 Genericons icon font (http://genericons.com/) is bundled for use with the Social Menu feature.
 Genericons is distributed under the terms of the GNU GPL.
@@ -28,9 +29,11 @@ and Blueprint http://www.blueprintcss.org/
 Props to Manish Suwal 'Enwil' (http://enwil.com) and Radhika Morabia (http://rmorabia.com) for
 help with testing and contributing to the project during its early stages.
 
-Thanks also to @tlongren, @pcutler, @descubraomundo, @manishsuwal, @bitzl, @peterk,
-@EddyLB, @rmmartins, @PavelTajdus, @JHillert, @joch, @ryanmarkel, @mkiramu, @stevenatwork,
-@dshanske, @SpaceK33z, @iwillhappy1314, @henryk, @chrisaldrich, and @rad96 for their contributions on GitHub.
+Thanks to the following for their contributions on GitHub:
+@rad96, @peterk, @bitzl, @SpaceK33z, @johlym, @henryk, @FokkeZB,
+@chrisaldrich, @iwillhappy1314, @dshanske, @mkiramu, @johnsaddington,
+@joch, @stevenatwork, @ryanmarkel, @prcutler, @jeherve, @JHillert,
+@rmmartins, @manishsuwal, @EddyLB, @vskjefst, @tlongren.
 
 Thanks to the following contributors for providing translation files:
 - French (contributed by Eddy Lelièvre-Berna; https://github.com/EddyLB)
@@ -44,7 +47,8 @@ Thanks to the following contributors for providing translation files:
 - Portuguese-Brazil (contributed by @rmmartins; https://github.com/rmmartins)
 - Chinese (contributed by @iwillhappy1314; https://github.com/iwillhappy1314)
 - Turkish (contributed by @pekermert; https://github.com/pekermert)
-- Italian (contributed by Nicola)
+- Italian (contributed by @kOoLiNuS; https://github.com/kOoLiNuS)
+- Armenian (contributed by @hanumanum; https://github.com/hanumanum)
 */
 
 /* =Reset
@@ -1575,6 +1579,14 @@ body {
 	font-size: 16px;
 	line-height: 1.2;
 	letter-spacing: inherit;
+	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-weight: 700;
+	color: #333332;
 }
 
 .site-description {
@@ -1587,6 +1599,11 @@ body {
 	letter-spacing: inherit;
 	font-weight: inherit;
 	margin-top: 5px;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .site-published-separator {
@@ -2038,12 +2055,12 @@ table th {
 	padding-top: 10px;
 }
 
-.post-author-bottom h1.site-title,
-.post-author-bottom h2.site-description {
+.post-author-bottom div.site-title,
+.post-author-bottom div.site-description {
 	margin-left: 0;
 }
 
-.post-author-bottom h1.site-title {
+.post-author-bottom div.site-title {
 	font-style: normal;
 	font-size: 20px;
 	line-height: 1.6;
@@ -2952,7 +2969,7 @@ table th {
 	}
 
 	.entry-header {
-		word-wrap: none;
+		word-wrap: normal;
 		hyphens: none;
 		-webkit-hyphens: none;
 		-moz-hyphens: none;

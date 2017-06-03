@@ -137,6 +137,9 @@ if ( !function_exists( 'independent_publisher_pings' ) ) :
 	 * even when we're showing paginated comments.
 	 *
 	 * @since Independent Publisher 1.0
+	 *
+	 * @deprecated 1.7 No longer used in code; replaced by independent_publisher_mentions()
+	 * @see independent_publisher_mentions()
 	 */
 	function independent_publisher_pings() {
 		$args        = array(
@@ -458,10 +461,10 @@ if ( !function_exists( 'independent_publisher_site_info' ) ) :
 				<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 			</a>
 		<?php endif; ?>
-		<h1 class="site-title">
+		<div class="site-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-		</h1>
-		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		</div>
+		<div class="site-description"><?php bloginfo( 'description' ); ?></div>
 		<?php get_template_part( 'menu', 'social' ); ?>
 		<?php
 	}
@@ -493,8 +496,8 @@ if ( !function_exists( 'independent_publisher_posted_author_card' ) ) :
 			</a>
 		<?php endif; ?>
 
-		<h1 class="site-title"><?php independent_publisher_posted_author(); ?></h1>
-		<h2 class="site-description"><?php the_author_meta( 'description', $post_author_id ) ?></h2>
+		<div class="site-title"><?php independent_publisher_posted_author(); ?></div>
+		<div class="site-description"><?php the_author_meta( 'description', $post_author_id ) ?></div>
 
 		<?php get_template_part( 'menu', 'social' ); ?>
 
@@ -537,11 +540,11 @@ if ( !function_exists( 'independent_publisher_posted_author_bottom_card' ) ) :
 				</a>
 
 				<div class="post-author-info">
-					<h1 class="site-title">
+					<div class="site-title">
 						<?php independent_publisher_posted_author(); ?>
-					</h1>
+					</div>
 
-					<h2 class="site-description"><?php the_author_meta( 'description' ) ?></h2>
+					<div class="site-description"><?php the_author_meta( 'description' ) ?></div>
 				</div>
 				<div class="post-published-date">
 					<h2 class="site-published"><?php _e( 'Published', 'independent-publisher' ); ?></h2>
@@ -686,7 +689,7 @@ if ( !function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 	 */
 	function independent_publisher_taxonomy_archive_stats( $taxonomy = 'category' ) {
 
-		// There's no point in showing page numbers of we're using JetPack's Infinite Scroll module
+		// There's no point in showing page numbers of we're using Jetpack's Infinite Scroll module
 		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) ) {
 			return '';
 		}
@@ -791,7 +794,7 @@ endif;
 if ( !function_exists( 'independent_publisher_footer_credits' ) ):
 	/**
 	 * Echoes the theme footer credits. Overriding this function in a Child Theme also
-	 * applies the changes to JetPack's Infinite Scroll footer.
+	 * applies the changes to Jetpack's Infinite Scroll footer.
 	 */
 	function independent_publisher_footer_credits() {
 		return independent_publisher_get_footer_credits();

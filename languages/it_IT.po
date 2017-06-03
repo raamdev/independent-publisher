@@ -2,13 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Independent Publisher\n"
 "POT-Creation-Date: 2014-08-21 10:36-0500\n"
-"PO-Revision-Date: 2015-11-16 16:14+0100\n"
-"Last-Translator: Nicola Losito “kOoLiNuS” <nicola@koolinus.net>\n"
+"PO-Revision-Date: 2017-03-27 16:39+0200\n"
+"Last-Translator: Nicola \"kOoLiNuS\" Losito <koolinus@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 2.0beta5\n"
 "X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
 "esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
 "translate_nooped_plural\n"
@@ -108,7 +108,7 @@ msgstr ""
 
 #: ../comments.php:104
 msgid "Thank you!"
-msgstr "Grazie"
+msgstr "Grazie!"
 
 #: ../content-none.php:13 ../no-results.php:14
 msgid "Nothing Found"
@@ -140,7 +140,7 @@ msgstr ""
 #: ../content-page.php:22 ../content-single.php:58
 #: ../page_one-column-template.php:39
 msgid "Next page &rarr;"
-msgstr "Prossima pagina &rarr;"
+msgstr "Pagina successiva &rarr;"
 
 #: ../content-page.php:23 ../content-single.php:59
 #: ../page_one-column-template.php:40
@@ -166,7 +166,7 @@ msgstr "Permalink a %s"
 
 #: ../content.php:91 ../functions.php:408
 msgid "Comment"
-msgstr "Commento"
+msgstr "Commenta"
 
 #: ../content.php:91
 msgid "% Comments"
@@ -208,7 +208,7 @@ msgstr "Rispondi a"
 #: ../functions.php:349
 #, php-format
 msgid "Leave a Reply for %s"
-msgstr "Lascia una Risposta per %s"
+msgstr "Lascia una risposta per %s"
 
 #: ../functions.php:350
 msgid "Cancel Reply"
@@ -282,7 +282,7 @@ msgstr "&larr; Immagine precedente"
 
 #: ../image.php:107
 msgid "Next image &rarr;"
-msgstr "&larr; Immagine successiva"
+msgstr "Immagine successiva &rarr;"
 
 #: ../page_archive-template.php:45
 msgid "Yearly Archives"
@@ -319,7 +319,7 @@ msgstr "Cerca &hellip;"
 
 #: ../sidebar.php:28
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ../single.php:28
 msgid "Related Content by Tag"
@@ -331,7 +331,7 @@ msgstr "Opzioni Layout"
 
 #: ../inc/customizer.php:26
 msgid "Excerpt Options"
-msgstr ""
+msgstr "Opzioni Riassunto"
 
 #: ../inc/customizer.php:33
 msgid "General Options"
@@ -339,7 +339,7 @@ msgstr "Opzioni Generali"
 
 #: ../inc/customizer.php:49
 msgid "Post Excerpts"
-msgstr ""
+msgstr "Riassunto dell’articolo"
 
 #: ../inc/customizer.php:54
 msgid "Disabled"
@@ -351,7 +351,7 @@ msgstr "Abilitato"
 
 #: ../inc/customizer.php:72
 msgid "Generate One-Sentence Excerpts"
-msgstr ""
+msgstr "Genera riassunto in una frase"
 
 #: ../inc/customizer.php:90
 msgid "Always Show Full Content for First Post"
@@ -379,7 +379,7 @@ msgstr "Mostra la Data di Aggiornamento per l’Articolo Singolo"
 
 #: ../inc/customizer.php:198
 msgid "Single-Column Layout"
-msgstr "Layout a Singola Colonna"
+msgstr "Layout a Colonna Singola"
 
 #: ../inc/customizer.php:216
 msgid "Enable Multi-Author Mode"
@@ -403,19 +403,19 @@ msgstr "“Call to Action” per i Commenti"
 
 #: ../inc/customizer.php:301
 msgid "Text Color"
-msgstr ""
+msgstr "Colore del testo"
 
 #: ../inc/customizer.php:306
 msgid "Comment Form Background Color"
-msgstr ""
+msgstr "Colore di sfondo della form dei commenti"
 
 #: ../inc/customizer.php:311
 msgid "Link Color"
-msgstr ""
+msgstr "Colore dei link"
 
 #: ../inc/customizer.php:316
 msgid "Title and Header Text Color"
-msgstr ""
+msgstr "Colore del Titolo e delle Intestazioni di testo"
 
 #: ../inc/customizer.php:321
 msgid "Primary Meta Text Color"
@@ -427,15 +427,15 @@ msgstr ""
 
 #: ../inc/template-tags.php:41
 msgid "Post navigation"
-msgstr "Navigazione Articoli"
+msgstr "Navigazione articoli"
 
 #: ../inc/template-tags.php:45
 msgid "&larr;"
-msgstr ""
+msgstr "&larr;"
 
 #: ../inc/template-tags.php:46
 msgid "&rarr;"
-msgstr ""
+msgstr "&rarr;"
 
 #: ../inc/template-tags.php:51
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
@@ -461,7 +461,7 @@ msgstr "Tutti gli articoli di %s"
 
 #: ../inc/template-tags.php:182
 msgid ", "
-msgstr ""
+msgstr ","
 
 #: ../inc/template-tags.php:271
 msgid "Continue Reading &rarr;"

@@ -97,7 +97,7 @@ if ( post_password_required() ) {
 
 		<?php if ( independent_publisher_comment_count_mentions() ) { // If we have mentions, let's show them ?>
 			<div id="webmentions" class="mentions-list">
-				<h3><?php _e( 'Webmentions', 'independent-publisher' ); ?></h3>
+				<h3><?php echo apply_filters( 'independent_publisher_webmentions_title', __( 'Webmentions', 'independent-publisher' ) ); ?></h3>
 				<?php independent_publisher_mentions(); ?>
 			</div>
 		<?php } // end if ( independent_publisher_comment_count_mentions() )?>

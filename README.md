@@ -23,7 +23,6 @@ WordPress.com took the original Independent Publisher theme from WordPress.org a
     * [How do I get the small logo to show up in the top-left corner?](https://github.com/raamdev/independent-publisher#how-do-i-get-the-small-logo-to-show-up-in-the-top-left-corner)
     * [Why is my Author Bio and picture at the top of my home page (or below a blog post) and not on the side?](https://github.com/raamdev/independent-publisher#why-is-my-author-bio-and-picture-at-the-top-of-my-home-page-or-below-a-blog-post-and-not-on-the-side)
     * [How do I add Social Media Buttons below the Logo?](https://github.com/raamdev/independent-publisher#how-do-i-add-social-media-buttons-below-the-logo)
-    * [How do I make the JetPack Sharing Buttons look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-jetpack-sharing-buttons-look-better)
     * [How do I make the Subscribe to Comments Reloaded Advanced Options look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-the-subscribe-to-comments-reloaded-advanced-options-look-better)
     * [How do I make MailChimp Signup Forms look better?](https://github.com/raamdev/independent-publisher#how-do-i-make-mailchimp-signup-forms-look-better)
     * [How do I add an Archive Page?](https://github.com/raamdev/independent-publisher#how-do-i-add-an-archive-page)
@@ -158,13 +157,6 @@ After you're done, below in **Theme Locations** (located in the **Menu Settings*
 
 ![screen shot 2014-02-18 at 11 42 31 am](https://f.cloud.github.com/assets/5318719/2192202/dcd5a848-9861-11e3-8e96-85cc4cdee1cb.png)
 
-
-### How do I make the JetPack Sharing Buttons look better?
-
-If you clear the JetPack Sharing Buttons "Sharing label" field so that it's empty, Independent Publisher will force the sharing buttons to float right and will remove the right padding so that the buttons look nicer.
-
-![4dc42092-83b9-11e3-96a3-8b9580f82f80](https://f.cloud.github.com/assets/53005/2000387/8c1796bc-8558-11e3-8ee4-0c4f9f4fbf2e.png)
-
 ### How do I make the Subscribe to Comments Reloaded Advanced Options look better?
 
 Go to *Settings -> Subscribe to Comments -> Comment Form -> Custom HTML* and wrap the contents in a paragraph tag with the `comment-form-subscriptions` class. For example:
@@ -177,7 +169,7 @@ Note that double-quotes are not allowed in that field and that you *must* use si
 
 ### How do I make MailChimp Signup Forms look better?
 
-MailChimp includes its own CSS in the HTML embed code that, by default, doesn't look quite right with Independent Publisher. To fix the MailChimp CSS, you can add the following to the `style.css` file of a [Child Theme](https://github.com/raamdev/independent-publisher-child-theme/) (or if you're using JetPack, simply go to *Appearance → Edit CSS* and insert the following):
+MailChimp includes its own CSS in the HTML embed code that, by default, doesn't look quite right with Independent Publisher. To fix the MailChimp CSS, you can add the following to the `style.css` file of a [Child Theme](https://github.com/raamdev/independent-publisher-child-theme/) (or if you're using Jetpack, simply go to *Appearance → Edit CSS* and insert the following):
 
 ```
 #mc_signup .button {
@@ -411,8 +403,7 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_entry_meta_author_prefix` - Allows you to override the default Author prefix (default is 'by'; e.g., "by <author name>").
 - `independent_publisher_search_stats` - Allows you to override the Search stats shown on Search pages.
 - `independent_publisher_tag_list_title` - Allows you to override the default Tag List Title of 'Related Content by Tag' at the bottom of Single posts.
-- `independent_publisher_pingslist_title` - Allows you to override the default Pings List title of 'Readers who Shared This' at the bottom of Single posts.
-- `independent_publisher_pingslist_end_note` - Allows you to override the default Pings List end note of 'Thank you!' at the bottom of Single posts.
+- `independent_publisher_webmentions_title` - Allows you to override the default Webmentions title of 'Webmentions' at the bottom of Single posts.
 
 ### Action Hooks
 
@@ -426,7 +417,7 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 
 - `independent_publisher_content_nav()` - Display navigation to next/previous pages when applicable
 - `independent_publisher_comment()` - Template for comments and pingbacks.
-- `independent_publisher_pings()` - Creates a custom query for pingbacks/trackbacks (i.e., 'pings') and displays them. Using this custom query instead of `wp_list_comments()` allows us to always show all pings, even when we're showing paginated comments.
+- `independent_publisher_mentions()` - Creates a custom query for webmentions, pings, and trackbacks and displays them. Using this custom query instead of `wp_list_comments()` allows us to always show all mentions, even when we're showing paginated comments.
 - `independent_publisher_posted_author()` - Prints HTML with meta information for the current author.
 - `independent_publisher_posted_author_cats()` - Prints HTML with meta information for the current author and post categories. Only prints author name when Multi-Author Mode is enabled.
 - `independent_publisher_posted_on_date()` - Prints HTML with meta information for the current post-date/time.
@@ -447,7 +438,7 @@ WordPress Filters and Actions allow you to modify the theme without actually mod
 - `independent_publisher_min_comments_bottom_comment_button()` - Returns the minimum number of comments that must exist for the bottom 'Write a Comment' button to appear
 - `independent_publisher_min_comments_comment_title()` - Returns the minimum number of comments that must exist for the comments title to appear
 - `independent_publisher_hide_comments()` - Determines if the comments and comment form should be hidden altogether. This differs from disabling the comments by also hiding the "Comments are closed." message and allows for easily overriding this function in a Child Theme.
-- `independent_publisher_footer_credits()` - Echoes the theme footer credits. Overriding this function in a Child Theme also applies the changes to JetPack's Infinite Scroll footer.
+- `independent_publisher_footer_credits()` - Echoes the theme footer credits. Overriding this function in a Child Theme also applies the changes to Jetpack's Infinite Scroll footer.
 
 ### Functions in `functions.php`:
 

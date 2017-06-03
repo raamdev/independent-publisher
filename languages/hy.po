@@ -1,0 +1,565 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Independent Publisher\n"
+"POT-Creation-Date: 2017-04-30 15:02+0400\n"
+"PO-Revision-Date: 2017-04-30 16:49+0400\n"
+"Last-Translator: Հանուման (http://ablog.gratun.am)\n"
+"Language-Team: \n"
+"Language: hy_AM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_x;esc_attr__;esc_attr_e;_nx:1,2;_ex;"
+"esc_attr_x;esc_html__;esc_html_e;esc_html_x;_n_noop:1,2;_nx_noop:1,2;"
+"translate_nooped_plural\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Էջը հավանաբար գոյություն չունի"
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Այս հասցեով ոչինչ գոյություն չունի, փորձեք նավարկել հղումներով կամ որոնել։"
+
+#: ../404.php:29 ../page_archive-template.php:33
+msgid "Most Used Categories"
+msgstr "Ամենահարուստ բաժինները"
+
+#: ../404.php:47
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Որոնեք ամսեական արխիվներում. %1$s"
+
+#: ../archive.php:50
+msgid "Asides"
+msgstr "Կողմնամասեր"
+
+#: ../archive.php:52
+msgid "Galleries"
+msgstr "Պատկերասրահներ"
+
+#: ../archive.php:54
+msgid "Images"
+msgstr "Պատկերներ"
+
+#: ../archive.php:56
+msgid "Videos"
+msgstr "Տեսանյութեր"
+
+#: ../archive.php:58
+msgid "Quotes"
+msgstr "Մեջբերումներ"
+
+#: ../archive.php:60
+msgid "Links"
+msgstr "Հղումներ։"
+
+#: ../archive.php:62
+msgid "Statuses"
+msgstr "Ստատուսներ"
+
+#: ../archive.php:64
+msgid "Audios"
+msgstr "Ձայնագրություններ"
+
+#: ../archive.php:66
+msgid "Chats"
+msgstr "Չաթեր"
+
+#: ../archive.php:68 ../sidebar.php:21
+msgid "Archives"
+msgstr "Արխիվներ"
+
+#: ../comments.php:40 ../content.php:115
+#, php-format
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "1 մեկնաբանություն"
+msgstr[1] "%1$s մեկնաբանություն"
+
+#: ../comments.php:49 ../comments.php:70
+msgid "Comment navigation"
+msgstr "Նավարկել"
+
+#: ../comments.php:51 ../comments.php:72
+msgid "&larr; Older Comments"
+msgstr "&larr; նախորդ մեկնաբանությունները"
+
+#: ../comments.php:52 ../comments.php:73
+msgid "Newer Comments &rarr;"
+msgstr "Հաջորդ մեկնաբանությունները &rarr;"
+
+#: ../comments.php:83
+msgid "Comments are closed."
+msgstr "Մեկնաբանությունները փակված են"
+
+#: ../comments.php:100 ../content.php:109
+msgid "Webmentions"
+msgstr "վեբ֊նշումներ"
+
+#: ../content-none.php:13 ../no-results.php:14
+msgid "Nothing Found"
+msgstr "Ոչինչ չկա"
+
+#: ../content-none.php:20 ../no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Պատրա՞ստ եք հրապարակել առաջին գրառումը <a href=\"%1$s\">Սկսեք այստեղից</a>."
+
+#: ../content-none.php:24 ../no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "Ձեր որոնմանը համապատասխան ոչինչ չի գտնվել։ Փորձեք այլ բանալի բառեր։"
+
+#: ../content-none.php:30 ../no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Թվում է, որ չենք կարող գտնվել ձեր փնտրածը, հավանաբար որոնումը կօգնի։"
+
+#: ../content-page.php:34 ../content-single.php:65
+#: ../page_one-column-template.php:46
+msgid "Next page &rarr;"
+msgstr "Հաջորդ էջը &rarr;"
+
+#: ../content-page.php:35 ../content-single.php:66
+#: ../page_one-column-template.php:47
+msgid "&larr; Previous page"
+msgstr "&larr; Նախորդ էջը"
+
+#: ../content-page.php:41 ../content-single.php:72 ../content.php:54
+#: ../page_one-column-template.php:53
+msgid "Pages:"
+msgstr "Էջեր՝"
+
+#: ../content-page.php:60 ../content-single.php:93 ../content.php:118
+#: ../image.php:129 ../page_archive-template.php:76
+#: ../page_one-column-template.php:62
+msgid "Edit"
+msgstr "Խմբագրել"
+
+#: ../content.php:109
+msgid "Webmention"
+msgstr "Վեբ֊նշումներ"
+
+#: ../content.php:115 ../functions.php:470
+msgid "Comment"
+msgstr "Մեկնաբանություն"
+
+#: ../content.php:115
+msgid "% Comments"
+msgstr "% Մեկնաբանություն"
+
+#: ../functions.php:116
+msgid "Primary Menu"
+msgstr "Հիմնական մենյու"
+
+#: ../functions.php:117
+msgid "Single Posts Menu"
+msgstr "Գրառումների էջերի մենյու"
+
+#: ../functions.php:118
+msgid "Social"
+msgstr "Սոցիալական"
+
+#: ../functions.php:170
+msgid "Sidebar"
+msgstr "Կոմնային վահանակ"
+
+#: ../functions.php:181
+msgid "Archive Page"
+msgstr "Արխիվային էջ"
+
+#: ../functions.php:317
+#, php-format
+msgid "%1$s empowered by %2$s"
+msgstr "%1$s աշխատում է %2$s ֊ով"
+
+#: ../functions.php:366
+msgid "Anonymous"
+msgstr "Անանուն"
+
+#: ../functions.php:378
+msgid "Reply to"
+msgstr "Պատասխանել"
+
+#: ../functions.php:411
+#, php-format
+msgid "Leave a Reply for %s"
+msgstr "Պատասխանել %s ֊ին"
+
+#: ../functions.php:412
+msgid "Cancel Reply"
+msgstr "չպատասխանել"
+
+#: ../functions.php:413
+msgid "Submit Comment"
+msgstr "Ուղարկել մեկնաբանությունը"
+
+#: ../functions.php:416
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Մեկնաբանելու համար <a href=\"%s\">մտեք</a> համակարգ."
+
+#: ../functions.php:421
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Համակարգում եք <a href=\"%1$s\">%2$s</a> անվան տակ։ <a href=\"%3$s\" title="
+"\"Դուրս գրվել\">Դուրս գրվե՞լ</a>"
+
+#: ../functions.php:431
+msgid "Name"
+msgstr "Անուն"
+
+#: ../functions.php:436
+msgid "Email"
+msgstr "էլ․փոստ"
+
+#: ../functions.php:441
+msgid "Website"
+msgstr "Վեբկայք"
+
+#: ../functions.php:639
+msgid "Write a Comment"
+msgstr "Գրել մեկնաբանություն"
+
+#: ../functions.php:926
+msgid "Use as post cover (full-width)"
+msgstr "Օգտագործել որպես գրառման կազմ (ամբողջ լայնությամբ)"
+
+#: ../functions.php:936
+msgid "Disable post cover (full-width)"
+msgstr "Գրառման կազմ չօգտագործել (ամբողջ լայնությամբ)"
+
+#: ../functions.php:1161
+msgid "in"
+msgstr "բաժին"
+
+#: ../functions.php:1170
+msgid "by"
+msgstr "գրեց՝ "
+
+#: ../functions.php:1309
+#, php-format
+msgid "Permalink to %s"
+msgstr "Հիմնական հղում %s"
+
+#: ../header.php:55
+msgid "Skip to content"
+msgstr "Անցնել պարունակությանը"
+
+#: ../image.php:23
+#, php-format
+msgid ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; "
+"%4$s</a> %5$s <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
+"%7$s</a>"
+msgstr ""
+"\"%1$s\" - <a href=\"%2$s\" title=\"ամբողջական չափը\">%3$s &times; %4$s</a> "
+"%5$s <a href=\"%6$s\" title=\"վերադառնալ %7$s\" rel=\"gallery\">%7$s</a>"
+
+#: ../image.php:108
+msgid "&larr; Previous image"
+msgstr "&larr; Նախորդ պատկերը"
+
+#: ../image.php:109
+msgid "Next image &rarr;"
+msgstr "Հաջորդ պատկերը &rarr;"
+
+#: ../inc/customizer.php:29
+msgid "Layout Options"
+msgstr "Տեսքի (Layout) տարբերակներ"
+
+#: ../inc/customizer.php:36
+msgid "Excerpt Options"
+msgstr "Նախաբանի տարբերակներ"
+
+#: ../inc/customizer.php:43
+msgid "General Options"
+msgstr "Հիմնական տարբերակներ"
+
+#: ../inc/customizer.php:59
+msgid "Post Excerpts"
+msgstr "Գրառման նախաբան"
+
+#: ../inc/customizer.php:64
+msgid "Disabled"
+msgstr "Արգելել"
+
+#: ../inc/customizer.php:65
+msgid "Enabled"
+msgstr "Թույլատրել"
+
+#: ../inc/customizer.php:82
+msgid "Generate One-Sentence Excerpts"
+msgstr "Ստեղծել մեկ նախադասությամբ նախաբաններ"
+
+#: ../inc/customizer.php:100
+msgid "Always Show Full Content for First Post"
+msgstr "Միշտ ցուցադրել ամբողջ պարունակությունը առաջին գրառման համար"
+
+#: ../inc/customizer.php:118
+msgid "Show Post Word Count in Entry Meta"
+msgstr "Ցուցադրել բառերի քանակը"
+
+#: ../inc/customizer.php:136
+msgid "Show Post Date in Entry Meta"
+msgstr "Ցուցադրել ամսաթիվը"
+
+#: ../inc/customizer.php:154
+msgid "Show Widgets on Single Posts"
+msgstr "Ցուցադրել վահանակները գրառումների էջերում"
+
+#: ../inc/customizer.php:172
+msgid "Show Nav Menu on Single Posts"
+msgstr "Ցուցադրել նավիգացիոն մենյուն գրառումների էջերում"
+
+#: ../inc/customizer.php:190
+msgid "Show Updated Date on Single Posts"
+msgstr "Ցուցադրել թարմացման ամսաթիվը"
+
+#: ../inc/customizer.php:208
+msgid "Show Author Card on Single Posts"
+msgstr "Ցուցադրել հեղինակի քարտը գրառումների էջերում"
+
+#: ../inc/customizer.php:226
+msgid "Single-Column Layout"
+msgstr "Միասյուն տեսք"
+
+#: ../inc/customizer.php:244
+msgid "Enable Multi-Author Mode"
+msgstr "Թույլատրել բազմահեղինակությունը "
+
+#: ../inc/customizer.php:262
+msgid "Show Page Load Progress Bar"
+msgstr "Ցուցադրել էջի բեռնման առաջընթացը"
+
+#: ../inc/customizer.php:280
+msgid "Auto-Set Featured Image as Post Cover"
+msgstr "Ավտոմատ դնել առաջարկվող պատկերը որպես էջի կազմ"
+
+#: ../inc/customizer.php:298
+msgid "Overlay Post Title on Post Cover"
+msgstr "Պատել գրառման վերնագիրը գրառման էջի կազմով"
+
+#: ../inc/customizer.php:316
+msgid "Show Full Name in Comment Reply-to"
+msgstr "Ցուցադրել լրիվ անունը մեկնաբանությունները «պատասխանել» բաժնում "
+
+#: ../inc/customizer.php:334
+msgid "Comments Call to Action"
+msgstr "Մեկնաբանությունների կոչը"
+
+#: ../inc/customizer.php:347
+msgid "Text Color"
+msgstr "Տեքստի գույնը"
+
+#: ../inc/customizer.php:352
+msgid "Comment Form Background Color"
+msgstr "Մեկնաբանության դաշտի հետնագույնը"
+
+#: ../inc/customizer.php:357
+msgid "Comment Form Text Color"
+msgstr "Մեկնաբանության դաշտերի տեքստի գույնը"
+
+#: ../inc/customizer.php:362
+msgid "Link Color"
+msgstr "Հղումների գույնը"
+
+#: ../inc/customizer.php:367
+msgid "Title and Header Text Color"
+msgstr "Վերնագրի և գլխամասի տեքստի գույնը"
+
+#: ../inc/customizer.php:372
+msgid "Primary Meta Text Color"
+msgstr "Հիմնական meta-ի տեքստի գույնը"
+
+#: ../inc/customizer.php:377
+msgid "Secondary Meta Text Color"
+msgstr "Երկրորդական meta-ի տեքստի գույնը"
+
+#: ../inc/template-tags.php:42
+msgid "Post navigation"
+msgstr "Գրառման նավարկումը"
+
+#: ../inc/template-tags.php:48
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/template-tags.php:49
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/template-tags.php:60
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Նախորդ գրառումները"
+
+#: ../inc/template-tags.php:64
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Հաջորդ գրառումները <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:96
+msgid " - Your comment is awaiting moderation."
+msgstr "- Ձեր մեկնաբանությունը սպասում է հաստատման."
+
+#: ../inc/template-tags.php:108 ../inc/template-tags.php:154
+msgid "(Edit)"
+msgstr "(Խմբագրել)"
+
+#: ../inc/template-tags.php:213 ../inc/template-tags.php:244
+#: ../inc/template-tags.php:256
+#, php-format
+msgid "View all posts by %s"
+msgstr "Դիտել %s ֊ի բոլոր գրառումները"
+
+#: ../inc/template-tags.php:230
+msgid ", "
+msgstr ","
+
+#: ../inc/template-tags.php:319
+msgid "Continue Reading &rarr;"
+msgstr "Շարունակել կարդալ &rarr;"
+
+#: ../inc/template-tags.php:336
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Շարունակել կարդալ <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:408
+#, php-format
+msgid "Page %s"
+msgstr "Էջ %s"
+
+#: ../inc/template-tags.php:436
+#, php-format
+msgid "View all posts in %s"
+msgstr " %s բաժնի բոլոր գրառումները"
+
+#: ../inc/template-tags.php:502 ../inc/template-tags.php:547
+msgid "Published"
+msgstr "Հրապարակված"
+
+#: ../inc/template-tags.php:511 ../inc/template-tags.php:556
+msgid "Updated"
+msgstr "Թարմացված"
+
+#: ../inc/template-tags.php:583
+#, php-format
+msgid "%1$s Words"
+msgstr "%1$s բառ"
+
+#: ../inc/template-tags.php:676 ../inc/template-tags.php:701
+#: ../inc/template-tags.php:725
+#, php-format
+msgid "this is page <strong>%1$s</strong> of <strong>%2$s</strong>"
+msgstr "<strong>%1$s</strong> -ը <strong>%2$s</strong>֊ից"
+
+#: ../inc/template-tags.php:677
+#, php-format
+msgid "Found one search result for <strong>%2$s</strong>."
+msgid_plural "Found %1$s search results for <strong>%2$s</strong> (%3$s)."
+msgstr[0] "Որոնել եք <strong>%2$s</strong>, գտնվել է մեկ արդյունք "
+msgstr[1] "Որոնել եք %1$s , գտնվել է  <strong>%2$s</strong> (%3$s). արդյունք"
+
+#: ../inc/template-tags.php:704
+#, php-format
+msgid "There is one post filed in <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts filed in <strong>%2$s</strong> (%3$s)."
+msgstr[0] "Միայն մեկ գրառում է հրապարակված <strong>%2$s</strong> բաժնում։"
+msgstr[1] " <strong>%2$s</strong> (%3$s) բաժնում կա  %1$s գրառում։"
+
+#: ../inc/template-tags.php:706
+#, php-format
+msgid "There is one post tagged <strong>%2$s</strong>."
+msgid_plural "There are %1$s posts tagged <strong>%2$s</strong> (%3$s)."
+msgstr[0] "<strong>«%2$s»</strong> ֊ով պիտակված գրառումներ"
+msgstr[1] "<strong>«%2$s»</strong> ֊ով պիտակված  %1$s  գրառումներ կան․ (%3$s)"
+
+#: ../inc/template-tags.php:732
+#, php-format
+msgid "There was one post published in %2$s."
+msgid_plural "There were %1$s posts published in %2$s (%3$s)."
+msgstr[0] "Մեկ գրառում է հրապարակված %2$s."
+msgstr[1] "%1$s գրառումներ են հրապարակված (%2$s)  (%3$s)."
+
+#: ../inc/template-tags.php:734
+#, php-format
+msgid "There is one post published in %2$s."
+msgid_plural "There are %1$s posts published in %2$s (%3$s)."
+msgstr[0] "Մեկ գրառում %2$s."
+msgstr[1] "%1$s գրառումներ published in %2$s (%3$s)."
+
+#: ../inc/template-tags.php:737
+#, php-format
+msgid "There was one post published on %2$s."
+msgid_plural "There were %1$s posts published on %2$s (%3$s)."
+msgstr[0] "Մեկ գրառում ՝  %2$s."
+msgstr[1] "%1$s գրառումներ %2$s (%3$s)."
+
+#: ../inc/template-tags.php:744
+#, php-format
+msgid "There was one post published in the month of %2$s."
+msgid_plural "There were %1$s posts published in %2$s (%3$s)."
+msgstr[0] " %2$s -ին միայն մեկ գրառում է հրապարակված։"
+msgstr[1] "%2$s հրապարակումները  %1$s֊ն են  (%3$s)."
+
+#: ../inc/template-tags.php:749
+#, php-format
+msgid "There was one post published in %2$s %3$s."
+msgid_plural "There were %1$s posts published in %2$s %3$s (%4$s)."
+msgstr[0] "Մեկ գրառում կա (%2$s %3$s)"
+msgstr[1] "%1$s գրառումներ կան (%2$s %3$s)  (%4$s)."
+
+#: ../inc/template-tags.php:844
+msgid "Related Content by Tag"
+msgstr "Նույն թեմայով գրառումներ (ըստ պիտակների)"
+
+#: ../page_archive-template.php:49
+msgid "Yearly Archives"
+msgstr "Տարեկան արխիվներ"
+
+#: ../page_archive-template.php:51
+msgid "Select Year"
+msgstr "Ընտրել Տարին"
+
+#: ../page_archive-template.php:57
+msgid "Monthly Archives"
+msgstr "Ամսեկան արխիվներ"
+
+#: ../page_archive-template.php:59
+msgid "Select Month"
+msgstr "Ընտրել ամիսը"
+
+#: ../page_archive-template.php:65 ../searchform.php:10 ../searchform.php:12
+msgid "Search"
+msgstr "Որոնում"
+
+#: ../page_archive-template.php:69
+msgid "Explore by Tag"
+msgstr "Հետազոտել ըստ պիտակների"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Որոնել եք՝  «%s», արդյունքները ստորև"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Որոնում &hellip;"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Մետա"
