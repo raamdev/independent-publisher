@@ -1178,12 +1178,13 @@ function independent_publisher_replytocom() {
 }
 
 /*
- * Returns the number of webmentions, pings/trackbacks the current post has
+ * Returns the number of approved webmentions, pings/trackbacks the current post has
  */
 function independent_publisher_comment_count_mentions() {
 	$args = array(
 		'post_id'  => get_the_ID(),
-		'type__in' => array( 'pings', 'webmention' )
+		'type__in' => array( 'pings', 'webmention' ),
+		'status'   => 'approve'
 	);
 	$_query = new WP_Comment_Query;
 	return count( $_query->query( $args ) );
