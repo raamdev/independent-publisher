@@ -14,6 +14,7 @@ class IndependentPublisher_Customize {
 
 	private static $default_colors = array(
 			'text_color' => '#000000',
+			'background_color' => '#ffffff',
 			'comment_form_background_color' => '#F1F1F1',
 			'comment_form_text_color' => '#000000',
 			'link_color' => '#57ad68',
