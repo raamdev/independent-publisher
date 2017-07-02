@@ -8,6 +8,17 @@
  * @since   Independent Publisher 1.0
  */
 
+/**
+ * Add a pingback url auto-discovery header for singularly identifiable articles.
+ */
+function independent_publisher_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
+	}
+}
+
+add_action( 'wp_head', 'independent_publisher_pingback_header' );
+
 if ( ! function_exists( 'independent_publisher_content_nav' ) ) :
 	/**
 	 * Display navigation to next/previous pages when applicable
