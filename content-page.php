@@ -17,8 +17,6 @@
 		<?php endif; ?>
 	</header>
 	<!-- .entry-header -->
-
-	<div class="entry-content e-content">
 		<?php the_content(); ?>
 
 		<?php if (function_exists('wp_pagenavi')) : // WP-PageNavi support ?>
@@ -43,9 +41,6 @@
 				)
 			); ?>
 		<?php endif; ?>
-	</div>
-	<!-- .entry-content -->
-
 	<footer class="entry-meta">
 		<?php do_action( 'independent_publisher_entry_meta_top' ); ?>
 
