@@ -8,7 +8,7 @@
  * @since   Independent Publisher 1.0
  */
 
-if ( !function_exists( 'independent_publisher_content_nav' ) ) :
+if ( ! function_exists( 'independent_publisher_content_nav' ) ) :
 	/**
 	 * Display navigation to next/previous pages when applicable
 	 *
@@ -22,7 +22,7 @@ if ( !function_exists( 'independent_publisher_content_nav' ) ) :
 			$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
 			$next     = get_adjacent_post( false, '', false );
 
-			if ( !$next && !$previous ) {
+			if ( ! $next && ! $previous ) {
 				return;
 			}
 		}
@@ -50,7 +50,7 @@ if ( !function_exists( 'independent_publisher_content_nav' ) ) :
 
 			<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
-				<?php if (function_exists('wp_pagenavi')) : // WP-PageNavi support ?>
+				<?php if ( function_exists( 'wp_pagenavi' ) ) : // WP-PageNavi support ?>
 
 					<?php wp_pagenavi(); ?>
 
@@ -73,7 +73,7 @@ if ( !function_exists( 'independent_publisher_content_nav' ) ) :
 	}
 endif; // independent_publisher_content_nav
 
-if ( !function_exists( 'independent_publisher_comment' ) ) :
+if ( ! function_exists( 'independent_publisher_comment' ) ) :
 	/**
 	 * Template for comments and pingbacks.
 	 *
@@ -92,7 +92,7 @@ if ( !function_exists( 'independent_publisher_comment' ) ) :
 					<?php echo get_avatar( $comment, 48 ); ?>
 					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
 					<?php if ( $comment->comment_approved == '0' ) : ?>
-						<?php $comment_content_class = "unapproved"; ?>
+						<?php $comment_content_class = 'unapproved'; ?>
 						<em><?php _e( ' - Your comment is awaiting moderation.', 'independent-publisher' ); ?></em>
 					<?php endif; ?>
 				</div>
@@ -118,7 +118,7 @@ if ( !function_exists( 'independent_publisher_comment' ) ) :
 					array_merge(
 						$args, array(
 							'depth'     => $depth,
-							'max_depth' => $args['max_depth']
+							'max_depth' => $args['max_depth'],
 						)
 					)
 				); ?>
@@ -129,7 +129,7 @@ if ( !function_exists( 'independent_publisher_comment' ) ) :
 	}
 endif; // ends check for independent_publisher_comment()
 
-if ( !function_exists( 'independent_publisher_pings' ) ) :
+if ( ! function_exists( 'independent_publisher_pings' ) ) :
 	/**
 	 * Creates a custom query for pingbacks/trackbacks (i.e., 'pings')
 	 * and displays them. Using this custom query instead of
@@ -145,7 +145,7 @@ if ( !function_exists( 'independent_publisher_pings' ) ) :
 		$args = array(
 			'post_id' => get_the_ID(),
 			'type'    => 'pings',
-			'status'  => 'approve'
+			'status'  => 'approve',
 		);
 		$pings_query = new WP_Comment_Query;
 		$pings       = $pings_query->query( $args );
@@ -163,7 +163,7 @@ if ( !function_exists( 'independent_publisher_pings' ) ) :
 	}
 endif; // ends check for independent_publisher_pings()
 
-if ( !function_exists( 'independent_publisher_mentions' ) ) :
+if ( ! function_exists( 'independent_publisher_mentions' ) ) :
 	/**
 	 * Creates a custom query for webmentions, pings, and trackbacks
 	 * and displays them using this custom query instead of
@@ -176,7 +176,7 @@ if ( !function_exists( 'independent_publisher_mentions' ) ) :
 		$args = array(
 			'post_id'  => get_the_ID(),
 			'type__in' => array( 'pings', 'webmention' ),
-			'status'   => 'approve'
+			'status'   => 'approve',
 		);
 		$mention_query = new WP_Comment_Query;
 		$mentions = $mention_query->query( $args );
@@ -185,11 +185,11 @@ if ( !function_exists( 'independent_publisher_mentions' ) ) :
 			foreach ( $mentions as $mention ) {
 				?>
 				<li <?php comment_class( '', $mention->comment_ID ); ?> id="li-comment-<?php echo $mention->comment_ID ?>">
-					<?php if ($mention->comment_type !== 'webmention') : // Webmentions already include author in the comment text ?>
+					<?php if ( $mention->comment_type !== 'webmention' ) : // Webmentions already include author in the comment text ?>
 						<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link( $mention->comment_ID ) ) ?>
 						<small><?php printf( '%1$s', get_comment_date() ); ?></small>
 					<?php endif; ?>
-					<?php comment_text($mention->comment_ID); ?>
+					<?php comment_text( $mention->comment_ID ); ?>
 				</li>
 				<?php
 			}
@@ -197,7 +197,7 @@ if ( !function_exists( 'independent_publisher_mentions' ) ) :
 	}
 endif; // ends check for independent_publisher_mentions()
 
-if ( !function_exists( 'independent_publisher_posted_author' ) ) :
+if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 *
@@ -221,7 +221,7 @@ if ( !function_exists( 'independent_publisher_posted_author' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_posted_author_cats' ) ) :
+if ( ! function_exists( 'independent_publisher_posted_author_cats' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author and post categories.
 	 *
@@ -234,7 +234,7 @@ if ( !function_exists( 'independent_publisher_posted_author_cats' ) ) :
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'independent-publisher' ) );
 
-		if ( ( !post_password_required() && comments_open() && !independent_publisher_hide_comments() ) || ( !post_password_required() && independent_publisher_show_post_word_count() && !get_post_format() ) || independent_publisher_show_date_entry_meta() ) {
+		if ( ( ! post_password_required() && comments_open() && ! independent_publisher_hide_comments() ) || ( ! post_password_required() && independent_publisher_show_post_word_count() && ! get_post_format() ) || independent_publisher_show_date_entry_meta() ) {
 			$separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' );
 		} else {
 			$separator = '';
@@ -280,7 +280,7 @@ if ( !function_exists( 'independent_publisher_posted_author_cats' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_posted_on_date' ) ) :
+if ( ! function_exists( 'independent_publisher_posted_on_date' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 *
@@ -297,7 +297,7 @@ if ( !function_exists( 'independent_publisher_posted_on_date' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_post_updated_date' ) ) :
+if ( ! function_exists( 'independent_publisher_post_updated_date' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post's last updated date/time.
 	 *
@@ -314,7 +314,7 @@ if ( !function_exists( 'independent_publisher_post_updated_date' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_continue_reading_link' ) ) :
+if ( ! function_exists( 'independent_publisher_continue_reading_link' ) ) :
 	/**
 	 * Prints HTML with Continue Reading link
 	 *
@@ -331,7 +331,7 @@ if ( !function_exists( 'independent_publisher_continue_reading_link' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_continue_reading_text' ) ) :
+if ( ! function_exists( 'independent_publisher_continue_reading_text' ) ) :
 	/**
 	 * Returns Continue Reading text for usage in the_content()
 	 *
@@ -342,7 +342,7 @@ if ( !function_exists( 'independent_publisher_continue_reading_text' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_categorized_blog' ) ) :
+if ( ! function_exists( 'independent_publisher_categorized_blog' ) ) :
 	/**
 	 * Returns true if a blog has more than 1 category
 	 *
@@ -386,7 +386,7 @@ function independent_publisher_category_transient_flusher() {
 add_action( 'edit_category', 'independent_publisher_category_transient_flusher' );
 add_action( 'save_post', 'independent_publisher_category_transient_flusher' );
 
-if ( !function_exists( 'independent_publisher_wp_title' ) ) :
+if ( ! function_exists( 'independent_publisher_wp_title' ) ) :
 	/**
 	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
 	 *
@@ -419,7 +419,7 @@ endif;
 
 add_filter( 'wp_title', 'independent_publisher_wp_title', 10, 2 );
 
-if ( !function_exists( 'independent_publisher_post_categories' ) ) :
+if ( ! function_exists( 'independent_publisher_post_categories' ) ) :
 	/**
 	 * Returns categories for current post with separator.
 	 * Optionally returns only a single category.
@@ -438,7 +438,7 @@ if ( !function_exists( 'independent_publisher_post_categories' ) ) :
 			$output     = '';
 			if ( $categories ) {
 				foreach ( $categories as $category ) {
-					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'independent-publisher' ), $category->name ) ) . '">' . $category->cat_name . '</a>';
+					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( 'View all posts in %s', 'independent-publisher' ), $category->name ) ) . '">' . $category->cat_name . '</a>';
 					if ( $single ) {
 						break;
 					}
@@ -450,7 +450,7 @@ if ( !function_exists( 'independent_publisher_post_categories' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_site_info' ) ) :
+if ( ! function_exists( 'independent_publisher_site_info' ) ) :
 	/**
 	 * Outputs site info for display on non-single pages
 	 *
@@ -472,7 +472,7 @@ if ( !function_exists( 'independent_publisher_site_info' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_posted_author_card' ) ) :
+if ( ! function_exists( 'independent_publisher_posted_author_card' ) ) :
 	/**
 	 * Outputs post author info for display on single posts
 	 *
@@ -488,11 +488,11 @@ if ( !function_exists( 'independent_publisher_posted_author_card' ) ) :
 		$show_avatars   = get_option( 'show_avatars' );
 		?>
 
-		<?php if ( ( !$show_avatars || $show_avatars === 0 ) && !independent_publisher_is_multi_author_mode() && get_header_image() ) : ?>
+		<?php if ( ( ! $show_avatars || $show_avatars === 0 ) && ! independent_publisher_is_multi_author_mode() && get_header_image() ) : ?>
 			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 			</a>
-		<?php else: ?>
+		<?php else : ?>
 			<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ); ?>">
 				<?php echo get_avatar( get_the_author_meta( 'ID', $post_author_id ), 100 ); ?>
 			</a>
@@ -511,7 +511,7 @@ if ( !function_exists( 'independent_publisher_posted_author_card' ) ) :
 						'independent_publisher_hide_updated_date' Custom Field is not present on this post */ ?>
 		<?php if ( get_the_modified_date() !== get_the_date() &&
 			independent_publisher_show_updated_date_on_single() &&
-			!get_post_meta( get_the_ID(), 'independent_publisher_hide_updated_date', true )
+			! get_post_meta( get_the_ID(), 'independent_publisher_hide_updated_date', true )
 		) : ?>
 			<h2 class="site-published"><?php _e( 'Updated', 'independent-publisher' ); ?></h2>
 			<h2 class="site-published-date"><?php independent_publisher_post_updated_date(); ?></h2>
@@ -522,14 +522,14 @@ if ( !function_exists( 'independent_publisher_posted_author_card' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_posted_author_bottom_card' ) ) :
+if ( ! function_exists( 'independent_publisher_posted_author_bottom_card' ) ) :
 	/**
 	 * Outputs post author info for display on bottom of single posts
 	 *
 	 * @since Independent Publisher 1.0
 	 */
 	function independent_publisher_posted_author_bottom_card() {
-		if ( !independent_publisher_show_author_card() ) {
+		if ( ! independent_publisher_show_author_card() ) {
 			return; // This option has been disabled
 		}
 
@@ -556,7 +556,7 @@ if ( !function_exists( 'independent_publisher_posted_author_bottom_card' ) ) :
 								'independent_publisher_hide_updated_date' Custom Field is not present on this post */ ?>
 					<?php if ( get_the_modified_date() !== get_the_date() &&
 						independent_publisher_show_updated_date_on_single() &&
-						!get_post_meta( get_the_ID(), 'independent_publisher_hide_updated_date', true )
+						! get_post_meta( get_the_ID(), 'independent_publisher_hide_updated_date', true )
 					) : ?>
 						<h2 class="site-published"><?php _e( 'Updated', 'independent-publisher' ); ?></h2>
 						<h2 class="site-published-date"><?php independent_publisher_post_updated_date(); ?></h2>
@@ -573,13 +573,13 @@ if ( !function_exists( 'independent_publisher_posted_author_bottom_card' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_get_post_word_count' ) ) :
+if ( ! function_exists( 'independent_publisher_get_post_word_count' ) ) :
 	/**
 	 * Returns number of words in a post formatted for display in theme
 	 * @return string
 	 */
 	function independent_publisher_get_post_word_count() {
-		if ( !post_password_required() && comments_open() && !independent_publisher_hide_comments() ) {
+		if ( ! post_password_required() && comments_open() && ! independent_publisher_hide_comments() ) {
 			$separator = ' <span class="sep"> ' . apply_filters( 'independent_publisher_entry_meta_separator', '|' ) . ' </span>';
 		} else {
 			$separator = '';
@@ -589,13 +589,13 @@ if ( !function_exists( 'independent_publisher_get_post_word_count' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_get_post_date' ) ) :
+if ( ! function_exists( 'independent_publisher_get_post_date' ) ) :
 	/**
 	 * Returns post date formatted for display in theme
 	 * @return string
 	 */
 	function independent_publisher_get_post_date() {
-		if ( ( comments_open() && !independent_publisher_hide_comments() ) || ( independent_publisher_show_post_word_count() && !get_post_format() ) ) {
+		if ( ( comments_open() && ! independent_publisher_hide_comments() ) || ( independent_publisher_show_post_word_count() && ! get_post_format() ) ) {
 			$separator = ' <span class="sep"> ' . apply_filters( 'independent_publisher_entry_meta_separator', '|' ) . ' </span>';
 		} else {
 			$separator = '';
@@ -605,7 +605,7 @@ if ( !function_exists( 'independent_publisher_get_post_date' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
+if ( ! function_exists( 'independent_publisher_full_width_featured_image' ) ) :
 	/**
 	 * Show Full Width Featured Image on single pages if post has full width featured image selected
 	 * or if Auto-Set Featured Image as Post Cover option is enabled
@@ -614,7 +614,7 @@ if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
 		if ( independent_publisher_has_full_width_featured_image() ) {
 			while ( have_posts() ) : the_post();
 				if ( has_post_thumbnail() ) :
-					if ( independent_publisher_post_has_post_cover_title() ):
+					if ( independent_publisher_post_has_post_cover_title() ) :
 						$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), apply_filters( 'independent_publisher_full_width_featured_image_size', 'independent_publisher_post_thumbnail' ) );
 						$featured_image_url = $featured_image_url[0];
 						?>
@@ -626,19 +626,19 @@ if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
 										<?php echo get_the_title(); ?>
 									</h1>
 									<?php $subtitle = get_post_meta( get_the_id(), 'independent_publisher_post_cover_subtitle', true ); ?>
-									<?php if ( $subtitle ): ?>
+									<?php if ( $subtitle ) : ?>
 										<h2 class="entry-subtitle">
 											<?php echo $subtitle; ?>
 										</h2>
 									<?php endif; ?>
-									<?php if ( !is_page() ) : ?>
+									<?php if ( ! is_page() ) : ?>
 										<h3 class="entry-title-meta">
 												<span class="entry-title-meta-author">
 													<a class="author-avatar" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 														<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
 													</a>
 													<?php
-													if ( !independent_publisher_categorized_blog() ) {
+													if ( ! independent_publisher_categorized_blog() ) {
 														echo independent_publisher_entry_meta_author_prefix() . ' ';
 													}
 													independent_publisher_posted_author();
@@ -646,7 +646,7 @@ if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
 												</span>
 											<?php if ( independent_publisher_categorized_blog() ) {
 												echo independent_publisher_entry_meta_category_prefix() . ' ' . independent_publisher_post_categories();
-											} ?>
+} ?>
 											<span class="entry-title-meta-post-date">
 													<span class="sep"> <?php echo apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?> </span>
 												<?php independent_publisher_posted_on_date() ?>
@@ -658,7 +658,7 @@ if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
 							</div>
 						</div>
 						<?php
-					else:
+					else :
 						the_post_thumbnail( apply_filters( 'independent_publisher_full_width_featured_image_size', 'independent_publisher_post_thumbnail' ), array( 'class' => 'full-width-featured-image' ) );
 					endif;
 				endif;
@@ -667,7 +667,7 @@ if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_search_stats' ) ):
+if ( ! function_exists( 'independent_publisher_search_stats' ) ) :
 	/**
 	 * Returns stats for search results
 	 */
@@ -685,7 +685,92 @@ if ( !function_exists( 'independent_publisher_search_stats' ) ):
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
+if ( ! function_exists( 'independent_publisher_archive_description' ) ) :
+	/**
+	 * Filters the archive description.
+	 */
+	function independent_publisher_archive_description( $description ) {
+		if ( is_category() ) {
+			$taxonomy_stats = apply_filters( 'independent_publisher_taxonomy_category_stats', independent_publisher_taxonomy_archive_stats( 'category' ) );
+			if ( ! empty( $description ) ) { // show the description + the taxonomy stats
+				return apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $description . $taxonomy_stats . '</div>' );
+			} else { // there was no description set, so let's just show some stats
+				return apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $taxonomy_stats . '</div>' );
+			}
+		} elseif ( is_tag() ) {
+			// Get some stats about this taxonomy to include in the description
+			$taxonomy_stats = apply_filters( 'independent_publisher_taxonomy_tag_stats', independent_publisher_taxonomy_archive_stats( 'post_tag' ) );
+			if ( ! empty( $description ) ) { // show the description + the taxonomy stats
+				return apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $description . $taxonomy_stats . '</div>' );
+			} else { // there was description set, so let's just show some stats
+				return apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $taxonomy_stats . '</div>' );
+			}
+			} elseif ( is_day() || is_month() || is_year() ) {
+				return independent_publisher_date_archive_description();
+			}
+		return $description;
+	}
+endif;
+
+add_filter( 'get_the_archive_description', 'independent_publisher_archive_description' );
+
+
+if ( ! function_exists( 'independent_publisher_archive_title' ) ) :
+	/**
+	 * Filters the archive title.
+	 */
+	function independent_publisher_archive_title( $title ) {
+		if ( is_category() ) {
+			return sprintf( '%s', '<span>' . single_cat_title( '', false ) . '</span>' );
+		} elseif ( is_tag() ) {
+			return sprintf( '%s', '<span>' . single_tag_title( '', false ) . '</span>' );
+		} elseif ( is_author() ) {
+			/* Queue the first post, that way we know
+			* what author we're dealing with (if that is the case).
+			*/
+			the_post();
+			$title = sprintf( '%s', '<span class="vcard h-card"><a class="url fn n u-url" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+			/* Since we called the_post() above, we need to
+			* rewind the loop back to the beginning that way
+			* we can run the loop properly, in full.
+							 */
+			rewind_posts();
+			return $title;
+		} elseif ( is_day() ) {
+			return sprintf( '%s', '<span>' . get_the_date() . '</span>' );
+		} elseif ( is_month() ) {
+			return sprintf( '%s', '<span>' . get_the_date( 'F Y' ) . '</span>' );
+		} elseif ( is_year() ) {
+			return sprintf( '%s', '<span>' . get_the_date( 'Y' ) . '</span>' );
+		} elseif ( is_tax( 'post_format', 'post-format-aside' ) ) {
+			return __( 'Asides', 'independent-publisher' );
+		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
+			return __( 'Galleries', 'independent-publisher' );
+		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
+			return __( 'Images', 'independent-publisher' );
+		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
+			return __( 'Videos', 'independent-publisher' );
+		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
+			return __( 'Quotes', 'independent-publisher' );
+		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
+			return __( 'Links', 'independent-publisher' );
+		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
+			return __( 'Statuses', 'independent-publisher' );
+		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
+			return __( 'Audios', 'independent-publisher' );
+		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
+			return __( 'Chats', 'independent-publisher' );
+		} else {
+			return __( 'Archives', 'independent-publisher' );
+		}
+	return $title;
+	}
+endif;
+
+add_filter( 'get_the_archive_title', 'independent_publisher_archive_title' );
+
+
+if ( ! function_exists( 'independent_publisher_taxonomy_archive_stats' ) ) :
 	/**
 	 * Returns taxonomy archive stats and current page info for use in taxonomy archive descriptions
 	 */
@@ -715,7 +800,7 @@ if ( !function_exists( 'independent_publisher_taxonomy_archive_stats' ) ):
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_date_archive_description' ) ):
+if ( ! function_exists( 'independent_publisher_date_archive_description' ) ) :
 	/**
 	 * Returns the Date Archive description
 	 */
@@ -763,7 +848,7 @@ if ( !function_exists( 'independent_publisher_date_archive_description' ) ):
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_min_comments_bottom_comment_button' ) ):
+if ( ! function_exists( 'independent_publisher_min_comments_bottom_comment_button' ) ) :
 	/**
 	 * Returns the minimum number of comments that must exist for the bottom 'Write a Comment' button to appear
 	 */
@@ -772,7 +857,7 @@ if ( !function_exists( 'independent_publisher_min_comments_bottom_comment_button
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_min_comments_comment_title' ) ):
+if ( ! function_exists( 'independent_publisher_min_comments_comment_title' ) ) :
 	/**
 	 * Returns the minimum number of comments that must exist for the comments title to appear
 	 */
@@ -781,7 +866,7 @@ if ( !function_exists( 'independent_publisher_min_comments_comment_title' ) ):
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_hide_comments' ) ):
+if ( ! function_exists( 'independent_publisher_hide_comments' ) ) :
 	/**
 	 * Determines if the comments and comment form should be hidden altogether.
 	 * This differs from disabling the comments by also hiding the
@@ -793,7 +878,7 @@ if ( !function_exists( 'independent_publisher_hide_comments' ) ):
 	}
 endif;
 
-if ( !function_exists( 'independent_publisher_footer_credits' ) ):
+if ( ! function_exists( 'independent_publisher_footer_credits' ) ) :
 	/**
 	 * Echoes the theme footer credits. Overriding this function in a Child Theme also
 	 * applies the changes to Jetpack's Infinite Scroll footer.
@@ -803,7 +888,7 @@ if ( !function_exists( 'independent_publisher_footer_credits' ) ):
 	}
 endif;
 
-if ( !function_exists( '_wp_render_title_tag' ) ) :
+if ( ! function_exists( '_wp_render_title_tag' ) ) :
 	/*
 	 * Backwards compatibility for <= WP v4.0.
 	 * See https://make.wordpress.org/core/2015/10/20/document-title-in-4-4/
@@ -817,7 +902,7 @@ if ( !function_exists( '_wp_render_title_tag' ) ) :
 	add_action( 'wp_head', 'independent_publisher_render_title' );
 endif;
 
-if ( !function_exists( 'independent_publisher_show_excerpt' ) ):
+if ( ! function_exists( 'independent_publisher_show_excerpt' ) ) :
 	/*
 	 * Determines if an excerpt should be shown for a given post. Used in the loop.
 	 */
@@ -827,14 +912,14 @@ if ( !function_exists( 'independent_publisher_show_excerpt' ) ):
 		 * when excerpts enabled or One-Sentence Excerpts enabled AND
 		 * this is not the very first standard post when Show Full Content First Post enabled
 		 */
-		if ( ( !get_post_format() || 'chat' === get_post_format() ) &&
-			( !( independent_publisher_is_very_first_standard_post() && is_sticky() ) ) &&
+		if ( ( ! get_post_format() || 'chat' === get_post_format() ) &&
+			( ! ( independent_publisher_is_very_first_standard_post() && is_sticky() ) ) &&
 			( independent_publisher_use_post_excerpts() || independent_publisher_generate_one_sentence_excerpts() ) &&
-			( !( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() && is_home() ) )
+			( ! ( independent_publisher_show_full_content_first_post() && independent_publisher_is_very_first_standard_post() && is_home() ) )
 		) {
-			return TRUE;
+			return true;
 		} else {
-			return FALSE;
+			return false;
 		}
 	}
 endif;
