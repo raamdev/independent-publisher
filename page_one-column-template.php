@@ -30,7 +30,6 @@ get_header(); ?>
 					</header>
 					<!-- .entry-header -->
 
-					<div class="entry-content">
 						<?php the_content(); ?>
 
 						<?php if (function_exists('wp_pagenavi')) : // WP-PageNavi support ?>
@@ -56,9 +55,6 @@ get_header(); ?>
 							); ?>
 
 						<?php endif; ?>
-					</div>
-					<!-- .entry-content -->
-
 					<?php edit_post_link( __( 'Edit', 'independent-publisher' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 				</article><!-- #post-<?php the_ID(); ?> -->
 

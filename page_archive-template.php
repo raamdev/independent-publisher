@@ -21,7 +21,6 @@ get_header(); ?>
 				</header>
 				<!-- .entry-header -->
 
-				<div class="entry-content">
 					<?php the_content(); ?>
 
 					<?php if ( !dynamic_sidebar( 'archive-page' ) ) : ?>
@@ -69,10 +68,6 @@ get_header(); ?>
 						<?php the_widget( 'WP_Widget_Tag_Cloud', array( 'title' => __( 'Explore by Tag', 'independent-publisher' ) ) ); ?>
 
 					<?php endif; ?>
-
-				</div>
-				<!-- .entry-content -->
-
 				<?php edit_post_link( __( 'Edit', 'independent-publisher' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 			</article><!-- #post-<?php the_ID(); ?> -->
 
