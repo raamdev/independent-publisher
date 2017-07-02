@@ -26,16 +26,8 @@ get_header(); ?>
 				?>
 
 				<header class="archive-header">
-					<h1 class="archive-title"><?php printf( '%s', '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
+				<?php the_archive_title( '<h1 class="page-title p-name">', '</h1>' ); ?>
 				</header><!-- .archive-header -->
-
-				<?php
-				/* Since we called the_post() above, we need to
-				 * rewind the loop back to the beginning that way
-				 * we can run the loop properly, in full.
-				 */
-				rewind_posts();
-				?>
 
 				<?php get_template_part( 'author-bio' ); ?>
 
