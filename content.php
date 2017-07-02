@@ -28,9 +28,6 @@
 		</h1>
 	</header>
 	<!-- .entry-header -->
-
-	<div class="<?php echo independent_publisher_show_excerpt() ? 'entry-summary e-summary' : 'entry-content e-content'; ?>">
-
 		<?php if ( independent_publisher_show_excerpt() ) : ?>
 
 			<?php if ( independent_publisher_show_post_thumbnails() ) : ?>
@@ -68,8 +65,6 @@
 			<?php endif; ?>
 
 		<?php endif; ?>
-	</div>
-	<!-- .entry-content -->
 
 	<?php
 	/* Show Continue Reading link when this is a Standard post format AND

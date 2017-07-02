@@ -34,6 +34,33 @@ function independent_publisher_mf2_post_class( $classes ) {
 
 add_filter( 'post_class', 'independent_publisher_mf2_post_class' );
 
+/**  
+ * Wraps the_content in e-content
+ *
+ */
+function independent_publisher_the_content( $content ) {
+	$wrap = '<div class="e-content" itemprop="mainContentOfPage">';
+	if ($content!="") {
+		return $wrap . $content . "\n" . '</div>';
+	}
+	return $content;
+}
+
+add_filter( 'the_content', 'independent_publisher_the_content', 1 );
+
+/**
+ * Wraps the_excerpt in p-summary
+ *
+ */
+function independent_publisher_the_excerpt( $content ) {
+	$wrap = '<div class="p-summary">';
+	if ($content!="") {
+		return $wrap . $content . '</div>';
+	}
+	return $content;
+}
+
+add_filter( 'the_excerpt', 'independent_publisher_the_excerpt', 1 );
 
 /**
  * Adds mf2 to avatar
@@ -47,6 +74,7 @@ function independent_publisher_mf2_get_avatar_data($args, $id_or_email) {
 			$args['class'] = array( 'u-photo' );
 		} else {
 			$args['class'][] = 'u-photo';
+			$args['class'] = array_unique( $args['class'] );
 		}
 		return $args;
 	}

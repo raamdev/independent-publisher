@@ -49,7 +49,6 @@
 		<?php endif; ?>
 	</header>
 	<!-- .entry-header -->
-	<div class="entry-content e-content" itemprop="mainContentOfPage">
 		<?php the_content(); ?>
 
 		<?php if (function_exists('wp_pagenavi')) : // WP-PageNavi support ?>
@@ -74,8 +73,6 @@
 				)
 			); ?>
 		<?php endif; ?>
-	</div>
-	<!-- .entry-content -->
 
 	<?php independent_publisher_posted_author_bottom_card() ?>
 
