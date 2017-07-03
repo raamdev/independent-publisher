@@ -39,7 +39,7 @@ add_filter( 'post_class', 'independent_publisher_mf2_post_class' );
  *
  */
 function independent_publisher_the_content( $content ) {
-	$wrap = '<div class="e-content" itemprop="mainContentOfPage">';
+	$wrap = '<div class="entry-content e-content" itemprop="mainContentOfPage">';
 	if ($content!="") {
 		return $wrap . $content . "\n" . '</div>';
 	}
@@ -53,7 +53,7 @@ add_filter( 'the_content', 'independent_publisher_the_content', 1 );
  *
  */
 function independent_publisher_the_excerpt( $content ) {
-	$wrap = '<div class="p-summary">';
+	$wrap = '<div class="entry-summary p-summary">';
 	if ($content!="") {
 		return $wrap . $content . '</div>';
 	}
