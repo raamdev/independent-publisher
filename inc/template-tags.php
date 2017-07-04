@@ -99,9 +99,9 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
 			<footer>
-				<div class="comment-author vcard">
+				<div class="comment-author vcard h-card">
 					<?php echo get_avatar( $comment, 48 ); ?>
-					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
+					<?php printf( '<cite class="fn u-url">%s</cite>', get_comment_author_link() ); ?>
 					<?php if ( $comment->comment_approved == '0' ) : ?>
 						<?php $comment_content_class = 'unapproved'; ?>
 						<em><?php _e( ' - Your comment is awaiting moderation.', 'independent-publisher' ); ?></em>
@@ -109,8 +109,8 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 				</div>
 				<!-- .comment-author .vcard -->
 				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-						<time pubdate datetime="<?php comment_time( 'c' ); ?>">
+					<a class="u-url" href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+						<time pubdate class="dt-published" datetime="<?php comment_time( 'DATE_W3C' ); ?>">
 							<?php
 							/* translators: 1: date */
 							printf( '%1$s', get_comment_date() ); ?>
@@ -122,7 +122,7 @@ if ( ! function_exists( 'independent_publisher_comment' ) ) :
 				<!-- .comment-meta .commentmetadata -->
 			</footer>
 
-			<div class="comment-content <?php echo $comment_content_class; ?>"><?php comment_text(); ?></div>
+			<div class="p-content comment-content <?php echo $comment_content_class; ?>"><?php comment_text(); ?></div>
 
 			<div class="reply">
 				<?php comment_reply_link(
@@ -165,7 +165,7 @@ if ( ! function_exists( 'independent_publisher_pings' ) ) :
 			foreach ( $pings as $ping ) {
 				?>
 				<li <?php comment_class( '', $ping->comment_ID ); ?> id="li-comment-<?php echo $ping->comment_ID ?>">
-					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link( $ping->comment_ID ) ) ?>
+					<?php printf( '<cite class="fn u-url">%s</cite>', get_comment_author_link( $ping->comment_ID ) ) ?>
 					<span> <?php edit_comment_link( __( '(Edit)', 'independent-publisher' ), '  ', '' ) ?></span>
 				</li>
 				<?php
@@ -197,10 +197,12 @@ if ( ! function_exists( 'independent_publisher_mentions' ) ) :
 				?>
 				<li <?php comment_class( '', $mention->comment_ID ); ?> id="li-comment-<?php echo $mention->comment_ID ?>">
 					<?php if ( $mention->comment_type !== 'webmention' ) : // Webmentions already include author in the comment text ?>
-						<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link( $mention->comment_ID ) ) ?>
+						<?php printf( '<cite class="fn u-author h-card">%s</cite>', get_comment_author_link( $mention->comment_ID ) ) ?>
 						<small><?php printf( '%1$s', get_comment_date() ); ?></small>
 					<?php endif; ?>
+					<div class="p-content">
 					<?php comment_text( $mention->comment_ID ); ?>
+					</div>
 				</li>
 				<?php
 			}
@@ -396,39 +398,6 @@ function independent_publisher_category_transient_flusher() {
 
 add_action( 'edit_category', 'independent_publisher_category_transient_flusher' );
 add_action( 'save_post', 'independent_publisher_category_transient_flusher' );
-
-if ( ! function_exists( 'independent_publisher_wp_title' ) ) :
-	/**
-	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
-	 *
-	 * @since Independent Publisher 1.0
-	 */
-	function independent_publisher_wp_title( $title, $sep ) {
-		global $page, $paged;
-
-		if ( is_feed() ) {
-			return $title;
-		}
-
-		// Add the blog name
-		$title .= get_bloginfo( 'name' );
-
-		// Add the blog description for the home/front page.
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) ) {
-			$title .= " $sep $site_description";
-		}
-
-		// Add a page number if necessary:
-		if ( $paged >= 2 || $page >= 2 ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'independent-publisher' ), max( $paged, $page ) );
-		}
-
-		return $title;
-	}
-endif;
-
-add_filter( 'wp_title', 'independent_publisher_wp_title', 10, 2 );
 
 if ( ! function_exists( 'independent_publisher_post_categories' ) ) :
 	/**

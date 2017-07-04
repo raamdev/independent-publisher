@@ -125,7 +125,7 @@ if ( ! function_exists( 'independent_publisher_setup' ) ) :
 		);
 
 		/**
-		 * Add support for the Aside Post Formats
+		 * Add support for Post Formats
 		 */
 		add_theme_support(
 			'post-formats', array(
@@ -140,6 +140,11 @@ if ( ! function_exists( 'independent_publisher_setup' ) ) :
 				'audio'
 			)
 		);
+
+		/**
+		 * Add support for the title tag
+		 */
+		add_theme_support( 'title-tag' );
 	}
 endif; // independent_publisher_setup
 add_action( 'after_setup_theme', 'independent_publisher_setup' );
