@@ -854,3 +854,21 @@ if ( ! function_exists( 'independent_publisher_show_related_tags' ) ) :
 		endif;
 	}
 endif;
+
+if ( ! function_exists( 'independent_publisher_get_link_url' ) ) :
+  /**
+   * Return the post URL.
+   *
+   * Falls back to the post permalink if no URL is found in the post.
+   *
+   * @since Independent Publisher 1.8
+   *
+   * @see get_url_in_content()
+   *
+   * @return string The Link format URL.
+   */
+  function independent_publisher_get_link_url() {
+  	$has_url = get_url_in_content( get_the_content() );
+    return $has_url ? $has_url : apply_filters( 'the_permalink', get_permalink() );
+  }
+endif;
