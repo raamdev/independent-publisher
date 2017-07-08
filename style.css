@@ -1613,7 +1613,8 @@ body {
 	float: right;
 }
 
-.site-published {
+.site-published,
+.site-location {
 	margin: 10px 0 0 0;
 	color: #333332;
 	font-size: 14px;
@@ -1623,7 +1624,8 @@ body {
 	letter-spacing: inherit;
 }
 
-.site-published-date {
+.site-published-date,
+.site-location-detail {
 	margin: 5px 0 0 0;
 	color: #929292;
 	font-size: 12px;
@@ -1634,7 +1636,8 @@ body {
 	font-style: normal;
 }
 
-.site-published-date a {
+.site-published-date a,
+.site-location-detail a {
 	color: #929292;
 	text-decoration: none;
 }
