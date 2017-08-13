@@ -142,9 +142,10 @@ if ( !function_exists( 'independent_publisher_pings' ) ) :
 	 * @see independent_publisher_mentions()
 	 */
 	function independent_publisher_pings() {
-		$args        = array(
+		$args = array(
 			'post_id' => get_the_ID(),
-			'type'    => 'pings'
+			'type'    => 'pings',
+			'status'  => 'approve'
 		);
 		$pings_query = new WP_Comment_Query;
 		$pings       = $pings_query->query( $args );
@@ -172,9 +173,10 @@ if ( !function_exists( 'independent_publisher_mentions' ) ) :
 	 * @since Independent Publisher 1.7
 	 */
 	function independent_publisher_mentions() {
-		$args        = array(
-			'post_id' => get_the_ID(),
-			'type__in'    => array('pings', 'webmention')
+		$args = array(
+			'post_id'  => get_the_ID(),
+			'type__in' => array( 'pings', 'webmention' ),
+			'status'   => 'approve'
 		);
 		$mention_query = new WP_Comment_Query;
 		$mentions = $mention_query->query( $args );
