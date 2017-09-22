@@ -47,7 +47,10 @@
 				independent_publisher_post_data();
 			} else {
 			// Show Header Image, Site Title, and Site Tagline on everything except Single Pages
-				independent_publisher_site_info(); 
+				independent_publisher_site_info();
+				if ( get_option( 'iw_single_author' ) ) {
+					independent_publisher_posted_author_card( get_option( 'iw_default_author' ) );
+				}
 			}
 			?>
 		</div>

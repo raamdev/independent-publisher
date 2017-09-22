@@ -223,8 +223,8 @@ if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 		$post_author_nice_name = get_the_author_meta( 'display_name', $post_author_id );
 
 		printf(
-			'<span class="byline%1$s"><a class="u-url url fn n" href="%2$s" title="%3$s" rel="author">%4$s</a></span>',
-			$card ? '' : ' author p-author vcard h-card',
+			'<a class="%1$sp-name u-url url fn n" href="%2$s" title="%3$s" rel="author">%4$s</a>',
+			$card ? '' : 'author p-author vcard h-card ',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ) ),
 			esc_attr( sprintf( __( 'View all posts by %s', 'independent-publisher' ), $post_author_nice_name ) ),
 			esc_html( $post_author_nice_name )
