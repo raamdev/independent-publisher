@@ -216,14 +216,15 @@ if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 	 *
 	 * @since Independent Publisher 1.0
 	 */
-	function independent_publisher_posted_author( $post_author_id = null ) {
+	function independent_publisher_posted_author( $post_author_id = null, $card = false ) {
 		if ( ! $post_author_id ) {
 			$post_author_id = get_the_author();
 		}
 		$post_author_nice_name = get_the_author_meta( 'display_name', $post_author_id );
 
 		printf(
-			'<span class="byline"><span class="author p-author vcard h-card"><a class="u-url url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span></span>',
+			'<span class="byline%1$s"><a class="u-url url fn n" href="%2$s" title="%3$s" rel="author">%4$s</a></span>',
+			$card ? '' : ' author p-author vcard h-card',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ) ),
 			esc_attr( sprintf( __( 'View all posts by %s', 'independent-publisher' ), $post_author_nice_name ) ),
 			esc_html( $post_author_nice_name )
@@ -463,7 +464,8 @@ if ( ! function_exists( 'independent_publisher_posted_author_card' ) ) :
 		global $wp_query;
 		$post_author_id = $wp_query->post->post_author;
 		$show_avatars   = get_option( 'show_avatars' );
-		?>
+?>
+		<div class ="author p-author vcard h-card">
 
 		<?php if ( ( ! $show_avatars || $show_avatars === 0 ) && ! independent_publisher_is_multi_author_mode() && get_header_image() ) : ?>
 			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -475,9 +477,11 @@ if ( ! function_exists( 'independent_publisher_posted_author_card' ) ) :
 			</a>
 		<?php endif; ?>
 
-		<div class="site-title"><?php independent_publisher_posted_author( $post_author_id ); ?></div>
+		<div class="site-title"><?php independent_publisher_posted_author( $post_author_id, true ); ?></div>
 		<div class="site-description"><?php the_author_meta( 'description', $post_author_id ) ?></div>
-
+		<?php // Add Optional Extra Author Data
+			do_action( 'independent_publisher_author_data', $post_author_id ); ?>
+                </div> 
 		<?php get_template_part( 'menu', 'social' ); ?>
 
 		<div class="site-published-separator"></div>
