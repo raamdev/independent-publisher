@@ -73,6 +73,9 @@ function independent_publisher_mf2_get_avatar_data($args, $id_or_email) {
 		if ( ! isset( $args['class'] ) ) {
 			$args['class'] = array( 'u-photo' );
 		} else {
+			if ( is_string( $args['class'] ) ) {
+				$args['class'] = explode( ' ', $args['class'] );
+			}
 			$args['class'][] = 'u-photo';
 			$args['class'] = array_unique( $args['class'] );
 		}
