@@ -216,13 +216,10 @@ if ( ! function_exists( 'independent_publisher_posted_author' ) ) :
 	 *
 	 * @since Independent Publisher 1.0
 	 */
-	function independent_publisher_posted_author() {
-		/**
-		 * This function gets called outside the loop (in header.php),
-		 * so we need to figure out the post author ID and Nice Name manually.
-		 */
-		global $wp_query;
-		$post_author_id        = $wp_query->post->post_author;
+	function independent_publisher_posted_author( $post_author_id = null ) {
+		if ( ! $post_author_id ) {
+			$post_author_id = get_the_author();
+		}
 		$post_author_nice_name = get_the_author_meta( 'display_name', $post_author_id );
 
 		printf(
@@ -478,7 +475,7 @@ if ( ! function_exists( 'independent_publisher_posted_author_card' ) ) :
 			</a>
 		<?php endif; ?>
 
-		<div class="site-title"><?php independent_publisher_posted_author(); ?></div>
+		<div class="site-title"><?php independent_publisher_posted_author( $post_author_id ); ?></div>
 		<div class="site-description"><?php the_author_meta( 'description', $post_author_id ) ?></div>
 
 		<?php get_template_part( 'menu', 'social' ); ?>
