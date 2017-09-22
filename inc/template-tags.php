@@ -456,13 +456,7 @@ if ( ! function_exists( 'independent_publisher_posted_author_card' ) ) :
 	 *
 	 * @since Independent Publisher 1.0
 	 */
-	function independent_publisher_posted_author_card() {
-		/**
-		 * This function gets called outside the loop (in header.php),
-		 * so we need to figure out the post author ID and Nice Name manually.
-		 */
-		global $wp_query;
-		$post_author_id = $wp_query->post->post_author;
+	function independent_publisher_posted_author_card( $post_author_id ) {
 		$show_avatars   = get_option( 'show_avatars' );
 ?>
 		<div class ="author p-author vcard h-card">
@@ -482,8 +476,18 @@ if ( ! function_exists( 'independent_publisher_posted_author_card' ) ) :
 		<?php // Add Optional Extra Author Data
 			do_action( 'independent_publisher_author_data', $post_author_id ); ?>
                 </div> 
-		<?php get_template_part( 'menu', 'social' ); ?>
+		<?php get_template_part( 'menu', 'social' );
+	}
+endif;
 
+if ( ! function_exists( 'independent_publisher_post_data' ) ) :
+         /**
+          * Outputs post data on single posts
+          *
+          * @since Independent Publisher 1.?
+	  */
+	function independent_publisher_post_data( ) {
+	?>
 		<div class="site-published-separator"></div>
 		<h2 class="site-published"><?php _e( 'Published', 'independent-publisher' ); ?></h2>
 		<h2 class="site-published-date"><?php independent_publisher_posted_on_date(); ?></h2>
