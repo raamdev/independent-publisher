@@ -443,10 +443,10 @@ if ( ! function_exists( 'independent_publisher_site_info' ) ) :
 				<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 			</a>
 		<?php endif; ?>
-		<div class="site-title">
+		<div class="site-title p-name">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 		</div>
-		<div class="site-description"><?php bloginfo( 'description' ); ?></div>
+		<div class="site-description p-summary"><?php bloginfo( 'description' ); ?></div>
 		<?php get_template_part( 'menu', 'social' ); ?>
 		<?php
 	}
