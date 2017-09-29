@@ -265,7 +265,7 @@ if ( ! function_exists( 'independent_publisher_stylesheet_rtl' ) ) :
 	 * Enqueue RTL stylesheet
 	 */
 	function independent_publisher_stylesheet_rtl() {
-		wp_enqueue_style( 'independent-publisher-style', get_template_directory() . '/css/rtl-style.css' );
+		wp_enqueue_style( 'independent-publisher-style', get_template_directory_uri() . '/css/rtl-style.css' );
 	}
 endif;
 
