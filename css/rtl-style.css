@@ -1926,7 +1926,7 @@ article.first-post {
 	margin-top: 0;
 	margin-bottom: 30px;
 	width: 160px;
-	position: relative;
+	position: static;
 	margin-right: -220px;
 	text-align: left;
 }
@@ -2161,7 +2161,7 @@ table th {
 	float: none;
 	display: block;
 	width: 100%;
-	position: relative;
+	position: static;
 }
 
 .single-column-layout.single .site-header {
