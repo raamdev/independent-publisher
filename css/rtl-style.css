@@ -2748,7 +2748,7 @@ table th {
 
 	.site-header,
 	.single-column-layout .site-header {
-		text-align: left;
+		text-align: right;
 	}
 
 	.site-main article.sticky {
