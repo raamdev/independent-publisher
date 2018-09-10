@@ -769,6 +769,40 @@ endif;
 
 add_filter( 'wp_get_attachment_image_attributes', 'independent_publisher_post_thumbnail_sizes_attr', 10, 3 );
 
+if ( ! function_exists( 'independent_publisher_header_image_tag' ) ) :
+	/**
+	 * Set a more accurate sizes attribute for custom header images
+	 */
+	function independent_publisher_header_image_tag( $html, $header, $attr ) {
+		if ( isset( $attr['class'] ) && isset( $attr['sizes'] ) ) {
+			$old_class = '';
+			$new_sizes = '';
+
+			switch ( $attr['class'] ) {
+				case 'site-master-logo':
+					$old_class = $attr['class'];
+					$new_sizes = '48px';
+					break;
+				case 'site-logo':
+					$old_class = $attr['class'];
+					$new_sizes = '(max-width: 500px) 70px, 100px';
+					break;
+			}
+
+			if ( $old_class ) {
+				$html = str_replace( 'class="' . $old_class . '"', 'class="no-grav"', $html );
+			}
+			if ( $new_sizes ) {
+				$html = str_replace( 'sizes="' . $attr['sizes'] . '"', 'sizes="' . $new_sizes . '"', $html );
+			}
+		}
+
+		return $html;
+	}
+endif;
+
+add_filter( 'get_header_image_tag', 'independent_publisher_header_image_tag', 10, 3 );
+
 
 /**
  * Returns true if Enable Page Load Progress Bar option is enabled

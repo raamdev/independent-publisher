@@ -30,7 +30,11 @@
 	<div class="site-master-logo">
 		<?php if ( get_header_image() ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				<?php if ( function_exists( 'the_header_image_tag' ) ) : ?>
+					<?php the_header_image_tag( array( 'class' => 'site-master-logo' ) ); ?>
+				<?php else : ?>
+					<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				<?php endif; ?>
 			</a>
 		<?php endif; ?>
 	</div>
