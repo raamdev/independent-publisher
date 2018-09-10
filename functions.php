@@ -733,6 +733,38 @@ function independent_publisher_post_has_post_cover_title() {
 	return false; // Default
 }
 
+if ( ! function_exists( 'independent_publisher_content_image_sizes_attr' ) ) :
+	/**
+	 * Set a more accurate sizes attribute for content images
+	 */
+	function independent_publisher_content_image_sizes_attr( $sizes, $size ) {
+		$width = $size[0];
+
+		if ( 700 <= $width ) {
+			$sizes = '(max-width: 500px) calc(100vw - 40px), (max-width: 780px) calc(100vw - 80px), 700px';
+		}
+
+		return $sizes;
+	}
+endif;
+
+add_filter( 'wp_calculate_image_sizes', 'independent_publisher_content_image_sizes_attr', 10, 2 );
+
+if ( ! function_exists( 'independent_publisher_full_width_featured_image_sizes_attr' ) ) :
+	/**
+	 * Set a more accurate sizes attribute for full width featured images
+	 */
+	function independent_publisher_full_width_featured_image_sizes_attr( $attr, $attachment, $size ) {
+		if ( independent_publisher_has_full_width_featured_image() ) {
+			$attr['sizes'] = '100vw';
+		}
+
+		return $attr;
+	}
+endif;
+
+add_filter( 'wp_get_attachment_image_attributes', 'independent_publisher_full_width_featured_image_sizes_attr', 10, 3 );
+
 
 /**
  * Returns true if Enable Page Load Progress Bar option is enabled
