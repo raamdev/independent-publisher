@@ -625,9 +625,63 @@ if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
 					if ( independent_publisher_post_has_post_cover_title() ):
 						$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), apply_filters( 'independent_publisher_full_width_featured_image_size', 'independent_publisher_post_thumbnail' ) );
 						$featured_image_url = $featured_image_url[0];
+
+						$featured_image_srcset = function_exists( 'wp_get_attachment_image_srcset' ) ? wp_get_attachment_image_srcset( get_post_thumbnail_id() ) : false;
+						$featured_image_srcset = $featured_image_srcset ? explode( ',', $featured_image_srcset ) : false;
+						$featured_image_versions = array();
+
+						if ( $featured_image_srcset ) {
+							foreach ( $featured_image_srcset as $url_width_str ) {
+								$url_width = preg_split( '/\s+/', trim( $url_width_str ) );
+								if ( $url_width && 2 === count( $url_width ) && preg_match( '/^\d+w$/', $url_width[1] ) ) {
+									$url_width[1] = substr( $url_width[1], 0, -1 );
+									array_push( $featured_image_versions, $url_width );
+								}
+							}
+						}
+
+						if ( $featured_image_versions ) {
+							usort( $featured_image_versions,
+								function ( $a, $b ) {
+									$a = intval( $a[1] );
+									$b = intval( $b[1] );
+									return $a < $b ? -1 : ($a > $b ? 1 : 0);
+								}
+							);
+						}
 						?>
+						<?php if ( $featured_image_versions ) : ?>
+							<style>
+								<?php for ($i = 0, $l = count( $featured_image_versions ); $i < $l; $i++) : ?>
+									@media only screen
+										<?php if ($i > 0) :      ?>and (min-width: <?php echo $featured_image_versions[$i - 1][1] + 1; ?>px)<?php endif; ?>
+										<?php if ($i < $l - 1) : ?>and (max-width: <?php echo $featured_image_versions[$i][1]; ?>px)<?php endif; ?>
+									{
+										.single.post-cover-overlay-post-title .post-cover-title-image,
+										.page.post-cover-overlay-post-title .post-cover-title-image {
+											background-image: url(<?php echo $featured_image_versions[$i][0]; ?>);
+										}
+									}
+								<?php endfor; ?>
+							</style>
+							<!--[if lt IE 9]>
+							<style>
+								.single.post-cover-overlay-post-title .post-cover-title-image,
+								.page.post-cover-overlay-post-title .post-cover-title-image {
+									background-image: url(<?php echo $featured_image_url; ?>);
+								}
+							</style>
+							<![endif]-->
+						<?php else : ?>
+							<style>
+								.single.post-cover-overlay-post-title .post-cover-title-image,
+								.page.post-cover-overlay-post-title .post-cover-title-image {
+									background-image: url(<?php echo $featured_image_url; ?>);
+								}
+							</style>
+						<?php endif; ?>
 						<div class="post-cover-title-wrapper">
-							<div class="post-cover-title-image" style="background-image:url('<?php echo $featured_image_url; ?>');"></div>
+							<div class="post-cover-title-image"></div>
 							<div class="post-cover-title-head">
 								<header class="post-cover-title">
 									<h1 class="entry-title p-name" itemprop="name">
