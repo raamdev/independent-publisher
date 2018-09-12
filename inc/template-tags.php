@@ -629,6 +629,7 @@ if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
 						$featured_image_srcset = function_exists( 'wp_get_attachment_image_srcset' ) ? wp_get_attachment_image_srcset( get_post_thumbnail_id() ) : false;
 						$featured_image_srcset = $featured_image_srcset ? explode( ',', $featured_image_srcset ) : false;
 						$featured_image_versions = array();
+						$featured_image_high_dpi = array();
 
 						if ( $featured_image_srcset ) {
 							foreach ( $featured_image_srcset as $url_width_str ) {
@@ -640,44 +641,75 @@ if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
 							}
 						}
 
-						if ( $featured_image_versions ) {
-							usort( $featured_image_versions,
-								function ( $a, $b ) {
-									$a = intval( $a[1] );
-									$b = intval( $b[1] );
-									return $a < $b ? -1 : ($a > $b ? 1 : 0);
+						if ( $featured_image_versions && class_exists( 'Meow_WR2X_Core' ) ) { // WP Retina 2x support
+							$featured_image_base = array();
+							foreach ( $featured_image_versions as $url_width ) {
+								if ( preg_match( '/.@2x\.\w+$/', $url_width[0] ) ) {
+									$url_width[1] = $url_width[1] / 2;
+									array_push( $featured_image_high_dpi, $url_width );
+								} else {
+									array_push( $featured_image_base, $url_width );
 								}
-							);
+							}
+							$featured_image_versions = $featured_image_base;
+						}
+
+						function url_width_cmp( $a, $b ) {
+							$a = intval( $a[1] );
+							$b = intval( $b[1] );
+							return $a < $b ? -1 : ( $a > $b ? 1 : 0 );
+						}
+
+						usort( $featured_image_versions, 'url_width_cmp' );
+						usort( $featured_image_high_dpi, 'url_width_cmp' );
+
+						function post_cover_title_image_css( $url ) {
+							?>
+							.single.post-cover-overlay-post-title .post-cover-title-image,
+							.page.post-cover-overlay-post-title .post-cover-title-image {
+								background-image: url(<?php echo $url; ?>);
+							}
+							<?php
 						}
 						?>
 						<?php if ( $featured_image_versions ) : ?>
 							<style>
-								<?php for ($i = 0, $l = count( $featured_image_versions ); $i < $l; $i++) : ?>
-									@media only screen
-										<?php if ($i > 0) :      ?>and (min-width: <?php echo $featured_image_versions[$i - 1][1] + 1; ?>px)<?php endif; ?>
-										<?php if ($i < $l - 1) : ?>and (max-width: <?php echo $featured_image_versions[$i][1]; ?>px)<?php endif; ?>
-									{
-										.single.post-cover-overlay-post-title .post-cover-title-image,
-										.page.post-cover-overlay-post-title .post-cover-title-image {
-											background-image: url(<?php echo $featured_image_versions[$i][0]; ?>);
-										}
+								<?php for ($i = 0, $l = count( $featured_image_versions ); $i < $l; $i++) :
+									$url = $featured_image_versions[$i][0];
+									$width = $featured_image_versions[$i][1];
+									$query = 'only screen' .
+										( $i > 0      ? ' and (min-width: ' . ( $prev_width + 1 ) . 'px)' : '' ) .
+										( $i < $l - 1 ? ' and (max-width: ' . ( $width          ) . 'px)' : '' );
+									?>
+									@media <?php echo $query; ?> {
+										<?php post_cover_title_image_css( $url ); ?>
 									}
+									<?php $prev_width = $width; ?>
+								<?php endfor; ?>
+
+								<?php for ($i = 0, $l = count( $featured_image_high_dpi ); $i < $l; $i++) :
+									$url = $featured_image_high_dpi[$i][0];
+									$width = $featured_image_high_dpi[$i][1];
+									$query = 'only screen' .
+										( $i > 0      ? ' and (min-width: ' . ( $prev_width + 1 ) . 'px)' : '' ) .
+										( $i < $l - 1 ? ' and (max-width: ' . ( $width          ) . 'px)' : '' );
+									?>
+									@media <?php echo $query; ?> and (-webkit-min-device-pixel-ratio: 1.25),
+										<?php echo $query; ?> and (min-resolution: 120dpi) {
+										<?php post_cover_title_image_css( $url ); ?>
+									}
+									<?php $prev_width = $width; ?>
 								<?php endfor; ?>
 							</style>
+
 							<!--[if lt IE 9]>
 							<style>
-								.single.post-cover-overlay-post-title .post-cover-title-image,
-								.page.post-cover-overlay-post-title .post-cover-title-image {
-									background-image: url(<?php echo $featured_image_url; ?>);
-								}
+								<?php post_cover_title_image_css( $featured_image_url ); ?>
 							</style>
 							<![endif]-->
 						<?php else : ?>
 							<style>
-								.single.post-cover-overlay-post-title .post-cover-title-image,
-								.page.post-cover-overlay-post-title .post-cover-title-image {
-									background-image: url(<?php echo $featured_image_url; ?>);
-								}
+								<?php post_cover_title_image_css( $featured_image_url ); ?>
 							</style>
 						<?php endif; ?>
 						<div class="post-cover-title-wrapper">
