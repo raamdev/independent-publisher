@@ -40,7 +40,7 @@
 	<header id="masthead" class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 		<div class="site-header-info">
-			<?php if ( is_single() ) : ?>
+			<?php if ( is_single() && independent_publisher_show_author_card() ) : ?>
 				<?php // Show only post author info on Single Pages ?>
 				<?php independent_publisher_posted_author_card(); ?>
 			<?php else : ?>
