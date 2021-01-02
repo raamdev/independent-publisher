@@ -265,7 +265,9 @@ if ( ! function_exists( 'independent_publisher_stylesheet_rtl' ) ) :
 	 * Enqueue RTL stylesheet
 	 */
 	function independent_publisher_stylesheet_rtl() {
-		wp_enqueue_style( 'independent-publisher-style', get_template_directory_uri() . '/css/rtl-style.css' );
+		$theme_version = wp_get_theme()->get( 'Version' );
+
+		wp_enqueue_style( 'independent-publisher-style', get_template_directory_uri() . '/css/rtl-style.css', array(), $theme_version );
 	}
 endif;
 
@@ -274,7 +276,9 @@ if ( ! function_exists( 'independent_publisher_stylesheet' ) ) :
 	 * Enqueue main stylesheet
 	 */
 	function independent_publisher_stylesheet() {
-		wp_enqueue_style( 'independent-publisher-style', get_stylesheet_uri() );
+		$theme_version = wp_get_theme()->get( 'Version' );
+
+		wp_enqueue_style( 'independent-publisher-style', get_stylesheet_uri(), array(), $theme_version );
 	}
 endif;
 
