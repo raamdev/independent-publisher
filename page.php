@@ -21,10 +21,10 @@ get_header(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
 
 				<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() && !independent_publisher_hide_comments() ) :
+				if ( ( comments_open() || '0' != get_comments_number() && !independent_publisher_hide_comments() ) ||
+				( independent_publisher_comment_count_mentions() > 0 && !independent_publisher_hide_mentions() ) ) {
 					comments_template( '', true );
-				endif;
+				}
 				?>
 
 			<?php endwhile; // end of the loop. ?>

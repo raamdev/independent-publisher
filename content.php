@@ -113,7 +113,7 @@
 		<?php $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?>
 
 		<?php /* Show webmentions link only when post is not password-protected AND pings open AND there are mentions on this post */ ?>
-		<?php if ( !post_password_required() && pings_open() && independent_publisher_comment_count_mentions() ) : ?>
+		<?php if ( !post_password_required() && pings_open() && independent_publisher_comment_count_mentions() && !independent_publisher_hide_mentions() ) : ?>
 			<?php $mention_count = independent_publisher_comment_count_mentions(); ?>
 			<?php $mention_label = (independent_publisher_comment_count_mentions() > 1 ? __( 'Webmentions', 'independent-publisher' ) : __( 'Webmention', 'independent-publisher' ) ); ?>
 			<span class="mentions-link"><a href="<?php the_permalink(); ?>#webmentions"><?php echo $mention_count . ' ' . $mention_label; ?></a></span><span class="sep"><?php echo (comments_open() && !independent_publisher_hide_comments()) ?  ' '.$separator : '' ?></span>

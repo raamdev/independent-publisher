@@ -95,7 +95,7 @@ if ( post_password_required() ) {
 			<div id="commentform-bottom"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
 		<?php endif; ?>
 
-		<?php if ( independent_publisher_comment_count_mentions() ) { // If we have mentions, let's show them ?>
+		<?php if ( independent_publisher_comment_count_mentions() && !independent_publisher_hide_mentions() ) { // If we have mentions, let's show them ?>
 			<div id="webmentions" class="mentions-list">
 				<h3><?php echo apply_filters( 'independent_publisher_webmentions_title', __( 'Webmentions', 'independent-publisher' ) ); ?></h3>
 				<?php independent_publisher_mentions(); ?>
