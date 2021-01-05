@@ -793,6 +793,15 @@ if ( !function_exists( 'independent_publisher_hide_comments' ) ):
 	}
 endif;
 
+if ( !function_exists( 'independent_publisher_hide_mentions' ) ):
+	/**
+	 * Determines if webmentions should be hidden altogether.
+	 */
+	function independent_publisher_hide_mentions() {
+		return false;
+	}
+endif;
+
 if ( !function_exists( 'independent_publisher_footer_credits' ) ):
 	/**
 	 * Echoes the theme footer credits. Overriding this function in a Child Theme also
