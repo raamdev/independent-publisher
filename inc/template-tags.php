@@ -460,7 +460,11 @@ if ( !function_exists( 'independent_publisher_site_info' ) ) :
 		?>
 		<?php if ( get_header_image() ) : ?>
 			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				<?php if ( function_exists( 'the_header_image_tag' ) ) : ?>
+					<?php the_header_image_tag( array( 'class' => 'site-logo' ) ); ?>
+				<?php else : ?>
+					<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				<?php endif; ?>
 			</a>
 		<?php endif; ?>
 		<div class="site-title">
@@ -490,7 +494,11 @@ if ( !function_exists( 'independent_publisher_posted_author_card' ) ) :
 
 		<?php if ( ( !$show_avatars || $show_avatars === 0 ) && !independent_publisher_is_multi_author_mode() && get_header_image() ) : ?>
 			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				<?php if ( function_exists( 'the_header_image_tag' ) ) : ?>
+					<?php the_header_image_tag( array( 'class' => 'site-logo' ) ); ?>
+				<?php else : ?>
+					<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				<?php endif; ?>
 			</a>
 		<?php else: ?>
 			<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ); ?>">
@@ -617,9 +625,95 @@ if ( !function_exists( 'independent_publisher_full_width_featured_image' ) ):
 					if ( independent_publisher_post_has_post_cover_title() ):
 						$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), apply_filters( 'independent_publisher_full_width_featured_image_size', 'independent_publisher_post_thumbnail' ) );
 						$featured_image_url = $featured_image_url[0];
+
+						$featured_image_srcset = function_exists( 'wp_get_attachment_image_srcset' ) ? wp_get_attachment_image_srcset( get_post_thumbnail_id() ) : false;
+						$featured_image_srcset = $featured_image_srcset ? explode( ',', $featured_image_srcset ) : false;
+						$featured_image_versions = array();
+						$featured_image_high_dpi = array();
+
+						if ( $featured_image_srcset ) {
+							foreach ( $featured_image_srcset as $url_width_str ) {
+								$url_width = preg_split( '/\s+/', trim( $url_width_str ) );
+								if ( $url_width && 2 === count( $url_width ) && preg_match( '/^\d+w$/', $url_width[1] ) ) {
+									$url_width[1] = substr( $url_width[1], 0, -1 );
+									array_push( $featured_image_versions, $url_width );
+								}
+							}
+						}
+
+						if ( $featured_image_versions && class_exists( 'Meow_WR2X_Core' ) ) { // WP Retina 2x support
+							$featured_image_base = array();
+							foreach ( $featured_image_versions as $url_width ) {
+								if ( preg_match( '/.@2x\.\w+$/', $url_width[0] ) ) {
+									$url_width[1] = $url_width[1] / 2;
+									array_push( $featured_image_high_dpi, $url_width );
+								} else {
+									array_push( $featured_image_base, $url_width );
+								}
+							}
+							$featured_image_versions = $featured_image_base;
+						}
+
+						function url_width_cmp( $a, $b ) {
+							$a = intval( $a[1] );
+							$b = intval( $b[1] );
+							return $a < $b ? -1 : ( $a > $b ? 1 : 0 );
+						}
+
+						usort( $featured_image_versions, 'url_width_cmp' );
+						usort( $featured_image_high_dpi, 'url_width_cmp' );
+
+						function post_cover_title_image_css( $url ) {
+							?>
+							.single.post-cover-overlay-post-title .post-cover-title-image,
+							.page.post-cover-overlay-post-title .post-cover-title-image {
+								background-image: url(<?php echo $url; ?>);
+							}
+							<?php
+						}
 						?>
+						<?php if ( $featured_image_versions ) : ?>
+							<style>
+								<?php for ($i = 0, $l = count( $featured_image_versions ); $i < $l; $i++) :
+									$url = $featured_image_versions[$i][0];
+									$width = $featured_image_versions[$i][1];
+									$query = 'only screen' .
+										( $i > 0      ? ' and (min-width: ' . ( $prev_width + 1 ) . 'px)' : '' ) .
+										( $i < $l - 1 ? ' and (max-width: ' . ( $width          ) . 'px)' : '' );
+									?>
+									@media <?php echo $query; ?> {
+										<?php post_cover_title_image_css( $url ); ?>
+									}
+									<?php $prev_width = $width; ?>
+								<?php endfor; ?>
+
+								<?php for ($i = 0, $l = count( $featured_image_high_dpi ); $i < $l; $i++) :
+									$url = $featured_image_high_dpi[$i][0];
+									$width = $featured_image_high_dpi[$i][1];
+									$query = 'only screen' .
+										( $i > 0      ? ' and (min-width: ' . ( $prev_width + 1 ) . 'px)' : '' ) .
+										( $i < $l - 1 ? ' and (max-width: ' . ( $width          ) . 'px)' : '' );
+									?>
+									@media <?php echo $query; ?> and (-webkit-min-device-pixel-ratio: 1.25),
+										<?php echo $query; ?> and (min-resolution: 120dpi) {
+										<?php post_cover_title_image_css( $url ); ?>
+									}
+									<?php $prev_width = $width; ?>
+								<?php endfor; ?>
+							</style>
+
+							<!--[if lt IE 9]>
+							<style>
+								<?php post_cover_title_image_css( $featured_image_url ); ?>
+							</style>
+							<![endif]-->
+						<?php else : ?>
+							<style>
+								<?php post_cover_title_image_css( $featured_image_url ); ?>
+							</style>
+						<?php endif; ?>
 						<div class="post-cover-title-wrapper">
-							<div class="post-cover-title-image" style="background-image:url('<?php echo $featured_image_url; ?>');"></div>
+							<div class="post-cover-title-image"></div>
 							<div class="post-cover-title-head">
 								<header class="post-cover-title">
 									<h1 class="entry-title p-name" itemprop="name">

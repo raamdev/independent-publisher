@@ -336,7 +336,17 @@ function __social_menu_eae_encode_emails( $objects, $args ) {
 
 ### How can I use a Full Size Image for the Post Cover?
 
-By default, the theme will use a maximum of `700x700` pixels for the Post Cover image. You can override this and use the full image size by adding the following to your Child Theme's `functions.php` file:
+In WordPress 4.4 or later, the theme will use WordPress' default maximum width for responsive images of `1600px` for the Post Cover image. You can override this and use a larger limit, or remove the limit entirely, by adding the following to your Child Theme's `functions.php` file:
+
+```php
+function __custom_independent_publisher_max_srcset_image_width( $max_width ) {
+    return 2000; // or return false to disable the limit
+}
+
+add_filter( 'max_srcset_image_width', '__custom_independent_publisher_max_srcset_image_width' );
+```
+
+In WordPress versions earlier than 4.4, the theme will use a maximum of `700x700` pixels for the Post Cover image by default. You can override this and use the full image size by adding the following to your Child Theme's `functions.php` file:
 
 ```php
 function __custom_independent_publisher_full_width_featured_image_size() {
