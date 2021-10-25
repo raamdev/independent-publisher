@@ -435,90 +435,94 @@ class IndependentPublisher_Customize {
 	}
 
 	/**
-	 * This will output any custom styles configured by the Theme Customizer
+	 * Saves the custom CSS based on Theme Customizer options to a theme mod
 	 *
-	 * This is used by css/customizer.css.php
+	 * This is used by independent_publisher_customizer_styles_cache() in functions.php
 	 *
+	 * @see independent_publisher_customizer_styles_cache()
 	 * @since Independent Publisher 1.0
 	 */
-	public static function header_output() {
+    public static function independent_publisher_save_customizer_css_theme_mod() {
+		$css = '';
+
 		/* Background Color */
 
-		self::generate_css( '.site', 'background-color', 'background_color', '#' );
+		$css .= self::generate_css( '.site', 'background-color', 'background_color', '#' );
 
 		/* Comment Form Background Color */
 
-		self::generate_css( '.comment-respond', 'background-color', 'comment_form_background_color' );
-		self::generate_css( '.comment-respond', 'color', 'comment_form_text_color' );
+		$css .= self::generate_css( '.comment-respond', 'background-color', 'comment_form_background_color' );
+		$css .= self::generate_css( '.comment-respond', 'color', 'comment_form_text_color' );
 
 		/* Text Color */
 
-		self::generate_css( 'body,input,select,textarea', 'color', 'text_color' );
-		self::generate_css( '.format-aside .entry-content a, .format-aside .entry-content a:hover, .format-aside .entry-content a:visited, .format-aside .entry-content a:active, .format-aside .entry-content a:focus', 'color', 'text_color' );
-		self::generate_css( '.format-quote .entry-content a, .format-quote .entry-content a:hover, .format-quote .entry-content a:visited, .format-quote .entry-content a:active, .format-quote .entry-content a:focus', 'color', 'text_color' );
-		self::generate_css( '.post-excerpts .format-standard .entry-content a, .post-excerpts .format-standard .entry-content a:focus, .post-excerpts .format-standard .entry-content a:hover, .post-excerpts .format-standard .entry-content a:active, .post-excerpts .format-standard .entry-content a:visited', 'color', 'text_color' );
-		self::generate_css( '.post-excerpts .format-chat .entry-content a, .post-excerpts .format-chat .entry-content a:focus, .post-excerpts .format-chat .entry-content a:hover, .post-excerpts .format-chat .entry-content a:active, .post-excerpts .format-chat .entry-content a:visited', 'color', 'text_color' );
-		self::generate_css( '.post-excerpts .format-standard .entry-summary a, .post-excerpts .format-standard .entry-summary a:focus, .post-excerpts .format-standard .entry-summary a:hover, .post-excerpts .format-standard .entry-summary a:active, .post-excerpts .format-standard .entry-summary a:visited', 'color', 'text_color' );
-		self::generate_css( '.post-excerpts .format-chat .entry-summary a, .post-excerpts .format-chat .entry-summary a:focus, .post-excerpts .format-chat .entry-summary a:hover, .post-excerpts .format-chat .entry-summary a:active, .post-excerpts .format-chat .entry-summary a:visited', 'color', 'text_color' );
+		$css .= self::generate_css( 'body,input,select,textarea', 'color', 'text_color' );
+		$css .= self::generate_css( '.format-aside .entry-content a, .format-aside .entry-content a:hover, .format-aside .entry-content a:visited, .format-aside .entry-content a:active, .format-aside .entry-content a:focus', 'color', 'text_color' );
+		$css .= self::generate_css( '.format-quote .entry-content a, .format-quote .entry-content a:hover, .format-quote .entry-content a:visited, .format-quote .entry-content a:active, .format-quote .entry-content a:focus', 'color', 'text_color' );
+		$css .= self::generate_css( '.post-excerpts .format-standard .entry-content a, .post-excerpts .format-standard .entry-content a:focus, .post-excerpts .format-standard .entry-content a:hover, .post-excerpts .format-standard .entry-content a:active, .post-excerpts .format-standard .entry-content a:visited', 'color', 'text_color' );
+		$css .= self::generate_css( '.post-excerpts .format-chat .entry-content a, .post-excerpts .format-chat .entry-content a:focus, .post-excerpts .format-chat .entry-content a:hover, .post-excerpts .format-chat .entry-content a:active, .post-excerpts .format-chat .entry-content a:visited', 'color', 'text_color' );
+		$css .= self::generate_css( '.post-excerpts .format-standard .entry-summary a, .post-excerpts .format-standard .entry-summary a:focus, .post-excerpts .format-standard .entry-summary a:hover, .post-excerpts .format-standard .entry-summary a:active, .post-excerpts .format-standard .entry-summary a:visited', 'color', 'text_color' );
+		$css .= self::generate_css( '.post-excerpts .format-chat .entry-summary a, .post-excerpts .format-chat .entry-summary a:focus, .post-excerpts .format-chat .entry-summary a:hover, .post-excerpts .format-chat .entry-summary a:active, .post-excerpts .format-chat .entry-summary a:visited', 'color', 'text_color' );
 
 		/* Link Color */
 
-		self::generate_css( 'a, a:visited, a:hover, a:focus, a:active', 'color', 'link_color' );
-		self::generate_css( '.enhanced-excerpts .enhanced-excerpt-read-more a, .enhanced-excerpts .enhanced-excerpt-read-more a:hover', 'color', 'link_color' );
-		self::generate_css( '.post-excerpts .sticky.format-standard .entry-content a, .post-excerpts .sticky.format-standard .entry-content a:focus, .post-excerpts .sticky.format-standard .entry-content a:hover, .post-excerpts .sticky.format-standard .entry-content a:active, .post-excerpts .sticky.format-standard .entry-content a:visited', 'color', 'link_color' );
-		self::generate_css( '.post-excerpts .format-standard.show-full-content-first-post .entry-content a', 'color', 'link_color' );
-		self::generate_css( '.post-excerpts .format-standard .entry-content a.moretag', 'color', 'link_color' );
-		self::generate_css( '.post-excerpts .format-standard .entry-content a.more-link', 'color', 'link_color' );
-		self::generate_css( '.post-excerpts .sticky.format-standard .entry-summary a, .post-excerpts .sticky.format-standard .entry-summary a:focus, .post-excerpts .sticky.format-standard .entry-summary a:hover, .post-excerpts .sticky.format-standard .entry-summary a:active, .post-excerpts .sticky.format-standard .entry-summary a:visited', 'color', 'link_color' );
-		self::generate_css( '.post-excerpts .format-standard.show-full-content-first-post .entry-summary a', 'color', 'link_color' );
-		self::generate_css( '.post-excerpts .format-standard .entry-summary a.moretag', 'color', 'link_color' );
-		self::generate_css( '.post-excerpts .format-standard .entry-summary a.more-link', 'color', 'link_color' );
-		self::generate_css( '.read-more a, .read-more a:hover', 'color', 'link_color' );
-		self::generate_css( '.entry-title a:hover', 'color', 'link_color' );
-		self::generate_css( '.entry-meta a:hover', 'color', 'link_color' );
-		self::generate_css( '.site-footer a:hover', 'color', 'link_color' );
-		self::generate_css( 'blockquote', 'border-color', 'link_color' );
-		self::generate_css( '#infinite-footer .blog-credits a, #infinite-footer .blog-credits a:hover', 'color', 'link_color' );
-		self::generate_css( '#nprogress .bar', 'background', 'link_color' );
-		self::generate_css( '#nprogress .spinner-icon', 'border-top-color', 'link_color' );
-		self::generate_css( '#nprogress .spinner-icon', 'border-left-color', 'link_color' );
-		self::generate_css( '#nprogress .peg', 'box-shadow', 'link_color', '', '', true, '%1$s { %2$s:0 0 10px %3$s, 0 0 5px %3$s; }' );
+		$css .= elf::generate_css( 'a, a:visited, a:hover, a:focus, a:active', 'color', 'link_color' );
+		$css .= self::generate_css( '.enhanced-excerpts .enhanced-excerpt-read-more a, .enhanced-excerpts .enhanced-excerpt-read-more a:hover', 'color', 'link_color' );
+		$css .= self::generate_css( '.post-excerpts .sticky.format-standard .entry-content a, .post-excerpts .sticky.format-standard .entry-content a:focus, .post-excerpts .sticky.format-standard .entry-content a:hover, .post-excerpts .sticky.format-standard .entry-content a:active, .post-excerpts .sticky.format-standard .entry-content a:visited', 'color', 'link_color' );
+		$css .= self::generate_css( '.post-excerpts .format-standard.show-full-content-first-post .entry-content a', 'color', 'link_color' );
+		$css .= self::generate_css( '.post-excerpts .format-standard .entry-content a.moretag', 'color', 'link_color' );
+		$css .= self::generate_css( '.post-excerpts .format-standard .entry-content a.more-link', 'color', 'link_color' );
+		$css .= self::generate_css( '.post-excerpts .sticky.format-standard .entry-summary a, .post-excerpts .sticky.format-standard .entry-summary a:focus, .post-excerpts .sticky.format-standard .entry-summary a:hover, .post-excerpts .sticky.format-standard .entry-summary a:active, .post-excerpts .sticky.format-standard .entry-summary a:visited', 'color', 'link_color' );
+		$css .= self::generate_css( '.post-excerpts .format-standard.show-full-content-first-post .entry-summary a', 'color', 'link_color' );
+		$css .= self::generate_css( '.post-excerpts .format-standard .entry-summary a.moretag', 'color', 'link_color' );
+		$css .= self::generate_css( '.post-excerpts .format-standard .entry-summary a.more-link', 'color', 'link_color' );
+		$css .= self::generate_css( '.read-more a, .read-more a:hover', 'color', 'link_color' );
+		$css .= self::generate_css( '.entry-title a:hover', 'color', 'link_color' );
+		$css .= self::generate_css( '.entry-meta a:hover', 'color', 'link_color' );
+		$css .= self::generate_css( '.site-footer a:hover', 'color', 'link_color' );
+		$css .= self::generate_css( 'blockquote', 'border-color', 'link_color' );
+		$css .= self::generate_css( '#infinite-footer .blog-credits a, #infinite-footer .blog-credits a:hover', 'color', 'link_color' );
+		$css .= self::generate_css( '#nprogress .bar', 'background', 'link_color' );
+		$css .= self::generate_css( '#nprogress .spinner-icon', 'border-top-color', 'link_color' );
+		$css .= self::generate_css( '#nprogress .spinner-icon', 'border-left-color', 'link_color' );
+		$css .= self::generate_css( '#nprogress .peg', 'box-shadow', 'link_color', '', '', true, '%1$s { %2$s:0 0 10px %3$s, 0 0 5px %3$s; }' );
 
-		self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s:%3$s; /* Old browsers */ }' );
-		self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -moz-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* FF3.6+ */ }' );
-		self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -webkit-gradient(linear, left top, left bottom, color-stop(60%%, %3$s), color-stop(100%%, %3$s)); /* Chrome,Safari4+ */ }' );
-		self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -webkit-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* Chrome10+,Safari5.1+ */ }' );
-		self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -o-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* Opera 11.10+ */ }' );
-		self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -ms-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* IE10+ */ }' );
-		self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: linear-gradient(top, %3$s 60%%, %3$s 100%%); /* W3C */ }' );
+		$css .= self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s:%3$s; /* Old browsers */ }' );
+		$css .= self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -moz-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* FF3.6+ */ }' );
+		$css .= self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -webkit-gradient(linear, left top, left bottom, color-stop(60%%, %3$s), color-stop(100%%, %3$s)); /* Chrome,Safari4+ */ }' );
+		$css .= self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -webkit-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* Chrome10+,Safari5.1+ */ }' );
+		$css .= self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -o-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* Opera 11.10+ */ }' );
+		$css .= self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: -ms-linear-gradient(top, %3$s 60%%, %3$s 100%%); /* IE10+ */ }' );
+		$css .= self::generate_css( 'button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover', 'background', 'link_color', '', '', true, '%1$s { %2$s: linear-gradient(top, %3$s 60%%, %3$s 100%%); /* W3C */ }' );
 
 		/* Header Text Color */
 
-		self::generate_css( '.site-published', 'color', 'header_text_color' );
-		self::generate_css( '.site-title a', 'color', 'header_text_color' );
-		self::generate_css( 'h1,h2,h3,h4,h5,h6', 'color', 'header_text_color' );
-		self::generate_css( '.entry-title a', 'color', 'header_text_color' );
-		self::generate_css( '.author .archive-title a', 'color', 'header_text_color' );
-		self::generate_css( '.author .archive-title a', 'color', 'header_text_color' );
+		$css .= self::generate_css( '.site-published', 'color', 'header_text_color' );
+		$css .= self::generate_css( '.site-title a', 'color', 'header_text_color' );
+		$css .= self::generate_css( 'h1,h2,h3,h4,h5,h6', 'color', 'header_text_color' );
+		$css .= self::generate_css( '.entry-title a', 'color', 'header_text_color' );
+		$css .= self::generate_css( '.author .archive-title a', 'color', 'header_text_color' );
+		$css .= self::generate_css( '.author .archive-title a', 'color', 'header_text_color' );
 
 		/* Primary Meta Text Color */
 
-		self::generate_css( '.site-description', 'color', 'primary_meta_text_color' );
-		self::generate_css( '.site-published-date a, .site-published-date a:hover, .site-published-date a:visited, .site-published-date a:focus, .site-published-date a:active', 'color', 'primary_meta_text_color' );
-		self::generate_css( '.pinglist-title,.taglist-title,.pinglist li::after', 'color', 'primary_meta_text_color' );
+		$css .= self::generate_css( '.site-description', 'color', 'primary_meta_text_color' );
+		$css .= self::generate_css( '.site-published-date a, .site-published-date a:hover, .site-published-date a:visited, .site-published-date a:focus, .site-published-date a:active', 'color', 'primary_meta_text_color' );
+		$css .= self::generate_css( '.pinglist-title,.taglist-title,.pinglist li::after', 'color', 'primary_meta_text_color' );
 
 		/* Secondary Meta Text Color */
 
-		self::generate_css( '.comment-form-author label, .comment-form-email label, .comment-form-url label, .comment-form-comment label, .comment-form-subscriptions label, .comment-form-reply-title', 'color', 'secondary_meta_text_color' );
-		self::generate_css( '.entry-title-meta, .entry-title-meta a, .entry-title-meta a:hover, .entry-title-meta a:visited, .entry-title-meta a:focus, .entry-title-meta a:active', 'color', 'secondary_meta_text_color' );
-		self::generate_css( '.entry-meta, .entry-meta a, .entry-meta a:hover', 'color', 'secondary_meta_text_color' );
-		self::generate_css( '.format-aside .entry-format, .format-quote .entry-format, .format-chat .entry-format, .format-status .entry-format, .format-image .entry-format, .format-link .entry-format, .format-gallery .entry-format', 'color', 'secondary_meta_text_color' );
-		self::generate_css( '.comment-meta, .comment-meta a', 'color', 'secondary_meta_text_color' );
-		self::generate_css( '.widget_rss .rss-date, .widget_rss li > cite, .widget_twitter .timesince', 'color', 'secondary_meta_text_color' );
-		self::generate_css( '.site-footer', 'color', 'secondary_meta_text_color' );
-		self::generate_css( '.comment-content.unapproved', 'color', 'secondary_meta_text_color' );
-		self::generate_css( '#infinite-footer .blog-credits', 'color', 'secondary_meta_text_color' );
+		$css .= self::generate_css( '.comment-form-author label, .comment-form-email label, .comment-form-url label, .comment-form-comment label, .comment-form-subscriptions label, .comment-form-reply-title', 'color', 'secondary_meta_text_color' );
+		$css .= self::generate_css( '.entry-title-meta, .entry-title-meta a, .entry-title-meta a:hover, .entry-title-meta a:visited, .entry-title-meta a:focus, .entry-title-meta a:active', 'color', 'secondary_meta_text_color' );
+		$css .= self::generate_css( '.entry-meta, .entry-meta a, .entry-meta a:hover', 'color', 'secondary_meta_text_color' );
+		$css .= self::generate_css( '.format-aside .entry-format, .format-quote .entry-format, .format-chat .entry-format, .format-status .entry-format, .format-image .entry-format, .format-link .entry-format, .format-gallery .entry-format', 'color', 'secondary_meta_text_color' );
+		$css .= self::generate_css( '.comment-meta, .comment-meta a', 'color', 'secondary_meta_text_color' );
+		$css .= self::generate_css( '.widget_rss .rss-date, .widget_rss li > cite, .widget_twitter .timesince', 'color', 'secondary_meta_text_color' );
+		$css .= self::generate_css( '.site-footer', 'color', 'secondary_meta_text_color' );
+		$css .= self::generate_css( '.comment-content.unapproved', 'color', 'secondary_meta_text_color' );
+		$css .= self::generate_css( '#infinite-footer .blog-credits', 'color', 'secondary_meta_text_color' );
 
+		set_theme_mod( 'independent_publisher_customizer_styles', $data );
 	}
 
 	/**
@@ -616,6 +620,9 @@ function independent_publisher_sanitize_select_excerpt_options( $input ) {
 		return '';
 	}
 }
+
+// Update theme mod containing custom CSS
+add_action( 'customize_save_after', array( 'IndependentPublisher_Customize', 'independent_publisher_save_customizer_css_theme_mod' ) );
 
 // Setup the Theme Customizer settings and controls...
 add_action( 'customize_register', array( 'IndependentPublisher_Customize', 'register' ) );
