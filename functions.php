@@ -282,7 +282,7 @@ if ( ! function_exists( 'independent_publisher_stylesheet' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'independent_publisher_stylesheet' ) ) :
+if ( ! function_exists( 'independent_publisher_customizer_styles_cache' ) ) :
 	/**
 	* Add the Customizer CSS styles inline
 	*/
