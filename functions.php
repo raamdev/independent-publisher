@@ -282,30 +282,32 @@ if ( ! function_exists( 'independent_publisher_stylesheet' ) ) :
 	}
 endif;
 
-/*
- * Loads the PHP file that generates the Customizer CSS for the front-end
- */
-function independent_publisher_customizer_css() {
-	require( get_template_directory() . '/css/customizer.css.php' );
-	wp_die();
-}
+if ( ! function_exists( 'independent_publisher_customizer_styles_cache' ) ) :
+	/**
+	* Add the Customizer CSS styles inline
+	*/
+	function independent_publisher_customizer_styles_cache() {
+	        global $wp_customize;
 
-/*
- * Enqueue the AJAX call to the dynamic Customizer CSS
- * See http://codex.wordpress.org/AJAX_in_Plugins
- */
-function independent_publisher_customizer_stylesheet() {
-	wp_enqueue_style( 'customizer', admin_url( 'admin-ajax.php' ) . '?action=independent_publisher_customizer_css', array(), '1.7' );
+	        // Check we're not on the Customizer.
+	        // If we're on the customizer then DO NOT cache the results.
+	        if ( ! isset( $wp_customize ) ) {
 
-}
+	                // Get the theme_mod from the database
+	                $data = get_theme_mod( 'independent_publisher_customizer_styles', false );
 
-add_action( 'wp_ajax_independent_publisher_customizer_css', 'independent_publisher_customizer_css' );
-add_action( 'wp_ajax_nopriv_independent_publisher_customizer_css', 'independent_publisher_customizer_css' );
+	                // If the theme_mod does not exist, then create it.
+	                if ( $data == false ) {
+	                        // Initialize the theme_mod.
+	                        set_theme_mod( 'independent_publisher_customizer_styles', null );
+	                }
 
-/*
- * IMPORTANT: Customizer CSS *must* be called _after_ the main stylesheet,
- * to ensure that customizer-modified styles override the defaults.
- */
+	                // Add the CSS inline.
+	                wp_add_inline_style( 'independent-publisher-style', $data );
+	        }
+	}
+endif;
+
 if( is_rtl() ) {
 	add_action( 'init', 'independent_publisher_remove_locale_stylesheet' );
 	add_action( 'wp_enqueue_scripts', 'independent_publisher_stylesheet_rtl' );
@@ -313,7 +315,11 @@ if( is_rtl() ) {
 	add_action( 'wp_enqueue_scripts', 'independent_publisher_stylesheet' );
 }
 
-add_action( 'wp_enqueue_scripts', 'independent_publisher_customizer_stylesheet' );
+/*
+ * IMPORTANT: Customizer CSS *must* be called _after_ the main stylesheet (above),
+ * to ensure that customizer-modified styles override the defaults.
+ */
+add_action( 'wp_enqueue_scripts', 'independent_publisher_customizer_styles_cache' );
 
 if ( ! function_exists( 'independent_publisher_wp_fullscreen_title_editor_style' ) ) :
 	/**
