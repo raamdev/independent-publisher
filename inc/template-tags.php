@@ -490,7 +490,7 @@ if ( !function_exists( 'independent_publisher_posted_author_card' ) ) :
 
 		<?php if ( ( !$show_avatars || $show_avatars === 0 ) && !independent_publisher_is_multi_author_mode() && get_header_image() ) : ?>
 			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img class="no-grav" src="<?php echo esc_url( get_header_image() ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				<?php echo get_header_image_tag(); ?>
 			</a>
 		<?php else: ?>
 			<a class="site-logo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $post_author_id ) ); ?>">
